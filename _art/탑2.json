@@ -1,0 +1,15 @@
+{
+ "출력": "raw",
+ "크기": [1024, 1024],
+ "단계": 4,
+ "항목": [
+  {"id": "shep2", "종류": "건물", "시드": [1, 2], "참조": ["raw/shep1_s2_9d193b.png"],
+   "프롬프트": "Draw the next upgrade level of this exact sheepfold in the same style, colors and camera angle: a larger round fold with taller dressed-stone walls, a sturdier wooden gate facing the viewer, a reed-roofed stone hut with a small window, a water trough, four woolly sheep inside and a shepherd's sling hanging on the gatepost."},
+  {"id": "shep3", "종류": "건물", "시드": [1, 2], "참조": ["raw/shep1_s2_9d193b.png"],
+   "프롬프트": "Draw the highest upgrade level of this exact sheepfold in the same style, colors and camera angle: a strong fortified fold of cut limestone with a timber watch platform over the gate, a red and gold banner, a stone hut with a tiled roof, bronze-studded gate facing the viewer, sheep inside, a lion skin draped over the wall as a trophy."},
+  {"id": "art2", "종류": "건물", "시드": [1, 2], "참조": ["raw/art1_s1_1f9b64.png"],
+   "프롬프트": "Draw the next upgrade level of this exact work yard in the same style, colors and camera angle: a bigger stone-throwing machine with a reinforced timber frame and rope windlass, a stone-paved floor, a builder's crane, stacked cut stones and a craftsman in a leather apron operating it."},
+  {"id": "art3", "종류": "건물", "시드": [1, 2], "참조": ["raw/art1_s1_1f9b64.png"],
+   "프롬프트": "Draw the highest upgrade level of this exact work yard in the same style, colors and camera angle: a masterwork stone-throwing machine of polished acacia wood with gold and bronze fittings and carved decorations, on a stone platform, with a master craftsman in a blue tunic and leather apron, finely cut stones and gleaming tools around."}
+ ]
+}

@@ -1,0 +1,146 @@
+{
+ "출력": "raw",
+ "크기": [
+  1024,
+  1024
+ ],
+ "단계": 4,
+ "항목": [
+  {
+   "id": "ark3",
+   "종류": "건물",
+   "시드": [
+    1
+   ],
+   "프롬프트": "Noah's finished ark: a huge long wooden ship-like box made of gopher wood planks sealed with dark pitch, a sloped roof with a row of small windows just under it, one big door in the side with a wooden ramp leading up to it, resting on timber blocks on bare earth, side three-quarter view, the whole ark visible."
+  },
+  {
+   "id": "ark1",
+   "종류": "건물",
+   "시드": [
+    1
+   ],
+   "프롬프트": "Draw this exact same ark at the very beginning of construction in the same style, size, colors and camera angle: only the long keel and the curved timber ribs standing on blocks, a few planks, scaffolding and a ladder, piles of timber nearby.",
+   "참조": [
+    "raw/ark3_s1_99038a.png"
+   ]
+  },
+  {
+   "id": "ark2",
+   "종류": "건물",
+   "시드": [
+    1
+   ],
+   "프롬프트": "Draw this exact same ark half built in the same style, size, colors and camera angle: the lower half of the hull planked and sealed with pitch, upper ribs still bare, scaffolding and ladders around it, timber piles nearby.",
+   "참조": [
+    "raw/ark3_s1_99038a.png"
+   ]
+  },
+  {
+   "id": "c_soldier",
+   "종류": "인물",
+   "시드": [
+    1,
+    2
+   ],
+   "프롬프트": "A Bronze Age Canaanite warrior from the time of Abraham, an ordinary young man with curly black hair and a short beard, a colorful patterned wool tunic wrapped over one shoulder, a leather belt, holding a curved bronze sickle-sword and a small round wicker shield, calm serious face."
+  },
+  {
+   "id": "c_raider",
+   "종류": "인물",
+   "시드": [
+    1,
+    2
+   ],
+   "프롬프트": "A fast Bronze Age desert raider from the time of Abraham, a wiry young man with a striped headband and a short wool kilt, a small sack over his shoulder and a sling in his hand, leaning forward ready to dash."
+  },
+  {
+   "id": "e_soldier",
+   "종류": "인물",
+   "시드": [
+    1,
+    2
+   ],
+   "프롬프트": "A Bronze Age Mesopotamian spearman from the army of the kings of the East in Abraham's time, an ordinary young man with a neat black beard, a rounded bronze helmet, a long fringed wool kilt and a leather sash, holding a long spear and a small rectangular shield."
+  },
+  {
+   "id": "e_raider",
+   "종류": "인물",
+   "시드": [
+    1,
+    2
+   ],
+   "프롬프트": "A light Bronze Age Mesopotamian skirmisher, a quick young man with a wool cap, a short fringed tunic and a bundle of javelins, leaning forward ready to run."
+  },
+  {
+   "id": "e_shield",
+   "종류": "인물",
+   "시드": [
+    1,
+    2
+   ],
+   "프롬프트": "A big heavy Bronze Age Mesopotamian infantryman with a domed bronze helmet, a cape of overlapping leather plates and a fringed kilt, carrying a very tall bronze-studded rectangular shield in front of him and a short spear, proud chin up."
+  },
+  {
+   "id": "m_soldier",
+   "종류": "인물",
+   "시드": [
+    1,
+    2
+   ],
+   "프롬프트": "A rough Midianite herdsman of the desert, an ordinary young man with a dark beard, a striped desert cloak and a headcloth with a cord, holding a long wooden shepherd's staff like a weapon, frowning."
+  },
+  {
+   "id": "m_raider",
+   "종류": "인물",
+   "시드": [
+    1,
+    2
+   ],
+   "프롬프트": "A quick Midianite herdsman youth with a red headcloth and a short tunic, a sling in his hand, leaning forward ready to run, sneaky grin."
+  },
+  {
+   "id": "m_shield",
+   "종류": "인물",
+   "시드": [
+    1,
+    2
+   ],
+   "프롬프트": "A big strong Midianite herdsman with a thick sheepskin cloak, a large round shield of stretched hide and a heavy knobbly wooden staff, proud chin up."
+  },
+  {
+   "id": "m_centurion",
+   "종류": "인물",
+   "시드": [
+    1,
+    2
+   ],
+   "프롬프트": "A stern Midianite tribal chief with a grey beard, a richly patterned striped robe, gold earrings and a headcloth with a cord, holding a carved staff and pointing commandingly."
+  },
+  {
+   "id": "kite",
+   "종류": "정령",
+   "시드": [
+    1,
+    2
+   ],
+   "프롬프트": "A black kite bird of prey with wide spread brown wings and a forked tail, swooping down with sharp eyes and talons out, seen from the side."
+  },
+  {
+   "id": "abram",
+   "종류": "인물",
+   "시드": [
+    1
+   ],
+   "프롬프트": "Abram, a dignified kind man of about seventy-five with a long grey-streaked dark beard, a blue and cream striped wool robe, a cream headcloth with a cord, holding a tall wooden staff, gentle determined face."
+  },
+  {
+   "id": "moses_young",
+   "종류": "인물",
+   "시드": [
+    1
+   ],
+   "프롬프트": "Moses as a forty-year-old man with a short dark brown beard and dark hair, a simple brown shepherd's robe and a cream headcloth, holding a wooden shepherd's staff, kind serious face."
+  }
+ ]
+}

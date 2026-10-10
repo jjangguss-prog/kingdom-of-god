@@ -1,0 +1,110 @@
+{
+ "출력": "raw",
+ "크기": [
+  1280,
+  720
+ ],
+ "단계": 4,
+ "항목": [
+  {
+   "id": "v1a",
+   "참조": [
+    "raw/arkbox_s2_9ab810.png"
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game: animals of every kind, two by two, elephants, lions, giraffes, sheep and birds, walk up a wooden ramp into this same huge long box-shaped wooden ark, a kind old man with a long white beard, cream headcloth and brown robe (Noah) and his family welcoming them, cloudy sky.",
+   "종류": "장면",
+   "시드": [
+    2
+   ]
+  },
+  {
+   "id": "v1b",
+   "참조": [
+    "raw/arkbox_s2_9ab810.png"
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game: the great side door of this same huge long box-shaped wooden ark closing by itself as warm heavenly golden light shines on it from parting clouds above, the first rain beginning to fall, no people visible.",
+   "종류": "장면",
+   "시드": [
+    2
+   ]
+  },
+  {
+   "id": "v1c",
+   "참조": [
+    "raw/arkbox_s2_9ab810.png"
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game: this same huge long box-shaped wooden ark, with no mast and no sails, floating safely on a vast stormy flood under heavy rain clouds, big waves and distant lightning, warm light glowing from its small windows, only the ark on the water.",
+   "종류": "장면",
+   "시드": [
+    2
+   ]
+  },
+  {
+   "id": "v1d",
+   "참조": [
+    "raw/arkbox_s2_9ab810.png"
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game: this same long box-shaped wooden ark resting on green mountains after the flood, a brilliant rainbow across the clearing sky, a kind old man with a long white beard, cream headcloth and brown robe (Noah) and his family giving thanks at a stone altar, a white dove flying with an olive leaf, animals coming out.",
+   "종류": "장면",
+   "시드": [
+    2
+   ]
+  },
+  {
+   "id": "v3a",
+   "프롬프트": "Wide illustrated story panel for a children's Bible game: at dawn an old man with a long grey-streaked beard in a blue and cream striped robe (Abram) leads a band of men bringing freed captives home: a younger man with a short black beard in a red-brown cloak (Lot) with his wife and daughters, women and children, flocks and goods, a joyful reunion.",
+   "종류": "장면",
+   "시드": [
+    2
+   ]
+  },
+  {
+   "id": "s3c",
+   "프롬프트": "Wide illustrated story panel for a children's Bible game: an old man with a long grey-streaked beard in a blue and cream striped robe (Abram) gathers his trained household servants, young men of many ages, at his camp under great oak trees at night, torches burning, the men holding staffs, slings and bows, brave determined faces.",
+   "종류": "장면",
+   "시드": [
+    2
+   ]
+  },
+  {
+   "id": "s4c",
+   "프롬프트": "Wide illustrated story panel for a children's Bible game: Hebrew slaves making mud bricks under a hot sun in ancient Egypt, carrying heavy loads past half-built monuments, taskmasters with sticks standing over them, faint shadowy purple wisps hovering above the taskmasters. The picture fills the whole frame edge to edge, no picture frame, no border.",
+   "종류": "장면",
+   "시드": [
+    2
+   ]
+  },
+  {
+   "id": "v4b",
+   "프롬프트": "Wide illustrated story panel for a children's Bible game: a brave young Hebrew girl speaks to a kind Egyptian princess by the river among papyrus reeds, offering to fetch a nurse, the princess cradling the baby with both arms, every person with exactly two arms and two hands, the baby's mother hurrying near behind the reeds. The picture fills the whole frame edge to edge, no picture frame, no border, no speech bubbles, no text.",
+   "종류": "장면",
+   "시드": [
+    2
+   ]
+  },
+  {
+   "id": "v5c",
+   "프롬프트": "Wide illustrated story panel for a children's Bible game: a bush burning with golden flames glows on a desert mountain at dusk, beams of golden light rising into the sky, and far below in the distance the land of Egypt where tiny slaves labor among pyramids. The picture fills the whole frame edge to edge, no picture frame, no border.",
+   "종류": "장면",
+   "시드": [
+    2
+   ]
+  },
+  {
+   "id": "v6b",
+   "프롬프트": "Wide illustrated story panel for a children's Bible game: the people of Israel, families with children, sheep and carts, walk on dry sandy ground through the middle of the sea between two towering walls of deep blue-green sea water with foaming crests, fish visible inside the water walls, lit at night by a glowing pillar of fire behind them. The picture fills the whole frame edge to edge, no border.",
+   "종류": "장면",
+   "시드": [
+    2
+   ]
+  },
+  {
+   "id": "v6c",
+   "프롬프트": "Wide illustrated story panel for a children's Bible game: dawn breaks over the sea as the towering walls of water crash back together and the sea returns to its place with big rolling waves, the people of Israel standing safe on the far shore watching in awe, the sea empty. The picture fills the whole frame edge to edge, no picture frame, no border.",
+   "종류": "장면",
+   "시드": [
+    2
+   ]
+  }
+ ]
+}

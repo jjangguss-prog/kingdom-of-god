@@ -1,0 +1,48 @@
+plugins {
+    id 'com.android.application'
+}
+
+// 서명 열쇠는 저장소 밖(사용자 폴더 .kog-keys)에 둔다. 없으면 release도 debug 열쇠로 서명한다.
+def keyProps = new Properties()
+def keyFile = new File(System.getProperty('user.home'), '.kog-keys/keystore.properties')
+if (keyFile.exists()) keyFile.withInputStream { keyProps.load(it) }
+
+android {
+    namespace 'io.github.jjangguss.kingdomofgod'
+    compileSdk 36
+
+    defaultConfig {
+        applicationId 'io.github.jjangguss.kingdomofgod'
+        minSdk 24
+        targetSdk 36
+        versionCode 1
+        versionName '1.0'
+    }
+
+    signingConfigs {
+        release {
+            if (keyFile.exists()) {
+                storeFile new File(keyFile.parentFile, keyProps['storeFile'])
+                storePassword keyProps['storePassword']
+                keyAlias keyProps['keyAlias']
+                keyPassword keyProps['keyPassword']
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            signingConfig keyFile.exists() ? signingConfigs.release : signingConfigs.debug
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}
+
+dependencies {
+    implementation 'androidx.webkit:webkit:1.12.1'
+}

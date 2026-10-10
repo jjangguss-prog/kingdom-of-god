@@ -1,0 +1,42 @@
+{
+ "출력": "raw",
+ "크기": [
+  1216,
+  832
+ ],
+ "단계": 4,
+ "항목": [
+  {
+   "id": "chariot",
+   "종류": "인물",
+   "시드": [
+    1,
+    2
+   ],
+   "프롬프트": "An ancient Egyptian two-wheeled war chariot of light wood with a blue and gold trim, pulled by two brown horses with blue plumes, galloping, side view facing right, one charioteer in a white linen kilt and striped headcloth holding the reins and a bow. The whole chariot and both horses fully visible."
+  },
+  {
+   "id": "pharaoh",
+   "종류": "인물",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "Pharaoh, king of Egypt, majestic and proud, wearing the blue war crown and a broad golden collar, riding a gilded royal war chariot pulled by two white horses with tall golden plumes, side view facing right, holding a golden crook and reins. The whole chariot and both horses fully visible."
+  },
+  {
+   "id": "f_soldier",
+   "종류": "인물",
+   "시드": [
+    5,
+    6
+   ],
+   "크기": [
+    1024,
+    1024
+   ],
+   "프롬프트": "A rough ancient villager from the days of Noah, a burly man with messy dark hair and a short beard, a simple patched brown tunic with a rope belt, barefoot, holding a crooked knobbly tree-branch club, grumpy frown."
+  }
+ ]
+}

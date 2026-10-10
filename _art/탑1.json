@@ -1,0 +1,19 @@
+{
+ "출력": "raw",
+ "크기": [1024, 1024],
+ "단계": 4,
+ "항목": [
+  {"id": "shep1", "종류": "건물", "시드": [1, 2],
+   "프롬프트": "A small round sheepfold of piled fieldstones with an open wooden gate facing the viewer, a little reed-roofed shepherd's shelter at the back, three woolly white sheep inside, a shepherd's crook leaning on the wall."},
+  {"id": "art1", "종류": "건물", "시드": [1, 2],
+   "프롬프트": "A small carpenter's work yard on a round patch of earth: a simple wooden stone-throwing machine with a long sling arm on a timber trestle, a pile of round stones, stacked timber and a work bench with mallets and saws, a young craftsman in a leather apron working the machine."},
+  {"id": "watch2", "종류": "건물", "시드": [1, 2], "참조": ["raw/watchtower_s1_40457e.png"],
+   "프롬프트": "Draw the next upgrade level of this exact watchtower in the same style, colors and camera angle: taller, with a thicker dressed-stone lower half, a sturdier timber upper frame with a railed platform, a blue pennant on a pole, the same linen awning and hanging lamp, and two watchmen archers with bows on the platform."},
+  {"id": "watch3", "종류": "건물", "시드": [1, 2], "참조": ["raw/watchtower_s1_40457e.png"],
+   "프롬프트": "Draw the highest upgrade level of this exact watchtower in the same style, colors and camera angle: a tall fortified tower of cut limestone blocks with a crenellated top platform, blue and gold banners, bronze fire braziers, a golden trim, and three watchmen archers with bows on top."},
+  {"id": "levi2", "종류": "건물", "시드": [1, 2], "참조": ["raw/levitent_s2_ebb12f.png"],
+   "프롬프트": "Draw the next upgrade level of this exact tent shrine in the same style, colors and camera angle: larger, with blue, purple and scarlet woven curtains on acacia-wood posts with bronze bases, a bronze basin in front, golden lampstand light inside, and a Levite in a white linen robe raising his hands."},
+  {"id": "levi3", "종류": "건물", "시드": [1, 2], "참조": ["raw/levitent_s2_ebb12f.png"],
+   "프롬프트": "Draw the highest upgrade level of this exact tent shrine in the same style, colors and camera angle: a grand sanctuary tent of fine blue, purple and scarlet woven curtains with golden posts and silver bases, a bright golden seven-branched lampstand shining inside, a bronze laver, soft golden rays, and a Levite in white linen with a blue sash raising his hands."}
+ ]
+}

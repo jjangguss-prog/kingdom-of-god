@@ -1,0 +1,23 @@
+{
+ "출력": "raw",
+ "크기": [1536, 864],
+ "단계": 4,
+ "항목": [
+  {"id": "s1a", "종류": "장면", "시드": [1, 2],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game: an ancient Bronze Age mud-brick town at dusk where grumpy people quarrel, shove each other and wave sticks in a dusty street, while small shadowy purple imps with tiny glowing eyes hover above them holding thin glowing threads tied to the people's shoulders like puppet strings. Gloomy but child-friendly, no blood, no weapons hitting anyone."},
+  {"id": "s1b", "종류": "장면", "시드": [1, 2], "참조": ["raw/noah_s1_65e1aa.png"],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game: this same old man Noah with his long white beard, cream headcloth and brown robe stands in a sunny green meadow, looking up in wonder at warm golden light streaming down from parting clouds, his carpenter's mallet in hand, stacks of timber beside him. Peaceful and hopeful."},
+  {"id": "s1c", "종류": "장면", "시드": [1, 2], "참조": ["raw/noah_s1_65e1aa.png"],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game: on the left this same Noah and his family build the huge wooden skeleton of the ark on a green hill; on the right a crowd of angry villagers with clubs and torches marches toward them, and above the crowd small shadowy purple imps hover, holding thin glowing threads tied to the villagers like puppet strings. Exciting adventure mood, child-friendly."},
+  {"id": "s1d", "종류": "장면", "시드": [1, 2], "참조": ["raw/noah_s1_65e1aa.png"],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game: an enormous half-built wooden ark with scaffolding and ladders on a grassy hill at golden hour, this same Noah standing in front raising his mallet with a confident smile, curious animals peeking from the meadow. Heroic and hopeful."},
+  {"id": "s6a", "종류": "장면", "시드": [1, 2],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game: a long joyful procession of ancient Hebrew families with sheep, goats, donkeys, carts and bundles walking across the desert at night, led far ahead by a towering pillar of fire that lights up the dark starry sky. Awe and wonder."},
+  {"id": "s6b", "종류": "장면", "시드": [1, 2],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game: majestic Pharaoh in a golden war chariot drawn by white horses leads a vast army of Egyptian chariots racing across the desert, great dust clouds rising under a stormy red evening sky, a faint dark purple shadow swirling in the clouds above the army. Dramatic but not violent."},
+  {"id": "s6c", "종류": "장면", "시드": [1, 2],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game: worried ancient Hebrew families gathered on a wide beach in the evening with the dark sea behind them, parents hugging children and looking back at clouds of dust from approaching chariots on the far horizon, some lifting their hands to pray to heaven. Tense but tender."},
+  {"id": "s6d", "종류": "장면", "시드": [1, 2], "참조": ["raw/moses_s2_8da0a7.png"],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game: this same Moses with his long white beard and red-brown robe stands on a rock by the sea, raising his wooden staff and calmly speaking to the worried crowd of Hebrew families, while a great pillar of cloud stands between the camp and the distant army. Hopeful light breaks through the clouds."}
+ ]
+}

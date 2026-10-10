@@ -1,0 +1,11 @@
+{
+ "출력": "raw",
+ "크기": [1536, 864],
+ "단계": 4,
+ "항목": [
+  {"id": "bg1", "종류": "장면", "시드": [1, 2], "참조": ["ref/bg1.png"],
+   "프롬프트": "Repaint this top-down tower defense game map as a richly hand-painted Kingdom Rush style battlefield seen from above at a slight angle. Keep exactly the same winding dirt road shapes and positions, the same tree positions, the small pond and the large bare earth clearing on the right side. Lush green meadow with soft painterly grass texture, scattered wildflowers, bushes and rocks, roads of warm packed earth with worn wheel ruts and pebbles, gentle morning sunlight, rich warm colors. No buildings, no characters, no text."},
+  {"id": "bg6", "종류": "장면", "시드": [1, 2], "참조": ["ref/bg6.png"],
+   "프롬프트": "Repaint this top-down tower defense game map as a richly hand-painted Kingdom Rush style desert battlefield beside the Red Sea, seen from above at a slight angle. Keep exactly the same winding sandy road shapes and positions, the same palm tree positions, the small tents near the shore and the blue sea along the right edge. Warm golden sand with dunes, dry shrubs, scattered stones, roads of pale packed earth with wheel ruts, painterly texture, late afternoon light. No characters, no text."}
+ ]
+}

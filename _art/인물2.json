@@ -1,0 +1,23 @@
+{
+ "출력": "raw",
+ "크기": [1024, 1024],
+ "단계": 4,
+ "항목": [
+  {"id": "moses", "종류": "인물", "시드": [1, 2, 3],
+   "프롬프트": "Moses, a kind and strong elderly prophet with a long white beard and white hair, wise gentle face, wearing a deep red-brown robe over a cream tunic and a cream headcloth with a cord, holding a tall wooden shepherd's staff upright in his right hand."},
+  {"id": "help", "종류": "인물", "시드": [1, 2],
+   "프롬프트": "A brave young Hebrew man in a blue wool tunic with a cream headcloth and leather belt, sandals, holding a sturdy wooden staff ready to defend, warm determined smile."},
+  {"id": "soldier", "종류": "인물", "시드": [11, 12, 13],
+   "프롬프트": "An ancient Egyptian New Kingdom foot soldier, an ordinary young man with a calm serious face, white pleated linen kilt, blue and gold striped headcloth, holding a rounded-top wooden shield covered with spotted cowhide in one hand and a single short bronze spear in the other."},
+  {"id": "raider", "종류": "인물", "시드": [1, 2],
+   "프롬프트": "A quick lightly armed ancient Egyptian skirmisher, a wiry young man with a red cloth headband and a white linen kilt, a leather pouch at his belt, holding a short wooden throwing stick, leaning forward eager to run."},
+  {"id": "shield", "종류": "인물", "시드": [1, 2],
+   "프롬프트": "A big sturdy ancient Egyptian heavy infantryman, bronze scale armor vest over a white linen kilt, striped headcloth, carrying a very large tall rectangular wooden shield with a rounded top held in front of him, a short spear in the other hand, proud chin up."},
+  {"id": "centurion", "종류": "인물", "시드": [1, 2],
+   "프롬프트": "An ancient Egyptian army officer, tall and broad, gold and blue striped headcloth, wide beaded collar necklace, white linen tunic with a blue sash, holding a short gilded command baton, stern stubborn face with folded brows."},
+  {"id": "f_soldier", "종류": "인물", "시드": [1, 2],
+   "프롬프트": "A rough ancient villager from the days of Noah, a burly man with messy dark hair and a short beard, a simple patched brown tunic with a rope belt, barefoot, holding a heavy wooden club, grumpy frown."},
+  {"id": "f_raider", "종류": "인물", "시드": [1, 2],
+   "프롬프트": "A fast ancient village youth from the days of Noah, skinny with a cloth headband, a short ragged tunic, a small sack over his shoulder and a sling in his hand, sneaky grin, leaning forward ready to dash."}
+ ]
+}

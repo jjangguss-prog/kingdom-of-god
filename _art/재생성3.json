@@ -1,0 +1,64 @@
+{
+ "출력": "raw",
+ "크기": [
+  1280,
+  720
+ ],
+ "단계": 4,
+ "항목": [
+  {
+   "id": "s1c",
+   "참조": [
+    "raw/arkbox_s2_9ab810.png"
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game: on the left a kind old man with a long white beard, cream headcloth and brown robe (Noah) and his family build this same long box-shaped wooden ark, only its timber frame and some planks done, on a green hill; on the right a crowd of angry villagers with clubs and torches marches toward them, and above the crowd small shadowy purple imps hover holding thin glowing threads tied to the villagers like puppet strings. One single wide scene, not split into panels. Every person has exactly two arms and two hands. The picture fills the whole frame edge to edge, no picture frame, no border, no speech bubbles.",
+   "종류": "장면",
+   "시드": [
+    3
+   ]
+  },
+  {
+   "id": "s1d",
+   "참조": [
+    "raw/arkbox_s2_9ab810.png"
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game: this same long box-shaped wooden ark, half built with scaffolding and ladders, on a grassy hill at golden hour, a kind old man with a long white beard, cream headcloth and brown robe (Noah) standing in front raising his wooden mallet with a confident smile, curious animals peeking from the meadow. Every person has exactly two arms and two hands. The picture fills the whole frame edge to edge, no picture frame, no border, no speech bubbles.",
+   "종류": "장면",
+   "시드": [
+    3
+   ]
+  },
+  {
+   "id": "s3d",
+   "프롬프트": "Wide illustrated story panel for a children's Bible game: under a bright moon, groups of brave men with torches quietly creep down a rocky slope toward a sleeping enemy camp of tents and glowing campfires in a valley, seen from behind the men, adventurous mood, nobody lying on the ground, no fighting shown. One single wide scene, not split into panels. Every person has exactly two arms and two hands. The picture fills the whole frame edge to edge, no picture frame, no border, no speech bubbles.",
+   "종류": "장면",
+   "시드": [
+    3
+   ]
+  },
+  {
+   "id": "v2a",
+   "프롬프트": "Wide illustrated story panel for a children's Bible game: a long caravan arrives at a great oak tree in a lush green valley near Shechem: one old man with a long grey-streaked beard in a blue and cream striped robe (Abram) leading with his staff, his wife Sarai beside him, families resting in the shade with sheep, goats and camels, golden afternoon light. Every person has exactly two arms and two hands. The picture fills the whole frame edge to edge, no picture frame, no border, no speech bubbles.",
+   "종류": "장면",
+   "시드": [
+    3
+   ]
+  },
+  {
+   "id": "v5a",
+   "프롬프트": "Wide illustrated story panel for a children's Bible game: at a desert oasis well, one forty-year-old man with a short dark beard in a brown shepherd's robe and cream headcloth (Moses) pours water into stone troughs for the flock of seven grateful young shepherd sisters, the sisters smiling, sheep drinking, warm evening light. Every person has exactly two arms and two hands. The picture fills the whole frame edge to edge, no picture frame, no border, no speech bubbles.",
+   "종류": "장면",
+   "시드": [
+    3
+   ]
+  },
+  {
+   "id": "v6d",
+   "프롬프트": "Wide illustrated story panel for a children's Bible game: on the shore in bright morning light, Miriam, a joyful elderly woman, dances holding a round tambourine high in one hand, leading the women of Israel in a song of praise, families clapping and raising their hands, the calm sea behind. Every person has exactly two arms and two hands. The picture fills the whole frame edge to edge, no picture frame, no border, no speech bubbles.",
+   "종류": "장면",
+   "시드": [
+    3
+   ]
+  }
+ ]
+}

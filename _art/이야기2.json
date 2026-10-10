@@ -1,0 +1,368 @@
+{
+ "출력": "raw",
+ "크기": [
+  1536,
+  864
+ ],
+ "단계": 4,
+ "항목": [
+  {
+   "id": "s0a",
+   "종류": "장면",
+   "시드": [
+    1
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game: the beautiful newly created world at sunrise: light breaking over the waters, green hills, rivers and flowers, birds in the sky, fish in the sea and animals of every kind, rays of warm golden light from above, wonder and goodness. No people."
+  },
+  {
+   "id": "s0b",
+   "종류": "장면",
+   "시드": [
+    1
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game: a man and a woman in simple garments of animal skin walk sadly out of a lush garden into a wild land, looking back; behind them at the garden gate a bright turning sword of fire; a serpent slithers away into the grass; soft golden light from the sky still shines gently on the couple. Tender, sad but hopeful."
+  },
+  {
+   "id": "s2a",
+   "종류": "장면",
+   "시드": [
+    1
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game: crowds of ancient people building a gigantic brick tower toward the sky in a plain city, carrying bricks and tar on ladders, proud faces, dark storm clouds gathering around the top of the tower."
+  },
+  {
+   "id": "s2b",
+   "종류": "장면",
+   "시드": [
+    1
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game: this same man Abram stands outside his house in the town of Haran at dawn, looking up in awe at warm golden light breaking through the clouds, his wife Sarai watching from the doorway.",
+   "참조": [
+    "raw/abram_s1_a19639.png"
+   ]
+  },
+  {
+   "id": "s2c",
+   "종류": "장면",
+   "시드": [
+    1
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game: this same Abram leads a long caravan of his family, servants, camels, donkeys and flocks of sheep and goats across rolling hills toward the land of Canaan, a younger man, his nephew Lot, walking beside him, bright day.",
+   "참조": [
+    "raw/abram_s1_a19639.png"
+   ]
+  },
+  {
+   "id": "s2d",
+   "종류": "장면",
+   "시드": [
+    1
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game: on a hilltop road at dusk, a band of desert raiders sneaks toward a caravan camp of tents and sheep in the valley; small shadowy purple imps hover above the raiders holding thin glowing threads tied to their shoulders like puppet strings. Child-friendly suspense."
+  },
+  {
+   "id": "s3a",
+   "종류": "장면",
+   "시드": [
+    1
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game: this same Abram and his younger nephew Lot stand on a hilltop with their flocks behind them; Lot points eagerly down at the lush green Jordan plain with a walled city far away, while Abram calmly opens his hand to let him choose.",
+   "참조": [
+    "raw/abram_s1_a19639.png"
+   ]
+  },
+  {
+   "id": "s3b",
+   "종류": "장면",
+   "시드": [
+    1
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game: in the evening an army of the four kings of the East marches away from a walled city with smoke rising, leading a line of worried captives, a man with his wife and daughters among them, carrying loot on donkeys; faint purple shadow wisps hover above the soldiers. Not violent."
+  },
+  {
+   "id": "s3c",
+   "종류": "장면",
+   "시드": [
+    1
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game: this same Abram gathers his trained household servants at his camp under great oak trees at night, torches burning, the men holding staffs, slings and bows, brave determined faces.",
+   "참조": [
+    "raw/abram_s1_a19639.png"
+   ]
+  },
+  {
+   "id": "s3d",
+   "종류": "장면",
+   "시드": [
+    1
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game: under a bright moon, groups of brave men with torches quietly approach a sleeping enemy camp in a valley from several sides, tents and campfires below, adventurous mood, no fighting shown."
+  },
+  {
+   "id": "s4a",
+   "종류": "장면",
+   "시드": [
+    1
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game: this same man, now very old Abraham, and his young son Isaac stand by a stone altar on a mountaintop at dawn, looking with joy and relief at a ram caught by its horns in a thicket nearby, warm golden light.",
+   "참조": [
+    "raw/abram_s1_a19639.png"
+   ]
+  },
+  {
+   "id": "s4b",
+   "종류": "장면",
+   "시드": [
+    1
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game: in a grand Egyptian hall full of grain sacks, a young ruler in fine Egyptian robes, Joseph, tearfully embraces his eleven Hebrew brothers who kneel in astonishment, warm light."
+  },
+  {
+   "id": "s4c",
+   "종류": "장면",
+   "시드": [
+    1
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game: Hebrew slaves making mud bricks under a hot sun in ancient Egypt, carrying heavy loads past half-built monuments, taskmasters with sticks standing over them, faint shadowy purple wisps hovering above the taskmasters."
+  },
+  {
+   "id": "s4d",
+   "종류": "장면",
+   "시드": [
+    1
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game: at dawn a Hebrew mother gently lays her baby boy in a small woven papyrus basket coated with pitch among the tall reeds at the edge of the Nile, while a young girl, his sister, watches from behind the reeds. Tender and quiet."
+  },
+  {
+   "id": "s5a",
+   "종류": "장면",
+   "시드": [
+    1
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game: a young boy prince Moses grows up in the Egyptian palace, wearing fine linen, studying papyrus scrolls with scribes among painted columns, the kind Egyptian princess watching him with love."
+  },
+  {
+   "id": "s5b",
+   "종류": "장면",
+   "시드": [
+    1
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game: this same man Moses, wearing Egyptian clothes, flees alone across the desert at sunset, looking back with fear and regret, the cities of Egypt far behind him.",
+   "참조": [
+    "raw/moses_young_s1_ee021b.png"
+   ]
+  },
+  {
+   "id": "s5c",
+   "종류": "장면",
+   "시드": [
+    1
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game: at a round stone well in a desert oasis of Midian, seven young shepherd sisters draw water into stone troughs for their father's flock of sheep, while this same tired traveler Moses sits resting by the well.",
+   "참조": [
+    "raw/moses_young_s1_ee021b.png"
+   ]
+  },
+  {
+   "id": "s5d",
+   "종류": "장면",
+   "시드": [
+    1
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game: rough herdsmen push seven shepherd sisters away from a desert well and scatter their sheep, small shadowy purple imps hovering above the herdsmen holding glowing puppet threads; this same Moses stands up with his staff to protect the sisters.",
+   "참조": [
+    "raw/moses_young_s1_ee021b.png"
+   ]
+  },
+  {
+   "id": "v1a",
+   "종류": "장면",
+   "시드": [
+    1
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game: animals of every kind, two by two, elephants, lions, giraffes, sheep and birds, walk up a wooden ramp into the huge finished ark, this same Noah and his family welcoming them, cloudy sky.",
+   "참조": [
+    "raw/noah_s1_65e1aa.png"
+   ]
+  },
+  {
+   "id": "v1b",
+   "종류": "장면",
+   "시드": [
+    1
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game: the great side door of Noah's huge wooden ark closing by itself as warm heavenly golden light shines on it from parting clouds above, the first rain beginning to fall, no people visible."
+  },
+  {
+   "id": "v1c",
+   "종류": "장면",
+   "시드": [
+    1
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game: Noah's huge wooden ark floating safely on a vast stormy flood under heavy rain clouds, big waves and distant lightning, warm light glowing from its small windows, only the ark on the water."
+  },
+  {
+   "id": "v1d",
+   "종류": "장면",
+   "시드": [
+    1
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game: Noah's ark resting on green mountains after the flood, a brilliant rainbow across the clearing sky, this same Noah and his family giving thanks at a stone altar, a white dove flying with an olive leaf, animals coming out.",
+   "참조": [
+    "raw/noah_s1_65e1aa.png"
+   ]
+  },
+  {
+   "id": "v2a",
+   "종류": "장면",
+   "시드": [
+    1
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game: this same Abram's caravan arrives at a great oak tree in a lush green valley near Shechem, families resting in the shade with their flocks, golden afternoon light.",
+   "참조": [
+    "raw/abram_s1_a19639.png"
+   ]
+  },
+  {
+   "id": "v2b",
+   "종류": "장면",
+   "시드": [
+    1
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game: this same Abram kneels and builds an altar of stones under the great oak tree, a beam of warm golden light shines down from the sky onto him and onto the green land all around.",
+   "참조": [
+    "raw/abram_s1_a19639.png"
+   ]
+  },
+  {
+   "id": "v2c",
+   "종류": "장면",
+   "시드": [
+    1
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game: a vast night sky full of countless bright stars over the hills of Canaan, a small figure of an old man with a staff standing on a hilltop looking up at the stars, tents glowing below."
+  },
+  {
+   "id": "v3a",
+   "종류": "장면",
+   "시드": [
+    1
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game: at dawn this same Abram and his men lead freed captives home, a younger man Lot with his family, women and children, with their flocks and goods, joyful reunion.",
+   "참조": [
+    "raw/abram_s1_a19639.png"
+   ]
+  },
+  {
+   "id": "v3b",
+   "종류": "장면",
+   "시드": [
+    1
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game: a dignified old king and priest, Melchizedek, in white and purple robes with a simple gold circlet, brings bread and wine to this same Abram in a green valley and lifts his hand to bless him, soft golden light.",
+   "참조": [
+    "raw/abram_s1_a19639.png"
+   ]
+  },
+  {
+   "id": "v3c",
+   "종류": "장면",
+   "시드": [
+    1
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game: this same Abram stands guard on a hill beside a covenant offering laid on stones under the open sky, waving his staff to chase away dark birds of prey swooping down from the sky.",
+   "참조": [
+    "raw/abram_s1_a19639.png"
+   ]
+  },
+  {
+   "id": "v4a",
+   "종류": "장면",
+   "시드": [
+    1
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game: a kind Egyptian princess with her maidens at the edge of the Nile among papyrus reeds opens a small woven basket and finds a crying Hebrew baby boy inside, her face full of compassion, morning light."
+  },
+  {
+   "id": "v4b",
+   "종류": "장면",
+   "시드": [
+    1
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game: a brave young Hebrew girl speaks to the Egyptian princess by the river, offering to fetch a nurse, the baby now in the princess's arms, the baby's mother hurrying near behind the reeds."
+  },
+  {
+   "id": "v4c",
+   "종류": "장면",
+   "시드": [
+    1
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game: a Hebrew mother joyfully hugs and nurses her baby son at home in warm lamplight, her young daughter smiling beside her, a small royal Egyptian purse of payment on the table."
+  },
+  {
+   "id": "v5a",
+   "종류": "장면",
+   "시드": [
+    1
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game: this same Moses has watered the flock of seven grateful shepherd sisters at a desert oasis well, the sisters smiling, sheep drinking from stone troughs, warm evening light.",
+   "참조": [
+    "raw/moses_young_s1_ee021b.png"
+   ]
+  },
+  {
+   "id": "v5b",
+   "종류": "장면",
+   "시드": [
+    1
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game: on the slope of a desert mountain this same Moses, a shepherd with his flock nearby, kneels barefoot with his sandals set aside before a bush burning with bright golden flames that do not burn it up, awe and wonder.",
+   "참조": [
+    "raw/moses_young_s1_ee021b.png"
+   ]
+  },
+  {
+   "id": "v5c",
+   "종류": "장면",
+   "시드": [
+    1
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game: a bush burning with golden flames glows on a mountain at dusk, beams of golden light rising into the sky, and far below in the distance the land of Egypt where tiny slaves labor among pyramids."
+  },
+  {
+   "id": "v6a",
+   "종류": "장면",
+   "시드": [
+    1
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game: this same old Moses stands on the shore at night stretching his staff out over the sea while a mighty wind blows and the sea begins to split apart, a glowing pillar of fire behind the camp of tents.",
+   "참조": [
+    "raw/moses_s2_8da0a7.png"
+   ]
+  },
+  {
+   "id": "v6b",
+   "종류": "장면",
+   "시드": [
+    1
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game: the people of Israel, families with children, sheep and carts, walk on dry ground through the middle of the sea between two towering walls of blue water, lit by a glowing pillar of fire behind them at night."
+  },
+  {
+   "id": "v6c",
+   "종류": "장면",
+   "시드": [
+    1
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game: dawn breaks over the sea as the towering walls of water crash back together and the sea returns to its place with big rolling waves, the people of Israel standing safe on the far shore watching, the sea empty."
+  },
+  {
+   "id": "v6d",
+   "종류": "장면",
+   "시드": [
+    1
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game: on the shore in bright morning light, Miriam, a joyful elderly woman, dances with a tambourine leading the women of Israel in a song of praise, families raising their hands, the calm sea behind."
+  }
+ ]
+}

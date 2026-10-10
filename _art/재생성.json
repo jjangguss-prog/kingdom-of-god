@@ -1,0 +1,91 @@
+{
+ "출력": "raw",
+ "크기": [
+  1024,
+  1024
+ ],
+ "단계": 4,
+ "항목": [
+  {
+   "id": "bg5b",
+   "종류": "장면",
+   "시드": [
+    3,
+    4
+   ],
+   "참조": [
+    "ref/ref5.png"
+   ],
+   "크기": [
+    1536,
+    864
+   ],
+   "프롬프트": "Repaint this top-down tower defense game map as a richly hand-painted Kingdom Rush style battlefield in the dry desert of Midian, seen from above at a slight angle. Keep exactly the same sandy road shapes meeting on the right. At the right end of the road stands a round stone well with a wooden pulley and stone water troughs, shaded by three palm trees. Everywhere else is dry golden sand and packed earth with small desert shrubs, scattered stones and red rock outcrops at the edges; no ponds, no lakes, no rivers. Warm late afternoon light. No characters, no text."
+  },
+  {
+   "id": "arkbox",
+   "종류": "건물",
+   "시드": [
+    1,
+    2
+   ],
+   "크기": [
+    1216,
+    832
+   ],
+   "프롬프트": "Noah's ark seen from the side at a three-quarter angle: a very long rectangular wooden box-shaped vessel with straight flat sides, three decks, a low pitched roof with a row of small windows just under it, one big door in the side with a wooden ramp leading up to it, planks sealed with dark pitch, resting on timber blocks on bare earth, the whole ark visible. Not a boat hull, not a barrel."
+  },
+  {
+   "id": "icon",
+   "종류": "장면",
+   "시드": [
+    1,
+    2
+   ],
+   "크기": [
+    1024,
+    1024
+   ],
+   "프롬프트": "Mobile game app icon artwork: a glowing golden oil lamp with a bright warm flame in the center, a tiny wooden ark and a starry deep-blue night sky behind it, a golden crown shape of light above the flame, bold clean shapes, centered composition with a rounded square frame, polished hand-painted 2D cartoon. No text, no letters."
+  },
+  {
+   "id": "title",
+   "종류": "장면",
+   "시드": [
+    1,
+    2
+   ],
+   "크기": [
+    1536,
+    864
+   ],
+   "프롬프트": "Key art for a children's Bible tower defense game title screen: under a deep blue starry night sky with a crescent moon, a small wooden ark on a distant hill on the left, rolling hills of Canaan, a winding road leading to a glowing golden oil lamp standing on a stone in the foreground center, warm golden light, majestic and hopeful, open empty sky at the top center for a title. No text, no letters, no people."
+  },
+  {
+   "id": "s0a",
+   "종류": "장면",
+   "시드": [
+    2,
+    3
+   ],
+   "크기": [
+    1536,
+    864
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game: the beautiful newly created world at sunrise filling the whole picture edge to edge: light breaking over the waters, green hills, rivers and flowers, birds in the sky, fish in the sea and animals of every kind, rays of warm golden light from above, wonder and goodness. No people, no picture frame, no border."
+  },
+  {
+   "id": "s3a",
+   "종류": "장면",
+   "시드": [
+    1,
+    2
+   ],
+   "크기": [
+    1536,
+    864
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game: on a hilltop with flocks of sheep behind them, an old dignified man with a long grey-streaked beard in a blue and cream striped robe (Abram) calmly opens his hand, while a much younger man with a short black beard in a red-brown cloak (his nephew Lot) eagerly points down at the lush green Jordan plain with a walled city far away."
+  }
+ ]
+}

@@ -1,0 +1,22 @@
+{
+ "출력": "raw",
+ "크기": [
+  1280,
+  720
+ ],
+ "단계": 4,
+ "항목": [
+  {
+   "id": "v1a",
+   "참조": [
+    "raw/arkbox_s2_9ab810.png"
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game: pairs of animals, two elephants, two lions, two giraffes, two sheep and two doves, each animal clearly its own kind, walk up a wooden ramp into this same huge long box-shaped wooden ark, a kind old man with a long white beard, cream headcloth and brown robe (Noah) and his family welcoming them, cloudy sky.",
+   "종류": "장면",
+   "시드": [
+    4,
+    5
+   ]
+  }
+ ]
+}

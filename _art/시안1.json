@@ -1,0 +1,19 @@
+{
+ "출력": "raw",
+ "크기": [1024, 1024],
+ "단계": 4,
+ "항목": [
+  {"id": "noah", "종류": "인물", "시드": [1, 2, 3],
+   "프롬프트": "Noah, a kind sturdy elderly carpenter with a long flowing white beard and bushy white eyebrows, warm smile, tan skin, wearing a brown wool robe with a rope belt and a cream headcloth, carrying a big wooden carpenter's mallet over his shoulder, a leather tool pouch at his hip."},
+  {"id": "shepherd", "종류": "인물", "시드": [1, 2],
+   "프롬프트": "A brave young Hebrew shepherd boy with curly dark hair, sheepskin vest over a short brown tunic, sandals, holding a tall wooden shepherd's crook in one hand and a leather sling in the other, determined friendly face."},
+  {"id": "soldier", "종류": "인물", "시드": [1, 2, 3],
+   "프롬프트": "An ancient Egyptian New Kingdom foot soldier, ordinary young man, white linen kilt, blue and gold striped headcloth, bronze-rimmed wooden shield and a short spear, a thin wisp of dark purple smoke curling around his shoulders and his eyes glowing faint violet as if under a spell, looking dazed and puppet-like rather than evil."},
+  {"id": "imp", "종류": "정령", "시드": [1, 2],
+   "프롬프트": "A small mischievous shadow imp spirit made of swirling dark purple and indigo smoke, two little curved horns, big glowing yellow eyes, a sly grin, tiny clawed hands, a wispy smoke tail instead of legs, cartoon cute but sneaky."},
+  {"id": "watchtower", "종류": "건물", "시드": [1, 2],
+   "프롬프트": "A tall wooden watchtower on a round fieldstone base, with a small lookout platform and a linen awning on top, a lamp hanging from a post, ancient Israelite village style; a young watchman archer with a bow stands on the platform."},
+  {"id": "levitent", "종류": "건물", "시드": [1, 2],
+   "프롬프트": "A small sacred tent shrine made of striped goat-hair cloth on wooden poles, a bronze basin in front, a golden lampstand glowing inside, a Levite in a white linen robe and turban standing at the entrance raising his hands as soft golden light shines."}
+ ]
+}

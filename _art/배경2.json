@@ -1,0 +1,74 @@
+{
+ "출력": "raw",
+ "크기": [
+  1536,
+  864
+ ],
+ "단계": 4,
+ "항목": [
+  {
+   "id": "bg2",
+   "종류": "장면",
+   "시드": [
+    1,
+    2
+   ],
+   "프롬프트": "Repaint this top-down tower defense game map as a richly hand-painted Kingdom Rush style battlefield in the green hill country of ancient Canaan, seen from above at a slight angle. Keep exactly the same winding dirt road shapes and positions and the bare earth clearing on the right side. Rolling green and golden hills, olive trees and terebinth oaks, scattered rocks, wildflowers and low stone field walls; in the right clearing a small camp of a few goat-hair tents with resting camels and sheep. Warm morning light. No characters, no text.",
+   "참조": [
+    "ref/ref2.png"
+   ]
+  },
+  {
+   "id": "bg3",
+   "종류": "장면",
+   "시드": [
+    1,
+    2
+   ],
+   "프롬프트": "Repaint this top-down tower defense game map as a richly hand-painted Kingdom Rush style battlefield in rocky hill country at dusk, seen from above at a slight angle. Keep exactly the same winding road shapes and positions and the clearing on the left side. Dark green shrubs, boulders, a dry stream bed and twisted oak trees; in the left clearing a small camp of tents with a glowing campfire. Warm dusk light fading to blue. No characters, no text.",
+   "참조": [
+    "ref/ref3.png"
+   ]
+  },
+  {
+   "id": "bg4",
+   "종류": "장면",
+   "시드": [
+    1,
+    2
+   ],
+   "프롬프트": "Repaint this top-down tower defense game map as a richly hand-painted Kingdom Rush style battlefield on the bank of the Nile river in ancient Egypt, seen from above at a slight angle. Keep exactly the same two sandy road shapes meeting at the river bank, the blue river along the bottom and the thick green papyrus reeds at the water's edge; on the upper part of the map palm groves, irrigated green fields and a few mud-brick houses; a tiny woven basket hidden among the reeds at the bottom center. Warm daylight. No characters, no text.",
+   "참조": [
+    "ref/ref4.png"
+   ]
+  },
+  {
+   "id": "bg5",
+   "종류": "장면",
+   "시드": [
+    1,
+    2
+   ],
+   "프롬프트": "Repaint this top-down tower defense game map as a richly hand-painted Kingdom Rush style battlefield at a desert oasis in the land of Midian, seen from above at a slight angle. Keep exactly the same sandy road shapes meeting on the right, where a round stone well with a wooden pulley stands in a small green oasis with palm trees and stone water troughs. Red rock outcrops, desert shrubs and scattered stones. Warm late afternoon light. No characters, no text.",
+   "참조": [
+    "ref/ref5.png"
+   ]
+  },
+  {
+   "id": "levi_priest",
+   "종류": "건물",
+   "시드": [
+    1,
+    2
+   ],
+   "크기": [
+    1024,
+    1024
+   ],
+   "참조": [
+    "raw/levi3_s1_008019.png"
+   ],
+   "프롬프트": "Draw the special priest version of this exact sacred tent in the same style, colors and camera angle: a bronze altar of burnt offering with a thin column of smoke in front, a golden incense altar glowing inside, and a high priest in a blue robe with golden bells and pomegranates on the hem, a golden ephod with a breastplate of twelve colored stones and a white turban with a golden plate, raising his hands in blessing."
+  }
+ ]
+}
