@@ -33,6 +33,16 @@
     2
    ],
    "프롬프트": "Hur, an elderly Israelite man of about eighty with a grey-streaked brown beard, kind strong face, wearing a plain olive-green wool robe with a brown leather belt and a cream headcloth, no staff, both arms raised up above his shoulders with open palms as if holding up the tired arm of someone standing beside him."
+  },
+  {
+   "id": "gatekeeper",
+   "종류": "인물",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "A burly, broad-shouldered Levite gatekeeper of the tabernacle, a big strong man of about thirty-five with a short black beard and a calm protective face, wearing a plain white linen tunic with a wide brown leather belt, bronze bracers and a cream headcloth, holding a long thick wooden gate bar upright like a staff, solid steady stance."
   }
  ]
 }
