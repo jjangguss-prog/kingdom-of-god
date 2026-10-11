@@ -1,0 +1,38 @@
+{
+ "출력": "raw",
+ "크기": [
+  1536,
+  864
+ ],
+ "단계": 4,
+ "항목": [
+  {
+   "id": "bg7closed",
+   "종류": "장면",
+   "시드": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "참조": [
+    "raw/bg7w_s2_4a5b31.png"
+   ],
+   "프롬프트": "Repaint this exact same top-down game map with the same style, colors, light and camera, keeping everything identical, except one change: remove the short sandy road at the bottom that comes up from the bottom edge and joins the main road near the tents. In its place paint unbroken dry rocky desert ground: pale sand, gravel, a few red-brown boulders piled across where the road was, and a couple of small desert shrubs. All other roads, the hill, the tents and the trees stay exactly the same. No characters, no text."
+  },
+  {
+   "id": "bg7closed",
+   "종류": "장면",
+   "시드": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "참조": [
+    "raw/bg7w_s2_4a5b31.png"
+   ],
+   "프롬프트": "Repaint this exact same top-down game map with the same style, colors, light and camera, keeping everything identical, except one change: the short sandy road at the bottom that comes up from the bottom edge toward the tents is completely blocked and hidden by a long heap of large red-brown boulders and rocks piled over it, with a few thorny desert shrubs between the rocks, so no road is visible there at all. All other roads, the hill, the tents and the trees stay exactly the same. No characters, no text."
+  }
+ ]
+}

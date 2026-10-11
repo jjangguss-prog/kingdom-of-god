@@ -434,7 +434,7 @@ const LINES={
   shep:{key:'shep',name:'양치기',role:'병사',verse:'주의 지팡이와 막대기가 나를 안위하시나이다 (시 23:4)',desc:'양치기 셋이 길을 막아서요. 2단계부터 물맷돌을 먼저 던져요.',
     tiers:[{name:'양치기',cost:70,hp:60,dmg:4,armor:0},{name:'물매 양치기',cost:110,hp:85,dmg:6,armor:.15,sling:7},{name:'용맹한 양치기',cost:150,hp:125,dmg:10,armor:.3,sling:11,big:.5}],
     branches:[{id:'mighty',name:'다윗의 용사들',lock:'15 엔게디에서 열려요 (삼상 22:2)'},{id:'nazirite',name:'나실인',lock:'13 미스바에서 열려요 (삿 13:5)'}]},
-  levi:{key:'levi',name:'레위인',role:'마법',air:true,verse:'레위인은 내 것이라 (민 3:12)',desc:'거룩한 빛으로 교만의 갑옷을 꿰뚫어요. 완악한 마음에는 약해요.',
+  levi:{key:'levi',name:'레위인',role:'마법',air:true,verse:'레위인은 내 것이라 (민 3:12)',desc:'거룩한 빛으로 교만의 갑옷을 꿰뚫어요. 빛을 맞은 적은 잠깐 느려져요. 완악한 마음에는 약해요.',
     tiers:[{name:'레위인',cost:100,range:150,rate:1.5,dmg:21},{name:'회막 레위인',cost:150,range:158,rate:1.4,dmg:31},{name:'성소 레위인',cost:200,range:168,rate:1.3,dmg:50}],
     branches:[{id:'priest',name:'제사장'},{id:'choir',name:'찬양대',lock:'홍해를 이기면 열려요 (바다의 노래, 출 15)'}]},
   art:{key:'art',name:'장인',role:'대포',verse:'하나님의 영을 그에게 충만하게 하여 지혜와 총명과 지식과 여러 가지 재주로 (출 31:3)',desc:'돌을 던져 여럿을 한꺼번에 쳐요. 하늘의 적은 못 맞혀요.',
@@ -517,7 +517,7 @@ const STAGES={
     paths:[[[-50,130],[90,140],[200,200],[230,300],[160,390],[180,480],[300,520],[420,470],[470,360],[560,270],[680,250],[760,320],[740,430],[800,520],[920,520],[980,440],[1050,382]],
            [[330,790],[320,690],[300,600],[300,520],[420,470],[470,360],[560,270],[680,250],[760,320],[740,430],[800,520],[920,520],[980,440],[1050,382]]],
     flags:[[40,132],[318,676]],
-    spots:[[282,446],[645,314],[883,441],[132,238],[368,594],[558,338],[73,187],[222,398],[1018,498],[804,414],[417,535],[697,203],[246,656],[156,300],[370,426],[122,96]],
+    spots:[[282,446],[645,314],[883,441],[132,228],[362,594],[558,338],[73,187],[222,398],[1018,498],[804,414],[423,535],[697,203],[246,656],[156,310],[370,426],[122,96]],
     heroHome:[1000,412],lamp:[1022,318],
     waves:[
       [['soldier',6,1.8,0,0]],
@@ -545,7 +545,7 @@ const STAGES={
     paths:[[[-50,120],[100,130],[250,110],[380,150],[420,250],[340,330],[260,400],[300,490],[430,520],[560,470],[600,360],[700,290],[830,300],[880,400],[960,470],[1050,490],[1120,470]],
            [[-50,630],[100,630],[220,590],[300,490],[430,520],[560,470],[600,360],[700,290],[830,300],[880,400],[960,470],[1050,490],[1120,470]]],
     flags:[[40,122],[40,630]],
-    spots:[[374,431],[727,355],[319,198],[126,572],[980,420],[449,469],[108,176],[315,557],[807,385],[329,268],[219,159],[519,407],[192,531],[722,240],[993,534],[94,85]],
+    spots:[[374,431],[727,355],[319,192],[126,572],[980,420],[449,469],[108,176],[315,557],[807,385],[329,274],[219,159],[519,407],[192,531],[722,240],[993,534],[94,85]],
     heroHome:[1060,450],lamp:[1160,432],npc:{art:'abram',x:1196,y:470,dir:-1},
     waves:[
       [['soldier',8,1.4,0,0]],
@@ -572,7 +572,7 @@ const STAGES={
     paths:[[[1330,140],[1180,150],[1050,130],[930,170],[900,270],[980,350],[1000,440],[900,500],[760,480],[700,380],[600,330],[480,360],[430,460],[330,520],[230,480],[170,450],[90,450]],
            [[1330,610],[1200,610],[1060,590],[960,560],[900,500],[760,480],[700,380],[600,330],[480,360],[430,460],[330,520],[230,480],[170,450],[90,450]]],
     flags:[[1240,145],[1240,610]],
-    spots:[[869,425],[998,213],[583,398],[297,445],[1058,538],[1144,94],[1151,556],[192,518],[876,555],[976,275],[380,428],[660,427],[1077,181],[1050,474],[508,438],[779,401]],
+    spots:[[869,425],[998,193],[583,398],[297,445],[1058,538],[1144,94],[1151,556],[192,518],[876,555],[976,275],[380,428],[660,427],[1077,181],[1050,454],[508,438],[779,401]],
     heroHome:[160,420],lamp:[64,404],npc:{art:'abram',x:52,y:470,dir:1},
     waves:[
       [['soldier',10,1.2,0,0]],
@@ -601,7 +601,7 @@ const STAGES={
     paths:[[[-50,180],[90,190],[210,250],[220,350],[140,430],[180,520],[300,540],[380,460],[400,360],[480,300],[560,360],[560,460],[600,520],[640,590]],
            [[1330,180],[1190,190],[1070,250],[1060,350],[1140,430],[1100,520],[980,540],[900,460],[880,360],[800,300],[720,360],[720,460],[680,520],[640,590]]],
     flags:[[40,182],[1240,182]],
-    spots:[[1032,429],[249,428],[634,453],[1165,255],[108,260],[467,417],[804,418],[247,492],[1020,494],[798,353],[479,353],[1121,313],[739,545],[159,313],[145,157],[1133,152]],
+    spots:[[1032,409],[249,408],[634,453],[1173,255],[104,260],[467,437],[804,438],[247,492],[1020,494],[798,353],[479,353],[1113,313],[739,545],[163,313],[145,157],[1133,152]],
     heroHome:[640,535],lamp:[712,588],
     waves:[
       [['soldier',10,1.2,0,0]],
@@ -630,7 +630,7 @@ const STAGES={
            [[-50,560],[100,560],[220,610],[360,600],[450,530],[560,560],[680,520],[760,440],[860,360],[960,370],[1060,360]],
            [[700,770],[700,690],[620,650],[560,560],[680,520],[760,440],[860,360],[960,370],[1060,360]]],
     flags:[[40,170],[40,560],[700,690]],
-    spots:[[525,500],[717,376],[467,317],[319,175],[663,613],[254,562],[116,106],[112,631],[507,609],[404,362],[722,312],[620,475],[383,224],[354,513],[213,181]],
+    spots:[[525,500],[717,396],[467,317],[319,175],[663,613],[254,562],[116,106],[112,631],[507,609],[404,362],[722,312],[620,475],[383,224],[354,513],[213,181]],
     heroHome:[1000,360],lamp:[1066,304],npc:{art:'moses_young',x:1150,y:338,dir:-1,unless:'moses'},
     waves:[
       [['soldier',10,1.2,0,0]],
@@ -659,7 +659,7 @@ const STAGES={
     paths:[[[-50,120],[110,130],[240,110],[340,170],[330,270],[230,330],[250,420],[380,430],[480,360],[600,330],[700,390],[680,500],[780,560],[900,520],[950,420],[1040,370],[1110,380]],
            [[-50,620],[100,620],[220,600],[310,520],[380,430],[480,360],[600,330],[700,390],[680,500],[780,560],[900,520],[950,420],[1040,370],[1110,380]]],
     flags:[[40,122],[40,620]],
-    spots:[[372,363],[821,482],[220,167],[558,401],[156,567],[1005,463],[264,478],[129,179],[259,231],[628,440],[132,664],[430,315],[828,604],[406,492],[931,364],[95,85]],
+    spots:[[372,363],[821,482],[220,157],[558,401],[156,567],[1005,463],[264,478],[129,179],[259,241],[628,440],[132,664],[430,315],[828,604],[406,492],[931,364],[95,85]],
     heroHome:[1042,366],lamp:[1128,350],cloudAt:{x:700,y:430},
     events:{4:'cloud'},
     waves:[
@@ -692,7 +692,7 @@ const STAGES={
            [[-50,130],[100,140],[220,110],[320,150],[360,240],[480,280],[510,380],[440,470],[470,570],[600,610],[720,560],[760,460],[860,410],[960,450],[1000,540],[1090,580],[1170,560]],
            [[780,790],[790,690],[860,630],[930,585],[1000,540],[1090,580],[1170,560]]],
     flags:[[40,432],[40,132],[812,676]],rear:2,
-    spots:[[880,530],[409,326],[213,225],[547,530],[125,380],[1046,500],[768,605],[124,85],[873,466],[403,185],[516,463],[683,644],[125,491],[325,300],[157,175],[432,391],[635,550]],
+    spots:[[880,550],[409,316],[217,225],[547,538],[125,380],[1046,500],[768,605],[124,85],[873,466],[403,185],[516,455],[683,644],[125,491],[325,300],[157,175],[432,401],[635,550]],
     heroHome:[985,505],lamp:[1205,540],hill:{x:965,y:152},
     waves:[
       [['raider',8,.9,0,0]],
@@ -765,12 +765,30 @@ function newGame(sid,heroKind){
     cloud:S.cloudAt?{state:'home',x:1150,y:250,k:0,t:0}:null,
     shake:0,flash:0,tut:sid===1?{step:-1,shown:{}}:null,over:false,scene:null,boss:null,dawn:0,sea:0,arkShown:0,seen:new Set(),timers:[],
     hardTold:false,bindTold:false,firstPriest:true,stars:0,stat:{unitDown:0,heroDown:0},
-    hill:S.hill?{x:S.hill.x,y:S.hill.y,up:true,st:1,helped:false,told:false,anim:0}:null,banner:null,brave:null,rearTold:false};
+    hill:S.hill?{x:S.hill.x,y:S.hill.y,up:true,st:1,helped:false,told:false,anim:0}:null,banner:null,brave:null,rearTold:false,rearOpen:S.rear==null,rearAnim:null};
   G.hero=makeHero(heroKind,S.heroHome);
   if(G.tut)later(.6,()=>tut(0));else later(.8,()=>toast('적이 길 끝의 <b>빛나는 문</b>을 지나면 약속의 등불이 약해져요.',6));
 }
 function later(s,fn){G.timers.push({t:s,fn});}
 /* ---------- 산 위의 모세(7 르비딤): 손을 들면 탑이 세지고, 팔이 피곤해 내려오면 적이 빨라진다. 누르면 아론과 훌이 붙든다 ---------- */
+const rearShut=()=>!!G&&G.S.rear!=null&&!G.rearOpen&&!G.rearAnim;
+const openPaths=()=>G.paths.filter((p,i)=>!(i===G.S.rear&&rearShut()));
+// 뒷길 뚫기(신 25:18): 처음엔 바위로 막혀 있다가, 그 길을 쓰는 첫 무리에서 아래쪽부터 무너지며 길이 드러난다. 큰길과 만나는 곳까지 1.8초
+function rearBreak(){const p=G.paths[G.S.rear];let d1=p.len;for(let s=0;s<p.len;s+=6){const q=at(p,s);if(nearest(G.paths[0],q.x,q.y).dd<64*64){d1=s;break;}}
+  G.rearAnim={t:0,dur:1.8,d1,nb:.55};buildBg();G.shake=reduceMotion?0:Math.max(G.shake,8);Snd.play('boom');}
+function updRear(dt){const a=G.rearAnim;if(!a)return;a.t+=dt;const p=G.paths[G.S.rear],q=at(p,a.d1*Math.min(1,a.t/a.dur));
+  if(a.t<a.dur){if(!reduceMotion)G.shake=Math.max(G.shake,3.5);for(let i=0;i<3;i++)part('dust',q.x+rand(-50,50),q.y+rand(-20,20),rand(-30,30),rand(-55,-15),1.1,'rgba(176,134,86,',rand(9,17));
+    if(Math.random()<dt*50)part('spark',q.x+rand(-40,40),q.y+rand(-14,14),rand(-110,110),rand(-190,-80),.85,Math.random()<.5?'#8a3f2a':'#b0603e',rand(3,6));
+    if(a.t>a.nb){a.nb+=.55;Snd.play('boom');}}
+  else if(a.t>a.dur+.2){G.rearAnim=null;G.rearOpen=true;buildBg();}}
+let rearC=null;
+function drawRearReveal(c){const a=G.rearAnim,im=REAR_IMG[G.sid];if(!im)return;const p=G.paths[G.S.rear],k=clamp(scale*dpr,.5,2),w=Math.round(W*k),h=Math.round(H*k);
+  rearC=rearC||document.createElement('canvas');if(rearC.width!==w||rearC.height!==h){rearC.width=w;rearC.height=h;}
+  const o=rearC.getContext('2d');o.setTransform(1,0,0,1,0,0);o.globalCompositeOperation='source-over';o.globalAlpha=1;o.clearRect(0,0,w,h);o.setTransform(k,0,0,k,0,0);o.drawImage(im,0,0,W,H);
+  const d=a.d1*Math.min(1,a.t/a.dur);o.globalCompositeOperation='destination-out';o.lineCap='round';o.lineJoin='round';
+  for(const [lw,al] of [[210,.5],[180,1]]){o.globalAlpha=al;o.lineWidth=lw;o.beginPath();for(let s=0;s<d;s+=10){const q=at(p,s);s?o.lineTo(q.x,q.y):o.moveTo(q.x,q.y);}const q=at(p,d);o.lineTo(q.x,q.y);o.stroke();}
+  if(a.t>a.dur){o.globalAlpha=Math.min(1,(a.t-a.dur)/.2);o.fillRect(0,0,W,H);}
+  o.globalAlpha=1;o.globalCompositeOperation='source-over';c.drawImage(rearC,0,0,W,H);}
 function updHill(dt){const m=G.hill;if(!m||G.phase==='prep')return;m.anim+=dt;if(!m.up)return;m.st-=dt/(m.helped?46:26);
   if(m.st<=0){m.st=0;m.up=false;Snd.play('deny');if(!m.told){m.told=true;toast('<b>모세의 팔이 피곤해졌어요.</b> 손이 내려오면 아말렉이 이겨요. 산 위의 모세를 눌러 아론과 훌이 팔을 붙들게 하세요. (출 17:11–12)',7);}else toast('모세의 팔이 내려왔어요. 산 위의 모세를 누르세요.',3);}}
 function hillTap(){const m=G.hill;if(m.up){floatText(m.x,m.y-96,'모세가 손을 들고 있어요','#ffe9a8',13);Snd.play('click');return;}
@@ -795,7 +813,7 @@ function startWave(){
   Snd.play('wave');
   if(has('watch',5)&&G.towers.some(t=>t.line==='watch')){G.horn=8;for(const t of G.towers)if(t.line==='watch')floatText(t.x,t.y-70,'나팔 소리','#ffe9a8',13);}
   if(G.S.events&&G.S.events[i]==='cloud')cloudEvent();
-  if(G.S.rear!=null&&!G.rearTold&&w.some(g=>g[4]===G.S.rear||g[4]===-1)){G.rearTold=true;banner('아말렉이 뒤에 처진 약한 자들을 노려요','네 뒤에 떨어진 약한 자들을 쳤고 하나님을 두려워하지 아니하였느니라 (신 25:18)',4.5);later(4,()=>toast('진영 뒤쪽 <b>짧은 길</b>로도 와요. 등불 가까이에도 탑을 두세요.',5));}
+  if(G.S.rear!=null&&!G.rearTold&&w.some(g=>g[4]===G.S.rear||g[4]===-1)){G.rearTold=true;rearBreak();for(const e of q)if(e.pi===G.S.rear)e.t+=1.3;q.sort((a,b)=>a.t-b.t);banner('아말렉이 길을 뚫고 뒤로 쳐들어와요','네 뒤에 떨어진 약한 자들을 쳤고 하나님을 두려워하지 아니하였느니라 (신 25:18)',4.5);later(4,()=>toast('아말렉이 진영 뒤쪽에 <b>짧은 길</b>을 뚫었어요. 등불 가까이에도 탑을 두세요.',5));}
   if(G.tut){if(i===0)later(4,()=>tut(2));if(i===1)tut(4);}
 }
 function callWave(){
@@ -838,7 +856,7 @@ function updEnemies(dt){
   for(const e of G.enemies)if(alive(e))e.haste=1;
   for(const c of G.enemies){if(!alive(c)||!c.def.haste)continue;const r2=c.def.haste.r*c.def.haste.r;for(const e of G.enemies)if(e!==c&&alive(e)&&!e.def.boss&&d2(e.x,e.y,c.x,c.y)<r2)e.haste=Math.max(e.haste,c.def.haste.mul);}
   for(const e of G.enemies){
-    e.t+=dt;if(e.hitT>0)e.hitT-=dt;if(e.vuln>0)e.vuln-=dt;if(e.slowT>0)e.slowT-=dt;
+    e.t+=dt;if(e.hitT>0)e.hitT-=dt;if(e.vuln>0)e.vuln-=dt;if(e.slowT>0)e.slowT-=dt;if(e.lslow>0)e.lslow-=dt;
     if(e.state==='freed'){e.ft+=dt;if(e.ft>1.1&&e.def.block){e.d=Math.max(0,e.d-24*dt);const p=at(G.paths[e.pi],e.d);e.x=p.x-p.dy*e.off;e.y=p.y+p.dx*e.off;e.dir=-(Math.sign(p.dx)||1);}continue;}
     if(G.scene||G.over)continue;
     if(e.def.boss)bossTick(e,dt);
@@ -1044,6 +1062,7 @@ function updProjs(dt){
     const dx=p.tx-p.x,dy=p.ty-p.y,Ld=Math.hypot(dx,dy),st=p.sp*dt;p.ang=Math.atan2(dy,dx);
     if(Ld<=st+4){p.done=true;
       if(tg&&alive(tg))hurt(tg,p.dmg,(p.k==='arrow'||p.k==='sling')?'phys':p.pierce?'holyP':'holy',p.k==='hbolt'?'hero':null);
+      if(p.k==='bolt'&&tg&&alive(tg)&&!tg.def.boss){tg.slowF=tg.slowT>0?Math.min(tg.slowF,.7):.7;tg.slowT=Math.max(tg.slowT,1.2);tg.lslow=1.2;}   // 레위인 빛살을 맞으면 잠깐 느려진다
       const holy=p.k==='bolt'||p.k==='hbolt';for(let i=0;i<(holy?6:3);i++)part('spark',p.tx,p.ty,rand(-60,60),rand(-60,30),.35,holy?'#fff3b0':'#ffffff',2);
     }else{p.x+=dx/Ld*st;p.y+=dy/Ld*st;if((p.k==='bolt'||p.k==='hbolt')&&Math.random()<dt*30)part('spark',p.x,p.y,rand(-15,15),rand(-15,15),.3,'#fff0a0',1.8);}
   }
@@ -1070,7 +1089,7 @@ function gainXP(n){if(!G||!G.hero||G.hero.D.fixedLv)return;const h=G.hero,r=hero
     if(!G.over){banner(`${h.D.name}${josa(h.D.name,'이','가')} 연단되었어요 · Lv ${lv}`,'환난은 인내를, 인내는 연단을, 연단은 소망을 이루는 줄 앎이로다 (롬 5:3–4)',3.5);Snd.play('up');
       for(let i=0;i<18;i++)part('spark',h.x+rand(-18,18),h.y-rand(0,50),rand(-40,40),rand(-110,-40),1,'#ffe08a',2.8);
       later(2,()=>{if(G&&!G.over&&ptsLeft(h.kind)>0)toast(`<b>연단 점수</b>를 받았어요. 싸움을 마치고 지도의 <b>연단</b>에서 ${h.D.name}의 기술을 키우세요.`,6);});}}}
-function makeHero(kind,home){const D=HEROES[kind],rec=D.fixedLv?null:heroRec(kind),lv=D.fixedLv||levelOf(rec.xp),hp0=Math.round(D.hp*(1+.08*(lv-1)));return{role:'hero',kind,D,lv,sk:D.fixedSk||rec.sk,dmg:D.dmg*(1+.07*(lv-1)),x:home[0],y:home[1],hx:home[0],hy:home[1],hp:hp0,max:hp0,armor:D.armor,state:'ok',moving:false,tx:0,ty:0,target:null,atkCd:0,s1:3,s2:6,ult:D.ult.cd*.35,idle:0,respawn:0,dir:-1,t:0,bar:null,barCd:0,hitT:0,cast:0};}
+function makeHero(kind,home){const D=HEROES[kind],rec=D.fixedLv?null:heroRec(kind),lv=D.fixedLv||levelOf(rec.xp),hp0=Math.round(D.hp*(1+.08*(lv-1)));return{role:'hero',kind,D,lv,sk:D.fixedSk||rec.sk,dmg:D.dmg*(1+.07*(lv-1)),x:home[0],y:home[1],hx:home[0],hy:home[1],px:home[0],py:home[1],calm:0,going:false,hp:hp0,max:hp0,armor:D.armor,state:'ok',moving:false,tx:0,ty:0,target:null,atkCd:0,s1:3,s2:6,ult:D.ult.cd*.35,idle:0,respawn:0,dir:-1,t:0,bar:null,barCd:0,hitT:0,cast:0};}
 function unitAt(x,y){if(!G)return null;const R=scale<.75?26:20;let best=null,bd=R*R;for(const u of G.units){if(u.role!=='unit'||u.state!=='ok'||!(u.tw||u.rally))continue;const dd=d2(x,y,u.x,u.y-15);if(dd<bd){bd=dd;best=u;}}return best;}
 function selUnits(){const s=G.unitSel;if(!s)return[];return G.units.filter(u=>u.role==='unit'&&u.state!=='gone'&&(s.tw?u.tw===s.tw:u.rally===s.rally));}
 const SHEP_R=190;   // 양치기가 탑에서 떠날 수 있는 거리
@@ -1107,7 +1126,7 @@ function dragDest(d){
 function finishDrag(d){const q=dragDest(d);if(d.k==='hero'){moveHero(q.x,q.y);G.heroSel=false;return;}if(q.ok)setRally(d.sel,q.x,q.y);else{G.unitSel=null;ui.info(null);}}
 function drawDrag(c){const d=drag;if(!d||!d.moved||!G)return;if(d.k==='hero'&&!(G.hero&&G.hero.state==='ok'))return;const q=dragDest(d);
   c.save();c.strokeStyle=q.ok?'rgba(255,240,170,.9)':'rgba(255,120,100,.8)';c.lineWidth=3;c.setLineDash([9,7]);c.lineDashOffset=-animT*30;L(c,q.fx,q.fy-6,q.x,q.y-6);c.setLineDash([]);c.lineWidth=2.6;E(c,q.x,q.y,20,9);c.stroke();c.restore();}
-function moveHero(x,y){const h=G.hero;if(!h||h.state!=='ok')return;h.tx=clamp(x,24,W-24);h.ty=clamp(y,70,H-24);h.moving=true;dropTarget(h);G.fx.push({k:'mark',x:h.tx,y:h.ty,t:0,life:.6});Snd.play('click');}
+function moveHero(x,y){const h=G.hero;if(!h||h.state!=='ok')return;h.tx=clamp(x,24,W-24);h.ty=clamp(y,70,H-24);h.px=h.tx;h.py=h.ty;h.going=false;h.moving=true;dropTarget(h);G.fx.push({k:'mark',x:h.tx,y:h.ty,t:0,life:.6});Snd.play('click');}
 function updHero(dt){
   const h=G.hero;if(!h)return;h.t+=dt;if(h.hitT>0)h.hitT-=dt;if(h.cast>0)h.cast-=dt;
   h.ult=Math.max(0,h.ult-dt);h.s1=Math.max(0,h.s1-dt);h.s2=Math.max(0,h.s2-dt);h.barCd=Math.max(0,h.barCd-dt);
@@ -1128,6 +1147,9 @@ function updHero(dt){
   if(tg){const gx=tg.x+h.side*18,gy=tg.y+1,dx=gx-h.x,dy=gy-h.y,Ld=Math.hypot(dx,dy);if(Ld>3){const st=Math.min(Ld,h.D.speed*1.5*dt);h.x+=dx/Ld*st;h.y+=dy/Ld*st;if(Math.abs(dx)>1.5)h.dir=dx>=0?1:-1;}
     if(tg.state==='fight'&&Ld<10){h.dir=tg.x>=h.x?1:-1;h.atkCd-=dt;if(h.atkCd<=0){h.atkCd=h.D.rate;hurt(tg,h.D.melee?h.dmg:h.dmg*.6,'phys','hero');Snd.play('hit');}}}
   else if(!h.D.melee){h.atkCd-=dt;if(h.atkCd<=0){const e=findTarget(h.x,h.y,h.D.range);if(e){h.atkCd=h.D.rate;h.dir=e.x>=h.x?1:-1;h.cast=.25;G.projs.push({k:'hbolt',x:h.x+h.dir*10,y:h.y-44,tx:e.x,ty:e.y,tg:e,sp:560,dmg:h.dmg});Snd.play('holy');}else h.atkCd=.2;}}
+  const busy=tg||(!h.D.melee&&findTarget(h.x,h.y,h.D.range));   // 싸움이 없으면 1초 뒤 지킬 자리(처음 자리나 옮겨 준 곳)로 걸어서 돌아간다
+  h.calm=busy?0:h.calm+dt;h.going=false;
+  if(h.calm>1&&!(h.kind==='moses'&&G.hands>0)){const dx=h.px-h.x,dy=h.py-h.y,Ld=Math.hypot(dx,dy);if(Ld>4){const st=Math.min(Ld,h.D.speed*dt);h.x+=dx/Ld*st;h.y+=dy/Ld*st;if(Math.abs(dx)>1.5)h.dir=dx>=0?1:-1;h.going=true;h.idle=0;}}
   if(h.kind==='noah'&&!h.bar&&h.barCd<=0&&h.idle>3){const n=nearestAll(h.x,h.y);if(n&&n.dd<100*100){const q=at(G.paths[n.pi],Math.max(0,n.d-34));const b=mkUnit({role:'bar',x:q.x,y:q.y,hp:150,max:150,armor:.3});G.units.push(b);h.bar=b;for(let i=0;i<8;i++)part('dust',q.x+rand(-12,12),q.y,rand(-20,20),rand(-30,-5),.6,'rgba(160,110,60,',4);Snd.play('build');}else h.barCd=1;}
   heroSkills(h);
 }
@@ -1287,7 +1309,7 @@ function update(dt){
   if(G.scene){updScene(dt);updFx(dt);updEnemies(dt);return;}
   if(G.over){updFx(dt);updEnemies(dt);return;}
   G.cd.cry=Math.max(0,G.cd.cry-dt);G.cd.help=Math.max(0,G.cd.help-dt);
-  updWaves(dt);updCloud(dt);updHill(dt);updEnemies(dt);updUnits(dt);updHero(dt);updTowers(dt);updProjs(dt);updStamp(dt);updBanner(dt);updBeams(dt);updFx(dt);
+  updWaves(dt);updCloud(dt);updHill(dt);updRear(dt);updEnemies(dt);updUnits(dt);updHero(dt);updTowers(dt);updProjs(dt);updStamp(dt);updBanner(dt);updBeams(dt);updFx(dt);
   if(G.tut&&G.hero.ult<=0&&G.waveIdx>=1)tut(5);
 }
 
@@ -1327,8 +1349,8 @@ const ART_DEF={
 };
 const ART={};
 const AV='?v=14';   // 그림을 바꿀 때마다 올려서 예전 그림이 캐시에서 나오지 않게
-const BG_IMG={};
-function loadArt(){for(const k of Object.keys(STAGES).map(Number)){const im=new Image();im.onload=()=>{BG_IMG[k]=im;if(G&&G.sid===k)buildBg();};im.src='art/bg'+k+'.jpg'+AV;}
+const BG_IMG={},REAR_IMG={};   // REAR_IMG: 처음엔 막혀 있는 뒷길을 덮는 그림(bgN_rear.png)
+function loadArt(){for(const k of Object.keys(STAGES).map(Number)){const im=new Image();im.onload=()=>{BG_IMG[k]=im;if(G&&G.sid===k)buildBg();};im.src='art/bg'+k+'.jpg'+AV;if(STAGES[k].rear!=null){const r=new Image();r.onload=()=>{REAR_IMG[k]=r;if(G&&G.sid===k)buildBg();};r.src='art/bg'+k+'_rear.png'+AV;}}
   for(const k in ART_DEF){const im=new Image();im.onload=()=>{try{ART[k]=prepArt(im,ART_DEF[k]);if(G&&G.hero&&G.hero.kind===k)drawHeroPortrait($('heroCv'),k);}catch(e){}};im.src='art/'+k+'.png'+AV;}}
 function prepArt(im,d){
   const sh=Math.round(d.h*3),sw=Math.round(im.naturalWidth*sh/im.naturalHeight);
@@ -1502,9 +1524,9 @@ function drawSpot(c,s,hl){
 }
 /* ---------- 배경 ---------- */
 let bgC=document.createElement('canvas');
-function buildBg(){if(!G)return;const k=clamp(scale*dpr,.5,2);bgC.width=Math.round(W*k);bgC.height=Math.round(H*k);const c=bgC.getContext('2d');c.setTransform(k,0,0,k,0,0);if(BG_IMG[G.sid]){c.imageSmoothingQuality='high';c.drawImage(BG_IMG[G.sid],0,0,W,H);}else if(G.sid===1)paintMeadow(c);else paintDesert(c);}
+function buildBg(){if(!G)return;const k=clamp(scale*dpr,.5,2);bgC.width=Math.round(W*k);bgC.height=Math.round(H*k);const c=bgC.getContext('2d');c.setTransform(k,0,0,k,0,0);if(BG_IMG[G.sid]){c.imageSmoothingQuality='high';c.drawImage(BG_IMG[G.sid],0,0,W,H);if(rearShut()&&REAR_IMG[G.sid])c.drawImage(REAR_IMG[G.sid],0,0,W,H);}else if(G.sid===1)paintMeadow(c);else paintDesert(c);}
 function blocked(x,y,r){for(const p of G.paths)if(nearest(p,x,y).dd<(r+28)*(r+28))return true;for(const s of G.S.spots)if(d2(x,y,s[0],s[1])<(r+36)*(r+36))return true;return false;}
-function roads(c,edge,mid,top){c.lineJoin='round';c.lineCap='round';for(const [w,col] of [[60,OL],[56,edge],[46,mid],[24,top]]){c.strokeStyle=col;c.lineWidth=w;for(const p of G.paths){c.beginPath();p.pts.forEach((q,i)=>i?c.lineTo(q[0],q[1]):c.moveTo(q[0],q[1]));c.stroke();}}const R=seeded(5);for(const p of G.paths)for(let i=0;i<p.pts.length;i+=2){const q=p.pts[i];if(R()<.5){c.fillStyle='rgba(120,90,50,.35)';E(c,q[0]+(R()-.5)*34,q[1]+(R()-.5)*28,2+R()*2.5,1.4+R()*1.4);c.fill();}}}
+function roads(c,edge,mid,top){c.lineJoin='round';c.lineCap='round';for(const [w,col] of [[60,OL],[56,edge],[46,mid],[24,top]]){c.strokeStyle=col;c.lineWidth=w;for(const p of openPaths()){c.beginPath();p.pts.forEach((q,i)=>i?c.lineTo(q[0],q[1]):c.moveTo(q[0],q[1]));c.stroke();}}const R=seeded(5);for(const p of openPaths())for(let i=0;i<p.pts.length;i+=2){const q=p.pts[i];if(R()<.5){c.fillStyle='rgba(120,90,50,.35)';E(c,q[0]+(R()-.5)*34,q[1]+(R()-.5)*28,2+R()*2.5,1.4+R()*1.4);c.fill();}}}
 function tree(c,x,y,R){const s=.8+R()*.5;c.fillStyle='rgba(30,40,10,.25)';E(c,x+4,y+4,26*s,9*s);c.fill();RR(c,x-4*s,y-20*s,8*s,22*s,3);FS(c,'#7a4e2a',2);for(const [dx,dy,r] of [[-12,-30,15],[12,-30,15],[0,-44,17]]){C(c,x+dx*s,y+dy*s,r*s);FS(c,'#5ea53c',2.2);}for(const [dx,dy,r] of [[-12,-30,15],[12,-30,15],[0,-44,17]]){C(c,x+dx*s-3*s,y+dy*s-4*s,r*s*.5);c.fillStyle='rgba(170,220,110,.55)';c.fill();}}
 function bush(c,x,y,R){const s=.7+R()*.4;for(const [dx,dy,r] of [[-7,0,8],[6,0,8],[0,-6,9]]){C(c,x+dx*s,y+dy*s,r*s);FS(c,'#6bb447',1.8);}c.fillStyle='rgba(190,230,130,.5)';C(c,x-2*s,y-8*s,4*s);c.fill();if(R()<.5){c.fillStyle='#e04f5f';C(c,x+4*s,y-3*s,1.6);c.fill();C(c,x-5*s,y+1*s,1.6);c.fill();}}
 function rock(c,x,y,R,dry){const s=.6+R()*.7;c.fillStyle='rgba(0,0,0,.18)';E(c,x+2,y+4*s,13*s,4*s);c.fill();c.beginPath();c.moveTo(x-12*s,y+3*s);c.quadraticCurveTo(x-10*s,y-9*s,x,y-10*s);c.quadraticCurveTo(x+12*s,y-8*s,x+12*s,y+3*s);c.closePath();FS(c,dry?'#a89880':'#a7a39a',2);c.fillStyle='rgba(255,255,255,.3)';E(c,x-3*s,y-6*s,5*s,2*s);c.fill();}
@@ -1600,6 +1622,7 @@ function drawEnemy(c,e){
   const freed=e.state==='freed';let a=1;if(freed)a=e.ft<1.1?1:clamp(1-(e.ft-1.1)/(e.def.block?2.3:1.3),0,1);
   if(!freed&&inCloud(e))a*=.6;
   const pose=freed?(e.ft<1.1?'kneel':'walk'):(e.stun>0?'idle':(e.state==='fight'?'fight':'walk'));
+  if(!freed&&e.lslow>0){c.save();c.globalAlpha=Math.min(1,e.lslow/.4)*.8;c.strokeStyle='#ffe08a';c.lineWidth=2;E(c,e.x,e.y+2,(e.def.r||12)+6,((e.def.r||12)+6)*.42);c.stroke();c.restore();}   // 레위인 빛살로 느려진 적의 발밑 금빛 고리
   c.save();c.globalAlpha=a;
   if((e.type==='chariot'||e.type==='pharaoh')&&ART[e.type]){const k=e.def.boss?1.8:1;sprite(c,ART[e.type],e.x,e.y,{dir:e.dir,t:e.t*.8,pose:!freed&&e.state==='walk'&&e.stun<=0?'walk':'idle',dark:!freed,flash:e.hitT>0?e.hitT/.12:0,s:k});if(e.shield>0){c.globalAlpha=a*.7;E(c,e.x,e.y-28*k,40*k,30*k);FS(c,'rgba(150,175,205,.35)',2.4,'rgba(200,220,240,.9)');}}
   else if(e.type==='chariot'||e.type==='pharaoh'){chariot(c,e.x,e.y,{dir:e.dir,t:e.t,moving:!freed&&e.state==='walk'&&e.stun<=0,k:e.def.boss?1.8:1,look:e.look,calm:freed});if(e.shield>0){c.globalAlpha=a*.7;const k=e.def.boss?1.8:1;E(c,e.x,e.y-20*k,36*k,26*k);FS(c,'rgba(150,175,205,.35)',2.4,'rgba(200,220,240,.9)');}}
@@ -1630,7 +1653,7 @@ function drawHero(c){
   const h=G.hero;if(!h||h.state==='dead')return;
   if(G.heroSel){c.save();c.strokeStyle='#ffe58a';c.lineWidth=3;c.setLineDash([6,4]);c.lineDashOffset=-animT*20;E(c,h.x,h.y+2,20,8);c.stroke();c.restore();}
   const raise=(h.kind==='moses'&&(G.hands>0||(G.scene&&G.scene.kind==='sea'&&G.scene.t<10)));
-  const pose=raise?'raise':(h.moving?'walk':(h.target&&h.target.state==='fight'?'fight':'idle'));
+  const pose=raise?'raise':(h.moving||h.going?'walk':(h.target&&h.target.state==='fight'?'fight':'idle'));
   if(ART[h.kind])sprite(c,ART[h.kind],h.x,h.y,{dir:h.dir,t:h.t,pose,atk:(h.D.rate-h.atkCd)/.3,flash:h.hitT>0?h.hitT/.12:0});
   else chibi(c,h.x,h.y,Object.assign({},h.D.look,{dir:h.dir,t:h.t,pose,atk:(h.D.rate-h.atkCd)/.3,s:1.3,glow:h.kind==='moses'}));
   if(raise&&h.kind==='moses'&&handsHelp()){for(const sd of [-1,1]){const k=sd<0?'aaron':'hur';if(ART[k])sprite(c,ART[k],h.x+sd*24,h.y+4,{dir:-sd,t:h.t+sd,pose:'idle'});else chibi(c,h.x+sd*20,h.y+3,{s:1.05,dir:-sd,t:h.t,pose:'raise',skin:'#d39a68',cloth:sd<0?'#3a5fb0':'#7d8b4a',head:'cloth',hc:'#efe3c4',beard:'#6b4a2a',item:null});}}
@@ -1808,6 +1831,7 @@ function renderPlay(){
   const c=ctx;c.save();
   if(G.shake>0)c.translate(rand(-G.shake,G.shake),rand(-G.shake,G.shake));
   if(bgC.width&&bgC.height)c.drawImage(bgC,0,0,W,H);
+  if(G.rearAnim)drawRearReveal(c);
   if(G.sid===6){drawSea(c);drawFires(c);}
   for(const s of G.spots)if(!s.tower)drawSpot(c,s,(G.menu&&G.menu.spot===s)||(G.tut&&G.tut.step===0&&!G.towers.length));
   drawGround(c);drawGate(c);drawUnitSel(c);if(G.rallyFor)drawShepRange(c,G.rallyFor);drawDrag(c);
@@ -1991,7 +2015,7 @@ function openMenu(spot){
     if(t.branch){[-2.5,-1.57,-.64].forEach((a,i)=>place('skill',a,{i}));}
     else if(t.tier<3){place('up',-1.57,capOk(t)?{}:{lock:G.S.cap<=t.tier?`이 스테이지는 ${G.S.cap}단계 탑까지만 쓸 수 있어요.`:''});}
     else{const br=LINES[t.line].branches;[-2.2,-.94].forEach((a,i)=>{const b=br[i];const lock=BRANCH[b.id]?(G.S.cap<4?'이 스테이지에서는 4단계를 쓸 수 없어요.':b.id==='choir'&&!choirOpen()?b.lock:null):b.lock;place('branch',a,{id:b.id,lock});});}
-    place('sell',1.57);if(t.line==='shep'||(t.branch==='priest'&&t.sk.gate>0))place('rally',3.14);
+    const rally=t.line==='shep'||(t.branch==='priest'&&t.sk.gate>0);place('sell',rally?2.1:1.57);if(rally)place('rally',1.04);   // 랠리는 판매와 아래쪽 양옆으로(위쪽 기술 단추·가격표와 겹치지 않게)
   }
   G.menu={spot,items,sel:null,hov:null};
   ui.info(t?towerInfo(t):null,spot.y>420);Snd.play('click');
@@ -2007,6 +2031,10 @@ function doItem(it){
   else if(it.k==='rally'){G.rallyFor=t;G.menu=null;ui.info('<h3>모일 곳 정하기</h3><p>길 위를 눌러 주세요.</p>',s.y>420);}
 }
 function hitTower(x,y){for(const t of G.towers)if(Math.abs(x-t.x)<28&&y<t.y+14&&y>t.y-74)return t;return null;}
+// 누른 곳에서 가장 가까운 것을 고른다: 빈 자리는 동그라미 가운데, 탑은 몸통 가운데까지의 거리. 아래 탑의 키 큰 몸통이 바로 위 자리를 가리지 않게
+function pickSpot(x,y){const R=scale<.75?44:34;let best=null,bs=1e9;for(const s of G.spots){let sc;const t=s.tower;
+  if(t){if(!(Math.abs(x-t.x)<28&&y<t.y+14&&y>t.y-74))continue;sc=Math.hypot(x-t.x,(y-(t.y-26))*.8)+8;}else{const dd=d2(x,y,s.x,s.y);if(dd>=R*R)continue;sc=Math.sqrt(dd);}
+  if(sc<bs){bs=sc;best=s;}}return best;}
 function onTap(x,y){
   if(!G||G.paused)return;
   if(G.scene){if(G.scene.kind==='comic'){comicTap(x,y);return;}if(G.scene.t>3){G.scene.t=Math.max(G.scene.t,G.scene.kind==='ark'?16.9:17.4);}return;}
@@ -2020,7 +2048,7 @@ function onTap(x,y){
   const hu=unitAt(x,y);if(hu){const sel=hu.tw?{tw:hu.tw}:{rally:hu.rally},same=G.unitSel&&(sel.tw?G.unitSel.tw===sel.tw:G.unitSel.rally===sel.rally);closeMenu();G.heroSel=false;G.aim=null;G.unitSel=same?null:sel;if(G.unitSel)ui.info(sel.tw&&hu.gk?'<h3>성막 문지기</h3><p>파랗게 칠한 길 위를 누르거나, 원하는 쪽으로 쓸면 그리로 옮겨 가요.</p>':sel.tw?'<h3>양치기 무리</h3><p>파랗게 칠한 길 위를 누르거나, 원하는 쪽으로 쓸면 그리로 옮겨 가요.</p>':'<h3>세 겹 줄</h3><p>길 위를 누르거나, 원하는 쪽으로 쓸면 장정들이 옮겨 가요.</p>',hu.y>420);Snd.play('click');return;}
   const h=G.hero;if(h&&h.state==='ok'&&d2(x,y,h.x,h.y-22)<28*28){G.unitSel=null;G.heroSel=!G.heroSel;closeMenu();Snd.play('click');return;}
   if(G.phase==='prep'||G.phase==='between'){for(const pi of nextPaths()){const f=G.S.flags[pi];if(d2(x,y,f[0],f[1])<34*34){closeMenu();callWave();return;}}}
-  const spot=G.spots.find(s=>(!s.tower&&d2(x,y,s.x,s.y)<(scale<.75?44:34)**2));const tw=hitTower(x,y);
+  const pk=pickSpot(x,y),spot=pk&&!pk.tower?pk:null,tw=pk&&pk.tower?pk.tower:null;
   if(G.heroSel&&!spot&&!tw){moveHero(x,y);G.heroSel=false;return;}
   if(G.unitSel&&!spot&&!tw){moveUnits(x,y);return;}
   if(tw){if(G.menu&&G.menu.spot===tw.spot){closeMenu();return;}G.heroSel=false;openMenu(tw.spot);return;}
