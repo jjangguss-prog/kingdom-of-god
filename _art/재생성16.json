@@ -1,0 +1,27 @@
+{
+ "출력": "raw",
+ "크기": [
+  1536,
+  864
+ ],
+ "단계": 4,
+ "항목": [
+  {
+   "id": "v8a",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: at sunset on the plateau of Bashan the huge giant king Og, a giant with a long black beard, an iron crown and dark iron scale armor with a black-and-crimson cloak has dropped his iron mace and kneels on one knee with a calm face, while the dark shadow creature that held him by strings breaks apart and flees into the sky; in front of him stands Caleb, a strong Israelite warrior of about thirty with a full, neat, short dark brown beard that evenly covers his chin, jaw and both cheeks, connected to his moustache, and dark hair, a bright brave face, wearing a green-and-tan wool tunic with a brown leather belt, leather bracers and a cream headcloth, holding a bow, with a few Israelite men behind him, all safe; warm golden light pours from the sky; no blood, nobody lying on the ground. Every person has exactly two arms, two hands, two legs and two feet."
+  }
+ ]
+}

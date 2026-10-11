@@ -304,7 +304,7 @@ body.force #rotate{display:none!important}
     <h1 class="logo"><span class="a">Kingdom of God</span><span class="b">Old Testament</span></h1>
     <p class="tsub">하나님의 나라 · 구약</p>
     <div class="row" style="margin-top:.6em;font-size:1.35em"><button class="btn" id="bStart">시작하기</button><button class="btn" id="bCont">계속하기</button><button class="btn wood" id="bCodexT">두루마리</button></div>
-    <p class="tnote">v1.5.1 · 1장 약속, 2장 구원의 밤, 3장 광야 (방주부터 에드레이까지)</p>
+    <p class="tnote">v1.5.2 · 1장 약속, 2장 구원의 밤, 3장 광야 (방주부터 에드레이까지)</p>
   </section>
   <section id="sSlots" class="scr" hidden>
     <div class="card slots"><h2 id="slotH">계속하기</h2><p class="sub" id="slotSub"></p><div id="slotList"></div><div class="row"><button class="btn" id="slotNew" hidden>새 이야기 시작</button><button class="btn wood" id="slotBack">돌아가기</button></div></div>
@@ -1506,7 +1506,7 @@ const ART_DEF={
   shep1:{h:62,top:.5},shep2:{h:68,top:.5},shep3:{h:74,top:.5},art1:{h:76,top:.7},art2:{h:82,top:.72},art3:{h:88,top:.74},
 };
 const ART={};
-const AV='?v=15';   // 그림을 바꿀 때마다 올려서 예전 그림이 캐시에서 나오지 않게
+const AV='?v=16';   // 그림을 바꿀 때마다 올려서 예전 그림이 캐시에서 나오지 않게
 const BG_IMG={},REAR_IMG={};   // REAR_IMG: 처음엔 막혀 있는 뒷길을 덮는 그림(bgN_rear.png)
 function loadArt(){for(const k of Object.keys(STAGES).map(Number)){const im=new Image();im.onload=()=>{BG_IMG[k]=im;if(G&&G.sid===k)buildBg();};im.src='art/bg'+k+'.jpg'+AV;if(STAGES[k].rear!=null){const r=new Image();r.onload=()=>{REAR_IMG[k]=r;if(G&&G.sid===k)buildBg();};r.src='art/bg'+k+'_rear.png'+AV;}}
   for(const k in ART_DEF){const im=new Image();im.onload=()=>{try{ART[k]=prepArt(im,ART_DEF[k]);if(G&&G.hero&&G.hero.kind===k)drawHeroPortrait($('heroCv'),k);}catch(e){}};im.src='art/'+k+'.png'+AV;}}
