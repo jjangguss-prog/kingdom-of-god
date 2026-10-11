@@ -16,3 +16,4 @@ app/app/src/main/assets/www/
 *.jks
 *.keystore
 keystore.properties
+_bot.js

@@ -1,0 +1,82 @@
+{
+ "출력": "raw",
+ "크기": [
+  1536,
+  864
+ ],
+ "단계": 4,
+ "항목": [
+  {
+   "id": "bg1w",
+   "종류": "장면",
+   "시드": [
+    1,
+    2
+   ],
+   "참조": [
+    "ref2/ref1.png"
+   ],
+   "프롬프트": "Repaint this top-down tower defense game map as a richly hand-painted Kingdom Rush style battlefield seen from above at a slight angle. Keep exactly the same long winding dirt road shapes and positions, the same tree positions, the small pond and the large bare earth clearing on the right side. Lush green meadow with soft painterly grass texture, scattered wildflowers, bushes and rocks, roads of warm packed earth with worn wheel ruts and pebbles, gentle morning sunlight, rich warm colors. No buildings, no characters, no text."
+  },
+  {
+   "id": "bg2w",
+   "종류": "장면",
+   "시드": [
+    1,
+    2
+   ],
+   "참조": [
+    "ref2/ref2.png"
+   ],
+   "프롬프트": "Repaint this top-down tower defense game map as a richly hand-painted Kingdom Rush style battlefield in the green hill country of ancient Canaan, seen from above at a slight angle. Keep exactly the same long winding dirt road shapes and positions and the bare earth clearing on the right side. Rolling green and golden hills, olive trees and terebinth oaks, scattered rocks, wildflowers and low stone field walls; in the right clearing a small camp of a few goat-hair tents with resting camels and sheep. Warm morning light. No characters, no text."
+  },
+  {
+   "id": "bg3w",
+   "종류": "장면",
+   "시드": [
+    1,
+    2
+   ],
+   "참조": [
+    "ref2/ref3.png"
+   ],
+   "프롬프트": "Repaint this top-down tower defense game map as a richly hand-painted Kingdom Rush style battlefield in rocky hill country at dusk, seen from above at a slight angle. Keep exactly the same long winding road shapes and positions and the clearing on the left side. Dark green shrubs, boulders, a dry stream bed and twisted oak trees; in the left clearing a small camp of tents with a glowing campfire. Warm dusk light fading to blue. No characters, no text."
+  },
+  {
+   "id": "bg4w",
+   "종류": "장면",
+   "시드": [
+    1,
+    2
+   ],
+   "참조": [
+    "ref2/ref4.png"
+   ],
+   "프롬프트": "Repaint this top-down tower defense game map as a richly hand-painted Kingdom Rush style battlefield on the bank of the Nile river in ancient Egypt, seen from above at a slight angle. Keep exactly the same two sandy road shapes meeting at the river bank, the blue river along the bottom and the thick green papyrus reeds at the water's edge; on the upper part of the map palm groves, irrigated green fields and a few mud-brick houses; a tiny woven basket hidden among the reeds at the bottom center. Warm daylight. No characters, no text."
+  },
+  {
+   "id": "bg5w",
+   "종류": "장면",
+   "시드": [
+    1,
+    2
+   ],
+   "참조": [
+    "ref2/ref5.png"
+   ],
+   "프롬프트": "Repaint this top-down tower defense game map as a richly hand-painted Kingdom Rush style battlefield in the dry desert of Midian, seen from above at a slight angle. Keep exactly the same sandy road shapes meeting on the right. At the right end of the road stands a round stone well with a wooden pulley and stone water troughs, shaded by three palm trees. Everywhere else is dry golden sand and packed earth with small desert shrubs, scattered stones and red rock outcrops at the edges; no ponds, no lakes, no rivers. Warm late afternoon light. No characters, no text."
+  },
+  {
+   "id": "bg6w",
+   "종류": "장면",
+   "시드": [
+    1,
+    2
+   ],
+   "참조": [
+    "ref2/ref6.png"
+   ],
+   "프롬프트": "Repaint this top-down tower defense game map as a richly hand-painted Kingdom Rush style desert battlefield beside the Red Sea, seen from above at a slight angle. Keep exactly the same long winding sandy road shapes and positions, the same palm tree positions, the small tents near the shore and the blue sea filling the right edge of the map. Warm golden sand with dunes, dry shrubs, scattered stones, roads of pale packed earth with wheel ruts, painterly texture, late afternoon light. No characters, no text."
+  }
+ ]
+}
