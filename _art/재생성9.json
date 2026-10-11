@@ -1,0 +1,68 @@
+{
+ "출력": "raw",
+ "크기": [
+  1536,
+  864
+ ],
+ "단계": 4,
+ "항목": [
+  {
+   "id": "s7b",
+   "종류": "장면",
+   "시드": [
+    2,
+    3,
+    4
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game: Moses, an elderly prophet with a long white beard, a deep red-brown robe over a cream tunic and a cream headcloth, has just struck a large grey rock at Horeb with the tip of his tall wooden staff; clear water gushes out of a crack in the middle of the rock itself and flows down into a pool at its foot; Moses' hands hold only the staff and no water comes from his hands; thirsty people of Israel and their sheep drink joyfully from the stream, children splashing."
+  },
+  {
+   "id": "s7c",
+   "종류": "장면",
+   "시드": [
+    2,
+    3,
+    4
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game: in the rocky wilderness of Rephidim. On the left side a band of Amalekite desert raiders on foot with spears and round hide shields comes over a rocky ridge; above the raiders hover small dark wispy shadow creatures holding thin dark strings tied to the raiders' shoulders like puppets. On the right side, at a distance, the tired rear of the Israelite column, slow elderly people, mothers and small children carrying bundles, look back worried; there are no strings and no shadows above the Israelites. Tense mood but nobody is hurt."
+  },
+  {
+   "id": "moses_hands",
+   "종류": "인물",
+   "크기": [
+    1024,
+    1024
+   ],
+   "시드": [
+    3,
+    4,
+    5,
+    6
+   ],
+   "참조": [
+    "raw/moses_s2_8da0a7.png"
+   ],
+   "프롬프트": "Redraw this same Moses in the same style, colors and camera angle with a new pose: he lifts both of his arms straight up high above his head. His right hand grips the middle of the tall wooden staff and holds the whole staff up in the air above his head, so the staff does not touch the ground. His left hand is open and raised high. He has exactly two arms and exactly two hands, no other hands. His face looks up to heaven."
+  },
+  {
+   "id": "s7d",
+   "종류": "장면",
+   "시드": [
+    2,
+    3,
+    4
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game: in the dry rocky desert wilderness of Rephidim with pale sand and red-brown rocks, no green fields and no river. Moses, an elderly prophet with a long white beard, a deep red-brown robe over a cream tunic and a cream headcloth, holds a tall plain wooden shepherd's staff that is taller than he is in one hand and with his other hand points toward the desert valley, giving orders to young Joshua, a strong young man with a short dark beard in a tan tunic with a leather belt, who listens attentively; behind them rises a small rocky hill; other Israelite men gather with staffs and spears."
+  },
+  {
+   "id": "s7c",
+   "종류": "장면",
+   "시드": [
+    5,
+    6,
+    7
+   ],
+   "프롬프트": "One single continuous wide illustrated story panel for a children's Bible game, one scene with no panel borders and no split: in the rocky wilderness valley of Rephidim, a band of Amalekite desert raiders on foot with spears and round hide shields comes running down a rocky ridge in the foreground; above the raiders hover small dark wispy shadow creatures holding thin dark strings tied to the raiders' shoulders like puppets. Further down the same valley, the tired rear of the Israelite column, slow elderly people, mothers and small children carrying bundles, look back worried; there are no strings and no shadows above the Israelites. Tense mood but nobody is hurt."
+  }
+ ]
+}

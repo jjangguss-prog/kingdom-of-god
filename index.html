@@ -271,10 +271,10 @@ body.force #rotate{display:none!important}
     <h1 class="logo"><span class="a">Kingdom of God</span><span class="b">Old Testament</span></h1>
     <p class="tsub">하나님의 나라 · 구약</p>
     <div class="row" style="margin-top:.6em;font-size:1.35em"><button class="btn" id="bStart">시작하기</button><button class="btn wood" id="bCodexT">두루마리</button></div>
-    <p class="tnote">v1.3 · 1장 약속, 2장 구원의 밤 (방주부터 홍해까지)</p>
+    <p class="tnote">v1.4 · 1장 약속, 2장 구원의 밤, 3장 광야 (방주부터 르비딤까지)</p>
   </section>
   <section id="sMap" class="scr" hidden>
-    <div class="mapHead"><h2>약속의 별</h2><p>별을 모을수록 밤하늘이 채워져요. 이번 판은 방주부터 홍해까지, 여섯 별을 지킬 수 있어요.</p></div>
+    <div class="mapHead"><h2>약속의 별</h2><p>별을 모을수록 밤하늘이 채워져요. 이번 판은 방주부터 르비딤까지, 일곱 별을 지킬 수 있어요.</p></div>
     <div class="mapBtns"><button class="btn" id="bTrainM" style="position:relative">연단<span class="pt" id="trainPt" hidden></span></button><button class="btn" id="bUpgM" style="position:relative">별 강화<span class="pt" id="upgPt" hidden></span></button><button class="btn wood" id="bCodexM">두루마리</button><button class="btn wood" id="bTitle">처음으로</button></div>
     <div id="nodes"></div>
   </section>
@@ -690,7 +690,7 @@ const STAGES={
            [[780,790],[790,690],[860,630],[930,585],[1000,540],[1090,580],[1170,560]]],
     flags:[[40,432],[40,132],[812,676]],rear:2,
     spots:[[880,530],[409,326],[213,225],[547,530],[125,380],[1046,500],[768,605],[124,85],[873,466],[403,185],[516,463],[683,644],[125,491],[325,300],[157,175],[432,391],[635,550]],
-    heroHome:[985,505],lamp:[1205,540],hill:{x:1060,y:188},
+    heroHome:[985,505],lamp:[1205,540],hill:{x:965,y:152},
     waves:[
       [['raider',8,.9,0,0]],
       [['soldier',10,1,0,1],['raider',6,.8,3,0]],
@@ -1323,7 +1323,7 @@ const ART_DEF={
   shep1:{h:62,top:.5},shep2:{h:68,top:.5},shep3:{h:74,top:.5},art1:{h:76,top:.7},art2:{h:82,top:.72},art3:{h:88,top:.74},
 };
 const ART={};
-const AV='?v=12';   // 그림을 바꿀 때마다 올려서 예전 그림이 캐시에서 나오지 않게
+const AV='?v=13';   // 그림을 바꿀 때마다 올려서 예전 그림이 캐시에서 나오지 않게
 const BG_IMG={};
 function loadArt(){for(const k of Object.keys(STAGES).map(Number)){const im=new Image();im.onload=()=>{BG_IMG[k]=im;if(G&&G.sid===k)buildBg();};im.src='art/bg'+k+'.jpg'+AV;}
   for(const k in ART_DEF){const im=new Image();im.onload=()=>{try{ART[k]=prepArt(im,ART_DEF[k]);if(G&&G.hero&&G.hero.kind===k)drawHeroPortrait($('heroCv'),k);}catch(e){}};im.src='art/'+k+'.png'+AV;}}
@@ -1930,7 +1930,7 @@ function storySeq(){const out=[];for(const id of Object.keys(STAGES).map(Number)
   for(const q of S.victory.comic||[])out.push({sid:id,v:true,art:q.art,title:q.title,text:'',verse:q.verse||'',open:won});}
   return out;}
 let galSeq=[],galIdx=0;
-function renderGallery(){galSeq=storySeq();const el=$('cList');el.className='gwrap';let html='<p style="margin:.2em 0 0;font-size:.85em;color:var(--ink-2)">창조에서 홍해까지, 하나님이 하신 구원의 이야기를 순서대로 모았어요. 스테이지를 지켜 낼 때마다 그림이 열려요.</p>';
+function renderGallery(){galSeq=storySeq();const el=$('cList');el.className='gwrap';let html='<p style="margin:.2em 0 0;font-size:.85em;color:var(--ink-2)">창조에서 르비딤까지, 하나님이 하신 구원의 이야기를 순서대로 모았어요. 스테이지를 지켜 낼 때마다 그림이 열려요.</p>';
   for(const id of Object.keys(STAGES).map(Number).sort((a,b)=>a-b)){const S=STAGES[id];html+=`<h4 class="gh">${id} · ${S.name}<span>${S.ref}</span></h4><div class="gal">`;
     galSeq.forEach((it,i)=>{if(it.sid!==id)return;html+=it.open?`<button class="gt${it.v?' v':''}" data-g="${i}" aria-label="${it.v?it.title:S.name+' 이야기'}"><img loading="lazy" src="art/${it.art}.jpg${AV}" alt=""><span>${it.v?'구원 사건':'이야기'}</span></button>`:`<div class="gt lock">${it.v?'이 이야기를 지켜 내면 열려요':'앞 이야기를 지켜 내면 열려요'}</div>`;});
     html+='</div>';}

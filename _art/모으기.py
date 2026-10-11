@@ -13,7 +13,7 @@ RAW, CUT, ART = (os.path.join(HERE, d) for d in ('raw', 'cut', os.path.join('..'
 MAX = 512
 # 게임 화면에 그려지는 크기의 3배쯤(고해상도 폰). 영웅은 초상화에도 쓰여 크게, 탑·전차는 크게, 나머지 병사·적은 256
 CROP = {'v3a': .035, 'v4c': .03}   # 비율
-LIMIT = {'noah': 512, 'moses': 512, 'chariot': 384, 'pharaoh': 512, 'levi_priest': 384}   # 탑(이름 끝이 숫자)은 384
+LIMIT = {'noah': 512, 'moses': 512, 'joshua': 512, 'chariot': 384, 'pharaoh': 512, 'levi_priest': 384, 'levi_choir': 384}   # 탑(이름 끝이 숫자)은 384
 
 def cutter():
     import onnxruntime as ort
@@ -56,7 +56,7 @@ def main():
             cut = cut or cutter()
             cut(Image.open(src).convert('RGB')).save(c, optimize=True)
         im = Image.open(c)
-        lim = LIMIT.get(key) or (384 if key[-1].isdigit() else 256)
+        lim = LIMIT.get(key) or (384 if key[-1].isdigit() and not key.startswith('a_') else 256)   # a_ 짐승 짝(a_sheep2)은 탑이 아니다
         k = lim / max(im.size)
         if k < 1:
             im = im.resize((round(im.width*k), round(im.height*k)), Image.LANCZOS)
