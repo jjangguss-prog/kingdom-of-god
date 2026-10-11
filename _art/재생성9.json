@@ -63,6 +63,21 @@
     7
    ],
    "프롬프트": "One single continuous wide illustrated story panel for a children's Bible game, one scene with no panel borders and no split: in the rocky wilderness valley of Rephidim, a band of Amalekite desert raiders on foot with spears and round hide shields comes running down a rocky ridge in the foreground; above the raiders hover small dark wispy shadow creatures holding thin dark strings tied to the raiders' shoulders like puppets. Further down the same valley, the tired rear of the Israelite column, slow elderly people, mothers and small children carrying bundles, look back worried; there are no strings and no shadows above the Israelites. Tense mood but nobody is hurt."
+  },
+  {
+   "id": "s7b",
+   "종류": "장면",
+   "시드": [
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "프롬프트": "Wide full-bleed illustrated story panel for a children's Bible game, no border and no frame: Moses, an elderly prophet with a long white beard, a deep red-brown robe over a cream tunic and a cream headcloth, stands beside a large grey rock at Horeb and holds one single tall wooden staff with both of his hands, its tip touching the rock; clear water gushes out of a crack in the middle of the rock itself and flows down into a pool at its foot. A few happy people of Israel with jars and a few sheep drink from the stream at the sides; one child kneels at the pool and scoops water with both hands. Every person has exactly two arms and two hands, drawn clearly with natural anatomy. Uncluttered composition."
   }
  ]
 }

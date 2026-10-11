@@ -12,7 +12,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 RAW, CUT, ART = (os.path.join(HERE, d) for d in ('raw', 'cut', os.path.join('..', 'art')))
 MAX = 512
 # 게임 화면에 그려지는 크기의 3배쯤(고해상도 폰). 영웅은 초상화에도 쓰여 크게, 탑·전차는 크게, 나머지 병사·적은 256
-CROP = {'v3a': .035, 'v4c': .03}   # 비율
+CROP = {'v3a': .035, 'v4c': .03, 's7b': (.09, .18, .91, 1)}   # 비율. 넷이면 (왼, 위, 오른, 아래): s7b는 이야기 글 상자 위로 물줄기가 보이게
 LIMIT = {'noah': 512, 'moses': 512, 'joshua': 512, 'chariot': 384, 'pharaoh': 512, 'levi_priest': 384, 'levi_choir': 384}   # 탑(이름 끝이 숫자)은 384
 
 def cutter():
@@ -48,7 +48,8 @@ def main():
         if key.startswith('bg') or (re.fullmatch(r'[sv]\d+[a-z]', key) or key == 'title'):   # 배경·이야기·승리·제목 그림
             im = Image.open(src).convert('RGB')
             c = CROP.get(key, 0)   # 그림 둘레에 액자 테두리가 그려진 것은 그만큼 잘라 낸다
-            if c: im = im.crop((round(im.width * c), round(im.height * c), round(im.width * (1 - c)), round(im.height * (1 - c))))
+            if isinstance(c, tuple): im = im.crop((round(im.width * c[0]), round(im.height * c[1]), round(im.width * c[2]), round(im.height * c[3])))
+            elif c: im = im.crop((round(im.width * c), round(im.height * c), round(im.width * (1 - c)), round(im.height * (1 - c))))
             im.resize((1536, 864), Image.LANCZOS).save(os.path.join(ART, key + '.jpg'), quality=86, optimize=True)
             print(key, '배경'); continue
         c = os.path.join(CUT, f)

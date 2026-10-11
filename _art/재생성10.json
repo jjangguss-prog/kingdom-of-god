@@ -1,0 +1,37 @@
+{
+ "출력": "raw",
+ "크기": [
+  1536,
+  864
+ ],
+ "단계": 4,
+ "항목": [
+  {
+   "id": "s7bz",
+   "종류": "장면",
+   "시드": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "참조": [
+    "raw/s7b_s9_7f44d5.png"
+   ],
+   "프롬프트": "Show this exact same scene zoomed out, as if the camera stepped back: everything is smaller and centered, with more sky above Moses' head and more sandy ground below the pool. Keep every person, the rock, the water and the style the same. Every person has exactly two arms and two hands."
+  },
+  {
+   "id": "s7b",
+   "종류": "장면",
+   "시드": [
+    21,
+    22,
+    23,
+    24,
+    25,
+    26
+   ],
+   "프롬프트": "Wide full-bleed illustrated story panel for a children's Bible game, no border and no frame, medium-wide shot with the characters in the middle band of the picture: open sky fills the top fifth and plain sand fills the bottom fifth. Moses, an elderly prophet with a long white beard, a deep red-brown robe over a cream tunic and a cream headcloth, stands beside a large grey rock at Horeb holding one single tall wooden staff in his right hand, its tip touching the rock; his left hand is raised in thanks. Clear water gushes out of a crack halfway up the rock itself and falls into a small pool at its foot. A few happy people of Israel with jars and a few sheep drink at the sides. Every person has exactly two arms and two hands, drawn clearly with natural anatomy. Uncluttered composition."
+  }
+ ]
+}
