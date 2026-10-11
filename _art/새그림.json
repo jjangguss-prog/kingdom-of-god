@@ -43,6 +43,171 @@
     3
    ],
    "프롬프트": "A burly, broad-shouldered Levite gatekeeper of the tabernacle, a big strong man of about thirty-five with a short black beard and a calm protective face, wearing a plain white linen tunic with a wide brown leather belt, bronze bracers and a cream headcloth, holding a long thick wooden gate bar upright like a staff, solid steady stance."
+  },
+  {
+   "id": "bg7w",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1,
+    2
+   ],
+   "참조": [
+    "ref2/ref7.png"
+   ],
+   "프롬프트": "Repaint this top-down tower defense game map as a richly hand-painted Kingdom Rush style battlefield in the rocky wilderness of Rephidim in the Sinai desert, seen from above at a slight angle. Keep exactly the same sandy road shapes and positions. In the upper right stands a small rocky hill with a flat top and a few boulders on it. At the right end of the road is the Israelite camp with several brown goat-hair tents. Everywhere else is dry rocky desert: pale sand, gravel, red-brown rock outcrops, sparse desert shrubs and a few acacia trees near the edges; no water, no ponds, no rivers. Warm afternoon light. No characters, no text."
+  },
+  {
+   "id": "s7a",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game: in the wilderness at early morning the people of Israel, families and children, gather small white flakes of manna from the ground into baskets and jars; the flakes cover the sand like frost; goat-hair tents behind, soft golden morning light, joyful faces."
+  },
+  {
+   "id": "s7b",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game: Moses, an elderly prophet with a long white beard, a deep red-brown robe over a cream tunic and a cream headcloth, strikes a large rock at Horeb with his wooden staff and clear water gushes out of the rock; thirsty people of Israel and their sheep drink joyfully from the stream, children splashing."
+  },
+  {
+   "id": "s7c",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game: in the rocky wilderness of Rephidim a band of Amalekite desert raiders on foot with spears and round hide shields comes over a ridge toward the tired rear of the Israelite column of slow elderly people, mothers and children; dark wispy shadow creatures holding thin strings hover above the raiders' heads; tense mood but nobody is hurt."
+  },
+  {
+   "id": "s7d",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game: Moses, an elderly prophet with a long white beard, a deep red-brown robe over a cream tunic and a cream headcloth, holding his tall wooden staff, speaks to young Joshua, a strong young man with a short dark beard in a tan tunic with a leather belt, and points toward the valley; behind them rises a small rocky hill; other Israelite men gather with staffs and spears."
+  },
+  {
+   "id": "v7a",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game: at sunset on top of a small rocky hill, Moses, an elderly prophet with a long white beard, a deep red-brown robe over a cream tunic and a cream headcloth, sits on a large stone holding up both tired arms with his wooden staff; Aaron, an old man with a grey beard in a purple robe, and Hur, an old man in an olive-green robe, stand on either side holding up his arms; glowing orange sunset sky."
+  },
+  {
+   "id": "v7b",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game: in the desert valley at sunset young Joshua and the Israelite men stand together safe and relieved while the Amalekite raiders run away into the distance; the dark shadow creatures above them scatter and fade into the sky; no blood, nobody lying on the ground."
+  },
+  {
+   "id": "v7c",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game: Moses, an elderly prophet with a long white beard, a deep red-brown robe over a cream tunic and a cream headcloth, builds a simple altar of rough uncut stones on the hilltop and sets up a tall plain banner pole beside it; the people of Israel gather around lifting their hands in thanks to God; calm evening light."
+  },
+  {
+   "id": "joshua",
+   "종류": "인물",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "Joshua, a strong young Israelite warrior of about twenty-five with a short dark beard and a determined kind face, wearing a simple tan wool tunic with a brown leather belt, leather bracers and a cream headcloth with a cord, holding a short bronze sword pointed down in one hand and a small round wooden shield in the other."
+  },
+  {
+   "id": "moses_hands",
+   "종류": "인물",
+   "시드": [
+    1,
+    2
+   ],
+   "참조": [
+    "raw/moses_s2_8da0a7.png"
+   ],
+   "프롬프트": "Draw this same Moses in the same style, colors and camera angle, now standing with both arms raised high above his head, holding his tall wooden staff up in his right hand, face looking up to heaven."
+  },
+  {
+   "id": "k_soldier",
+   "종류": "인물",
+   "시드": [
+    1,
+    2
+   ],
+   "프롬프트": "An Amalekite desert warrior of the Sinai wilderness, an ordinary young man with a dark beard, a dusty brown and black striped cloak, a black headcloth with a cord, holding a long spear and a small round hide shield, frowning."
+  },
+  {
+   "id": "k_raider",
+   "종류": "인물",
+   "시드": [
+    1,
+    2
+   ],
+   "프롬프트": "A quick Amalekite raider youth of the desert with a dark headcloth wrapped over his mouth, a short tunic and a leather belt, a short wooden club in his hand, leaning forward ready to run, sneaky eyes."
+  },
+  {
+   "id": "k_shield",
+   "종류": "인물",
+   "시드": [
+    1,
+    2
+   ],
+   "프롬프트": "A big strong Amalekite warrior with a heavy dark goat-hair cloak, a tall oval shield of stretched hide with bronze studs and a short spear, proud chin up."
+  },
+  {
+   "id": "levi_choir",
+   "종류": "건물",
+   "크기": [
+    1024,
+    1024
+   ],
+   "시드": [
+    1,
+    2
+   ],
+   "참조": [
+    "raw/levi3_s1_008019.png"
+   ],
+   "프롬프트": "Draw the choir version of this exact sacred tent in the same style, colors and camera angle: in front of it a small group of Levite singers in white linen robes sing with raised faces, one plays a wooden lyre, one a harp and one a tambourine, golden musical sparkles rising into the air."
   }
  ]
 }

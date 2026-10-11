@@ -491,6 +491,24 @@ const HEROES={
     say:'“여호와께서 이르시기를 내 백성을 보내라”',sayRef:'출 5:1',
     man:'모세는 하나님이 얼굴을 마주 대하여 아신 사람이에요(신 34:10). 땅 위의 누구보다 온유했고(민 12:3), 백성이 죄를 지었을 때는 "내 이름을 지워 버려 주옵소서" 하며 그들을 위해 중보했어요(출 32:32).',jesus:'"나와 같은 선지자" (신 18:15)'}
 };
+// 여호수아: 7 르비딤에서만 쓰는 영웅(10-11 사용자). 연단 없이 레벨과 기술을 고정한다.
+HEROES.joshua={name:'여호수아',line:'양치기',hp:300,armor:.25,dmg:20,rate:1,range:0,speed:64,melee:true,fixedLv:4,fixedSk:{s1:2,s2:2,passive:2,ult:2},
+  look:{skin:'#d39a68',cloth:'#b08a5a',cloth2:'#7a5232',head:'cloth',hc:'#efe3c4',beard:'#3a2614',item:'spear'},
+  trait:{name:'사람들을 택하여',ref:'출 17:9',desc:'곁에 있는 양치기와 문지기, 장정의 공격이 세져요.'},
+  s1:{name:'칼날로',ref:'출 17:13',cd:10,desc:'앞의 적 여럿을 한 번에 치고 잠깐 멈춰 세워요.'},
+  s2:{name:'강하고 담대하라',ref:'수 1:9',cd:16,desc:'6초 동안 곁의 탑과 병사가 더 빨리 공격해요.'},
+  passive:{name:'모세의 수종자',ref:'수 1:1',desc:'산 위의 모세가 손을 들고 있으면 받는 피해가 줄어요.'},
+  ult:{name:'여호와 닛시',short:'여호와<br>닛시',ref:'출 17:15',cd:45,desc:'누른 길 위에 깃발을 세워요. 둘레의 적은 멈춰 서고, 아군은 회복돼요.'},
+  title:'모세의 수종자, 강하고 담대하라는 말씀을 받은 사람 (수 1:1, 9)',
+  say:'“오직 나와 내 집은 여호와를 섬기겠노라”',sayRef:'수 24:15',
+  man:'여호수아는 르비딤에서 처음 이름이 나와요(출 17:9). 모세를 곁에서 섬겼고(24:13), 정탐꾼 열둘 가운데 갈렙과 함께 하나님을 믿었어요(민 14:6–9). 훗날 백성을 이끌고 요단을 건너 약속의 땅으로 들어가요(수 1:2).',jesus:'여호수아와 예수는 같은 이름이에요. "여호와는 구원이시다"'};
+// 찬양대(레위인 4단계 B): 바다의 노래(출 15)로 열린다. 노래하면 하나님이 싸우신다(대하 20:15, 22).
+const CHOIR={name:'찬양대',cost:240,range:170,rate:1.6,dmg:24,verse:'그 노래와 찬송이 시작될 때에 여호와께서 복병을 두어 … (대하 20:22)',
+  skills:[
+    {id:'song',name:'노래를 시작할 때에',ref:'대하 20:22',costs:[120,120,120],desc:['14초마다 노래로 범위 안 적을 1.2초 멈춰 세워요','멈추는 시간 1.8초','멈추는 시간 2.4초']},
+    {id:'timbrel',name:'미리암의 소고',ref:'출 15:20',costs:[110,110,110],desc:['곁의 탑이 10% 빨리 공격해요','18% 빨리','25% 빨리']},
+    {id:'turn',name:'서로 치다',ref:'대하 20:23',costs:[130,130,130],desc:['노래에 멈춘 적이 15% 확률로 곁의 적을 쳐요','25% 확률','35% 확률']}]};
+const BRANCH={priest:PRIEST,choir:CHOIR};
 const STAGES={
   1:{id:1,name:'방주',chap:'1장 · 약속',ref:'창 6–7',night:false,gold:300,cap:1,heroes:['noah'],hpMul:1.5,dmgMul:1,gapT:20,skin:'flood',
     paths:[[[-50,130],[90,140],[200,200],[230,300],[160,390],[180,480],[300,520],[420,470],[470,360],[560,270],[680,250],[760,320],[740,430],[800,520],[920,520],[980,440],[1050,382]],
@@ -660,12 +678,43 @@ const STAGES={
     victory:{title:'여호와의 구원',verse:'여호와는 나의 힘이요 노래시며 나의 구원이시로다 (출 15:2)',
       jesus:'이스라엘은 스스로 바다를 건널 힘이 없었어요. 하나님이 길을 내셨고, 백성은 그 길로 걸어갔을 뿐이에요. 예수님은 죄와 죽음의 종살이에서 우리를 건지시려고 스스로 길이 되셨어요. "내가 곧 길이요 진리요 생명이니"(요 14:6)',
       deep:['구름기둥은 애굽 쪽에는 흑암, 이스라엘 쪽에는 빛이었어요(출 14:20). 같은 하나님의 임재가 누구에게는 심판, 누구에게는 구원이 돼요 (고후 2:15–16).','성경은 하나님이 바로의 마음을 완악하게 하셨다고도(출 14:4), 바로가 스스로 마음을 완강하게 했다고도(출 8:15) 말해요. 게임 속 줄은 그 뒤의 영적 현실을 보여 주는 그림이에요.','성경에서 이스라엘은 싸우지 않았고(출 14:14), 애굽 군대는 바다에 잠겼어요(출 14:28). 게임은 싸움을 그렸고, 그 장면은 그리지 않았어요.'],
-      unlock:'찬양대가 열렸어요. 바다의 노래(출 15)에서 시작된 찬양이에요. 3장 광야에서 약속의 땅으로(다음 판)부터 쓸 수 있어요. 1·2장을 모두 지켜 냈어요!',
+      unlock:'찬양대가 열렸어요. 바다의 노래(출 15)에서 시작된 찬양이에요. 다음 이야기 르비딤부터 레위인 4단계에서 고를 수 있어요. 1·2장을 모두 지켜 냈어요!',
       comic:[
         {art:'v6a',dur:6,title:'모세가 바다 위로 손을 내밀매',verse:'여호와께서 큰 동풍이 밤새도록 바닷물을 물러가게 하시니 물이 갈라져 바다가 마른 땅이 된지라 (출 14:21)',fx:'wind',snd:'wind'},
         {art:'v6b',dur:6,title:'바다 가운데를 육지로',verse:'이스라엘 자손이 바다 가운데를 육지로 걸어가고 물은 그들의 좌우에 벽이 되니 (출 14:22)',px:1},
         {art:'v6c',dur:5.5,title:'새벽이 되어',verse:'새벽이 되어 바다의 힘이 회복된지라 (출 14:27)',fx:'dawn',snd:'splash'},
-        {art:'v6d',dur:6.5,title:'여호와는 나의 힘이요 노래시며',verse:'아론의 누이 선지자 미리암이 손에 소고를 잡으매 모든 여인도 그를 따라 나오며 춤추니 (출 15:20)',fx:'sparkle',snd:'victory'}]}}
+        {art:'v6d',dur:6.5,title:'여호와는 나의 힘이요 노래시며',verse:'아론의 누이 선지자 미리암이 손에 소고를 잡으매 모든 여인도 그를 따라 나오며 춤추니 (출 15:20)',fx:'sparkle',snd:'victory'}]}},
+  7:{id:7,name:'르비딤',chap:'3장 · 광야에서 약속의 땅으로',ref:'출 17',night:false,gold:680,cap:4,heroes:['joshua'],hpMul:1.45,dmgMul:1.5,gapT:20,skin:'amalek',sunset:true,
+    paths:[[[-50,430],[90,440],[200,390],[250,290],[360,240],[480,280],[510,380],[440,470],[470,570],[600,610],[720,560],[760,460],[860,410],[960,450],[1000,540],[1090,580],[1170,560]],
+           [[-50,130],[100,140],[220,110],[320,150],[360,240],[480,280],[510,380],[440,470],[470,570],[600,610],[720,560],[760,460],[860,410],[960,450],[1000,540],[1090,580],[1170,560]],
+           [[780,790],[790,690],[860,630],[930,585],[1000,540],[1090,580],[1170,560]]],
+    flags:[[40,432],[40,132],[812,676]],rear:2,
+    spots:[[880,530],[409,326],[213,225],[547,530],[125,380],[1046,500],[768,605],[124,85],[873,466],[403,185],[516,463],[683,644],[125,491],[325,300],[157,175],[432,391],[635,550]],
+    heroHome:[985,505],lamp:[1205,540],hill:{x:1060,y:188},
+    waves:[
+      [['raider',8,.9,0,0]],
+      [['soldier',10,1,0,1],['raider',6,.8,3,0]],
+      [['raider',10,.7,0,0],['raider',8,.7,2,1],['shield',4,2,3,0]],
+      [['raider',6,.7,0,2],['soldier',12,.9,1,0],['raider',8,.7,4,1]],
+      [['shield',8,1.4,0,1],['raider',14,.6,2,-1]],
+      [['centurion',3,3,0,0],['raider',10,.6,1,2],['soldier',14,.8,3,1]],
+      [['raider',18,.5,0,-1],['shield',8,1.3,3,0]],
+      [['centurion',4,2.5,0,1],['raider',12,.55,1,2],['shield',10,1.2,2,0]],
+      [['soldier',20,.6,0,-1],['raider',16,.5,2,-1],['centurion',4,2.5,5,0]],
+      [['raider',24,.45,0,-1],['shield',12,1,2,0],['centurion',5,2.5,4,1],['raider',10,.5,6,2]]],
+    story:[
+      {art:'s7a',text:'바다를 건넌 백성은 하나님을 찬양했어요. 광야에서 먹을 것이 없자 하나님은 하늘에서 만나를 내려 주셨어요.',verse:'보라 내가 너희를 위하여 하늘에서 양식을 비 같이 내리리니 (출 16:4)'},
+      {art:'s7b',text:'마실 물이 없을 때는 모세가 반석을 치자 물이 솟아났어요. 하나님은 광야에서도 백성을 먹이고 마시게 하셨어요.',verse:'너는 그 반석을 치라 그것에서 물이 나오리니 백성이 마실 것이니라 (출 17:6)'},
+      {art:'s7c',text:'그때 아말렉이 르비딤으로 쳐들어왔어요. 아말렉은 지쳐서 뒤에 처진 약한 사람들부터 노렸어요(신 25:18).',verse:'그 때에 아말렉이 와서 이스라엘과 르비딤에서 싸우니라 (출 17:8)'},
+      {art:'s7d',text:'모세는 여호수아에게 사람들을 뽑아 나가 싸우라고 하고, 하나님의 지팡이를 들고 산 꼭대기에 섰어요. 청지기여, 여호수아와 함께 골짜기를 지키고 산 위의 모세도 살펴 주세요.',verse:'우리를 위하여 사람들을 택하여 나가서 아말렉과 싸우라 내일 내가 하나님의 지팡이를 손에 잡고 산 꼭대기에 서리라 (출 17:9)'}],
+    victory:{title:'여호와 닛시',verse:'모세가 제단을 쌓고 그 이름을 여호와 닛시라 하고 (출 17:15)',
+      jesus:'모세가 두 팔을 들고 하나님 앞에 서 있는 동안 백성이 이겼어요. 옛 교회 사람들은 두 팔을 든 모세를 보며 십자가를 떠올렸어요. 예수님은 지금도 하나님 우편에서 우리를 위해 간구하세요. "하나님 우편에 계신 자요 우리를 위하여 간구하시는 자시니라"(롬 8:34)',
+      deep:['"여호와 닛시"는 "여호와는 나의 깃발"이라는 뜻이에요. 이긴 힘은 모세의 팔이 아니라 하나님께 있었어요.','지친 모세의 팔을 아론과 훌이 붙들었어요(출 17:12). "너희가 짐을 서로 지라"(갈 6:2).','성경은 여호수아가 칼날로 아말렉을 무찔렀다고 기록해요(출 17:13). 게임은 사람을 붙잡은 어둠의 줄을 끊는 것으로 그렸어요.','여호수아의 이름은 르비딤에서 처음 나와요. 그는 훗날 백성을 이끌고 요단을 건너요(수 1:2).'],
+      unlock:'여호수아와 함께 르비딤을 지켜 냈어요. 다음 이야기 에드레이는 다음 판에서 만나요.',
+      comic:[
+        {art:'v7a',dur:6.5,title:'해가 지도록 내려오지 아니한지라',verse:'아론과 훌이 한 사람은 이쪽에서, 한 사람은 저쪽에서 모세의 손을 붙들어 올렸더니 그 손이 해가 지도록 내려오지 아니한지라 (출 17:12)',z0:1.1,z1:1.02},
+        {art:'v7b',dur:5.5,title:'모세가 손을 들면 이스라엘이 이기고',verse:'모세가 손을 들면 이스라엘이 이기고 손을 내리면 아말렉이 이기더니 (출 17:11)',px:1},
+        {art:'v7c',dur:6.5,title:'여호와 닛시',verse:'모세가 제단을 쌓고 그 이름을 여호와 닛시라 하고 (출 17:15)',fx:'rays',snd:'victory'}]}}
 };
 const MAPNODES=[[110,560,'방주'],[190,495,'아브람의 길'],[280,450,'롯을 구하라'],[370,505,'갈대 상자'],[455,565,'미디안 우물'],[550,520,'홍해'],[625,450,'르비딤'],[690,380,'에드레이'],[640,300,'여리고'],[555,245,'기브온'],[635,170,'기손 강'],[735,140,'하롯 샘'],[825,185,'미스바'],[895,255,'엘라 골짜기'],[980,300,'엔게디'],[1060,255,'시글락'],[1115,185,'브라가 골짜기'],[1170,130,'도단'],[1110,75,'예루살렘 포위'],[1000,70,'무너진 성벽']];
 const CODEX=[
@@ -677,9 +726,11 @@ const CODEX=[
   {cat:'탑',name:'레위인',k:'마법 · 1~3단계',verse:LINES.levi.verse,desc:LINES.levi.desc,deep:'단계마다 므라리, 게르손, 고핫 자손이 서요. 셋은 성막을 옮길 때 맡은 물건이 달랐어요(민 4장).'},
   {cat:'탑',name:'장인',k:'대포 · 1~3단계',verse:LINES.art.verse,desc:LINES.art.desc,deep:'손재주도 하나님이 주신 부르심이에요. 브살렐은 하나님의 영으로 충만해져 성막을 지었어요.'},
   {cat:'탑',name:'제사장',k:'레위인 4단계',verse:PRIEST.verse,desc:'아군 병사를 살려 두는 유일한 탑이에요. 축복, 성막 문지기, 싹 난 지팡이를 배워요.',deep:'아론보다 먼저 멜기세덱이 있었어요. 예수님은 "멜기세덱의 반차를 따르는 영원한 제사장"이세요(히 7:17).'},
+  {cat:'탑',name:'찬양대',k:'레위인 4단계',verse:CHOIR.verse,desc:'노래로 적을 멈춰 세우는 탑이에요. 노래를 시작할 때에, 미리암의 소고, 서로 치다를 배워요. 홍해를 이기면 열려요.',deep:'바다를 건넌 백성은 노래했고 미리암이 소고를 잡았어요(출 15). 여호사밧 때 찬양대는 군대 앞에서 노래했고, 싸움은 하나님이 하셨어요. "이 전쟁은 너희에게 속한 것이 아니요 하나님께 속한 것이니라"(대하 20:15).'},
   {cat:'탑',name:'성막 문지기',k:'제사장 기술',verse:'악인의 장막에 사는 것보다 내 하나님의 성전 문지기로 있는 것이 좋사오니 (시 84:10)',desc:'제사장이 길에 세우는 풍채 좋은 문지기예요. 적을 막아서고, 쓰러지면 잠시 뒤 다시 서요. 3단계가 되면 한꺼번에 둘을 막아요. 눌러서 옮길 수 있어요.',deep:'문지기도 레위 사람이었고, 반열을 따라 성막 문을 지켰어요(대상 9:23, 26). 문지기 가운데는 용사가 많았다고 기록해요(대상 26:6). 하나님의 집 문을 지키는 것도 예배의 섬김이었어요. 게임의 문지기는 불러낸 것이 아니라 제사장이 세운 사람이에요.'},
   {cat:'하나님의 사람',name:'노아',k:'장인 영웅',verse:'노아는 여호와께 은혜를 입었더라 (창 6:8)',desc:'고페르 나무 방벽, 역청, 비둘기, 짐승들이 둘씩.',deep:HEROES.noah.man+' 예수님 찾기: '+HEROES.noah.jesus+'.'},
   {cat:'하나님의 사람',name:'모세',k:'레위인 영웅',verse:'모세가 손을 들면 이스라엘이 이기고 (출 17:11)',desc:'빛나는 얼굴, 반석의 물, 놋뱀, 손을 들다.',deep:HEROES.moses.man+' 예수님 찾기: '+HEROES.moses.jesus+'.'},
+  {cat:'하나님의 사람',name:'여호수아',k:'7 르비딤 · 이 판에서만',verse:'모세가 여호수아에게 이르되 우리를 위하여 사람들을 택하여 나가서 아말렉과 싸우라 (출 17:9)',desc:'칼날로, 강하고 담대하라, 모세의 수종자, 여호와 닛시.',deep:HEROES.joshua.man+' 예수님 찾기: '+HEROES.joshua.jesus+'.'},
   {cat:'하나님의 사람',name:'연단',k:'영웅 성장',verse:'환난은 인내를, 인내는 연단을, 연단은 소망을 이루는 줄 앎이로다 (롬 5:3–4)',desc:'영웅은 싸울수록 경험이 쌓여 연단돼요. 레벨이 오르면 연단 점수를 받고, 싸움을 마친 뒤 지도의 연단 화면에서 기술을 키우거나 언제든 다시 배치할 수 있어요.',deep:'연단은 영웅이 스스로를 높이는 일이 아니라 하나님이 사람을 빚어 가시는 과정이에요. "너희 믿음의 확실함은 불로 연단하여도 없어질 금보다 더 귀하여"(벧전 1:7).'},
   {cat:'하나님의 사람',name:'아브람',k:'2·3 스테이지',verse:'아브람이 여호와를 믿으니 여호와께서 이를 그의 의로 여기시고 (창 15:6)',desc:'갈 바를 알지 못했지만 말씀을 따라 길을 떠난 사람이에요(히 11:8).',deep:'아브람이 의롭다 여김을 받은 건 공로가 아니라 믿음 때문이었어요. 바울은 이 구절로 은혜의 구원을 설명해요(롬 4:3–5).'},
   ...['soldier','raider','shield','centurion','chariot','pharaoh'].map(t=>({cat:'적',name:ENEMIES[t].name,k:ENEMIES[t].spirit,verse:ENEMIES[t].verse,desc:ENEMIES[t].desc,deep:t==='soldier'?'게임의 군사는 악당이 아니라 어둠에 붙잡힌 사람들이에요. 이사야는 "내 백성 애굽이여 … 복이 있을지어다"(사 19:25)라는 날을 내다봤어요.':t==='pharaoh'?'"여호와가 누구이기에 내가 그의 목소리를 듣고"(출 5:2). 성경은 애굽 군대가 바다에 잠겼다고 기록해요(출 14:28). 게임은 그 장면을 그리지 않았어요.':'병종은 게임 내내 같고, 시대와 민족에 따라 겉모습만 바뀌어요.'})),
@@ -690,6 +741,7 @@ const CODEX=[
   {cat:'하나님이 하신 일',name:'떨기나무 불꽃',k:'5 미디안 우물',verse:'떨기나무에 불이 붙었으나 그 떨기나무가 사라지지 아니하는지라 (출 3:2)',desc:'하나님이 모세를 부르시고 백성을 건지겠다고 약속하셨어요.',deep:'하나님은 자신을 "스스로 있는 자"라고 알려 주셨어요(출 3:14). 게임은 하나님을 사람 모습으로 그리지 않고 불과 빛으로만 그려요.'},
   {cat:'하나님이 하신 일',name:'구름기둥',k:'6 홍해',verse:'저쪽에는 구름과 흑암이 있고 이쪽에는 밤이 광명하므로 (출 14:20)',desc:'다섯째 무리 때 구름기둥이 진영 사이로 옮겨 와요. 그 안을 지나는 적은 몹시 느려져요.',deep:'같은 하나님의 임재가 누구에게는 흑암, 누구에게는 빛이었어요.'},
   {cat:'하나님이 하신 일',name:'갈라진 바다',k:'6 홍해',verse:'이스라엘 자손이 바다 가운데를 육지로 걸어가고 물은 그들의 좌우에 벽이 되니 (출 14:22)',desc:'홍해를 이기면 바다가 갈라지고 백성이 건너가요.',deep:'바울은 홍해를 건넌 일을 세례에 빗대요(고전 10:1–2).'},
+  {cat:'하나님이 하신 일',name:'여호와 닛시',k:'7 르비딤',verse:'모세가 제단을 쌓고 그 이름을 여호와 닛시라 하고 (출 17:15)',desc:'모세가 손을 들면 이스라엘이 이기고, 지친 팔은 아론과 훌이 붙들었어요. 게임에서는 산 위의 모세를 눌러 팔을 붙들게 해요.',deep:'"여호와 닛시"는 "여호와는 나의 깃발"이라는 뜻이에요. 아말렉은 뒤에 처진 약한 자들을 쳤어요(신 25:18). 하나님은 약한 자를 잊지 않으세요.'},
   {cat:'하나님이 하신 일',name:'부르짖음',k:'플레이어 기술',verse:'이스라엘 자손이 심히 두려워하여 여호와께 부르짖고 (출 14:10)',desc:'누른 곳에 하늘에서 빛이 내려와요. 범위 피해를 주고 기절시켜요.',deep:'백성은 믿음이 좋아서가 아니라 두려워서 부르짖었어요. 그래도 하나님은 응답하셨어요. "환난 날에 나를 부르라"(시 50:15).'},
   {cat:'하나님이 하신 일',name:'세 겹 줄',k:'플레이어 기술',verse:'두 사람이면 맞설 수 있나니 세 겹 줄은 쉽게 끊어지지 아니하느니라 (전 4:12)',desc:'누른 길 위에 장정 둘이 잠깐 나타나 막아서요.',deep:'마귀가 사람을 붙잡는 줄과, 서로를 붙드는 세 겹 줄이 대비돼요.'}
 ];
@@ -709,11 +761,25 @@ function newGame(sid,heroKind){
     menu:null,heroSel:false,unitSel:null,aim:null,rallyFor:null,cd:{cry:0,help:0},hands:0,
     cloud:S.cloudAt?{state:'home',x:1150,y:250,k:0,t:0}:null,
     shake:0,flash:0,tut:sid===1?{step:-1,shown:{}}:null,over:false,scene:null,boss:null,dawn:0,sea:0,arkShown:0,seen:new Set(),timers:[],
-    hardTold:false,bindTold:false,firstPriest:true,stars:0,stat:{unitDown:0,heroDown:0}};
+    hardTold:false,bindTold:false,firstPriest:true,stars:0,stat:{unitDown:0,heroDown:0},
+    hill:S.hill?{x:S.hill.x,y:S.hill.y,up:true,st:1,helped:false,told:false,anim:0}:null,banner:null,brave:null,rearTold:false};
   G.hero=makeHero(heroKind,S.heroHome);
   if(G.tut)later(.6,()=>tut(0));else later(.8,()=>toast('적이 길 끝의 <b>빛나는 문</b>을 지나면 약속의 등불이 약해져요.',6));
 }
 function later(s,fn){G.timers.push({t:s,fn});}
+/* ---------- 산 위의 모세(7 르비딤): 손을 들면 탑이 세지고, 팔이 피곤해 내려오면 적이 빨라진다. 누르면 아론과 훌이 붙든다 ---------- */
+function updHill(dt){const m=G.hill;if(!m||G.phase==='prep')return;m.anim+=dt;if(!m.up)return;m.st-=dt/(m.helped?46:26);
+  if(m.st<=0){m.st=0;m.up=false;Snd.play('deny');if(!m.told){m.told=true;toast('<b>모세의 팔이 피곤해졌어요.</b> 손이 내려오면 아말렉이 이겨요. 산 위의 모세를 눌러 아론과 훌이 팔을 붙들게 하세요. (출 17:11–12)',7);}else toast('모세의 팔이 내려왔어요. 산 위의 모세를 누르세요.',3);}}
+function hillTap(){const m=G.hill;if(m.up){floatText(m.x,m.y-96,'모세가 손을 들고 있어요','#ffe9a8',13);Snd.play('click');return;}
+  m.up=true;m.st=1;m.helped=true;Snd.play('heal');floatText(m.x,m.y-96,'아론과 훌이 팔을 붙들었어요','#fff1c2',15);for(let i=0;i<12;i++)part('spark',m.x+rand(-30,30),m.y-rand(0,70),rand(-30,30),rand(-60,-10),.8,'#ffe9a8',2.5);}
+const onHill=(x,y)=>!!(G&&G.hill&&d2(x,y,G.hill.x,G.hill.y-34)<48*48);
+function drawHill(c){const m=G.hill,up=m.up,a=up&&ART.moses_hands?ART.moses_hands:ART.moses;
+  if(up){c.save();c.globalCompositeOperation='lighter';glow(c,m.x,m.y-40,70,'255,226,140',.28+.08*Math.sin(G.t*3));c.restore();}
+  if(m.helped){c.save();RR(c,m.x-16,m.y-12,32,14,6);FS(c,'#9a8a74',2);c.restore();}
+  if(m.helped)for(const sd of [-1,1]){const k=sd<0?'aaron':'hur';if(ART[k])sprite(c,ART[k],m.x+sd*26,m.y+6,{dir:-sd,t:G.t+sd,pose:'idle',s:.9});}
+  if(a)sprite(c,a,m.x,m.y,{dir:-1,t:G.t,pose:up&&!ART.moses_hands?'raise':'idle'});else chibi(c,m.x,m.y,{s:1.25,dir:-1,t:G.t,pose:up?'raise':'idle',...HEROES.moses.look});
+  const w=44,x0=m.x-w/2,y0=m.y-84;c.save();RR(c,x0-2,y0-2,w+4,9,4);c.fillStyle='rgba(20,10,4,.7)';c.fill();RR(c,x0,y0,Math.max(1,w*m.st),5,2.5);c.fillStyle=up?'#ffd36b':'#c4513a';c.fill();c.restore();
+  if(!up){const b=.5+.5*Math.sin(G.t*8);c.save();c.globalAlpha=.6+.4*b;C(c,m.x+24,m.y-92,11);FS(c,'#c4513a',2,'#fff3d6');c.fillStyle='#fff';c.font=`16px ${UIF}`;c.textAlign='center';c.textBaseline='middle';c.fillText('!',m.x+24,m.y-91);c.restore();}}
 
 /* ---------- 무리 ---------- */
 function nextPaths(){if(!G)return[];const w=G.S.waves[G.waveIdx+1];if(!w)return[];const s=new Set();for(const g of w){if(g[4]===-1)G.paths.forEach((_p,i)=>s.add(i));else s.add(g[4]);}return[...s];}
@@ -726,6 +792,7 @@ function startWave(){
   Snd.play('wave');
   if(has('watch',5)&&G.towers.some(t=>t.line==='watch')){G.horn=8;for(const t of G.towers)if(t.line==='watch')floatText(t.x,t.y-70,'나팔 소리','#ffe9a8',13);}
   if(G.S.events&&G.S.events[i]==='cloud')cloudEvent();
+  if(G.S.rear!=null&&!G.rearTold&&w.some(g=>g[4]===G.S.rear||g[4]===-1)){G.rearTold=true;banner('아말렉이 뒤에 처진 약한 자들을 노려요','네 뒤에 떨어진 약한 자들을 쳤고 하나님을 두려워하지 아니하였느니라 (신 25:18)',4.5);later(4,()=>toast('진영 뒤쪽 <b>짧은 길</b>로도 와요. 등불 가까이에도 탑을 두세요.',5));}
   if(G.tut){if(i===0)later(4,()=>tut(2));if(i===1)tut(4);}
 }
 function callWave(){
@@ -763,7 +830,7 @@ function spawn(type,pi){
 function demonPos(e){if(e.type==='chariot'||e.type==='pharaoh'){const k=e.def.boss?1.8:1;return{x:e.x-e.dir*10*k,y:e.y-64*k};}const s=e.look.s||1,a=enemyArt(e);return{x:e.x-e.dir*6,y:e.y-(a?a.hgt+16:50)*s};}
 function strTargets(e){if(e.type==='chariot'||e.type==='pharaoh'){const k=e.def.boss?1.8:1;return[[e.x-e.dir*6*k,e.y-40*k],[e.x+e.dir*3*k,e.y-28*k]];}const s=e.look.s||1;return[[e.x,e.y-30*s],[e.x+e.dir*7*s,e.y-16*s]];}
 function inCloud(e){const c=G.cloud;return!!(c&&c.state==='set'&&c.zones&&Math.abs(e.d-c.zones[e.pi])<85);}
-function enemySpeed(e){return e.def.speed*e.haste*(e.slowT>0?e.slowF:1)*(inCloud(e)?.45:1);}
+function enemySpeed(e){return e.def.speed*e.haste*(e.slowT>0?e.slowF:1)*(inCloud(e)?.45:1)*(G.hill&&!G.hill.up?1.25:1);}   // 손을 내리면 아말렉이 이기더니(출 17:11)
 function updEnemies(dt){
   for(const e of G.enemies)if(alive(e))e.haste=1;
   for(const c of G.enemies){if(!alive(c)||!c.def.haste)continue;const r2=c.def.haste.r*c.def.haste.r;for(const e of G.enemies)if(e!==c&&alive(e)&&!e.def.boss&&d2(e.x,e.y,c.x,c.y)<r2)e.haste=Math.max(e.haste,c.def.haste.mul);}
@@ -845,16 +912,18 @@ function updUnits(dt){
     if(u.two&&tg){u.extra=(u.extra||[]).filter(x=>alive(x)&&x.blockedBy===u);if(!u.extra.length)for(const e of G.enemies){if(e===tg||!alive(e)||!e.def.block||e.blockedBy||e.state!=='walk')continue;if(d2(e.x,e.y,u.x,u.y)<46*46){e.blockedBy=u;u.extra.push(e);break;}}}
     const gx=tg?tg.x+u.side*16:home.x,gy=tg?tg.y+1:home.y,dx=gx-u.x,dy=gy-u.y,Ld=Math.hypot(dx,dy);u.moving=Ld>2.5;
     if(Ld>2.5){const st=Math.min(Ld,92*dt);u.x+=dx/Ld*st;u.y+=dy/Ld*st;if(Math.abs(dx)>1.5)u.dir=dx>=0?1:-1;}
-    if(tg&&tg.state==='fight'&&Ld<8){u.dir=tg.x>=u.x?1:-1;u.atkCd-=dt;if(u.atkCd<=0){u.atkCd=1;let dm=u.dmg;if(u.big&&tg.def.r>=13)dm*=1+u.big;hurt(tg,dm,'phys');Snd.play('hit');}}
+    if(tg&&tg.state==='fight'&&Ld<8){u.dir=tg.x>=u.x?1:-1;u.atkCd-=dt;if(u.atkCd<=0){u.atkCd=braveAt(u.x,u.y)?.8:1;let dm=u.dmg;if(u.big&&tg.def.r>=13)dm*=1+u.big;if(joshNear(u))dm*=1.2;hurt(tg,dm,'phys');Snd.play('hit');}}
   }
   G.units=G.units.filter(u=>u.state!=='gone');
 }
+const joshNear=u=>{const h=G.hero;return!!(h&&h.kind==='joshua'&&h.state==='ok'&&d2(u.x,u.y,h.x,h.y)<150*150);};
+const braveAt=(x,y)=>!!(G.brave&&G.brave.t>0&&d2(x,y,G.brave.x,G.brave.y)<220*220);
 function barUpd(b){let tg=b.target;if(tg&&(!alive(tg)||tg.blockedBy!==b)){dropTarget(b);tg=null;}if(!tg)for(const e of G.enemies){if(alive(e)&&e.def.block&&!e.blockedBy&&d2(e.x,e.y,b.x,b.y)<34*34){b.target=e;e.blockedBy=b;break;}}}
 function mosesGuard(x,y){const h=G.hero;return h&&h.kind==='moses'&&h.state==='ok'&&h.sk.passive>0&&d2(x,y,h.x,h.y)<140*140?[1,.85,.75,.65][h.sk.passive]:0;}
 function inRefuge(x,y){for(const z of G.zones)if(d2(x,y,z.x,z.y)<z.r*z.r)return true;return false;}
 const ENEMY_DMG=2.2;   // 막아선 병사·영웅이 실제로 쓰러질 만큼(10-11 사용자: 대치하다가 쓰러지지 않아 긴장감이 없다)
 function hitBlocker(b,dmg){
-  let m=1-(b.armor||0);{const gk=mosesGuard(b.x,b.y);if(gk)m*=gk;}if(b.tw&&b.tw.line==='shep'&&has('shep',5)&&b.hp<b.max/3)m*=.7;const a=dmg*m*ENEMY_DMG*(G.S.dmgMul||1);b.hitT=.12;
+  let m=1-(b.armor||0);{const gk=mosesGuard(b.x,b.y);if(gk)m*=gk;}if(b.role==='hero'&&b.kind==='joshua'&&G.hill&&G.hill.up)m*=.8;if(b.tw&&b.tw.line==='shep'&&has('shep',5)&&b.hp<b.max/3)m*=.7;const a=dmg*m*ENEMY_DMG*(G.S.dmgMul||1);b.hitT=.12;
   if(b.role==='unit'&&inRefuge(b.x,b.y)){b.hp=Math.max(1,b.hp-a);return;}
   b.hp-=a;if(b.hp<=0)blockerDown(b);
 }
@@ -901,8 +970,12 @@ function upgrade(t){
   if(t.line==='shep')for(const u of G.units)if(u.tw===t){u.max=T.hp;u.hp=T.hp;u.dmg=T.dmg;u.armor=T.armor;u.big=T.big||0;}
   sparkle(t);return true;
 }
-function takeBranch(t,id){if(id!=='priest'||G.S.cap<4)return false;if(G.gold<PRIEST.cost){deny();return false;}G.gold-=PRIEST.cost;t.spent+=PRIEST.cost;t.branch='priest';t.sk={bless:0,gate:0,rod:0};Snd.play('up');sparkle(t);if(G.firstPriest){G.firstPriest=false;toast('<b>제사장</b>이 섰어요. 탑을 눌러 축복, 성막 문지기, 싹 난 지팡이를 배우세요.',6);}return true;}
-function buySkill(t,i){const sk=PRIEST.skills[i],lv=t.sk[sk.id];if(lv>=3)return false;const cost=sk.costs[lv];if(G.gold<cost){deny();return false;}G.gold-=cost;t.spent+=cost;t.sk[sk.id]++;if(sk.id==='gate')gateSync(t);Snd.play('up');sparkle(t);return true;}
+const choirOpen=()=>(BEST[6]||0)>0;   // 바다의 노래(출 15)로 열린다
+function takeBranch(t,id){const B=BRANCH[id];if(!B||G.S.cap<4||(id==='choir'&&!choirOpen()))return false;if(G.gold<B.cost){deny();return false;}G.gold-=B.cost;t.spent+=B.cost;t.branch=id;Snd.play('up');sparkle(t);
+  if(id==='priest'){t.sk={bless:0,gate:0,rod:0};if(G.firstPriest){G.firstPriest=false;toast('<b>제사장</b>이 섰어요. 탑을 눌러 축복, 성막 문지기, 싹 난 지팡이를 배우세요.',6);}}
+  else{t.sk={song:0,timbrel:0,turn:0};t.songCd=3;if(!G.firstChoir){G.firstChoir=true;toast('<b>찬양대</b>가 섰어요. 노래를 시작할 때에, 미리암의 소고, 서로 치다를 배우세요.',6);}}
+  return true;}
+function buySkill(t,i){const sk=BRANCH[t.branch].skills[i],lv=t.sk[sk.id];if(lv>=3)return false;const cost=sk.costs[lv];if(G.gold<cost){deny();return false;}G.gold-=cost;t.spent+=cost;t.sk[sk.id]++;if(sk.id==='gate')gateSync(t);Snd.play('up');sparkle(t);return true;}
 function gateSync(t){const g=GATE[t.sk.gate];if(!g)return;if(!t.rally){const n=nearestAll(t.x,t.y);t.rally={x:n.x,y:n.y};}
   const u=G.units.find(u=>u.tw===t&&u.gk);
   if(u){u.max=g.hp;u.hp=g.hp;u.dmg=g.dmg;u.armor=g.armor;u.two=!!g.two;if(u.state==='down'){u.state='ok';u.x=t.x;u.y=t.y+6;}}
@@ -912,8 +985,10 @@ function sell(t){const ref=Math.floor(t.spent*.6);G.gold+=ref;floatText(t.x,t.y-
 function deny(){Snd.play('deny');ui.flashGold();}
 function sparkle(t){for(let i=0;i<14;i++)part('spark',t.x+rand(-20,20),t.y-rand(0,50),rand(-40,40),rand(-80,-20),.8,'#ffe08a',2.5);}
 function tStats(t){
-  const s=withUp(t.line,t.branch==='priest'?PRIEST:LINES[t.line].tiers[t.tier-1]);let rM=1,spd=1,dm=1;const h=G.hero;
+  const s=withUp(t.line,t.branch?BRANCH[t.branch]:LINES[t.line].tiers[t.tier-1]);let rM=1,spd=1,dm=1;const h=G.hero;
   if(t.line==='watch'&&G.horn>0)spd*=1.4;
+  if(G.hill&&G.hill.up){dm*=1.15;spd*=1.1;}if(braveAt(t.x,t.y))spd*=1.25;
+  {let tb=0;for(const o of G.towers)if(o.branch==='choir'&&o.sk.timbrel>0&&o!==t&&d2(o.x,o.y,t.x,t.y)<CHOIR.range*CHOIR.range)tb=Math.max(tb,[0,.1,.18,.25][o.sk.timbrel]);spd*=1+tb;}
   if(h&&h.state==='ok'){if(h.kind==='moses'&&d2(t.x,t.y,h.x,h.y)<150*150)rM*=1.15;if(h.kind==='noah'&&t.line==='art'&&h.sk.passive>0&&d2(t.x,t.y,h.x,h.y)<170*170)spd*=1+.1*h.sk.passive;}
   if(G.hands>0){const k=[0,1.3,1.36,1.45][h?h.sk.ult:1];dm*=k;spd*=k;}
   return{s,range:(s.range||150)*rM,spd,dm};
@@ -928,7 +1003,7 @@ function updTowers(dt){
     if(t.stopped){t.stopped.t+=dt;if(t.stopped.t>20)unbind(t);continue;}
     const st=tStats(t);t.range=st.range;
     if(t.line==='shep'){shepAux(t,dt);continue;}
-    if(t.branch==='priest')priestAux(t,dt);
+    if(t.branch==='priest')priestAux(t,dt);else if(t.branch==='choir')choirAux(t,dt);
     t.cd-=dt*st.spd;if(t.cd>0)continue;
     const tg=findTarget(t.x,t.y-12,st.range);if(!tg){t.cd=.1;continue;}
     t.cd=st.s.rate;t.kick=.3;t.face=tg.x<t.x?-1:1;
@@ -940,6 +1015,12 @@ function updTowers(dt){
   }
 }
 function shepAux(t,dt){if(t.tier<2)return;t.slingCd-=dt;if(t.slingCd>0)return;const u=G.units.find(u=>u.tw===t&&u.state==='ok'&&!u.target);if(!u){t.slingCd=.5;return;}const tg=findTarget(t.rally.x,t.rally.y,140);if(!tg){t.slingCd=.4;return;}G.projs.push({k:'sling',x:u.x,y:u.y-20,tx:tg.x,ty:tg.y,tg,sp:520,dmg:withUp('shep',LINES.shep.tiers[t.tier-1]).sling});u.throwT=.3;Snd.play('sling');t.slingCd=has('shep',4)?2.6:3.2;}
+// 찬양대: 노래로 범위 안 적을 멈춰 세우고(대하 20:22), 멈춘 적끼리 서로 치게 한다(20:23)
+function choirAux(t,dt){t.songCd-=dt;if(t.sk.song<=0||t.songCd>0)return;const r2=CHOIR.range*CHOIR.range,hit=G.enemies.filter(e=>alive(e)&&!e.def.boss&&d2(e.x,e.y,t.x,t.y-12)<r2);if(!hit.length){t.songCd=.5;return;}
+  t.songCd=has('levi',5)?10:14;const st=[0,1.2,1.8,2.4][t.sk.song],p=[0,.15,.25,.35][t.sk.turn];Snd.play('heal');fxRing(t.x,t.y-12,CHOIR.range,'255,236,170');
+  for(let i=0;i<10;i++)part('spark',t.x+rand(-30,30),t.y-40-rand(0,30),rand(-50,50),rand(-70,-20),1,'#ffe9a8',2.6);
+  for(const e of hit){e.stun=Math.max(e.stun,st);if(p&&Math.random()<p){const o=G.enemies.find(o=>o!==e&&alive(o)&&d2(o.x,o.y,e.x,e.y)<70*70);if(o){hurt(o,15+10*t.sk.turn,'true');fxRing(o.x,o.y-16,18,'255,200,160');}}}
+  floatText(t.x,t.y-80,'노래를 시작할 때에','#fff1c2',14);}
 function priestAux(t,dt){
   const r2=PRIEST.range*PRIEST.range,heal=(PRIEST.heal+[0,3,6,9][t.sk.bless])*dt;
   for(const u of G.units)if(u.state==='ok'&&u.role==='unit'&&u.hp<u.max&&d2(u.x,u.y,t.x,t.y)<r2){u.hp=Math.min(u.max,u.hp+heal);if(Math.random()<dt*1.5)part('plus',u.x+rand(-6,6),u.y-28,0,-22,.8,'#8fe06a',6);}
@@ -981,12 +1062,12 @@ function unspendPt(k,id){const r=heroRec(k);if(r.sk[id]<=(id==='ult'?1:0))return
 function resetPts(k){const r=heroRec(k);r.sk.s1=0;r.sk.s2=0;r.sk.passive=0;r.sk.ult=1;saveHeroes();Snd.play('sell');}
 const josa=(w,a,b)=>{const c=w.charCodeAt(w.length-1)-0xAC00;return c>=0&&c<11172&&c%28?a:b;};
 function heroScale(h){const lv=h.lv;h.max=Math.round(h.D.hp*(1+.08*(lv-1)));h.dmg=h.D.dmg*(1+.07*(lv-1));}
-function gainXP(n){if(!G||!G.hero)return;const h=G.hero,r=heroRec(h.kind);r.xp+=n*XP_RATE*(h.lv<G.sid?1.5:1);const lv=levelOf(r.xp);
+function gainXP(n){if(!G||!G.hero||G.hero.D.fixedLv)return;const h=G.hero,r=heroRec(h.kind);r.xp+=n*XP_RATE*(h.lv<G.sid?1.5:1);const lv=levelOf(r.xp);
   if(lv>h.lv){const ratio=h.hp/h.max;h.lv=lv;heroScale(h);h.hp=Math.round(h.max*Math.max(ratio,.6));saveHeroes();
     if(!G.over){banner(`${h.D.name}${josa(h.D.name,'이','가')} 연단되었어요 · Lv ${lv}`,'환난은 인내를, 인내는 연단을, 연단은 소망을 이루는 줄 앎이로다 (롬 5:3–4)',3.5);Snd.play('up');
       for(let i=0;i<18;i++)part('spark',h.x+rand(-18,18),h.y-rand(0,50),rand(-40,40),rand(-110,-40),1,'#ffe08a',2.8);
       later(2,()=>{if(G&&!G.over&&ptsLeft(h.kind)>0)toast(`<b>연단 점수</b>를 받았어요. 싸움을 마치고 지도의 <b>연단</b>에서 ${h.D.name}의 기술을 키우세요.`,6);});}}}
-function makeHero(kind,home){const D=HEROES[kind],rec=heroRec(kind),lv=levelOf(rec.xp),hp0=Math.round(D.hp*(1+.08*(lv-1)));return{role:'hero',kind,D,lv,sk:rec.sk,dmg:D.dmg*(1+.07*(lv-1)),x:home[0],y:home[1],hx:home[0],hy:home[1],hp:hp0,max:hp0,armor:D.armor,state:'ok',moving:false,tx:0,ty:0,target:null,atkCd:0,s1:3,s2:6,ult:D.ult.cd*.35,idle:0,respawn:0,dir:-1,t:0,bar:null,barCd:0,hitT:0,cast:0};}
+function makeHero(kind,home){const D=HEROES[kind],rec=D.fixedLv?null:heroRec(kind),lv=D.fixedLv||levelOf(rec.xp),hp0=Math.round(D.hp*(1+.08*(lv-1)));return{role:'hero',kind,D,lv,sk:D.fixedSk||rec.sk,dmg:D.dmg*(1+.07*(lv-1)),x:home[0],y:home[1],hx:home[0],hy:home[1],hp:hp0,max:hp0,armor:D.armor,state:'ok',moving:false,tx:0,ty:0,target:null,atkCd:0,s1:3,s2:6,ult:D.ult.cd*.35,idle:0,respawn:0,dir:-1,t:0,bar:null,barCd:0,hitT:0,cast:0};}
 function unitAt(x,y){if(!G)return null;const R=scale<.75?26:20;let best=null,bd=R*R;for(const u of G.units){if(u.role!=='unit'||u.state!=='ok'||!(u.tw||u.rally))continue;const dd=d2(x,y,u.x,u.y-15);if(dd<bd){bd=dd;best=u;}}return best;}
 function selUnits(){const s=G.unitSel;if(!s)return[];return G.units.filter(u=>u.role==='unit'&&u.state!=='gone'&&(s.tw?u.tw===s.tw:u.rally===s.rally));}
 const SHEP_R=190;   // 양치기가 탑에서 떠날 수 있는 거리
@@ -1004,7 +1085,7 @@ function drawUnitSel(c){const s=G.unitSel;if(!s)return;const us=selUnits().filte
 /* ---------- 끌어서·쓸어서 옮기기: 영웅·양치기·세 겹 줄을 누른 채 끌거나, 고른 뒤 아무 데서나 쓸면 그만큼 옮긴다 ---------- */
 let drag=null;
 function dragTarget(x,y){
-  if(!G||G.over||G.scene||G.paused||G.aim||G.rallyFor||G.menu)return null;
+  if(!G||G.over||G.scene||G.paused||G.aim||G.rallyFor||G.menu||onHill(x,y))return null;
   if(G.towers.some(t=>t.stopped&&Math.abs(x-t.x)<34&&y<t.y+16&&y>t.y-80))return null;
   const h=G.hero,hok=h&&h.state==='ok';
   const u=unitAt(x,y);if(u)return{k:'unit',sel:u.tw?{tw:u.tw}:{rally:u.rally},on:true};   // 누르기(onTap)와 같은 순서
@@ -1049,6 +1130,10 @@ function updHero(dt){
 }
 function heroSkills(h){
   if(h.state!=='ok')return;
+  if(h.kind==='joshua'){const L=h.sk;
+    if(h.s1<=0){const near=G.enemies.filter(e=>alive(e)&&d2(e.x,e.y,h.x+h.dir*16,h.y)<70*70);if(near.length){for(const e of near){hurt(e,[0,30,45,60][L.s1],'phys','hero');if(alive(e)&&!e.def.boss)e.stun=Math.max(e.stun,[0,.8,1,1.2][L.s1]);}fxRing(h.x+h.dir*16,h.y,70,'255,240,200');Snd.play('hit');h.cast=.3;h.s1=HEROES.joshua.s1.cd;}}
+    if(h.s2<=0&&G.enemies.some(e=>alive(e)&&d2(e.x,e.y,h.x,h.y)<220*220)){G.brave={x:h.x,y:h.y,t:6};h.s2=HEROES.joshua.s2.cd;floatText(h.x,h.y-70,'강하고 담대하라','#ffe9a8',15);Snd.play('event');}
+    return;}
   if(h.kind==='noah'){
     const L=h.sk;
     if(L.s1>0&&h.s1<=0){let best=null,bn=0;for(const e of G.enemies){if(!alive(e)||d2(e.x,e.y,h.x,h.y)>180*180)continue;let n=0;for(const o of G.enemies)if(alive(o)&&d2(o.x,o.y,e.x,e.y)<60*60)n++;if(n>bn){bn=n;best=e;}}
@@ -1066,6 +1151,7 @@ function ultPress(){
   const h=G.hero;if(!h||h.state!=='ok'||h.ult>0||G.scene||G.over){Snd.play('deny');return;}
   closeMenu();
   if(h.kind==='noah'){G.aim=G.aim==='stamp'?null:'stamp';if(G.aim)toast('짐승들이 달려올 <b>길 위</b>를 누르세요.',3);}
+  else if(h.kind==='joshua'){G.aim=G.aim==='banner'?null:'banner';if(G.aim)toast('깃발을 세울 <b>길 위</b>를 누르세요.',3);}
   else{const lv=h.sk.ult||1;G.handsLv=lv;G.hands=G.handsMax=HANDS_T[lv];h.ult=h.D.ult.cd;Snd.play('ult');banner('모세가 손을 들었어요','모세가 손을 들면 이스라엘이 이기고 (출 17:11)',3);later(HANDS_TIRED,()=>{if(G&&G.hands>0)floatText(G.hero.x,G.hero.y-80,'아론과 훌이 팔을 붙들었어요','#ffe9a8',15);});}
 }
 // 손을 들다: 손을 드는 동안 화면의 적 체력이 단계마다 10·20·30% 깎인다(10-11 사용자). 팔이 피곤해지면 아론과 훌이 붙든다(출 17:12).
@@ -1073,6 +1159,14 @@ const HANDS_T=[0,12,15,18],HANDS_DRAIN=[0,.1,.2,.3],HANDS_TIRED=6;
 const handsHelp=()=>G.hands>0&&G.handsMax-G.hands>=HANDS_TIRED;
 function handsDrain(dt){const lv=G.handsLv||1,k=HANDS_DRAIN[lv]/HANDS_T[lv]*dt;
   for(const e of G.enemies){if(!alive(e)||e.x<0||e.x>W||e.y<0||e.y>H)continue;hurt(e,e.maxHp*k,'true');if(Math.random()<dt*1.5)part('spark',e.x+rand(-10,10),e.y-rand(18,42),rand(-8,8),-34,.7,'#fff3b0',2.2);}}
+// 여호와 닛시(출 17:15): 깃발 둘레의 적은 멈추고 느려지며, 아군은 회복된다
+function castBanner(x,y){const n=nearestAll(x,y);if(!n||n.dd>90*90){toast('길 가까이를 눌러 주세요.',2.5);return false;}const R=120;G.banner={x:n.x,y:n.y,t:0,life:8,r:R};
+  for(const e of G.enemies)if(alive(e)&&!e.def.boss&&d2(e.x,e.y,n.x,n.y)<R*R)e.stun=Math.max(e.stun,3);healAround(n.x,n.y,R,80);fxRing(n.x,n.y,R,'255,240,190');G.hero.ult=G.hero.D.ult.cd;Snd.play('ult');floatText(n.x,n.y-90,'여호와 닛시','#fff1c2',18);return true;}
+function updBanner(dt){const b=G.banner;if(!b)return;b.t+=dt;for(const e of G.enemies)if(alive(e)&&d2(e.x,e.y,b.x,b.y)<b.r*b.r){e.slowT=.25;e.slowF=Math.min(e.slowF||1,.6);}if(b.t>b.life)G.banner=null;}
+function drawBanner(c){const b=G.banner;if(!b)return;const a=Math.min(1,b.t*4,(b.life-b.t)*2);c.save();c.globalAlpha=a*.35;E(c,b.x,b.y,b.r,b.r*.45);c.fillStyle='rgba(255,236,170,.5)';c.fill();c.globalAlpha=a;
+  c.strokeStyle=OL;c.lineWidth=4;L(c,b.x,b.y,b.x,b.y-74);c.strokeStyle='#8a5a30';c.lineWidth=2.4;L(c,b.x,b.y,b.x,b.y-74);const w=Math.sin(G.t*5)*3;
+  c.beginPath();c.moveTo(b.x+1,b.y-72);c.quadraticCurveTo(b.x+18,b.y-76+w,b.x+34,b.y-70);c.lineTo(b.x+34,b.y-48);c.quadraticCurveTo(b.x+18,b.y-54+w,b.x+1,b.y-50);c.closePath();FS(c,'#f4efe0',1.8);
+  c.fillStyle='#3d6fb3';c.fillRect(b.x+6,b.y-64+w*.3,22,3);c.restore();}
 function castStamp(x,y){const n=nearestAll(x,y);if(!n||n.dd>90*90){toast('길 가까이를 눌러 주세요.',2.5);return false;}G.stamp={pi:n.pi,d0:n.d,t:0,hit:new Set(),lv:G.hero.sk.ult};G.hero.ult=G.hero.D.ult.cd;Snd.play('stampede');return true;}
 function updStamp(dt){
   const s=G.stamp;if(!s)return;s.t+=dt;const front=s.d0-150*s.t,fp=at(G.paths[s.pi],Math.max(0,front));s.fx=fp.x;s.fy=fp.y;s.dir=-(Math.sign(fp.dx)||1);s.ang=Math.atan2(-fp.dy,-fp.dx);
@@ -1098,6 +1192,7 @@ function updFx(dt){
   for(const z of G.zones)z.t+=dt;G.zones=G.zones.filter(z=>z.t<z.life);
   if(G.hands>0){if(!G.over&&!G.scene)handsDrain(dt);G.hands=Math.max(0,G.hands-dt);}
   if(G.horn>0)G.horn=Math.max(0,G.horn-dt);
+  if(G.brave&&G.brave.t>0)G.brave.t-=dt;
   if(G.shake>0)G.shake=Math.max(0,G.shake-dt*20);if(G.flash>0)G.flash=Math.max(0,G.flash-dt*2);
   for(const tm of G.timers){tm.t-=dt;if(tm.t<=0&&!tm.done){tm.done=true;tm.fn();}}G.timers=G.timers.filter(t=>!t.done);
 }
@@ -1189,7 +1284,7 @@ function update(dt){
   if(G.scene){updScene(dt);updFx(dt);updEnemies(dt);return;}
   if(G.over){updFx(dt);updEnemies(dt);return;}
   G.cd.cry=Math.max(0,G.cd.cry-dt);G.cd.help=Math.max(0,G.cd.help-dt);
-  updWaves(dt);updCloud(dt);updEnemies(dt);updUnits(dt);updHero(dt);updTowers(dt);updProjs(dt);updStamp(dt);updBeams(dt);updFx(dt);
+  updWaves(dt);updCloud(dt);updHill(dt);updEnemies(dt);updUnits(dt);updHero(dt);updTowers(dt);updProjs(dt);updStamp(dt);updBanner(dt);updBeams(dt);updFx(dt);
   if(G.tut&&G.hero.ult<=0&&G.waveIdx>=1)tut(5);
 }
 
@@ -1222,7 +1317,7 @@ const ART_DEF={
   noah:{h:66},moses:{h:66},shep:{h:46},help:{h:46},
   soldier:{h:48},raider:{h:46},shield:{h:50},centurion:{h:54},
   f_soldier:{h:48},f_raider:{h:46},imp:{h:28},c_soldier:{h:48},c_raider:{h:46},e_soldier:{h:48},e_raider:{h:46},e_shield:{h:52},m_soldier:{h:48},m_raider:{h:46},m_shield:{h:52},m_centurion:{h:54},
-  a_elephant:{h:40},a_elephant2:{h:40},a_giraffe:{h:54},a_giraffe2:{h:54},a_lion:{h:31},a_lioness:{h:28},a_zebra:{h:34},a_zebra2:{h:34},a_sheep:{h:24},a_sheep2:{h:24},aaron:{h:60},hur:{h:60},gatekeeper:{h:64},
+  a_elephant:{h:40},a_elephant2:{h:40},a_giraffe:{h:54},a_giraffe2:{h:54},a_lion:{h:31},a_lioness:{h:28},a_zebra:{h:34},a_zebra2:{h:34},a_sheep:{h:24},a_sheep2:{h:24},aaron:{h:60},hur:{h:60},gatekeeper:{h:64},joshua:{h:66},moses_hands:{h:70},k_soldier:{h:48},k_raider:{h:46},k_shield:{h:52},levi_choir:{h:98,top:.55},
   kite:{h:40},abram:{h:58},moses_young:{h:56},ark3:{h:150},levi_priest:{h:98,top:.55},chariot:{h:64},pharaoh:{h:66},
   watch1:{h:98,top:.8},watch2:{h:110,top:.8},watch3:{h:122,top:.84},levi1:{h:84,top:.55},levi2:{h:90,top:.55},levi3:{h:96,top:.55},
   shep1:{h:62,top:.5},shep2:{h:68,top:.5},shep3:{h:74,top:.5},art1:{h:76,top:.7},art2:{h:82,top:.72},art3:{h:88,top:.74},
@@ -1252,11 +1347,11 @@ function sprite(c,a,x,y,o){
   if(o.flash>0){c.globalAlpha*=Math.min(1,o.flash);c.drawImage(a.white,dx,dy);}
   c.restore();
 }
-function towerArt(line,tier,branch){return branch?ART[line+'_'+branch]||null:ART[line+tier]||null;}
+function towerArt(line,tier,branch){return branch?ART[line+'_'+branch]||(branch==='choir'?ART[line+'3']:null)||null:ART[line+tier]||null;}
 function drawTowerSprite(c,a,x,y,tw){const kk=tw&&tw.kick>0?Math.sin(clamp(tw.kick/.3,0,1)*Math.PI):0,k=a.hgt/a.h,sy=1-kk*.05,sx=1+kk*.03;
   c.save();c.translate(x,y+12);c.fillStyle='rgba(30,20,10,.22)';E(c,0,-2,a.w*k*.42,a.w*k*.13);c.fill();c.scale((tw&&tw.face<0&&a.flip?-1:1)*sx*k,sy*k);c.drawImage(a.im,-a.w/2,-a.h);c.restore();}
-const SKIN_PRE={flood:'f_',canaan:'c_',east:'e_',egypt:'',midian:'m_'};
-function enemyArt(e){const pre=SKIN_PRE[G.S.skin]||'';return ART[pre+e.type]||(pre&&G.S.skin!=='flood'?ART[e.type]:null)||null;}
+const SKIN_PRE={flood:'f_',canaan:'c_',east:'e_',egypt:'',midian:'m_',amalek:'k_'};
+function enemyArt(e){const pre=SKIN_PRE[G.S.skin]||'';return ART[pre+e.type]||(G.S.skin==='amalek'?ART['m_'+e.type]:null)||(pre&&G.S.skin!=='flood'?ART[e.type]:null)||null;}   // 아말렉 그림이 없으면 같은 광야 사람 미디안 그림으로
 function chibi(c,x,y,o){
   const s=o.s||1,dir=o.dir||1,t=o.t||0,pose=o.pose||'idle',kneel=pose==='kneel';
   c.save();c.translate(x,y);if(o.a!=null)c.globalAlpha*=o.a;
@@ -1640,14 +1735,14 @@ function drawTapHands(c){for(const t of G.towers){if(!t.stopped)continue;const x
     const b=Math.abs(Math.sin(animT*8))*6;c.translate(x+18,y-46-b);c.fillStyle='#fff3d6';c.strokeStyle=OL;c.lineWidth=2;RR(c,-6,-2,12,14,5);c.fill();c.stroke();RR(c,-3,-14,6,14,3);c.fill();c.stroke();c.restore();
     txt(c,'×'+t.stopped.taps,x+34,y-62,{size:14,col:'#e9dcff'});}}
 function drawRangeFor(c,x,y,r){c.save();c.fillStyle='rgba(255,226,150,.08)';c.strokeStyle='rgba(255,226,150,.7)';c.setLineDash([7,6]);c.lineWidth=2;c.beginPath();c.ellipse(x,y,r,r*.7,0,0,TAU);c.fill();c.stroke();c.restore();}
-function drawAim(c){if(!G.aim||!hoverPt)return;const {x,y}=hoverPt;c.save();if(G.aim==='cry'){c.strokeStyle='rgba(255,240,170,.9)';c.lineWidth=2.4;c.setLineDash([6,5]);E(c,x,y,88,40);c.stroke();}else{const n=nearestAll(x,y);const ok=n&&n.dd<(G.aim==='stamp'?90:70)**2;c.strokeStyle=ok?'rgba(255,240,170,.9)':'rgba(255,120,100,.8)';c.lineWidth=2.4;E(c,ok?n.x:x,ok?n.y:y,24,10);c.stroke();}c.restore();}
+function drawAim(c){if(!G.aim||!hoverPt)return;const {x,y}=hoverPt;c.save();if(G.aim==='cry'){c.strokeStyle='rgba(255,240,170,.9)';c.lineWidth=2.4;c.setLineDash([6,5]);E(c,x,y,88,40);c.stroke();}else{const n=nearestAll(x,y);const ok=n&&n.dd<(G.aim==='stamp'||G.aim==='banner'?90:70)**2;c.strokeStyle=ok?'rgba(255,240,170,.9)':'rgba(255,120,100,.8)';c.lineWidth=2.4;E(c,ok?n.x:x,ok?n.y:y,24,10);c.stroke();}c.restore();}
 /* ---------- 둥근 메뉴 ---------- */
 function itemCost(it){
   const t=G.menu.spot.tower;
   if(it.k==='build'){const c2=price(it.line,LINES[it.line].tiers[0].cost);return{label:String(c2),can:G.gold>=c2};}
   if(it.k==='up'){if(it.lock)return{label:'잠김',can:false};const c2=price(t.line,LINES[t.line].tiers[t.tier].cost);return{label:String(c2),can:G.gold>=c2};}
-  if(it.k==='branch'){if(it.lock)return{label:'잠김',can:false};return{label:String(PRIEST.cost),can:G.gold>=PRIEST.cost};}
-  if(it.k==='skill'){const sk=PRIEST.skills[it.i],lv=t.sk[sk.id];if(lv>=3)return{label:'최고',can:false};return{label:String(sk.costs[lv]),can:G.gold>=sk.costs[lv]};}
+  if(it.k==='branch'){if(it.lock)return{label:'잠김',can:false};const B=BRANCH[it.id];return{label:String(B.cost),can:G.gold>=B.cost};}
+  if(it.k==='skill'){const sk=BRANCH[t.branch].skills[it.i],lv=t.sk[sk.id];if(lv>=3)return{label:'최고',can:false};return{label:String(sk.costs[lv]),can:G.gold>=sk.costs[lv]};}
   if(it.k==='sell')return{label:'+'+Math.floor(t.spent*.6),can:true};
   if(it.k==='rally')return{label:'',can:true};
   return{label:'',can:true};
@@ -1655,7 +1750,7 @@ function itemCost(it){
 function drawMenu(c){
   const m=G.menu;if(!m)return;const s=m.spot,t=s.tower;
   const it0=m.sel||m.hov;
-  if(t&&t.line!=='shep')drawRangeFor(c,t.x,t.y-12,(it0&&it0.k==='up'&&!it0.lock)?LINES[t.line].tiers[t.tier].range*(t.range/(t.branch?PRIEST.range:LINES[t.line].tiers[t.tier-1].range)):t.range);
+  if(t&&t.line!=='shep')drawRangeFor(c,t.x,t.y-12,(it0&&it0.k==='up'&&!it0.lock)?LINES[t.line].tiers[t.tier].range*(t.range/(t.branch?BRANCH[t.branch].range:LINES[t.line].tiers[t.tier-1].range)):t.range);
   else if(t&&t.line==='shep'){c.save();c.strokeStyle='#ffe58a';c.lineWidth=2.4;L(c,t.rally.x,t.rally.y,t.rally.x,t.rally.y-22);P(c,[[t.rally.x,t.rally.y-22],[t.rally.x+12,t.rally.y-18],[t.rally.x,t.rally.y-14]]);FS(c,'#c4513a',1.4);c.restore();}
   else if(it0&&it0.k==='build'&&LINES[it0.line].tiers[0].range)drawRangeFor(c,s.x,s.y-12,withUp(it0.line,LINES[it0.line].tiers[0]).range);
   c.save();c.strokeStyle='rgba(255,220,140,.8)';c.lineWidth=2;c.setLineDash([5,5]);E(c,s.x,s.y+4,36,17);c.stroke();c.restore();
@@ -1668,20 +1763,24 @@ function drawMenu(c){
     c.save();c.beginPath();c.arc(it.x,it.y,21,0,TAU);c.clip();
     if(it.k==='build'){c.translate(it.x,it.y+12);c.scale(.5,.5);drawTowerAt(c,it.line,1,0,0,null);}
     else if(it.k==='up'){c.translate(it.x,it.y+12);c.scale(.48,.48);drawTowerAt(c,t.line,Math.min(3,t.tier+1),0,0,null);}
-    else if(it.k==='branch'){c.translate(it.x,it.y+12);c.scale(.46,.46);drawTowerAt(c,'levi',3,0,0,null,it.id==='priest'?'priest':null);if(it.lock){c.setTransform(1,0,0,1,0,0);}}
-    else if(it.k==='skill'){skillIcon(c,it.x,it.y,it.i);}
+    else if(it.k==='branch'){c.translate(it.x,it.y+12);c.scale(.46,.46);drawTowerAt(c,'levi',3,0,0,null,it.id);if(it.lock){c.setTransform(1,0,0,1,0,0);}}
+    else if(it.k==='skill'){skillIcon(c,it.x,it.y,it.i+(t.branch==='choir'?3:0));}
     else if(it.k==='sell'){C(c,it.x,it.y,9);FS(c,'#d9dfe6',1.6);C(c,it.x,it.y,5);c.strokeStyle='#8b95a3';c.lineWidth=1.4;c.stroke();}
     else if(it.k==='rally'){c.strokeStyle=OL;c.lineWidth=2.6;L(c,it.x-4,it.y+10,it.x-4,it.y-10);P(c,[[it.x-4,it.y-10],[it.x+10,it.y-5],[it.x-4,it.y]]);FS(c,'#c4513a',1.4);}
     c.restore();
     if(it.lock){c.save();c.translate(it.x,it.y);c.setTransform(1,0,0,1,0,0);c.restore();lockIcon(c,it.x+12,it.y-12);}
     if(it.k==='up'||it.k==='branch'){c.fillStyle='#ffd36b';P(c,[[it.x-20,it.y-14],[it.x-14,it.y-22],[it.x-8,it.y-14]]);FS(c,'#ffd36b',1.2);}
-    if(it.k==='skill'){const lv=t.sk[PRIEST.skills[it.i].id];for(let j=0;j<3;j++){C(c,it.x-8+j*8,it.y+17,2.6);FS(c,j<lv?'#ffd36b':'#7b4a24',1);}}
+    if(it.k==='skill'){const lv=t.sk[BRANCH[t.branch].skills[it.i].id];for(let j=0;j<3;j++){C(c,it.x-8+j*8,it.y+17,2.6);FS(c,j<lv?'#ffd36b':'#7b4a24',1);}}
     if(label){c.font=`13px ${UIF}`;const w=c.measureText(label).width+14;RR(c,it.x-w/2,it.y+22,w,18,9);FS(c,'#41250f',1.2,'#ffd36b');c.fillStyle=can?'#ffe08a':'#c9b7a0';c.textAlign='center';c.textBaseline='middle';c.fillText(label,it.x,it.y+31.5);}
     c.restore();c.restore();
   }
 }
 function lockIcon(c,x,y){RR(c,x-6,y-2,12,10,2);FS(c,'#c9b7a0',1.6);c.strokeStyle=OL;c.lineWidth=2;c.beginPath();c.arc(x,y-2,4,Math.PI,0);c.stroke();}
+function drawNotes(c,t){c.save();c.fillStyle='#fff3c9';c.strokeStyle=OL;c.lineWidth=1.4;for(let k=0;k<2;k++){const ph=(G.t*.6+k*.5)%1,x=t.x-14+k*26+Math.sin(G.t*2+k)*4,y=t.y-70-ph*30;c.globalAlpha=Math.sin(ph*Math.PI);E(c,x,y,4,3,-.4);c.fill();c.stroke();L(c,x+3.4,y-1,x+3.4,y-13);}c.restore();}
 function skillIcon(c,x,y,i){
+  if(i===3){c.fillStyle='#fff3c9';c.strokeStyle=OL;c.lineWidth=1.6;for(const [dx,dy] of [[-6,6],[6,2]]){E(c,x+dx,y+dy,4.6,3.4,-.4);c.fill();c.stroke();L(c,x+dx+4,y+dy-1,x+dx+4,y+dy-15);}L(c,x-2,y-9,x+10,y-13);return;}
+  if(i===4){E(c,x,y,11,11);FS(c,'#e8c27a',1.8);E(c,x,y,7,7);c.strokeStyle='#a6743c';c.lineWidth=1.2;c.stroke();for(let k=0;k<6;k++){const a=k/6*TAU;C(c,x+Math.cos(a)*9,y+Math.sin(a)*9,1.8);FS(c,'#c9cfd6',.8);}return;}
+  if(i===5){c.strokeStyle=OL;c.lineWidth=3.4;L(c,x-10,y+8,x+10,y-8);L(c,x-10,y-8,x+10,y+8);c.strokeStyle='#cfd6dc';c.lineWidth=1.8;L(c,x-10,y+8,x+10,y-8);L(c,x-10,y-8,x+10,y+8);return;}
   if(i===0){for(let k=0;k<3;k++){c.strokeStyle='#5f9e36';c.lineWidth=3;L(c,x-8+k*8,y+2-k%2*4,x-8+k*8,y-6-k%2*4);L(c,x-12+k*8,y-2-k%2*4,x-4+k*8,y-2-k%2*4);}}
   else if(i===1){c.beginPath();c.moveTo(x-12,y+8);c.lineTo(x-12,y-2);c.lineTo(x,y-12);c.lineTo(x+12,y-2);c.lineTo(x+12,y+8);c.closePath();FS(c,'#e8d7b5',1.6);RR(c,x-4,y,8,8,1);FS(c,'#7b4a24',1.2);}
   else{c.strokeStyle=OL;c.lineWidth=4;L(c,x,y+12,x,y-8);c.strokeStyle='#8a5a30';c.lineWidth=2.4;L(c,x,y+12,x,y-8);c.fillStyle='#fbe3f0';for(const [dx,dy] of [[-5,-10],[5,-9],[0,-14]]){C(c,x+dx,y+dy,3.4);FS(c,'#fbe3f0',1.1);}c.fillStyle='#7fd34e';E(c,x+5,y-2,4,2,.5);c.fill();}
@@ -1711,7 +1810,7 @@ function renderPlay(){
   drawGround(c);drawGate(c);drawUnitSel(c);if(G.rallyFor)drawShepRange(c,G.rallyFor);drawDrag(c);
   if(G.cloud)drawCloud(c);
   const list=[];
-  for(const t of G.towers)list.push({y:t.y,f:()=>drawTowerAt(c,t.line,t.tier,t.x,t.y,t,t.branch)});
+  for(const t of G.towers)list.push({y:t.y,f:()=>{drawTowerAt(c,t.line,t.tier,t.x,t.y,t,t.branch);if(t.branch==='choir')drawNotes(c,t);}});
   for(const u of G.units)if(u.state==='ok'||u.state==='down')list.push({y:u.y,f:()=>drawUnit(c,u)});
   for(const e of G.enemies)list.push({y:e.y,f:()=>drawEnemy(c,e)});
   if(G.hero&&G.hero.state==='ok')list.push({y:G.hero.y,f:()=>drawHero(c)});
@@ -1720,6 +1819,7 @@ function renderPlay(){
   for(const a of G.animals)list.push({y:a.y,f:()=>animal(c,a)});
   list.push({y:G.S.lamp[1],f:()=>drawLamp(c)});
   if(G.sid===6)list.push({y:372,f:()=>drawNpcMoses(c)});
+  if(G.hill)list.push({y:G.hill.y,f:()=>drawHill(c)});
   if(G.S.npc)list.push({y:G.S.npc.y,f:()=>drawNpc(c)});
   list.sort((a,b)=>a.y-b.y);
   if(G.sid===1){const s=G.scene,dk2=s?clamp((s.t-5.6)/1.2,0,1):0,wy=waterLevel(),lift=Math.max(0,Math.min(70,386-wy))+(wy<386?Math.sin(G.t*1.6)*3:0);
@@ -1727,8 +1827,9 @@ function renderPlay(){
     if(wy<H+30){for(const it of list)it.f();drawWater(c);drawArk(c,arkP,lift,dk2);}
     else{let drawn=false;for(const it of list){if(!drawn&&it.y>352){drawArk(c,arkP,0,dk2);drawn=true;}it.f();}if(!drawn)drawArk(c,arkP,0,dk2);}
   }else for(const it of list)it.f();
-  drawStamp(c);drawProjs(c);drawFx(c);
+  drawStamp(c);drawBanner(c);drawProjs(c);drawFx(c);
   if(G.S.night)drawDark(c);
+  if(G.S.sunset){const k=clamp((Math.max(0,G.waveIdx)+(G.phase==='wave'?Math.min(1,G.waveT/40):0))/G.S.waves.length,0,1);if(k>0){c.save();c.globalCompositeOperation='multiply';c.fillStyle=`rgba(255,168,110,${.38*k})`;c.fillRect(0,0,W,H);c.restore();}}   // 해가 지도록(출 17:12)
   drawDemons(c);
   for(const l of G.lights){const a=Math.min(1,l.t*3,(l.life-l.t)*1.5);c.save();c.globalCompositeOperation='lighter';E(c,l.x,l.y,l.r,l.r*.45);c.fillStyle=`rgba(255,236,160,${.22*a})`;c.fill();c.strokeStyle=`rgba(255,240,180,${.5*a})`;c.lineWidth=2;c.stroke();c.restore();if(Math.random()<.3)part('spark',l.x+rand(-l.r*.7,l.r*.7),l.y+rand(-l.r*.3,l.r*.3),0,-40,.6,'#fff3b0',2);}
   for(const b of G.beams){const a=Math.min(1,b.t*4)*(1-b.t/1.4);c.save();c.globalCompositeOperation='lighter';const g=c.createLinearGradient(0,0,0,b.y);g.addColorStop(0,'rgba(255,250,220,0)');g.addColorStop(1,`rgba(255,240,170,${.75*a})`);c.fillStyle=g;c.fillRect(b.x-34*(1-b.t*.3),0,68*(1-b.t*.3),b.y);E(c,b.x,b.y,b.r,b.r*.45);c.fillStyle=`rgba(255,240,170,${.35*a})`;c.fill();c.restore();}
@@ -1785,7 +1886,7 @@ const ui={last:{},
   reset(){this.last={};$('boss').hidden=true;$('info').hidden=true;$('toast').hidden=true;$('banner').hidden=true;drawHeroPortrait($('heroCv'),G.hero.kind);$('ultName').innerHTML=G.hero.D.ult.short||G.hero.D.ult.name;},
   sync(){if(!G)return;this.set('vLives',String(G.lives));this.set('vGold',String(G.gold));this.set('vWave',`${Math.max(0,G.waveIdx+1)}/${G.S.waves.length}`);
     const ab=(id,v,max,armed)=>{const el=$(id);el.querySelector('.cd').style.setProperty('--p',(max?clamp(v/max,0,1)*100:0).toFixed(1)+'%');el.classList.toggle('armed',!!armed);};
-    ab('bCry',G.cd.cry,cryCd(),G.aim==='cry');ab('bHelp',G.cd.help,22,G.aim==='help');const h=G.hero;ab('bUlt',h.ult,h.D.ult.cd,G.aim==='stamp');
+    ab('bCry',G.cd.cry,cryCd(),G.aim==='cry');ab('bHelp',G.cd.help,22,G.aim==='help');const h=G.hero;ab('bUlt',h.ult,h.D.ult.cd,G.aim==='stamp'||G.aim==='banner');
     $('heroHp').style.width=(h.state==='ok'?h.hp/h.max*100:0)+'%';$('bHero').classList.toggle('sel',G.heroSel);
     {const hc=$('hcard'),on=G.heroSel&&h.state==='ok';if(hc.hidden===on){hc.hidden=!on;if(on){$('hcName').textContent=h.D.name;$('hcTag').textContent=h.D.line+' 영웅';$('hcSay').innerHTML=`${h.D.say}<small>${h.D.sayRef}</small>`;}}
       if(on){const r=clamp(h.hp/h.max,0,1);this.set('hcHp',`${Math.ceil(h.hp)}/${h.max}`);$('hcFill').style.width=(r*100).toFixed(1)+'%';$('hcBar').className='hpb'+(r>.5?'':r>.25?' mid':' low');}}
@@ -1817,8 +1918,9 @@ function showEnd(win){
   $('eAgain').onclick=()=>{Snd.play('click');startPlay(chosenHero);};$('eMap').onclick=()=>{Snd.play('click');goMap();};const ec=$('eCodex');if(ec)ec.onclick=()=>openCodex();const en=$('eNext');if(en)en.onclick=()=>{Snd.play('click');G=null;startStory(S.id+1);};
   if(win){Music.play('calm');}
 }
-function endHints(){const k=chosenHero,n=ptsLeft(k),out=[];if(n>0)out.push(`${HEROES[k].name}의 연단 점수 ${n}점은 지도의 <b>연단</b>에서 쓸 수 있어요.`);if(upgAffordable())out.push(`남은 별 ${starsLeft()}개로 지도의 <b>별 강화</b>에서 탑과 기술을 키울 수 있어요.`);return out.length?`<p class="unlock" style="font-size:.9em">${out.join('<br>')}</p>`:'';}
-const TIPS={2:['약탈병은 빨라요. 양치기로 길을 막아 세우세요.','약탈병이 끝까지 가면 세겔을 빼앗아요. 출구 가까이에도 탑을 두세요.','두 길이 만나는 곳에 양치기와 장인을 함께 두면 좋아요.'],3:['방패병은 교만의 갑옷이 두꺼워요. 레위인의 빛이 잘 들어요.','밤에는 탑 둘레만 밝아요. 길목마다 탑을 고르게 세우세요.','3단계 탑을 아끼지 마세요. 마지막 무리가 가장 길어요.'],4:['백부장은 거룩한 빛을 튕겨 내요. 파수꾼과 양치기로 상대하세요.','두 길이 갈대숲 바로 앞에서 만나요. 양쪽을 고르게 지키세요.','제사장의 문지기를 길목에 세우고, 축복과 싹 난 지팡이로 오래 버티게 하세요.'],5:['세 길이 우물 앞에서 만나요. 만나는 곳에 화력을 모으세요.','아래쪽 길은 짧아요. 늦게 열리지만 빠르게 다가와요.','모세의 반석의 물과 중보로 양치기를 오래 세워 두세요.'],1:['양치기를 길 가까이 세우면 적이 멈춰 서서 다른 탑이 쏘기 좋아요.','노아를 길목에 세워 두면 3초 뒤 나무 방벽을 세워요.','두 길이 만나는 곳에 탑을 모으면 효율이 좋아요.'],6:['방패병은 교만의 갑옷이 두꺼워요. 레위인의 빛이 잘 들어요.','백부장은 거룩한 빛을 튕겨 내요. 파수꾼과 양치기로 상대하세요.','전차는 막을 수 없어요. 레위인과 장인으로 잡아요.','제사장의 문지기를 길목에 세우고, 축복과 싹 난 지팡이로 오래 버티게 하세요.','바로의 보호막은 한꺼번에 몰아쳐서 깨세요. 부르짖음이 잘 들어요.']};
+function endHints(){const k=chosenHero,n=HEROES[k].fixedLv?0:ptsLeft(k),out=[];if(n>0)out.push(`${HEROES[k].name}의 연단 점수 ${n}점은 지도의 <b>연단</b>에서 쓸 수 있어요.`);if(upgAffordable())out.push(`남은 별 ${starsLeft()}개로 지도의 <b>별 강화</b>에서 탑과 기술을 키울 수 있어요.`);return out.length?`<p class="unlock" style="font-size:.9em">${out.join('<br>')}</p>`:'';}
+const TIPS7=['약탈병이 아주 많아요. 길목마다 양치기와 문지기로 막아 세우세요.','넷째 무리부터 진영 뒤쪽 짧은 길로도 와요. 등불 가까이에도 탑을 두세요.','모세의 손이 내려오면 적이 빨라져요. 산 위의 모세를 눌러 아론과 훌이 팔을 붙들게 하세요.','찬양대의 노래로 몰려오는 약탈병을 멈춰 세우세요.'];
+const TIPS={7:TIPS7,2:['약탈병은 빨라요. 양치기로 길을 막아 세우세요.','약탈병이 끝까지 가면 세겔을 빼앗아요. 출구 가까이에도 탑을 두세요.','두 길이 만나는 곳에 양치기와 장인을 함께 두면 좋아요.'],3:['방패병은 교만의 갑옷이 두꺼워요. 레위인의 빛이 잘 들어요.','밤에는 탑 둘레만 밝아요. 길목마다 탑을 고르게 세우세요.','3단계 탑을 아끼지 마세요. 마지막 무리가 가장 길어요.'],4:['백부장은 거룩한 빛을 튕겨 내요. 파수꾼과 양치기로 상대하세요.','두 길이 갈대숲 바로 앞에서 만나요. 양쪽을 고르게 지키세요.','제사장의 문지기를 길목에 세우고, 축복과 싹 난 지팡이로 오래 버티게 하세요.'],5:['세 길이 우물 앞에서 만나요. 만나는 곳에 화력을 모으세요.','아래쪽 길은 짧아요. 늦게 열리지만 빠르게 다가와요.','모세의 반석의 물과 중보로 양치기를 오래 세워 두세요.'],1:['양치기를 길 가까이 세우면 적이 멈춰 서서 다른 탑이 쏘기 좋아요.','노아를 길목에 세워 두면 3초 뒤 나무 방벽을 세워요.','두 길이 만나는 곳에 탑을 모으면 효율이 좋아요.'],6:['방패병은 교만의 갑옷이 두꺼워요. 레위인의 빛이 잘 들어요.','백부장은 거룩한 빛을 튕겨 내요. 파수꾼과 양치기로 상대하세요.','전차는 막을 수 없어요. 레위인과 장인으로 잡아요.','제사장의 문지기를 길목에 세우고, 축복과 싹 난 지팡이로 오래 버티게 하세요.','바로의 보호막은 한꺼번에 몰아쳐서 깨세요. 부르짖음이 잘 들어요.']};
 let codexCat='전체';
 function openCodex(){$('sCodex').hidden=false;if(G&&screen==='play')G.paused=true;renderCodex();}
 function closeCodex(){$('lb').hidden=true;$('sCodex').hidden=true;if(G&&screen==='play')G.paused=false;}
@@ -1845,17 +1947,18 @@ function itemInfo(it){
   const t=G.menu.spot.tower,touch=lastPtr==='touch';const hint=touch?'<p class="hint">한 번 더 누르면 실행돼요.</p>':'';
   if(it.k==='build'){const L2=LINES[it.line],T=L2.tiers[0];return`<h3>${L2.name}<span class="tag">${L2.role}</span></h3><p>${L2.desc}</p><p class="st">${statLine(it.line,T)} · 값 ${price(it.line,T.cost)}</p><p class="v">${L2.verse}</p>${hint}`;}
   if(it.k==='up'){if(it.lock)return`<h3>더 올릴 수 없어요</h3><p class="lock">${it.lock}</p>`;const L2=LINES[t.line],T=L2.tiers[t.tier];return`<h3>${T.name}<span class="tag">${t.tier+1}단계</span></h3><p class="st">${statLine(t.line,T)} · 값 ${price(t.line,T.cost)}</p>${hint}`;}
-  if(it.k==='branch'){const b=LINES[t.line].branches.find(b=>b.id===it.id);if(it.lock)return`<h3>${b.name}<span class="tag">4단계</span></h3><p class="lock">${it.lock}</p>`;return`<h3>제사장<span class="tag">4단계</span></h3><p>아군 병사를 살려 두는 유일한 탑이에요. 거룩한 빛 ${PRIEST.dmg}, 사거리 ${PRIEST.range}. 범위 안 병사를 조금씩 회복시켜요.</p><p class="v">${PRIEST.verse}</p><p class="st">값 ${PRIEST.cost}</p>${hint}`;}
-  if(it.k==='skill'){const sk=PRIEST.skills[it.i],lv=t.sk[sk.id];return`<h3>${sk.name}<span class="tag">${lv}/3</span></h3><p>${sk.desc[Math.min(lv,2)]}</p><p class="v">${sk.ref}</p>${lv<3?`<p class="st">다음 단계 값 ${sk.costs[lv]}</p>`:''}${hint}`;}
+  if(it.k==='branch'){const b=LINES[t.line].branches.find(b=>b.id===it.id);if(it.lock)return`<h3>${b.name}<span class="tag">4단계</span></h3><p class="lock">${it.lock}</p>`;if(it.id==='choir')return`<h3>찬양대<span class="tag">4단계</span></h3><p>노래로 적을 멈춰 세우는 탑이에요. 거룩한 빛 ${CHOIR.dmg}, 사거리 ${CHOIR.range}. 싸움은 하나님이 하세요(대하 20:15).</p><p class="v">${CHOIR.verse}</p><p class="st">값 ${CHOIR.cost}</p>${hint}`;
+    return`<h3>제사장<span class="tag">4단계</span></h3><p>아군 병사를 살려 두는 유일한 탑이에요. 거룩한 빛 ${PRIEST.dmg}, 사거리 ${PRIEST.range}. 범위 안 병사를 조금씩 회복시켜요.</p><p class="v">${PRIEST.verse}</p><p class="st">값 ${PRIEST.cost}</p>${hint}`;}
+  if(it.k==='skill'){const sk=BRANCH[t.branch].skills[it.i],lv=t.sk[sk.id];return`<h3>${sk.name}<span class="tag">${lv}/3</span></h3><p>${sk.desc[Math.min(lv,2)]}</p><p class="v">${sk.ref}</p>${lv<3?`<p class="st">다음 단계 값 ${sk.costs[lv]}</p>`:''}${hint}`;}
   if(it.k==='sell')return`<h3>거두기</h3><p>탑을 거두고 들인 값의 60%인 <b>${Math.floor(t.spent*.6)}</b> 세겔을 돌려받아요.</p>${hint}`;
   if(it.k==='rally')return`<h3>모일 곳 정하기</h3><p>누른 뒤 길 위를 누르면 ${t.line==='shep'?'양치기들이':'문지기가'} 그곳으로 가서 막아서요.</p>`;
   return'';
 }
-function towerInfo(t){const L2=LINES[t.line];if(t.branch==='priest'){const s=PRIEST.skills.map(k=>`${k.name} ${t.sk[k.id]}/3`).join(' · ');return`<h3>제사장<span class="tag">4단계</span></h3><p class="st">${s}</p><p class="v">${PRIEST.verse}</p>`;}const T=L2.tiers[t.tier-1],u=upLv(t.line);return`<h3>${T.name}<span class="tag">${L2.name} ${t.tier}단계</span></h3><p class="st">${statLine(t.line,T)}${u?` · 별 강화 ${u}/5`:''}</p><p class="v">${L2.verse}</p>`;}
+function towerInfo(t){const L2=LINES[t.line];if(t.branch){const B=BRANCH[t.branch],s=B.skills.map(k=>`${k.name} ${t.sk[k.id]}/3`).join(' · ');return`<h3>${B.name}<span class="tag">4단계</span></h3><p class="st">${s}</p><p class="v">${B.verse}</p>`;}const T=L2.tiers[t.tier-1],u=upLv(t.line);return`<h3>${T.name}<span class="tag">${L2.name} ${t.tier}단계</span></h3><p class="st">${statLine(t.line,T)}${u?` · 별 강화 ${u}/5`:''}</p><p class="v">${L2.verse}</p>`;}
 function enemyInfo(e){const d=e.def;return`<h3>${d.name}<span class="tag">${d.spirit}</span></h3><p>${d.desc}</p><p class="st">붙잡힘 ${Math.ceil(e.hp)}/${d.hp}${d.armor?` · 물리 방어 ${Math.round(d.armor*100)}%`:''}${d.mres?` · 거룩한 공격 저항 ${Math.round(d.mres*100)}%`:''}</p><p class="v">${d.verse}</p>`;}
 function xpPct(k){const r=heroRec(k),lv=levelOf(r.xp);if(lv>=10)return 100;const a=HERO_XP[lv-1],b=HERO_XP[lv];return clamp((r.xp-a)/(b-a),0,1)*100;}
 function skillRows(k,add,sub,desc){const D=HEROES[k],r=heroRec(k),pts=ptsLeft(k);return`<div class="sks">${SKORD.map(id=>{const S=D[id],lv=r.sk[id];return`<div class="sk"><span class="sn">${id==='ult'?'궁극기 ':id==='passive'?'패시브 ':''}${S.name}</span><span class="pip" aria-label="${lv}단계">${'●'.repeat(lv)}${'○'.repeat(SKMAX[id]-lv)}</span>${sub?`<button class="pb" data-sub="${id}" data-k="${k}" aria-label="${S.name} 낮추기" ${lv<=(id==='ult'?1:0)?'disabled':''}>−</button>`:''}${add?`<button class="pb" data-add="${id}" data-k="${k}" aria-label="${S.name} 올리기" ${pts<=0||lv>=SKMAX[id]?'disabled':''}>+</button>`:''}</div>${desc?`<p class="d">${S.desc}</p>`:''}`;}).join('')}</div>`;}
-function heroesOpen(){let top=1;for(const id in STAGES)if(BEST[id]>0)top=Math.max(top,+id+1);const out=[];for(const id in STAGES)if(+id<=top)for(const k of STAGES[id].heroes)if(!out.includes(k))out.push(k);return out;}
+function heroesOpen(){let top=1;for(const id in STAGES)if(BEST[id]>0)top=Math.max(top,+id+1);const out=[];for(const id in STAGES)if(+id<=top)for(const k of STAGES[id].heroes)if(!out.includes(k)&&!HEROES[k].fixedLv)out.push(k);return out;}   // 한 판에서만 쓰는 영웅은 연단에 없다
 let trainBack='map';
 function showTrain(back){trainBack=back||'map';setScreen('train');renderTrain();}
 function renderTrain(){const box=$('tCards');box.innerHTML='';for(const k of heroesOpen()){const D=HEROES[k],r=heroRec(k),lv=levelOf(r.xp),pts=ptsLeft(k),c=document.createElement('div');c.className='tcard';
@@ -1881,9 +1984,9 @@ function openMenu(spot){
   const t=spot.tower,items=[],R=scale<.75?80:66,place=(k,a,extra={})=>items.push(Object.assign({k,x:clamp(spot.x+Math.cos(a)*R,40,W-40),y:clamp(spot.y-12+Math.sin(a)*R*.95,74,H-46)},extra));
   if(!t){const lines=['watch','shep','levi','art'],ang=[-2.36,-.78,2.36,.78];lines.forEach((l,i)=>place('build',ang[i],{line:l}));}
   else{
-    if(t.branch==='priest'){[-2.5,-1.57,-.64].forEach((a,i)=>place('skill',a,{i}));}
+    if(t.branch){[-2.5,-1.57,-.64].forEach((a,i)=>place('skill',a,{i}));}
     else if(t.tier<3){place('up',-1.57,capOk(t)?{}:{lock:G.S.cap<=t.tier?`이 스테이지는 ${G.S.cap}단계 탑까지만 쓸 수 있어요.`:''});}
-    else{const br=LINES[t.line].branches;[-2.2,-.94].forEach((a,i)=>{const b=br[i];const lock=b.id==='priest'?(G.S.cap<4?'이 스테이지에서는 4단계를 쓸 수 없어요.':null):b.lock;place('branch',a,{id:b.id,lock});});}
+    else{const br=LINES[t.line].branches;[-2.2,-.94].forEach((a,i)=>{const b=br[i];const lock=BRANCH[b.id]?(G.S.cap<4?'이 스테이지에서는 4단계를 쓸 수 없어요.':b.id==='choir'&&!choirOpen()?b.lock:null):b.lock;place('branch',a,{id:b.id,lock});});}
     place('sell',1.57);if(t.line==='shep'||(t.branch==='priest'&&t.sk.gate>0))place('rally',3.14);
   }
   G.menu={spot,items,sel:null,hov:null};
@@ -1904,8 +2007,9 @@ function onTap(x,y){
   if(!G||G.paused)return;
   if(G.scene){if(G.scene.kind==='comic'){comicTap(x,y);return;}if(G.scene.t>3){G.scene.t=Math.max(G.scene.t,G.scene.kind==='ark'?16.9:17.4);}return;}
   if(G.over)return;
-  if(G.aim){const a=G.aim;let ok=true;if(a==='cry')castCry(x,y);else if(a==='help')ok=castHelp(x,y);else if(a==='stamp')ok=castStamp(x,y);if(ok!==false)G.aim=null;return;}
+  if(G.aim){const a=G.aim;let ok=true;if(a==='cry')castCry(x,y);else if(a==='help')ok=castHelp(x,y);else if(a==='stamp')ok=castStamp(x,y);else if(a==='banner')ok=castBanner(x,y);if(ok!==false)G.aim=null;return;}
   if(G.rallyFor){const t=G.rallyFor,n=nearestAll(x,y);if(n&&n.dd<60*60&&d2(n.x,n.y,t.x,t.y)<SHEP_R*SHEP_R){t.rally={x:n.x,y:n.y};G.fx.push({k:'mark',x:n.x,y:n.y,t:0,life:.6});Snd.play('click');}else{toast('탑 가까운 길 위를 눌러 주세요.',2.5);return;}G.rallyFor=null;ui.info(null);return;}
+  if(onHill(x,y)){closeMenu();hillTap();return;}
   const tb=G.towers.find(t=>t.stopped&&Math.abs(x-t.x)<34&&y<t.y+16&&y>t.y-80);if(tb){tb.stopped.taps--;Snd.play('tap');part('spark',x,y,rand(-30,30),rand(-40,0),.4,'#e9dcff',2);if(tb.stopped.taps<=0)unbind(tb);return;}
   const HR=scale<.75?40:30;
   if(G.menu){const it=G.menu.items.find(i=>d2(x,y,i.x,i.y)<=HR*HR);if(it){if(lastPtr==='touch'&&G.menu.sel!==it){G.menu.sel=it;ui.info(itemInfo(it),G.menu.spot.y>420);Snd.play('click');return;}doItem(it);return;}}
