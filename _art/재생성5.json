@@ -1,0 +1,26 @@
+{
+ "출력": "raw",
+ "크기": [
+  1280,
+  720
+ ],
+ "단계": 4,
+ "항목": [
+  {
+   "id": "v1a",
+   "종류": "장면",
+   "시드": [
+    11,
+    12,
+    13,
+    14,
+    15,
+    16
+   ],
+   "참조": [
+    "raw/arkbox_s2_9ab810.png"
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game: Noah's animals boarding this same huge long box-shaped wooden ark: a calm orderly procession walking up the wooden ramp in neat pairs, two by two side by side, exactly two of each kind: two elephants, two giraffes, two lions, two zebras, two camels and two white doves flying above. Each pair stands together with its own kind, every animal has natural healthy legs and correct anatomy, no extra animals. A kind old man with a long white beard, cream headcloth and brown robe (Noah) and his family welcome them at the door, cloudy sky. The picture fills the whole frame edge to edge, no border, no text."
+  }
+ ]
+}

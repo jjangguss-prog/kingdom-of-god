@@ -1,0 +1,21 @@
+{
+ "출력": "raw",
+ "크기": [
+  1536,
+  864
+ ],
+ "단계": 4,
+ "항목": [
+  {
+   "id": "s3b",
+   "종류": "장면",
+   "시드": [
+    41,
+    42,
+    43,
+    44
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game: in the evening, foot soldiers of the four kings of the East with spears and shields march away on foot from a walled city with smoke rising, leading a line of worried captives walking on foot, a man with his wife and daughters among them; small grey donkeys with long ears carry bundles of loot; faint purple shadow wisps hover above the soldiers. Everyone walks on foot. Not violent. Every person has exactly two arms. The picture fills the whole frame edge to edge, no border, no text."
+  }
+ ]
+}

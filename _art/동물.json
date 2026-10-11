@@ -1,0 +1,88 @@
+{
+ "출력": "raw",
+ "크기": [
+  1024,
+  1024
+ ],
+ "단계": 4,
+ "항목": [
+  {
+   "id": "arkscene",
+   "종류": "장면",
+   "크기": [
+    1280,
+    720
+   ],
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "참조": [
+    "raw/arkbox_s2_9ab810.png"
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game: this same huge long box-shaped wooden ark seen from the side at a slight angle, filling the right two thirds of the picture, its big side door open with a long wooden ramp coming down to the ground on the right side; a kind old man with a long white beard, cream headcloth and brown robe (Noah) and his wife stand at the top of the ramp welcoming with open arms; wide empty sandy ground in front of the ark and on the left for a procession; cloudy sky with a little sunlight. No animals at all. The picture fills the whole frame edge to edge, no border, no text."
+  },
+  {
+   "id": "a_lion",
+   "종류": "인물",
+   "시드": [
+    1
+   ],
+   "프롬프트": "A friendly adult male lion with a big golden mane. Natural healthy anatomy with exactly four legs, calm walking pose, side view facing right, the whole animal visible."
+  },
+  {
+   "id": "a_lioness",
+   "종류": "인물",
+   "시드": [
+    1
+   ],
+   "프롬프트": "A friendly adult lioness without a mane, sleek golden fur. Natural healthy anatomy with exactly four legs, calm walking pose, side view facing right, the whole animal visible."
+  },
+  {
+   "id": "a_giraffe",
+   "종류": "인물",
+   "시드": [
+    1,
+    2
+   ],
+   "프롬프트": "A friendly tall giraffe with brown patches, long neck, small horns. Natural healthy anatomy with exactly four legs, calm walking pose, side view facing right, the whole animal visible."
+  },
+  {
+   "id": "a_elephant",
+   "종류": "인물",
+   "시드": [
+    1,
+    2
+   ],
+   "프롬프트": "A friendly grey elephant with big ears and small white tusks. Natural healthy anatomy with exactly four legs, calm walking pose, side view facing right, the whole animal visible."
+  },
+  {
+   "id": "a_zebra",
+   "종류": "인물",
+   "시드": [
+    1,
+    2
+   ],
+   "프롬프트": "A friendly zebra with clear black and white stripes. Natural healthy anatomy with exactly four legs, calm walking pose, side view facing right, the whole animal visible."
+  },
+  {
+   "id": "a_sheep",
+   "종류": "인물",
+   "시드": [
+    1,
+    2
+   ],
+   "프롬프트": "A friendly fluffy white sheep with a black face. Natural healthy anatomy with exactly four legs, calm walking pose, side view facing right, the whole animal visible."
+  },
+  {
+   "id": "a_dove",
+   "종류": "정령",
+   "시드": [
+    1,
+    2
+   ],
+   "프롬프트": "A white dove flying with wings spread, side view facing right."
+  }
+ ]
+}

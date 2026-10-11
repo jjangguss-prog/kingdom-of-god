@@ -1,0 +1,28 @@
+{
+ "출력": "raw",
+ "크기": [
+  1280,
+  720
+ ],
+ "단계": 4,
+ "항목": [
+  {
+   "id": "v1a",
+   "종류": "장면",
+   "시드": [
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28
+   ],
+   "참조": [
+    "raw/arkbox_s2_9ab810.png"
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game: exactly three pairs of animals walk in a neat line toward the ramp of this same huge long box-shaped wooden ark: first a pair of two lions side by side (a lion and a lioness), then a pair of two giraffes side by side, then a pair of two elephants side by side, and exactly two white doves flying above. Only these six animals and two doves, nothing else. Every animal has natural healthy legs and correct anatomy. A kind old man with a long white beard, cream headcloth and brown robe (Noah) welcomes them at the door. Cloudy sky. The picture fills the whole frame edge to edge, no border, no text."
+  }
+ ]
+}

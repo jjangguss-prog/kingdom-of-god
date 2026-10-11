@@ -68,6 +68,9 @@ button:focus-visible{outline:3px solid var(--gold-hi);outline-offset:2px}
 #banner{left:0;right:0;top:22%;text-align:center;color:#fff6dc;text-shadow:0 .12em 0 #2a1708,0 0 .8em rgba(0,0,0,.65)}
 #banner p{display:inline-block;background:rgba(18,10,4,.62);padding:.25em .9em;border-radius:.6em}
 #banner h2{margin:0;font-family:var(--f-ui);font-weight:400;font-size:2.4em;color:var(--gold-hi);-webkit-text-stroke:.03em #2a1708}
+#stage.comic #banner{top:auto;bottom:5%;left:7%;right:7%;background:linear-gradient(180deg,rgba(20,12,5,.86),rgba(12,7,3,.9));border:.14em solid rgba(255,214,120,.55);border-radius:1em;padding:.55em 1.2em .7em;box-shadow:0 .3em 1em rgba(0,0,0,.5)}
+#stage.comic #banner h2{font-size:1.85em;-webkit-text-stroke:0;text-shadow:0 .08em 0 #000}
+#stage.comic #banner p{display:block;background:none;padding:0;margin-top:.25em;font-size:1.12em;color:#fff3dc}
 #banner p{margin:.35em auto 0;max-width:40em;font-family:var(--f-verse);font-weight:700;font-size:1.15em;line-height:1.5;color:#fff8e6;text-shadow:0 .08em 0 #1a0e04,0 0 .3em #000}
 .popc{animation:popc .45s cubic-bezier(.2,1.6,.4,1)}
 @keyframes popc{from{transform:translateX(-50%) scale(.6);opacity:0}}
@@ -116,8 +119,8 @@ details li{margin:.35em 0;line-height:1.55}
 .node.locked{opacity:.6;filter:grayscale(.7) brightness(.8)}
 .mapBtns{position:absolute;right:2%;top:3%;display:flex;gap:.5em}
 #sStory{align-items:flex-end;padding-bottom:2.2%}
-#sStory .cap{width:min(72%,48em);background:var(--parch);border:.18em solid var(--wood-dk);border-radius:1em;padding:.8em 1.2em;display:grid;gap:.45em;box-shadow:0 .25em 0 rgba(0,0,0,.4)}
-#sText{margin:0;font-size:1.1em;line-height:1.6}
+#sStory .cap{width:min(78%,52em);background:var(--parch);border:.18em solid var(--wood-dk);border-radius:1em;padding:.8em 1.2em;display:grid;gap:.45em;box-shadow:0 .25em 0 rgba(0,0,0,.4)}
+#sText{margin:0;font-size:1.15em;line-height:1.6;font-weight:700;color:var(--ink)}
 .capRow{display:flex;justify-content:space-between;align-items:center;gap:.6em}
 .dots{display:flex;gap:.3em}
 .dots i{width:.5em;height:.5em;border-radius:50%;background:#c9b48a}
@@ -221,7 +224,7 @@ body.force #rotate{display:none!important}
     <h1 class="logo"><span class="a">Kingdom of God</span><span class="b">Old Testament</span></h1>
     <p class="tsub">하나님의 나라 · 구약</p>
     <div class="row" style="margin-top:.6em;font-size:1.35em"><button class="btn" id="bStart">시작하기</button><button class="btn wood" id="bCodexT">두루마리</button></div>
-    <p class="tnote">v1.1 · 1장 약속, 2장 구원의 밤 (방주부터 홍해까지)</p>
+    <p class="tnote">v1.2 · 1장 약속, 2장 구원의 밤 (방주부터 홍해까지)</p>
   </section>
   <section id="sMap" class="scr" hidden>
     <div class="mapHead"><h2>약속의 별</h2><p>별을 모을수록 밤하늘이 채워져요. 이번 판은 방주부터 홍해까지, 여섯 별을 지킬 수 있어요.</p></div>
@@ -999,13 +1002,13 @@ function comicFx(c,p,s){const t=s.pt,fx=p.fx;c.save();
 function drawKites(c,K){const a=ART.kite;for(const k of K.list){const s2=1.4,fl=Math.sin(k.flap);if(a){c.save();c.translate(k.x,k.y);c.scale(k.dir*s2,s2*(1-.25*Math.abs(fl)));c.rotate(k.state==='flee'?-.4:.25);const kk=a.hgt/a.h;c.scale(kk,kk);c.drawImage(a.im,-a.w/2,-a.h/2);c.restore();}
     else{c.save();c.fillStyle='#2a1c14';c.translate(k.x,k.y);c.scale(k.dir,1);P(c,[[-30,-4+fl*10],[0,0],[30,-4+fl*10],[6,6],[-6,6]]);c.fill();c.restore();}
     if(k.state==='peck'&&K.doneT==null){c.save();c.globalAlpha=.6+.4*Math.sin(G.t*8);c.strokeStyle='#ffe58a';c.lineWidth=3;C(c,k.x,k.y,34);c.stroke();c.restore();}}
-  if(K.doneT==null){txt(c,`솔개 ${K.chased} / ${K.need}`,W/2,H-40,{size:24,col:'#fff3d6'});txt(c,'솔개를 눌러 쫓아내요',W/2,H-14,{size:15,col:'#ffe9a8'});}}
+  if(K.doneT==null){c.save();c.fillStyle='rgba(14,8,3,.7)';RR(c,W/2-150,20,300,64,14);c.fill();c.restore();txt(c,`솔개 ${K.chased} / ${K.need}`,W/2,44,{size:26,col:'#fff3d6'});txt(c,'솔개를 눌러 쫓아내요',W/2,70,{size:16,col:'#ffe9a8'});}}
 function renderComic(){const c=ctx,s=G.scene,P=G.S.victory.comic,p=P[s.i];c.fillStyle='#000';c.fillRect(0,0,W,H);
   if(s.prev!=null&&s.fade<1)drawPanel(c,P[s.prev],P[s.prev].dur+s.pt,1);
   drawPanel(c,p,s.pt,s.prev==null?Math.min(1,s.pt/.8):s.fade);
   comicFx(c,p,s);
   const g=c.createRadialGradient(W/2,H/2,H*.42,W/2,H/2,H*.95);g.addColorStop(0,'rgba(0,0,0,0)');g.addColorStop(1,'rgba(0,0,0,.5)');c.fillStyle=g;c.fillRect(0,0,W,H);
-  if(s.kites)drawKites(c,s.kites);else if(s.pt>1.4){c.globalAlpha=.55;txt(c,'누르면 넘어가요',W-90,H-22,{size:14,col:'#fff3d6'});c.globalAlpha=1;}
+  if(s.kites)drawKites(c,s.kites);else if(s.pt>1.4){c.globalAlpha=.7;txt(c,'누르면 넘어가요 ▶',W-96,26,{size:15,col:'#fff3d6'});c.globalAlpha=1;}
   for(let i=0;i<P.length;i++){C(c,W/2+(i-(P.length-1)/2)*16,H-6-6,i===s.i?4.5:3);c.fillStyle=i===s.i?'#ffe08a':'rgba(255,243,214,.45)';c.fill();}
   for(const f of G.fx)if(f.k==='spark'){c.globalAlpha=1-f.t/f.life;c.fillStyle=f.col;C(c,f.x,f.y,f.size);c.fill();c.globalAlpha=1;}}
 function arkScene(s,dt){
@@ -1086,7 +1089,7 @@ const ART_DEF={
   shep1:{h:62,top:.5},shep2:{h:68,top:.5},shep3:{h:74,top:.5},art1:{h:76,top:.7},art2:{h:82,top:.72},art3:{h:88,top:.74},
 };
 const ART={};
-const AV='?v=11';   // 그림을 바꿀 때마다 올려서 예전 그림이 캐시에서 나오지 않게
+const AV='?v=12';   // 그림을 바꿀 때마다 올려서 예전 그림이 캐시에서 나오지 않게
 const BG_IMG={};
 function loadArt(){for(const k of Object.keys(STAGES).map(Number)){const im=new Image();im.onload=()=>{BG_IMG[k]=im;if(G&&G.sid===k)buildBg();};im.src='art/bg'+k+'.jpg'+AV;}
   for(const k in ART_DEF){const im=new Image();im.onload=()=>{try{ART[k]=prepArt(im,ART_DEF[k]);if(G&&G.hero&&G.hero.kind===k)drawHeroPortrait($('heroCv'),k);}catch(e){}};im.src='art/'+k+'.png'+AV;}}
@@ -1639,7 +1642,7 @@ const ui={last:{},
   flashGold(){const el=$('pGold');el.classList.remove('flash');void el.offsetWidth;el.classList.add('flash');},
   info(html,top){const el=$('info');if(!html){el.hidden=true;return;}el.innerHTML=html;el.hidden=false;el.classList.toggle('top',!!top);}
 };
-function setScreen(s){screen=s;stageEl.dataset.screen=s;for(const id of ['sTitle','sMap','sStory','sHero','sEnd','sPause','sCodex','sTrain'])$(id).hidden=true;const map={title:'sTitle',map:'sMap',story:'sStory',hero:'sHero',end:'sEnd',train:'sTrain'};if(map[s])$(map[s]).hidden=false;}
+function setScreen(s){screen=s;stageEl.dataset.screen=s;if(s!=='play')stageEl.classList.remove('comic');for(const id of ['sTitle','sMap','sStory','sHero','sEnd','sPause','sCodex','sTrain'])$(id).hidden=true;const map={title:'sTitle',map:'sMap',story:'sStory',hero:'sHero',end:'sEnd',train:'sTrain'};if(map[s])$(map[s]).hidden=false;}
 function goTitle(){G=null;setScreen('title');Music.play('calm');}
 function goMap(){G=null;setScreen('map');buildNodes();Music.stop();Music.play('calm');}
 const starSVG=on=>`<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 20.9l1.6-7L2 9.2l7.1-.6z" fill="${on?'#ffd36b':'none'}" stroke="${on?'#7b4a24':'#b39c78'}" stroke-width="1.4"/></svg>`;

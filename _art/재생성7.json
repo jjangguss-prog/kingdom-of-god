@@ -1,0 +1,40 @@
+{
+ "출력": "raw",
+ "크기": [
+  1536,
+  864
+ ],
+ "단계": 4,
+ "항목": [
+  {
+   "id": "s2c",
+   "프롬프트": "Wide illustrated story panel for a children's Bible game: a long caravan of Abram's household walking on foot across rolling green and golden hills toward Canaan: an old man with a long grey-streaked beard in a blue and cream striped robe and cream headcloth (Abram) leads with his staff, his wife and his younger nephew beside him, families, servants and shepherds walking with flocks of sheep and goats, a few donkeys carrying bundles, and just two camels at the front of the line. Bright day. Every person has exactly two arms; every animal has exactly one head and natural anatomy. No horses, no wagons, no carts. The picture fills the whole frame edge to edge, no border, no text.",
+   "종류": "장면",
+   "시드": [
+    31,
+    32,
+    33
+   ]
+  },
+  {
+   "id": "v2a",
+   "프롬프트": "Wide illustrated story panel for a children's Bible game: Abram's household arrives on foot at a great oak tree in a lush green valley near Shechem: an old man with a long grey-streaked beard in a blue and cream striped robe and cream headcloth (Abram) with his staff and his wife Sarai beside him, families resting in the shade, sheep and goats grazing, a few donkeys with bundles and two camels resting. Golden afternoon light. Every person has exactly two arms; every animal has exactly one head and natural anatomy. No horses, no wagons, no carts. The picture fills the whole frame edge to edge, no border, no text.",
+   "종류": "장면",
+   "시드": [
+    31,
+    32,
+    33
+   ]
+  },
+  {
+   "id": "s3b",
+   "프롬프트": "Wide illustrated story panel for a children's Bible game: in the evening, soldiers of the four kings of the East march on foot away from a walled city with smoke rising, leading a line of worried captives, a man with his wife and daughters among them, donkeys carrying bundles of loot, faint purple shadow wisps hovering above the soldiers. No riders, no chariots. Not violent. Every person has exactly two arms; every animal has exactly one head and natural anatomy. No horses, no wagons, no carts. The picture fills the whole frame edge to edge, no border, no text.",
+   "종류": "장면",
+   "시드": [
+    31,
+    32,
+    33
+   ]
+  }
+ ]
+}
