@@ -161,7 +161,15 @@ details li{margin:.35em 0;line-height:1.55}
 .ubar small{font-size:.8em;color:#e9d7b0}
 .ubar .btn{font-size:.85em}
 .ubar .btn:disabled{opacity:.45;cursor:default}
-.ucards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.6em;width:min(96%,66em);max-height:76%;overflow:auto;padding:.2em}
+.ucards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.5em;width:min(96%,62em);max-height:78%;overflow:auto;padding:.2em}
+.ucards.two{grid-template-columns:repeat(2,minmax(0,1fr));width:min(70%,40em)}
+.ucards.four{grid-template-columns:repeat(4,minmax(0,1fr));width:min(96%,66em)}
+.utabs{display:flex;gap:.3em}
+.utabs button{font-family:var(--f-ui);font-size:.85em;padding:.2em .7em;border-radius:1em;border:.12em solid var(--wood-dk);background:var(--parch-2);color:var(--ink);text-shadow:none}
+.utabs button[aria-pressed="true"]{background:var(--gold);color:var(--ink)}
+.utabs button.dot::after{content:'';display:inline-block;width:.45em;height:.45em;border-radius:50%;background:var(--berry);margin-left:.3em;vertical-align:.15em}
+.uic{width:2.6em;height:2.6em;border-radius:50%;display:grid;place-items:center;flex:none}
+.uic svg{width:1.6em;height:1.6em}
 .ucard{background:var(--parch);border:.18em solid var(--wood-dk);border-radius:1em;padding:.5em .55em;display:grid;gap:.28em;align-content:start;box-shadow:0 .25em 0 rgba(0,0,0,.4);min-width:0}
 .ucard .top{display:flex;gap:.45em;align-items:center}
 .ucard canvas{width:2.9em;height:2.9em;flex:none}
@@ -267,7 +275,7 @@ body.force #rotate{display:none!important}
   </section>
   <section id="sMap" class="scr" hidden>
     <div class="mapHead"><h2>약속의 별</h2><p>별을 모을수록 밤하늘이 채워져요. 이번 판은 방주부터 홍해까지, 여섯 별을 지킬 수 있어요.</p></div>
-    <div class="mapBtns"><button class="btn" id="bTrainM" style="position:relative">연단<span class="pt" id="trainPt" hidden></span></button><button class="btn" id="bUpgM" style="position:relative">탑 강화<span class="pt" id="upgPt" hidden></span></button><button class="btn wood" id="bCodexM">두루마리</button><button class="btn wood" id="bTitle">처음으로</button></div>
+    <div class="mapBtns"><button class="btn" id="bTrainM" style="position:relative">연단<span class="pt" id="trainPt" hidden></span></button><button class="btn" id="bUpgM" style="position:relative">별 강화<span class="pt" id="upgPt" hidden></span></button><button class="btn wood" id="bCodexM">두루마리</button><button class="btn wood" id="bTitle">처음으로</button></div>
     <div id="nodes"></div>
   </section>
   <section id="sStory" class="scr" hidden>
@@ -285,9 +293,9 @@ body.force #rotate{display:none!important}
     <button class="btn" id="bTrainClose">돌아가기</button>
   </section>
   <section id="sUpg" class="scr" hidden>
-    <h2>탑 강화</h2>
+    <h2>별 강화</h2>
     <p class="tv">하늘을 우러러 뭇별을 셀 수 있나 보라 (창 15:5)</p>
-    <div class="ubar"><span>남은 별 <b id="uLeft">0</b><small> / 받은 별 <span id="uGot">0</span></small></span><button class="btn wood" id="bUpgReset">다시 배치</button><button class="btn" id="bUpgClose">돌아가기</button></div>
+    <div class="ubar"><span class="utabs" id="uTabs"><button data-t="tower" aria-pressed="true">탑 4계열</button><button data-t="skill" aria-pressed="false">부르짖음 · 세 겹 줄</button></span><span>남은 별 <b id="uLeft">0</b><small> / 받은 별 <span id="uGot">0</span></small></span><button class="btn wood" id="bUpgReset">다시 배치</button><button class="btn" id="bUpgClose">돌아가기</button></div>
     <div class="ucards" id="uCards"></div>
   </section>
   <section id="sEnd" class="scr" hidden><div class="card" id="endCard"></div></section>
@@ -445,6 +453,11 @@ const UPG={
     {name:'반열대로',ref:'대상 23:6',desc:'공격 속도가 12% 빨라져요.'},{name:'기름 부음',ref:'레 8:12',desc:'제사장의 문지기가 더 빨리 다시 서고, 싹 난 지팡이가 더 자주 나와요.'}],
   art:[{name:'쳐서 만든',ref:'출 25:31',desc:'돌 피해가 12% 늘어요.'},{name:'고르게 다듬은 돌',desc:'돌이 맞히는 범위가 12% 넓어져요.'},{name:'지혜로운 마음',ref:'출 31:6',desc:'장인 탑을 짓고 올리는 값이 10% 싸져요.'},
     {name:'튼튼한 기초',desc:'공격 속도가 10% 빨라져요.'},{name:'오홀리압과 함께',ref:'출 31:6',desc:'5번에 1번꼴로 돌을 한 번 더 던져요.'}]};
+UPG.cry=[{name:'환난 날에 나를 부르라',ref:'시 50:15',desc:'다시 부르짖을 수 있는 시간이 40초에서 32초로 줄어요.'},{name:'넓은 빛',desc:'빛이 내려오는 범위가 25% 넓어져요.'},{name:'더 오래 멈춤',desc:'빛을 맞은 적이 1.5초가 아니라 2.5초 동안 멈춰요.'},
+  {name:'하늘까지 닿는 빛',desc:'피해가 70에서 95로 늘고, 하늘의 적도 맞혀요.'},{name:'내가 응답하겠고',ref:'렘 33:3',desc:'빛이 내려온 자리에 4초 동안 빛이 남아 그 안의 적이 계속 풀려나요.'}];
+UPG.help=[{name:'든든한 장정',desc:'장정 체력이 70에서 100으로 늘어요.'},{name:'오래 머묾',desc:'장정이 15초가 아니라 22초 동안 머물러요.'},{name:'굳센 손',desc:'장정 공격이 5에서 8로 늘어요.'},
+  {name:'셋째 사람',ref:'전 4:12',desc:'장정이 둘이 아니라 셋 나와요.'},{name:'물매 든 장정',desc:'장정이 물맷돌을 던져 멀리 있는 적도 맞혀요.'}];
+const UPG_NAME={cry:['부르짖음','플레이어 기술','bCry'],help:['세 겹 줄','플레이어 기술','bHelp']};
 const UPG_COST=[1,2,3,4,5];
 // 성막 문지기: 제사장이 길에 세우는 큰 병사(대상 9:23, 9:26). 쓰러지면 잠시 뒤 다시 선다.
 const GATE=[null,{hp:240,dmg:10,armor:.3,re:14},{hp:340,dmg:14,armor:.35,re:12},{hp:460,dmg:18,armor:.4,re:10,two:true}];
@@ -657,7 +670,7 @@ const STAGES={
 const MAPNODES=[[110,560,'방주'],[190,495,'아브람의 길'],[280,450,'롯을 구하라'],[370,505,'갈대 상자'],[455,565,'미디안 우물'],[550,520,'홍해'],[625,450,'르비딤'],[690,380,'에드레이'],[640,300,'여리고'],[555,245,'기브온'],[635,170,'기손 강'],[735,140,'하롯 샘'],[825,185,'미스바'],[895,255,'엘라 골짜기'],[980,300,'엔게디'],[1060,255,'시글락'],[1115,185,'브라가 골짜기'],[1170,130,'도단'],[1110,75,'예루살렘 포위'],[1000,70,'무너진 성벽']];
 const CODEX=[
   {cat:'약속',name:'약속의 등불',k:'목숨',verse:'내 종 다윗이 항상 내 앞에 등불을 가지고 있게 하리라 (왕상 11:36)',desc:'적이 지나가면 등불이 약해져요. 다 꺼져 가면 다시 할 수 있어요.',deep:'"상한 갈대를 꺾지 아니하며 꺼져가는 등불을 끄지 아니하고"(사 42:3). 등불을 꺼지지 않게 하시는 분은 하나님이에요.'},
-  {cat:'약속',name:'약속의 별',k:'탑 강화',verse:'하늘을 우러러 뭇별을 셀 수 있나 보라 (창 15:5)',desc:'스테이지를 지켜 내면 약속의 별을 받아요. 지도의 탑 강화에서 별로 파수꾼, 양치기, 레위인, 장인 계열을 키워요. 4단계 탑까지 모두 적용되고, 언제든 무료로 다시 배치할 수 있어요.',deep:'별은 지켜 낸 기록일 뿐이에요. 구원 사건은 별을 몇 개 받았든 똑같이 펼쳐져요. 구원은 처음부터 하나님의 일이에요.'},
+  {cat:'약속',name:'약속의 별',k:'별 강화',verse:'하늘을 우러러 뭇별을 셀 수 있나 보라 (창 15:5)',desc:'스테이지를 지켜 내면 약속의 별을 받아요. 지도의 별 강화에서 별로 파수꾼, 양치기, 레위인, 장인 계열과 부르짖음, 세 겹 줄을 키워요. 4단계 탑까지 모두 적용되고, 언제든 무료로 다시 배치할 수 있어요.',deep:'별은 지켜 낸 기록일 뿐이에요. 구원 사건은 별을 몇 개 받았든 똑같이 펼쳐져요. 구원은 처음부터 하나님의 일이에요.'},
   {cat:'약속',name:'줄과 풀려남',k:'규칙',verse:'우리의 씨름은 혈과 육을 상대하는 것이 아니요 (엡 6:12)',desc:'빛이 맞히는 것은 사람이 아니라 사람을 붙잡은 어둠과 줄이에요. 줄이 끊어지면 사람은 무기를 내려놓고 어둠은 달아나요.',deep:'바울은 "우리도 다 전에는 그 가운데서" 살았다고 말해요(엡 2:3). 어둠에 붙잡히는 건 저 사람들만의 일이 아니에요.'},
   {cat:'탑',name:'파수꾼',k:'활 · 1~3단계',verse:LINES.watch.verse,desc:LINES.watch.desc,deep:'4단계에서는 연사형 베냐민 궁수와 저격형 요단 동편 용사 중 하나를 골라요.'},
   {cat:'탑',name:'양치기',k:'병사 · 1~3단계',verse:LINES.shep.verse,desc:LINES.shep.desc,deep:'3단계 용맹한 양치기는 "사자와 곰을 쳐 죽였은즉"(삼상 17:36)이라 큰 적에게 더 강해요.'},
@@ -691,7 +704,7 @@ const SLOT=[[-14,-6],[14,-6],[0,10]];
 function newGame(sid,heroKind){
   const S=STAGES[sid];
   G={sid,S,paths:S.paths.map(mkPath),gold:S.gold,lives:20,waveIdx:-1,phase:'prep',nextT:0,waveT:0,spawnQ:[],spawning:false,
-    enemies:[],towers:[],units:[],projs:[],fx:[],texts:[],wisps:[],puddles:[],zones:[],beams:[],walkers:[],dancers:[],animals:[],stamp:null,
+    enemies:[],towers:[],units:[],projs:[],fx:[],texts:[],wisps:[],puddles:[],zones:[],beams:[],lights:[],walkers:[],dancers:[],animals:[],stamp:null,
     spots:S.spots.map(([x,y],i)=>({x,y,i,tower:null})),t:0,speed:1,paused:false,freed:0,total:countEnemies(S),
     menu:null,heroSel:false,unitSel:null,aim:null,rallyFor:null,cd:{cry:0,help:0},hands:0,
     cloud:S.cloudAt?{state:'home',x:1150,y:250,k:0,t:0}:null,
@@ -828,6 +841,7 @@ function updUnits(dt){
     if(tg&&d2(tg.x,tg.y,home.x,home.y)>150*150){dropTarget(u);tg=null;}
     if(!tg&&u.extra&&u.extra.length){const n=u.extra.shift();if(alive(n)&&n.blockedBy===u){u.target=tg=n;u.side=Math.sign(u.x-n.x)||n.dir;}}   // 붙잡고 있던 둘째 적과 싸운다
     if(!tg){let best=null,bd=72*72;for(const e of G.enemies){if(!alive(e)||!e.def.block||e.blockedBy)continue;const dd=d2(e.x,e.y,home.x,home.y);if(dd<bd){bd=dd;best=e;}}if(best){u.target=tg=best;best.blockedBy=u;u.side=Math.sign(u.x-best.x)||best.dir;}}
+    if(u.sling&&!tg){u.slingCd-=dt;if(u.slingCd<=0){const e=findTarget(u.x,u.y-10,140);if(e){G.projs.push({k:'sling',x:u.x,y:u.y-20,tx:e.x,ty:e.y,tg:e,sp:520,dmg:6});u.throwT=.3;Snd.play('sling');u.slingCd=2.4;}else u.slingCd=.4;}}
     if(u.two&&tg){u.extra=(u.extra||[]).filter(x=>alive(x)&&x.blockedBy===u);if(!u.extra.length)for(const e of G.enemies){if(e===tg||!alive(e)||!e.def.block||e.blockedBy||e.state!=='walk')continue;if(d2(e.x,e.y,u.x,u.y)<46*46){e.blockedBy=u;u.extra.push(e);break;}}}
     const gx=tg?tg.x+u.side*16:home.x,gy=tg?tg.y+1:home.y,dx=gx-u.x,dy=gy-u.y,Ld=Math.hypot(dx,dy);u.moving=Ld>2.5;
     if(Ld>2.5){const st=Math.min(Ld,92*dt);u.x+=dx/Ld*st;u.y+=dy/Ld*st;if(Math.abs(dx)>1.5)u.dir=dx>=0?1:-1;}
@@ -1065,9 +1079,11 @@ function updStamp(dt){
   for(const e of G.enemies){if(!alive(e)||s.hit.has(e))continue;if(d2(e.x,e.y,fp.x,fp.y)<46*46){s.hit.add(e);hurt(e,[0,32,48,66][s.lv||1],'true','hero');if(alive(e)&&!e.def.boss){releaseFrom(e);e.state='walk';e.d=Math.max(0,e.d-60);e.stun=[0,1.4,1.7,2][s.lv||1];}}}
   if(s.t>[0,2.4,2.8,3.2][s.lv||1]||front<=0)G.stamp=null;
 }
-function castCry(x,y){G.beams.push({x,y,t:0,hit:false});G.cd.cry=40;Snd.play('cry');floatText(x,y-100,'하나님이 들으셨어요','#fff1c2',18);}
-function updBeams(dt){for(const b of G.beams){b.t+=dt;if(!b.hit&&b.t>.6){b.hit=true;for(const e of G.enemies)if(alive(e)&&d2(e.x,e.y,b.x,b.y)<88*88){hurt(e,70,'true');if(alive(e)&&!e.def.boss)e.stun=Math.max(e.stun,1.5);}fxRing(b.x,b.y,88,'255,240,180');if(!reduceMotion)G.shake=Math.max(G.shake,4);G.flash=.25;}}G.beams=G.beams.filter(b=>b.t<1.4);}
-function castHelp(x,y){const n=nearestAll(x,y);if(!n||n.dd>70*70){toast('길 가까이를 눌러 주세요.',2.5);return false;}const r={x:n.x,y:n.y};for(let k=0;k<2;k++)G.units.push(mkUnit({temp:true,life:15,rally:r,slot:k,x:n.x+(k?14:-14),y:n.y-6,hp:70,max:70,dmg:5,armor:.1,look:'help'}));for(let i=0;i<12;i++)part('spark',n.x+rand(-20,20),n.y-rand(0,30),rand(-30,30),rand(-60,-10),.7,'#ffe9a8',2.5);G.cd.help=22;Snd.play('help');return true;}
+const cryCd=()=>has('cry',1)?32:40;
+function castCry(x,y){G.beams.push({x,y,t:0,hit:false,r:has('cry',2)?110:88,stun:has('cry',3)?2.5:1.5,dmg:has('cry',4)?95:70,linger:has('cry',5)});G.cd.cry=cryCd();Snd.play('cry');floatText(x,y-100,'하나님이 들으셨어요','#fff1c2',18);}
+function updBeams(dt){for(const b of G.beams){b.t+=dt;if(!b.hit&&b.t>.6){b.hit=true;for(const e of G.enemies)if(alive(e)&&d2(e.x,e.y,b.x,b.y)<b.r*b.r){hurt(e,b.dmg,'true');if(alive(e)&&!e.def.boss)e.stun=Math.max(e.stun,b.stun);}fxRing(b.x,b.y,b.r,'255,240,180');if(!reduceMotion)G.shake=Math.max(G.shake,4);G.flash=.25;if(b.linger)G.lights.push({x:b.x,y:b.y,r:b.r*.8,t:0,life:4});}}G.beams=G.beams.filter(b=>b.t<1.4);
+  for(const l of G.lights){l.t+=dt;for(const e of G.enemies)if(alive(e)&&d2(e.x,e.y,l.x,l.y)<l.r*l.r)hurt(e,15*dt,'true');}G.lights=G.lights.filter(l=>l.t<l.life);}
+function castHelp(x,y){const n=nearestAll(x,y);if(!n||n.dd>70*70){toast('길 가까이를 눌러 주세요.',2.5);return false;}const r={x:n.x,y:n.y},hp=has('help',1)?100:70;for(let k=0;k<(has('help',4)?3:2);k++)G.units.push(mkUnit({temp:true,life:has('help',2)?22:15,rally:r,slot:k,x:n.x+[-14,14,0][k],y:n.y+[-6,-6,8][k],hp,max:hp,dmg:has('help',3)?8:5,armor:.1,look:'help',sling:has('help',5),slingCd:1}));for(let i=0;i<12;i++)part('spark',n.x+rand(-20,20),n.y-rand(0,30),rand(-30,30),rand(-60,-10),.7,'#ffe9a8',2.5);G.cd.help=22;Snd.play('help');return true;}
 
 /* ---------- 효과 ---------- */
 function part(k,x,y,vx,vy,life,col,size){if(G.fx.length>520)return;G.fx.push({k,x,y,vx,vy,t:0,life,col,size});}
@@ -1714,7 +1730,8 @@ function renderPlay(){
   drawStamp(c);drawProjs(c);drawFx(c);
   if(G.S.night)drawDark(c);
   drawDemons(c);
-  for(const b of G.beams){const a=Math.min(1,b.t*4)*(1-b.t/1.4);c.save();c.globalCompositeOperation='lighter';const g=c.createLinearGradient(0,0,0,b.y);g.addColorStop(0,'rgba(255,250,220,0)');g.addColorStop(1,`rgba(255,240,170,${.75*a})`);c.fillStyle=g;c.fillRect(b.x-34*(1-b.t*.3),0,68*(1-b.t*.3),b.y);E(c,b.x,b.y,90,40);c.fillStyle=`rgba(255,240,170,${.35*a})`;c.fill();c.restore();}
+  for(const l of G.lights){const a=Math.min(1,l.t*3,(l.life-l.t)*1.5);c.save();c.globalCompositeOperation='lighter';E(c,l.x,l.y,l.r,l.r*.45);c.fillStyle=`rgba(255,236,160,${.22*a})`;c.fill();c.strokeStyle=`rgba(255,240,180,${.5*a})`;c.lineWidth=2;c.stroke();c.restore();if(Math.random()<.3)part('spark',l.x+rand(-l.r*.7,l.r*.7),l.y+rand(-l.r*.3,l.r*.3),0,-40,.6,'#fff3b0',2);}
+  for(const b of G.beams){const a=Math.min(1,b.t*4)*(1-b.t/1.4);c.save();c.globalCompositeOperation='lighter';const g=c.createLinearGradient(0,0,0,b.y);g.addColorStop(0,'rgba(255,250,220,0)');g.addColorStop(1,`rgba(255,240,170,${.75*a})`);c.fillStyle=g;c.fillRect(b.x-34*(1-b.t*.3),0,68*(1-b.t*.3),b.y);E(c,b.x,b.y,b.r,b.r*.45);c.fillStyle=`rgba(255,240,170,${.35*a})`;c.fill();c.restore();}
   if(G.hands>0){const h=G.hero;c.save();c.globalCompositeOperation='lighter';for(const t of G.towers){glow(c,t.x,t.y-30,30,'255,220,120',.25+.1*Math.sin(G.t*6));}c.restore();}
   drawTapHands(c);
   drawSceneOverlay(c);
@@ -1768,7 +1785,7 @@ const ui={last:{},
   reset(){this.last={};$('boss').hidden=true;$('info').hidden=true;$('toast').hidden=true;$('banner').hidden=true;drawHeroPortrait($('heroCv'),G.hero.kind);$('ultName').innerHTML=G.hero.D.ult.short||G.hero.D.ult.name;},
   sync(){if(!G)return;this.set('vLives',String(G.lives));this.set('vGold',String(G.gold));this.set('vWave',`${Math.max(0,G.waveIdx+1)}/${G.S.waves.length}`);
     const ab=(id,v,max,armed)=>{const el=$(id);el.querySelector('.cd').style.setProperty('--p',(max?clamp(v/max,0,1)*100:0).toFixed(1)+'%');el.classList.toggle('armed',!!armed);};
-    ab('bCry',G.cd.cry,40,G.aim==='cry');ab('bHelp',G.cd.help,22,G.aim==='help');const h=G.hero;ab('bUlt',h.ult,h.D.ult.cd,G.aim==='stamp');
+    ab('bCry',G.cd.cry,cryCd(),G.aim==='cry');ab('bHelp',G.cd.help,22,G.aim==='help');const h=G.hero;ab('bUlt',h.ult,h.D.ult.cd,G.aim==='stamp');
     $('heroHp').style.width=(h.state==='ok'?h.hp/h.max*100:0)+'%';$('bHero').classList.toggle('sel',G.heroSel);
     {const hc=$('hcard'),on=G.heroSel&&h.state==='ok';if(hc.hidden===on){hc.hidden=!on;if(on){$('hcName').textContent=h.D.name;$('hcTag').textContent=h.D.line+' 영웅';$('hcSay').innerHTML=`${h.D.say}<small>${h.D.sayRef}</small>`;}}
       if(on){const r=clamp(h.hp/h.max,0,1);this.set('hcHp',`${Math.ceil(h.hp)}/${h.max}`);$('hcFill').style.width=(r*100).toFixed(1)+'%';$('hcBar').className='hpb'+(r>.5?'':r>.25?' mid':' low');}}
@@ -1800,7 +1817,7 @@ function showEnd(win){
   $('eAgain').onclick=()=>{Snd.play('click');startPlay(chosenHero);};$('eMap').onclick=()=>{Snd.play('click');goMap();};const ec=$('eCodex');if(ec)ec.onclick=()=>openCodex();const en=$('eNext');if(en)en.onclick=()=>{Snd.play('click');G=null;startStory(S.id+1);};
   if(win){Music.play('calm');}
 }
-function endHints(){const k=chosenHero,n=ptsLeft(k),out=[];if(n>0)out.push(`${HEROES[k].name}의 연단 점수 ${n}점은 지도의 <b>연단</b>에서 쓸 수 있어요.`);if(upgAffordable())out.push(`남은 별 ${starsLeft()}개로 지도의 <b>탑 강화</b>에서 탑을 키울 수 있어요.`);return out.length?`<p class="unlock" style="font-size:.9em">${out.join('<br>')}</p>`:'';}
+function endHints(){const k=chosenHero,n=ptsLeft(k),out=[];if(n>0)out.push(`${HEROES[k].name}의 연단 점수 ${n}점은 지도의 <b>연단</b>에서 쓸 수 있어요.`);if(upgAffordable())out.push(`남은 별 ${starsLeft()}개로 지도의 <b>별 강화</b>에서 탑과 기술을 키울 수 있어요.`);return out.length?`<p class="unlock" style="font-size:.9em">${out.join('<br>')}</p>`:'';}
 const TIPS={2:['약탈병은 빨라요. 양치기로 길을 막아 세우세요.','약탈병이 끝까지 가면 세겔을 빼앗아요. 출구 가까이에도 탑을 두세요.','두 길이 만나는 곳에 양치기와 장인을 함께 두면 좋아요.'],3:['방패병은 교만의 갑옷이 두꺼워요. 레위인의 빛이 잘 들어요.','밤에는 탑 둘레만 밝아요. 길목마다 탑을 고르게 세우세요.','3단계 탑을 아끼지 마세요. 마지막 무리가 가장 길어요.'],4:['백부장은 거룩한 빛을 튕겨 내요. 파수꾼과 양치기로 상대하세요.','두 길이 갈대숲 바로 앞에서 만나요. 양쪽을 고르게 지키세요.','제사장의 문지기를 길목에 세우고, 축복과 싹 난 지팡이로 오래 버티게 하세요.'],5:['세 길이 우물 앞에서 만나요. 만나는 곳에 화력을 모으세요.','아래쪽 길은 짧아요. 늦게 열리지만 빠르게 다가와요.','모세의 반석의 물과 중보로 양치기를 오래 세워 두세요.'],1:['양치기를 길 가까이 세우면 적이 멈춰 서서 다른 탑이 쏘기 좋아요.','노아를 길목에 세워 두면 3초 뒤 나무 방벽을 세워요.','두 길이 만나는 곳에 탑을 모으면 효율이 좋아요.'],6:['방패병은 교만의 갑옷이 두꺼워요. 레위인의 빛이 잘 들어요.','백부장은 거룩한 빛을 튕겨 내요. 파수꾼과 양치기로 상대하세요.','전차는 막을 수 없어요. 레위인과 장인으로 잡아요.','제사장의 문지기를 길목에 세우고, 축복과 싹 난 지팡이로 오래 버티게 하세요.','바로의 보호막은 한꺼번에 몰아쳐서 깨세요. 부르짖음이 잘 들어요.']};
 let codexCat='전체';
 function openCodex(){$('sCodex').hidden=false;if(G&&screen==='play')G.paused=true;renderCodex();}
@@ -1846,12 +1863,15 @@ function renderTrain(){const box=$('tCards');box.innerHTML='';for(const k of her
   drawHeroPortrait(c.querySelector('canvas'),k);box.appendChild(c);}}
 
 function drawTowerIcon(cvEl,line){const c=cvEl.getContext('2d'),k=cvEl.width/120;c.setTransform(k,0,0,k,0,0);c.clearRect(0,0,120,120);c.translate(60,104);c.scale(.8,.8);drawTowerAt(c,line,3,0,0,null);}
-function showUpg(){setScreen('upg');renderUpg();}
+let upgTab='tower';
+function showUpg(){if(starsLeft()<0)resetUpg();setScreen('upg');renderUpg();}   // 저장이 꼬여 별이 모자라면 무료로 다시 배치
 function renderUpg(){const left=starsLeft();$('uLeft').textContent=left;$('uGot').textContent=starsGot();$('bUpgReset').disabled=starsSpent()===0;const box=$('uCards');box.innerHTML='';
-  for(const l of Object.keys(UPG)){const L2=LINES[l],lv=upLv(l),c=document.createElement('div');c.className='ucard';
-    c.innerHTML=`<div class="top"><canvas width="120" height="120"></canvas><div><h3>${L2.name}</h3><div class="lv">${L2.role} · 별 강화 ${lv}/5</div></div></div>`+UPG[l].map((u,i)=>{const st=i<lv?'done':i===lv?'next':'lock',can=st==='next'&&left>=UPG_COST[i];
+  const keys=upgTab==='tower'?Object.keys(LINES):Object.keys(UPG_NAME);box.className='ucards '+(upgTab==='tower'?'four':'two');
+  $('uTabs').querySelectorAll('button').forEach(b=>{b.setAttribute('aria-pressed',String(b.dataset.t===upgTab));const ks=b.dataset.t==='tower'?Object.keys(LINES):Object.keys(UPG_NAME);b.classList.toggle('dot',ks.some(l=>upLv(l)<5&&left>=UPG_COST[upLv(l)]));});
+  for(const l of keys){const L2=LINES[l],nm=L2?L2.name:UPG_NAME[l][0],role=L2?L2.role:UPG_NAME[l][1],lv=upLv(l),c=document.createElement('div');c.className='ucard';
+    c.innerHTML=`<div class="top">${L2?'<canvas width="120" height="120"></canvas>':`<span class="uic plate">${$(UPG_NAME[l][2]).querySelector('svg').outerHTML}</span>`}<div><h3>${nm}</h3><div class="lv">${role} · 별 강화 ${lv}/5</div></div></div>`+UPG[l].map((u,i)=>{const st=i<lv?'done':i===lv?'next':'lock',can=st==='next'&&left>=UPG_COST[i];
       return`<button class="ug ${st}${can?' can':''}" data-l="${l}" ${can?'':'disabled'} aria-label="${u.name} ${i<lv?'배움':'별 '+UPG_COST[i]+'개'}"><span class="un">${u.name}${u.ref?`<small>${u.ref}</small>`:''}</span><span class="uc">${i<lv?'✓':'★'+UPG_COST[i]}</span><span class="ud">${u.desc}</span></button>`;}).join('');
-    drawTowerIcon(c.querySelector('canvas'),l);box.appendChild(c);}}
+    if(L2)drawTowerIcon(c.querySelector('canvas'),l);box.appendChild(c);}}
 
 /* ============================== 8. 입력 ============================== */
 let lastPtr='mouse';
@@ -1919,6 +1939,7 @@ $('bTrainM').onclick=()=>{Snd.init();Snd.play('click');showTrain('map');};
 $('bUpgM').onclick=()=>{Snd.init();Snd.play('click');showUpg();};
 $('uCards').addEventListener('click',ev=>{const b=ev.target.closest('button[data-l]');if(b&&buyUpg(b.dataset.l))renderUpg();});
 $('bUpgReset').onclick=()=>{resetUpg();renderUpg();};
+$('uTabs').addEventListener('click',ev=>{const b=ev.target.closest('button[data-t]');if(!b)return;upgTab=b.dataset.t;Snd.play('click');renderUpg();});
 $('bUpgClose').onclick=()=>{Snd.play('click');goMap();};
 $('bTrainH').onclick=()=>{Snd.play('click');showTrain('hero');};
 $('bTrainClose').onclick=()=>{Snd.play('click');if(trainBack==='hero')showHeroPick();else goMap();};
