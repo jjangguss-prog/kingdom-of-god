@@ -1,0 +1,52 @@
+{
+ "출력": "raw",
+ "크기": [
+  1536,
+  864
+ ],
+ "단계": 4,
+ "항목": [
+  {
+   "id": "s8g",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    3,
+    4,
+    5
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: on the road through the land of the Amorites, Sihon the Amorite king, a proud middle-aged man with a short black beard, a tall bronze crested helmet and a red cloak, blocks the road with his army of spearmen and tall shield bearers; behind them on the high dark basalt plateau stands the huge giant king Og, a giant with a long black beard, an iron crown and dark iron scale armor with a black-and-crimson cloak, before the dark walls of his city Edrei; small dark wispy shadow creatures holding thin dark strings tied to the enemy soldiers hover above them like puppeteers; in the bottom-left corner a few Israelites watch from a distance; tense but nobody is hurt. Every person has exactly two arms and two hands."
+  },
+  {
+   "id": "v8a",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    3,
+    4,
+    5
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: at sunset on the plateau of Bashan the huge giant king Og, a giant with a long black beard, an iron crown and dark iron scale armor with a black-and-crimson cloak has dropped his iron mace and kneels on one knee with a calm face, while the dark shadow creature that held him by strings breaks apart and flees into the sky; in front of him stand smaller figures of Caleb, a strong grey-bearded man in a green tunic with a bow, and a few Israelite men, safe; warm golden light pours from the sky; no blood, nobody lying on the ground. Every person has exactly two arms and two hands."
+  },
+  {
+   "id": "s8d",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    3,
+    4,
+    5
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: twelve Israelite spies, all grown men, come back from the land of Canaan; two of them carry a huge cluster of grapes hanging on a pole between them; ten of the spies look frightened and point back toward huge giant men far away on a hill, but two grown men of about forty stand forward smiling bravely with raised fists: Caleb with a dark beard in a green tunic, and Joshua with a short dark beard in a tan tunic; Moses, an elderly prophet with a long white beard, a deep red-brown robe over a cream tunic and a cream headcloth, listens. Every person has exactly two arms and two hands."
+  }
+ ]
+}

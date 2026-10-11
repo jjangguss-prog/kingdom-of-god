@@ -1,0 +1,35 @@
+{
+ "출력": "raw",
+ "크기": [
+  1536,
+  864
+ ],
+ "단계": 4,
+ "항목": [
+  {
+   "id": "bg8w",
+   "종류": "장면",
+   "시드": [
+    3,
+    4,
+    5
+   ],
+   "참조": [
+    "ref2/ref8.png"
+   ],
+   "프롬프트": "Repaint this top-down tower defense game map as a richly hand-painted Kingdom Rush style battlefield on the high basalt plateau of Bashan near the city of Edrei, seen from above at a slight angle. Keep exactly the same sandy road shapes and positions. Only at the very top edge of the map, exactly where the northern road comes in, a small dark basalt city gate with two short towers of the city of Edrei, partly cut off by the top edge. Only in the bottom-left corner, around the left end of the road, a small Israelite camp of three brown goat-hair tents. No other buildings or tents anywhere. Everywhere else: open green grassy pastures with scattered dark basalt boulders and black volcanic rocks, a few big oak trees of Bashan near the edges, small wildflowers; no water, no ponds, no rivers. Warm afternoon light. No characters, no text."
+  },
+  {
+   "id": "s1c",
+   "종류": "장면",
+   "시드": [
+    4,
+    5
+   ],
+   "참조": [
+    "raw/arkbox_s2_9ab810.png"
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game: on the left a kind old man with a long white beard, cream headcloth and brown robe (Noah) and his family build this same long box-shaped wooden ark, only its timber frame and some planks done, on a green hill; on the right a crowd of angry villagers marches toward them, each villager holding only one torch or one wooden club in a natural pose with arms bent close to the body, and above the crowd small shadowy purple imps hover holding thin glowing threads tied to the villagers like puppet strings. One single wide scene, not split into panels. Every person has exactly two arms and two hands with natural anatomy, no stretched or twisted arms. The picture fills the whole frame edge to edge, no picture frame, no border, no speech bubbles."
+  }
+ ]
+}

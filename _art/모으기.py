@@ -13,7 +13,7 @@ RAW, CUT, ART = (os.path.join(HERE, d) for d in ('raw', 'cut', os.path.join('..'
 MAX = 512
 # 게임 화면에 그려지는 크기의 3배쯤(고해상도 폰). 영웅은 초상화에도 쓰여 크게, 탑·전차는 크게, 나머지 병사·적은 256
 CROP = {'v3a': .035, 'v4c': .03, 's7b': (.09, .18, .91, 1)}   # 비율. 넷이면 (왼, 위, 오른, 아래): s7b는 이야기 글 상자 위로 물줄기가 보이게
-LIMIT = {'noah': 512, 'moses': 512, 'joshua': 512, 'chariot': 384, 'pharaoh': 512, 'levi_priest': 384, 'levi_choir': 384}   # 탑(이름 끝이 숫자)은 384
+LIMIT = {'noah': 512, 'moses': 512, 'joshua': 512, 'caleb': 512, 'chariot': 384, 'pharaoh': 512, 'og': 512, 'giant': 384, 'levi_priest': 384, 'levi_choir': 384, 'art_menorah': 384}   # 탑(이름 끝이 숫자)은 384
 
 def cutter():
     import onnxruntime as ort

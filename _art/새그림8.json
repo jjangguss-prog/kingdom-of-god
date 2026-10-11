@@ -1,0 +1,237 @@
+{
+ "출력": "raw",
+ "크기": [
+  1024,
+  1024
+ ],
+ "단계": 4,
+ "항목": [
+  {
+   "id": "bg8w",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1,
+    2
+   ],
+   "참조": [
+    "ref2/ref8.png"
+   ],
+   "프롬프트": "Repaint this top-down tower defense game map as a richly hand-painted Kingdom Rush style battlefield on the high basalt plateau of Bashan near the city of Edrei, seen from above at a slight angle. Keep exactly the same sandy road shapes and positions. At the top center, where the road comes in, stands the gate of the walled city of Edrei with high dark basalt stone walls and towers. At the left end of the road is the Israelite camp with several brown goat-hair tents. Everywhere else: green grassy pastures with dark basalt boulders and black volcanic rocks, a few big oak trees of Bashan, small wildflowers; no water, no ponds, no rivers. Warm afternoon light. No characters, no text."
+  },
+  {
+   "id": "s8a",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1,
+    2
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: at Mount Sinai the people of Israel, families and children, stand at a respectful distance at the foot of a great rocky mountain whose top is wrapped in thick dark cloud with fire and lightning and golden light glowing inside the cloud; Moses, an elderly prophet with a long white beard, a deep red-brown robe over a cream tunic and a cream headcloth, climbs the mountain path holding his wooden staff; awe and wonder; no figure in the sky. Every person has exactly two arms and two hands."
+  },
+  {
+   "id": "s8b",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1,
+    2
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: at the foot of the mountain some people of Israel dance around a small golden calf statue on a stone pedestal while Moses, an elderly prophet with a long white beard, a deep red-brown robe over a cream tunic and a cream headcloth, comes down the mountain path carrying two stone tablets with a sad face; several people stop and look ashamed; not scary, gentle children's style. Every person has exactly two arms and two hands."
+  },
+  {
+   "id": "s8c",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1,
+    2
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: in the middle of the camp of Israel stands the tabernacle, a large tent of fine linen inside a courtyard of white curtains; above it rests a pillar of white cloud glowing with soft light; through the open entrance a beautiful seven-branched lampstand of pure gold with seven small flames is clearly visible; Levites in white linen robes serve and families watch with joy. Every person has exactly two arms and two hands."
+  },
+  {
+   "id": "s8d",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1,
+    2
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: twelve Israelite spies come back from the land of Canaan; two of them carry a huge cluster of grapes hanging on a pole between them; most of the spies look frightened and point back toward huge giant men far away on a hill, but two of them stand forward with brave hopeful faces: Caleb, a strong man of about forty with a dark beard in a green-and-tan tunic, and young Joshua with a short dark beard in a tan tunic; Moses, an elderly prophet with a long white beard, a deep red-brown robe over a cream tunic and a cream headcloth, listens. Every person has exactly two arms and two hands."
+  },
+  {
+   "id": "s8e",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1,
+    2
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: the people of Israel travel through the desert wilderness for many years; a long winding line of families with tents, donkeys and flocks walks under a tall pillar of white cloud; white flakes of manna lie on the sand in the morning; children walk beside old people; soft golden light, a long journey under God's care. Every person has exactly two arms and two hands."
+  },
+  {
+   "id": "s8f",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1,
+    2
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: in the desert camp Moses, an elderly prophet with a long white beard, a deep red-brown robe over a cream tunic and a cream headcloth, stands beside a tall wooden pole with a bronze serpent on top; people of Israel who were bitten by snakes look up at the bronze serpent and are healed, their faces relieved and grateful; a few small ordinary desert snakes slither away on the sand; hopeful, not scary. Every person has exactly two arms and two hands."
+  },
+  {
+   "id": "s8g",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1,
+    2
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: on the road through the land of the Amorites, Sihon the Amorite king, a proud bearded man in a bronze crested helmet and a red cloak, blocks the road with his army of spearmen and tall shield bearers; far behind them on the high dark basalt plateau of Bashan a giant king, Og, much taller than everyone else, stands before the dark walls of his city Edrei; Moses, an elderly prophet with a long white beard, a deep red-brown robe over a cream tunic and a cream headcloth, and the Israelites look on; small dark wispy shadow creatures holding thin dark strings tied to the enemy soldiers hover above them like puppeteers; tense but nobody is hurt. Every person has exactly two arms and two hands."
+  },
+  {
+   "id": "v8a",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1,
+    2
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: at sunset on the plateau of Bashan the giant king Og has dropped his huge iron mace and kneels on one knee with a calm face, while the dark shadow creature that held him by strings breaks apart and flees into the sky; Moses, an elderly prophet with a long white beard, a deep red-brown robe over a cream tunic and a cream headcloth, Caleb, a strong grey-bearded man with a bow, and the Israelite men stand safe; warm golden light pours from the sky; no blood, nobody lying on the ground. Every person has exactly two arms and two hands."
+  },
+  {
+   "id": "v8b",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1,
+    2
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: amazed and laughing Israelite children and a cheerful grey-bearded man measure an enormous iron bed, nine cubits long and four cubits wide, that belonged to the giant king Og; one small child lies on the giant bed and looks tiny; others stretch a measuring rope along it; funny and joyful, bright daylight. Every person has exactly two arms and two hands."
+  },
+  {
+   "id": "v8c",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1,
+    2
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: on the wide green pastures of Bashan with dark basalt rocks and big oak trees, families of the tribes of Reuben, Gad and half of Manasseh settle with herds of cattle and sheep, building stone sheepfolds and simple houses; a few strong young warriors with long bows stand proudly nearby; bright joyful morning light. Every person has exactly two arms and two hands."
+  },
+  {
+   "id": "caleb",
+   "종류": "인물",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "Caleb, a strong and lively Israelite man of about eighty with a grey beard and grey hair, a sun-tanned face full of courage and joy, wearing a green-and-tan wool tunic with a brown leather belt and leather bracers and a cream headcloth with a cord, holding a wooden hunting bow in one hand, a quiver of arrows on his back, energetic stance, exactly two arms."
+  },
+  {
+   "id": "giant",
+   "종류": "인물",
+   "시드": [
+    1,
+    2
+   ],
+   "프롬프트": "A huge giant warrior of the Rephaim of Bashan, very tall, broad and muscular, with a thick dark beard and a scornful proud face, wearing a dark bronze scale armor shirt over a brown tunic and a rounded bronze helmet, holding a huge wooden club studded with iron, heavy stomping stance, exactly two arms."
+  },
+  {
+   "id": "og",
+   "종류": "인물",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "Og, the giant king of Bashan, an enormous towering giant, with a long dark beard, a heavy iron crown, dark iron scale armor and a black-and-crimson royal cloak, holding a massive iron mace, proud arrogant face, exactly two arms."
+  },
+  {
+   "id": "o_soldier",
+   "종류": "인물",
+   "시드": [
+    1,
+    2
+   ],
+   "프롬프트": "An Amorite spearman of the army of king Sihon, an ordinary man with a black beard, a pointed bronze helmet, a short red-and-cream tunic with a leather belt, holding a long spear and a round wooden shield with a bronze rim, frowning, exactly two arms."
+  },
+  {
+   "id": "o_raider",
+   "종류": "인물",
+   "시드": [
+    1,
+    2
+   ],
+   "프롬프트": "A quick Amorite raider youth with a red headband, a short sleeveless tan tunic and a leather belt, a short curved bronze sickle sword in his hand, leaning forward ready to run, sneaky eyes, exactly two arms."
+  },
+  {
+   "id": "o_shield",
+   "종류": "인물",
+   "시드": [
+    1,
+    2
+   ],
+   "프롬프트": "A big Amorite shield bearer of king Sihon with a heavy bronze helmet with cheek guards, a tall rectangular wooden shield covered with bronze plates, a short spear and a long red cloak, proud chin up, exactly two arms."
+  },
+  {
+   "id": "o_centurion",
+   "종류": "인물",
+   "시드": [
+    1,
+    2
+   ],
+   "프롬프트": "An Amorite captain of king Sihon, a stern bearded man with a tall bronze crested helmet and a bronze scale armor shirt over a red tunic, holding a commander's bronze-headed mace and pointing forward, exactly two arms."
+  },
+  {
+   "id": "art_menorah",
+   "종류": "건물",
+   "크기": [
+    1024,
+    1024
+   ],
+   "시드": [
+    1,
+    2
+   ],
+   "참조": [
+    "raw/art3_s2_29aa2c.png"
+   ],
+   "프롬프트": "Draw the golden lampstand version of this exact craftsmen's tower in the same style, colors and camera angle: on top of its stone base stands a tall seven-branched lampstand of pure hammered gold with almond-blossom cups and seven small bright flames; a craftsman in a work apron polishes it; soft golden light glows around it."
+  }
+ ]
+}

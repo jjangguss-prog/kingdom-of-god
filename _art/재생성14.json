@@ -1,0 +1,23 @@
+{
+ "출력": "raw",
+ "크기": [
+  1536,
+  864
+ ],
+ "단계": 4,
+ "항목": [
+  {
+   "id": "s1a",
+   "종류": "장면",
+   "시드": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: an ancient Bronze Age mud-brick town at dusk where grumpy people quarrel and push each other in a dusty street, some waving sticks held naturally in one hand at shoulder height, while small shadowy purple imps with tiny glowing eyes hover above them holding thin glowing threads tied to the people's shoulders like puppet strings. Every person has exactly two arms and two hands with natural anatomy, arms bent naturally, no arm twisted behind the head. Gloomy but child-friendly, no blood, no weapons hitting anyone."
+  }
+ ]
+}
