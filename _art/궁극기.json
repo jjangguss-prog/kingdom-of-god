@@ -1,0 +1,38 @@
+{
+ "출력": "raw",
+ "크기": [
+  1024,
+  1024
+ ],
+ "단계": 4,
+ "항목": [
+  {
+   "id": "a_lioness2",
+   "종류": "인물",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "A friendly adult female lion (a lioness) with absolutely no mane: her head, cheeks and neck are covered only with short smooth sleek tawny fur like a big cat, small round ears clearly visible, slim muscular body, long tail with a dark tuft. Natural healthy anatomy with exactly four legs, calm walking pose, side view facing right, the whole animal visible."
+  },
+  {
+   "id": "aaron",
+   "종류": "인물",
+   "시드": [
+    1,
+    2
+   ],
+   "프롬프트": "Aaron, the older brother of Moses, an elderly man of about eighty-three with a long grey beard and grey hair, kind steady face, wearing a plain purple wool robe over a cream tunic with a brown leather belt and a cream headcloth with a cord, no staff, both arms raised up above his shoulders with open palms as if holding up the tired arm of someone standing beside him."
+  },
+  {
+   "id": "hur",
+   "종류": "인물",
+   "시드": [
+    1,
+    2
+   ],
+   "프롬프트": "Hur, an elderly Israelite man of about eighty with a grey-streaked brown beard, kind strong face, wearing a plain olive-green wool robe with a brown leather belt and a cream headcloth, no staff, both arms raised up above his shoulders with open palms as if holding up the tired arm of someone standing beside him."
+  }
+ ]
+}
