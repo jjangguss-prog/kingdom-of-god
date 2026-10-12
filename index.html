@@ -153,6 +153,12 @@ details li{margin:.35em 0;line-height:1.55}
 #bSkip{position:absolute;top:3%;right:2%;font-size:1em;padding:.35em 1.1em}
 #bComicPrev{position:absolute;top:2.5%;left:2%;font-size:1em;padding:.35em 1.1em;display:none;z-index:5}
 #stage.comic #bComicPrev:not([hidden]){display:block}
+#bShout{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:6;display:flex;flex-direction:column;align-items:center;gap:.1em;padding:.45em 1.6em .5em;font-size:1.6em;animation:shoutP 1.1s ease-in-out infinite}
+#bShout[hidden]{display:none}
+#bShout b{font-weight:400;font-size:1.5em;line-height:1.1}
+#bShout small{font-size:.5em;opacity:.85}
+@keyframes shoutP{0%,100%{transform:translate(-50%,-50%) scale(1)}50%{transform:translate(-50%,-50%) scale(1.08)}}
+@media (prefers-reduced-motion:reduce){#bShout{animation:none}}
 .dots{display:flex;gap:.3em}
 .dots i{width:.5em;height:.5em;border-radius:50%;background:#c9b48a}
 .dots i.on{background:var(--wood)}
@@ -299,18 +305,19 @@ body.force #rotate{display:none!important}
   <div id="banner" class="ui" hidden></div>
   <button class="btn wood" id="bZoom" hidden>전체 보기</button>
   <button class="btn wood" id="bComicPrev" hidden>‹ 이전</button>
+  <button class="btn" id="bShout" hidden><b>함성!</b><small>외치라 (수 6:16)</small></button>
 
   <section id="sTitle" class="scr">
     <h1 class="logo"><span class="a">Kingdom of God</span><span class="b">Old Testament</span></h1>
     <p class="tsub">하나님의 나라 · 구약</p>
     <div class="row" style="margin-top:.6em;font-size:1.35em"><button class="btn" id="bStart">시작하기</button><button class="btn" id="bCont">계속하기</button><button class="btn wood" id="bCodexT">두루마리</button></div>
-    <p class="tnote">v1.5.2 · 1장 약속, 2장 구원의 밤, 3장 광야 (방주부터 에드레이까지)</p>
+    <p class="tnote">v1.6 · 1장 약속, 2장 구원의 밤, 3장 광야 (방주부터 여리고까지)</p>
   </section>
   <section id="sSlots" class="scr" hidden>
     <div class="card slots"><h2 id="slotH">계속하기</h2><p class="sub" id="slotSub"></p><div id="slotList"></div><div class="row"><button class="btn" id="slotNew" hidden>새 이야기 시작</button><button class="btn wood" id="slotBack">돌아가기</button></div></div>
   </section>
   <section id="sMap" class="scr" hidden>
-    <div class="mapHead"><h2>약속의 별</h2><p>별을 모을수록 밤하늘이 채워져요. 이번 판은 방주부터 에드레이까지, 여덟 별을 지킬 수 있어요.</p></div>
+    <div class="mapHead"><h2>약속의 별</h2><p>별을 모을수록 밤하늘이 채워져요. 이번 판은 방주부터 여리고까지, 아홉 별을 지킬 수 있어요.</p></div>
     <div class="mapBtns"><button class="btn" id="bTrainM" style="position:relative">연단<span class="pt" id="trainPt" hidden></span></button><button class="btn" id="bUpgM" style="position:relative">별 강화<span class="pt" id="upgPt" hidden></span></button><button class="btn wood" id="bCodexM">두루마리</button><button class="btn wood" id="bTitle">처음으로</button></div>
     <div id="nodes"></div>
   </section>
@@ -405,7 +412,7 @@ const Snd={ac:null,on:store.get('kog.sound',true),last:{},
   hiss(dur,vol,freq,type='bandpass',delay=0,bus){const ac=this.ac;if(!ac)return;const t=ac.currentTime+Math.max(0,delay),s=ac.createBufferSource(),f=ac.createBiquadFilter(),g=ac.createGain();s.buffer=this.nb;f.type=type;f.frequency.value=freq;g.gain.setValueAtTime(vol,t);g.gain.exponentialRampToValueAtTime(.0001,t+dur);s.connect(f);f.connect(g);g.connect(bus||this.fx);s.start(t,Math.random()*.5);s.stop(t+dur+.05);},
   play(name){
     if(!this.ac||!this.on)return;
-    const now=performance.now(),gap={arrow:55,holy:70,boom:80,free:60,coin:50,hit:70,sling:70,tap:40,launch:80}[name]||0;
+    const now=performance.now(),gap={shofar:400,snipe:60,arrow:55,holy:70,boom:80,free:60,coin:50,hit:70,sling:70,tap:40,launch:80}[name]||0;
     if(gap&&this.last[name]&&now-this.last[name]<gap)return;this.last[name]=now;
     switch(name){
       case 'arrow':this.hiss(.07,.1,3500);this.tone(900,500,.06,'triangle',.03);break;
@@ -438,6 +445,10 @@ const Snd={ac:null,on:store.get('kog.sound',true),last:{},
       case 'thunder':this.hiss(1.6,.3,300,'lowpass');this.tone(60,30,1.2,'sine',.2);break;
       case 'splash':this.hiss(1.4,.25,900,'lowpass');break;
       case 'wind':this.hiss(2.6,.12,500);break;
+      case 'shofar':this.tone(196,294,.22,'sawtooth',.045);this.tone(294,286,1,'sawtooth',.04,.2);this.tone(294,286,1,'triangle',.05,.2);this.tone(147,143,1,'triangle',.03,.2);break;   // 양각 나팔(수 6:4)
+      case 'shofarLong':this.tone(196,294,.3,'sawtooth',.05);for(const [f,tp,v] of [[294,'sawtooth',.045],[294,'triangle',.055],[147,'triangle',.04],[441,'sine',.015]])this.tone(f,f*.97,2.6,tp,v,.28);break;   // 길게 불어(수 6:5)
+      case 'shout':for(const [f,v,d] of [[500,.34,0],[800,.3,.04],[1200,.22,.08],[350,.26,.12]])this.hiss(1.7,v,f,'bandpass',d);this.tone(150,95,1.3,'sawtooth',.04);this.hiss(2.8,.32,240,'lowpass',.35);this.tone(62,30,2.4,'sine',.3,.35);break;   // 크게 소리 질러 외치니(수 6:20)
+      case 'snipe':this.hiss(.12,.12,2600);this.tone(520,170,.2,'triangle',.07);this.tone(1300,650,.07,'square',.018);break;
     }
   }
 };
@@ -464,7 +475,7 @@ const SK=['#e0a877','#d39a68','#c98a5a','#b47a4c','#a36b41'];
 const LINES={
   watch:{key:'watch',name:'파수꾼',role:'활',air:true,verse:'인자야 내가 너를 이스라엘 족속의 파수꾼으로 세움이 이와 같으니라 (겔 33:7)',desc:'멀리 보고 빠르게 쏴요. 사거리가 가장 길어요.',
     tiers:[{name:'파수꾼',cost:70,range:165,rate:.8,dmg:9},{name:'성벽 파수꾼',cost:110,range:182,rate:.66,dmg:14},{name:'망대 파수꾼',cost:160,range:200,rate:.55,dmg:22}],
-    branches:[{id:'benjamin',name:'베냐민 궁수',lock:'16 시글락에서 열려요 (대상 12:2)'},{id:'jordan',name:'요단 동편 용사',lock:'옥을 이기면 바산을 받고, 9 여리고부터 고를 수 있어요 (신 3:13)'}]},
+    branches:[{id:'benjamin',name:'베냐민 궁수',lock:'16 시글락에서 열려요 (대상 12:2)'},{id:'jordan',name:'요단 동편 용사',lock:'에드레이를 지켜 내면 열려요 (바산을 받음, 신 3:13)'}]},
   shep:{key:'shep',name:'양치기',role:'병사',verse:'주의 지팡이와 막대기가 나를 안위하시나이다 (시 23:4)',desc:'양치기 셋이 길을 막아서요. 2단계부터 물맷돌을 먼저 던져요.',
     tiers:[{name:'양치기',cost:70,hp:60,dmg:4,armor:0},{name:'물매 양치기',cost:110,hp:85,dmg:6,armor:.15,sling:7},{name:'용맹한 양치기',cost:150,hp:125,dmg:10,armor:.3,sling:11,big:.5}],
     branches:[{id:'mighty',name:'다윗의 용사들',lock:'15 엔게디에서 열려요 (삼상 22:2)'},{id:'nazirite',name:'나실인',lock:'13 미스바에서 열려요 (삿 13:5)'}]},
@@ -504,6 +515,7 @@ const ENEMIES={
   shield:{name:'방패병',spirit:'교만의 영',ref:'잠 16:18',hp:100,speed:30,armor:.6,mres:0,bounty:12,lives:1,atk:6,rate:1.2,block:true,r:13,eye:'#ffd36b',kind:'pride',desc:'교만의 갑옷이 두꺼워요. 레위인의 빛이 잘 들어요.',verse:'교만은 패망의 선봉이요 거만한 마음은 넘어짐의 앞잡이니라 (잠 16:18)'},
   centurion:{name:'백부장',spirit:'완악함의 영',ref:'출 7:13',hp:140,speed:32,armor:.1,mres:.65,bounty:16,lives:2,atk:9,rate:1.1,block:true,r:13,eye:'#9fd3ff',kind:'hard',haste:{r:100,mul:1.3},desc:'완악한 마음이 거룩한 빛을 튕겨 내요. 주변 적을 재촉해 빠르게 해요.',verse:'그러나 바로의 마음이 완악하여 그들의 말을 듣지 아니하니 (출 7:13)'},
   chariot:{name:'전차',spirit:'자만의 영',ref:'시 20:7',hp:180,speed:56,armor:.5,mres:0,bounty:22,lives:2,block:false,r:22,eye:'#ffd36b',kind:'pride',desc:'빠르고 단단해요. 양치기가 막을 수 없어요.',verse:'어떤 사람은 병거, 어떤 사람은 말을 의지하나 우리는 여호와 우리 하나님의 이름을 자랑하리로다 (시 20:7)'},
+  archer:{name:'궁수',spirit:'미움의 영',ref:'레 19:17',hp:55,speed:32,armor:0,mres:.1,bounty:12,lives:1,atk:3,rate:1,block:true,r:12,eye:'#ff7a9a',kind:'hate',shoot:{r:130,dmg:3,rate:1.6,n:4},desc:'멀리서 양치기와 문지기를 쏴요. 쏠 때는 멈춰 서요. 파수꾼과 요단 동편 용사로 멀리서 먼저 맞히세요.',verse:'너는 네 형제를 마음으로 미워하지 말며 (레 19:17)'},
   giant:{name:'거인',spirit:'조롱의 영',ref:'삼상 17:10',hp:380,speed:22,armor:.25,mres:.15,bounty:40,lives:3,atk:16,rate:1.6,block:true,r:20,big:1.6,eye:'#ff9a5c',kind:'mock',roar:{cd:9,r:95,stun:1.6},desc:'느리지만 아주 튼튼해요. 고함을 지르면 곁의 양치기가 잠깐 기절해요. 여럿이 한꺼번에 치고, 갈렙의 표적으로 약하게 하세요.',verse:'그 블레셋 사람이 또 이르되 내가 오늘 이스라엘의 군대를 모욕하였으니 (삼상 17:10)'},
   og:{name:'옥',spirit:'큰 교만',ref:'신 3:11',hp:1700,speed:13,armor:.4,mres:.3,bounty:320,lives:20,atk:34,rate:1.8,block:true,boss:true,r:30,big:2.1,regen:.0035,eye:'#ffb36b',kind:'pride',desc:'바산의 힘: 체력이 계속 차요. 발구름: 곁의 양치기를 기절시켜요. 바위 던지기: 가까운 탑을 멈춰 세워요. 체력이 줄면 르바임 호위가 나와요.',verse:'르바임 족속의 남은 자는 바산 왕 옥뿐이었으며 그의 침상은 철 침상이라 (신 3:11)',banner:['바산 왕 옥이 나와요','바산 왕 옥이 그의 모든 백성을 거느리고 나와서 그들을 맞아 에드레이에서 싸우고자 하는지라 (민 21:33)']},
   pharaoh:{name:'바로',spirit:'큰 완악함',ref:'출 14:6',hp:1600,speed:15,armor:.3,mres:.6,bounty:250,lives:20,block:false,boss:true,r:34,eye:'#9fd3ff',kind:'hard',banner:['바로가 직접 병거를 몰고 와요','바로가 곧 그의 병거를 갖추고 그의 백성을 데리고 갈새 (출 14:6)'],desc:'완악한 마음: 피해를 받으면 보호막이 다시 생겨요. 병거 돌진: 가까운 탑을 줄로 묶어요.',verse:'바로가 곧 그의 병거를 갖추고 그의 백성을 데리고 갈새 (출 14:6)'}
@@ -564,7 +576,15 @@ const MENORAH={name:'순금 등잔대',cost:280,range:178,rate:1.5,dmg:38,jump:1
     {id:'seven',name:'일곱 등잔',ref:'출 25:37',costs:[120,120,120],desc:['빛이 적 넷까지 튀어요','다섯까지 튀어요','일곱까지 튀어요']},
     {id:'spirit',name:'오직 나의 영으로',ref:'슥 4:6',costs:[110,110,110],desc:['빛을 쏠 때마다 등잔대 둘레의 모든 적에게 거룩한 빛 10 (하늘의 적도)','둘레 피해 16 · 범위가 넓어져요','둘레 피해 24 · 범위가 더 넓어져요']},
     {id:'shine',name:'앞을 비추라',ref:'민 8:2',costs:[110,110,110],desc:['사거리가 8%, 첫 적 피해가 20% 늘어요','사거리 16% · 첫 적 피해 40%','사거리 24% · 첫 적 피해 60%']}]};
-const BRANCH={priest:PRIEST,choir:CHOIR,menorah:MENORAH};
+// 요단 동편 용사(파수꾼 4단계 B): 옥을 이기고 바산을 받으면 열린다(신 3:13). 가장 먼 거리에서 강한 한 발(킹덤러쉬 머스킷 탑 자리)
+const JORDAN={name:'요단 동편 용사',cost:270,range:240,rate:2.2,dmg:70,verse:'르우벤 자손과 갓 사람과 므낫세 반 지파에서 나가 싸울 만한 용사 곧 능히 방패와 칼을 들며 활을 당겨 싸움에 익숙한 자 (대상 5:18)',
+  names:['에셀','오바댜','엘리압','미스만나','예레미야','앗대','엘리엘','요하난','엘사밧','막반내'],   // 훗날 다윗에게 온 갓 사람 용사들(대상 12:9–13)
+  draw:[0,.08,.14,.2],deer:[0,.4,.7,1],
+  skills:[
+    {id:'draw',name:'활을 당겨',ref:'대상 5:18',costs:[140,140,140],desc:['화살을 맞은 적을 8% 확률로 바로 풀어 줘요 (보스는 안 되고 거인은 절반)','14% 확률','20% 확률']},
+    {id:'deer',name:'산의 사슴 같은 빠르기',ref:'대상 12:8',costs:[110,110,110],desc:['적을 풀어 주면 40% 확률로 곧바로 다음 화살을 쏴요','70% 확률','적을 풀어 주면 언제나 곧바로 다음 화살을 쏴요']},
+    {id:'lead',name:'앞장선 용사',ref:'수 4:12',costs:[110,110,110],desc:['사거리가 8% 늘고 하늘의 적에게 25% 더 세게 쏴요','사거리 16% · 하늘의 적 50%','사거리 24% · 하늘의 적 75%']}]};
+const BRANCH={priest:PRIEST,choir:CHOIR,menorah:MENORAH,jordan:JORDAN};
 const STAGES={
   1:{id:1,name:'방주',chap:'1장 · 약속',ref:'창 6–7',night:false,gold:300,cap:1,heroes:['noah'],hpMul:1.5,dmgMul:1,gapT:20,skin:'flood',
     paths:[[[-50,130],[90,140],[200,200],[230,300],[160,390],[180,480],[300,520],[420,470],[470,360],[560,270],[680,250],[760,320],[740,430],[800,520],[920,520],[980,440],[1050,382]],
@@ -805,11 +825,49 @@ const STAGES={
     victory:{title:'그를 두려워하지 말라',verse:'여호와께서 모세에게 이르시되 그를 두려워하지 말라 내가 그와 그의 백성과 그의 땅을 네 손에 넘겼나니 (민 21:34)',
       jesus:'놋뱀을 쳐다본 사람은 살았어요(민 21:9). 예수님은 "모세가 광야에서 뱀을 든 것 같이 인자도 들려야 하리니"라고 하셨어요(요 3:14–15). 거인보다 크신 하나님을 믿은 갈렙처럼, 십자가에 들리신 예수님을 바라보는 사람은 살아요.',
       deep:['열 정탐꾼은 거인 앞에서 "우리는 스스로 보기에도 메뚜기 같으니"라고 했어요(민 13:33). 사십 년 뒤, 하나님은 바로 그 거인 왕을 이기게 하셨어요.','"바산의 힘센 소들이 나를 둘렀으며"(시 22:12). 옥의 체력이 계속 차는 바산의 힘은 십자가 시편에도 나와요.','옥의 철 침상은 길이 아홉 규빗, 약 4미터였고 암몬 족속의 랍바에 남아 있었어요(신 3:11).','성경은 이스라엘이 옥과 그의 아들들과 백성을 쳐서 남은 자가 없게 했다고 기록해요(민 21:35). 게임은 사람을 붙잡은 어둠의 줄을 끊는 것으로 그렸어요.'],
-      unlock:'바산 땅이 르우벤·갓·므낫세 반 지파에게 돌아갔어요(신 3:13). 그 용사들인 요단 동편 용사는 9 여리고부터 파수꾼 4단계에서 고를 수 있어요. 다음 이야기 여리고는 다음 판에서 만나요.',
+      unlock:'바산 땅이 르우벤·갓·므낫세 반 지파에게 돌아갔어요(신 3:13). 그 용사들인 요단 동편 용사를 이제 파수꾼 4단계에서 고를 수 있어요.',
       comic:[
         {art:'v8a',dur:6.5,title:'그를 두려워하지 말라',verse:'내가 그와 그의 백성과 그의 땅을 네 손에 넘겼나니 (민 21:34)',fx:'rays',snd:'event',z0:1.1,z1:1.02},
         {art:'v8b',dur:6,title:'철 침상 아홉 규빗',verse:'그의 침상은 철 침상이라 … 그것을 사람의 보통 규빗으로 재면 그 길이가 아홉 규빗이요 너비가 네 규빗이니라 (신 3:11)',px:1},
-        {art:'v8c',dur:6.5,title:'바산을 므낫세 반 지파에게',verse:'옥의 나라였던 바산 온 땅은 므낫세 반 지파에게 주었노라 (신 3:13)',fx:'sparkle',snd:'victory'}]}}
+        {art:'v8c',dur:6.5,title:'바산을 므낫세 반 지파에게',verse:'옥의 나라였던 바산 온 땅은 므낫세 반 지파에게 주었노라 (신 3:13)',fx:'sparkle',snd:'victory'}]}},
+  // 9 여리고(10-12 사용자): 서쪽 성문에서 나온 적이 성을 둘러 북쪽·남쪽 길로 갈라졌다가 동쪽에서 만나 길갈로 간다. 셋째 무리부터 홀수 무리마다 행렬이 성을 한 바퀴(1~6일째), 다 지키면 7일째 일곱 바퀴와 함성
+  9:{id:9,name:'여리고',chap:'3장 · 광야에서 약속의 땅으로',ref:'수 6',night:false,gold:900,cap:4,heroes:['caleb','moses','noah'],hpMul:2.3,dmgMul:1.55,gapT:20,skin:'canaan',jericho:{junction:[650,330]},
+    paths:[[[252,330],[262,404],[335,458],[440,478],[545,458],[622,404],[650,330],[735,322],[805,255],[885,195],[985,185],[1062,245],[1050,345],[960,405],[935,495],[995,568],[1095,575],[1180,530]],
+           [[252,330],[262,256],[335,202],[440,182],[545,202],[622,256],[650,330],[735,322],[805,255],[885,195],[985,185],[1062,245],[1050,345],[960,405],[935,495],[995,568],[1095,575],[1180,530]]],
+    flags:[[318,336],[318,336]],   // 두 길 모두 서쪽 성문에서 나온다
+    spots:[[707,266],[1016,494],[512,520],[378,142],[1082,180],[188,371],[691,396],[1029,429],[1095,520],[766,217],[508,140],[378,518],[192,285],[967,136],[680,205],[1127,313],[774,361]],
+    heroHome:[700,330],lamp:[1212,515],npc:{art:'joshua',x:902,y:352,dir:-1},
+    waves:[
+      [['soldier',10,1.1,0,-1]],
+      [['soldier',8,1,0,-1],['archer',4,1.6,3,-1]],
+      [['raider',10,.7,0,-1],['archer',5,1.4,2,0],['shield',4,1.6,4,1]],
+      [['shield',8,1.3,0,-1],['soldier',10,.9,2,0],['archer',4,1.5,5,1]],
+      [['centurion',2,3,0,0],['archer',8,1.1,1,-1],['soldier',12,.8,3,1]],
+      [['raider',14,.55,0,-1],['shield',8,1.3,2,0],['archer',6,1.2,4,1]],
+      [['centurion',3,2.6,0,-1],['archer',10,1,1,-1],['shield',8,1.2,3,0]],
+      [['soldier',16,.7,0,-1],['archer',8,1,2,1],['centurion',3,2.6,5,0]],
+      [['shield',12,1.1,0,-1],['archer',10,.9,2,-1],['raider',12,.5,4,0]],
+      [['centurion',4,2.4,0,-1],['archer',12,.85,1,-1],['soldier',14,.7,3,1]],
+      [['shield',14,1,0,-1],['archer',12,.8,2,-1],['centurion',3,2.5,5,1]],
+      [['raider',20,.45,0,-1],['archer',14,.8,2,-1],['shield',10,1.1,4,0]],
+      [['centurion',5,2.2,0,-1],['archer',16,.7,1,-1],['soldier',18,.6,3,-1]],
+      [['shield',16,.9,0,-1],['archer',18,.65,2,-1],['centurion',6,2,4,-1],['raider',16,.45,6,-1]]],
+    story:[
+      {art:'s9a',text:'모세는 느보 산 꼭대기에서 약속의 땅을 멀리 바라보았어요. 그리고 모압 땅에서 죽었어요. 그 뒤로 모세 같은 선지자는 다시 일어나지 않았어요.',verse:'그 후에는 이스라엘에 모세와 같은 선지자가 일어나지 못하였나니 모세는 여호와께서 대면하여 아시던 자요 (신 34:10)'},
+      {art:'s9b',text:'하나님은 여호수아에게 백성을 이끌고 요단을 건너 약속의 땅으로 들어가라고 하셨어요.',verse:'내가 네게 명령한 것이 아니냐 강하고 담대하라 두려워하지 말며 놀라지 말라 네가 어디로 가든지 네 하나님 여호와가 너와 함께 하느니라 (수 1:9)'},
+      {art:'s9c',text:'여호수아가 보낸 두 정탐꾼을 여리고의 라합이 숨겨 주었어요. 라합은 성벽 위 자기 집 창문에서 줄로 그들을 달아 내리고, 약속의 표로 창문에 붉은 줄을 매었어요.',verse:'너희의 하나님 여호와는 위로는 하늘에서도 아래로는 땅에서도 하나님이시니라 (수 2:11)'},
+      {art:'s9d',text:'제사장들이 여호와의 궤를 메고 요단에 발을 담그자 흐르던 물이 멈추었어요. 백성은 마른 땅으로 건넜고, 르우벤·갓·므낫세 반 지파의 용사들이 무장하고 앞장섰어요. 파수꾼 4단계에서 요단 동편 용사를 고를 수 있어요.',verse:'여호와의 언약궤를 멘 제사장들은 요단 가운데 마른 땅에 굳게 섰고 그 모든 백성이 요단을 건너기를 마칠 때까지 모든 이스라엘은 그 마른 땅으로 건너갔더라 (수 3:17)'},
+      {art:'s9e',text:'백성은 요단에서 가져온 열두 돌을 길갈에 세웠어요. 그곳에서 유월절을 지켰고, 그 땅의 곡식을 먹은 다음 날부터 만나가 그쳤어요.',verse:'이는 땅의 모든 백성에게 여호와의 손이 강하신 것을 알게 하며 너희가 너희의 하나님 여호와를 항상 경외하게 하려 하심이라 (수 4:24)'},
+      {art:'s9f',text:'여리고 가까이에서 여호수아는 칼을 빼어 든 이를 만났어요. 그는 "여호와의 군대 대장"이었어요. 이 싸움은 여호수아의 싸움이 아니라 여호와의 싸움이었어요.',verse:'여호와의 군대 대장이 여호수아에게 이르되 네 발에서 신을 벗으라 네가 선 곳은 거룩하니라 하니 여호수아가 그대로 행하니라 (수 5:15)'},
+      {art:'s9g',text:'여리고는 성문을 굳게 닫았어요. 하나님은 엿새 동안 날마다 성을 한 바퀴씩 돌고, 일곱째 날에는 일곱 바퀴를 돌라고 하셨어요. 청지기여, 이레 동안 길갈 진영을 지켜 주세요.',verse:'보라 내가 여리고와 그 왕과 용사들을 네 손에 넘겨 주었으니 (수 6:2)'}],
+    victory:{title:'여호와께서 이 성을 주셨느니라',verse:'외치라 여호와께서 너희에게 이 성을 주셨느니라 (수 6:16)',
+      jesus:'라합은 예수님의 족보에 이름이 있어요. "살몬은 라합에게서 보아스를 낳고"(마 1:5). 옛 교회 사람들은 창문에 매단 붉은 줄을 보며 예수님의 피를 떠올렸어요. 유월절 문설주에 피를 바른 집처럼, 붉은 줄을 맨 집 안에 있던 사람은 살았어요(수 2:18–19).',
+      deep:['여호수아 6장 1절은 여리고가 굳게 닫혔다고 하지만, 24장 11절은 "여리고 주민들이 … 너희와 싸우기로"라고 말해요. 게임은 여리고 사람들이 성 밖으로 나와 싸우는 모습으로 그렸어요.','엿새 동안 백성은 한마디도 하지 않았어요(수 6:10). 외친 날은 하나님이 정하신 날이었어요.','성을 무너뜨린 것은 함성이 아니라 하나님이에요. "믿음으로 칠 일 동안 여리고를 도니 성이 무너졌으며"(히 11:30).','성경은 성 안의 모든 것을 진멸했다고 기록해요(수 6:21). 게임은 사람을 붙잡은 어둠의 줄을 끊는 것으로 그렸어요. 라합의 집은 성벽 위에 있었는데, 정탐꾼들은 약속대로 그 집에 들어가 라합의 가족을 이끌어 냈어요(6:22–23). 게임은 약속이 지켜진 것을 보이려고 붉은 줄이 걸린 집 한 칸을 남겨 두었어요. 성경이 그 집이 서 있었다고 따로 말하지는 않아요.'],
+      unlock:'이레 동안 여리고 둘레를 지켜 냈어요. 다음 이야기 기브온은 다음 판에서 만나요.',
+      comic:[
+        {art:'v9a',dur:6.5,title:'성벽이 무너져 내린지라',verse:'백성이 나팔 소리를 들을 때에 크게 소리 질러 외치니 성벽이 무너져 내린지라 (수 6:20)',fx:'rays',snd:'event',z0:1.1,z1:1.02},
+        {art:'v9b',dur:6,title:'붉은 줄',verse:'정탐한 젊은이들이 들어가서 라합과 그의 부모와 그의 형제와 그에게 속한 모든 것을 이끌어 내고 (수 6:23)',px:1},
+        {art:'v9c',dur:6.5,title:'오늘까지 이스라엘 중에',verse:'그가 오늘까지 이스라엘 중에 거주하였으니 (수 6:25)',fx:'sparkle',snd:'victory'}]}}
 };
 const MAPNODES=[[110,560,'방주'],[190,495,'아브람의 길'],[280,450,'롯을 구하라'],[370,505,'갈대 상자'],[455,565,'미디안 우물'],[550,520,'홍해'],[625,450,'르비딤'],[690,380,'에드레이'],[640,300,'여리고'],[555,245,'기브온'],[635,170,'기손 강'],[735,140,'하롯 샘'],[825,185,'미스바'],[895,255,'엘라 골짜기'],[980,300,'엔게디'],[1060,255,'시글락'],[1115,185,'브라가 골짜기'],[1170,130,'도단'],[1110,75,'예루살렘 포위'],[1000,70,'무너진 성벽']];
 const CODEX=[
@@ -823,14 +881,15 @@ const CODEX=[
   {cat:'탑',name:'제사장',k:'레위인 4단계',verse:PRIEST.verse,desc:'아군 병사를 살려 두는 유일한 탑이에요. 축복, 성막 문지기, 싹 난 지팡이를 배워요.',deep:'아론보다 먼저 멜기세덱이 있었어요. 예수님은 "멜기세덱의 반차를 따르는 영원한 제사장"이세요(히 7:17).'},
   {cat:'탑',name:'찬양대',k:'레위인 4단계',verse:CHOIR.verse,desc:'노래로 적을 멈춰 세우는 탑이에요. 노래를 시작할 때에, 미리암의 소고, 서로 치다를 배워요. 홍해를 이기면 열려요.',deep:'바다를 건넌 백성은 노래했고 미리암이 소고를 잡았어요(출 15). 여호사밧 때 찬양대는 군대 앞에서 노래했고, 싸움은 하나님이 하셨어요. "이 전쟁은 너희에게 속한 것이 아니요 하나님께 속한 것이니라"(대하 20:15).'},
   {cat:'탑',name:'순금 등잔대',k:'장인 4단계',verse:MENORAH.verse,desc:'거룩한 빛이 적에서 적으로 튀는 탑이에요. 장인 계열에서 유일하게 하늘의 적도 맞혀요. 일곱 등잔, 오직 나의 영으로(쏠 때마다 둘레 공격), 앞을 비추라를 배워요. 르비딤을 지켜 내면 열려요.',deep:'브살렐은 순금 한 달란트를 쳐서 등잔대와 일곱 등잔을 만들었어요(출 37:17–24). 등불은 저녁부터 아침까지 꺼지지 않게 했어요(출 27:20–21). 스가랴는 순금 등잔대 환상에서 "힘으로 되지 아니하며 능력으로 되지 아니하고 오직 나의 영으로 되느니라"는 말씀을 들었어요(슥 4:2–6). 예수님은 "나는 세상의 빛이니"라고 하셨어요(요 8:12).'},
+  {cat:'탑',name:'요단 동편 용사',k:'파수꾼 4단계',verse:JORDAN.verse,desc:'가장 먼 거리에서 강한 화살 한 발을 쏘는 탑이에요. 활을 당겨, 산의 사슴 같은 빠르기, 앞장선 용사를 배워요.',deep:'르우벤·갓·므낫세 반 지파는 요단 동편 땅을 먼저 받았지만, 형제들보다 앞서 무장하고 요단을 건넜어요(수 4:12–13). 탑을 누르면 나오는 이름은 훗날 광야의 요새로 다윗을 찾아온 갓 사람 용사들이에요. "그의 얼굴은 사자 같고 빠르기는 산의 사슴 같으니"(대상 12:8).'},
   {cat:'탑',name:'성막 문지기',k:'제사장 기술',verse:'악인의 장막에 사는 것보다 내 하나님의 성전 문지기로 있는 것이 좋사오니 (시 84:10)',desc:'제사장이 길에 세우는 풍채 좋은 문지기예요. 적을 막아서고, 쓰러지면 잠시 뒤 다시 서요. 3단계가 되면 한꺼번에 둘을 막아요. 눌러서 옮길 수 있어요.',deep:'문지기도 레위 사람이었고, 반열을 따라 성막 문을 지켰어요(대상 9:23, 26). 문지기 가운데는 용사가 많았다고 기록해요(대상 26:6). 하나님의 집 문을 지키는 것도 예배의 섬김이었어요. 게임의 문지기는 불러낸 것이 아니라 제사장이 세운 사람이에요.'},
   {cat:'하나님의 사람',name:'노아',k:'장인 영웅',verse:'노아는 여호와께 은혜를 입었더라 (창 6:8)',desc:'고페르 나무 방벽, 역청, 비둘기, 짐승들이 둘씩.',deep:HEROES.noah.man+' 예수님 찾기: '+HEROES.noah.jesus+'.'},
   {cat:'하나님의 사람',name:'모세',k:'레위인 영웅',verse:'모세가 손을 들면 이스라엘이 이기고 (출 17:11)',desc:'빛나는 얼굴, 반석의 물, 놋뱀, 손을 들다.',deep:HEROES.moses.man+' 예수님 찾기: '+HEROES.moses.jesus+'.'},
   {cat:'하나님의 사람',name:'갈렙',k:'파수꾼 영웅 · 8 에드레이',verse:'내 종 갈렙은 그 마음이 그들과 달라서 나를 온전히 따랐은즉 (민 14:24)',desc:'정탐, 이 산지를 내게 주소서, 그들을 두려워하지 말라, 여전히 강건하니, 능히 이기리라.',deep:HEROES.caleb.man+' 예수님 찾기: '+HEROES.caleb.jesus+'.'},
-  {cat:'하나님의 사람',name:'여호수아',k:'7 르비딤 · 이 판에서만',verse:'모세가 여호수아에게 이르되 우리를 위하여 사람들을 택하여 나가서 아말렉과 싸우라 (출 17:9)',desc:'칼날로, 강하고 담대하라, 모세의 수종자, 여호와 닛시.',deep:HEROES.joshua.man+' 예수님 찾기: '+HEROES.joshua.jesus+'.'},
+  {cat:'하나님의 사람',name:'여호수아',k:'7 르비딤 영웅 · 9 여리고',verse:'모세가 여호수아에게 이르되 우리를 위하여 사람들을 택하여 나가서 아말렉과 싸우라 (출 17:9)',desc:'칼날로, 강하고 담대하라, 모세의 수종자, 여호와 닛시.',deep:HEROES.joshua.man+' 예수님 찾기: '+HEROES.joshua.jesus+'.'},
   {cat:'하나님의 사람',name:'연단',k:'영웅 성장',verse:'환난은 인내를, 인내는 연단을, 연단은 소망을 이루는 줄 앎이로다 (롬 5:3–4)',desc:'영웅은 싸울수록 경험이 쌓여 연단돼요. 레벨이 오르면 연단 점수를 받고, 싸움을 마친 뒤 지도의 연단 화면에서 기술을 키우거나 언제든 다시 배치할 수 있어요.',deep:'연단은 영웅이 스스로를 높이는 일이 아니라 하나님이 사람을 빚어 가시는 과정이에요. "너희 믿음의 확실함은 불로 연단하여도 없어질 금보다 더 귀하여"(벧전 1:7).'},
   {cat:'하나님의 사람',name:'아브람',k:'2·3 스테이지',verse:'아브람이 여호와를 믿으니 여호와께서 이를 그의 의로 여기시고 (창 15:6)',desc:'갈 바를 알지 못했지만 말씀을 따라 길을 떠난 사람이에요(히 11:8).',deep:'아브람이 의롭다 여김을 받은 건 공로가 아니라 믿음 때문이었어요. 바울은 이 구절로 은혜의 구원을 설명해요(롬 4:3–5).'},
-  ...['soldier','raider','shield','centurion','chariot','giant','pharaoh','og'].map(t=>({cat:'적',name:ENEMIES[t].name,k:ENEMIES[t].spirit,verse:ENEMIES[t].verse,desc:ENEMIES[t].desc,deep:t==='soldier'?'게임의 군사는 악당이 아니라 어둠에 붙잡힌 사람들이에요. 이사야는 "내 백성 애굽이여 … 복이 있을지어다"(사 19:25)라는 날을 내다봤어요.':t==='giant'?'열 정탐꾼은 거인 앞에서 스스로를 메뚜기처럼 여겼지만(민 13:33), 갈렙은 "그들은 우리의 먹이라 … 그들을 두려워하지 말라"고 했어요(민 14:9).':t==='og'?'옥은 르바임의 마지막 왕이었어요(신 3:11). 성경은 이스라엘이 옥을 쳐서 남은 자가 없게 했다고 기록해요(민 21:35). 게임은 그 장면을 그리지 않고 어둠의 줄을 끊는 것으로 그렸어요.':t==='pharaoh'?'"여호와가 누구이기에 내가 그의 목소리를 듣고"(출 5:2). 성경은 애굽 군대가 바다에 잠겼다고 기록해요(출 14:28). 게임은 그 장면을 그리지 않았어요.':'병종은 게임 내내 같고, 시대와 민족에 따라 겉모습만 바뀌어요.'})),
+  ...['soldier','raider','shield','centurion','chariot','giant','archer','pharaoh','og'].map(t=>({cat:'적',name:ENEMIES[t].name,k:ENEMIES[t].spirit,verse:ENEMIES[t].verse,desc:ENEMIES[t].desc,deep:t==='archer'?'레위기는 "미워하지 말며" 바로 다음에 "네 이웃 사랑하기를 네 자신과 같이 사랑하라"(레 19:18)고 말해요. 예수님은 이 말씀을 가장 큰 계명 가운데 하나로 꼽으셨어요(마 22:39).':t==='soldier'?'게임의 군사는 악당이 아니라 어둠에 붙잡힌 사람들이에요. 이사야는 "내 백성 애굽이여 … 복이 있을지어다"(사 19:25)라는 날을 내다봤어요.':t==='giant'?'열 정탐꾼은 거인 앞에서 스스로를 메뚜기처럼 여겼지만(민 13:33), 갈렙은 "그들은 우리의 먹이라 … 그들을 두려워하지 말라"고 했어요(민 14:9).':t==='og'?'옥은 르바임의 마지막 왕이었어요(신 3:11). 성경은 이스라엘이 옥을 쳐서 남은 자가 없게 했다고 기록해요(민 21:35). 게임은 그 장면을 그리지 않고 어둠의 줄을 끊는 것으로 그렸어요.':t==='pharaoh'?'"여호와가 누구이기에 내가 그의 목소리를 듣고"(출 5:2). 성경은 애굽 군대가 바다에 잠겼다고 기록해요(출 14:28). 게임은 그 장면을 그리지 않았어요.':'병종은 게임 내내 같고, 시대와 민족에 따라 겉모습만 바뀌어요.'})),
   {cat:'하나님이 하신 일',name:'닫힌 방주의 문',k:'1 방주',verse:'여호와께서 그를 들여보내고 문을 닫으시니라 (창 7:16)',desc:'방주가 다 지어지면 하나님이 문을 닫으세요.',deep:'구원의 문은 하나뿐이에요. 예수님은 "내가 문이니"(요 10:9)라고 하셨어요.'},
   {cat:'하나님이 하신 일',name:'하늘의 뭇별',k:'2 아브람의 길',verse:'하늘을 우러러 뭇별을 셀 수 있나 보라 … 네 자손이 이와 같으리라 (창 15:5)',desc:'지도에 모으는 약속의 별은 이 약속에서 이름을 가져왔어요.',deep:'"너희가 그리스도의 것이면 곧 아브라함의 자손이요 약속대로 유업을 이을 자니라"(갈 3:29).'},
   {cat:'하나님이 하신 일',name:'멜기세덱의 축복',k:'3 롯을 구하라',verse:'살렘 왕 멜기세덱이 떡과 포도주를 가지고 나왔으니 그는 지극히 높으신 하나님의 제사장이었더라 (창 14:18)',desc:'3스테이지를 이기면 제사장 탑이 열려요.',deep:'예수님은 "멜기세덱의 반차를 따르는 영원한 제사장"이세요(히 7:17).'},
@@ -841,6 +900,12 @@ const CODEX=[
   {cat:'하나님이 하신 일',name:'여호와 닛시',k:'7 르비딤',verse:'모세가 제단을 쌓고 그 이름을 여호와 닛시라 하고 (출 17:15)',desc:'모세가 손을 들면 이스라엘이 이기고, 지친 팔은 아론과 훌이 붙들었어요. 게임에서는 산 위의 모세를 눌러 팔을 붙들게 해요.',deep:'"여호와 닛시"는 "여호와는 나의 깃발"이라는 뜻이에요. 아말렉은 뒤에 처진 약한 자들을 쳤어요(신 25:18). 하나님은 약한 자를 잊지 않으세요.'},
   {cat:'하나님이 하신 일',name:'놋뱀',k:'7 → 8',verse:'뱀에게 물린 자가 놋뱀을 쳐다본즉 모두 살더라 (민 21:9)',desc:'불뱀에 물린 백성이 장대 위의 놋뱀을 쳐다보면 살았어요.',deep:'예수님은 "모세가 광야에서 뱀을 든 것 같이 인자도 들려야 하리니"라고 하셨어요(요 3:14). 훗날 사람들이 놋뱀에게 분향하자 히스기야가 그것을 부쉈어요(왕하 18:4). 구원은 놋뱀이 아니라 하나님께 있어요.'},
   {cat:'하나님이 하신 일',name:'바산을 주심',k:'8 에드레이',verse:'옥의 나라였던 바산 온 땅은 므낫세 반 지파에게 주었노라 (신 3:13)',desc:'옥을 이기면 바산 땅이 므낫세 반 지파에게 돌아가요. 그 용사들이 요단 동편 용사예요.',deep:'르우벤, 갓, 므낫세 반 지파는 요단 동편 땅을 먼저 받았지만, 형제들이 땅을 다 얻을 때까지 앞장서서 함께 싸웠어요(수 4:12).'},
+  {cat:'하나님의 사람',name:'라합',k:'9 여리고',verse:'믿음으로 기생 라합은 정탐꾼을 평안히 영접하였으므로 순종하지 아니한 자와 함께 멸망하지 아니하였도다 (히 11:31)',desc:'여리고 성벽 위에 살던 가나안 여인이에요. 하나님이 이 땅을 이스라엘에게 주신 줄 알고 정탐꾼을 숨겼어요(수 2:9–11).',deep:'라합은 보아스의 어머니가 되어 다윗과 예수님의 족보에 이름이 올라요(마 1:5). 야고보도 라합을 믿음을 행함으로 보인 사람으로 들어요(약 2:25). 하나님의 집에는 이방 사람도, 지난 삶이 부끄러운 사람도 믿음으로 들어와요.'},
+  {cat:'하나님이 하신 일',name:'마른 땅으로 건넌 요단',k:'8 → 9',verse:'여호와의 언약궤를 멘 제사장들은 요단 가운데 마른 땅에 굳게 섰고 (수 3:17)',desc:'제사장들이 궤를 메고 물에 발을 담그자 흐르던 요단이 멈췄어요. 백성은 열두 돌을 길갈에 세웠어요.',deep:'열두 돌은 "땅의 모든 백성에게 여호와의 손이 강하신 것을" 알리려고 세운 기념이에요(수 4:24). 홍해를 건넌 세대의 자녀들이 이번에는 요단을 마른 땅으로 건넜어요.'},
+  {cat:'하나님이 하신 일',name:'무너진 성벽',k:'9 여리고',verse:'백성이 나팔 소리를 들을 때에 크게 소리 질러 외치니 성벽이 무너져 내린지라 (수 6:20)',desc:'엿새 동안 행렬이 날마다 성을 한 바퀴씩 돌고, 일곱째 날에 일곱 바퀴를 돈 뒤 함성을 지르면 성벽이 무너져요. 행렬의 나팔이 지나가면 적이 잠깐 멈춰요.',deep:'성벽을 무너뜨린 것은 함성이 아니라 하나님이에요(히 11:30). 엿새 동안 백성은 한마디도 하지 않고 말씀대로 돌았어요(수 6:10). 행렬이 도는 동안 음악이 잦아드는 것도 그 침묵을 따라 했어요.'},
+  {cat:'숨은 이야기',egg:'bones',name:'요셉의 유골을 메고 나왔다',k:'6 홍해',verse:'모세가 요셉의 유골을 가졌으니 (출 13:19)',desc:'요셉은 죽기 전에 "하나님이 반드시 너희를 찾아오시리니 너희는 내 유골을 여기서 가지고 나가라"고 맹세하게 했어요. 사백 년 뒤 백성은 그 약속을 메고 애굽을 나왔어요.',deep:'"믿음으로 요셉은 임종시에 이스라엘 자손들이 떠날 것을 말하고 또 자기 뼈를 위하여 명하였으며"(히 11:22). 요셉의 뼈는 훗날 세겜에 묻혀요(수 24:32).'},
+  {cat:'숨은 이야기',egg:'bed',name:'옥의 철 침상을 재어 보았다',k:'8 에드레이',verse:'그의 침상은 철 침상이라 … 그 길이가 아홉 규빗이요 너비가 네 규빗이니라 (신 3:11)',desc:'옥의 철 침상은 길이가 아홉 규빗, 약 4미터였어요. 그렇게 큰 왕도 하나님 앞에서는 두렵지 않았어요.',deep:'열 정탐꾼은 거인 앞에서 스스로를 메뚜기처럼 여겼지만(민 13:33), 하나님은 "그를 두려워하지 말라"고 하셨어요(민 21:34).'},
+  {cat:'숨은 이야기',egg:'cord',name:'라합의 탈출을 도와주었다',k:'9 여리고',verse:'우리를 달아 내린 창문에 이 붉은 줄을 매고 (수 2:18)',desc:'성벽 위 라합의 집 창문에 붉은 줄이 걸려 있어요. 그 집 안에 있던 라합의 가족은 모두 살았어요.',deep:'라합은 예수님의 족보에 있어요. "살몬은 라합에게서 보아스를 낳고"(마 1:5).'},
   {cat:'하나님이 하신 일',name:'부르짖음',k:'플레이어 기술',verse:'이스라엘 자손이 심히 두려워하여 여호와께 부르짖고 (출 14:10)',desc:'누른 곳에 하늘에서 빛이 내려와요. 범위 피해를 주고 기절시켜요.',deep:'백성은 믿음이 좋아서가 아니라 두려워서 부르짖었어요. 그래도 하나님은 응답하셨어요. "환난 날에 나를 부르라"(시 50:15).'},
   {cat:'하나님이 하신 일',name:'세 겹 줄',k:'플레이어 기술',verse:'두 사람이면 맞설 수 있나니 세 겹 줄은 쉽게 끊어지지 아니하느니라 (전 4:12)',desc:'누른 길 위에 장정 둘이 잠깐 나타나 막아서요.',deep:'마귀가 사람을 붙잡는 줄과, 서로를 붙드는 세 겹 줄이 대비돼요.'}
 ];
@@ -862,7 +927,7 @@ function newGame(sid,heroKind){
     shake:0,flash:0,tut:sid===1?{step:-1,shown:{}}:null,over:false,scene:null,boss:null,dawn:0,sea:0,arkShown:0,seen:new Set(),timers:[],
     hardTold:false,bindTold:false,firstPriest:true,stars:0,stat:{unitDown:0,heroDown:0},
     hill:S.hill?{x:S.hill.x,y:S.hill.y,up:true,st:1,helped:false,told:false,anim:0}:null,banner:null,brave:null,rearTold:false,rearOpen:S.rear==null,rearAnim:null,rains:[]};
-  G.hero=makeHero(heroKind,S.heroHome);
+  G.hero=makeHero(heroKind,S.heroHome);musicDuck(false);$('bShout').hidden=true;
   if(G.tut)later(.6,()=>tut(0));else later(.8,()=>toast('적이 길 끝의 <b>빛나는 문</b>을 지나면 약속의 등불이 약해져요.',6));
 }
 function later(s,fn){G.timers.push({t:s,fn});}
@@ -898,6 +963,77 @@ function drawHill(c){const m=G.hill,up=m.up,a=up&&ART.moses_hands?ART.moses_hand
   const w=44,x0=m.x-w/2,y0=m.y-84;c.save();RR(c,x0-2,y0-2,w+4,9,4);c.fillStyle='rgba(20,10,4,.7)';c.fill();RR(c,x0,y0,Math.max(1,w*m.st),5,2.5);c.fillStyle=up?'#ffd36b':'#c4513a';c.fill();c.restore();
   if(!up){const b=.5+.5*Math.sin(G.t*8);c.save();c.globalAlpha=.6+.4*b;C(c,m.x+24,m.y-92,11);FS(c,'#c4513a',2,'#fff3d6');c.fillStyle='#fff';c.font=`16px ${UIF}`;c.textAlign='center';c.textBaseline='middle';c.fillText('!',m.x+24,m.y-91);c.restore();}}
 
+/* ---------- 이레 동안(9 여리고, 수 6): 셋째 무리부터 홀수 무리마다 행렬이 진영에서 나와 성을 한 바퀴 돌고 돌아간다(6:11). 나팔이 지나가면 적이 멈칫한다. 다 지키면 7일째 일곱 바퀴와 함성(6:15–20) ---------- */
+const MARCH='ssstttttttasss'.split('');   // 무장한 선봉 → 양각 나팔 부는 제사장 일곱 → 덮인 궤 → 후군(수 6:9, 13)
+const MARCH_OFF=(()=>{const g={s:21,t:19,a:30},o=[0];for(let i=1;i<MARCH.length;i++)o.push(o[i-1]+(g[MARCH[i]]+g[MARCH[i-1]])/2);return o;})();
+const MARCH_LEN=MARCH_OFF[MARCH_OFF.length-1];
+const DAY_VERSE=[null,'너희 모든 군사는 그 성을 둘러 성 주위를 매일 한 번씩 돌되 엿새 동안을 그리하라 (수 6:3)','그 둘째 날에도 그 성을 한 번 돌고 진영으로 돌아오니라 엿새 동안을 이같이 행하니라 (수 6:14)','너희는 외치지 말며 너희 음성을 들리게 하지 말며 너희 입에서 아무 말도 내지 말라 (수 6:10)',
+  '그 무장한 자들은 나팔 부는 제사장들 앞에서 행진하며 후군은 궤 뒤를 따르고 제사장들은 나팔을 불며 행진하더라 (수 6:9)','제사장 일곱은 양각 나팔 일곱을 잡고 여호와의 궤 앞에서 계속 행진하며 나팔을 불고 (수 6:13)','여호와의 궤가 그 성을 한 번 돌게 하고 그들이 진영으로 들어와서 진영에서 자니라 (수 6:11)'];
+function polyPath(pts){const cum=[0];for(let i=1;i<pts.length;i++)cum.push(cum[i-1]+Math.hypot(pts[i][0]-pts[i-1][0],pts[i][1]-pts[i-1][1]));return{pts,cum,len:cum[cum.length-1]};}
+// 진영에서 동쪽 만나는 곳까지(appr), 만나는 곳에서 남쪽 길을 거슬러 성문까지 갔다가 북쪽 길로 돌아오는 한 바퀴(ring)
+function marchRoutes(){const J=G.S.jericho.junction,p0=G.paths[0],p1=G.paths[1],j0=nearest(p0,J[0],J[1]).d,j1=nearest(p1,J[0],J[1]).d;
+  const add=(arr,p,a,b)=>{const n=Math.max(2,Math.ceil(Math.abs(b-a)/6));for(let i=arr.length?1:0;i<=n;i++){const q=at(p,a+(b-a)*i/n);arr.push([q.x,q.y]);}};
+  const appr=[],ring=[];add(appr,p0,p0.len,j0);add(ring,p0,j0,0);add(ring,p1,0,j1);return{appr,ring};}
+function musicDuck(on){if(Snd.ac&&Snd.mus)Snd.mus.gain.setTargetAtTime(on?.05:.3,Snd.ac.currentTime,.4);}   // 너희 음성을 들리게 하지 말며(수 6:10): 행렬이 도는 동안은 나팔 소리만
+function marchDay(d){G.day=d;const r=marchRoutes();G.march={p:polyPath([...r.appr,...r.ring.slice(1),...r.appr.slice(0,-1).reverse()]),s:0,speed:76,blowT:1.2,t:0};musicDuck(true);
+  banner(`${d}일째`,DAY_VERSE[d],4.5);Snd.play('shofar');
+  if(d===1)later(4.8,()=>toast('<b>이레 동안</b><br>행렬이 진영에서 나와 성을 한 바퀴 돌고 돌아가요. 나팔 소리가 지나가면 적이 잠깐 멈춰 서요. 행렬은 싸우지 않고 다치지도 않아요. (수 6:3–4)',7));}
+function jerichoWave(i){
+  if(i===0){banner('여리고 주민들이 싸우러 나와요','너희가 요단을 건너 여리고에 이른즉 여리고 주민들 … 이 너희와 싸우기로 내가 그들을 너희의 손에 넘겨 주었으며 (수 24:11)',5);later(5.3,()=>toast('적이 서쪽 <b>성문</b>에서 나와 북쪽 길과 남쪽 길로 갈라져요. 두 길은 동쪽에서 다시 만나요.',6));}
+  if(i>=2&&i%2===0&&i/2<=6)marchDay(i/2);}
+function marchPos(m,i){const sd=m.s-MARCH_OFF[i];if(sd<0||sd>m.p.len)return null;const q=at(m.p,sd);return{x:q.x,y:q.y,dir:q.dx>=0?1:-1};}
+function updMarch(dt){const m=G.march;if(!m)return;m.t+=dt;const F=G.finale;
+  if(!m.halt){let sp=m.speed;if(F){const k=m.s-m.appr;sp=k<0?330:300+70*Math.floor(k/m.ringLen);}m.s+=sp*dt;}
+  if(F&&!m.halt){const lap=Math.floor((m.s-m.appr)/m.ringLen)+1;if(lap>F.lap&&lap<=7){F.lap=lap;F.lapT=0;Snd.play('shofar');}
+    if(m.s>=m.appr+7*m.ringLen){m.s=m.appr+7*m.ringLen;m.halt=true;F.st='blast';F.t=0;Snd.play('shofarLong');}}
+  let vis=false;
+  for(let i=0;i<MARCH.length;i++){const q=marchPos(m,i);if(!q)continue;vis=true;if(MARCH[i]==='s'||F)continue;
+    for(const e of G.enemies){if(!alive(e)||e.def.boss||e.marchDay===G.day||d2(e.x,e.y,q.x,q.y)>58*58)continue;e.marchDay=G.day;e.stun=Math.max(e.stun,1.5);fxRing(e.x,e.y,20,'255,236,170');}}
+  m.blowT-=dt;if(m.blowT<=0&&vis&&!m.halt){m.blowT=3.2;Snd.play('shofar');}
+  if(!F&&m.s-MARCH_LEN>m.p.len){G.march=null;musicDuck(false);}}
+function drawMarcher(c,k,q,i){const t=G.t+i*.37,a=ART[k==='s'?'p_soldier':k==='t'?'p_trumpet':'p_ark'],still=G.march&&G.march.halt;
+  if(a){sprite(c,a,q.x,q.y,{dir:q.dir,t,pose:still?'idle':'walk'});return;}
+  if(k==='a'){c.save();c.translate(q.x,q.y);c.fillStyle='rgba(30,20,10,.25)';E(c,0,0,26,7);c.fill();for(const dx of [-16,16])chibi(c,dx,0,{s:.8,dir:q.dir,t,pose:still?'idle':'walk',skin:'#d39a68',cloth:'#f4efe2',head:'cloth',hc:'#f4efe2',item:null});c.strokeStyle=OL;c.lineWidth=3;L(c,-24,-30,24,-30);c.strokeStyle='#8a5a30';c.lineWidth=1.8;L(c,-24,-30,24,-30);RR(c,-12,-44,24,14,3);FS(c,'#2f4f9a',1.8);c.restore();return;}
+  chibi(c,q.x,q.y,k==='s'?{s:.85,dir:q.dir,t,pose:still?'idle':'walk',skin:'#d39a68',cloth:'#b08a5a',head:'cloth',hc:'#9a8a74',item:'spear'}:{s:.85,dir:q.dir,t,pose:still?'idle':'walk',skin:'#d9a26f',cloth:'#f4efe2',head:'cloth',hc:'#f4efe2',item:'staff'});}
+// 7일째(수 6:15–20): 일곱 바퀴 → 길게 부는 나팔 → 여호수아 "외치라" → [함성!] → 성벽이 무너져 내린다 → 승리 그림 만화
+function startDay7(){G.phase='finale';G.day=7;closeMenu();G.aim=null;G.heroSel=false;G.unitSel=null;ui.info(null);
+  const r=marchRoutes();let pts=[...r.appr];for(let k=0;k<7;k++)pts=pts.concat(r.ring.slice(1));
+  G.march={p:polyPath(pts),s:0,speed:330,blowT:1,t:0,appr:polyPath(r.appr).len,ringLen:polyPath(r.ring).len};
+  G.finale={st:'laps',t:0,lap:0,lapT:0,dawn:0};musicDuck(true);Snd.play('shofar');
+  banner('7일째 새벽','일곱째 날 새벽에 그들이 일찍이 일어나서 전과 같은 방식으로 그 성을 일곱 번 도니 (수 6:15)',5);}
+function updFinale(dt){const F=G.finale;if(!F)return;F.t+=dt;F.dawn=Math.min(1,F.dawn+dt/2.5);F.lapT+=dt;
+  if(F.st==='blast'){if(F.t>2.4){F.st='shout';F.t=0;banner('외치라','여호와께서 너희에게 이 성을 주셨느니라 (수 6:16)',600);$('bShout').hidden=false;Snd.play('event');}}
+  else if(F.st==='shout'){if(F.t>7&&!F.hinted){F.hinted=true;toast('가운데 <b>함성!</b>을 눌러 크게 외쳐요.',5);}}
+  else if(F.st==='fall'){G.fallK=clamp(F.t/1.8,0,1);
+    if(F.t<3.2){const n=reduceMotion?1:3;for(let i=0;i<n;i++){const a=rand(0,TAU),x=440+Math.cos(a)*rand(120,175),y=322+Math.sin(a)*rand(70,110);part('dust',x,y,rand(-40,40),rand(-70,-20),1.4,'rgba(196,160,112,',rand(12,24));}
+      if(!reduceMotion)G.shake=Math.max(G.shake,6*(1-F.t/3.2));}
+    for(const b of [.15,.7,1.3,2])if(F.t-dt<b&&F.t>=b)Snd.play('boom');
+    if(F.t>5&&!F.said){F.said=true;banner('여호와께서 이 성을 주셨어요','믿음으로 칠 일 동안 여리고를 도니 성이 무너졌으며 (히 11:30)',4.4);}
+    if(F.t>9.6&&!F.won){F.won=true;G.march=null;musicDuck(false);win();}}}
+function shout(){const F=G&&G.finale;if(!F||F.st!=='shout'||G.paused)return;$('bShout').hidden=true;F.st='fall';F.t=0;Snd.play('shout');G.flash=.7;if(!reduceMotion)G.shake=16;
+  banner('성벽이 무너져 내린지라','백성이 나팔 소리를 들을 때에 크게 소리 질러 외치니 성벽이 무너져 내린지라 (수 6:20)',5);}
+function drawDays(c){if(!G.S.jericho)return;const d=G.day||0,x0=640-3*28,y=26;c.save();
+  for(let i=1;i<=7;i++){const x=x0+(i-1)*28,on=i<=d,now=i===d;if(now){c.save();c.globalCompositeOperation='lighter';glow(c,x,y,22,'255,214,120',.35+.15*Math.sin(G.t*4));c.restore();}
+    C(c,x,y,9);FS(c,on?'#ffd36b':'rgba(60,40,20,.55)',2,OL);if(on){c.strokeStyle='#ffe9a8';c.lineWidth=1.6;for(let k=0;k<8;k++){const a=k/8*TAU;L(c,x+Math.cos(a)*11,y+Math.sin(a)*11,x+Math.cos(a)*14,y+Math.sin(a)*14);}}
+    c.fillStyle=on?'#5a3410':'#e8dcc0';c.font=`11px ${UIF}`;c.textAlign='center';c.textBaseline='middle';c.fillText(i,x,y+.5);}
+  const F=G.finale;if(F&&F.lap>0&&F.st==='laps'){const k=Math.min(1,F.lapT*4);txt(c,`${F.lap}바퀴`,640,70,{size:30+8*(1-k),col:'#ffe9a8'});}
+  c.restore();}
+function drawShoutCall(c){const F=G.finale;if(!F||(F.st!=='shout'&&F.st!=='blast'))return;const n=G.S.npc;
+  if(F.st==='blast'){c.save();c.globalCompositeOperation='lighter';for(let i=0;i<MARCH.length;i++){if(MARCH[i]!=='t')continue;const q=marchPos(G.march,i);if(q)glow(c,q.x,q.y-30,30,'255,226,140',.3+.2*Math.sin(G.t*9+i));}c.restore();return;}
+  if(n){const x=n.x-10,y=n.y-96,b=1+.04*Math.sin(G.t*5);c.save();c.translate(x,y);c.scale(b,b);RR(c,-46,-20,92,34,12);FS(c,'#fff3cf',2.4);P(c,[[8,14],[22,14],[18,28]]);FS(c,'#fff3cf',2.4);c.fillStyle='#fff3cf';c.fillRect(6,10,18,6);txt(c,'외치라!',0,-2,{size:20,col:'#7a2a14'});c.restore();}}
+
+/* ---------- 숨은 이야기(이스터 에그, 10-12 사용자): 싸움이 없는 구석의 물건을 누르면 업적이 열리고 두루마리에 카드가 생긴다. 이야기마다 따로 저장 ---------- */
+const EGGS={bones:{sid:6,art:'e_bones',x:712,y:222,r:30},bed:{sid:8,art:'e_bed',x:700,y:655,r:36},cord:{sid:9,art:null,x:516,y:380,r:26}};
+const EGG_GOT={};
+const eggHere=()=>Object.entries(EGGS).filter(([k,e])=>G&&e.sid===G.sid&&(e.art||e.x));
+function eggAt(x,y){for(const [k,e] of eggHere())if(d2(x,y,e.x,e.y-(e.art?14:0))<e.r*e.r)return k;return null;}
+function findEgg(k){const e=EGGS[k],card=CODEX.find(c=>c.egg===k),first=!EGG_GOT[k];closeMenu();
+  if(first){EGG_GOT[k]=Date.now();store.set(slotKey('eggs'),EGG_GOT);Snd.play('event');for(let i=0;i<16;i++)part('spark',e.x+rand(-20,20),e.y-rand(0,40),rand(-50,50),rand(-90,-20),.9,'#ffe08a',2.6);}
+  else Snd.play('click');
+  toast(`<b>${first?'업적 · ':''}${card.name}</b><br>${card.verse}${first?'<br>두루마리의 숨은 이야기에 카드가 생겼어요.':''}`,first?7:4);}
+function drawEgg(c,k){const e=EGGS[k],a=ART[e.art];if(a)sprite(c,a,e.x,e.y,{dir:1,t:0,pose:'idle'});
+  if(!EGG_GOT[k]){const ph=(G.t*.6+e.x*.01)%4;if(ph<.6){c.save();c.globalCompositeOperation='lighter';glow(c,e.x+8,e.y-(a?a.hgt*.6:10),14,'255,236,170',.5*Math.sin(ph/.6*Math.PI));c.restore();}}}   // 가끔 반짝여 눈치채게
+
 /* ---------- 무리 ---------- */
 function nextPaths(){if(!G)return[];const w=G.S.waves[G.waveIdx+1];if(!w)return[];const s=new Set();for(const g of w){if(g[4]===-1)G.paths.forEach((_p,i)=>s.add(i));else s.add(g[4]);}return[...s];}
 function startWave(){
@@ -909,6 +1045,7 @@ function startWave(){
   Snd.play('wave');
   if(has('watch',5)&&G.towers.some(t=>t.line==='watch')){G.horn=8;for(const t of G.towers)if(t.line==='watch')floatText(t.x,t.y-70,'나팔 소리','#ffe9a8',13);}
   if(G.S.events&&G.S.events[i]==='cloud')cloudEvent();
+  if(G.S.jericho)jerichoWave(i);
   if(G.S.events&&G.S.events[i]==='bashan'){banner('시혼을 이기고 바산 길로','돌이켜 바산 길로 올라가매 바산 왕 옥이 그의 모든 백성을 거느리고 나와서 … 에드레이에서 싸우고자 하는지라 (민 21:33)',5);later(5,()=>toast('이제 북쪽 <b>에드레이 성문</b>에서도 와요. 거인 르바임이 섞여 있어요.',5));}
   if(G.S.rear!=null&&!G.rearTold&&w.some(g=>g[4]===G.S.rear||g[4]===-1)){G.rearTold=true;rearBreak();for(const e of q)if(e.pi===G.S.rear)e.t+=1.3;q.sort((a,b)=>a.t-b.t);banner('아말렉이 길을 뚫고 뒤로 쳐들어와요','네 뒤에 떨어진 약한 자들을 쳤고 하나님을 두려워하지 아니하였느니라 (신 25:18)',4.5);later(4,()=>toast('아말렉이 진영 뒤쪽에 <b>짧은 길</b>을 뚫었어요. 등불 가까이에도 탑을 두세요.',5));}
   if(G.tut){if(i===0)later(4,()=>tut(2));if(i===1)tut(4);}
@@ -921,7 +1058,7 @@ function updWaves(dt){
   if(G.spawning){G.waveT+=dt;while(G.spawnQ.length&&G.spawnQ[0].t<=G.waveT){const s=G.spawnQ.shift();spawn(s.type,s.pi);}
     if(!G.spawnQ.length){G.spawning=false;if(G.waveIdx<G.S.waves.length-1){G.phase='between';G.nextT=G.S.gapT;}else G.phase='last';}}
   else if(G.phase==='between'){G.nextT-=dt;if(G.nextT<=0)startWave();}
-  else if(G.phase==='last'){if(!G.enemies.some(alive))win();}
+  else if(G.phase==='last'){if(!G.enemies.some(alive)){if(G.S.jericho)startDay7();else win();}}
 }
 
 /* ---------- 적 ---------- */
@@ -935,6 +1072,7 @@ function lookFor(type){
     case 'centurion':return{skin:s,cloth:'#f1ead8',cloth2:'#3d6fb3',head:'egypt',hc:'#e8c25a',stripe:'#3d6fb3',item:'staff',s:1.12};
     case 'chariot':return{skin:s,cloth:s,collar:'#3d6fb3',head:'egypt',hc:'#f1e8d4',stripe:'#4f78b8',car:'#c9934e',trim:'#3d6fb3'};
     case 'pharaoh':return{skin:'#c98a5a',cloth:'#f4efe0',collar:'#e8b53c',head:'crown',car:'#e8b53c',trim:'#3d6fb3'};
+    case 'archer':return{skin:s,cloth:s,kilt:true,head:'cloth',hc:'#7a4a6a',belt:'#6b3a1c',item:'bow'};
     case 'giant':return{skin:s,cloth:'#6b5a44',cloth2:'#8a6a3a',head:'hair',hc:'#2a1a10',beard:'#2a1a10',item:'club'};
     case 'og':return{skin:'#c98a5a',cloth:'#3a2a3a',cloth2:'#8a2a2a',head:'crown',hc:'#7a7a80',beard:'#2a1a10',item:'club'};
   }
@@ -969,6 +1107,7 @@ function updEnemies(dt){
       else{e.atkCd-=dt;if(e.atkCd<=0){e.atkCd=e.def.rate;hitBlocker(b,e.def.atk);}e.dir=b.x<e.x?-1:1;continue;}
     }
     if(b&&b.state==='ok'&&holds(b,e)&&d2(e.x,e.y,b.x,b.y)<(b.extra&&b.target!==e?40:26)**2){e.state='fight';e.atkCd=.5;continue;}
+    if(e.def.shoot&&archerTick(e,dt))continue;
     e.d+=enemySpeed(e)*dt;
     const p=G.paths[e.pi];
     if(e.d>=p.len){exitEnemy(e);continue;}
@@ -976,6 +1115,14 @@ function updEnemies(dt){
   }
   G.enemies=G.enemies.filter(e=>!e.gone&&!(e.state==='freed'&&e.ft>(e.def.block?3.4:2.4)));
 }
+// 궁수(미움의 영, 레 19:17): 멀리서 양치기·문지기·장정만 쏜다(기획서 '적'). 영웅과 탑은 쏘지 않는다
+function archerTarget(e){let best=null,bd=e.def.shoot.r**2;
+  for(const u of G.units){if(u.state!=='ok'||u.role==='bar')continue;const dd=d2(u.x,u.y,e.x,e.y);if(dd<bd){bd=dd;best=u;}}return best;}
+function archerTick(e,dt){const S=e.def.shoot;e.shootCd=(e.shootCd||.4)-dt;if(e.drawT>0)e.drawT-=dt;e.aiming=false;if(e.walkT>0){e.walkT-=dt;return false;}
+  const u=archerTarget(e);if(!u){e.shots=0;return false;}e.aiming=true;
+  e.dir=u.x<e.x?-1:1;if(e.shootCd<=0){e.shootCd=S.rate;e.drawT=.35;G.projs.push({k:'earrow',x:e.x+e.dir*8,y:e.y-26,tx:u.x,ty:u.y-18,tu:u,sp:480,dmg:S.dmg});Snd.play('arrow');
+    e.shots=(e.shots||0)+1;if(e.shots>=S.n){e.shots=0;e.walkT=1.3;}}
+  return true;}
 const holds=(b,e)=>b.target===e||!!(b.extra&&b.extra.includes(e));   // 근접 영웅은 여럿을 한꺼번에 막아선다
 function releaseFrom(e){const b=e.blockedBy;if(b){if(b.target===e)b.target=null;if(b.extra)b.extra=b.extra.filter(x=>x!==e);}e.blockedBy=null;}
 function exitEnemy(e){
@@ -1074,7 +1221,7 @@ function blockerDown(b){
   if(b.role==='unit'){
     for(const t of G.towers){if(t.branch==='priest'&&t.sk.rod>0&&t.rodCd<=0&&d2(t.x,t.y,b.x,b.y)<PRIEST.range*PRIEST.range&&Math.random()<[0,.35,.55,.75][t.sk.rod]){b.hp=b.max*.5;t.rodCd=has('levi',5)?4:6;for(let i=0;i<8;i++)part('leaf',b.x+rand(-8,8),b.y-10,rand(-30,30),rand(-60,-20),.9,'#7fd34e',3);floatText(b.x,b.y-38,'다시 일어남','#c6f07a',14);return;}}
     G.stat.unitDown++;dropTarget(b);if(b.temp)b.state='gone';else{b.state='down';b.respawn=b.gk?gateRe(b.tw):has('shep',3)?7:10;b.fade=.7;}
-  }else if(b.role==='hero'){G.stat.heroDown++;dropTarget(b);b.state='dead';b.respawn=15;b.hp=0;G.heroSel=false;toast(`${b.D.name}가 쓰러졌어요. 곧 새 힘을 얻어 다시 일어나요. (사 40:31)`,4);}
+  }else if(b.role==='hero'){G.stat.heroDown++;dropTarget(b);b.state='dead';b.respawn=15;b.hp=0;G.heroSel=false;toast(`${b.D.name}${josa(b.D.name,"이","가")} 쓰러졌어요. 곧 새 힘을 얻어 다시 일어나요. (사 40:31)`,4);}
   else if(b.role==='bar'){dropTarget(b);b.state='gone';const h=G.hero;if(h&&h.bar===b){h.bar=null;h.barCd=10;}for(let i=0;i<8;i++)part('dust',b.x+rand(-12,12),b.y-6,rand(-30,30),rand(-30,-5),.6,'rgba(160,110,60,',4);}
 }
 
@@ -1115,9 +1262,12 @@ function upgrade(t){
 }
 const choirOpen=()=>(BEST[6]||0)>0;   // 바다의 노래(출 15)로 열린다
 const menorahOpen=()=>(BEST[7]||0)>0;   // 르비딤 다음 이야기의 성막(출 37)으로 열린다
-function takeBranch(t,id){const B=BRANCH[id];if(!B||G.S.cap<4||(id==='choir'&&!choirOpen())||(id==='menorah'&&!menorahOpen()))return false;if(G.gold<B.cost){deny();return false;}G.gold-=B.cost;t.spent+=B.cost;t.branch=id;Snd.play('up');sparkle(t);
+const jordanOpen=()=>(BEST[8]||0)>0;   // 옥을 이기고 바산을 받는다(신 3:13)
+const branchLocked=id=>(id==='choir'&&!choirOpen())||(id==='menorah'&&!menorahOpen())||(id==='jordan'&&!jordanOpen());
+function takeBranch(t,id){const B=BRANCH[id];if(!B||G.S.cap<4||branchLocked(id))return false;if(G.gold<B.cost){deny();return false;}G.gold-=B.cost;t.spent+=B.cost;t.branch=id;Snd.play('up');sparkle(t);
   if(id==='priest'){t.sk={bless:0,gate:0,rod:0};if(G.firstPriest){G.firstPriest=false;toast('<b>제사장</b>이 섰어요. 탑을 눌러 축복, 성막 문지기, 싹 난 지팡이를 배우세요.',6);}}
   else if(id==='menorah'){t.sk={seven:0,spirit:0,shine:0};if(!G.firstMenorah){G.firstMenorah=true;toast('<b>순금 등잔대</b>가 섰어요. 탑을 눌러 일곱 등잔, 오직 나의 영으로, 앞을 비추라를 배우세요.',6);}}
+  else if(id==='jordan'){t.sk={draw:0,deer:0,lead:0};t.nm=pick(JORDAN.names);if(!G.firstJordan){G.firstJordan=true;toast('<b>요단 동편 용사</b>가 섰어요. 사거리가 가장 길어요. 탑을 눌러 활을 당겨, 산의 사슴 같은 빠르기, 앞장선 용사를 배우세요.',6);}}
   else{t.sk={song:0,timbrel:0,turn:0};t.songCd=3;if(!G.firstChoir){G.firstChoir=true;toast('<b>찬양대</b>가 섰어요. 노래를 시작할 때에, 미리암의 소고, 서로 치다를 배우세요.',6);}}
   return true;}
 function buySkill(t,i){const sk=BRANCH[t.branch].skills[i],lv=t.sk[sk.id];if(lv>=3)return false;const cost=sk.costs[lv];if(G.gold<cost){deny();return false;}G.gold-=cost;t.spent+=cost;t.sk[sk.id]++;if(sk.id==='gate')gateSync(t);Snd.play('up');sparkle(t);return true;}
@@ -1135,6 +1285,7 @@ function tStats(t){
   if(G.hill&&G.hill.up){dm*=1.15;spd*=1.1;}spd*=braveAt(t.x,t.y);
   {let tb=0;for(const o of G.towers)if(o.branch==='choir'&&o.sk.timbrel>0&&o!==t&&d2(o.x,o.y,t.x,t.y)<CHOIR.range*CHOIR.range)tb=Math.max(tb,[0,.1,.18,.25][o.sk.timbrel]);spd*=1+tb;}
   if(t.branch==='menorah')rM*=1+.08*(t.sk.shine||0);
+  if(t.branch==='jordan')rM*=1+.08*(t.sk.lead||0);   // 앞장선 용사(수 4:12)
   if(h&&h.state==='ok'){if(h.kind==='moses'&&d2(t.x,t.y,h.x,h.y)<150*150)rM*=1.15;if(h.kind==='noah'&&t.line==='art'&&h.sk.passive>0&&d2(t.x,t.y,h.x,h.y)<170*170)spd*=1+.1*h.sk.passive;}
   if(G.hands>0){const k=[0,1.3,1.36,1.45][h?h.sk.ult:1];dm*=k;spd*=k;}
   return{s,range:(s.range||150)*rM,spd,dm};
@@ -1154,7 +1305,8 @@ function updTowers(dt){
     const tg=findTarget(t.x,t.y-12,st.range);if(!tg){t.cd=.1;continue;}
     t.cd=st.s.rate;t.kick=.3;t.face=tg.x<t.x?-1:1;
     const top=towerTop(t),dmg=st.s.dmg*st.dm;
-    if(t.line==='watch'){const far=has('watch',4)&&d2(tg.x,tg.y,t.x,t.y-12)>(st.range*.5)**2;G.projs.push({k:'arrow',x:top.x,y:top.y,tx:tg.x,ty:tg.y,tg,sp:720,dmg:far?dmg*1.25:dmg});Snd.play('arrow');}
+    if(t.branch==='jordan'){const far=has('watch',4)&&d2(tg.x,tg.y,t.x,t.y-12)>(st.range*.5)**2;G.projs.push({k:'snipe',x:top.x,y:top.y,tx:tg.x,ty:tg.y,tg,sp:1150,dmg:(far?dmg*1.25:dmg)*(tg.def.air?1+.25*t.sk.lead:1),tw:t});Snd.play('snipe');}
+    else if(t.line==='watch'){const far=has('watch',4)&&d2(tg.x,tg.y,t.x,t.y-12)>(st.range*.5)**2;G.projs.push({k:'arrow',x:top.x,y:top.y,tx:tg.x,ty:tg.y,tg,sp:720,dmg:far?dmg*1.25:dmg});Snd.play('arrow');}
     else if(t.branch==='menorah'){const n=[3,4,5,7][t.sk.seven],hit=[tg];while(hit.length<n){const l=hit[hit.length-1];let nb=null,nd=MENORAH.jump*MENORAH.jump;for(const e of G.enemies){if(!alive(e)||hit.includes(e))continue;const dd=d2(e.x,e.y,l.x,l.y);if(dd<nd){nd=dd;nb=e;}}if(!nb)break;hit.push(nb);}
       const pts=[[top.x,top.y]];let dm=dmg*(1+.2*t.sk.shine);for(const e of hit){pts.push([e.x,e.y-(e.def.r>=20?28:18)]);hurt(e,dm,'holy');dm*=.8;}G.fx.push({k:'chain',pts,t:0,life:.3});Snd.play('holy');   // 일곱 등잔(출 25:37)
       if(t.sk.spirit>0){const R=MENORAH.burstR[t.sk.spirit],bd=MENORAH.burst[t.sk.spirit]*st.dm;for(const e of G.enemies)if(alive(e)&&d2(e.x,e.y,t.x,t.y-12)<R*R)hurt(e,bd,'holy');fxRing(t.x,t.y,R,'255,226,140');for(let i=0;i<8;i++){const a=rand(0,TAU);part('spark',t.x+Math.cos(a)*R*.6,t.y-12+Math.sin(a)*R*.3,Math.cos(a)*60,Math.sin(a)*30-20,.45,'#ffe9a8',2.2);}}}   // 오직 나의 영으로(슥 4:6): 쏠 때마다 둘레의 모든 적
@@ -1179,6 +1331,8 @@ function priestAux(t,dt){
 /* ---------- 날아가는 것 ---------- */
 function updProjs(dt){
   for(const p of G.projs){
+    if(p.k==='earrow'){const u=p.tu;if(u&&u.state==='ok'){p.tx=u.x;p.ty=u.y-18;}const dx=p.tx-p.x,dy=p.ty-p.y,Ld=Math.hypot(dx,dy),st=p.sp*dt;p.ang=Math.atan2(dy,dx);
+      if(Ld<=st+4){p.done=true;if(u&&u.state==='ok'){hitBlocker(u,p.dmg);part('spark',p.tx,p.ty,rand(-30,30),rand(-30,10),.3,'#d9b8ff',2);}}else{p.x+=dx/Ld*st;p.y+=dy/Ld*st;}continue;}
     if(p.k==='stone'||p.k==='pot'||p.k==='boulder'){
       p.t+=dt;const k=Math.min(1,p.t/p.dur);p.x=lerp(p.sx,p.tx,k);p.y=lerp(p.sy,p.ty,k)-Math.sin(k*Math.PI)*(p.k==='pot'?60:p.k==='boulder'?150:85);p.rot=(p.rot||0)+dt*8;
       if(k>=1){p.done=true;
@@ -1190,13 +1344,19 @@ function updProjs(dt){
     const tg=p.tg;if(tg&&alive(tg)){p.tx=tg.x;p.ty=tg.y-(tg.def.r>=20?28:18);}
     const dx=p.tx-p.x,dy=p.ty-p.y,Ld=Math.hypot(dx,dy),st=p.sp*dt;p.ang=Math.atan2(dy,dx);
     if(Ld<=st+4){p.done=true;
-      if(tg&&alive(tg))hurt(tg,p.dmg,(p.k==='arrow'||p.k==='sling'||p.k==='harrow')?'phys':p.pierce?'holyP':'holy',p.k==='hbolt'||p.k==='harrow'?'hero':null);
+      if(tg&&alive(tg))hurt(tg,p.dmg,(p.k==='arrow'||p.k==='sling'||p.k==='harrow'||p.k==='snipe')?'phys':p.pierce?'holyP':'holy',p.k==='hbolt'||p.k==='harrow'?'hero':null);
+      if(p.k==='snipe')snipeHit(p,tg);
       if(p.k==='bolt'&&tg&&alive(tg)&&!tg.def.boss){tg.slowF=tg.slowT>0?Math.min(tg.slowF,.7):.7;tg.slowT=Math.max(tg.slowT,1.2);tg.lslow=1.2;}   // 레위인 빛살을 맞으면 잠깐 느려진다
       const holy=p.k==='bolt'||p.k==='hbolt';for(let i=0;i<(holy?6:3);i++)part('spark',p.tx,p.ty,rand(-60,60),rand(-60,30),.35,holy?'#fff3b0':'#ffffff',2);
     }else{p.x+=dx/Ld*st;p.y+=dy/Ld*st;if((p.k==='bolt'||p.k==='hbolt')&&Math.random()<dt*30)part('spark',p.x,p.y,rand(-15,15),rand(-15,15),.3,'#fff0a0',1.8);}
   }
   G.projs=G.projs.filter(p=>!p.done);
 }
+
+// 요단 동편 용사의 화살: 활을 당겨(대상 5:18) 확률로 바로 풀어 주고, 풀어 주면 산의 사슴처럼(대상 12:8) 곧바로 다음 화살
+function snipeHit(p,tg){const t=p.tw;if(!t||!t.sk||!G.towers.includes(t)||!tg)return;
+  if(alive(tg)&&!tg.def.boss&&t.sk.draw>0&&Math.random()<JORDAN.draw[t.sk.draw]*(tg.type==='giant'?.5:1)){floatText(tg.x,tg.y-46,'활을 당겨','#ffe9a8',14);freeEnemy(tg);}
+  if(!alive(tg)&&t.sk.deer>0&&Math.random()<JORDAN.deer[t.sk.deer]){t.cd=Math.min(t.cd,.12);part('spark',t.x,t.y-90,0,-30,.5,'#fff3b0',2.4);}}
 
 /* ---------- 영웅 ---------- */
 /* ---------- 연단: 싸울수록 경험이 쌓이고, 레벨이 오르면 기술 점수를 받는다 ---------- */
@@ -1212,9 +1372,9 @@ function slotKey(k){return'kog.s'+SLOTS.cur+'.'+k;}
 function saveSlots(){store.set('kog.slots',SLOTS);}
 function touchSlot(){const sl=SLOTS.list.find(x=>x.id===SLOTS.cur);if(sl){sl.t=Date.now();saveSlots();}}
 function fillObj(o,src){for(const k in o)delete o[k];Object.assign(o,src||{});}
-function loadSlot(id){SLOTS.cur=id;saveSlots();fillObj(BEST,store.get(slotKey('best'),{}));fillObj(HSAVE,store.get(slotKey('heroes'),{}));fillObj(UPGS,store.get(slotKey('upg'),{}));touchSlot();}
+function loadSlot(id){SLOTS.cur=id;saveSlots();fillObj(BEST,store.get(slotKey('best'),{}));fillObj(HSAVE,store.get(slotKey('heroes'),{}));fillObj(UPGS,store.get(slotKey('upg'),{}));fillObj(EGG_GOT,store.get(slotKey('eggs'),{}));touchSlot();}
 function newSlot(){SLOTS.n=(SLOTS.n||0)+1;SLOTS.list.push({id:SLOTS.n,t:Date.now()});loadSlot(SLOTS.n);}
-function delSlot(id){for(const k of ['best','heroes','upg'])try{localStorage.removeItem('kog.s'+id+'.'+k);}catch(e){}SLOTS.list=SLOTS.list.filter(x=>x.id!==id);if(SLOTS.cur===id){SLOTS.cur=null;fillObj(BEST,{});fillObj(HSAVE,{});fillObj(UPGS,{});}saveSlots();}
+function delSlot(id){for(const k of ['best','heroes','upg','eggs'])try{localStorage.removeItem('kog.s'+id+'.'+k);}catch(e){}SLOTS.list=SLOTS.list.filter(x=>x.id!==id);if(SLOTS.cur===id){SLOTS.cur=null;fillObj(BEST,{});fillObj(HSAVE,{});fillObj(UPGS,{});fillObj(EGG_GOT,{});}saveSlots();}
 (function(){   // 슬롯이 없던 예전 저장은 첫 슬롯으로 옮긴다
   if(!SLOTS.list.length){const b=store.get('kog.best',null),h=store.get('kog.heroes',null),u=store.get('kog.upg',null);
     if(b||h||u){SLOTS.n=1;SLOTS.list.push({id:1,t:Date.now()});SLOTS.cur=1;store.set('kog.s1.best',b||{});store.set('kog.s1.heroes',h||{});store.set('kog.s1.upg',u||{});saveSlots();}}
@@ -1467,7 +1627,7 @@ function update(dt){
   if(G.scene){updScene(dt);updFx(dt);updEnemies(dt);return;}
   if(G.over){updFx(dt);updEnemies(dt);return;}
   G.cd.cry=Math.max(0,G.cd.cry-dt);G.cd.help=Math.max(0,G.cd.help-dt);
-  updWaves(dt);updCloud(dt);updHill(dt);updRear(dt);updEnemies(dt);updUnits(dt);updHero(dt);updTowers(dt);updProjs(dt);updStamp(dt);updRains(dt);updBanner(dt);updBeams(dt);updFx(dt);
+  updWaves(dt);updCloud(dt);updHill(dt);updRear(dt);updMarch(dt);updFinale(dt);updEnemies(dt);updUnits(dt);updHero(dt);updTowers(dt);updProjs(dt);updStamp(dt);updRains(dt);updBanner(dt);updBeams(dt);updFx(dt);
   if(G.tut&&G.hero.ult<=0&&G.waveIdx>=1)tut(5);
 }
 
@@ -1500,15 +1660,16 @@ const ART_DEF={
   noah:{h:66},moses:{h:66},shep:{h:46},help:{h:46},
   soldier:{h:48},raider:{h:46},shield:{h:50},centurion:{h:54},
   f_soldier:{h:48},f_raider:{h:46},imp:{h:28},c_soldier:{h:48},c_raider:{h:46},e_soldier:{h:48},e_raider:{h:46},e_shield:{h:52},m_soldier:{h:48},m_raider:{h:46},m_shield:{h:52},m_centurion:{h:54},
-  a_elephant:{h:40},a_elephant2:{h:40},a_giraffe:{h:54},a_giraffe2:{h:54},a_lion:{h:31},a_lioness:{h:28},a_zebra:{h:34},a_zebra2:{h:34},a_sheep:{h:24},a_sheep2:{h:24},aaron:{h:60},hur:{h:60},gatekeeper:{h:64},joshua:{h:66},moses_hands:{h:70},caleb:{h:66},giant:{h:80},og:{h:112},o_soldier:{h:48},o_raider:{h:46},o_shield:{h:52},o_centurion:{h:54},art_menorah:{h:100,top:.62},k_soldier:{h:48},k_raider:{h:46},k_shield:{h:52},levi_choir:{h:98,top:.55},
+  a_elephant:{h:40},a_elephant2:{h:40},a_giraffe:{h:54},a_giraffe2:{h:54},a_lion:{h:31},a_lioness:{h:28},a_zebra:{h:34},a_zebra2:{h:34},a_sheep:{h:24},a_sheep2:{h:24},aaron:{h:60},hur:{h:60},gatekeeper:{h:64},joshua:{h:66},moses_hands:{h:70},caleb:{h:66},giant:{h:80},og:{h:112},o_soldier:{h:48},o_raider:{h:46},o_shield:{h:52},o_centurion:{h:54},c_shield:{h:52},c_centurion:{h:54},c_archer:{h:48},p_soldier:{h:50},p_trumpet:{h:50},p_ark:{h:60},e_bones:{h:38},e_bed:{h:44},art_menorah:{h:100,top:.62},k_soldier:{h:48},k_raider:{h:46},k_shield:{h:52},levi_choir:{h:98,top:.55},
   kite:{h:40},abram:{h:58},moses_young:{h:56},ark3:{h:150},levi_priest:{h:98,top:.55},chariot:{h:64},pharaoh:{h:66},
-  watch1:{h:98,top:.8},watch2:{h:110,top:.8},watch3:{h:122,top:.84},levi1:{h:84,top:.55},levi2:{h:90,top:.55},levi3:{h:96,top:.55},
+  watch1:{h:98,top:.8},watch2:{h:110,top:.8},watch3:{h:122,top:.84},watch_jordan:{h:128,top:.86},levi1:{h:84,top:.55},levi2:{h:90,top:.55},levi3:{h:96,top:.55},
   shep1:{h:62,top:.5},shep2:{h:68,top:.5},shep3:{h:74,top:.5},art1:{h:76,top:.7},art2:{h:82,top:.72},art3:{h:88,top:.74},
 };
 const ART={};
-const AV='?v=16';   // 그림을 바꿀 때마다 올려서 예전 그림이 캐시에서 나오지 않게
-const BG_IMG={},REAR_IMG={};   // REAR_IMG: 처음엔 막혀 있는 뒷길을 덮는 그림(bgN_rear.png)
-function loadArt(){for(const k of Object.keys(STAGES).map(Number)){const im=new Image();im.onload=()=>{BG_IMG[k]=im;if(G&&G.sid===k)buildBg();};im.src='art/bg'+k+'.jpg'+AV;if(STAGES[k].rear!=null){const r=new Image();r.onload=()=>{REAR_IMG[k]=r;if(G&&G.sid===k)buildBg();};r.src='art/bg'+k+'_rear.png'+AV;}}
+const AV='?v=17';   // 그림을 바꿀 때마다 올려서 예전 그림이 캐시에서 나오지 않게
+const BG_IMG={},REAR_IMG={},FALL_IMG={};   // REAR_IMG: 처음엔 막혀 있는 뒷길을 덮는 그림(bgN_rear.png) · FALL_IMG: 성벽이 무너진 배경(bg9_fall.jpg, 수 6:20)
+function loadArt(){for(const k of Object.keys(STAGES).map(Number)){const im=new Image();im.onload=()=>{BG_IMG[k]=im;if(G&&G.sid===k)buildBg();};im.src='art/bg'+k+'.jpg'+AV;if(STAGES[k].rear!=null){const r=new Image();r.onload=()=>{REAR_IMG[k]=r;if(G&&G.sid===k)buildBg();};r.src='art/bg'+k+'_rear.png'+AV;}
+    if(STAGES[k].jericho){const f=new Image();f.onload=()=>{FALL_IMG[k]=f;};f.src='art/bg'+k+'_fall.jpg'+AV;}}
   for(const k in ART_DEF){const im=new Image();im.onload=()=>{try{ART[k]=prepArt(im,ART_DEF[k]);if(G&&G.hero&&G.hero.kind===k)drawHeroPortrait($('heroCv'),k);}catch(e){}};im.src='art/'+k+'.png'+AV;}}
 function prepArt(im,d){
   const sh=Math.round(d.h*3),sw=Math.round(im.naturalWidth*sh/im.naturalHeight);
@@ -1567,7 +1728,7 @@ function chibi(c,x,y,o){
   c.restore();
 }
 /* ---------- 어둠 ---------- */
-const IMP_TINT={anger:'rgba(190,40,40,.13)',greed:'rgba(220,170,40,.14)',pride:'rgba(230,190,80,.12)',hard:'rgba(110,160,220,.2)',mock:'rgba(150,90,40,.16)'};
+const IMP_TINT={anger:'rgba(190,40,40,.13)',greed:'rgba(220,170,40,.14)',pride:'rgba(230,190,80,.12)',hard:'rgba(110,160,220,.2)',mock:'rgba(150,90,40,.16)',hate:'rgba(170,60,140,.15)'};
 function impVariant(kind){const a=ART.imp;if(!a)return null;a.var=a.var||{};if(!a.var[kind]){const col=IMP_TINT[kind];if(!col)return a.var[kind]=a.im;const cv=document.createElement('canvas');cv.width=a.w;cv.height=a.h;const g=cv.getContext('2d');g.drawImage(a.im,0,0);g.globalCompositeOperation='source-atop';g.fillStyle=col;g.fillRect(0,0,a.w,a.h);a.var[kind]=cv;}return a.var[kind];}
 function demon(c,x,y,o){
   const ia=impVariant(o.kind);if(ia){const a=ART.imp,s=o.s||1,t=o.t||0,k=a.hgt*s/a.h;c.save();c.translate(x,y+Math.sin(t*3+(o.seed||0))*2);if(o.a!=null)c.globalAlpha*=o.a;c.fillStyle='rgba(70,30,110,.18)';C(c,0,2,15*s);c.fill();c.rotate(Math.sin(t*2.2+(o.seed||0))*.08);c.scale(k*(o.dir||1),k);c.drawImage(ia,-a.w/2,-a.h*.55);c.restore();return;}
@@ -1784,13 +1945,13 @@ function drawCloud(c){const cl=G.cloud;if(!cl)return;const t=cl.t;c.save();
 function drawEnemy(c,e){
   const freed=e.state==='freed';let a=1;if(freed)a=e.ft<1.1?1:clamp(1-(e.ft-1.1)/(e.def.block?2.3:1.3),0,1);
   if(!freed&&inCloud(e))a*=.6;
-  const pose=freed?(e.ft<1.1?'kneel':'walk'):(e.stun>0?'idle':(e.state==='fight'?'fight':'walk'));
+  const pose=freed?(e.ft<1.1?'kneel':'walk'):(e.stun>0?'idle':(e.state==='fight'||e.drawT>0?'fight':e.aiming?'idle':'walk'));
   if(!freed&&G.selE===e){c.save();c.strokeStyle='#ffe58a';c.lineWidth=2.6;c.setLineDash([6,4]);c.lineDashOffset=-animT*20;const r=(e.def.r||12)+10;E(c,e.x,e.y+2,r,r*.42);c.stroke();c.restore();}
   if(!freed&&e.lslow>0){c.save();c.globalAlpha=Math.min(1,e.lslow/.4)*.8;c.strokeStyle='#ffe08a';c.lineWidth=2;E(c,e.x,e.y+2,(e.def.r||12)+6,((e.def.r||12)+6)*.42);c.stroke();c.restore();}   // 레위인 빛살로 느려진 적의 발밑 금빛 고리
   c.save();c.globalAlpha=a;
   if((e.type==='chariot'||e.type==='pharaoh')&&ART[e.type]){const k=e.def.boss?1.8:1;sprite(c,ART[e.type],e.x,e.y,{dir:e.dir,t:e.t*.8,pose:!freed&&e.state==='walk'&&e.stun<=0?'walk':'idle',dark:!freed,flash:e.hitT>0?e.hitT/.12:0,s:k});if(e.shield>0){c.globalAlpha=a*.7;E(c,e.x,e.y-28*k,40*k,30*k);FS(c,'rgba(150,175,205,.35)',2.4,'rgba(200,220,240,.9)');}}
   else if(e.type==='chariot'||e.type==='pharaoh'){chariot(c,e.x,e.y,{dir:e.dir,t:e.t,moving:!freed&&e.state==='walk'&&e.stun<=0,k:e.def.boss?1.8:1,look:e.look,calm:freed});if(e.shield>0){c.globalAlpha=a*.7;const k=e.def.boss?1.8:1;E(c,e.x,e.y-20*k,36*k,26*k);FS(c,'rgba(150,175,205,.35)',2.4,'rgba(200,220,240,.9)');}}
-  else if(enemyArt(e))sprite(c,enemyArt(e),e.x,e.y,{dir:e.dir,t:e.t,pose,atk:(e.def.rate-e.atkCd)/.3,dark:!freed,flash:e.hitT>0?e.hitT/.12:0,s:e.look.s});
+  else if(enemyArt(e))sprite(c,enemyArt(e),e.x,e.y,{dir:e.dir,t:e.t,pose,atk:e.drawT>0?1-e.drawT/.35:(e.def.rate-e.atkCd)/.3,dark:!freed,flash:e.hitT>0?e.hitT/.12:0,s:e.look.s});
   else chibi(c,e.x,e.y,Object.assign({},e.look,{s:(e.look.s||1)*(e.def.big||1),dir:e.dir,t:e.t,pose,atk:(e.def.rate-e.atkCd)/.3,calm:freed,drop:freed&&e.ft<1.1,item:freed?null:e.look.item,shield:freed?null:e.look.shield}));
   if(e.mark>0&&!freed){const a=enemyArt(e),hy=e.y-(a?a.hgt*(e.look.s||1):50*(e.def.big||1))-14,pr=1+.12*Math.sin(G.t*6);c.save();c.strokeStyle='#ff8a5c';c.lineWidth=2.2;C(c,e.x,hy,8*pr);c.stroke();L(c,e.x-12*pr,hy,e.x-4,hy);L(c,e.x+4,hy,e.x+12*pr,hy);L(c,e.x,hy-12*pr,e.x,hy-4);L(c,e.x,hy+4,e.x,hy+12*pr);c.restore();}   // 갈렙의 표적
   if(e.stun>0&&!freed){for(let i=0;i<3;i++){const a2=G.t*5+i*2.1;c.fillStyle='#ffe58a';C(c,e.x+Math.cos(a2)*9,e.y-38+Math.sin(a2)*3,1.8);c.fill();}}
@@ -1854,6 +2015,8 @@ function drawDancer(c,d){chibi(c,d.x,d.y-Math.abs(Math.sin(d.ph))*5,{s:.9,dir:Ma
 function drawProjs(c){
   for(const p of G.projs){
     if(p.k==='arrow'||p.k==='harrow'){c.save();c.translate(p.x,p.y);c.rotate(p.ang||0);c.strokeStyle=OL;c.lineWidth=3;L(c,-12,0,2,0);c.strokeStyle='#e8d2a6';c.lineWidth=1.6;L(c,-12,0,2,0);P(c,[[2,-2.4],[6,0],[2,2.4]]);FS(c,'#cfd6dc',1);c.restore();}
+    else if(p.k==='snipe'){c.save();c.translate(p.x,p.y);c.rotate(p.ang||0);c.strokeStyle='rgba(255,240,190,.45)';c.lineWidth=2;L(c,-34,0,-14,0);c.strokeStyle=OL;c.lineWidth=3.4;L(c,-16,0,3,0);c.strokeStyle='#d8c08a';c.lineWidth=2;L(c,-16,0,3,0);P(c,[[3,-3],[8,0],[3,3]]);FS(c,'#dfe5ea',1);c.fillStyle='#6f8a4a';P(c,[[-16,0],[-20,-3],[-13,0],[-20,3]]);c.fill();c.restore();}
+    else if(p.k==='earrow'){c.save();c.translate(p.x,p.y);c.rotate(p.ang||0);c.strokeStyle='rgba(150,80,190,.45)';c.lineWidth=2;L(c,-20,0,-10,0);c.strokeStyle=OL;c.lineWidth=3;L(c,-11,0,2,0);c.strokeStyle='#b89a7a';c.lineWidth=1.6;L(c,-11,0,2,0);P(c,[[2,-2.4],[6,0],[2,2.4]]);FS(c,'#8a7f8f',1);c.restore();}
     else if(p.k==='sling'){C(c,p.x,p.y,2.6);FS(c,'#a9a49c',1.2);}
     else if(p.k==='bolt'||p.k==='hbolt'){c.save();c.globalCompositeOperation='lighter';const r=p.big?10:7;const g=c.createRadialGradient(p.x,p.y,0,p.x,p.y,r*1.8);g.addColorStop(0,'rgba(255,255,230,1)');g.addColorStop(.4,'rgba(255,225,120,.8)');g.addColorStop(1,'rgba(255,200,80,0)');c.fillStyle=g;C(c,p.x,p.y,r*1.8);c.fill();c.restore();}
     else if(p.k==='stone'){c.save();c.translate(p.x,p.y);c.rotate(p.rot||0);c.beginPath();c.moveTo(-6,-2);c.lineTo(-2,-6);c.lineTo(5,-4);c.lineTo(6,3);c.lineTo(-1,6);c.lineTo(-6,3);c.closePath();FS(c,'#a9a49c',1.8);c.restore();c.fillStyle='rgba(0,0,0,.15)';E(c,lerp(p.sx,p.tx,Math.min(1,p.t/p.dur)),lerp(p.sy+40,p.ty,Math.min(1,p.t/p.dur)),6,2);c.fill();}
@@ -1958,7 +2121,7 @@ function drawMenu(c){
     if(it.k==='build'){c.translate(it.x,it.y+12);c.scale(.5,.5);drawTowerAt(c,it.line,1,0,0,null);}
     else if(it.k==='up'){c.translate(it.x,it.y+12);c.scale(.48,.48);drawTowerAt(c,t.line,Math.min(3,t.tier+1),0,0,null);}
     else if(it.k==='branch'){c.translate(it.x,it.y+12);c.scale(.46,.46);drawTowerAt(c,t.line,3,0,0,null,it.id);if(it.lock){c.setTransform(1,0,0,1,0,0);}}
-    else if(it.k==='skill'){skillIcon(c,it.x,it.y,it.i+(t.branch==='choir'?3:t.branch==='menorah'?6:0));}
+    else if(it.k==='skill'){skillIcon(c,it.x,it.y,it.i+(t.branch==='choir'?3:t.branch==='menorah'?6:t.branch==='jordan'?9:0));}
     else if(it.k==='sell'){C(c,it.x,it.y,9);FS(c,'#d9dfe6',1.6);C(c,it.x,it.y,5);c.strokeStyle='#8b95a3';c.lineWidth=1.4;c.stroke();}
     else if(it.k==='rally'){c.strokeStyle=OL;c.lineWidth=2.6;L(c,it.x-4,it.y+10,it.x-4,it.y-10);P(c,[[it.x-4,it.y-10],[it.x+10,it.y-5],[it.x-4,it.y]]);FS(c,'#c4513a',1.4);}
     c.restore();
@@ -1972,6 +2135,9 @@ function drawMenu(c){
 function lockIcon(c,x,y){RR(c,x-6,y-2,12,10,2);FS(c,'#c9b7a0',1.6);c.strokeStyle=OL;c.lineWidth=2;c.beginPath();c.arc(x,y-2,4,Math.PI,0);c.stroke();}
 function drawNotes(c,t){c.save();c.fillStyle='#fff3c9';c.strokeStyle=OL;c.lineWidth=1.4;for(let k=0;k<2;k++){const ph=(G.t*.6+k*.5)%1,x=t.x-14+k*26+Math.sin(G.t*2+k)*4,y=t.y-70-ph*30;c.globalAlpha=Math.sin(ph*Math.PI);E(c,x,y,4,3,-.4);c.fill();c.stroke();L(c,x+3.4,y-1,x+3.4,y-13);}c.restore();}
 function skillIcon(c,x,y,i){
+  if(i===9){c.strokeStyle=OL;c.lineWidth=3.2;c.beginPath();c.arc(x+6,y,13,Math.PI*.62,Math.PI*1.38);c.stroke();c.strokeStyle='#9b6b3c';c.lineWidth=1.8;c.stroke();c.strokeStyle='#efe3c4';c.lineWidth=1.2;L(c,x+.5,y-12,x-4,y);L(c,x-4,y,x+.5,y+12);c.strokeStyle=OL;c.lineWidth=2.4;L(c,x-4,y,x+14,y);c.strokeStyle='#d8c08a';c.lineWidth=1.4;L(c,x-4,y,x+14,y);P(c,[[14,-3],[19,0],[14,3]].map(([a,b])=>[x+a-4,y+b]));FS(c,'#dfe5ea',1);return;}   // 활을 당겨
+  if(i===10){c.strokeStyle='#8a5a30';c.lineWidth=2.4;L(c,x-2,y+8,x-2,y-2);L(c,x-2,y-2,x-8,y-12);L(c,x-2,y-2,x+5,y-11);L(c,x-5,y-7,x-11,y-8);L(c,x+2,y-7,x+9,y-6);c.fillStyle='#b9743e';E(c,x-1,y+6,6,4);FS(c,'#b9743e',1.2);c.strokeStyle='rgba(255,233,168,.9)';c.lineWidth=1.6;for(const k of [0,5,10])L(c,x+6,y+k-2,x+13,y+k-2);return;}   // 산의 사슴 같은 빠르기
+  if(i===11){c.strokeStyle=OL;c.lineWidth=3;L(c,x-9,y+12,x-9,y-12);P(c,[[x-9,y-12],[x+11,y-7],[x-9,y-2]]);FS(c,'#6f8a4a',1.4);c.strokeStyle='#ffe9a8';c.lineWidth=1.8;L(c,x-2,y+7,x+12,y+7);P(c,[[x+12,y+4],[x+16,y+7],[x+12,y+10]]);FS(c,'#ffe9a8',1);return;}   // 앞장선 용사
   if(i===6){c.strokeStyle='#c99a2e';c.lineWidth=2;L(c,x,y+10,x,y-6);for(const d of [5,9,13]){c.beginPath();c.moveTo(x-d,y-6);c.quadraticCurveTo(x-d,y+4,x,y+4);c.quadraticCurveTo(x+d,y+4,x+d,y-6);c.stroke();}for(const dx of [-13,-9,-5,0,5,9,13]){c.fillStyle='#ffcf5a';E(c,x+dx,y-9,1.8,3);c.fill();}return;}
   if(i===7){c.strokeStyle='#e8b53c';c.lineWidth=2;E(c,x,y+5,13,6);c.stroke();c.strokeStyle='rgba(232,181,60,.55)';E(c,x,y+5,8,3.6);c.stroke();c.beginPath();c.moveTo(x,y-12);c.quadraticCurveTo(x+6,y-4,x,y+2);c.quadraticCurveTo(x-6,y-4,x,y-12);FS(c,'#ffcf5a',1.2);return;}
   if(i===8){c.strokeStyle='#e8b53c';c.lineWidth=2.2;for(let k=0;k<7;k++){const a=-Math.PI/2+(k-3)*.32;L(c,x+Math.cos(a)*5,y+6+Math.sin(a)*5,x+Math.cos(a)*14,y+6+Math.sin(a)*14);}C(c,x,y+6,4);FS(c,'#ffcf5a',1.2);return;}
@@ -2003,6 +2169,7 @@ function renderPlay(){
   if(G.shake>0)c.translate(rand(-G.shake,G.shake),rand(-G.shake,G.shake));
   if(bgC.width&&bgC.height)c.drawImage(bgC,0,0,W,H);
   if(G.rearAnim)drawRearReveal(c);
+  if(G.fallK>0&&FALL_IMG[G.sid]){c.save();c.globalAlpha=G.fallK;c.imageSmoothingQuality='high';c.drawImage(FALL_IMG[G.sid],0,0,W,H);c.restore();}   // 성벽이 무너져 내린지라(수 6:20)
   if(G.sid===6){drawSea(c);drawFires(c);}
   for(const s of G.spots)if(!s.tower)drawSpot(c,s,(G.menu&&G.menu.spot===s)||(G.tut&&G.tut.step===0&&!G.towers.length));
   drawGround(c);drawGate(c);drawUnitSel(c);if(G.rallyFor)drawShepRange(c,G.rallyFor);drawDrag(c);
@@ -2019,6 +2186,8 @@ function renderPlay(){
   if(G.sid===6)list.push({y:372,f:()=>drawNpcMoses(c)});
   if(G.hill)list.push({y:G.hill.y,f:()=>drawHill(c)});
   if(G.S.npc)list.push({y:G.S.npc.y,f:()=>drawNpc(c)});
+  for(const [k,e] of eggHere())list.push({y:e.y,f:()=>drawEgg(c,k)});
+  if(G.march)for(let i=0;i<MARCH.length;i++){const q=marchPos(G.march,i);if(q)list.push({y:q.y,f:()=>drawMarcher(c,MARCH[i],q,i)});}
   list.sort((a,b)=>a.y-b.y);
   if(G.sid===1){const s=G.scene,dk2=s?clamp((s.t-5.6)/1.2,0,1):0,wy=waterLevel(),lift=Math.max(0,Math.min(70,386-wy))+(wy<386?Math.sin(G.t*1.6)*3:0);
     const arkP=G.over?1:G.arkShown;
@@ -2027,15 +2196,18 @@ function renderPlay(){
   }else for(const it of list)it.f();
   drawStamp(c);drawBanner(c);drawRains(c);drawProjs(c);drawFx(c);
   if(G.S.night)drawDark(c);
+  if(G.finale&&G.finale.dawn>0){const k=G.finale.dawn;c.save();const g=c.createLinearGradient(0,0,0,H);g.addColorStop(0,`rgba(255,186,140,${.26*k})`);g.addColorStop(1,`rgba(255,226,190,${.06*k})`);c.fillStyle=g;c.fillRect(0,0,W,H);c.restore();}   // 일곱째 날 새벽(수 6:15)
   if(G.S.sunset){const k=clamp((Math.max(0,G.waveIdx)+(G.phase==='wave'?Math.min(1,G.waveT/40):0))/G.S.waves.length,0,1);if(k>0){c.save();c.globalCompositeOperation='multiply';c.fillStyle=`rgba(255,168,110,${.38*k})`;c.fillRect(0,0,W,H);c.restore();}}   // 해가 지도록(출 17:12)
   drawDemons(c);
   for(const l of G.lights){const a=Math.min(1,l.t*3,(l.life-l.t)*1.5);c.save();c.globalCompositeOperation='lighter';E(c,l.x,l.y,l.r,l.r*.45);c.fillStyle=`rgba(255,236,160,${.22*a})`;c.fill();c.strokeStyle=`rgba(255,240,180,${.5*a})`;c.lineWidth=2;c.stroke();c.restore();if(Math.random()<.3)part('spark',l.x+rand(-l.r*.7,l.r*.7),l.y+rand(-l.r*.3,l.r*.3),0,-40,.6,'#fff3b0',2);}
   for(const b of G.beams){const a=Math.min(1,b.t*4)*(1-b.t/1.4);c.save();c.globalCompositeOperation='lighter';const g=c.createLinearGradient(0,0,0,b.y);g.addColorStop(0,'rgba(255,250,220,0)');g.addColorStop(1,`rgba(255,240,170,${.75*a})`);c.fillStyle=g;c.fillRect(b.x-34*(1-b.t*.3),0,68*(1-b.t*.3),b.y);E(c,b.x,b.y,b.r,b.r*.45);c.fillStyle=`rgba(255,240,170,${.35*a})`;c.fill();c.restore();}
   if(G.hands>0){const h=G.hero;c.save();c.globalCompositeOperation='lighter';for(const t of G.towers){glow(c,t.x,t.y-30,30,'255,220,120',.25+.1*Math.sin(G.t*6));}c.restore();}
   drawTapHands(c);
+  if(G.finale)drawShoutCall(c);
   drawSceneOverlay(c);
   for(const t of G.texts){const a=1-t.t/t.life;c.globalAlpha=Math.min(1,a*2);txt(c,t.s,t.x,t.y,{size:t.size,col:t.col});c.globalAlpha=1;}
   drawFlags(c);
+  drawDays(c);
   drawMenu(c);
   drawAim(c);
   if(G.flash>0){c.fillStyle=`rgba(255,250,230,${G.flash*.5})`;c.fillRect(0,0,W,H);}
@@ -2129,7 +2301,8 @@ function showEnd(win){
 function endHints(){const k=chosenHero,n=HEROES[k].fixedLv?0:ptsLeft(k),out=[];if(n>0)out.push(`${HEROES[k].name}의 연단 점수 ${n}점은 지도의 <b>연단</b>에서 쓸 수 있어요.`);if(upgAffordable())out.push(`남은 별 ${starsLeft()}개로 지도의 <b>별 강화</b>에서 탑과 기술을 키울 수 있어요.`);return out.length?`<p class="unlock" style="font-size:.9em">${out.join('<br>')}</p>`:'';}
 const TIPS7=['약탈병이 아주 많아요. 길목마다 양치기와 문지기로 막아 세우세요.','넷째 무리부터 진영 뒤쪽 짧은 길로도 와요. 등불 가까이에도 탑을 두세요.','모세의 손이 내려오면 적이 빨라져요. 산 위의 모세를 눌러 아론과 훌이 팔을 붙들게 하세요.','찬양대의 노래로 몰려오는 약탈병을 멈춰 세우세요.'];
 const TIPS8=['거인은 느리지만 튼튼해요. 탑을 모아 한꺼번에 치고, 갈렙의 표적으로 약하게 하세요.','거인의 고함과 옥의 발구름에 양치기가 기절해요. 갈렙의 "그들을 두려워하지 말라"로 풀어 주세요.','옥은 체력이 계속 차요. 순금 등잔대와 레위인의 빛을 모아 한꺼번에 몰아치세요.','일곱째 무리부터 북쪽 에드레이 성문에서도 와요. 두 길이 만나는 곳에 화력을 모으세요.'];
-const TIPS={7:TIPS7,8:TIPS8,2:['약탈병은 빨라요. 양치기로 길을 막아 세우세요.','약탈병이 끝까지 가면 세겔을 빼앗아요. 출구 가까이에도 탑을 두세요.','두 길이 만나는 곳에 양치기와 장인을 함께 두면 좋아요.'],3:['방패병은 교만의 갑옷이 두꺼워요. 레위인의 빛이 잘 들어요.','밤에는 탑 둘레만 밝아요. 길목마다 탑을 고르게 세우세요.','3단계 탑을 아끼지 마세요. 마지막 무리가 가장 길어요.'],4:['백부장은 거룩한 빛을 튕겨 내요. 파수꾼과 양치기로 상대하세요.','두 길이 갈대숲 바로 앞에서 만나요. 양쪽을 고르게 지키세요.','제사장의 문지기를 길목에 세우고, 축복과 싹 난 지팡이로 오래 버티게 하세요.'],5:['세 길이 우물 앞에서 만나요. 만나는 곳에 화력을 모으세요.','아래쪽 길은 짧아요. 늦게 열리지만 빠르게 다가와요.','모세의 반석의 물과 중보로 양치기를 오래 세워 두세요.'],1:['양치기를 길 가까이 세우면 적이 멈춰 서서 다른 탑이 쏘기 좋아요.','노아를 길목에 세워 두면 3초 뒤 나무 방벽을 세워요.','두 길이 만나는 곳에 탑을 모으면 효율이 좋아요.'],6:['방패병은 교만의 갑옷이 두꺼워요. 레위인의 빛이 잘 들어요.','백부장은 거룩한 빛을 튕겨 내요. 파수꾼과 양치기로 상대하세요.','전차는 막을 수 없어요. 레위인과 장인으로 잡아요.','제사장의 문지기를 길목에 세우고, 축복과 싹 난 지팡이로 오래 버티게 하세요.','바로의 보호막은 한꺼번에 몰아쳐서 깨세요. 부르짖음이 잘 들어요.']};
+const TIPS9=['궁수는 멀리서 양치기와 문지기를 쏴요. 파수꾼과 요단 동편 용사로 먼저 맞히세요.','적은 서쪽 성문에서 나와 북쪽 길과 남쪽 길로 갈라져요. 두 길이 만나는 동쪽을 단단히 지키세요.','행렬의 나팔이 지나가면 적이 잠깐 멈춰요. 그때 부르짖음을 쓰면 한꺼번에 맞힐 수 있어요.','요단 동편 용사는 사거리가 가장 길어요. 성 둘레 어디서든 두 길에 모두 닿는 자리를 찾아보세요.'];
+const TIPS={7:TIPS7,8:TIPS8,9:TIPS9,2:['약탈병은 빨라요. 양치기로 길을 막아 세우세요.','약탈병이 끝까지 가면 세겔을 빼앗아요. 출구 가까이에도 탑을 두세요.','두 길이 만나는 곳에 양치기와 장인을 함께 두면 좋아요.'],3:['방패병은 교만의 갑옷이 두꺼워요. 레위인의 빛이 잘 들어요.','밤에는 탑 둘레만 밝아요. 길목마다 탑을 고르게 세우세요.','3단계 탑을 아끼지 마세요. 마지막 무리가 가장 길어요.'],4:['백부장은 거룩한 빛을 튕겨 내요. 파수꾼과 양치기로 상대하세요.','두 길이 갈대숲 바로 앞에서 만나요. 양쪽을 고르게 지키세요.','제사장의 문지기를 길목에 세우고, 축복과 싹 난 지팡이로 오래 버티게 하세요.'],5:['세 길이 우물 앞에서 만나요. 만나는 곳에 화력을 모으세요.','아래쪽 길은 짧아요. 늦게 열리지만 빠르게 다가와요.','모세의 반석의 물과 중보로 양치기를 오래 세워 두세요.'],1:['양치기를 길 가까이 세우면 적이 멈춰 서서 다른 탑이 쏘기 좋아요.','노아를 길목에 세워 두면 3초 뒤 나무 방벽을 세워요.','두 길이 만나는 곳에 탑을 모으면 효율이 좋아요.'],6:['방패병은 교만의 갑옷이 두꺼워요. 레위인의 빛이 잘 들어요.','백부장은 거룩한 빛을 튕겨 내요. 파수꾼과 양치기로 상대하세요.','전차는 막을 수 없어요. 레위인과 장인으로 잡아요.','제사장의 문지기를 길목에 세우고, 축복과 싹 난 지팡이로 오래 버티게 하세요.','바로의 보호막은 한꺼번에 몰아쳐서 깨세요. 부르짖음이 잘 들어요.']};
 let codexCat='전체';
 function openCodex(){$('sCodex').hidden=false;if(G&&screen==='play')G.paused=true;renderCodex();}
 function closeCodex(){$('lb').hidden=true;$('sCodex').hidden=true;if(G&&screen==='play')G.paused=false;}
@@ -2139,7 +2312,7 @@ function storySeq(){const out=[];for(const id of Object.keys(STAGES).map(Number)
   for(const q of S.victory.comic||[])out.push({sid:id,v:true,art:q.art,title:q.title,text:'',verse:q.verse||'',open:won});}
   return out;}
 let galSeq=[],galIdx=0;
-function renderGallery(){galSeq=storySeq();const el=$('cList');el.className='gwrap';let html='<p style="margin:.2em 0 0;font-size:.85em;color:var(--ink-2)">창조에서 에드레이까지, 하나님이 하신 구원의 이야기를 순서대로 모았어요. 스테이지를 지켜 낼 때마다 그림이 열려요.</p>';
+function renderGallery(){galSeq=storySeq();const el=$('cList');el.className='gwrap';let html='<p style="margin:.2em 0 0;font-size:.85em;color:var(--ink-2)">창조에서 여리고까지, 하나님이 하신 구원의 이야기를 순서대로 모았어요. 스테이지를 지켜 낼 때마다 그림이 열려요.</p>';
   for(const id of Object.keys(STAGES).map(Number).sort((a,b)=>a-b)){const S=STAGES[id];html+=`<h4 class="gh">${id} · ${S.name}<span>${S.ref}</span></h4><div class="gal">`;
     galSeq.forEach((it,i)=>{if(it.sid!==id)return;html+=it.open?`<button class="gt${it.v?' v':''}" data-g="${i}" aria-label="${it.v?it.title:S.name+' 이야기'}"><img loading="lazy" src="art/${it.art}.jpg${AV}" alt=""><span>${it.v?'구원 사건':'이야기'}</span></button>`:`<div class="gt lock">${it.v?'이 이야기를 지켜 내면 열려요':'앞 이야기를 지켜 내면 열려요'}</div>`;});
     html+='</div>';}
@@ -2147,7 +2320,7 @@ function renderGallery(){galSeq=storySeq();const el=$('cList');el.className='gwr
 function openLB(i){const it=galSeq[i];if(!it)return;galIdx=i;const S=STAGES[it.sid];$('lbImg').src=`art/${it.art}.jpg${AV}`;$('lbK').textContent=`${it.sid} · ${S.name} · ${it.v?'구원 사건':'이야기'}`;$('lbT').textContent=it.v?it.title:'';$('lbT').hidden=!it.v;$('lbX').textContent=it.text;$('lbX').hidden=!it.text;$('lbV').textContent=it.verse;$('lb').hidden=false;}
 function stepLB(d){let i=galIdx;do{i+=d;}while(galSeq[i]&&!galSeq[i].open);if(galSeq[i]){Snd.play('click');openLB(i);}}
 function renderCodex(){if(codexCat===GAL){$('cTabs').innerHTML=['전체',GAL,...new Set(CODEX.map(e=>e.cat))].map(c=>`<button aria-pressed="${c===codexCat}" data-c="${c}">${c}</button>`).join('');$('cTabs').querySelectorAll('button').forEach(b=>b.onclick=()=>{codexCat=b.dataset.c;renderCodex();});renderGallery();return;}
-  $('cList').className='entries';const cats=['전체',GAL,...new Set(CODEX.map(e=>e.cat))];$('cTabs').innerHTML=cats.map(c=>`<button aria-pressed="${c===codexCat}" data-c="${c}">${c}</button>`).join('');$('cTabs').querySelectorAll('button').forEach(b=>b.onclick=()=>{codexCat=b.dataset.c;renderCodex();});$('cList').innerHTML=CODEX.filter(e=>codexCat==='전체'||e.cat===codexCat).map(e=>`<article class="entry"><span class="k">${e.cat} · ${e.k}</span><h3>${e.name}</h3><p class="vv">${e.verse}</p><p>${e.desc}</p><p class="deep">${e.deep}</p></article>`).join('');}
+  $('cList').className='entries';const cats=['전체',GAL,...new Set(CODEX.map(e=>e.cat))];$('cTabs').innerHTML=cats.map(c=>`<button aria-pressed="${c===codexCat}" data-c="${c}">${c}</button>`).join('');$('cTabs').querySelectorAll('button').forEach(b=>b.onclick=()=>{codexCat=b.dataset.c;renderCodex();});$('cList').innerHTML=CODEX.filter(e=>codexCat==='전체'||e.cat===codexCat).map(e=>e.egg&&!EGG_GOT[e.egg]?`<article class="entry"><span class="k">${e.cat} · ${e.k}</span><h3>아직 찾지 못했어요</h3><p>${e.k}에서 싸움이 없는 구석을 잘 살펴보세요. 무언가 숨어 있어요.</p></article>`:`<article class="entry"><span class="k">${e.cat} · ${e.k}</span><h3>${e.name}</h3><p class="vv">${e.verse}</p><p>${e.desc}</p><p class="deep">${e.deep}</p></article>`).join('');}
 function togglePause(force){if(!G||screen!=='play'||G.over)return;G.paused=force!=null?force:!G.paused;$('sPause').hidden=!G.paused;}
 
 /* ---------- 설명 칸 ---------- */
@@ -2157,6 +2330,7 @@ function itemInfo(it){
   if(it.k==='build'){const L2=LINES[it.line],T=L2.tiers[0];return`<h3>${L2.name}<span class="tag">${L2.role}</span></h3><p>${L2.desc}</p><p class="st">${statLine(it.line,T)} · 값 ${price(it.line,T.cost)}</p><p class="v">${L2.verse}</p>${hint}`;}
   if(it.k==='up'){if(it.lock)return`<h3>더 올릴 수 없어요</h3><p class="lock">${it.lock}</p>`;const L2=LINES[t.line],T=L2.tiers[t.tier];return`<h3>${T.name}<span class="tag">${t.tier+1}단계</span></h3><p class="st">${statLine(t.line,T)} · 값 ${price(t.line,T.cost)}</p>${hint}`;}
   if(it.k==='branch'){const b=LINES[t.line].branches.find(b=>b.id===it.id);if(it.lock)return`<h3>${b.name}<span class="tag">4단계</span></h3><p class="lock">${it.lock}</p>`;if(it.id==='menorah')return`<h3>순금 등잔대<span class="tag">4단계</span></h3><p>거룩한 빛이 적에서 적으로 튀어요(처음엔 셋까지). 거룩한 빛 ${MENORAH.dmg}, 사거리 ${MENORAH.range}. 장인 계열에서 유일하게 하늘의 적도 맞혀요.</p><p class="v">${MENORAH.verse}</p><p class="st">값 ${MENORAH.cost}</p>${hint}`;
+    if(it.id==='jordan')return`<h3>요단 동편 용사<span class="tag">4단계</span></h3><p>가장 먼 거리에서 강한 화살 한 발을 쏴요. 화살 ${JORDAN.dmg}, 사거리 ${JORDAN.range}, ${JORDAN.rate}초마다. 하늘의 적도 맞혀요.</p><p class="v">${JORDAN.verse}</p><p class="st">값 ${JORDAN.cost}</p>${hint}`;
     if(it.id==='choir')return`<h3>찬양대<span class="tag">4단계</span></h3><p>노래로 적을 멈춰 세우는 탑이에요. 거룩한 빛 ${CHOIR.dmg}, 사거리 ${CHOIR.range}. 싸움은 하나님이 하세요(대하 20:15).</p><p class="v">${CHOIR.verse}</p><p class="st">값 ${CHOIR.cost}</p>${hint}`;
     return`<h3>제사장<span class="tag">4단계</span></h3><p>아군 병사를 살려 두는 유일한 탑이에요. 거룩한 빛 ${PRIEST.dmg}, 사거리 ${PRIEST.range}. 범위 안 병사를 조금씩 회복시켜요.</p><p class="v">${PRIEST.verse}</p><p class="st">값 ${PRIEST.cost}</p>${hint}`;}
   if(it.k==='skill'){const sk=BRANCH[t.branch].skills[it.i],lv=t.sk[sk.id];return`<h3>${sk.name}<span class="tag">${lv}/3</span></h3><p>${sk.desc[Math.min(lv,2)]}</p><p class="v">${sk.ref}</p>${lv<3?`<p class="st">다음 단계 값 ${sk.costs[lv]}</p>`:''}${hint}`;}
@@ -2195,7 +2369,8 @@ function selHtml(T){const o=T.o,r=Math.round;
     if(t.branch){const B=BRANCH[t.branch],sk=B.skills.map(k=>`${k.name} ${t.sk[k.id]}/3`).join(' · ');let extra='';
       if(t.branch==='menorah'){extra=ch('holy','튀는 빛',[3,4,5,7][t.sk.seven]+'번')+(t.sk.spirit?ch('holy','둘레',r(MENORAH.burst[t.sk.spirit]*st.dm)):'');}
       if(t.branch==='priest'&&t.sk.gate>0){const g=GATE[t.sk.gate];extra=ch('hp','문지기',g.hp);}
-      return`<div class="r1"><span class="nm">${B.name}</span><span class="tag">${L2.name} 4단계</span>${bd}</div><div class="chips">${ch(t.line==='art'&&t.branch!=='menorah'?'atk':'holy','공격',r(st.s.dmg*st.dm))}${ch('rate','공격 속도',rateW(sec))}${ch('rng','사거리',rangeW(st.range))}${extra}${ch('air','하늘','✓')}</div><p class="sub">${sk}</p>`;}
+      if(t.branch==='jordan'&&t.sk.draw>0)extra=ch('atk','바로 풀어 줌',Math.round(JORDAN.draw[t.sk.draw]*100)+'%');
+      return`<div class="r1"><span class="nm">${B.name}${t.nm?` ${t.nm}`:''}</span><span class="tag">${L2.name} 4단계</span>${bd}</div><div class="chips">${ch((t.line==='art'&&t.branch!=='menorah')||t.branch==='jordan'?'atk':'holy','공격',r(st.s.dmg*st.dm))}${ch('rate','공격 속도',rateW(sec))}${ch('rng','사거리',rangeW(st.range))}${extra}${ch('air','하늘','✓')}</div><p class="sub">${sk}</p>`;}
     const T0=L2.tiers[t.tier-1];return`<div class="r1"><span class="nm">${T0.name}</span><span class="tag">${L2.name} ${t.tier}단계</span>${bd}</div><div class="chips">${ch(t.line==='levi'?'holy':'atk','공격',r(st.s.dmg*st.dm))}${ch('rate','공격 속도',rateW(sec))}${ch('rng','사거리',rangeW(st.range))}${t.line==='art'?ch('atk','범위',r(st.s.aoe||0)):''}${ch('air','하늘',L2.air?'✓':'✕')}</div><p class="sub">${L2.desc}</p>`;}
   if(T.k==='hero'){const h=o,D=h.D;return`<div class="r1"><span class="nm">${D.name}</span><span class="tag">${D.line} 영웅 · Lv ${h.lv}</span>${hpHtml(h.hp,h.max)}</div><div class="chips">${ch(D.melee?'atk':(h.kind==='caleb'?'atk':'holy'),'공격',r(h.dmg))}${ch('rate','공격 속도',rateW(D.rate))}${ch('rng','사거리',D.melee?'근접':rangeW(D.range))}${ch('def','방어',armorW(h.armor))}${ch('re','다시 일어남','15초')}</div><p class="say">${D.say}<small>${D.sayRef}</small></p>`;}
   if(T.k==='unit'){const u=o,gk=u.gk,help=u.look==='help',nm=gk?'성막 문지기':help?'세 겹 줄 장정':LINES.shep.tiers[u.tw.tier-1].name,tg=gk?'제사장이 세움':help?'플레이어 기술':'양치기 '+u.tw.tier+'단계';
@@ -2245,7 +2420,7 @@ function openMenu(spot){
   else{
     if(t.branch){[-2.5,-1.57,-.64].forEach((a,i)=>place('skill',a,{i}));}
     else if(t.tier<3){place('up',-1.57,capOk(t)?{}:{lock:G.S.cap<=t.tier?`이 스테이지는 ${G.S.cap}단계 탑까지만 쓸 수 있어요.`:''});}
-    else{const br=LINES[t.line].branches;[-2.2,-.94].forEach((a,i)=>{const b=br[i];const lock=BRANCH[b.id]?(G.S.cap<4?'이 스테이지에서는 4단계를 쓸 수 없어요.':b.id==='choir'&&!choirOpen()?b.lock:b.id==='menorah'&&!menorahOpen()?b.lock:null):b.lock;place('branch',a,{id:b.id,lock});});}
+    else{const br=LINES[t.line].branches;[-2.2,-.94].forEach((a,i)=>{const b=br[i];const lock=BRANCH[b.id]?(G.S.cap<4?'이 스테이지에서는 4단계를 쓸 수 없어요.':branchLocked(b.id)?b.lock:null):b.lock;place('branch',a,{id:b.id,lock});});}
     const rally=t.line==='shep'||(t.branch==='priest'&&t.sk.gate>0);place('sell',rally?2.1:1.57);if(rally)place('rally',1.04);   // 랠리는 판매와 아래쪽 양옆으로(위쪽 기술 단추·가격표와 겹치지 않게)
   }
   G.menu={spot,items,sel:null,hov:null};
@@ -2273,6 +2448,7 @@ function onTap(x,y){
   if(G.aim){const a=G.aim;let ok=true;if(a==='cry')castCry(x,y);else if(a==='help')ok=castHelp(x,y);else if(a==='stamp')ok=castStamp(x,y);else if(a==='banner')ok=castBanner(x,y);else if(a==='rain')ok=castRain(x,y);if(ok!==false)G.aim=null;return;}
   if(G.rallyFor){const t=G.rallyFor,n=nearestAll(x,y);if(n&&n.dd<60*60&&d2(n.x,n.y,t.x,t.y)<SHEP_R*SHEP_R){t.rally={x:n.x,y:n.y};G.fx.push({k:'mark',x:n.x,y:n.y,t:0,life:.6});Snd.play('click');}else{toast('탑 가까운 길 위를 눌러 주세요.',2.5);return;}G.rallyFor=null;ui.info(null);return;}
   if(onHill(x,y)){closeMenu();hillTap();return;}
+  {const eg=eggAt(x,y);if(eg){findEgg(eg);return;}}
   const tb=G.towers.find(t=>t.stopped&&Math.abs(x-t.x)<34&&y<t.y+16&&y>t.y-80);if(tb){tb.stopped.taps--;Snd.play('tap');part('spark',x,y,rand(-30,30),rand(-40,0),.4,'#e9dcff',2);if(tb.stopped.taps<=0)unbind(tb);return;}
   const HR=scale<.75?40:30;
   if(G.menu){const it=G.menu.items.find(i=>d2(x,y,i.x,i.y)<=HR*HR);if(it){if(lastPtr==='touch'&&G.menu.sel!==it){G.menu.sel=it;ui.info(itemInfo(it),G.menu.spot.y>420);Snd.play('click');return;}doItem(it);return;}}
@@ -2346,7 +2522,7 @@ $('bCodexClose').onclick=()=>{Snd.play('click');closeCodex();};
 $('lbClose').onclick=()=>{Snd.play('click');$('lb').hidden=true;};$('lbPrev').onclick=()=>stepLB(-1);$('lbNext').onclick=()=>stepLB(1);
 $('lb').addEventListener('click',ev=>{if(ev.target.id==='lb')$('lb').hidden=true;});
 $('bTitle').onclick=()=>{Snd.play('click');goTitle();};
-$('bNext').onclick=nextStory;$('bPrev').onclick=prevStory;$('bComicPrev').onclick=comicPrev;$('bSkip').onclick=()=>{Snd.play('click');afterStory();};
+$('bNext').onclick=nextStory;$('bPrev').onclick=prevStory;$('bComicPrev').onclick=comicPrev;$('bShout').onclick=()=>{Snd.init();shout();};$('bSkip').onclick=()=>{Snd.play('click');afterStory();};
 $('bResume').onclick=()=>{Snd.play('click');togglePause(false);};
 $('bRestart').onclick=()=>{Snd.play('click');$('sPause').hidden=true;startPlay(chosenHero);};
 $('bToMap').onclick=()=>{Snd.play('click');$('sPause').hidden=true;goMap();};

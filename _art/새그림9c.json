@@ -1,0 +1,59 @@
+{
+ "출력": "raw",
+ "크기": [
+  1024,
+  1024
+ ],
+ "단계": 4,
+ "항목": [
+  {
+   "id": "jericho_fall",
+   "종류": "건물",
+   "크기": [
+    1152,
+    768
+   ],
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "참조": [
+    "raw/jericho_s3_768.png"
+   ],
+   "프롬프트": "Draw this exact same walled city in the same style, colors, size, position and camera angle, keeping the earthen mound, the houses inside and the palm trees the same, except one change: the high city walls and towers have collapsed and fallen down flat outward into low heaps of broken mud bricks and stones with a little dust, and the wooden gate has fallen too; only one short piece of the front wall still stands: the part with the little window and the bright scarlet cord hanging from it, with the small house behind it unharmed."
+  },
+  {
+   "id": "jericho_fall2",
+   "종류": "건물",
+   "크기": [
+    1536,
+    1024
+   ],
+   "시드": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "프롬프트": "The ancient city of Jericho right after its walls fell down flat, as one big strategy-map building, wide and low: where an oval ring of high mud-brick city walls stood, there are now only long low heaps of broken mud bricks and stones lying flat on the ground all the way around, with a little drifting dust; many small flat-roofed mud-brick houses packed close together inside with a few date palm trees are still standing and are now fully visible; in the front, one short piece of wall still stands with a little window and a bright scarlet red cord hanging from it. The city sits on a low oval earthen mound. Seen from high above at a steep angle like a strategy game map."
+  },
+  {
+   "id": "jericho_fall3",
+   "종류": "건물",
+   "크기": [
+    1152,
+    768
+   ],
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "참조": [
+    "raw/jericho_s3_768.png"
+   ],
+   "프롬프트": "Redraw this city after its walls fell down flat: remove all the tall city walls, towers and the gate completely; in their place draw only low flat heaps of broken mud bricks lying on the ground around the city, so every house inside is fully visible from outside; keep the same houses, palm trees, earthen mound, camera angle and style; keep one short piece of the front wall with the little window and the scarlet cord."
+  }
+ ]
+}

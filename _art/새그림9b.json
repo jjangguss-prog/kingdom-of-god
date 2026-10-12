@@ -1,0 +1,94 @@
+{
+ "출력": "raw",
+ "크기": [
+  1024,
+  1024
+ ],
+ "단계": 4,
+ "항목": [
+  {
+   "id": "bg9base",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "참조": [
+    "ref2/ref9b.png"
+   ],
+   "프롬프트": "Repaint this top-down tower defense game map as a richly hand-painted Kingdom Rush style battlefield on the plain of Jericho near the Jordan river, seen from above at a slight angle. Keep exactly the same sandy road shapes and positions: the closed oval loop road on the left that goes all the way around, and the winding road from the right side of the loop to the camp on the right. Inside the oval loop road there is only a low, wide, bare mound of packed brown earth with a few small stones and dry grass tufts; it is completely empty: no buildings, no walls, no trees on it. At the right end of the road is the Israelite camp of Gilgal with several brown goat-hair tents and a small circle of twelve big river stones; beyond it at the right edge flows the blue Jordan river lined with green reeds and tamarisk trees. Everywhere else outside the loop: the warm green-and-golden plain of Jericho with groves of tall date palm trees, especially in the lower left, small fields of barley, scattered rocks and shrubs; no other water. Warm morning light. No characters, no text."
+  },
+  {
+   "id": "jericho",
+   "종류": "건물",
+   "크기": [
+    1536,
+    1024
+   ],
+   "시드": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "프롬프트": "The ancient walled city of Jericho as one big strategy-map building, wide and low: an oval ring of thick high sun-dried mud-brick city walls on a sloping stone base with six square towers, a strong closed wooden city gate in the left end of the wall, and many small flat-roofed mud-brick houses packed close together inside with a few date palm trees. In the front wall facing the viewer, one small house is built into the wall with a little window, and a bright scarlet red cord hangs from that window down the outside of the wall. The city sits on a low oval earthen mound. Seen from high above at a steep angle like a strategy game map."
+  },
+  {
+   "id": "s9d",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    3,
+    4,
+    5
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: the people of Israel cross the Jordan river on completely dry ground: the riverbed in the middle of the picture is totally dry, cracked mud and smooth stones with no water at all; far upstream in the distance the river water has stopped and stands up in a great heap like a wall; priests in white linen robes with white headcloths stand firm in the middle of the dry riverbed carrying the ark of the covenant, a chest completely covered with a plain deep-blue cloth so that nothing of it can be seen, carried on the shoulders of priests by two long wooden poles; families with children, donkeys and flocks walk across the dry riverbed past them; in front march armed warriors of the tribes of Reuben, Gad and half of Manasseh with long bows and round shields; Joshua, a strong Israelite leader of about thirty with a short dark beard and a determined kind face, wearing a simple tan wool tunic with a brown leather belt, leather bracers and a cream headcloth with a cord, leads them; bright morning light, wonder and joy. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "s9e",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    3,
+    4
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: evening at the Israelite camp of Gilgal among date palm trees: in the center stand twelve big smooth grey river stones piled up and standing upright together as one tall memorial monument, not a fire ring; children point at the memorial stones and ask their parents; to the side, families sit around a small separate cooking fire sharing the Passover meal with flat unleavened bread and roasted grain; brown tents behind; warm sunset light, peaceful. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "p_trumpet",
+   "종류": "인물",
+   "시드": [
+    3,
+    4,
+    5
+   ],
+   "프롬프트": "An Israelite priest in a white linen robe with a white headcloth and a blue sash, walking while blowing a shofar: a long curved natural ram's horn, cream and light brown colored animal horn with a twisted shape, not metal, not a brass trumpet, held up with both hands, cheeks puffed, exactly two arms."
+  },
+  {
+   "id": "s9f",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    4,
+    5,
+    6
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: on the plain near Jericho in the evening, Joshua, a strong Israelite leader of about thirty with a short dark beard and a determined kind face, wearing a simple tan wool tunic with a brown leather belt, leather bracers and a cream headcloth with a cord, barefoot, bows down low with his forehead touching the ground; his two leather sandals have been taken off and lie on the ground beside him; in front of him stands a tall upright blade-shaped column of dazzling white and golden light like a drawn sword; there is no person, no face and no figure inside the light, only pure light; the walls of Jericho far away in the background; holy awe and quiet. Every person has exactly two arms, two hands, two legs and two feet."
+  }
+ ]
+}

@@ -2,7 +2,7 @@
 # 로컬 무료 생성: FLUX.2 [klein] 4B(Apache 2.0, 상업 사용 가능). 생성 venv(%LOCALAPPDATA%\buiknam_gen)에서 돈다.
 # 사용: python 그림생성.py 작업.json
 # 작업.json: {"출력": "raw", "크기": [1024, 1024], "항목": [{"id": "noah", "종류": "인물", "프롬프트": "...", "시드": [1, 2]}]}
-#   종류: 인물(캐릭터) · 건물(탑) · 정령(마귀 등 떠 있는 것) · 장면(배경·이야기 그림, 흰 배경을 붙이지 않는다)
+#   종류: 인물(캐릭터) · 건물(탑) · 정령(마귀 등 떠 있는 것) · 무리(함께 걷는 여럿, 행렬) · 물건(작은 소품) · 장면(배경·이야기 그림, 흰 배경을 붙이지 않는다)
 #   "참조": ["ref/bg1.png"]를 주면 그 그림의 배치를 이어받아 다시 그린다(멀티 레퍼런스 편집). 경로는 작업.json 기준.
 # 결과: 출력\<id>_s<시드>_<지문6>.png + 같은 이름 .json. 이미 있으면 건너뛴다. 프롬프트를 고치면 지문이 바뀌어 새로 그린다.
 # 누끼(BiRefNet)와 동시에 돌리지 않는다(GPU 12GB). 생성이 끝난 뒤 누끼.py를 돌린다.
@@ -27,6 +27,12 @@ STYLE = {
             'Full body visible, floating, three-quarter view facing right. '
             'Isolated on a plain pure white background, no text.'),
     '장면': LOOK + 'No text, no lettering.',
+    '무리': ('A small group of 2D game character sprites walking together as one unit ' + LOOK +
+            'Chunky cute proportions with large heads, full bodies visible from head to feet, three-quarter view walking to the right, camera slightly above. '
+            'Isolated on a plain pure white background, no ground, no cast shadow, no text.'),
+    '물건': ('A single small 2D game prop sprite ' + LOOK +
+            'Three-quarter top-down view, the whole object visible. '
+            'Isolated on a plain pure white background, no ground, no cast shadow, no text.'),
 }
 
 def tag(it):
