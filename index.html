@@ -311,7 +311,7 @@ body.force #rotate{display:none!important}
     <h1 class="logo"><span class="a">Kingdom of God</span><span class="b">Old Testament</span></h1>
     <p class="tsub">하나님의 나라 · 구약</p>
     <div class="row" style="margin-top:.6em;font-size:1.35em"><button class="btn" id="bStart">시작하기</button><button class="btn" id="bCont">계속하기</button><button class="btn wood" id="bCodexT">두루마리</button></div>
-    <p class="tnote">v1.6 · 1장 약속, 2장 구원의 밤, 3장 광야 (방주부터 여리고까지)</p>
+    <p class="tnote">v1.6.1 · 1장 약속, 2장 구원의 밤, 3장 광야 (방주부터 여리고까지)</p>
   </section>
   <section id="sSlots" class="scr" hidden>
     <div class="card slots"><h2 id="slotH">계속하기</h2><p class="sub" id="slotSub"></p><div id="slotList"></div><div class="row"><button class="btn" id="slotNew" hidden>새 이야기 시작</button><button class="btn wood" id="slotBack">돌아가기</button></div></div>
@@ -1023,7 +1023,7 @@ function drawShoutCall(c){const F=G.finale;if(!F||(F.st!=='shout'&&F.st!=='blast
   if(n){const x=n.x-10,y=n.y-96,b=1+.04*Math.sin(G.t*5);c.save();c.translate(x,y);c.scale(b,b);RR(c,-46,-20,92,34,12);FS(c,'#fff3cf',2.4);P(c,[[8,14],[22,14],[18,28]]);FS(c,'#fff3cf',2.4);c.fillStyle='#fff3cf';c.fillRect(6,10,18,6);txt(c,'외치라!',0,-2,{size:20,col:'#7a2a14'});c.restore();}}
 
 /* ---------- 숨은 이야기(이스터 에그, 10-12 사용자): 싸움이 없는 구석의 물건을 누르면 업적이 열리고 두루마리에 카드가 생긴다. 이야기마다 따로 저장 ---------- */
-const EGGS={bones:{sid:6,art:'e_bones',x:712,y:222,r:30},bed:{sid:8,art:'e_bed',x:700,y:655,r:36},cord:{sid:9,art:null,x:516,y:380,r:26}};
+const EGGS={bones:{sid:6,art:'e_bones',x:712,y:222,r:30},bed:{sid:8,art:'e_bed',x:652,y:150,r:36},cord:{sid:9,art:null,x:516,y:380,r:26}};
 const EGG_GOT={};
 const eggHere=()=>Object.entries(EGGS).filter(([k,e])=>G&&e.sid===G.sid&&(e.art||e.x));
 function eggAt(x,y){for(const [k,e] of eggHere())if(d2(x,y,e.x,e.y-(e.art?14:0))<e.r*e.r)return k;return null;}
