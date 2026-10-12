@@ -1,0 +1,187 @@
+{
+ "출력": "raw",
+ "크기": [
+  1024,
+  1024
+ ],
+ "단계": 4,
+ "항목": [
+  {
+   "id": "o_archer",
+   "종류": "인물",
+   "시드": [
+    1
+   ],
+   "프롬프트": "An Amorite archer of the five kings, a lean young man with a black beard, a pointed bronze helmet, a short red-and-cream tunic with a leather belt, a leather quiver of arrows on his back, drawing a curved wooden bow with an arrow aimed forward, narrowed eyes, exactly two arms."
+  },
+  {
+   "id": "o_drummer",
+   "종류": "인물",
+   "시드": [
+    1,
+    2
+   ],
+   "프롬프트": "An Amorite war drummer of the five kings, a stocky man with a black beard, a pointed bronze helmet, a short red-and-cream tunic with a leather belt, a big round frame drum of stretched hide hanging in front of his belly from a strap over his shoulder, beating the drum with two short wooden drumsticks, mouth open shouting, wide fearful eyes, exactly two arms."
+  },
+  {
+   "id": "joshua_pray",
+   "종류": "인물",
+   "크기": [
+    1024,
+    1024
+   ],
+   "시드": [
+    1,
+    2
+   ],
+   "참조": [
+    "raw/joshua_s3_45162d.png"
+   ],
+   "프롬프트": "Redraw this same Joshua in the same style, colors and camera angle with a new pose: he lifts both of his arms straight up high above his head in prayer with both hands open and empty; his sword is put away in its sheath at his belt and there is no shield. He has exactly two arms and exactly two hands, no other hands. His face looks up to heaven."
+  },
+  {
+   "id": "e_jar",
+   "종류": "물건",
+   "시드": [
+    1
+   ],
+   "프롬프트": "A big round clay water jar of ancient Gibeon with two handles, full of water with a little water splashing over the rim, standing beside a small bundle of chopped firewood tied with rope."
+  },
+  {
+   "id": "s10a",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: inside a brown goat-hair tent at night by the light of a small clay oil lamp, Achan, an Israelite man with a brown beard in a plain striped tunic, nervously digs a hole in the dirt floor of the tent and hides inside it a beautiful embroidered colorful robe, a small pile of silver pieces and one gold bar, glancing worriedly over his shoulder at the tent door; tense quiet mood, child-friendly. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "s10b",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: at dawn on a rocky hill facing the small walled city of Ai in the distance, Joshua, a strong Israelite leader of about thirty with a short dark beard and a determined kind face, wearing a simple tan wool tunic with a brown leather belt, leather bracers and a cream headcloth with a cord, stands on a big rock and stretches out his arm holding a short javelin, pointing it toward the city; behind him the Israelite soldiers wait ready and hopeful; the sky glows pink and gold with sunrise; no fighting, no fire. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "s10c",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: two big green hills facing each other, Mount Ebal and Mount Gerizim; on the slope stands a plain altar of rough uncut natural field stones with thin white smoke; in the valley between the hills priests in white linen robes with white headcloths stand around the ark of the covenant, a chest completely covered with a plain deep-blue cloth so that nothing of it can be seen, carried on the shoulders of priests by two long wooden poles; Joshua, a strong Israelite leader of about thirty with a short dark beard and a determined kind face, wearing a simple tan wool tunic with a brown leather belt, leather bracers and a cream headcloth with a cord, reads aloud from a large open scroll; the whole people of Israel, men, women, children and foreign travelers in different colorful clothes, stand on both hillsides listening; bright clear day. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "s10d",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: at the Israelite camp of Gilgal among brown goat-hair tents, a small group of Gibeonite men, Hivite people of the hill country with dark curly hair and beards, wearing worn-out patched travel cloaks and cracked mended old sandals, with old torn and patched wineskins on their tired donkeys, bow politely and show Joshua, a strong Israelite leader of about thirty with a short dark beard and a determined kind face, wearing a simple tan wool tunic with a brown leather belt, leather bracers and a cream headcloth with a cord, and the gray-bearded Israelite elders their dry crumbly bread covered with spots of green mold, as if they had traveled from a very far country; the elders lean in curiously; warm afternoon light, gentle and respectful, nobody is laughed at. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "s10e",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: at the camp of Gilgal, Joshua, a strong Israelite leader of about thirty with a short dark beard and a determined kind face, wearing a simple tan wool tunic with a brown leather belt, leather bracers and a cream headcloth with a cord, and the gray-bearded Israelite elders, each raising one right hand to swear an oath, make a peace treaty with the dusty Gibeonite travelers in patched cloaks, who smile with relief; one elder holds a piece of their dry old bread; brown tents behind; warm golden light. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "s10f",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: on a hillside near the walled city of Gibeon on a round rocky hilltop, with strong pale limestone walls, square towers and many flat-roofed stone houses inside, Gibeonite men and women, Hivite people of the hill country with dark curly hair, wearing clean simple wool clothes in blue, ochre and cream, carry bundles of chopped firewood on their backs and big clay water jars on their shoulders, climbing up from a large round stone pool with steps cut into the rock toward a simple stone altar where white smoke rises to the sky; priests in white linen robes with white headcloths gratefully receive the wood and water; working together in peace; warm morning light. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "s10g",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: night: by torchlight the army of Israel marches quickly up a steep winding mountain road through the dark hills, Joshua, a strong Israelite leader of about thirty with a short dark beard and a determined kind face, wearing a simple tan wool tunic with a brown leather belt, leather bracers and a cream headcloth with a cord, at the front holding up a torch and pointing ahead; far away on a moonlit hilltop the walled city of Gibeon on a round rocky hilltop, with strong pale limestone walls, square towers and many flat-roofed stone houses inside is surrounded by the many small campfires of an enemy army camp; stars above; urgent but hopeful, child-friendly. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "v10a",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: a long steep winding mountain road going down a rocky slope with stone terraces; from dark storm clouds above, huge round white hailstones fall like rain onto the slope and bounce on the rocks; far below in the distance a small army of Amorite soldiers in red tunics runs away down the road, seen from behind, tiny, nobody is hit, nobody is hurt; dark wispy shadow creatures break apart and flee up into the sky; in the foreground on the hilltop Israelite soldiers watch in awe; golden sunlight breaks through the clouds on one side. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "v10b",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1,
+    2
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: Joshua, a strong Israelite leader of about thirty with a short dark beard and a determined kind face, wearing a simple tan wool tunic with a brown leather belt, leather bracers and a cream headcloth with a cord, stands on a rocky hilltop with both of his arms raised high toward the sky, praying, his face looking up; on the right side of the sky, above the walled city of Gibeon on a round rocky hilltop, with strong pale limestone walls, square towers and many flat-roofed stone houses inside, blazes a bright golden sun; on the left side of the sky, above a green valley with small fields, hangs a pale white full moon in the blue daytime sky; the Israelite soldiers below look up in wonder; brilliant golden light. Joshua has exactly two arms and exactly two hands. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "v10c",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: in front of the open wooden gate of the walled city of Gibeon on a round rocky hilltop, with strong pale limestone walls, square towers and many flat-roofed stone houses inside, Gibeonite men and women, Hivite people of the hill country with dark curly hair, wearing clean simple wool clothes in blue, ochre and cream, joyfully welcome Joshua, a strong Israelite leader of about thirty with a short dark beard and a determined kind face, wearing a simple tan wool tunic with a brown leather belt, leather bracers and a cream headcloth with a cord, and the Israelites; Gibeonite men carry bundles of firewood and big clay water jars together with Israelites toward a simple stone altar with rising white smoke; children wave and smile; warm golden evening light, peace and friendship. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "bg10w",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1
+   ],
+   "참조": [
+    "ref2/ref10.png"
+   ],
+   "프롬프트": "Repaint this top-down tower defense game map as a richly hand-painted Kingdom Rush style battlefield in the rocky hill country of Benjamin around the city of Gibeon, seen from above at a slight angle. Keep exactly the same sandy road shapes and positions: the long winding switchback road on the left that climbs up from the valley in the lower left, the road that comes up from the bottom and curves around on the right, and the shared road that leads up to the city gate at the upper right. At the upper right, on a round rocky hilltop, stands the walled city of Gibeon with strong pale limestone walls, square towers and many flat-roofed stone houses packed inside; its wooden city gate faces the lower left, exactly where the road ends; nothing covers the roads. Just to the right of and below the city, a large round open pool cut deep into the rock with stone steps spiraling down to dark blue water. On the left, the slope is covered with stone-walled terraced fields and olive trees between the bends of the switchback road; in the lower left corner, the green fertile valley of Aijalon with small fields. In the upper middle, a small bare rocky knoll. Elsewhere: pale limestone hill country with olive groves, small vineyards, scattered boulders and shrubs; no river, no lake. Warm morning light. No characters, no text."
+  }
+ ]
+}

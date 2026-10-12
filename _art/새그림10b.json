@@ -1,0 +1,36 @@
+{
+ "출력": "raw",
+ "크기": [
+  1024,
+  1024
+ ],
+ "단계": 4,
+ "항목": [
+  {
+   "id": "s10a",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    2,
+    3
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: inside a brown goat-hair tent at night by the light of one small clay oil lamp on the ground: one single Israelite man named Achan, all alone, with a brown beard and a plain striped tunic, kneels and nervously hides a beautiful embroidered colorful robe, a small pile of silver pieces and one gold bar in a hole dug in the dirt floor, glancing worriedly over his shoulder at the closed tent flap; nobody else is in the tent; tense quiet mood, child-friendly. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "s10e",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1,
+    2
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: at the Israelite camp of Gilgal among brown goat-hair tents: on the left side, three Gibeonite travelers with dark curly hair and beards in worn-out patched cloaks stand beside their tired donkeys with old cracked wineskins, smiling with relief; on the right side, Joshua, a strong Israelite leader of about thirty with a short dark beard and a determined kind face, wearing a simple tan wool tunic with a brown leather belt, leather bracers and a cream headcloth with a cord, and three gray-bearded Israelite elders face them, each raising his right hand to swear an oath of peace; on the ground between the two groups lies a small basket of dry crumbly bread with green mold spots; warm golden light. Every person has exactly two arms, two hands, two legs and two feet."
+  }
+ ]
+}

@@ -1,0 +1,24 @@
+{
+ "출력": "raw",
+ "크기": [
+  1024,
+  1024
+ ],
+ "단계": 4,
+ "항목": [
+  {
+   "id": "s10a",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    4,
+    5,
+    6
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: inside a brown goat-hair tent at night by the light of one small clay oil lamp: one single Israelite man named Achan, all alone, with a brown beard and a plain striped tunic, kneels behind a shallow hole dug in the dirt floor and nervously hides in it a beautiful embroidered colorful robe, a small pile of shining silver pieces and one gold bar, glancing worriedly over his shoulder at the closed tent flap; the hole with the robe, the silver and the gold is right in the center of the picture at the height of the man's waist, seen from the front at eye level; the bottom third of the picture is only plain dark dirt floor; nobody else is in the tent; tense quiet mood, child-friendly. Every person has exactly two arms, two hands, two legs and two feet."
+  }
+ ]
+}
