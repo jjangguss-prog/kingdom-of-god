@@ -1,0 +1,72 @@
+{
+ "출력": "raw",
+ "크기": [
+  1024,
+  1024
+ ],
+ "단계": 4,
+ "항목": [
+  {
+   "id": "v12a",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    10,
+    11,
+    12,
+    13
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: night; in the foreground on a low rocky hill, three Israelite men of Gideon's three hundred stand side by side in their places, each one looking like the man in the reference picture: his left hand holds one blazing torch high, his right hand holds a shofar: a long curved natural ram's horn, cream and light brown colored animal horn with a twisted shape, not metal, not a brass trumpet, to his lips; each man holds only one torch and only one horn; broken clay jars lie at their feet; far away on two other dark hills glow the small torch lights of the other two companies; below in the valley the great Midianite camp of black tents is in confusion: tents shake and fall, camels and people run away into the darkness; nobody is hit and nobody is hurt; nobody holds a sword. No crescent shapes, no moon ornaments, no religious symbols anywhere. Every person has exactly two arms, two hands, two legs and two feet.",
+   "참조": [
+    "raw/p_torch_s9_0e7584.png"
+   ]
+  },
+  {
+   "id": "v12a",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    10,
+    11,
+    12
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: night; in the foreground on a low rocky hill, three Israelite men of Gideon's three hundred stand side by side in their places, his left hand holds one blazing torch high, his right hand holds a shofar: a long curved natural ram's horn, cream and light brown colored animal horn with a twisted shape, not metal, not a brass trumpet, to his lips; each man holds only one torch and only one horn; broken clay jars lie at their feet; far away on two other dark hills glow the small torch lights of the other two companies; below in the valley the great Midianite camp of black tents is in confusion: tents shake and fall, camels and people run away into the darkness; nobody is hit and nobody is hurt; nobody holds a sword. No crescent shapes, no moon ornaments, no religious symbols anywhere. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "v12b",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    10,
+    11,
+    12,
+    13
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: dawn at a shallow river crossing of the Jordan with reeds and willows; four grown men walk together on a sandy path: in front, two strong adult Israelite soldiers of Ephraim with short dark beards, in plain tan tunics and headcloths, one of them holding the end of a rope; behind them follow exactly two captured Midianite princes whose wrists are tied with that rope: Oreb, a tall man with a black beard in a long black cloak trimmed with black feathers over a deep purple robe, and Zeeb, a big strong man with a thick dark beard wearing a gray wolf fur cloak over a red striped robe; the princes walk with their heads down; nobody is hurt; calm soft morning light; no children. No crescent shapes, no moon ornaments, no religious symbols anywhere. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "s12d",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    6,
+    7,
+    8,
+    9
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: at night by the light of two torches on a dark hilltop, Gideon, a humble young Israelite farmer of the tribe of Manasseh, a slim man of about thirty with a short dark-brown beard and kind worried eyes, wearing a plain brown wool tunic with a rope belt and a tan cloak, holds a torch while four grown Israelite servant men with beards quietly build a new altar of rough uncut stones; beside them lies only a scattered heap of old rubble stones, a broken-down pile; far below the hill lies a small dark sleeping village of box-shaped mud-brick houses with completely flat roofs like an ancient Middle Eastern village, no pitched roofs, no gables, no roof tiles, no chimneys; stars above; secret quiet mood; no children. No statues, no idols, no carved figures, no poles, no symbols anywhere. Every person has exactly two arms, two hands, two legs and two feet."
+  }
+ ]
+}

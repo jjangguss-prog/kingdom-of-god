@@ -1,0 +1,78 @@
+{
+ "출력": "raw",
+ "크기": [
+  1024,
+  1024
+ ],
+ "단계": 4,
+ "항목": [
+  {
+   "id": "v12a",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    6,
+    7,
+    8,
+    9
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: night; on three low hills around a dark valley, three groups of Israelite men in plain brown and tan tunics and headcloths, stand still in their places; every man holds exactly one blazing torch high in his left hand and exactly one a shofar: a long curved natural ram's horn, cream and light brown colored animal horn with a twisted shape, not metal, not a brass trumpet, in his right hand, pressed to his lips; no man holds two torches; broken pieces of clay jars lie at their feet; below in the valley the great Midianite camp of black tents is in confusion: tents shake and fall, and camels and people run away into the darkness; nobody is hit and nobody is hurt; nobody holds a sword. No crescent shapes, no moon ornaments, no religious symbols anywhere. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "v12b",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    6,
+    7,
+    8,
+    9
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: dawn at a shallow river crossing of the Jordan with reeds and willows; four people walk together on a sandy path: in front, two Israelite men of Ephraim in plain tan tunics and headcloths, one of them holding the end of a rope; behind them follow exactly two captured Midianite princes whose wrists are tied with that rope: Oreb, a tall man with a black beard in a long black cloak trimmed with black feathers over a deep purple robe, and Zeeb, a big strong man with a thick dark beard wearing a gray wolf fur cloak over a red striped robe; the princes walk with their heads down; nobody is hurt; calm soft morning light. No crescent shapes, no moon ornaments, no religious symbols anywhere. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "s12d",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    3,
+    4,
+    5
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: at night by the light of two torches on a dark hilltop, Gideon, a humble young Israelite farmer of the tribe of Manasseh, a slim man of about thirty with a short dark-brown beard and kind worried eyes, wearing a plain brown wool tunic with a rope belt and a tan cloak, and a few young Israelite servant men quietly build a new altar of rough uncut stones; beside them lies only a scattered heap of old rubble stones, a broken-down pile; below the hill lies a dark sleeping village of small ancient Near Eastern houses of mud brick and rough stone with flat roofs, no pitched roofs, no roof tiles, no timber framing, no chimneys, under the stars; secret quiet mood. No statues, no idols, no carved figures, no poles, no symbols anywhere. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "v12c",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    3,
+    4,
+    5
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: in the square of an ancient Israelite town of small ancient Near Eastern houses of mud brick and rough stone with flat roofs, no pitched roofs, no roof tiles, no timber framing, no chimneys, a crowd of Israelite men, women and children gather around Gideon, a humble young Israelite farmer of the tribe of Manasseh, a slim man of about thirty with a short dark-brown beard and kind worried eyes, wearing a plain brown wool tunic with a rope belt and a tan cloak, and an elder holds out a golden crown on a small cushion, asking him to be king; Gideon wears no crown; he gently refuses with his left hand raised palm out toward the crown, and points up to the sky with his right hand, where bright golden light shines down through the parting clouds; the people look up to the light; hopeful peaceful light. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "purah",
+   "종류": "인물",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "Purah, the young servant of Gideon, an Israelite teenage boy of about fifteen with short curly black hair and no beard, wearing a simple gray-and-tan wool tunic with a rope belt and sandals, standing quietly and attentively with both hands empty at his sides, a little worried but faithful face, exactly two arms and exactly two hands."
+  }
+ ]
+}

@@ -1,0 +1,58 @@
+{
+ "출력": "raw",
+ "크기": [
+  1024,
+  1024
+ ],
+ "단계": 4,
+ "항목": [
+  {
+   "id": "gideon",
+   "종류": "인물",
+   "시드": [
+    4,
+    5,
+    6
+   ],
+   "프롬프트": "Gideon, a humble young Israelite farmer of the tribe of Manasseh, a slim man of about thirty with a short dark-brown beard and kind worried eyes, wearing a plain brown wool tunic with a rope belt and a tan cloak, standing, holding a shofar: a long curved natural ram's horn, cream and light brown colored animal horn with a twisted shape, not metal, not a brass trumpet, in his right hand, and a round clay jar in his left hand, brave face, exactly two arms and exactly two hands."
+  },
+  {
+   "id": "p_torch",
+   "종류": "인물",
+   "시드": [
+    4,
+    5,
+    6
+   ],
+   "프롬프트": "One of Gideon's three hundred men, a young Israelite man with a short dark beard in a plain brown tunic and a tan headcloth, standing still in his place, holding a blazing torch high in his left hand and blowing a shofar: a long curved natural ram's horn, cream and light brown colored animal horn with a twisted shape, not metal, not a brass trumpet, held in his right hand, broken clay jar pieces at his feet, exactly two arms and exactly two hands."
+  },
+  {
+   "id": "v12a",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    3,
+    4,
+    5
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: night; on three low hills around a dark valley, three groups of Israelite men in plain brown and tan tunics and headcloths, stand still in their places, each man holding a blazing torch high in his left hand and blowing a shofar: a long curved natural ram's horn, cream and light brown colored animal horn with a twisted shape, not metal, not a brass trumpet, held in his right hand; broken pieces of clay jars lie at their feet; below in the valley the great Midianite camp of black tents is in confusion: tents shake and fall, and camels and people run away into the darkness; nobody is hit and nobody is hurt; nobody holds a sword. No crescent shapes, no moon ornaments, no religious symbols anywhere. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "s12g",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    3,
+    4,
+    5
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: at night at the edge of a huge desert camp of black goat-hair tents, two Israelites crouch side by side hidden in the shadow behind a tent and listen: Gideon, a humble young Israelite farmer of the tribe of Manasseh, a slim man of about thirty with a short dark-brown beard and kind worried eyes, wearing a plain brown wool tunic with a rope belt and a tan cloak, and beside him his young servant Purah, a teenage boy with short curly black hair in a simple gray tunic; in front of the tent, two Midianite desert herdsmen with dark beards, striped desert cloaks and headcloths tied with a cord, sit by a small campfire; one tells his dream with wide eyes and an open hand, the other listens thoughtfully with his hand on his beard; in the campfire smoke above them floats a faint dreamy picture of a round barley loaf tumbling into a tent; the Midianites are dignified, not funny; starry sky, quiet suspense. No crescent shapes, no moon ornaments, no religious symbols anywhere. Every person has exactly two arms, two hands, two legs and two feet."
+  }
+ ]
+}

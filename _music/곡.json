@@ -91,6 +91,16 @@
   {"id": "s11", "이름": "11 기손 강", "결": "폭풍, 웅장",
    "캡션": "Storm battle on a wide plain against iron chariots. Relentless low brass and pounding drums like rolling chariot wheels, rain and thunder swells, a solo female voice rises like a prophetess calling to arise, then a soaring choir as if the stars fight from heaven, rushing river-like string runs, a triumphant flood of sound.",
    "가사": "[Intro - pounding drums]\n\n[Verse - solo female voice]\nAh, ah\nAh\n\n[Instrumental - low brass]\n\n[Chorus - full choir]\nHallelujah\nAh, ah, ah\n\n[Instrumental - strings]\n\n[Outro]",
-   "bpm": 120, "key": "E minor", "길이": 150}
+   "bpm": 120, "key": "E minor", "길이": 150},
+
+  {"id": "s12", "이름": "12 하롯 샘", "결": "밤의 매복, 웅장",
+   "캡션": "Night ambush in a valley full of enemy tents. Begins hushed and tense with low sustained strings, a lone ney flute, a muted frame drum heartbeat and a whispering choir, slowly gathering suspense, then sudden ram's horn calls and bursting percussion like clay jars shattering, the choir blazes up like torches in the dark, triumphant and fiery, ends in awe.",
+   "가사": "[Intro - low strings]\n\n[Verse - whispering choir]\nAh, ah\nMm, mm\n\n[Build - frame drums]\n\n[Chorus - full choir]\nHallelujah\nHosanna\n\n[Instrumental - horns and drums]\n\n[Outro]",
+   "bpm": 108, "key": "D minor", "길이": 150},
+
+  {"id": "boss3", "이름": "보스 · 오렙과 스엡", "결": "웅장",
+   "캡션": "Twin villain theme for two desert princes, two motifs woven together. High circling strings and woodwinds like a bird of prey wheeling in the sky, against a prowling low brass and pizzicato bass line like a stalking wolf, steady camel-gait hand drums and frame drums, a dark low choir, menacing but not horror, no howling, relentless and heavy.",
+   "가사": "[Intro - camel-gait drums]\n\n[Verse - low choir]\nOh, oh\nAh, ah\n\n[Instrumental - high strings and low brass]\n\n[Chorus - full choir]\nAh, ah, ah\n\n[Outro]",
+   "bpm": 96, "key": "C minor", "길이": 120}
  ]
 }

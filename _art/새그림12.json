@@ -1,0 +1,224 @@
+{
+ "출력": "raw",
+ "크기": [
+  1024,
+  1024
+ ],
+ "단계": 4,
+ "항목": [
+  {
+   "id": "m_camel",
+   "종류": "인물",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "A Midianite camel rider: a tall one-humped camel with a woven red-and-brown saddle blanket and tassels, running forward, side view facing right; riding on its back a Midianite desert raider with a dark beard, a striped desert cloak and a headcloth tied with a cord, holding a long spear, frowning. The whole camel with all four legs and the rider fully visible. No crescent shapes, no moon ornaments, no religious symbols anywhere."
+  },
+  {
+   "id": "m_archer",
+   "종류": "인물",
+   "시드": [
+    1,
+    2
+   ],
+   "프롬프트": "A Midianite archer of the desert, a lean young man with a dark beard, a striped brown desert cloak, a headcloth tied with a cord, a leather quiver of arrows on his back, drawing a curved wooden bow with an arrow aimed forward, narrowed eyes, exactly two arms. No crescent shapes, no moon ornaments, no religious symbols anywhere."
+  },
+  {
+   "id": "oreb",
+   "종류": "인물",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "Oreb, a prince of Midian, a tall dignified man of about forty-five with a black beard and sharp dark eyes, wearing a long black cloak trimmed with glossy black feathers on the shoulders and collar over a deep purple robe, gold earrings and a black headcloth tied with a gold cord, holding a tall dark wooden staff in his right hand, walking proudly, stern but noble face, exactly two arms. No crescent shapes, no moon ornaments, no religious symbols anywhere."
+  },
+  {
+   "id": "zeeb",
+   "종류": "인물",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "Zeeb, a prince of Midian, a big strong man of about forty with a thick dark beard, wearing a gray wolf fur cloak over his shoulders over a red striped robe, riding a tall one-humped camel with a rich woven saddle blanket and tassels, holding a curved wooden staff, fierce proud face, side view facing right. The whole camel with all four legs and the rider fully visible. No crescent shapes, no moon ornaments, no religious symbols anywhere."
+  },
+  {
+   "id": "gideon",
+   "종류": "인물",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "Gideon, a humble young Israelite farmer of the tribe of Manasseh, a slim man of about thirty with a short dark-brown beard and kind worried eyes, wearing a plain brown wool tunic with a rope belt and a tan cloak, standing, holding a long curved ram's horn trumpet in his right hand and a round clay jar in his left hand, brave face, exactly two arms and exactly two hands."
+  },
+  {
+   "id": "p_torch",
+   "종류": "인물",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "One of Gideon's three hundred men, a young Israelite man with a short dark beard in a plain brown tunic and a tan headcloth, standing still in his place, holding a blazing torch high in his left hand and blowing a ram's horn trumpet held in his right hand, broken clay jar pieces at his feet, exactly two arms and exactly two hands."
+  },
+  {
+   "id": "e_loaf",
+   "종류": "물건",
+   "시드": [
+    1,
+    2
+   ],
+   "프롬프트": "One round flat loaf of rustic barley bread, golden brown with a rough cracked floury crust, lying on its side."
+  },
+  {
+   "id": "s12a",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1,
+    2
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: Israelite farmland in a green valley at sowing time; from the eastern hills a huge crowd of Midianite desert herdsmen with dark beards, striped desert cloaks and headcloths tied with a cord and eastern desert people with countless tall one-humped camels with plain woven saddle blankets and tassels and big black goat-hair tents pours into the green fields like a swarm of locusts, and the camels eat the young green crops; in the foreground on the rocky mountainside, a worried Israelite family hides at the mouth of a cave among the rocks and peeks out; dusty and gloomy but child-friendly, nobody is hurt. No crescent shapes, no moon ornaments, no religious symbols anywhere. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "s12b",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1,
+    2
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: inside a deep square winepress cut into the rock and hidden among bushes, Gideon, a humble young Israelite farmer of the tribe of Manasseh, a slim man of about thirty with a short dark-brown beard and kind worried eyes, wearing a plain brown wool tunic with a rope belt and a tan cloak, kneels and beats a small pile of wheat with a short wooden stick, then looks up startled; under a great old oak tree beside the winepress, the messenger of the LORD is shown only as a tall soft column of bright white-gold light, with no figure, no face, no body and no wings inside the light, shining warmly on him; quiet amazed mood, child-friendly. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "s12c",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1,
+    2
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: under a great oak tree, Gideon, a humble young Israelite farmer of the tribe of Manasseh, a slim man of about thirty with a short dark-brown beard and kind worried eyes, wearing a plain brown wool tunic with a rope belt and a tan cloak, kneels on one knee in awe with his hands open; before him, on a flat rock, bright fire bursts up out of the rock and burns up a little meat and round flat unleavened breads; beside it stands a small newly built altar of rough uncut stones; there is no other person; warm golden light, peaceful and holy. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "s12d",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1,
+    2
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: at night by the light of two torches on a dark hilltop, Gideon, a humble young Israelite farmer of the tribe of Manasseh, a slim man of about thirty with a short dark-brown beard and kind worried eyes, wearing a plain brown wool tunic with a rope belt and a tan cloak, and a few young Israelite servant men quietly build a new altar of rough uncut stones; beside them lies only a scattered heap of old rubble stones, a broken-down pile; below the hill the flat-roofed village houses are dark and asleep under the stars; secret quiet mood. No statues, no idols, no carved figures, no poles, no symbols anywhere. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "s12e",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1,
+    2
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: early dawn on a round stone threshing floor on a hill; Gideon, a humble young Israelite farmer of the tribe of Manasseh, a slim man of about thirty with a short dark-brown beard and kind worried eyes, wearing a plain brown wool tunic with a rope belt and a tan cloak, kneels and touches a white woolly sheep fleece lying in the middle with a surprised face: the fleece is completely dry, while all the ground and grass around it sparkles with fresh dew drops; far below in the valley lie many dark tents of a great desert camp; soft pink morning light, wonder. No crescent shapes, no moon ornaments, no religious symbols anywhere. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "s12f",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1,
+    2
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: at the spring of Harod at the green foot of Mount Gilboa, water flows from gray rocks into a stream; many Israelite men in plain brown and tan tunics and headcloths, kneel down at the water and drink with their faces near the water, while a few men stand bent and scoop up water in one hand to their mouth to lap it; Gideon, a humble young Israelite farmer of the tribe of Manasseh, a slim man of about thirty with a short dark-brown beard and kind worried eyes, wearing a plain brown wool tunic with a rope belt and a tan cloak, stands on a rock and watches closely; in the background, a long line of other men walks away home over the hills; bright morning light, calm. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "s12g",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1,
+    2
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: at night at the edge of a huge desert camp of black goat-hair tents, Gideon, a humble young Israelite farmer of the tribe of Manasseh, a slim man of about thirty with a short dark-brown beard and kind worried eyes, wearing a plain brown wool tunic with a rope belt and a tan cloak, and his young servant Purah, a teenage boy with short curly black hair in a simple gray tunic, crouch hidden in the shadow behind a tent and listen; in front of the tent, two Midianite desert herdsmen with dark beards, striped desert cloaks and headcloths tied with a cord, sit by a small campfire; one tells his dream with wide eyes and an open hand, the other listens thoughtfully with his hand on his beard; in the campfire smoke above them floats a faint dreamy picture of a round barley loaf tumbling into a tent; the Midianites are dignified, not funny; starry sky, quiet suspense. No crescent shapes, no moon ornaments, no religious symbols anywhere. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "v12a",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1,
+    2
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: night; on three low hills around a dark valley, three groups of Israelite men in plain brown and tan tunics and headcloths, stand still in their places, each man holding a blazing torch high in his left hand and blowing a ram's horn trumpet held in his right hand; broken pieces of clay jars lie at their feet; below in the valley the great Midianite camp of black tents is in confusion: tents shake and fall, and camels and people run away into the darkness; nobody is hit and nobody is hurt; nobody holds a sword. No crescent shapes, no moon ornaments, no religious symbols anywhere. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "v12b",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1,
+    2
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: dawn at a shallow river crossing of the Jordan with reeds and willows; Israelite men of Ephraim in tan tunics lead away two captured Midianite princes whose hands are tied in front of them with rope: one prince wears a long black cloak trimmed with black feathers, the other wears a gray wolf skin over his shoulders; they walk with their heads down, nobody is hurt; calm soft morning light. No crescent shapes, no moon ornaments, no religious symbols anywhere. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "v12c",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1,
+    2
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: in a village square, a crowd of Israelite men, women and children gather around Gideon, a humble young Israelite farmer of the tribe of Manasseh, a slim man of about thirty with a short dark-brown beard and kind worried eyes, wearing a plain brown wool tunic with a rope belt and a tan cloak, and an elder holds out a golden crown on a small cushion, asking him to be king; Gideon gently refuses with his left hand raised palm out, and points up to the sky with his right hand, where bright golden light shines down through the parting clouds; the people look up to the light; hopeful peaceful light. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "bg12w",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1,
+    2
+   ],
+   "참조": [
+    "ref2/ref12.png"
+   ],
+   "프롬프트": "Repaint this top-down tower defense game map as a richly hand-painted Kingdom Rush style battlefield in the eastern valley of Jezreel at dusk, seen from above at a slight angle, warm orange evening light with long soft shadows. Keep exactly the same sandy road shapes and positions: the two roads that enter from the top edge on the left and on the right of the top middle, the left road that swings wide around the left side and the right road that swings wide around the right side, the place in the lower middle where the two roads meet, and the road that then runs to the lower left and ends at the small dark-green area in the lower left corner. At the top middle between the two roads, the lower slope of the hill of Moreh, a broad rounded brown-green hill. In the big oval valley in the middle of the map, inside the loop of the roads, the huge camp of Midian: very many low black and brown goat-hair tents and many resting camels lying on the ground, filling the valley like a swarm; a few small cooking fires with thin smoke; keep the western edge of the camp, a small empty grassy slope left of the middle, free of tents. Three small low rocky hills with a few boulders and dry grass: one at the far left edge beside the left road, one at the far right edge beside the right road, and one small hill just below the camp in the lower middle, above the place where the roads meet. In the lower left corner, the green foot of Mount Gilboa with the spring of Harod: water bubbling from a cleft in gray rocks into a small clear blue pool with reeds, and a few small Israelite tents of brown wool beside it where the road ends. Elsewhere: dry grassy fields, small bushes and stones. Nothing covers the roads. No characters, no text. No crescent shapes, no moon ornaments, no religious symbols anywhere."
+  }
+ ]
+}

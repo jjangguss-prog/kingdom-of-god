@@ -1,0 +1,34 @@
+{
+ "출력": "raw",
+ "크기": [
+  1024,
+  1024
+ ],
+ "단계": 4,
+ "항목": [
+  {
+   "id": "p_torch",
+   "종류": "인물",
+   "시드": [
+    7,
+    8,
+    9
+   ],
+   "프롬프트": "One of Gideon's three hundred men, a young Israelite man with a short dark beard in a plain brown tunic and a tan headcloth, standing still in his place; his left hand holds a blazing torch high above his head; his right hand grips a shofar: a long curved natural ram's horn, cream and light brown colored animal horn with a twisted shape, not metal, not a brass trumpet, and holds it to his lips to blow it; broken clay jar pieces at his feet, exactly two arms and exactly two hands, both hands holding something."
+  },
+  {
+   "id": "v12b",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    3,
+    4,
+    5
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: dawn at a shallow river crossing of the Jordan with reeds and willows; two Israelite men of Ephraim in plain tan tunics walk in front and lead away exactly two captured Midianite princes by a rope: the first prince, Oreb, a tall man with a black beard in a long black cloak trimmed with black feathers over a deep purple robe; the second prince, Zeeb, a big strong man with a thick dark beard wearing a gray wolf fur cloak over a red striped robe; both princes have their hands tied in front of them and walk with their heads down; nobody is hurt; calm soft morning light. No crescent shapes, no moon ornaments, no religious symbols anywhere. Every person has exactly two arms, two hands, two legs and two feet."
+  }
+ ]
+}
