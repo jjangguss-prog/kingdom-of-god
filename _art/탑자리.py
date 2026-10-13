@@ -1,6 +1,7 @@
 # 길 옆 탑 자리 고르기 + 길 그림(배경 참조용) v0.1 (2026-10-11)
 # 사용: python 탑자리.py 지도.json 출력폴더
-# 지도.json: {"2": {"paths": [[[x,y],...],...], "avoid": [[x0,y0,x1,y1],...], "n": 14, "base": "#c9b07a", "road": ["#9b7442","#d9b878","#e8cc95"], "marks": [[x,y,r,"#hex"],...]}}
+# 지도.json: {"2": {"paths": [[[x,y],...],...], "avoid": [[x0,y0,x1,y1],...], "n": 14, "base": "#c9b07a", "road": ["#9b7442","#d9b878","#e8cc95"], "marks": [[x,y,r,"#hex"],...], "river": [[x,y],...], "riverW": 46}}
+# river(선택, 11 기손 강): 길 아래에 강을 그리고, 강에서 riverW/2+34 안에는 탑 자리를 두지 않는다
 # 결과: 스테이지마다 spots(JSON 출력) + 출력폴더\ref<N>.png(1280×720 참조 그림: 바탕색, 길, 표시) + preview<N>.png(탑 자리 표시)
 # 게임과 같은 Catmull-Rom으로 길을 그린다. 탑 자리는 길에서 타원(31×15)이 떨어지게, 길을 고르게 덮도록(한계 이득) 고른다.
 import sys, json, math
@@ -37,12 +38,15 @@ def pick(st):
         for q in resample(p, 18):
             if -10 < q[0] < W + 10 and -10 < q[1] < H + 10 and not any(abs(q[0] - s[0]) < 9 and abs(q[1] - s[1]) < 9 for s in samples):
                 samples.append(q)
+    river = catmull(st['river']) if st.get('river') else []
     avoid = st.get('avoid', []) + [[0, 0, 430, 78], [1110, 0, 1280, 80], [900, 600, 1280, 720]]
     def ok(x, y):
         if not (46 < x < W - 46 and 84 < y < H - 30): return False
         if any(a[0] <= x <= a[2] and a[1] <= y <= a[3] for a in avoid): return False
         for q in dense:
             if ((x - q[0]) / 61) ** 2 + ((y - q[1]) / 45) ** 2 < 1: return False
+        for q in river:
+            if math.hypot(x - q[0], (y - q[1]) * 1.2) < st.get('riverW', 46) / 2 + 34: return False
         return True
     cands = []
     for q in resample([q for p in pl for q in p], 10):
@@ -68,6 +72,10 @@ def draw_ref(st, pl, path):
     im = Image.new('RGB', (W, H), st.get('base', '#c9b07a')); d = ImageDraw.Draw(im)
     for x, y, r, col in st.get('marks', []):
         d.ellipse([x - r, y - r * .62, x + r, y + r * .62], fill=col)
+    if st.get('river'):
+        rv = [tuple(map(round, q)) for q in catmull(st['river'])]; rw = st.get('riverW', 46)
+        for w, col in ((rw + 8, '#7a8a6a'), (rw, '#3f86b0'), (rw - 18, '#5aa3c8')):
+            d.line(rv, fill=col, width=w, joint='curve')
     for w, col in zip((60, 56, 46, 24), ['#3b2614'] + st.get('road', ['#9b7442', '#d9b878', '#e8cc95'])):
         for p in pl:
             d.line([tuple(map(round, q)) for q in p], fill=col, width=w, joint='curve')

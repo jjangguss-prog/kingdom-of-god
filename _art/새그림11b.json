@@ -1,0 +1,29 @@
+{
+ "출력": "raw",
+ "크기": [
+  1024,
+  1024
+ ],
+ "단계": 4,
+ "항목": [
+  {
+   "id": "c_chariot_empty",
+   "종류": "물건",
+   "시드": [
+    3,
+    4
+   ],
+   "프롬프트": "An empty abandoned two-wheeled Canaanite war chariot: a small open-backed cab of dark wood plated with black iron standing on one single axle with exactly two large iron-rimmed spoked wheels, one wheel on each side, its long wooden shaft pole lying on the ground in front, tilted to one side with both wheels sunk in a small patch of thick brown mud, no horses, no people, side view facing right."
+  },
+  {
+   "id": "deborah",
+   "종류": "인물",
+   "시드": [
+    4,
+    5,
+    6
+   ],
+   "프롬프트": "Deborah, the prophetess and judge of Israel, a wise motherly Israelite woman of about sixty with gray hair, a few gentle wrinkles and a calm brave face, under a long cream-and-blue headscarf, wearing a deep blue wool robe with an ochre sash, standing and raising her right arm to point forward with her index finger, her left hand resting at her side, exactly two arms and exactly two hands."
+  }
+ ]
+}

@@ -1,0 +1,24 @@
+{
+ "출력": "raw",
+ "크기": [
+  1024,
+  1024
+ ],
+ "단계": 4,
+ "항목": [
+  {
+   "id": "v11a",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    3,
+    4,
+    5
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: a fierce rainstorm pours down from dark clouds over a wide muddy plain; in the foreground, several heavy two-wheeled Canaanite war chariots of dark wood plated with black iron are stuck deep in thick brown mud, their two wheels sunk up to the axle, the dark brown horses standing still and tired; the charioteers in colorful tunics and bronze helmets have climbed down from their stuck chariots and run away on foot to the left through the rain, seen from behind, nobody is hurt; far away in the background, tiny Israelite soldiers come down the green slope of Mount Tabor, a big lonely round dome-shaped green mountain rising from the plain; nobody is fighting; small dark wisps flee up into the sky. Every person has exactly two arms, two hands, two legs and two feet."
+  }
+ ]
+}
