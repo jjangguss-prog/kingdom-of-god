@@ -1,0 +1,25 @@
+{
+ "출력": "raw",
+ "크기": [
+  1024,
+  1024
+ ],
+ "단계": 4,
+ "항목": [
+  {
+   "id": "s10c",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: two big green hills facing each other, Mount Ebal and Mount Gerizim, with crowds of people of Israel standing on both slopes, men, women, children and foreign travelers in different colorful clothes, all listening; on the left slope a low square altar of rough uncut natural field stones with thin white smoke; in the valley between the hills four priests in white linen robes with white headcloths hold the ark of the covenant, a chest completely covered with a plain deep-blue cloth so that nothing of it can be seen, carried on the shoulders of priests by two long wooden poles; in the front center, Joshua, a strong Israelite leader of about thirty with a short dark beard and a determined kind face, wearing a simple tan wool tunic with a brown leather belt, leather bracers and a cream headcloth with a cord, stands on a low flat rock facing the viewer and reads aloud from a large open scroll that he holds with both hands; open space around him; bright clear day; no letters or writing anywhere in the picture. Every person has exactly two arms, two hands, two legs and two feet."
+  }
+ ]
+}

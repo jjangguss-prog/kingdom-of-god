@@ -64,3 +64,22 @@ items3 = [
     scene("s10a", "inside a brown goat-hair tent at night by the light of one small clay oil lamp: one single Israelite man named Achan, all alone, with a brown beard and a plain striped tunic, kneels behind a shallow hole dug in the dirt floor and nervously hides in it a beautiful embroidered colorful robe, a small pile of shining silver pieces and one gold bar, glancing worriedly over his shoulder at the closed tent flap; the hole with the robe, the silver and the gold is right in the center of the picture at the height of the man's waist, seen from the front at eye level; the bottom third of the picture is only plain dark dirt floor; nobody else is in the tent; tense quiet mood, child-friendly.", (4, 5, 6)),
 ]
 json.dump({"출력": "raw", "크기": [1024, 1024], "단계": 4, "항목": items3}, open('새그림10c.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+
+# 넷째 작업(새그림10d.json): v10c 시드 1은 가운데 여호수아의 팔이 셋(손 흔들기·악수·나뭇단)이어서(10-13 사용자), 악수만 하고 빈손으로 다시 그린다
+items4 = [
+    scene("v10c", f"in front of the open wooden gate of {CITY}, {GIBEON}, joyfully welcome the Israelites. In the center, {JOSHUA}, warmly shakes hands with a gray-bearded Gibeonite elder: Joshua's right hand holds the elder's right hand, and Joshua's left arm hangs relaxed at his side; Joshua carries nothing. Around them Gibeonite men carry bundles of firewood on their shoulders and Gibeonite women carry big clay water jars toward a simple stone altar with rising white smoke; children wave and smile; warm golden evening light, peace and friendship.", (2, 3, 4, 5)),
+]
+json.dump({"출력": "raw", "크기": [1024, 1024], "단계": 4, "항목": items4}, open('새그림10d.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+
+# 다섯째 작업(새그림10e.json): v10c를 고치며 다른 그림도 확대해 보니, s10c는 두루마리 든 여호수아 어깨 뒤에 누구 것인지 모를 손이, s10g는 여호수아 등 뒤에 횃불이 하나 더 있어서(10-13) 다시 그린다
+items5 = [
+    scene("s10c", f"two big green hills facing each other, Mount Ebal and Mount Gerizim; on the slope stands a plain altar of rough uncut natural field stones piled up into a low square block, with thin white smoke; in the valley between the hills {PRIESTS} stand around {ARK}; in front, {JOSHUA}, stands alone in an open space holding a large open scroll with both of his hands and reads aloud; nobody stands close behind him; the whole people of Israel, men, women, children and foreign travelers in different colorful clothes, stand on both hillsides listening; bright clear day.", (2, 3, 4)),
+    scene("s10g", f"night: by torchlight the army of Israel marches quickly up a steep winding mountain road through the dark hills; at the front, {JOSHUA}, holds up one single burning torch in his right hand and points ahead with his left hand; he carries no other torch; far away on a moonlit hilltop {CITY} is surrounded by the many small campfires of an enemy army camp; stars above; urgent but hopeful, child-friendly.", (2, 3, 4)),
+]
+json.dump({"출력": "raw", "크기": [1024, 1024], "단계": 4, "항목": items5}, open('새그림10e.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+
+# 여섯째 작업(새그림10f.json): 새그림10e의 s10c는 궤가 휘장처럼 나오거나(시드 2) 읽는 사람이 등을 보이거나(3) 산에 글자가 들어가서(4), 여호수아를 앞을 보게 세우고 다시 그린다
+items6 = [
+    scene("s10c", f"two big green hills facing each other, Mount Ebal and Mount Gerizim, with crowds of people of Israel standing on both slopes, men, women, children and foreign travelers in different colorful clothes, all listening; on the left slope a low square altar of rough uncut natural field stones with thin white smoke; in the valley between the hills four {PRIESTS} hold {ARK}; in the front center, {JOSHUA}, stands on a low flat rock facing the viewer and reads aloud from a large open scroll that he holds with both hands; open space around him; bright clear day; no letters or writing anywhere in the picture.", (5, 6, 7, 8)),
+]
+json.dump({"출력": "raw", "크기": [1024, 1024], "단계": 4, "항목": items6}, open('새그림10f.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=1)

@@ -1,0 +1,38 @@
+{
+ "출력": "raw",
+ "크기": [
+  1024,
+  1024
+ ],
+ "단계": 4,
+ "항목": [
+  {
+   "id": "s10c",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    2,
+    3,
+    4
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: two big green hills facing each other, Mount Ebal and Mount Gerizim; on the slope stands a plain altar of rough uncut natural field stones piled up into a low square block, with thin white smoke; in the valley between the hills priests in white linen robes with white headcloths stand around the ark of the covenant, a chest completely covered with a plain deep-blue cloth so that nothing of it can be seen, carried on the shoulders of priests by two long wooden poles; in front, Joshua, a strong Israelite leader of about thirty with a short dark beard and a determined kind face, wearing a simple tan wool tunic with a brown leather belt, leather bracers and a cream headcloth with a cord, stands alone in an open space holding a large open scroll with both of his hands and reads aloud; nobody stands close behind him; the whole people of Israel, men, women, children and foreign travelers in different colorful clothes, stand on both hillsides listening; bright clear day. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "s10g",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    2,
+    3,
+    4
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: night: by torchlight the army of Israel marches quickly up a steep winding mountain road through the dark hills; at the front, Joshua, a strong Israelite leader of about thirty with a short dark beard and a determined kind face, wearing a simple tan wool tunic with a brown leather belt, leather bracers and a cream headcloth with a cord, holds up one single burning torch in his right hand and points ahead with his left hand; he carries no other torch; far away on a moonlit hilltop the walled city of Gibeon on a round rocky hilltop, with strong pale limestone walls, square towers and many flat-roofed stone houses inside is surrounded by the many small campfires of an enemy army camp; stars above; urgent but hopeful, child-friendly. Every person has exactly two arms, two hands, two legs and two feet."
+  }
+ ]
+}

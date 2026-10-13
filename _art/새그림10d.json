@@ -1,0 +1,25 @@
+{
+ "출력": "raw",
+ "크기": [
+  1024,
+  1024
+ ],
+ "단계": 4,
+ "항목": [
+  {
+   "id": "v10c",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    2,
+    3,
+    4,
+    5
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: in front of the open wooden gate of the walled city of Gibeon on a round rocky hilltop, with strong pale limestone walls, square towers and many flat-roofed stone houses inside, Gibeonite men and women, Hivite people of the hill country with dark curly hair, wearing clean simple wool clothes in blue, ochre and cream, joyfully welcome the Israelites. In the center, Joshua, a strong Israelite leader of about thirty with a short dark beard and a determined kind face, wearing a simple tan wool tunic with a brown leather belt, leather bracers and a cream headcloth with a cord, warmly shakes hands with a gray-bearded Gibeonite elder: Joshua's right hand holds the elder's right hand, and Joshua's left arm hangs relaxed at his side; Joshua carries nothing. Around them Gibeonite men carry bundles of firewood on their shoulders and Gibeonite women carry big clay water jars toward a simple stone altar with rising white smoke; children wave and smile; warm golden evening light, peace and friendship. Every person has exactly two arms, two hands, two legs and two feet."
+  }
+ ]
+}
