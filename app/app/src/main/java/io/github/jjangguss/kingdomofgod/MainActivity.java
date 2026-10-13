@@ -100,6 +100,7 @@ public class MainActivity extends Activity {
     protected void onResume() {
         super.onResume();
         web.onResume();
+        web.evaluateJavascript("window.kogResume&&window.kogResume()", null);
     }
 
     /** 뒤로 가기: 게임이 처리했으면(멈춤·창 닫기·이전 화면) 그대로, 처음 화면이면 앱을 닫는다. */

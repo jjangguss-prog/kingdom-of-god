@@ -17,3 +17,7 @@ app/app/src/main/assets/www/
 *.keystore
 keystore.properties
 _bot.js
+# 음악 생성 중간 결과(크고, 스크립트로 다시 만들 수 있음)
+_music/raw/
+_music/듣기.html
+_music/생성.log

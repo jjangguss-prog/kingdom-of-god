@@ -47,5 +47,6 @@ html = '<!doctype html><html lang="ko"><head><meta charset="utf-8">'
      + '</head><body>\n' + html + '\n</body></html>\n';
 fs.writeFileSync(path.join(WWW, 'index.html'), html);
 copyDir(path.join(GAME, 'art'), path.join(WWW, 'art'));
+if (fs.existsSync(path.join(GAME, 'music'))) copyDir(path.join(GAME, 'music'), path.join(WWW, 'music'));   // 배경 음악(관현악·합창)
 copyDir(FONTS, path.join(WWW, 'fonts'));
 console.log('www 준비 끝:', WWW);

@@ -1,0 +1,20 @@
+{
+ "title": "title_s1_526cf7.flac",
+ "map": "map_s3_2de38d.flac",
+ "story": "story_s2_e74925.flac",
+ "victory": "victory_s3_3bb343.flac",
+ "defeat": "defeat_s1_a9ff00.flac",
+ "s1": "s1_s2_f67908.flac",
+ "s2": "s2_s3_884acc.flac",
+ "s3": "s3_s2_5ba4a9.flac",
+ "s4": "s4_s3_bd9aa8.flac",
+ "s5": "s5_s3_979130.flac",
+ "s6": "s6_s1_c03d60.flac",
+ "boss1": "boss1_s2_2c2659.flac",
+ "s7": "s7_s1_adc8f0.flac",
+ "s8": "s8_s3_eb7292.flac",
+ "boss2": "boss2_s3_49f60c.flac",
+ "s9": "s9_s3_5813ba.flac",
+ "s10": "s10_s2_26a496.flac",
+ "s11": "s11_s2_bb3ff8.flac"
+}
