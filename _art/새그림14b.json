@@ -1,0 +1,21 @@
+{
+ "출력": "raw",
+ "크기": [
+  1024,
+  1024
+ ],
+ "단계": 4,
+ "항목": [
+  {
+   "id": "david",
+   "종류": "인물",
+   "시드": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "프롬프트": "David, a ruddy Israelite shepherd boy of about sixteen with tousled reddish-brown hair, bright eyes and a handsome friendly face, no beard, wearing a plain light-brown wool shepherd's tunic with a rope belt and sandals, a small leather shepherd's bag at his hip, holding a wooden shepherd's staff in his left hand, and in his right hand a leather sling: two long thin leather cords hang down from his right hand with a small leather pouch at the bottom holding one smooth round stone, standing bravely ready, joyful confident face, exactly two arms and exactly two hands."
+  }
+ ]
+}

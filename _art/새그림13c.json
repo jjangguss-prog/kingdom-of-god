@@ -1,0 +1,36 @@
+{
+ "출력": "raw",
+ "크기": [
+  1024,
+  1024
+ ],
+ "단계": 4,
+ "항목": [
+  {
+   "id": "s13c",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    3,
+    4
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: on a dusty road through golden barley fields toward the small hill town of Bethlehem, a young Moabite woman named Ruth with a dark blue headscarf hugs an older Israelite widow named Naomi in a gray-brown shawl, holding her hands warmly and promising to stay with her; far behind on the road another young woman walks away back home; warm morning light, tender and loyal. All houses are one-story mud-brick houses with flat earthen rooftops and low parapets; no sloped roofs, no roof tiles, no red tiles. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "v13c",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    3,
+    4
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: a wide peaceful landscape of terraced fields at harvest time; Israelite families and children reap golden grain and carry sheaves, a girl laughs with a basket; far in the background on a green hill stands one big upright memorial stone; along a dirt road an old prophet with long white hair walks with a staff toward the next village; bright, safe and happy summer day. All houses are one-story mud-brick houses with flat earthen rooftops and low parapets; no sloped roofs, no roof tiles, no red tiles. No statues, no idols, no carved figures, no poles, no religious symbols anywhere. Every person has exactly two arms, two hands, two legs and two feet."
+  }
+ ]
+}

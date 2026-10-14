@@ -1,0 +1,267 @@
+{
+ "출력": "raw",
+ "크기": [
+  1024,
+  1024
+ ],
+ "단계": 4,
+ "항목": [
+  {
+   "id": "b_soldier",
+   "종류": "인물",
+   "시드": [
+    1,
+    2
+   ],
+   "프롬프트": "a Philistine warrior of the Sea Peoples, clean-shaven, wearing a tall headdress made of a headband with a neat row of upright reed feathers, a ribbed leather-and-bronze strapped corselet, a short paneled kilt with tassels, and sandals, holding a long spear in his right hand and a small round bronze-rimmed shield on his left arm, angry frown, walking forward, exactly two arms. No statues, no idols, no carved figures, no poles, no religious symbols anywhere."
+  },
+  {
+   "id": "b_raider",
+   "종류": "인물",
+   "시드": [
+    1,
+    2
+   ],
+   "프롬프트": "A lightly dressed fast Philistine raider of the Sea Peoples, clean-shaven, with a headband of a few upright reed feathers, a short plain kilt, no armor, holding a wooden club, running forward eagerly with a greedy grin, exactly two arms. No statues, no idols, no carved figures, no poles, no religious symbols anywhere."
+  },
+  {
+   "id": "b_shield",
+   "종류": "인물",
+   "시드": [
+    1,
+    2
+   ],
+   "프롬프트": "a Philistine warrior of the Sea Peoples, clean-shaven, wearing a tall headdress made of a headband with a neat row of upright reed feathers, a ribbed leather-and-bronze strapped corselet, a short paneled kilt with tassels, and sandals, carrying a big round bronze-rimmed shield in front of his body with his left arm and a short spear in his right hand, chin raised proudly, exactly two arms. No statues, no idols, no carved figures, no poles, no religious symbols anywhere."
+  },
+  {
+   "id": "b_centurion",
+   "종류": "인물",
+   "시드": [
+    1,
+    2
+   ],
+   "프롬프트": "A Philistine captain of the Sea Peoples, a stern clean-shaven man with a taller headdress of upright reed feathers on a bronze band, a polished bronze scale breastplate, a red cloak, a paneled kilt with tassels, holding a commander's staff, hard stubborn face, exactly two arms. No statues, no idols, no carved figures, no poles, no religious symbols anywhere."
+  },
+  {
+   "id": "b_archer",
+   "종류": "인물",
+   "시드": [
+    1,
+    2
+   ],
+   "프롬프트": "a Philistine warrior of the Sea Peoples, clean-shaven, wearing a tall headdress made of a headband with a neat row of upright reed feathers, a ribbed leather-and-bronze strapped corselet, a short paneled kilt with tassels, and sandals, a leather quiver of arrows on his back, drawing a curved wooden bow with an arrow aimed forward, narrowed eyes, exactly two arms. No statues, no idols, no carved figures, no poles, no religious symbols anywhere."
+  },
+  {
+   "id": "b_drummer",
+   "종류": "인물",
+   "시드": [
+    1,
+    2
+   ],
+   "프롬프트": "a Philistine warrior of the Sea Peoples, clean-shaven, wearing a tall headdress made of a headband with a neat row of upright reed feathers, a ribbed leather-and-bronze strapped corselet, a short paneled kilt with tassels, and sandals, without weapons, beating a round wooden frame drum hanging at his waist with both hands, wide fearful eyes, exactly two arms and exactly two hands. No statues, no idols, no carved figures, no poles, no religious symbols anywhere."
+  },
+  {
+   "id": "b_giant",
+   "종류": "인물",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "A huge Philistine giant of Gath, one of the last of the Anakim, twice as tall and very broad and muscular, with a dark curly beard, a bronze helmet with a crest of upright reed feathers, a leather armor vest with bronze studs, a paneled kilt, holding a big heavy wooden club, scornful frowning face, a dignified human, not a monster, exactly two arms. No statues, no idols, no carved figures, no poles, no religious symbols anywhere."
+  },
+  {
+   "id": "shep_nazirite",
+   "종류": "건물",
+   "시드": [
+    1,
+    2
+   ],
+   "프롬프트": "A small sturdy shelter built into a cleft of a big rounded boulder of tan rock, like the cleft of the rock of Etam: a dark cave mouth with a woven reed mat hanging as a curtain, a low wall of piled stones around a little yard, a wooden post with a coiled rope, a clay water jar and a bundle of grain beside the entrance."
+  },
+  {
+   "id": "nazirite",
+   "종류": "인물",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "A Nazirite strongman of ancient Israel, a muscular young man with very long dark hair braided into seven long thick braids hanging over his back and shoulders, a full dark beard, wearing a simple short brown wool tunic with a wide leather belt and sandals, barehanded with both hands empty and clenched into fists, ready to wrestle, brave determined face, exactly two arms and exactly two hands, no weapon."
+  },
+  {
+   "id": "samuel",
+   "종류": "인물",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "the old prophet Samuel, a thin elderly Israelite man with very long uncut white hair falling to his shoulders and a long white beard, wearing a plain cream linen robe and a brown wool cloak, standing and praying with both hands lifted up to heaven, eyes looking up, calm faithful face, exactly two arms and exactly two hands."
+  },
+  {
+   "id": "ebenezer",
+   "종류": "물건",
+   "시드": [
+    1,
+    2
+   ],
+   "프롬프트": "One big upright standing stone memorial, a tall rough gray boulder set upright on a small mound of earth, with a few small stones packed around its base and a little grass, no carvings, no letters."
+  },
+  {
+   "id": "e_sheaf",
+   "종류": "물건",
+   "시드": [
+    1,
+    2
+   ],
+   "프롬프트": "One bundle of harvested golden barley sheaf tied around the middle with a twisted straw band, standing upright, with a few loose ears of grain lying on the ground beside it."
+  },
+  {
+   "id": "s13a",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1,
+    2
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: on a hillside field at dusk, a married Israelite couple, Manoah and his wife, in plain brown and blue wool clothes, have offered a young goat on a big flat rock; a bright flame shoots up from the rock high into the evening sky, and the angel of the LORD is shown only as a tall column of bright white-gold flame and light rising to the sky, with no figure, no face, no body and no wings inside the light; the man and the woman bow down with their faces to the ground in awe; holy, quiet and wonderful. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "s13b",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1,
+    2
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: inside a large ancient stone hall with two tall thick round stone pillars in the middle, Samson, a very strong Israelite man in a torn plain tunic, with long dark hair that has grown back down to his shoulders and a short beard, stands between the two pillars with one hand on each pillar, his eyes closed peacefully, his face lifted up in prayer; a soft beam of light falls on him from above; the hall is dim; no other people close by, nothing is falling, nobody is hurt. No statues, no idols, no carved figures, no poles, no religious symbols anywhere. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "s13c",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1,
+    2
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: on a dusty road through golden barley fields toward the small hill town of Bethlehem, a young Moabite woman named Ruth with a dark blue headscarf hugs an older Israelite widow named Naomi in a gray-brown shawl, holding her hands warmly and promising to stay with her; far behind on the road another young woman walks away back home; warm morning light, tender and loyal. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "s13d",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1,
+    2
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: at the doorway of the tent sanctuary of Shiloh, a large tent of woven goat hair with a wooden doorpost; a young Israelite woman named Hannah in a soft blue robe and white veil kneels and prays with tears, her lips moving silently and her hands clasped; beside the doorpost sits the old heavy priest Eli in a white linen robe on a wooden seat, watching her; gentle evening light. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "s13e",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1,
+    2
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: at night inside the tent sanctuary at Shiloh, a small boy Samuel of about eight years, with long hair and a simple white linen tunic, sits up on a sleeping mat and listens with wide eyes; beside him a tall golden seven-branched lamp still burns with small warm flames; a soft glow of white-gold light shines gently into the dark tent like a voice calling, with no figure and no face in the light; quiet, holy and hopeful. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "s13f",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1,
+    2
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: in a broad valley of ripe golden wheat at harvest, Israelite reapers of Beth-shemesh with sickles stand up and look with great joy at the road; on the road two brown milk cows pull a new wooden cart by themselves; on the cart rides a box completely covered with a plain blue cloth; the reapers raise their hands and smile; bright happy summer light; no other animals. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "s13g",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1,
+    2
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: on the top of the hill of Mizpah beside a simple altar of rough uncut stones, a large crowd of Israelite men, women and children in plain brown, tan and cream wool tunics and headcloths, pour water from clay jars onto the ground in sorrow and prayer, some kneeling and some weeping; the old prophet Samuel, a thin elderly Israelite man with very long uncut white hair falling to his shoulders and a long white beard, wearing a plain cream linen robe and a brown wool cloak, stands before them with both hands lifted up to heaven; far away in the hazy western plain below rises a cloud of dust from a coming army; serious but hopeful mood. No statues, no idols, no carved figures, no poles, no religious symbols anywhere. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "v13a",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1,
+    2
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: dark storm clouds over a western hillside; bright lightning and great thunder flash from the clouds; on the slope a whole army of Philistine soldiers in tall feathered headdresses is thrown into confusion and runs away down the hill, dropping their round shields; nobody is struck and nobody is hurt; on the hilltop above, smoke rises from a stone altar and the old prophet Samuel, a thin elderly Israelite man with very long uncut white hair falling to his shoulders and a long white beard, wearing a plain cream linen robe and a brown wool cloak, stands with both hands raised to heaven; dramatic but child-friendly. No statues, no idols, no carved figures, no poles, no religious symbols anywhere. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "v13b",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1,
+    2
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: on a green hill between the hill of Mizpah and a jagged tooth-shaped rock, the old prophet Samuel, a thin elderly Israelite man with very long uncut white hair falling to his shoulders and a long white beard, wearing a plain cream linen robe and a brown wool cloak, stands beside one big upright standing stone that has just been set up on a small mound, his hand resting on it; a crowd of Israelite men, women and children in plain brown, tan and cream wool tunics and headcloths, stand around it in a circle and look at it with thankful faces; warm golden afternoon light, peaceful and joyful. No statues, no idols, no carved figures, no poles, no religious symbols anywhere. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "v13c",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1,
+    2
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: a wide peaceful landscape of terraced fields at harvest time; Israelite families and children reap golden grain and carry sheaves, a girl laughs with a basket; far in the background on a green hill stands one big upright memorial stone; along a dirt road an old prophet with long white hair walks with a staff toward the next village; bright, safe and happy summer day. No statues, no idols, no carved figures, no poles, no religious symbols anywhere. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "bg13",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1,
+    2
+   ],
+   "참조": [
+    "ref2/ref13.png"
+   ],
+   "프롬프트": "Repaint this top-down tower defense game map as a richly hand-painted Kingdom Rush style battlefield in the green hill country of Benjamin at Mizpah in bright clear daylight, seen from above at a slight angle. Keep exactly the same sandy road shapes and positions: the road that enters from the top edge left of the middle and runs diagonally down to the middle of the map, the road that enters from the left edge near the bottom and runs up to the right, the place in the middle where the two roads meet, and the short road that then climbs in an S-curve up to the right and ends on the broad round hilltop. On the broad rounded hilltop on the right side of the map: a simple square altar of rough uncut field stones, and around it many small Israelite tents of brown and tan wool. On the left of the middle, between the two roads, one tall jagged gray rock standing up like a big tooth, the rock of Shen. Just below the place where the roads meet, a small flat empty patch of short green grass. At the bottom middle, the corner of a small terraced field of golden ripe barley with low stone walls. On the far left the slope falls away toward a hazy pale western plain. Elsewhere: grassy hillsides with olive trees, terebinth trees, small bushes and stones. Nothing covers the roads. No characters, no text. No statues, no idols, no carved figures, no poles, no religious symbols anywhere."
+  }
+ ]
+}

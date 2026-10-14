@@ -1,0 +1,23 @@
+{
+ "출력": "raw",
+ "크기": [
+  1024,
+  1024
+ ],
+ "단계": 4,
+ "항목": [
+  {
+   "id": "e_stones",
+   "종류": "물건",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "참조": [
+    "raw/e_stones_s1_f01129.png"
+   ],
+   "프롬프트": "Repaint this exact picture in the same style, but remove the gray stone at the bottom left and fill its place with sand, so that exactly five smooth stones remain on the patch of sand. Keep everything else the same."
+  }
+ ]
+}

@@ -1,0 +1,24 @@
+{
+ "출력": "raw",
+ "크기": [
+  1024,
+  1024
+ ],
+ "단계": 4,
+ "항목": [
+  {
+   "id": "s13e",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    6,
+    7,
+    8
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: at night inside the tent sanctuary at Shiloh, a small boy Samuel of about eight years, with long hair and a simple white linen tunic, sits up on a sleeping mat and listens with wide eyes; behind him stands a wide golden menorah lampstand whose seven small oil flames burn in one straight horizontal row at the same height, its six curved branches rising like a fan from the central shaft, seven lamps in all; a soft glow of white-gold light shines gently into the dark tent like a voice calling, with no figure and no face in the light; quiet, holy and hopeful. Every person has exactly two arms, two hands, two legs and two feet."
+  }
+ ]
+}

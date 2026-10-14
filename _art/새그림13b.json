@@ -1,0 +1,38 @@
+{
+ "출력": "raw",
+ "크기": [
+  1024,
+  1024
+ ],
+ "단계": 4,
+ "항목": [
+  {
+   "id": "s13e",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    3,
+    4,
+    5
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: at night inside the tent sanctuary at Shiloh, a small boy Samuel of about eight years, with long hair and a simple white linen tunic, sits up on a sleeping mat and listens with wide eyes; beside him stands a solid gold lampstand of the tabernacle with one straight central shaft and exactly three curved branches on each side, seven branches in all, each branch ending in a small oil lamp bowl with a tiny flame, no candles, no wax, still burning low; a soft glow of white-gold light shines gently into the dark tent like a voice calling, with no figure and no face in the light; quiet, holy and hopeful. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "s13f",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    3,
+    4,
+    5
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: in a broad valley of ripe golden wheat at harvest, Israelite reapers of Beth-shemesh with sickles stand up and look with great joy at the road; on the road a pair of two brown milk cows walking side by side under one wooden yoke pull a new wooden cart by themselves, two cows clearly visible; on the cart rides a box completely covered with a plain blue cloth; the reapers raise their hands and smile; bright happy summer light; no other animals. Every person has exactly two arms, two hands, two legs and two feet."
+  }
+ ]
+}

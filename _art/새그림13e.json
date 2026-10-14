@@ -1,0 +1,27 @@
+{
+ "출력": "raw",
+ "크기": [
+  1024,
+  1024
+ ],
+ "단계": 4,
+ "항목": [
+  {
+   "id": "s13e",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "참조": [
+    "raw/s13e_s7_aca6aa.png"
+   ],
+   "프롬프트": "Repaint this exact picture with the same boy, the same tent and the same style, changing only the golden lampstand: remove its two outermost curved branches and their two lamps, so the lampstand has exactly seven lamps, the center one on the main shaft and exactly three on each side. Keep everything else the same."
+  }
+ ]
+}

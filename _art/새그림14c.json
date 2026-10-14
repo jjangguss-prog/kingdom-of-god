@@ -1,0 +1,62 @@
+{
+ "출력": "raw",
+ "크기": [
+  1024,
+  1024
+ ],
+ "단계": 4,
+ "항목": [
+  {
+   "id": "s14a",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    3,
+    4
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: in the town of Ramah, a group of gray-bearded Israelite elders in robes stand before the old prophet Samuel, a thin elderly Israelite man with very long uncut white hair and a long white beard, wearing a plain cream linen robe and a brown wool cloak, who sits on a stone bench; the elders speak earnestly with outstretched hands, asking him for a king, while Samuel listens with a sad troubled face; serious mood. All houses are one-story mud-brick houses with flat earthen rooftops and low parapets; no sloped roofs, no roof tiles, no red tiles. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "s14d",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    3,
+    4
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: in the courtyard of a simple farmhouse in Bethlehem, seven grown Israelite brothers, all adult men with short beards, stand in a row before the old prophet Samuel, a thin elderly Israelite man with very long uncut white hair and a long white beard, wearing a plain cream linen robe and a brown wool cloak, who holds a ram's horn filled with oil; in front stands the oldest brother Eliab, very tall and handsome; Samuel looks at him but hesitates; their old father Jesse with a white beard stands aside; warm afternoon light. All houses are one-story mud-brick houses with flat earthen rooftops and low parapets; no sloped roofs, no roof tiles, no red tiles. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "s14f",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    3,
+    4
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: inside a dim royal tent, King Saul, a very tall handsome Israelite man of about forty, a head taller than everyone else, with a dark beard, wearing a simple bronze crown band and a rich deep-blue and purple royal robe, sits troubled on a wooden throne with his head in one hand, and a cloud of dark purple smoke is around him; in front of him David, a ruddy Israelite shepherd boy of about sixteen with tousled reddish-brown hair, bright eyes and a handsome friendly face, no beard, wearing a plain light-brown wool shepherd's tunic with a rope belt and sandals, a small leather shepherd's bag at his hip, sits on a small stool and plays a small wooden kinnor lyre: a U-shaped wooden frame with two curved arms joined by a crossbar at the top and about eight straight vertical strings, held upright against his chest and plucked with his fingers; not a lute, not a guitar, not a mandolin; where the music sounds, the dark smoke thins out, breaks apart and drifts away, and warm light returns; gentle and hopeful. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "v14c",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    3,
+    4
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: by the brook in the Valley of Elah, the giant Goliath lies fallen face down on the ground, still wearing his whole bronze scale armor coat, bronze greaves and his bronze helmet, completely still, his huge spear lying beside him; David, a ruddy Israelite shepherd boy of about sixteen with tousled reddish-brown hair, bright eyes and a handsome friendly face, no beard, wearing a plain light-brown wool shepherd's tunic with a rope belt and sandals, a small leather shepherd's bag at his hip, stands near him holding only an empty leather sling, looking up thankfully to the sky; there is no sword anywhere in the picture; the shield bearer drops his big shield and backs away; on the near hill the Israelite soldiers in plain brown and tan tunics with headcloths, spears and small shields, jump up and shout with joy; on the far hill the Philistine soldiers in tall headdresses of upright reed feathers with round shields, turn and run away. Nobody is wounded, no blood. No statues, no idols, no carved figures, no religious symbols anywhere. Every person has exactly two arms, two hands, two legs and two feet."
+  }
+ ]
+}
