@@ -7,7 +7,7 @@ import sys, os, json, re, subprocess
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 RAW, OUT = os.path.join(HERE, 'raw'), os.path.join(HERE, '..', 'music')
-LUFS = {'map': -19, 'story': -20, 'defeat': -20, 's5': -18.5, 's9': -18.5}   # 그 밖은 -17
+LUFS = {'map': -18, 'story': -18.5, 'defeat': -20}   # 그 밖은 -17. 10-15: 지도·이야기·5·9를 활력 있는 곡으로 다시 만들어 조금만 낮춤
 FF = 'ffmpeg'
 
 
