@@ -1,0 +1,28 @@
+{
+ "출력": "raw",
+ "크기": [
+  1024,
+  1024
+ ],
+ "단계": 4,
+ "항목": [
+  {
+   "id": "s15b",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    41,
+    42,
+    43,
+    44
+   ],
+   "참조": [
+    "raw/s15b_s34_31a772.png"
+   ],
+   "프롬프트": "Repaint this exact picture in the same hand-painted style, keeping everything the same: the stone room, the throne, the purple smoke, the king with his open empty hand, the flying spear striking the wall, and the red-haired boy ducking in surprise. Change only the boy's instrument: he now holds a small wooden kinnor lyre upright against his chest with both hands: a U-shaped wooden frame with two curved side arms joined by a straight wooden crossbar at the top and about eight straight vertical strings stretched from the crossbar down to the bottom of the frame; it has no round body, no neck and no tuning pegs; not a lute, not a guitar, not a mandolin. Every face is clear. Each hand has four fingers and a thumb."
+  }
+ ]
+}

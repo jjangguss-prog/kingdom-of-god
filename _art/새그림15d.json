@@ -1,0 +1,40 @@
+{
+ "출력": "raw",
+ "크기": [
+  1024,
+  1024
+ ],
+ "단계": 4,
+ "항목": [
+  {
+   "id": "v15a",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    4,
+    5,
+    6,
+    7
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: inside a dark cave, seen from deep inside the cave: in the middle ground King Saul, a very tall handsome Israelite man of about forty with a dark beard, wearing a simple bronze crown band and a rich deep-blue and purple royal robe, sits resting on a low rock facing away from us toward the bright cave entrance, we see his back and the back of his head, he is looking out at the bright daylight and does not notice anything behind him; his long purple royal robe spreads on the ground behind him toward us; in the dark foreground David, a grown young Israelite man of about twenty with tousled reddish-brown hair and a short reddish beard, wearing a plain light-brown wool tunic with a leather belt, crouches low behind Saul and quietly cuts off a small corner of the robe's hem with a small knife in his right hand, holding the cut corner in his left hand, with a serious careful face; behind David in the shadows three of his men watch with wide eyes; tense hushed moment. Nobody is wounded, no blood. Hands are drawn simply and clearly, each hand with four fingers and a thumb, and no hand overlaps another person. Every face is clear and well drawn with distinct eyes, nose and mouth. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "s15b",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    21,
+    22,
+    23,
+    24
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: inside a stone-walled room of the king's house with a wooden throne on the left: King Saul, a very tall handsome Israelite man of about forty with a dark beard, wearing a simple bronze crown band and a rich deep-blue and purple royal robe, stands beside the throne with a cloud of dark purple smoke around his head, his right arm stretched forward because he has just hurled a long spear; the long spear flies horizontally through the air across the room toward the right with white motion lines; on the right, David, a ruddy Israelite youth of about seventeen with tousled reddish-brown hair and a friendly face, wearing a plain light-brown wool tunic, sitting on a small stool, ducks his head down low and leans aside, clutching a small wooden kinnor lyre: a U-shaped wooden frame with two curved arms joined by a crossbar at the top and about eight straight vertical strings to his chest with both hands, his eyes wide with surprise; the tip of the flying spear is about to strike the stone wall just above David's head; dramatic but child-friendly. Only these two people. Nobody is wounded, no blood. Hands are drawn simply and clearly, each hand with four fingers and a thumb, and no hand overlaps another person. Every face is clear and well drawn with distinct eyes, nose and mouth. Every person has exactly two arms, two hands, two legs and two feet."
+  }
+ ]
+}

@@ -1,0 +1,28 @@
+{
+ "출력": "raw",
+ "크기": [
+  1024,
+  1024
+ ],
+ "단계": 4,
+ "항목": [
+  {
+   "id": "s15b",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    31,
+    32,
+    33,
+    34
+   ],
+   "참조": [
+    "raw/s15b_s22_d1ab2d.png"
+   ],
+   "프롬프트": "Repaint this exact picture in the same hand-painted style, keeping the same stone room, the same wooden throne, the same purple smoke, the same king and the same red-haired boy with his lyre in the same places. Change only this: the spear has already left the king's hand. The king's right arm is still stretched forward but his right hand is now open and empty. The long spear flies alone through the air between them with white motion lines, and its iron tip strikes the stone wall just above the boy's head with a small puff of dust, while the boy ducks his head down in surprise. Nobody is wounded, no blood. Every person has exactly two arms, two hands, two legs and two feet. Every face is clear and well drawn with distinct eyes, nose and mouth. Hands are drawn simply and clearly, each hand with four fingers and a thumb."
+  }
+ ]
+}

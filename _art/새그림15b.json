@@ -1,0 +1,27 @@
+{
+ "출력": "raw",
+ "크기": [
+  1024,
+  1024
+ ],
+ "단계": 4,
+ "항목": [
+  {
+   "id": "bg15",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    11,
+    12,
+    13
+   ],
+   "참조": [
+    "ref2/bg15_edit_ref.png"
+   ],
+   "프롬프트": "Repaint this exact top-down game map in the same hand-painted Kingdom Rush style, keeping every road, cliff, tent, goat, sheepfold, the sea and the palms in the same places. Blend the sandy road that comes down from the top edge on the right so it looks like a natural dirt path winding down beside the oasis cliff, with the waterfall and the palm-lined pool just to the right of this road. At the lower left, the road ends inside the dark mouth of a cave in the tan cliff. Nothing covers the roads. No characters, no text. No statues, no idols, no carved figures, no religious symbols anywhere."
+  }
+ ]
+}

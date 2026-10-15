@@ -1,5 +1,5 @@
 {
- "설명": "Kingdom of God 배경 음악 작업 파일. 음악생성.py가 읽는다. 결이 반지의 제왕·이집트 왕자 같은 관현악과 합창(곡을 베끼지 않고 악기 편성과 분위기만). 캡션은 영어(최대 512자), 가사는 구조 태그와 모음·할렐루야·아멘·호산나만. 10-15 사용자: 고요한 곡은 오래 들으면 졸려서, 근동 빛깔은 살리되 처음부터 활력 있고 비트 있게. 새 곡은 후보 1번(시드 1)만 만든다.",
+ "설명": "Kingdom of God 배경 음악 작업 파일. 음악생성.py가 읽는다. 결이 반지의 제왕·이집트 왕자 같은 관현악과 합창(곡을 베끼지 않고 악기 편성과 분위기만). 캡션은 영어(최대 512자), 가사는 구조 태그와 모음·할렐루야·아멘·호산나만. 10-15 사용자: 고요한 곡은 오래 들으면 졸려서, 근동 빛깔은 살리되 처음부터 활력 있고 비트 있게. 새 곡은 후보 1번(시드 1)만 만든다. 10-16 사용자: 음악은 도파민을 극대화하는가로 우수함을 판단해 고른다. 새 곡은 후보 넷(시드 1–4)을 만들고 점수.py의 점수와 들어 본 느낌으로 가장 신나는 곡을 고른다.",
  "공통": "cinematic orchestral film score, Middle Eastern color, driving world percussion groove (darbuka, frame drums, riq), energetic rhythmic pulse throughout, orchestra and choir, concert hall reverb, no drum kit, no synth, no pop vocals",
  "출력": "raw",
  "항목": [
@@ -116,6 +116,16 @@
   {"id": "boss4", "이름": "보스 · 골리앗", "결": "활력 · 거인",
    "캡션": "Giant champion boss theme. Heavy stomping big drums in a relentless groove, a massive low brass riff, bronze cymbal clashes like armor, a deep male choir roaring, a fast darbuka layer keeps the energy high, a brave shepherd flute motif answers, menacing but exciting.",
    "가사": "[Intro - big drums]\n\n[Verse - male choir]\nOh, oh\nAh, ah\n\n[Instrumental - low brass and darbuka]\n\n[Chorus - full choir]\nAh, ah, ah\n\n[Outro]",
-   "bpm": 112, "key": "E minor", "길이": 120, "시드": [1]}
+   "bpm": 112, "key": "E minor", "길이": 120, "시드": [1]},
+
+  {"id": "s15", "이름": "15 엔게디", "결": "활력 · 광야의 추격전(도파민: 첫 박부터 빠른 그루브, 귀에 남는 우드 리프, 쌓였다 터지는 후렴)",
+   "캡션": "Fast chase battle theme in a desert canyon beside the Dead Sea. A punchy darbuka and frame-drum groove from the very first beat, a catchy repeating oud riff as the hook, ney flute answers, staccato string ostinato driving forward, a short bright lyre motif, the energy builds with rising strings and riq rolls and then drops into a huge choir and brass chorus, heroic, thrilling and exciting.",
+   "가사": "[Intro - darbuka groove]\n\n[Verse - oud riff]\n\n[Build - strings rising]\n\n[Chorus - full choir]\nHallelujah\nAh, ah, ah\n\n[Instrumental - ney and brass]\n\n[Build - drums]\n\n[Chorus - full choir]\nHallelujah\nHosanna\n\n[Outro]",
+   "bpm": 126, "key": "D minor", "길이": 150, "시드": [1, 2, 3, 4]},
+
+  {"id": "boss5", "이름": "보스 · 사울", "결": "활력 · 악령이 내리는 왕(도파민: 쉼 없는 큰 북, 창을 던지듯 찌르는 금관, 빌드업과 드롭)",
+   "캡션": "Tormented king boss battle theme. Relentless heavy frame drums and huge war-drum hits in a fast driving groove, a rapid low-string ostinato, stabbing brass hits like thrown spears, a dark swelling male choir, the tension builds in waves and erupts into a massive full-orchestra drop, a fragile lyre motif briefly calms the storm before the drums crash back in, intense and thrilling, not horror.",
+   "가사": "[Intro - heavy drums]\n\n[Verse - low strings]\nOh, oh\n\n[Build - brass stabs]\n\n[Drop - full choir and orchestra]\nAh, ah, ah\n\n[Bridge - lyre]\n\n[Build - drums]\n\n[Drop - full choir]\nAh, ah, ah\n\n[Outro]",
+   "bpm": 140, "key": "C minor", "길이": 120, "시드": [1, 2, 3, 4]}
  ]
 }

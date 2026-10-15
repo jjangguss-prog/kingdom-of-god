@@ -1,0 +1,166 @@
+{
+ "boss3": {
+  "1등": "boss3_s2_5c23f8.flac",
+  "점수": {
+   "boss3_s1_5c23f8.flac": -0.047,
+   "boss3_s2_5c23f8.flac": 0.647,
+   "boss3_s3_5c23f8.flac": -0.6
+  },
+  "값": {
+   "boss3_s1_5c23f8.flac": {
+    "bpm": 95.703,
+    "pulse": 0.75,
+    "dense": 2.125,
+    "perc": 0.145,
+    "bright": 2077.698,
+    "build": 7.29,
+    "early": -40.821,
+    "repeat": 0.052,
+    "_early_s": 40.821,
+    "_len": 120.0
+   },
+   "boss3_s2_5c23f8.flac": {
+    "bpm": 95.703,
+    "pulse": 0.564,
+    "dense": 2.458,
+    "perc": 0.174,
+    "bright": 2111.763,
+    "build": 42.604,
+    "early": -11.076,
+    "repeat": 0.062,
+    "_early_s": 11.076,
+    "_len": 120.0
+   },
+   "boss3_s3_5c23f8.flac": {
+    "bpm": 95.703,
+    "pulse": 0.65,
+    "dense": 1.992,
+    "perc": 0.116,
+    "bright": 1940.501,
+    "build": 5.96,
+    "early": -10.635,
+    "repeat": 0.046,
+    "_early_s": 10.635,
+    "_len": 120.0
+   }
+  }
+ },
+ "s15": {
+  "1등": "s15_s4_d9d078.flac",
+  "점수": {
+   "s15_s1_d9d078.flac": -0.102,
+   "s15_s2_d9d078.flac": -0.221,
+   "s15_s3_d9d078.flac": 0.137,
+   "s15_s4_d9d078.flac": 0.185
+  },
+  "값": {
+   "s15_s1_d9d078.flac": {
+    "bpm": 123.047,
+    "pulse": 0.697,
+    "dense": 3.633,
+    "perc": 0.138,
+    "bright": 2458.446,
+    "build": 18.0,
+    "early": -50.921,
+    "repeat": 0.042,
+    "_early_s": 50.921,
+    "_len": 150.0
+   },
+   "s15_s2_d9d078.flac": {
+    "bpm": 123.047,
+    "pulse": 0.833,
+    "dense": 3.187,
+    "perc": 0.137,
+    "bright": 2125.374,
+    "build": 12.944,
+    "early": -33.646,
+    "repeat": 0.049,
+    "_early_s": 33.646,
+    "_len": 150.0
+   },
+   "s15_s3_d9d078.flac": {
+    "bpm": 123.047,
+    "pulse": 0.676,
+    "dense": 3.153,
+    "perc": 0.222,
+    "bright": 2234.744,
+    "build": 18.0,
+    "early": -4.319,
+    "repeat": 0.047,
+    "_early_s": 4.319,
+    "_len": 150.0
+   },
+   "s15_s4_d9d078.flac": {
+    "bpm": 123.047,
+    "pulse": 0.674,
+    "dense": 3.393,
+    "perc": 0.175,
+    "bright": 2229.619,
+    "build": 18.0,
+    "early": -5.944,
+    "repeat": 0.049,
+    "_early_s": 5.944,
+    "_len": 150.0
+   }
+  }
+ },
+ "boss5": {
+  "1등": "boss5_s2_51bfda.flac",
+  "점수": {
+   "boss5_s1_51bfda.flac": -0.054,
+   "boss5_s2_51bfda.flac": 0.548,
+   "boss5_s3_51bfda.flac": -0.585,
+   "boss5_s4_51bfda.flac": 0.09
+  },
+  "값": {
+   "boss5_s1_51bfda.flac": {
+    "bpm": 143.555,
+    "pulse": 0.733,
+    "dense": 4.167,
+    "perc": 0.136,
+    "bright": 2532.825,
+    "build": 18.0,
+    "early": -14.257,
+    "repeat": 0.049,
+    "_early_s": 14.257,
+    "_len": 120.0
+   },
+   "boss5_s2_51bfda.flac": {
+    "bpm": 143.555,
+    "pulse": 0.747,
+    "dense": 5.075,
+    "perc": 0.192,
+    "bright": 2244.172,
+    "build": 18.0,
+    "early": -0.882,
+    "repeat": 0.042,
+    "_early_s": 0.882,
+    "_len": 120.0
+   },
+   "boss5_s3_51bfda.flac": {
+    "bpm": 92.285,
+    "pulse": 0.723,
+    "dense": 3.717,
+    "perc": 0.145,
+    "bright": 2193.384,
+    "build": 11.323,
+    "early": -0.975,
+    "repeat": 0.056,
+    "_early_s": 0.975,
+    "_len": 120.0
+   },
+   "boss5_s4_51bfda.flac": {
+    "bpm": 143.555,
+    "pulse": 0.781,
+    "dense": 3.425,
+    "perc": 0.143,
+    "bright": 2217.837,
+    "build": 18.0,
+    "early": -0.0,
+    "repeat": 0.038,
+    "_early_s": 0.0,
+    "_len": 120.0
+   }
+  }
+ }
+}

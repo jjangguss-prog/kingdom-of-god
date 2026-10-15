@@ -1,0 +1,51 @@
+{
+ "출력": "raw",
+ "크기": [
+  1024,
+  1024
+ ],
+ "단계": 4,
+ "항목": [
+  {
+   "id": "saul_kneel",
+   "종류": "인물",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "King Saul, a very tall handsome Israelite man of about forty, a head taller than everyone else, with a dark beard, wearing a simple bronze crown band and a rich deep-blue and purple royal robe, kneeling on one knee on the ground with his head bowed, both open hands resting on his raised knee, a calm peaceful sorrowful face with closed eyes, his long spear lying flat on the ground beside him, only a faint thin wisp of purple smoke fading above his head, a dignified human, exactly two arms and exactly two hands."
+  },
+  {
+   "id": "s15b",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    11,
+    12,
+    13
+   ],
+   "참조": [
+    "../art/s14f.jpg"
+   ],
+   "프롬프트": "Repaint this picture in the same hand-painted style, keeping the same young shepherd David with tousled reddish-brown hair on his stool playing the same U-shaped wooden lyre with both hands, and the same King Saul in his deep-blue and purple royal robe on the throne with dark purple smoke around him. Change only this: Saul stands up from his throne with his right arm stretched forward after throwing a long spear; the long spear is stuck in the plaster wall just beside David's head, and David leans to the side to dodge it, looking surprised. A stone-walled room of the king's house. No other people. Nobody is wounded, no blood. Hands are drawn simply and clearly, each hand with four fingers and a thumb, and no hand overlaps another person. Every face is clear and well drawn with distinct eyes, nose and mouth. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "v15c",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    4,
+    5,
+    6
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: on a rocky path by the Dead Sea at late afternoon, King Saul, a very tall handsome Israelite man of about forty, a head taller than everyone else, with a dark beard, wearing a simple bronze crown band and a rich deep-blue and purple royal robe, weeps with tears on his face, his hands open and lowered, and only a thin wisp of purple smoke fades away from his shoulders; facing him stands David, a grown young Israelite man of about twenty with adult proportions, as tall as Saul's shoulder, tousled reddish-brown hair, a short reddish beard, bright eyes and a kind face, wearing a plain light-brown wool tunic with a leather belt and sandals, clearly an adult, not a child, holding a small corner of purple cloth in his right hand with a kind sorrowful face; behind Saul his soldiers lower their spears; warm golden light. Nobody is wounded, no blood. Hands are drawn simply and clearly, each hand with four fingers and a thumb, and no hand overlaps another person. Every face is clear and well drawn with distinct eyes, nose and mouth. Every person has exactly two arms, two hands, two legs and two feet."
+  }
+ ]
+}

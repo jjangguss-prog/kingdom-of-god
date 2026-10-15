@@ -1,0 +1,268 @@
+{
+ "출력": "raw",
+ "크기": [
+  1024,
+  1024
+ ],
+ "단계": 4,
+ "항목": [
+  {
+   "id": "bg15",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "참조": [
+    "ref2/ref15.png"
+   ],
+   "프롬프트": "Repaint this top-down tower defense game map as a richly hand-painted Kingdom Rush style battlefield at the oasis of En-gedi beside the Dead Sea in bright clear daylight, seen from above at a slight angle. Keep exactly the same sandy road shapes and positions: one road enters from the top edge left of the middle and zigzags down a rocky cliff in three switchbacks, another road enters from the top edge on the right and runs down beside the sea, crosses a small stream at a shallow ford, and the two roads meet in the lower middle and run to the lower left where the road ends at the dark mouth of a cave in a cliff of tan limestone. On the right side: the calm blue-green Dead Sea with white salt crusts along its pebbly shore. In the upper right: a thin waterfall falls down a cliff into a small clear pool surrounded by date palm trees and green reeds, and a small stream flows from the pool down to the sea, exactly where the blue line is. Upper left: a high dry plateau with several low brown goat-hair tents of an army camp, and a big flat rock outcrop beside them. In the middle: steep rocky ledges of tan and ochre limestone with a few wild ibex goats standing on the rocks. Below the road near the cave: two small round sheepfolds made of piled stones. Elsewhere: dry desert ground, small bushes and boulders. Nothing covers the roads. No characters, no text. No statues, no idols, no carved figures, no religious symbols anywhere."
+  },
+  {
+   "id": "saul_throw",
+   "종류": "인물",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "King Saul, a very tall handsome Israelite man of about forty, a head taller than everyone else, with a dark beard, wearing a simple bronze crown band and a rich deep-blue and purple royal robe, raising a long spear high above his right shoulder with his right hand, about to throw it, his left arm stretched forward for balance, a dark purple smoky aura around his shoulders, angry troubled face, exactly two arms and exactly two hands."
+  },
+  {
+   "id": "saul_fit",
+   "종류": "인물",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "King Saul, a very tall handsome Israelite man of about forty, a head taller than everyone else, with a dark beard, wearing a simple bronze crown band and a rich deep-blue and purple royal robe, standing and bending forward, holding his head with both hands, eyes squeezed shut, troubled tormented face, a swirling cloud of dark purple smoke around his head and shoulders, a dignified human, not a monster, exactly two arms and exactly two hands, no weapon."
+  },
+  {
+   "id": "shep_mighty",
+   "종류": "건물",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "A small rocky stronghold at the mouth of a cave in a big rounded hill of tan limestone, like the cave of Adullam: a dark cave entrance framed by large stones, a short wall of piled stones with a wooden gate in front, two round bronze-rimmed shields and three long spears leaning by the entrance, a small banner of red cloth on a pole."
+  },
+  {
+   "id": "mighty",
+   "종류": "인물",
+   "시드": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "프롬프트": "A mighty warrior of King David's band, a strong bearded Israelite man wearing a rounded bronze helmet, a leather scale vest over a dark red tunic and sandals, a round bronze-rimmed shield on his left arm and a long spear held in his right hand, standing firm and ready, brave loyal face, exactly two arms and exactly two hands."
+  },
+  {
+   "id": "i_soldier",
+   "종류": "인물",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "an Israelite soldier of King Saul's army, a bearded man wearing a simple rounded bronze helmet, a plain cream-white wool tunic with a brown leather belt, a deep purple sash across his chest, and sandals, holding a long spear in his right hand and a small round leather shield on his left arm, angry frown, walking forward, exactly two arms."
+  },
+  {
+   "id": "i_shield",
+   "종류": "인물",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "an Israelite soldier of King Saul's army, a bearded man wearing a simple rounded bronze helmet, a plain cream-white wool tunic with a brown leather belt, a deep purple sash across his chest, and sandals, carrying a big tall rectangular wooden shield covered with leather in front of his body with his left arm and a short spear in his right hand, chin raised proudly, exactly two arms."
+  },
+  {
+   "id": "i_centurion",
+   "종류": "인물",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "An Israelite captain of King Saul's army, a stern bearded man with a polished bronze helmet, a bronze scale breastplate over a cream tunic, a long deep purple cloak, holding a commander's wooden staff in his right hand, hard stubborn face, exactly two arms."
+  },
+  {
+   "id": "i_archer",
+   "종류": "인물",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "an Israelite soldier of King Saul's army, a bearded man wearing a simple rounded bronze helmet, a plain cream-white wool tunic with a brown leather belt, a deep purple sash across his chest, and sandals, a leather quiver of arrows on his back, drawing a curved wooden bow with an arrow aimed forward, narrowed eyes, exactly two arms."
+  },
+  {
+   "id": "i_drummer",
+   "종류": "인물",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "an Israelite soldier of King Saul's army, a bearded man wearing a simple rounded bronze helmet, a plain cream-white wool tunic with a brown leather belt, a deep purple sash across his chest, and sandals, without weapons, beating a round wooden frame drum hanging at his waist with both hands, wide fearful eyes, exactly two arms and exactly two hands."
+  },
+  {
+   "id": "e_net",
+   "종류": "물건",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "A small fishing net spread out on a white salty pebble shore at the edge of clear blue-green water, with two shiny silver fish jumping out of the water beside it."
+  },
+  {
+   "id": "s15a",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: on a dusty road outside an Israelite town, joyful Israelite women in colorful dresses and headscarves dance and sing, beating round hand drums and shaking small cymbals; behind them the young war hero David, a ruddy young Israelite man of about twenty with tousled reddish-brown hair, bright eyes, a handsome friendly face and a short light reddish beard, wearing a plain light-brown wool tunic with a leather belt and sandals, walks humbly; in front King Saul, a very tall handsome Israelite man of about forty, a head taller than everyone else, with a dark beard, wearing a simple bronze crown band and a rich deep-blue and purple royal robe, rides ahead with a stiff jealous frown, glancing back at David; townspeople cheer from flat rooftops; bright sunny day. All houses are one-story mud-brick houses with flat earthen rooftops and low parapets; no sloped roofs, no roof tiles, no red tiles. Hands are drawn simply and clearly, each hand with four fingers and a thumb, and no hand overlaps another person. Every face is clear and well drawn with distinct eyes, nose and mouth. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "s15b",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: inside a stone room of the king's house, David, a ruddy young Israelite man of about twenty with tousled reddish-brown hair, bright eyes, a handsome friendly face and a short light reddish beard, wearing a plain light-brown wool tunic with a leather belt and sandals, sits on a stool by the wall playing a small wooden kinnor lyre: a U-shaped wooden frame with two curved arms joined by a crossbar at the top and about eight straight vertical strings; not a lute, not a guitar with both hands; across the room King Saul, a very tall handsome Israelite man of about forty, a head taller than everyone else, with a dark beard, wearing a simple bronze crown band and a rich deep-blue and purple royal robe, sits on a wooden chair, a cloud of dark purple smoke hangs around his head and shoulders, and he has just thrown a long spear with his right hand; the spear is stuck in the plaster wall beside David's head, and David leans aside to dodge it; dramatic but child-friendly. Nobody is wounded, no blood. Hands are drawn simply and clearly, each hand with four fingers and a thumb, and no hand overlaps another person. Every face is clear and well drawn with distinct eyes, nose and mouth. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "s15c",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: in an open field at morning, Jonathan, the king's son, a brave young prince of about twenty-five with a short dark beard, wearing a fine royal-blue robe with a gold-trimmed sash and a leather belt, draws a curved wooden bow and shoots an arrow far over the head of a small servant boy who runs across the field to fetch it; behind a big gray boulder at the left, David, a ruddy young Israelite man of about twenty with tousled reddish-brown hair, bright eyes, a handsome friendly face and a short light reddish beard, wearing a plain light-brown wool tunic with a leather belt and sandals, hides quietly and listens; green grass and a few trees; tender, a little sad mood. Hands are drawn simply and clearly, each hand with four fingers and a thumb, and no hand overlaps another person. Every face is clear and well drawn with distinct eyes, nose and mouth. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "s15d",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: at the mouth of a big rocky cave in a tan hillside, the cave of Adullam, a crowd of tired poor Israelite men in worn patched clothes arrive with bundles and walking sticks; David, a ruddy young Israelite man of about twenty with tousled reddish-brown hair, bright eyes, a handsome friendly face and a short light reddish beard, wearing a plain light-brown wool tunic with a leather belt and sandals, stands at the cave entrance and welcomes them warmly with open arms; some men sit to rest, one man clasps David's hand; late afternoon light; hopeful. Hands are drawn simply and clearly, each hand with four fingers and a thumb, and no hand overlaps another person. Every face is clear and well drawn with distinct eyes, nose and mouth. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "s15e",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: on a hilltop at dawn, David, a ruddy young Israelite man of about twenty with tousled reddish-brown hair, bright eyes, a handsome friendly face and a short light reddish beard, wearing a plain light-brown wool tunic with a leather belt and sandals, kneels on one knee with his head bowed and his hands folded in prayer; a soft beam of white-gold light from heaven shines down, with no figure and no face in the light onto him; far below in the valley lies a small walled town with flat-roofed houses and a round threshing floor with sheaves of grain; a few of David's men in tunics with spears stand behind him looking worried. All houses are one-story mud-brick houses with flat earthen rooftops and low parapets; no sloped roofs, no roof tiles, no red tiles. Hands are drawn simply and clearly, each hand with four fingers and a thumb, and no hand overlaps another person. Every face is clear and well drawn with distinct eyes, nose and mouth. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "s15f",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: a rocky desert mountain seen from the side: on the left slope of the mountain King Saul, a very tall handsome Israelite man of about forty, a head taller than everyone else, with a dark beard, wearing a simple bronze crown band and a rich deep-blue and purple royal robe, leads a column of Israelite soldiers with spears and round shields, searching; on the right slope, hidden from them by the ridge, David, a ruddy young Israelite man of about twenty with tousled reddish-brown hair, bright eyes, a handsome friendly face and a short light reddish beard, wearing a plain light-brown wool tunic with a leather belt and sandals, and his men hurry away running; on the top of the ridge a messenger on foot runs toward Saul waving one hand, bringing urgent news; tense but child-friendly. Nobody is wounded, no blood. Hands are drawn simply and clearly, each hand with four fingers and a thumb, and no hand overlaps another person. Every face is clear and well drawn with distinct eyes, nose and mouth. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "s15g",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: the oasis of En-gedi beside the blue Dead Sea: tall tan cliffs with ledges where wild ibex goats leap, a thin waterfall falling into a pool with date palms; in the shadow at the back of a big cave in the cliff, David, a ruddy young Israelite man of about twenty with tousled reddish-brown hair, bright eyes, a handsome friendly face and a short light reddish beard, wearing a plain light-brown wool tunic with a leather belt and sandals, and several of his men crouch quietly and watch; far away on the high plateau, King Saul, a very tall handsome Israelite man of about forty, a head taller than everyone else, with a dark beard, wearing a simple bronze crown band and a rich deep-blue and purple royal robe, leads a long column of many Israelite soldiers with spears toward the cliffs; dramatic wide view. Hands are drawn simply and clearly, each hand with four fingers and a thumb, and no hand overlaps another person. Every face is clear and well drawn with distinct eyes, nose and mouth. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "v15a",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: inside a dark cave, near the bright cave entrance King Saul, a very tall handsome Israelite man of about forty, a head taller than everyone else, with a dark beard, wearing a simple bronze crown band and a rich deep-blue and purple royal robe, sits resting on a low rock with his back turned, and his long purple royal robe spreads on the ground behind him; in the shadows David, a ruddy young Israelite man of about twenty with tousled reddish-brown hair, bright eyes, a handsome friendly face and a short light reddish beard, wearing a plain light-brown wool tunic with a leather belt and sandals, crouches low and quietly cuts off a small corner of the purple robe's hem with a small knife held in his right hand, his left hand holding the cut corner; behind him in the darkness three of his men watch with wide eyes; tense hushed moment. Nobody is wounded, no blood. Hands are drawn simply and clearly, each hand with four fingers and a thumb, and no hand overlaps another person. Every face is clear and well drawn with distinct eyes, nose and mouth. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "v15b",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: outside a cave on a rocky slope at En-gedi: on the path below, King Saul, a very tall handsome Israelite man of about forty, a head taller than everyone else, with a dark beard, wearing a simple bronze crown band and a rich deep-blue and purple royal robe, has turned around to look up in surprise, and a few Israelite soldiers with spears stand still behind him; above at the cave mouth David, a ruddy young Israelite man of about twenty with tousled reddish-brown hair, bright eyes, a handsome friendly face and a short light reddish beard, wearing a plain light-brown wool tunic with a leather belt and sandals, kneels respectfully on one knee and holds up a small corner of purple cloth high in his right hand, his left hand on his chest; bright daylight, the blue Dead Sea in the distance. Nobody is wounded, no blood. Hands are drawn simply and clearly, each hand with four fingers and a thumb, and no hand overlaps another person. Every face is clear and well drawn with distinct eyes, nose and mouth. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "v15c",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: on a rocky path by the Dead Sea at late afternoon, King Saul, a very tall handsome Israelite man of about forty, a head taller than everyone else, with a dark beard, wearing a simple bronze crown band and a rich deep-blue and purple royal robe, weeps with tears on his face, his hands open and lowered, and only a thin wisp of purple smoke fades away from his shoulders; in front of him David, a ruddy young Israelite man of about twenty with tousled reddish-brown hair, bright eyes, a handsome friendly face and a short light reddish beard, wearing a plain light-brown wool tunic with a leather belt and sandals, stands holding the small purple cloth corner in one hand, with a kind sorrowful face; behind Saul his soldiers lower their spears; warm golden light. Nobody is wounded, no blood. Hands are drawn simply and clearly, each hand with four fingers and a thumb, and no hand overlaps another person. Every face is clear and well drawn with distinct eyes, nose and mouth. Every person has exactly two arms, two hands, two legs and two feet."
+  }
+ ]
+}
