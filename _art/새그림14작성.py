@@ -97,3 +97,13 @@ items_e = [
 ]
 json.dump({"출력": "raw", "크기": [1024, 1024], "단계": 4, "항목": items_e}, open('새그림14e.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
 print('14e', len(items_e), '항목')
+
+# 14f(10-15 사용자: "13, 14화 삽화에 팔과 손이 이상하다"): 사람마다 손이 어디 있는지 정해 주고, 군중은 멀리 작게
+HANDS = " Hands are drawn simply and clearly, each hand with four fingers and a thumb, and no hand overlaps another person."
+items_f = [
+    scene("s14a", f"in the town of Ramah, four gray-bearded Israelite elders in robes stand in a row before {SAMUEL}, who sits on a stone bench with both hands resting on his knees and a sad troubled face; only the front elder holds out both open hands toward Samuel, asking for a king; the other three elders hold their hands together in front of their robes; serious mood." + FLAT + HANDS, seeds=(5, 6, 7, 8)),
+    scene("s14b", f"on a quiet hilltop path at early morning, {SAMUEL}, holds a small clay flask with both hands and pours a thin stream of oil onto the head of a very tall handsome young Israelite man with a short dark beard in a plain brown traveling cloak, who bows his head with both hands hanging down at his sides; two donkeys graze nearby; peaceful, solemn and hopeful." + HANDS, seeds=(3, 4, 5, 6)),
+    scene("s14g", f"on a ridge above the Valley of Elah, {DAVID}, has just arrived carrying a basket of bread loaves with both hands and looks down into the valley; below by a shallow brook stands {GOLIATH}, holding his spear in his right hand, with {BEARER}, shouting up the hill; a few small Israelite soldiers far down on the near slope step back afraid, holding spears upright; on the far hill across the valley stand distant ranks of small Philistine soldiers; tense but child-friendly." + HANDS + NOIDOL, seeds=(3, 4, 5, 6)),
+]
+json.dump({"출력": "raw", "크기": [1024, 1024], "단계": 4, "항목": items_f}, open('새그림14f.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+print('14f', len(items_f), '항목')

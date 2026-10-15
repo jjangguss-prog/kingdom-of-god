@@ -316,7 +316,7 @@ body.force #rotate{display:none!important}
     <h1 class="logo"><span class="a">Kingdom of God</span><span class="b">Old Testament</span></h1>
     <p class="tsub">하나님의 나라 · 구약</p>
     <div class="row" style="margin-top:.6em;font-size:1.35em"><button class="btn" id="bStart">시작하기</button><button class="btn" id="bCont">계속하기</button><button class="btn wood" id="bCodexT">두루마리</button></div>
-    <p class="tnote">v1.11 · 1장 약속부터 5장 목동이 왕이 되다까지 (방주부터 엘라 골짜기까지)</p>
+    <p class="tnote">v1.11.1 · 1장 약속부터 5장 목동이 왕이 되다까지 (방주부터 엘라 골짜기까지)</p>
   </section>
   <section id="sSlots" class="scr" hidden>
     <div class="card slots"><h2 id="slotH">계속하기</h2><p class="sub" id="slotSub"></p><div id="slotList"></div><div class="row"><button class="btn" id="slotNew" hidden>새 이야기 시작</button><button class="btn wood" id="slotBack">돌아가기</button></div></div>
@@ -654,21 +654,21 @@ HEROES.joshua={name:'여호수아',line:'양치기',hp:300,armor:.25,dmg:20,rate
 HEROES.caleb={name:'갈렙',line:'파수꾼',hp:250,armor:.1,dmg:15,rate:.75,range:175,speed:88,melee:false,
   look:{skin:'#d39a68',cloth:'#6f8a4a',cloth2:'#c9a46a',head:'cloth',hc:'#efe3c4',beard:'#3a2614',item:'bow'},
   trait:{name:'정탐',ref:'민 13:17',desc:'멀리 옮기라고 하면 순식간에 달려가요.'},
-  s1:{name:'이 산지를 내게 주소서',ref:'수 14:12',cd:12,desc:'가장 강한 적에게 표적을 붙여요. 표적이 붙은 적은 받는 피해가 커져요.'},
+  s1:{name:'능히 이기리라',ref:'민 13:30',cd:12,desc:'가장 강한 적에게 표적을 붙여요. 표적이 붙은 적은 받는 피해가 커져요.'},
   s2:{name:'그들을 두려워하지 말라',ref:'민 14:9',cd:15,desc:'곁의 양치기와 문지기의 기절을 풀고, 6초 동안 곁의 탑과 병사가 더 빨리 공격해요. 그동안 곁의 탑은 북소리를 듣지 않아요.'},
   passive:{name:'여전히 강건하니',ref:'수 14:11',desc:'체력이 낮을수록 활을 더 빨리 쏴요.'},
-  ult:{name:'능히 이기리라',short:'능히<br>이기리라',ref:'민 13:30',cd:45,desc:'누른 곳에 화살비가 쏟아져 넓은 범위의 적을 여러 번 쳐요.'},
+  ult:{name:'이 산지를 내게 주소서',short:'이 산지를<br>내게 주소서',ref:'수 14:12',cd:45,desc:'누른 곳에 화살비가 쏟아져 넓은 범위의 적을 여러 번 쳐요.'},   // 10-15 사용자: 화살비가 쏟아지는 궁극기가 '이 산지를 내게 주소서'
   title:'여호와를 온전히 따른 사람 (민 14:24)',
   say:'“우리가 곧 올라가서 그 땅을 취하자 능히 이기리라”',sayRef:'민 13:30',
   man:'갈렙은 열두 정탐꾼 가운데 여호수아와 함께 하나님을 믿은 사람이에요(민 14:6–9). 하나님은 "내 종 갈렙은 그 마음이 그들과 달라서 나를 온전히 따랐은즉"이라고 하셨어요(민 14:24). 여든다섯 살에도 "이 산지를 내게 주소서" 하며 거인들이 사는 헤브론을 맡았어요(수 14:10–12).',jesus:'그나스 사람 갈렙이 유다 지파의 대표가 되었어요. 이방 사람도 하나님의 집 식구가 돼요 (민 32:12, 엡 2:19)'};
 // 다윗(양치기 영웅): 13→14 이야기에서 기름 부음을 받고 합류한다(삼상 16:13). 14 엘라 골짜기는 다윗만 나간다. 합류할 때 레벨 5("사자와 곰도 쳤은즉" 17:36)
-HEROES.david={name:'다윗',line:'양치기',hp:270,armor:.15,dmg:16,rate:.9,range:0,speed:66,melee:true,joinXp:2400,joinSk:{s1:1,s2:1,passive:2,ult:1},sling:{range:160,dmg:12,rate:1.2},
+HEROES.david={name:'다윗',line:'양치기',hp:330,armor:.25,dmg:18,rate:.9,range:0,speed:70,melee:true,joinXp:2400,joinSk:{s1:1,s2:1,passive:2,ult:1},sling:{range:230,dmg:16,rate:1.1,crit:.2,critK:2.5},block:2,   // v1.11.1: 물매의 명수이자 막는 영웅(막대기로 셋까지 막으면서 물매를 돌린다)
   look:{skin:'#e0a172',cloth:'#c9a46a',cloth2:'#8a6a42',head:'hair',hc:'#7a3e1e',item:'staff'},
-  trait:{name:'가드 사람 잇대',ref:'삼하 15:19–21',desc:'다윗이 직접 풀어 준 적은 15% 확률로 6초 동안 다윗 편에 서서 그 자리를 막아요. (보스·거인은 빼고)'},
-  s1:{name:'물매',ref:'삼상 17:40, 49',cd:10,desc:'멀리(260) 있는 가장 앞선 적에게 큰 돌을 던져 기절시켜요. 하늘의 적도 맞혀요.'},
-  s2:{name:'수금',ref:'삼상 16:23',cd:16,desc:'수금을 타면 둘레 적의 줄이 느슨해져요. 5초 동안 받는 피해가 커지고 공격이 약해져요.'},
-  passive:{name:'여호와의 이름으로',ref:'삼상 17:45',desc:'다윗은 고함에 기절하지 않아요. 2단계는 곁의 양치기·나실인·문지기·장정도, 3단계는 곁의 탑이 북소리도 듣지 않아요.'},
-  ult:{name:'매끄러운 돌 다섯',short:'매끄러운<br>돌 다섯',ref:'삼상 17:40',cd:50,desc:'가장 강한 적 다섯에게 차례로 큰 돌을 던져요.'},
+  trait:{name:'사자와 곰도 쳤은즉',ref:'삼상 17:34–36',desc:'막대기로 적을 셋까지 함께 막으면서 물매를 멀리(230) 던져요. 하늘의 적도 맞혀요. 물매와 막대기는 큰 적(거인·보스·낙타 기병·방패 든 자 같은)에게 두 배로 들어가고, 물맷돌은 다섯 번에 한 번쯤 이마에 박혀 두 배 반이 들어가요. 다윗이 직접 풀어 준 적은 가끔 6초 동안 다윗 편에 서서 막아요(가드 사람 잇대, 삼하 15:19–21).'},
+  s1:{name:'이마에 박히매',ref:'삼상 17:49',cd:10,desc:'멀리(300) 있는 가장 강한 적에게 큰 돌을 던져 큰 피해를 주고 기절시켜요(보스는 잠깐). 하늘의 적도 맞혀요.'},
+  s2:{name:'수금',ref:'삼상 16:23',cd:14,desc:'수금을 타면 둘레 아군이 낫고, 둘레 적의 줄이 느슨해져요. 5초 동안 적이 받는 피해가 커지고 공격이 약해져요.'},
+  passive:{name:'여호와의 이름으로',ref:'삼상 17:45',desc:'다윗은 고함에 기절하지 않고 받는 피해가 15% 줄어요(단계마다 더). 2단계는 곁의 양치기·나실인·문지기·장정도 고함에 기절하지 않고, 3단계는 곁의 탑이 북소리도 듣지 않아요.'},
+  ult:{name:'매끄러운 돌 다섯',short:'매끄러운<br>돌 다섯',ref:'삼상 17:40',cd:50,desc:'가장 강한 적 다섯에게 차례로 큰 돌을 던져요. 적이 다섯보다 적으면 남은 돌은 가장 강한 적에게 가요.'},
   title:'하나님의 마음에 맞는 사람 (행 13:22)',
   say:'“주의 종이 가서 저 블레셋 사람과 싸우리이다”',sayRef:'삼상 17:32',
   man:'하나님은 다윗을 "내 마음에 맞는 사람"이라 하셨어요(행 13:22). 사람들은 키와 용모를 보았지만 하나님은 중심을 보셨어요(삼상 16:7). 다윗은 자기 힘이 아니라 사자와 곰의 발톱에서 건지신 하나님을 의지했고(17:37), 훗날 큰 죄를 지었을 때 숨기지 않고 회개했어요(시 51).',jesus:'예수님은 다윗의 자손으로 오셨어요(마 1:1). 다윗이 온 이스라엘을 대신해 혼자 싸웠듯이 예수님은 우리 대신 싸워 이기신 참 다윗이에요 (히 2:14–15)'};
@@ -1159,7 +1159,7 @@ const STAGES={
         {art:'v13b',dur:6.5,title:'에벤에셀',verse:'사무엘이 돌을 취하여 미스바와 센 사이에 세워 이르되 여호와께서 여기까지 우리를 도우셨다 하고 그 이름을 에벤에셀이라 하니라 (삼상 7:12)',fx:'rays',snd:'event'},
         {art:'v13c',dur:6.5,title:'여호와의 손이 막으시매',verse:'여호와의 손이 사무엘이 사는 날 동안에 블레셋 사람을 막으시매 (삼상 7:13)',px:1,fx:'sparkle',snd:'victory'}]}},
   // 14 ★ 엘라 골짜기(삼상 17, 기획서 '14 엘라 골짜기 설계안'): 18번째 무리까지 골리앗은 결투터에서 18초마다 고함(17:16): 둘레 양치기 기절과 밤의 공포 둘 → 요나단의 활(삼하 1:22) → 19무리에 돌 다섯(17:40)과 골리앗·방패 든 자(17:41) → 엎드러지면 모든 줄이 끊어진다
-  14:{id:14,name:'엘라 골짜기',chap:'5장 · 목동이 왕이 되다',ref:'삼상 17',night:false,gold:1200,cap:4,heroes:['david'],hpMul:2.0,hpMulBy:{giant:.8,shield:.85,goliath:.5},dmgMul:1.8,gapT:20,skin:'philistine',   // v1.11 균형: 골리앗은 여울에서 진영까지 짧게 걸으므로 체력 1500(×2×.5)
+  14:{id:14,name:'엘라 골짜기',chap:'5장 · 목동이 왕이 되다',ref:'삼상 17',night:false,gold:1200,cap:4,heroes:['david'],hpMul:2.3,hpMulBy:{giant:.8,shield:.85,goliath:.39},dmgMul:1.8,gapT:20,skin:'philistine',   // v1.11.1 균형(다윗 강화 뒤): 골리앗은 여울에서 진영까지 짧게 걸으므로 체력 1350쯤(×2.3×.39)
     elah:{station:[740,560],ford:[620,412],gap:18,gap2:9,R:210,R2:160,stun:1.6,fearN:2,fearBoss:1,windup:1.5,riseT:1.6,waitT:6,
       jon:{x:522,y:272,range:250,rate:1,dmg:26},   // 그림(bg14 시드 1)의 시냇가 오른쪽 바위 위
       israel:[[178,334],[212,326],[246,338],[280,330],[314,342],[194,364],[228,356],[262,368],[296,360]],   // 이스라엘 전열(무장한 선봉 그림)
@@ -1226,8 +1226,8 @@ const CODEX=[
   {cat:'탑',name:'성막 문지기',k:'제사장 기술',verse:'악인의 장막에 사는 것보다 내 하나님의 성전 문지기로 있는 것이 좋사오니 (시 84:10)',desc:'제사장이 길에 세우는 풍채 좋은 문지기예요. 적을 막아서고, 쓰러지면 잠시 뒤 다시 서요. 3단계가 되면 한꺼번에 둘을 막아요. 눌러서 옮길 수 있어요.',deep:'문지기도 레위 사람이었고, 반열을 따라 성막 문을 지켰어요(대상 9:23, 26). 문지기 가운데는 용사가 많았다고 기록해요(대상 26:6). 하나님의 집 문을 지키는 것도 예배의 섬김이었어요. 게임의 문지기는 불러낸 것이 아니라 제사장이 세운 사람이에요.'},
   {cat:'하나님의 사람',name:'노아',k:'장인 영웅',verse:'노아는 여호와께 은혜를 입었더라 (창 6:8)',desc:'고페르 나무 방벽, 역청, 비둘기, 짐승들이 둘씩.',deep:HEROES.noah.man+' 예수님 찾기: '+HEROES.noah.jesus+'.'},
   {cat:'하나님의 사람',name:'모세',k:'레위인 영웅',verse:'모세가 손을 들면 이스라엘이 이기고 (출 17:11)',desc:'빛나는 얼굴, 반석의 물, 놋뱀, 손을 들다.',deep:HEROES.moses.man+' 예수님 찾기: '+HEROES.moses.jesus+'.'},
-  {cat:'하나님의 사람',name:'갈렙',k:'파수꾼 영웅 · 8 에드레이',verse:'내 종 갈렙은 그 마음이 그들과 달라서 나를 온전히 따랐은즉 (민 14:24)',desc:'정탐, 이 산지를 내게 주소서, 그들을 두려워하지 말라, 여전히 강건하니, 능히 이기리라.',deep:HEROES.caleb.man+' 예수님 찾기: '+HEROES.caleb.jesus+'.'},
-  {cat:'하나님의 사람',name:'다윗',k:'양치기 영웅 · 14 엘라 골짜기',verse:'내가 이새의 아들 다윗을 만나니 내 마음에 맞는 사람이라 내 뜻을 다 이루리라 (행 13:22)',desc:'가드 사람 잇대, 물매, 수금, 여호와의 이름으로, 매끄러운 돌 다섯.',deep:HEROES.david.man+' 예수님 찾기: '+HEROES.david.jesus+'.'},
+  {cat:'하나님의 사람',name:'갈렙',k:'파수꾼 영웅 · 8 에드레이',verse:'내 종 갈렙은 그 마음이 그들과 달라서 나를 온전히 따랐은즉 (민 14:24)',desc:'정탐, 능히 이기리라, 그들을 두려워하지 말라, 여전히 강건하니, 이 산지를 내게 주소서.',deep:HEROES.caleb.man+' 예수님 찾기: '+HEROES.caleb.jesus+'.'},
+  {cat:'하나님의 사람',name:'다윗',k:'양치기 영웅 · 14 엘라 골짜기',verse:'내가 이새의 아들 다윗을 만나니 내 마음에 맞는 사람이라 내 뜻을 다 이루리라 (행 13:22)',desc:'사자와 곰도 쳤은즉(물매의 명수), 이마에 박히매, 수금, 여호와의 이름으로, 매끄러운 돌 다섯.',deep:HEROES.david.man+' 예수님 찾기: '+HEROES.david.jesus+'.'},
   {cat:'하나님의 사람',name:'여호수아',k:'7 르비딤 영웅 · 9 여리고 · 10 기브온',verse:'모세가 여호수아에게 이르되 우리를 위하여 사람들을 택하여 나가서 아말렉과 싸우라 (출 17:9)',desc:'칼날로, 강하고 담대하라, 모세의 수종자, 여호와 닛시.',deep:HEROES.joshua.man+' 예수님 찾기: '+HEROES.joshua.jesus+'.'},
   {cat:'하나님의 사람',name:'연단',k:'영웅 성장',verse:'환난은 인내를, 인내는 연단을, 연단은 소망을 이루는 줄 앎이로다 (롬 5:3–4)',desc:'영웅은 싸울수록 경험이 쌓여 연단돼요. 레벨이 오르면 연단 점수를 받고, 싸움을 마친 뒤 지도의 연단 화면에서 기술을 키우거나 언제든 다시 배치할 수 있어요.',deep:'연단은 영웅이 스스로를 높이는 일이 아니라 하나님이 사람을 빚어 가시는 과정이에요. "너희 믿음의 확실함은 불로 연단하여도 없어질 금보다 더 귀하여"(벧전 1:7).'},
   {cat:'하나님의 사람',name:'아브람',k:'2·3 스테이지',verse:'아브람이 여호와를 믿으니 여호와께서 이를 그의 의로 여기시고 (창 15:6)',desc:'갈 바를 알지 못했지만 말씀을 따라 길을 떠난 사람이에요(히 11:8).',deep:'아브람이 의롭다 여김을 받은 건 공로가 아니라 믿음 때문이었어요. 바울은 이 구절로 은혜의 구원을 설명해요(롬 4:3–5).'},
@@ -1938,13 +1938,13 @@ function loseLives(n){if(G.over)return;G.lives=Math.max(0,G.lives-n);Snd.play('l
 function hurt(e,dmg,type,src){
   if(!alive(e))return;
   let m=1;if(type==='phys')m=1-(e.def.armor||0);else if(type==='holy')m=1-(e.def.mres||0);else if(type==='holyP')m=1-(e.def.mres||0)*2/3;
-  if(e.vuln>0)m*=1+(e.vulnK||.25);if(e.mark>0)m*=1+e.markK;   // 갈렙의 표적(수 14:12)
+  if(e.vuln>0)m*=1+(e.vulnK||.25);if(e.mark>0)m*=1+e.markK;   // 갈렙의 표적(민 13:30)
   if(e.type==='goliath'&&goliathShielded())m*=.5;   // 방패 든 자가 앞서 행하더라(삼상 17:7)
   let amt=dmg*m;
   if(e.shield>0){const a=Math.min(e.shield,amt);e.shield-=a;amt-=a;}
   e.hp-=amt;e.hitT=.12;
   if(e.type==='pharaoh'&&amt>0){e.hard.acc+=amt;if(e.hard.acc>=e.maxHp*.14&&e.hard.cd<=0&&e.hp>0){e.shield=e.maxHp*.07;e.hard.acc=0;e.hard.cd=9;Snd.play('shield');if(!G.hardTold){G.hardTold=true;toast('<b>완악한 마음</b><br>바로의 마음이 다시 완악해졌어요. 보호막은 한꺼번에 몰아쳐서 깨세요. (출 8:15)',6);}}}
-  if(src==='hero'&&amt>0)gainXP(Math.min(amt,e.hp+amt)*.4);
+  if(src==='hero'&&amt>0){G.hdmg=(G.hdmg||0)+Math.min(amt,e.hp+amt);gainXP(Math.min(amt,e.hp+amt)*.4);}   // G.hdmg: 영웅이 준 피해(균형 재기)
   if(e.hp<=0){freeEnemy(e);if(src==='hero'){gainXP(e.def.bounty*2);ittai(e);}}
 }
 function freeEnemy(e){
@@ -2043,7 +2043,7 @@ function mosesGuard(x,y){const h=G.hero;return h&&h.kind==='moses'&&h.state==='o
 function inRefuge(x,y){for(const z of G.zones)if(d2(x,y,z.x,z.y)<z.r*z.r)return true;return false;}
 const ENEMY_DMG=2.2;   // 막아선 병사·영웅이 실제로 쓰러질 만큼(10-11 사용자: 대치하다가 쓰러지지 않아 긴장감이 없다)
 function hitBlocker(b,dmg){
-  let m=1-(b.armor||0);{const gk=mosesGuard(b.x,b.y);if(gk)m*=gk;}if(b.role==='hero'&&b.kind==='joshua'&&G.hill&&G.hill.up)m*=.8;if(b.tw&&b.tw.line==='shep'&&has('shep',5)&&b.hp<b.max/3)m*=.7;const a=dmg*m*ENEMY_DMG*(G.S.dmgMul||1);b.hitT=.12;
+  let m=1-(b.armor||0);{const gk=mosesGuard(b.x,b.y);if(gk)m*=gk;}if(b.role==='hero'&&b.kind==='joshua'&&G.hill&&G.hill.up)m*=.8;if(b.role==='hero'&&b.kind==='david')m*=[1,.85,.78,.7][b.sk.passive||0];if(b.tw&&b.tw.line==='shep'&&has('shep',5)&&b.hp<b.max/3)m*=.7;const a=dmg*m*ENEMY_DMG*(G.S.dmgMul||1);b.hitT=.12;
   if(b.role==='unit'&&inRefuge(b.x,b.y)){b.hp=Math.max(1,b.hp-a);return;}
   b.hp-=a;if(b.hp<=0)blockerDown(b);
 }
@@ -2186,6 +2186,7 @@ function updProjs(dt){
     if(Ld<=st+4){p.done=true;
       if(tg&&alive(tg))hurt(tg,p.dmg,(p.k==='arrow'||p.k==='sling'||p.k==='harrow'||p.k==='snipe'||p.k==='hsling'||p.k==='hstone')?'phys':p.pierce?'holyP':'holy',p.k==='hbolt'||p.k==='harrow'||p.k==='hsling'||p.k==='hstone'?'hero':null);
       if(p.k==='hstone'){Snd.play('stoneHit');if(tg&&alive(tg)){const st=tg.def.boss?p.stunB:p.stun;if(st)tg.stun=Math.max(tg.stun,st);}}
+      if(p.k==='hsling'&&p.crit){Snd.play('stoneHit');floatText(p.x,p.y-30,'이마에!','#ffe9a8',12);if(tg&&alive(tg)&&!tg.def.boss)tg.stun=Math.max(tg.stun,.5);}   // 물맷돌이 이마에 박히매(삼상 17:49)
       if(p.k==='snipe')snipeHit(p,tg);
       if(p.k==='bolt'&&tg&&alive(tg)&&!tg.def.boss){tg.slowF=tg.slowT>0?Math.min(tg.slowF,.7):.7;tg.slowT=Math.max(tg.slowT,1.2);tg.lslow=1.2;}   // 레위인 빛살을 맞으면 잠깐 느려진다
       const holy=p.k==='bolt'||p.k==='hbolt';for(let i=0;i<(holy?6:3);i++)part('spark',p.tx,p.ty,rand(-60,60),rand(-60,30),.35,holy?'#fff3b0':'#ffffff',2);
@@ -2285,30 +2286,31 @@ function updHero(dt){
   h.swCd=Math.max(0,(h.swCd||0)-dt);
   if(tg&&h.D.melee&&h.swCd<=0){const cr=remaining(tg);let sw=null,sr=cr-(tg.state==='fight'?150:90);for(const e of G.enemies){if(!alive(e)||!e.def.block||e.blockedBy||e.state!=='walk')continue;if(d2(e.x,e.y,h.x,h.y)>108*108)continue;const rm=remaining(e);if(rm<sr){sr=rm;sw=e;}}if(sw){dropTarget(h);tg=null;h.swCd=2.5;}}
   if(!tg){const r=h.D.melee?108:42;let best=null,bd=1e9;for(const e of G.enemies){if(!alive(e)||!e.def.block||e.blockedBy)continue;if(d2(e.x,e.y,h.x,h.y)>r*r)continue;const sc=remaining(e)+Math.sqrt(d2(e.x,e.y,h.x,h.y))*.5;if(sc<bd){bd=sc;best=e;}}if(best){h.target=tg=best;best.blockedBy=h;h.side=Math.sign(h.x-best.x)||best.dir;}}
-  if(tg&&h.D.melee){h.extra=(h.extra||[]).filter(x=>alive(x)&&x.blockedBy===h);const cap=h.lv>=4?2:1;
+  if(tg&&h.D.melee){h.extra=(h.extra||[]).filter(x=>alive(x)&&x.blockedBy===h);const cap=h.D.block||(h.lv>=4?2:1);
     for(const x of h.extra)if(d2(x.x,x.y,h.x,h.y)>110*110){x.blockedBy=null;if(x.state==='fight')x.state='walk';}h.extra=h.extra.filter(x=>x.blockedBy===h);
     if(h.extra.length<cap)for(const e of G.enemies){if(h.extra.length>=cap)break;if(e===tg||!alive(e)||!e.def.block||e.blockedBy||e.state!=='walk')continue;if(d2(e.x,e.y,h.x,h.y)<46*46){e.blockedBy=h;h.extra.push(e);}}}
   if(!tg&&h.extra&&h.extra.length){const n=h.extra.shift();h.target=tg=n;h.side=Math.sign(h.x-n.x)||n.dir;}
   if(tg){const gx=tg.x+h.side*18,gy=tg.y+1,dx=gx-h.x,dy=gy-h.y,Ld=Math.hypot(dx,dy);if(Ld>3){const st=Math.min(Ld,h.D.speed*1.5*dt);h.x+=dx/Ld*st;h.y+=dy/Ld*st;if(Math.abs(dx)>1.5)h.dir=dx>=0?1:-1;}
-    if(tg.state==='fight'&&Ld<10){h.dir=tg.x>=h.x?1:-1;h.atkCd-=dt;if(h.atkCd<=0){h.atkCd=h.D.rate;hurt(tg,h.D.melee?h.dmg:h.dmg*.6,'phys','hero');Snd.play('hit');}}}
+    if(tg.state==='fight'&&Ld<10){h.dir=tg.x>=h.x?1:-1;h.atkCd-=dt;if(h.atkCd<=0){h.atkCd=h.D.rate;hurt(tg,(h.D.melee?h.dmg:h.dmg*.6)*(h.kind==='david'&&isBig(tg)?2:1),'phys','hero');/* 사자와 곰도 쳤은즉(삼상 17:34–36): 다윗의 막대기는 큰 적에게 두 배 */Snd.play('hit');}}}
   else if(!h.D.melee){h.atkCd-=dt;if(h.atkCd<=0){const e=findTarget(h.x,h.y,h.D.range,true);if(e){h.dir=e.x>=h.x?1:-1;h.cast=.25;
       if(h.kind==='caleb'){h.atkCd=h.D.rate/(1+[0,.2,.35,.5][h.sk.passive||0]*(1-h.hp/h.max));G.projs.push({k:'harrow',x:h.x+h.dir*10,y:h.y-40,tx:e.x,ty:e.y,tg:e,sp:760,dmg:h.dmg});Snd.play('arrow');}   // 여전히 강건하니(수 14:11)
       else{h.atkCd=h.D.rate;G.projs.push({k:'hbolt',x:h.x+h.dir*10,y:h.y-44,tx:e.x,ty:e.y,tg:e,sp:560,dmg:h.dmg});Snd.play('holy');}}else h.atkCd=.2;}}
-  if(!tg&&h.kind==='david')davidSling(h,dt);
+  if(h.kind==='david')davidSling(h,dt);   // 막대기로 막으면서도 물매를 돌린다
   const busy=tg||(!h.D.melee&&findTarget(h.x,h.y,h.D.range,true))||(h.kind==='david'&&findTarget(h.x,h.y-10,h.D.sling.range,true));   // 싸움이 없으면 1초 뒤 지킬 자리(처음 자리나 옮겨 준 곳)로 걸어서 돌아간다
   h.calm=busy?0:h.calm+dt;h.going=false;
   if(h.calm>1&&!(h.kind==='moses'&&G.hands>0)){const dx=h.px-h.x,dy=h.py-h.y,Ld=Math.hypot(dx,dy);if(Ld>4){const st=Math.min(Ld,h.D.speed*dt);h.x+=dx/Ld*st;h.y+=dy/Ld*st;if(Math.abs(dx)>1.5)h.dir=dx>=0?1:-1;h.going=true;h.idle=0;}}
   if(h.kind==='noah'&&!h.bar&&h.barCd<=0&&h.idle>3){const n=nearestAll(h.x,h.y);if(n&&n.dd<100*100){const q=at(G.paths[n.pi],Math.max(0,n.d-34));const b=mkUnit({role:'bar',x:q.x,y:q.y,hp:150,max:150,armor:.3});G.units.push(b);h.bar=b;for(let i=0;i<8;i++)part('dust',q.x+rand(-12,12),q.y,rand(-20,20),rand(-30,-5),.6,'rgba(160,110,60,',4);Snd.play('build');}else h.barCd=1;}
   heroSkills(h);
 }
-// 다윗: 막고 있지 않을 때는 물매로 멀리 친다(하늘의 적도). 물매(삼상 17:40, 49) · 수금(16:23)
-function davidSling(h,dt){h.slCd=(h.slCd||0)-dt;if(h.slCd>0)return;const e=findTarget(h.x,h.y-10,h.D.sling.range,true);if(!e){h.slCd=.25;return;}h.slCd=h.D.sling.rate;h.dir=e.x>=h.x?1:-1;h.cast=.25;G.projs.push({k:'hsling',x:h.x+h.dir*8,y:h.y-30,tx:e.x,ty:aimY(e),tg:e,sp:560,dmg:h.D.sling.dmg*h.dmg/h.D.dmg});Snd.play('sling');}
+// 다윗: 막대기로 막으면서 물매로 멀리 친다(하늘의 적도). 다섯 번에 한 번쯤 이마에 박힌다(삼상 17:40, 49) · 수금(16:23)
+function davidSling(h,dt){h.slCd=(h.slCd||0)-dt;if(h.slCd>0)return;const S2=h.D.sling,e=findTarget(h.x,h.y-10,S2.range,true);if(!e){h.slCd=.25;return;}h.slCd=S2.rate;if(!h.target)h.dir=e.x>=h.x?1:-1;h.cast=.25;const crit=Math.random()<S2.crit;G.projs.push({k:'hsling',x:h.x+h.dir*8,y:h.y-30,tx:e.x,ty:aimY(e),tg:e,sp:600,dmg:S2.dmg*h.dmg/h.D.dmg*(crit?S2.critK:1)*(isBig(e)?2:1),crit});Snd.play('sling');}
 function davidSkills(h){const L2=h.sk;
-  if(L2.s1>0&&h.s1<=0){const e=findTarget(h.x,h.y-10,260,true);if(e){G.projs.push({k:'hstone',x:h.x+h.dir*8,y:h.y-34,tx:e.x,ty:aimY(e),tg:e,sp:640,dmg:[0,35,55,75][L2.s1]*h.dmg/h.D.dmg,stun:[0,1,1.5,2][L2.s1],stunB:.3});h.s1=HEROES.david.s1.cd;h.cast=.3;Snd.play('slingWhirl');floatText(h.x,h.y-74,'물매','#ffe9a8',13);}}
-  if(L2.s2>0&&h.s2<=0){const R=[0,120,135,150][L2.s2],hit=G.enemies.filter(e=>alive(e)&&d2(e.x,e.y,h.x,h.y)<R*R);if(hit.length){for(const e of hit){e.vuln=5;e.vulnK=[0,.15,.25,.35][L2.s2];e.weak=5;if(e.type==='saul')e.stun=Math.max(e.stun,[0,1,1.5,2][L2.s2]);}h.s2=HEROES.david.s2.cd;h.cast=.4;fxRing(h.x,h.y,R,'255,236,170');G.fx.push({k:'harp',x:h.x,y:h.y-46,t:0,life:1.4});floatText(h.x,h.y-74,'수금','#ffe9a8',13);Snd.play('harp');}}}
-// 매끄러운 돌 다섯(삼상 17:40): 가장 강한 적 다섯에게 0.3초 간격으로 큰 돌(보스는 피해만)
-function davidUlt(h){const list=G.enemies.filter(e=>alive(e)&&e.x>0&&e.x<W&&e.y>0&&e.y<H).sort((a,b)=>b.maxHp-a.maxHp).slice(0,5);if(!list.length){Snd.play('deny');return;}const lv=h.sk.ult||1;h.ult=h.D.ult.cd;Snd.play('ult');floatText(h.x,h.y-90,'매끄러운 돌 다섯','#fff1c2',18);
-  list.forEach((e,i)=>later(i*.3,()=>{const hh=G&&G.hero;if(!hh||!alive(e))return;G.projs.push({k:'hstone',big:true,x:hh.x+hh.dir*8,y:hh.y-34,tx:e.x,ty:aimY(e),tg:e,sp:720,dmg:[0,110,150,200][lv],stun:.8,stunB:0});Snd.play('slingWhirl');}));}
+  if(L2.s1>0&&h.s1<=0){let e=null,bh=0;for(const o of G.enemies){if(!alive(o)||o.d<10||d2(o.x,o.y,h.x,h.y)>300*300)continue;if(o.hp>bh){bh=o.hp;e=o;}}   // 이마에 박히매(삼상 17:49): 가장 강한 적
+    if(e){G.projs.push({k:'hstone',x:h.x+h.dir*8,y:h.y-34,tx:e.x,ty:aimY(e),tg:e,sp:680,dmg:[0,45,70,100][L2.s1]*h.dmg/h.D.dmg,stun:[0,1.5,2,2.5][L2.s1],stunB:.5});h.s1=HEROES.david.s1.cd;h.cast=.3;Snd.play('slingWhirl');floatText(h.x,h.y-74,'이마에 박히매','#ffe9a8',13);}}
+  if(L2.s2>0&&h.s2<=0){const R=[0,120,135,150][L2.s2],hit=G.enemies.filter(e=>alive(e)&&d2(e.x,e.y,h.x,h.y)<R*R);if(hit.length||anyHurt(h.x,h.y,R)){healAround(h.x,h.y,R,[0,40,60,90][L2.s2]);/* 사울이 상쾌하여 낫고(삼상 16:23) */for(const e of hit){e.vuln=5;e.vulnK=[0,.15,.25,.35][L2.s2];e.weak=5;if(e.type==='saul')e.stun=Math.max(e.stun,[0,1,1.5,2][L2.s2]);}h.s2=HEROES.david.s2.cd;h.cast=.4;fxRing(h.x,h.y,R,'255,236,170');G.fx.push({k:'harp',x:h.x,y:h.y-46,t:0,life:1.4});floatText(h.x,h.y-74,'수금','#ffe9a8',13);Snd.play('harp');}}}
+// 매끄러운 돌 다섯(삼상 17:40): 가장 강한 적 다섯에게 0.3초 간격으로 큰 돌(보스는 피해만). 다섯보다 적으면 남은 돌은 가장 강한 적에게
+function davidUlt(h){const list=G.enemies.filter(e=>alive(e)&&e.x>0&&e.x<W&&e.y>0&&e.y<H).sort((a,b)=>b.hp-a.hp).slice(0,5);if(!list.length){Snd.play('deny');return;}while(list.length<5)list.push(list[0]);const lv=h.sk.ult||1;h.ult=h.D.ult.cd;Snd.play('ult');floatText(h.x,h.y-90,'매끄러운 돌 다섯','#fff1c2',18);
+  list.forEach((e,i)=>later(i*.3,()=>{const hh=G&&G.hero;if(!hh||!alive(e))return;G.projs.push({k:'hstone',big:true,x:hh.x+hh.dir*8,y:hh.y-34,tx:e.x,ty:aimY(e),tg:e,sp:720,dmg:[0,110,150,200][lv]*hh.dmg/hh.D.dmg,stun:.8,stunB:0});Snd.play('slingWhirl');}));}
 function heroSkills(h){
   if(h.state!=='ok')return;
   if(h.kind==='david'){davidSkills(h);return;}
@@ -2317,8 +2319,8 @@ function heroSkills(h){
     if(h.s2<=0&&G.enemies.some(e=>alive(e)&&d2(e.x,e.y,h.x,h.y)<220*220)){G.brave={x:h.x,y:h.y,t:6};h.s2=HEROES.joshua.s2.cd;floatText(h.x,h.y-70,'강하고 담대하라','#ffe9a8',15);Snd.play('event');}
     return;}
   if(h.kind==='caleb'){const L=h.sk;
-    if(L.s1>0&&h.s1<=0){let best=null,bh=0;for(const e of G.enemies){if(!alive(e)||d2(e.x,e.y,h.x,h.y)>320*320)continue;if(e.maxHp>bh){bh=e.maxHp;best=e;}}   // 이 산지를 내게 주소서(수 14:12): 가장 강한 적에게 표적
-      if(best){best.mark=7;best.markK=[0,.25,.35,.5][L.s1];h.s1=HEROES.caleb.s1.cd;h.cast=.3;floatText(best.x,best.y-70,'이 산지를 내게 주소서','#ffd27a',13);Snd.play('event');}}
+    if(L.s1>0&&h.s1<=0){let best=null,bh=0;for(const e of G.enemies){if(!alive(e)||d2(e.x,e.y,h.x,h.y)>320*320)continue;if(e.maxHp>bh){bh=e.maxHp;best=e;}}   // 능히 이기리라(민 13:30): 가장 강한 적에게 표적
+      if(best){best.mark=7;best.markK=[0,.25,.35,.5][L.s1];h.s1=HEROES.caleb.s1.cd;h.cast=.3;floatText(best.x,best.y-70,'능히 이기리라','#ffd27a',13);Snd.play('event');}}
     if(L.s2>0&&h.s2<=0){const R=210,fear=G.units.filter(u=>u.state==='ok'&&u.stun>0&&d2(u.x,u.y,h.x,h.y)<R*R);   // 그들을 두려워하지 말라(민 14:9)
       if(fear.length||G.enemies.some(e=>alive(e)&&d2(e.x,e.y,h.x,h.y)<R*R)){for(const u of fear)u.stun=0;G.brave={x:h.x,y:h.y,t:6,r:R,mul:1+[0,.2,.3,.4][L.s2]};h.s2=HEROES.caleb.s2.cd;fxRing(h.x,h.y,R,'255,236,170');floatText(h.x,h.y-74,'그들을 두려워하지 말라','#ffe9a8',14);Snd.play('heal');}}
     return;}
@@ -2363,8 +2365,8 @@ function updStamp(dt){
   for(const e of G.enemies){if(!alive(e)||e.def.fly||s.hit.has(e))continue;if(d2(e.x,e.y,fp.x,fp.y)<46*46){s.hit.add(e);hurt(e,[0,32,48,66][s.lv||1],'true','hero');if(alive(e)&&!e.def.boss){releaseFrom(e);e.state='walk';e.d=Math.max(0,e.d-60);e.stun=[0,1.4,1.7,2][s.lv||1];}}}
   if(s.t>[0,2.4,2.8,3.2][s.lv||1]||front<=0)G.stamp=null;
 }
-// 능히 이기리라(민 13:30): 누른 곳에 화살비가 여러 번 쏟아진다
-function castRain(x,y){const lv=G.hero.sk.ult||1;G.rains.push({x,y,t:0,next:.35,n:0,max:8,r:[0,110,125,140][lv],dmg:[0,20,28,38][lv]});G.hero.ult=G.hero.D.ult.cd;Snd.play('ult');floatText(x,y-100,'능히 이기리라','#fff1c2',18);return true;}
+// 이 산지를 내게 주소서(수 14:12): 누른 곳에 화살비가 여러 번 쏟아진다
+function castRain(x,y){const lv=G.hero.sk.ult||1;G.rains.push({x,y,t:0,next:.35,n:0,max:8,r:[0,110,125,140][lv],dmg:[0,20,28,38][lv]});G.hero.ult=G.hero.D.ult.cd;Snd.play('ult');floatText(x,y-100,'이 산지를 내게 주소서','#fff1c2',18);return true;}
 function updRains(dt){for(const r of G.rains){r.t+=dt;if(r.t>=r.next&&r.n<r.max){r.n++;r.next+=.25;for(const e of G.enemies)if(alive(e)&&d2(e.x,e.y,r.x,r.y)<r.r*r.r)hurt(e,r.dmg*G.hero.dmg/HEROES.caleb.dmg,'phys','hero');Snd.play('arrow');}}G.rains=G.rains.filter(r=>r.t<r.max*.25+.8);}
 function drawRains(c){for(const r of G.rains){const a=Math.min(1,r.t*4,(r.max*.25+.8-r.t)*2);c.save();c.globalAlpha=a*.25;E(c,r.x,r.y,r.r,r.r*.45);c.fillStyle='rgba(255,230,170,.6)';c.fill();c.globalAlpha=a;c.strokeStyle='#5a3a22';c.lineWidth=1.6;
   for(let i=0;i<26;i++){const ph=((r.t*2.4+i*.137)%1),ox=Math.sin(i*12.9)*r.r*.9,oy=Math.cos(i*7.7)*r.r*.4,x=r.x+ox-30*(1-ph),y=r.y+oy-180*(1-ph);L(c,x,y,x+5,y+14);}c.restore();}}
@@ -2521,7 +2523,7 @@ const ART_DEF={
   shep1:{h:62,top:.5},shep2:{h:68,top:.5},shep3:{h:74,top:.5},art1:{h:76,top:.7},art2:{h:82,top:.72},art3:{h:88,top:.74},
 };
 const ART={};
-const AV='?v=20';   // 그림을 바꿀 때마다 올려서 예전 그림이 캐시에서 나오지 않게
+const AV='?v=21';   // 그림을 바꿀 때마다 올려서 예전 그림이 캐시에서 나오지 않게
 const BG_IMG={},REAR_IMG={},FALL_IMG={};   // REAR_IMG: 처음엔 막혀 있는 뒷길을 덮는 그림(bgN_rear.png) · FALL_IMG: 성벽이 무너진 배경(bg9_fall.jpg, 수 6:20)
 function loadArt(){for(const k of Object.keys(STAGES).map(Number)){const im=new Image();im.onload=()=>{BG_IMG[k]=im;if(G&&G.sid===k)buildBg();};im.src='art/bg'+k+'.jpg'+AV;if(STAGES[k].rear!=null){const r=new Image();r.onload=()=>{REAR_IMG[k]=r;if(G&&G.sid===k)buildBg();};r.src='art/bg'+k+'_rear.png'+AV;}
     if(STAGES[k].jericho){const f=new Image();f.onload=()=>{FALL_IMG[k]=f;};f.src='art/bg'+k+'_fall.jpg'+AV;}}
@@ -3268,7 +3270,7 @@ function selHtml(T){const o=T.o,r=Math.round;
       if(t.branch==='jordan'&&t.sk.draw>0)extra=ch('atk','바로 풀어 줌',Math.round(JORDAN.draw[t.sk.draw]*100)+'%');
       return`<div class="r1"><span class="nm">${B.name}${t.nm?` ${t.nm}`:''}</span><span class="tag">${L2.name} 4단계</span>${bd}</div><div class="chips">${ch((t.line==='art'&&t.branch!=='menorah')||t.branch==='jordan'?'atk':'holy','공격',r(st.s.dmg*st.dm))}${ch('rate','공격 속도',rateW(sec))}${ch('rng','사거리',rangeW(st.range))}${extra}${st.fear<1?ch('rate','북소리','−'+Math.round((1-st.fear)*100)+'%'):''}${ch('air','하늘','✓')}</div><p class="sub">${sk}</p>`;}
     const T0=L2.tiers[t.tier-1];return`<div class="r1"><span class="nm">${T0.name}</span><span class="tag">${L2.name} ${t.tier}단계</span>${bd}</div><div class="chips">${ch(t.line==='levi'?'holy':'atk','공격',r(st.s.dmg*st.dm))}${ch('rate','공격 속도',rateW(sec))}${ch('rng','사거리',rangeW(st.range))}${t.line==='art'?ch('atk','범위',r(st.s.aoe||0)):''}${st.fear<1?ch('rate','북소리','−'+Math.round((1-st.fear)*100)+'%'):''}${ch('air','하늘',L2.air?'✓':'✕')}</div><p class="sub">${L2.desc}</p>`;}
-  if(T.k==='hero'){const h=o,D=h.D;return`<div class="r1"><span class="nm">${D.name}</span><span class="tag">${D.line} 영웅 · Lv ${h.lv}</span>${hpHtml(h.hp,h.max)}</div><div class="chips">${ch(D.melee?'atk':(h.kind==='caleb'?'atk':'holy'),'공격',r(h.dmg))}${ch('rate','공격 속도',rateW(D.rate))}${ch('rng','사거리',D.melee?'근접':rangeW(D.range))}${ch('def','방어',armorW(h.armor))}${ch('re','다시 일어남','15초')}</div><p class="say">${D.say}<small>${D.sayRef}</small></p>`;}
+  if(T.k==='hero'){const h=o,D=h.D;return`<div class="r1"><span class="nm">${D.name}</span><span class="tag">${D.line} 영웅 · Lv ${h.lv}</span>${hpHtml(h.hp,h.max)}</div><div class="chips">${ch(D.melee?'atk':(h.kind==='caleb'?'atk':'holy'),'공격',r(h.dmg))}${ch('rate','공격 속도',rateW(D.rate))}${D.sling?ch('atk','물매',r(D.sling.dmg*h.dmg/D.dmg)):''}${ch('rng','사거리',D.sling?'근접 · 물매 '+rangeW(D.sling.range):D.melee?'근접':rangeW(D.range))}${ch('def','방어',armorW(h.armor))}${ch('re','다시 일어남','15초')}</div><p class="say">${D.say}<small>${D.sayRef}</small></p>`;}
   if(T.k==='unit'){const u=o,gk=u.gk,itt=u.look==='ittai',help=u.look==='help'||itt,nm=gk?'성막 문지기':itt?'가드 사람 잇대':help?'세 겹 줄 장정':u.naz?'나실인':LINES.shep.tiers[u.tw.tier-1].name,tg=gk?'제사장이 세움':itt?'다윗이 풀어 준 사람 (삼하 15:21)':help?'플레이어 기술':u.naz?'양치기 4단계':'양치기 '+u.tw.tier+'단계';
     const re=gk?ch('re','다시 섬',r(gateRe(u.tw))+'초'):help?ch('re','남은 시간',Math.max(0,Math.ceil(u.life))+'초'):ch('re','다시 섬',(has('shep',3)?7:10)+'초');
     return`<div class="r1"><span class="nm">${nm}</span><span class="tag">${tg}</span>${hpHtml(u.hp,u.max)}</div><div class="chips">${ch('atk','공격',r(u.dmg))}${ch('def','방어',armorW(u.armor))}${re}${u.two?ch('def','막는 적','둘'):''}</div><p class="sub">${u.naz?u.vow:help?'길 위를 누르거나 쓸면 옮겨 가요.':'파랗게 칠한 길 위를 누르거나 원하는 쪽으로 쓸면 옮겨 가요.'}</p>`;}

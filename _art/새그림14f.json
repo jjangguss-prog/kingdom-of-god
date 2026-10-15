@@ -1,0 +1,55 @@
+{
+ "출력": "raw",
+ "크기": [
+  1024,
+  1024
+ ],
+ "단계": 4,
+ "항목": [
+  {
+   "id": "s14a",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: in the town of Ramah, four gray-bearded Israelite elders in robes stand in a row before the old prophet Samuel, a thin elderly Israelite man with very long uncut white hair and a long white beard, wearing a plain cream linen robe and a brown wool cloak, who sits on a stone bench with both hands resting on his knees and a sad troubled face; only the front elder holds out both open hands toward Samuel, asking for a king; the other three elders hold their hands together in front of their robes; serious mood. All houses are one-story mud-brick houses with flat earthen rooftops and low parapets; no sloped roofs, no roof tiles, no red tiles. Hands are drawn simply and clearly, each hand with four fingers and a thumb, and no hand overlaps another person. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "s14b",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    3,
+    4,
+    5,
+    6
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: on a quiet hilltop path at early morning, the old prophet Samuel, a thin elderly Israelite man with very long uncut white hair and a long white beard, wearing a plain cream linen robe and a brown wool cloak, holds a small clay flask with both hands and pours a thin stream of oil onto the head of a very tall handsome young Israelite man with a short dark beard in a plain brown traveling cloak, who bows his head with both hands hanging down at his sides; two donkeys graze nearby; peaceful, solemn and hopeful. Hands are drawn simply and clearly, each hand with four fingers and a thumb, and no hand overlaps another person. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "s14g",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    3,
+    4,
+    5,
+    6
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: on a ridge above the Valley of Elah, David, a ruddy Israelite shepherd boy of about sixteen with tousled reddish-brown hair, bright eyes and a handsome friendly face, no beard, wearing a plain light-brown wool shepherd's tunic with a rope belt and sandals, a small leather shepherd's bag at his hip, has just arrived carrying a basket of bread loaves with both hands and looks down into the valley; below by a shallow brook stands Goliath of Gath, a giant Philistine champion about twice the height of a normal man, broad and strong, with a dark curly beard, a polished bronze helmet, a coat of bronze scale armor, bronze greaves on his legs, a bronze javelin slung across his back, holding a huge spear with a shaft as thick as a weaver's beam, stern scornful face, a dignified human, not a monster, holding his spear in his right hand, with his shield bearer, a Philistine soldier in a feathered headdress carrying a very large tall shield in front of Goliath, shouting up the hill; a few small Israelite soldiers far down on the near slope step back afraid, holding spears upright; on the far hill across the valley stand distant ranks of small Philistine soldiers; tense but child-friendly. Hands are drawn simply and clearly, each hand with four fingers and a thumb, and no hand overlaps another person. No statues, no idols, no carved figures, no religious symbols anywhere. Every person has exactly two arms, two hands, two legs and two feet."
+  }
+ ]
+}
