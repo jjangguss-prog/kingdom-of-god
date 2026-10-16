@@ -126,6 +126,11 @@
   {"id": "boss5", "이름": "보스 · 사울", "결": "활력 · 악령이 내리는 왕(도파민: 쉼 없는 큰 북, 창을 던지듯 찌르는 금관, 빌드업과 드롭)",
    "캡션": "Tormented king boss battle theme. Relentless heavy frame drums and huge war-drum hits in a fast driving groove, a rapid low-string ostinato, stabbing brass hits like thrown spears, a dark swelling male choir, the tension builds in waves and erupts into a massive full-orchestra drop, a fragile lyre motif briefly calms the storm before the drums crash back in, intense and thrilling, not horror.",
    "가사": "[Intro - heavy drums]\n\n[Verse - low strings]\nOh, oh\n\n[Build - brass stabs]\n\n[Drop - full choir and orchestra]\nAh, ah, ah\n\n[Bridge - lyre]\n\n[Build - drums]\n\n[Drop - full choir]\nAh, ah, ah\n\n[Outro]",
-   "bpm": 140, "key": "C minor", "길이": 120, "시드": [1, 2, 3, 4]}
+   "bpm": 140, "key": "C minor", "길이": 120, "시드": [1, 2, 3, 4]},
+
+  {"id": "s16", "이름": "16 시글락", "결": "활력 · 시글락의 추격(도파민: 낙타 발굽 같은 셋잇단 그루브, 귀에 남는 우드 리프와 네이 후렴, 뿔나팔 신호, 쌓였다 터지는 합창)",
+   "캡션": "Fast desert pursuit battle theme, chasing raiders across a dry ravine to win back what was taken. A galloping triplet darbuka and frame-drum groove like camel hooves from the very first beat, a catchy repeating oud riff as the hook, a soaring ney flute refrain, short ram's horn signals between phrases, staccato strings racing forward, the energy builds with rising strings and riq rolls and then bursts into a huge choir shout and brass chorus, heroic, joyful and thrilling.",
+   "가사": "[Intro - galloping darbuka]\n\n[Verse - oud riff]\n\n[Build - ram's horn and rising strings]\n\n[Chorus - full choir]\nAh, ah, ah\nHallelujah\n\n[Instrumental - ney flute refrain]\n\n[Build - drums]\n\n[Chorus - full choir]\nHallelujah\nHosanna\n\n[Outro]",
+   "bpm": 132, "key": "E minor", "길이": 150, "시드": [1, 2, 3, 4]}
  ]
 }

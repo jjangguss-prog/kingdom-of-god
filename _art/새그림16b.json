@@ -1,0 +1,69 @@
+{
+ "출력": "raw",
+ "크기": [
+  1024,
+  1024
+ ],
+ "단계": 4,
+ "항목": [
+  {
+   "id": "s16a",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    11,
+    12,
+    13,
+    14
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: at night in King Saul's army camp on a hilltop under a starry sky with one bright full moon. In the middle, King Saul, a very tall handsome Israelite man of about fifty with a dark beard streaked with grey, wearing a simple bronze crown band and a rich deep-blue and purple royal robe, sleeps peacefully on his back on a woven blanket on the ground with his eyes closed, and a round clay water jug stands on the ground beside his head; around him several Israelite soldiers sleep curled up in their cloaks with their eyes closed. On the right, Abishai, a fierce young Israelite warrior with a black beard and a dark red tunic, has pulled the king's long spear out of the ground and holds it up with both hands; beside him David, a ruddy Israelite man of about twenty-eight with tousled reddish-brown hair, bright eyes, a handsome kind face and a short reddish-brown beard, wearing a plain light-brown wool tunic with a leather belt, a short sword at his side and sandals, firmly holds Abishai's forearm with his right hand to stop him and raises his left hand with the palm open, shaking his head. Quiet, tense, child-friendly moonlit scene. Nobody is wounded, no blood, nobody lying dead. Hands are drawn simply and clearly, each hand with four fingers and a thumb, and no hand overlaps another person. Every face is clear and well drawn with distinct eyes, nose and mouth. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "s16c",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    11,
+    12,
+    13,
+    14
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: at the open wooden gate of the small mud-brick town of Ziklag, David, a ruddy Israelite man of about twenty-eight with tousled reddish-brown hair, bright eyes, a handsome kind face and a short reddish-brown beard, wearing a plain light-brown wool tunic with a leather belt, a short sword at his side and sandals, stands in the gateway and welcomes newcomers with both arms open and a big smile. In front of him two Benjamite warriors arrive, both with black hair and short black beards, wearing dark green tunics with leather belts: the first warrior holds a curved wooden bow in his left hand and draws the bowstring back with his right hand, aiming up at the sky; the second warrior swings a leather sling above his head with his right hand and holds a small leather pouch of stones in his left hand. Behind them more warriors walk up the dusty road. Bright sunny day. All houses are one-story mud-brick houses with flat earthen rooftops and low parapets; no sloped roofs, no roof tiles, no red tiles. Hands are drawn simply and clearly, each hand with four fingers and a thumb, and no hand overlaps another person. Every face is clear and well drawn with distinct eyes, nose and mouth. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "s16g",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    11,
+    12,
+    13
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: at the brook Besor, a deep dry ravine with steep crumbling earthen banks and a thin shallow stream at the bottom: on the near bank on the left, six tired bearded Israelite men sit and rest beside piles of baggage, sacks and two tethered donkeys, waving goodbye. In the middle, David, a ruddy Israelite man of about twenty-eight with tousled reddish-brown hair, bright eyes, a handsome kind face and a short reddish-brown beard, wearing a plain light-brown wool tunic with a leather belt, a short sword at his side and sandals, wades across the shallow water holding one plain spear upright in his right hand and looks back with a determined face; behind him a long line of bearded Israelite warriors with spears and round shields follow him, some wading through the water and others climbing the far bank on the right. Bright hot afternoon in the desert. Hands are drawn simply and clearly, each hand with four fingers and a thumb, and no hand overlaps another person. Every face is clear and well drawn with distinct eyes, nose and mouth. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "v16b",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    11,
+    12,
+    13,
+    14
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: a joyful reunion in a sunny desert field. On the left, a bearded Israelite man kneels on one knee and hugs his small daughter with both arms, and the little girl hugs his neck. In the middle, David, a ruddy Israelite man of about twenty-eight with tousled reddish-brown hair, bright eyes, a handsome kind face and a short reddish-brown beard, wearing a plain light-brown wool tunic with a leather belt, a short sword at his side and sandals, stands smiling with tears of joy and holds one hand of each of his two wives who stand on either side of him: on his right a young woman in a blue dress and white headscarf, on his left a young woman in a green dress and red headscarf. Behind them men drive a flock of white sheep and brown cattle. In the distance a happy crowd of families, small and far away. Bright golden light. Nobody is wounded, no blood, nobody lying dead. Hands are drawn simply and clearly, each hand with four fingers and a thumb, and no hand overlaps another person. Every face is clear and well drawn with distinct eyes, nose and mouth. Every person has exactly two arms, two hands, two legs and two feet."
+  }
+ ]
+}

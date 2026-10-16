@@ -1,0 +1,262 @@
+{
+ "출력": "raw",
+ "크기": [
+  1024,
+  1024
+ ],
+ "단계": 4,
+ "항목": [
+  {
+   "id": "bg16",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "참조": [
+    "ref2/ref16.png"
+   ],
+   "프롬프트": "Repaint this top-down tower defense game map as a richly hand-painted Kingdom Rush style battlefield in the dry Negev desert at the brook Besor in bright clear daylight, seen from above at a slight angle. Keep exactly the same sandy road shapes and positions: one road enters from the right edge near the top and winds left between low hills, another road enters from the right edge lower down and winds left; the two roads meet in the middle and go left across the stream at a shallow ford to a small camp on the left. A third road, narrower, rougher and stonier, curves from the camp down the left side, crosses the stream again at a second ford in the lower middle and leaves the picture at the bottom edge. The blue line is a thin stream at the bottom of a deep narrow dry ravine with steep crumbling earthen banks running from the top edge to the bottom edge, with a few feathery tamarisk trees growing beside it. Left: the camp, several piles of baggage, sacks and clay jars, three tethered donkeys and two small brown tents on pale trampled ground. Upper left, far away: a small burned town of flat-roofed mud-brick houses blackened by fire with grey smoke rising into the sky. Right side: low rolling sandy hills, dry gullies, rocks and thorny desert bushes; the small green spot on the right is a thorny bush. Bottom middle: the brown spot is a stretch of darker rocky ground going down to the south. Elsewhere: dry desert ground, small bushes and boulders. Nothing covers the roads. No characters, no people, no text. All houses are one-story mud-brick houses with flat earthen rooftops and low parapets; no sloped roofs, no roof tiles, no red tiles. No statues, no idols, no carved figures, no crescent shapes, no moon ornaments, no religious symbols anywhere."
+  },
+  {
+   "id": "k_camel",
+   "종류": "인물",
+   "시드": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "프롬프트": "An Amalekite camel raider of the desert: a tall one-humped camel with a woven brown-and-black striped saddle blanket and a bulging cloth sack of plunder hanging on its side, running forward, side view facing right; riding on its back a young Amalekite desert youth with a light beard, a black headcloth with a cord and a dusty brown and black striped cloak, holding a long spear in his right hand and the reins in his left hand, frowning. The whole camel with all four legs and the rider fully visible, the rider has exactly two arms. No statues, no idols, no carved figures, no crescent shapes, no moon ornaments, no religious symbols anywhere."
+  },
+  {
+   "id": "k_archer",
+   "종류": "인물",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "An Amalekite archer of the desert, a lean young man with a dark beard, a dusty brown and black striped cloak, a black headcloth with a cord, a leather quiver of arrows on his back, drawing a curved wooden bow with an arrow aimed forward, narrowed eyes, exactly two arms and exactly two hands. No statues, no idols, no carved figures, no crescent shapes, no moon ornaments, no religious symbols anywhere."
+  },
+  {
+   "id": "k_centurion",
+   "종류": "인물",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "A stern Amalekite desert chief with a grey beard, a black headcloth with a cord, a richly patterned brown and black striped robe with a wide red sash, holding a long carved wooden staff in his right hand and pointing forward commandingly with his left hand, hard proud face, exactly two arms and exactly two hands. No statues, no idols, no carved figures, no crescent shapes, no moon ornaments, no religious symbols anywhere."
+  },
+  {
+   "id": "watch_benjamin",
+   "종류": "건물",
+   "시드": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "참조": [
+    "raw/watch3_s2_9e6c20.png"
+   ],
+   "프롬프트": "Draw the rapid-fire version of this exact watchtower in the same style, colors and camera angle, but rebuilt as a square mud-brick watchtower of the desert town Ziklag with a flat earthen roof and a low parapet; on the flat top stand two Benjamite archers side by side: the left archer holds a curved bow in his left hand and draws the string with his right hand, the right archer holds a curved bow in his right hand and draws the string with his left hand, both aiming forward; each archer has exactly two arms; a quiver full of arrows and a leather sling hang on the parapet; a small blue-and-white striped banner on a pole."
+  },
+  {
+   "id": "boy_sick",
+   "종류": "인물",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "a thin young Egyptian servant of about seventeen with short black hair, brown skin, large dark eyes and a tired gaunt but gentle face, wearing a plain worn white linen kilt and a short white tunic, barefoot, lying on his side on the ground, too weak to stand, his head resting on his bent right arm and his left hand on his chest, eyes half closed, thin and tired, side view, whole body visible, exactly two arms and exactly two hands."
+  },
+  {
+   "id": "boy_up",
+   "종류": "인물",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "a thin young Egyptian servant of about seventeen with short black hair, brown skin, large dark eyes and a tired gaunt but gentle face, wearing a plain worn white linen kilt and a short white tunic, barefoot, standing up again with new strength, pointing forward and down with his right arm stretched out and his index finger extended, his left arm hanging down at his side, a hopeful determined face, exactly two arms and exactly two hands."
+  },
+  {
+   "id": "a_ox",
+   "종류": "인물",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "A strong friendly brown ox with short curved horns and a pale muzzle, natural healthy anatomy with exactly four legs, calm walking pose, side view facing right, the whole animal visible."
+  },
+  {
+   "id": "p_family",
+   "종류": "무리",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "A young Israelite mother in a long blue dress and a cream headscarf walking happily and holding the hand of her small son of about six in a tan tunic, both smiling with joy; the mother's free hand holds a small bundle; each has exactly two arms and exactly two hands."
+  },
+  {
+   "id": "e_abigail",
+   "종류": "인물",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "A gentle grey donkey with long ears and kind dark eyes, standing calmly, side view facing right, natural anatomy with exactly four legs; on its back a colorful woven saddle rug loaded with two round wicker baskets full of round loaves of bread, a small wineskin and pressed cakes of dried figs and clusters of raisins tied with cord. No people."
+  },
+  {
+   "id": "s16a",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: at night in King Saul's army camp on a hilltop under a starry sky and a bright moon, King Saul, a very tall handsome Israelite man of about fifty with a dark beard streaked with grey, wearing a simple bronze crown band and a rich deep-blue and purple royal robe, lies fast asleep on his back on a blanket in the middle of the camp, eyes closed; his long spear is stuck upright in the ground beside his head and a round clay water jug stands beside the spear; around him the army commander Abner and several Israelite soldiers lie asleep wrapped in cloaks; Abishai, a fierce young Israelite warrior with a black beard and a dark red tunic, crouches beside the sleeping king and grips the king's long spear with both hands to pull it up; David, a ruddy Israelite man of about twenty-eight with tousled reddish-brown hair, bright eyes, a handsome kind face and a short reddish-brown beard, wearing a plain light-brown wool tunic with a leather belt, a short sword at his side and sandals, crouches next to Abishai and firmly holds Abishai's forearm with his left hand to stop him, his right hand raised flat in a calm 'no' gesture, shaking his head; quiet, tense, child-friendly moonlit scene. Nobody is wounded, no blood, nobody lying dead. Hands are drawn simply and clearly, each hand with four fingers and a thumb, and no hand overlaps another person. Every face is clear and well drawn with distinct eyes, nose and mouth. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "s16b",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: in front of the big stone city gate of Gath in Philistia, Achish, the Philistine king of Gath, a dignified clean-shaven man of about fifty with a fair face, wearing a tall headdress made of a headband with a neat row of upright reed feathers and a long embroidered blue-and-white robe with a bronze collar, stands kindly and points with his right arm toward the south, his left hand resting on his belt; in front of him David, a ruddy Israelite man of about twenty-eight with tousled reddish-brown hair, bright eyes, a handsome kind face and a short reddish-brown beard, wearing a plain light-brown wool tunic with a leather belt, a short sword at his side and sandals, stands respectfully with his right hand on his chest; behind David a long line of his men with their wives, children and loaded donkeys; far away in the sunny southern fields lies a small town of flat-roofed mud-brick houses; bright morning light. All houses are one-story mud-brick houses with flat earthen rooftops and low parapets; no sloped roofs, no roof tiles, no red tiles. No statues, no idols, no carved figures, no crescent shapes, no moon ornaments, no religious symbols anywhere. Hands are drawn simply and clearly, each hand with four fingers and a thumb, and no hand overlaps another person. Every face is clear and well drawn with distinct eyes, nose and mouth. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "s16c",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: at the gate of the small mud-brick town of Ziklag, two Benjamite warriors arrive: the first warrior holds a curved wooden bow in his left hand and draws the bowstring with his right hand, aiming up at the sky; the second warrior swings a leather sling above his head with his right hand and holds a small leather pouch of stones in his left hand; in the open wooden gate David, a ruddy Israelite man of about twenty-eight with tousled reddish-brown hair, bright eyes, a handsome kind face and a short reddish-brown beard, wearing a plain light-brown wool tunic with a leather belt, a short sword at his side and sandals, welcomes them with both arms open and a big smile; behind them more warriors walk up the road; bright sunny day. All houses are one-story mud-brick houses with flat earthen rooftops and low parapets; no sloped roofs, no roof tiles, no red tiles. Hands are drawn simply and clearly, each hand with four fingers and a thumb, and no hand overlaps another person. Every face is clear and well drawn with distinct eyes, nose and mouth. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "s16d",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: in a big Philistine army camp at Aphek with many colorful tents, Philistine lords, clean-shaven men wearing tall headdresses of a headband with a row of upright reed feathers and ribbed bronze corselets, stand angrily, one of them pointing with his right arm at a group of Israelite men in brown tunics standing at the back; Achish, the Philistine king of Gath, a dignified clean-shaven man of about fifty with a fair face, wearing a tall headdress made of a headband with a neat row of upright reed feathers and a long embroidered blue-and-white robe with a bronze collar, turns his head back toward David, a ruddy Israelite man of about twenty-eight with tousled reddish-brown hair, bright eyes, a handsome kind face and a short reddish-brown beard, wearing a plain light-brown wool tunic with a leather belt, a short sword at his side and sandals, with an awkward troubled face, his hands open in apology; in the background columns of Philistine soldiers with spears march past by hundreds; afternoon light. No statues, no idols, no carved figures, no crescent shapes, no moon ornaments, no religious symbols anywhere. Hands are drawn simply and clearly, each hand with four fingers and a thumb, and no hand overlaps another person. Every face is clear and well drawn with distinct eyes, nose and mouth. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "s16e",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: the burned small town of Ziklag after a raid: several flat-roofed mud-brick houses with blackened walls and empty doorways, thin grey smoke rising from the rooftops into a hazy sky; in front of the houses David, a ruddy Israelite man of about twenty-eight with tousled reddish-brown hair, bright eyes, a handsome kind face and a short reddish-brown beard, wearing a plain light-brown wool tunic with a leather belt, a short sword at his side and sandals, and five of David's men, bearded Israelite men in simple brown and tan wool tunics with leather belts, sit on the dusty ground and weep loudly with tears on their faces, some covering their faces with both hands, David with his head lifted up and his hands open; no bodies anywhere, no fire monsters. All houses are one-story mud-brick houses with flat earthen rooftops and low parapets; no sloped roofs, no roof tiles, no red tiles. Nobody is wounded, no blood, nobody lying dead. Hands are drawn simply and clearly, each hand with four fingers and a thumb, and no hand overlaps another person. Every face is clear and well drawn with distinct eyes, nose and mouth. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "s16f",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: beside the burned mud-brick town of Ziklag with smoke behind, David, a ruddy Israelite man of about twenty-eight with tousled reddish-brown hair, bright eyes, a handsome kind face and a short reddish-brown beard, wearing a plain light-brown wool tunic with a leather belt, a short sword at his side and sandals, kneels on both knees with his head bowed and his hands folded in prayer; in front of him Abiathar the young priest, a beardless young Israelite man in a white linen robe, stands and holds up the ephod, a short sleeveless priestly vest woven of gold, blue, purple and scarlet threads with a round onyx stone on each shoulder, with both hands; a soft beam of white-gold light from heaven shines down, with no figure and no face in the light onto David; at the left side three angry men of David's band stand and glare at David, each holding one rock in his right hand down at his side, not throwing. All houses are one-story mud-brick houses with flat earthen rooftops and low parapets; no sloped roofs, no roof tiles, no red tiles. Nobody is wounded, no blood, nobody lying dead. No statues, no idols, no carved figures, no crescent shapes, no moon ornaments, no religious symbols anywhere. Hands are drawn simply and clearly, each hand with four fingers and a thumb, and no hand overlaps another person. Every face is clear and well drawn with distinct eyes, nose and mouth. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "s16g",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: at the brook Besor, a deep dry ravine with steep crumbling earthen banks and a thin stream at the bottom with a few tamarisk trees: on the near bank on the left, about ten tired Israelite men sit and rest beside piles of baggage, sacks and tethered donkeys, waving goodbye; down in the ravine David, a ruddy Israelite man of about twenty-eight with tousled reddish-brown hair, bright eyes, a handsome kind face and a short reddish-brown beard, wearing a plain light-brown wool tunic with a leather belt, a short sword at his side and sandals, wades across the shallow water, holding a spear in his right hand, leading a long column of his men who climb the far bank on the right; bright hot afternoon in the desert. Hands are drawn simply and clearly, each hand with four fingers and a thumb, and no hand overlaps another person. Every face is clear and well drawn with distinct eyes, nose and mouth. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "v16a",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: at dawn on a rocky desert ridge, a thin young Egyptian servant of about seventeen with short black hair, brown skin, large dark eyes and a tired gaunt but gentle face, wearing a plain worn white linen kilt and a short white tunic, barefoot, stands and points down into the valley with his right arm stretched out, his left arm hanging down at his side; next to him David, a ruddy Israelite man of about twenty-eight with tousled reddish-brown hair, bright eyes, a handsome kind face and a short reddish-brown beard, wearing a plain light-brown wool tunic with a leather belt, a short sword at his side and sandals, looks down with a determined face, holding a spear in his left hand; behind them several of David's men, bearded Israelite men in simple brown and tan wool tunics with leather belts, come up the ridge; far below on a wide plain lies a big desert camp of low black goat-hair tents of the desert, with thin smoke of dying campfires, resting camels and heaps of sacks, jars and bundles of plunder; soft pink-gold dawn light. No statues, no idols, no carved figures, no crescent shapes, no moon ornaments, no religious symbols anywhere. Nobody is wounded, no blood, nobody lying dead. Hands are drawn simply and clearly, each hand with four fingers and a thumb, and no hand overlaps another person. Every face is clear and well drawn with distinct eyes, nose and mouth. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "v16b",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: a joyful reunion in a sunny desert field: in the front, a young Israelite mother in a blue dress and headscarf runs into the arms of her bearded husband who hugs her with both arms, and a small boy hugs his father's leg; in the middle David, a ruddy Israelite man of about twenty-eight with tousled reddish-brown hair, bright eyes, a handsome kind face and a short reddish-brown beard, wearing a plain light-brown wool tunic with a leather belt, a short sword at his side and sandals, warmly greets his two wives, two women in colorful dresses and headscarves, holding their hands; behind them men drive flocks of white sheep and brown cattle; in the distance a happy crowd of families, small and far away; bright golden light. Nobody is wounded, no blood, nobody lying dead. Hands are drawn simply and clearly, each hand with four fingers and a thumb, and no hand overlaps another person. Every face is clear and well drawn with distinct eyes, nose and mouth. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "v16c",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: at sunset on the bank of the brook Besor, David, a ruddy Israelite man of about twenty-eight with tousled reddish-brown hair, bright eyes, a handsome kind face and a short reddish-brown beard, wearing a plain light-brown wool tunic with a leather belt, a short sword at his side and sandals, stands between two equal heaps of goods, sacks, folded cloth, clay jars and sheep, and with both hands gives a full bag to a tired Israelite man who stands in front of him and receives it with both hands, smiling with thankful eyes; behind him more tired men who stayed with the baggage come forward happily; in the background, small and far away, three grumbling men stand with their arms crossed; warm orange sunset light. Nobody is wounded, no blood, nobody lying dead. Hands are drawn simply and clearly, each hand with four fingers and a thumb, and no hand overlaps another person. Every face is clear and well drawn with distinct eyes, nose and mouth. Every person has exactly two arms, two hands, two legs and two feet."
+  }
+ ]
+}
