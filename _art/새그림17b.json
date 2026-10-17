@@ -1,0 +1,55 @@
+{
+ "출력": "raw",
+ "크기": [
+  1024,
+  1024
+ ],
+ "단계": 4,
+ "항목": [
+  {
+   "id": "s17b",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    11,
+    12,
+    13,
+    14
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: inside a royal room of a palace with a window, only two people. On the left Nathan the prophet, an old Israelite man with a long white beard, wearing a plain grey-brown wool robe and a cream headcloth, stands and points at the king with his right arm outstretched and his index finger extended, his left hand holding a wooden staff, with a sad serious face. On the right King David, a ruddy Israelite man of about forty with reddish-brown hair and a neat reddish-brown beard, bareheaded with no crown on his head, wearing a deep red royal robe with gold trim, kneels on the stone floor and buries his face in both hands, weeping in sorrow; his single gold crown lies on the floor in front of his knees. A small harp leans against the wall. Grey cloudy light from the window. Nobody is wounded, no blood, nobody lying dead. Hands are drawn simply and clearly, each hand with four fingers and a thumb, and no hand overlaps another person. Every face is clear and well drawn with distinct eyes, nose and mouth. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "s17f",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    11,
+    12,
+    13,
+    14
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: in the wide open stone square in front of a city gate, two kings sit on two thrones side by side: on the left King Ahab of Israel, a proud man with a black beard, a tall gold crown and a rich purple robe, and on the right King Jehoshaphat of Judah, a dignified Israelite man of about forty-five with a neat dark-brown beard, a simple gold crown band and a deep blue royal robe with gold trim over a white tunic, looking uneasy. In front of them a crowd of grown-up court prophets, all bearded adult men in colorful robes and turbans, raise their hands and shout; one bearded prophet in front holds a pair of iron horns against his head with both hands. On the right, alone and apart, Micaiah the prophet, a calm middle-aged Israelite man with a short brown beard, wearing a plain undyed wool robe, stands calmly with his hands at his sides and looks straight at the two kings with a brave honest face. Only the two kings wear crowns. No writing, no letters, no signs anywhere. No statues, no idols, no carved figures, no calves, no crescent shapes, no moon ornaments, no religious symbols anywhere. Hands are drawn simply and clearly, each hand with four fingers and a thumb, and no hand overlaps another person. Every face is clear and well drawn with distinct eyes, nose and mouth. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "s17g",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    11,
+    12,
+    13,
+    14
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: in the new courtyard of the stone temple in Jerusalem, King Jehoshaphat of Judah, a dignified Israelite man of about forty-five with a neat dark-brown beard, a simple gold crown band and a deep blue royal robe with gold trim over a white tunic, stands on a low stone step in front of the crowd and prays with both hands raised high toward heaven, his face lifted up; he is the only person wearing a crown. Behind him the people of Judah stand quietly in prayer with their wives, children and little ones: in the front a grown-up young mother in a green dress and white headscarf holds a baby in her arms, and a small boy holds his bearded father's hand; many more families small and far away, none of them wearing crowns; soft hopeful light. No statues, no idols, no carved figures, no calves, no crescent shapes, no moon ornaments, no religious symbols anywhere. Hands are drawn simply and clearly, each hand with four fingers and a thumb, and no hand overlaps another person. Every face is clear and well drawn with distinct eyes, nose and mouth. Every person has exactly two arms, two hands, two legs and two feet."
+  }
+ ]
+}

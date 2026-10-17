@@ -1,0 +1,288 @@
+{
+ "출력": "raw",
+ "크기": [
+  1024,
+  1024
+ ],
+ "단계": 4,
+ "항목": [
+  {
+   "id": "bg17",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "참조": [
+    "ref2/ref17.png"
+   ],
+   "프롬프트": "Repaint this top-down tower defense game map as a richly hand-painted Kingdom Rush style battlefield in the pale chalky Judean wilderness near Tekoa in bright early morning light, seen from above at a slight angle. Keep exactly the same sandy road shapes and positions: one road comes up from the bottom edge on the lower right, climbs a steep rocky cliff in two tight zigzag hairpin turns, then crosses the plateau to the middle; another road enters from the right edge near the top and winds left through dry rolling hills to the middle; the two roads meet in the middle and continue left as one road to a camp on the left. Bottom right corner: the blue area is the still blue water of the Dead Sea with a pale salty shore, and the small green spot is a little oasis of date palm trees at a spring. The big darker brown area around the zigzag road is a steep layered limestone cliff face with ledges. Middle: in the narrow wedge of land between the two roads just before they meet, the dark spot is a small rocky knoll with a round watchtower of rough stacked stones on it, and the pale spot to its left is an empty flat rock ledge with nothing on it. Left: the camp of Judah, rows of small tan cloth tents around a cleared pale area at the end of the road. Upper left: a small hilltop town of flat-roofed stone houses. Lower left: the greenish area is a shallow green valley with grass and a few olive trees. Upper middle: the small spot is a tiny stone hut with a clay jar by its door. Elsewhere: pale dry hills, rocks, small thorn bushes and dry gullies. Nothing covers the roads. No characters, no people, no text. All houses are one-story mud-brick or stone houses with flat earthen rooftops and low parapets; no sloped roofs, no roof tiles, no red tiles. No statues, no idols, no carved figures, no calves, no crescent shapes, no moon ornaments, no religious symbols anywhere."
+  },
+  {
+   "id": "j_soldier",
+   "종류": "인물",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "a warrior of Moab and Ammon from the land east of the Jordan, a man with a thick curly black beard, wearing a rounded indigo-blue felt cap wrapped with a saffron-yellow cloth band, a knee-length indigo-blue tunic with a saffron-yellow border and a wide leather belt, and sandals, holding a long spear in his right hand and a small round wooden shield on his left arm, angry frown, walking forward, exactly two arms and exactly two hands. No statues, no idols, no carved figures, no calves, no crescent shapes, no moon ornaments, no religious symbols anywhere."
+  },
+  {
+   "id": "j_shield",
+   "종류": "인물",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "a warrior of Moab and Ammon from the land east of the Jordan, a man with a thick curly black beard, wearing a rounded indigo-blue felt cap wrapped with a saffron-yellow cloth band, a knee-length indigo-blue tunic with a saffron-yellow border and a wide leather belt, and sandals, a big heavy shield bearer with a bronze scale vest over the tunic, holding a tall rectangular wooden shield covered with bronze plates in his left hand and a short spear in his right hand, proud chin up, exactly two arms and exactly two hands. No statues, no idols, no carved figures, no calves, no crescent shapes, no moon ornaments, no religious symbols anywhere."
+  },
+  {
+   "id": "j_centurion",
+   "종류": "인물",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "a warrior of Moab and Ammon from the land east of the Jordan, a man with a thick curly black beard, wearing a rounded indigo-blue felt cap wrapped with a saffron-yellow cloth band, a knee-length indigo-blue tunic with a saffron-yellow border and a wide leather belt, and sandals, a stern captain with a grey-streaked beard and a bronze scale armor shirt and a long saffron-yellow cloak, holding a bronze-headed mace in his right hand and pointing forward commandingly with his left hand, hard proud face, exactly two arms and exactly two hands. No statues, no idols, no carved figures, no calves, no crescent shapes, no moon ornaments, no religious symbols anywhere."
+  },
+  {
+   "id": "j_archer",
+   "종류": "인물",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "a warrior of Moab and Ammon from the land east of the Jordan, a man with a thick curly black beard, wearing a rounded indigo-blue felt cap wrapped with a saffron-yellow cloth band, a knee-length indigo-blue tunic with a saffron-yellow border and a wide leather belt, and sandals, a lean young archer with a leather quiver of arrows on his back, drawing a curved wooden bow with an arrow aimed forward, narrowed eyes, exactly two arms and exactly two hands. No statues, no idols, no carved figures, no calves, no crescent shapes, no moon ornaments, no religious symbols anywhere."
+  },
+  {
+   "id": "j_drummer",
+   "종류": "인물",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "a warrior of Moab and Ammon from the land east of the Jordan, a man with a thick curly black beard, wearing a rounded indigo-blue felt cap wrapped with a saffron-yellow cloth band, a knee-length indigo-blue tunic with a saffron-yellow border and a wide leather belt, and sandals, without weapons, beating a round wooden frame drum hanging at his waist with both hands, wide fearful eyes, exactly two arms and exactly two hands. No statues, no idols, no carved figures, no calves, no crescent shapes, no moon ornaments, no religious symbols anywhere."
+  },
+  {
+   "id": "d_soldier",
+   "종류": "인물",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "a warrior of Mount Seir (Edom), a rugged mountain man with a reddish-brown beard, wearing a brown leather hood wrapped around his head, a rough red-ochre wool cloak over a short tan tunic, leather leg wraps and sandals, holding a long spear in his right hand and a small round hide shield on his left arm, angry frown, walking forward, exactly two arms and exactly two hands. No statues, no idols, no carved figures, no calves, no crescent shapes, no moon ornaments, no religious symbols anywhere."
+  },
+  {
+   "id": "d_shield",
+   "종류": "인물",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "a warrior of Mount Seir (Edom), a rugged mountain man with a reddish-brown beard, wearing a brown leather hood wrapped around his head, a rough red-ochre wool cloak over a short tan tunic, leather leg wraps and sandals, a big heavy shield bearer holding a tall oval shield of thick hide on a wooden frame in his left hand and a short spear in his right hand, proud chin up, exactly two arms and exactly two hands. No statues, no idols, no carved figures, no calves, no crescent shapes, no moon ornaments, no religious symbols anywhere."
+  },
+  {
+   "id": "d_archer",
+   "종류": "인물",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "a warrior of Mount Seir (Edom), a rugged mountain man with a reddish-brown beard, wearing a brown leather hood wrapped around his head, a rough red-ochre wool cloak over a short tan tunic, leather leg wraps and sandals, a lean young archer with a leather quiver of arrows on his back, drawing a curved wooden bow with an arrow aimed forward, narrowed eyes, exactly two arms and exactly two hands. No statues, no idols, no carved figures, no calves, no crescent shapes, no moon ornaments, no religious symbols anywhere."
+  },
+  {
+   "id": "deceiver",
+   "종류": "정령",
+   "시드": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "프롬프트": "A large slow floating shadow spirit: a tall drifting veil of smoky lavender and deep violet mist shaped like a big hooded cloak, with two softly glowing pale lilac eyes and a thin sly smile inside the dark hood, two long wide smoky sleeves with no hands, and from the end of each sleeve several thin glowing lilac threads hang straight down like a puppeteer's strings, ragged wispy smoky edges, eerie but not scary, cute game style, no horns, no hands, no crescent shapes, no moon, no religious symbols."
+  },
+  {
+   "id": "jehoshaphat",
+   "종류": "인물",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "King Jehoshaphat of Judah, a dignified Israelite man of about forty-five with a neat dark-brown beard, a simple gold crown band and a deep blue royal robe with gold trim over a white tunic, standing tall and raising his right hand high with an open palm as he calls out to his people, his left hand resting at his side, earnest brave face, exactly two arms and exactly two hands. No statues, no idols, no carved figures, no calves, no crescent shapes, no moon ornaments, no religious symbols anywhere."
+  },
+  {
+   "id": "p_singer",
+   "종류": "인물",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "An Israelite Levite singer in a long white linen robe with a golden sash and a white headcloth, walking forward and singing joyfully with an open mouth and a raised face, holding a small wooden lyre against his chest with his left arm and plucking its strings with his right hand, exactly two arms and exactly two hands."
+  },
+  {
+   "id": "e_oil",
+   "종류": "물건",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "A small round clay oil jar with a narrow neck tipped slightly so a thin stream of golden olive oil pours from its lip into a small clay bowl, beside a round wooden barrel full of white flour heaped at the top. No people."
+  },
+  {
+   "id": "s17a",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: at night in the courtyard of a cedar-wood palace in Jerusalem under a starry sky, King David, a ruddy Israelite man of about forty with reddish-brown hair and a neat reddish-brown beard, wearing a simple gold crown band and a deep red royal robe with gold trim, kneels on one knee with his hands folded at his chest, looking up with wonder toward a simple tent of plain woven curtains on the right; Nathan the prophet, an old Israelite man with a long white beard, wearing a plain grey-brown wool robe and a cream headcloth, stands beside David and speaks kindly with his right hand raised and his left hand holding a wooden staff; a soft beam of white-gold light from heaven shines down, with no figure and no face in the light onto the curtained tent; peaceful holy night. All houses are one-story mud-brick or stone houses with flat earthen rooftops and low parapets; no sloped roofs, no roof tiles, no red tiles. No statues, no idols, no carved figures, no calves, no crescent shapes, no moon ornaments, no religious symbols anywhere. Hands are drawn simply and clearly, each hand with four fingers and a thumb, and no hand overlaps another person. Every face is clear and well drawn with distinct eyes, nose and mouth. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "s17b",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: inside a royal room of a palace with a window, Nathan the prophet, an old Israelite man with a long white beard, wearing a plain grey-brown wool robe and a cream headcloth, stands on the left and points at the king with his right arm outstretched and his index finger extended, his left hand holding a wooden staff, with a sad serious face; on the right King David, a ruddy Israelite man of about forty with reddish-brown hair and a neat reddish-brown beard, wearing a simple gold crown band and a deep red royal robe with gold trim, kneels on the floor with his gold crown band taken off and lying on the floor beside him, his face buried in both hands, weeping in sorrow; a small harp leans against the wall; grey cloudy light from the window. Only these two people in the room. Nobody is wounded, no blood, nobody lying dead. Hands are drawn simply and clearly, each hand with four fingers and a thumb, and no hand overlaps another person. Every face is clear and well drawn with distinct eyes, nose and mouth. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "s17c",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: the dedication of the great stone temple in Jerusalem on a bright day: in front of the temple, Levite singers in long white linen robes with golden sashes and white headcloths, stand on the east side of a big bronze altar; in the front, four people large: a singer singing with his face raised and his hands open, a second singer playing bronze cymbals held one in each hand, a priest in white blowing a long silver trumpet held with both hands, and a musician playing a wooden harp; a shining white-gold cloud pours out of the open temple doors and fills the courtyard with glory; a large crowd of worshippers small and far away. No statues, no idols, no carved figures, no calves, no crescent shapes, no moon ornaments, no religious symbols anywhere. Hands are drawn simply and clearly, each hand with four fingers and a thumb, and no hand overlaps another person. Every face is clear and well drawn with distinct eyes, nose and mouth. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "s17d",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: on a lonely road in the open countryside with only two people: Ahijah the prophet, an old Israelite man with a long grey beard and a cream headcloth, holds up in both hands a new pale blue cloak that he has torn into twelve pieces, and holds out a bundle of ten of the torn pieces toward Jeroboam, a strong young Israelite man with short black hair and a short black beard, wearing a plain brown work tunic with a leather belt, who stands in front of him and reaches out with both hands to receive them in amazement; wheat fields and hills behind them, bright midday light. No statues, no idols, no carved figures, no calves, no crescent shapes, no moon ornaments, no religious symbols anywhere. Hands are drawn simply and clearly, each hand with four fingers and a thumb, and no hand overlaps another person. Every face is clear and well drawn with distinct eyes, nose and mouth. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "s17e",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: on the top of Mount Carmel, Elijah the prophet, a lean weathered Israelite man with long wild dark hair and a dark beard, wearing a rough hairy brown cloak tied with a leather belt, stands beside a stone altar built of twelve rough stones with a water-filled trench around it and a pile of wood and an offering on top, raising both arms high toward the sky; a great column of fire falls from the sky onto the altar and the water in the trench is boiling away in steam, with no figure in the fire; behind Elijah a crowd of Israelite people bow down with their faces to the ground; far away on the left a small group of men in plain robes stand amazed; dramatic evening sky. No statues, no idols, no carved figures, no calves, no crescent shapes, no moon ornaments, no religious symbols anywhere. Nobody is wounded, no blood, nobody lying dead. Hands are drawn simply and clearly, each hand with four fingers and a thumb, and no hand overlaps another person. Every face is clear and well drawn with distinct eyes, nose and mouth. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "s17f",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: in the wide open square at the gate of the stone city of Samaria, two kings sit on two thrones side by side: on the left King Ahab of Israel, a proud man with a black beard, a tall gold crown and a rich purple robe, and on the right King Jehoshaphat of Judah, a dignified Israelite man of about forty-five with a neat dark-brown beard, a simple gold crown band and a deep blue royal robe with gold trim over a white tunic, looking uneasy; in front of them a crowd of court prophets in colorful robes raise their hands and shout; one prophet in front holds a pair of iron horns against his head with both hands; on the right, alone and apart, Micaiah the prophet, a calm middle-aged Israelite man with a short brown beard, wearing a plain undyed wool robe, stands calmly with his hands at his sides and looks straight at the two kings with a brave honest face. No statues, no idols, no carved figures, no calves, no crescent shapes, no moon ornaments, no religious symbols anywhere. Hands are drawn simply and clearly, each hand with four fingers and a thumb, and no hand overlaps another person. Every face is clear and well drawn with distinct eyes, nose and mouth. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "s17g",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: in the new courtyard of the stone temple in Jerusalem, King Jehoshaphat of Judah, a dignified Israelite man of about forty-five with a neat dark-brown beard, a simple gold crown band and a deep blue royal robe with gold trim over a white tunic, stands on a low stone step in front of the crowd and prays with both hands raised high toward heaven, his face lifted up; behind him the people of Judah stand quietly in prayer with their wives, children and little ones: in the front a young mother in a green dress and white headscarf holds a baby in her arms, and a small boy holds his father's hand; many more families small and far away; soft hopeful light. No statues, no idols, no carved figures, no calves, no crescent shapes, no moon ornaments, no religious symbols anywhere. Hands are drawn simply and clearly, each hand with four fingers and a thumb, and no hand overlaps another person. Every face is clear and well drawn with distinct eyes, nose and mouth. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "v17a",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: early morning in the pale hills of the wilderness of Tekoa, Levite singers in long white linen robes with golden sashes and white headcloths, walk at the very front of an army, singing joyfully with their faces raised: the singer in front plays a wooden lyre held against his chest, the next one plays bronze cymbals held one in each hand; behind them King Jehoshaphat of Judah, a dignified Israelite man of about forty-five with a neat dark-brown beard, a simple gold crown band and a deep blue royal robe with gold trim over a white tunic, walks with a calm face, followed by long ranks of Judah's soldiers with round shields and upright spears; the golden morning sun rises over the far eastern hills. No statues, no idols, no carved figures, no calves, no crescent shapes, no moon ornaments, no religious symbols anywhere. Nobody is wounded, no blood, nobody lying dead. Hands are drawn simply and clearly, each hand with four fingers and a thumb, and no hand overlaps another person. Every face is clear and well drawn with distinct eyes, nose and mouth. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "v17b",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: beside a round stone watchtower on a hill in the wilderness, people of Judah look down into a wide dry valley that is strewn with abandoned spears, round shields, sacks, bundles of colorful cloth, clay jars and small chests of treasure; there are no people lying anywhere in the valley; in the front, two Judean men carry big bundles on their backs, and one smiling young man holds a huge heap of cloth bundles in both arms, laughing; bright midday light. Nobody is wounded, no blood, nobody lying dead. No statues, no idols, no carved figures, no calves, no crescent shapes, no moon ornaments, no religious symbols anywhere. Hands are drawn simply and clearly, each hand with four fingers and a thumb, and no hand overlaps another person. Every face is clear and well drawn with distinct eyes, nose and mouth. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "v17c",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: on the fourth day in a shallow green valley with grass and olive trees, a great joyful crowd of the people of Judah gather and lift their hands to praise God; in the front King Jehoshaphat of Judah, a dignified Israelite man of about forty-five with a neat dark-brown beard, a simple gold crown band and a deep blue royal robe with gold trim over a white tunic, raises both hands with a joyful face, a Levite in a white linen robe plays a wooden harp, and a little girl lifts her hands and smiles; behind them priests blow long silver trumpets; a soft beam of white-gold light from heaven shines down, with no figure and no face in the light onto the valley. No statues, no idols, no carved figures, no calves, no crescent shapes, no moon ornaments, no religious symbols anywhere. Nobody is wounded, no blood, nobody lying dead. Hands are drawn simply and clearly, each hand with four fingers and a thumb, and no hand overlaps another person. Every face is clear and well drawn with distinct eyes, nose and mouth. Every person has exactly two arms, two hands, two legs and two feet."
+  }
+ ]
+}

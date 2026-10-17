@@ -131,6 +131,11 @@
   {"id": "s16", "이름": "16 시글락", "결": "활력 · 시글락의 추격(도파민: 낙타 발굽 같은 셋잇단 그루브, 귀에 남는 우드 리프와 네이 후렴, 뿔나팔 신호, 쌓였다 터지는 합창)",
    "캡션": "Fast desert pursuit battle theme, chasing raiders across a dry ravine to win back what was taken. A galloping triplet darbuka and frame-drum groove like camel hooves from the very first beat, a catchy repeating oud riff as the hook, a soaring ney flute refrain, short ram's horn signals between phrases, staccato strings racing forward, the energy builds with rising strings and riq rolls and then bursts into a huge choir shout and brass chorus, heroic, joyful and thrilling.",
    "가사": "[Intro - galloping darbuka]\n\n[Verse - oud riff]\n\n[Build - ram's horn and rising strings]\n\n[Chorus - full choir]\nAh, ah, ah\nHallelujah\n\n[Instrumental - ney flute refrain]\n\n[Build - drums]\n\n[Chorus - full choir]\nHallelujah\nHosanna\n\n[Outro]",
-   "bpm": 132, "key": "E minor", "길이": 150, "시드": [1, 2, 3, 4]}
+   "bpm": 132, "key": "E minor", "길이": 150, "시드": [1, 2, 3, 4]},
+
+  {"id": "s17", "이름": "17 브라가 골짜기", "결": "활력 · 군대 앞의 찬양대 행진(도파민: 첫 박부터 힘찬 행진 그루브, 귀에 남는 수금 리프, 양각 나팔 신호, 쌓였다 터지는 할렐루야 합창)",
+   "캡션": "Triumphant marching battle hymn of singers leading an army at dawn in the wilderness. A strong driving frame-drum and darbuka marching groove from the very first beat, a bright catchy repeating lyre and harp riff as the hook, bronze cymbal crashes, ram's horn signals between phrases, staccato strings striding forward, the energy builds with rising strings and riq rolls and then bursts into a huge joyful choir and brass chorus, majestic, confident and thrilling.",
+   "가사": "[Intro - marching frame drums]\n\n[Verse - lyre riff]\n\n[Build - ram's horn and rising strings]\n\n[Chorus - full choir]\nHallelujah\nAh, ah, ah\n\n[Instrumental - cymbals and lyre]\n\n[Build - drums]\n\n[Chorus - full choir]\nHallelujah\nAmen\n\n[Outro]",
+   "bpm": 122, "key": "D major", "길이": 150, "시드": [1, 2, 3, 4]}
  ]
 }
