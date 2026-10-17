@@ -1,0 +1,28 @@
+{
+ "출력": "raw",
+ "크기": [
+  1024,
+  1024
+ ],
+ "단계": 4,
+ "항목": [
+  {
+   "id": "bg20",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    11,
+    12,
+    13,
+    14
+   ],
+   "참조": [
+    "ref2/ref20b.png"
+   ],
+   "프롬프트": "Repaint this top-down tower defense game map as a richly hand-painted Kingdom Rush style battlefield of ancient Jerusalem in the Persian era in bright daylight, seen from above at a slight angle. Keep exactly the same sandy road shapes and positions. In the middle is the city: the grey ring is the city wall, but it is broken down almost everywhere into knee-high lines of tumbled stones and rubble, and the small dark squares on the ring are burned blackened stone gateways with no doors. Where three roads cross the ring there are three wide gaps of rubble and heaps of dirt. Inside the ring, INSIDE the broken city wall: the pale square with a smaller square in it, in the upper right part inside the wall, is the rebuilt plain stone temple with its courtyard (the temple stands inside the city wall, not outside), in the middle many small flat-roofed mud-brick houses and a small open square where the roads meet. At the bottom the small blue oval is a pool. On the right the blue stripe is the Kidron brook flowing from top to bottom. The green area on the right is the Mount of Olives with olive trees; the dark area on the lower left is a deep rocky valley. Near three edges of the picture (upper right, lower right, lower left) there are tiny enemy camps with a few small tents. Elsewhere: dry fields, olive trees, rocks and bushes. Nothing covers the roads. No characters, no people, no text. All houses are one-story or two-story stone and mud-brick houses with flat earthen rooftops and low parapets; no sloped roofs, no roof tiles, no red tiles. No statues, no idols, no carved figures, no winged discs, no crescent shapes, no moon ornaments, no religious symbols anywhere."
+  }
+ ]
+}

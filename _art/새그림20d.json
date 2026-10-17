@@ -1,0 +1,55 @@
+{
+ "출력": "raw",
+ "크기": [
+  1024,
+  1024
+ ],
+ "단계": 4,
+ "항목": [
+  {
+   "id": "v20a",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    11,
+    12,
+    13,
+    14
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: at sunset on top of the newly finished tall stone wall of Jerusalem, only two people on the wall standing apart and not touching: Nehemiah, a Jewish man of about forty with a neat short black beard, wearing a long Persian-court robe of deep teal with a golden sash and a soft cream turban, with a sword in a sheath at his belt, holds a flat iron builder's trowel in his right hand and rests his left hand on his sword hilt, looking down over the city with a thankful face; a few steps away a priest in a white robe and a white headcloth, with a clearly visible bearded face, blows a long curved ram's horn trumpet held in both hands; below the wall, grown-up workers put down their baskets of stones and rest, looking up and smiling; golden sky. No statues, no idols, no carved figures, no winged discs, no crescent shapes, no moon ornaments, no religious symbols anywhere. Hands are drawn simply and clearly, each hand with four fingers and a thumb, and no hand overlaps another person. Every face is clear and well drawn with distinct eyes, nose and mouth. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "v20b",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    11,
+    12,
+    13,
+    14
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: in the wide stone square before the Water Gate of Jerusalem, the scribe Ezra, an old man with a long grey beard and a white robe, stands on a tall wooden platform and holds a big open scroll in both hands, reading aloud; a great crowd stands and listens; in the front large and life-sized, standing on the ground: an old man with a white beard weeping and wiping his eyes with his right hand, a Levite in a white robe standing beside him and resting his left hand on the old man's shoulder, and a little girl standing on the ground holding her mother's hand and looking up; nobody else touches them; morning light. No statues, no idols, no carved figures, no winged discs, no crescent shapes, no moon ornaments, no religious symbols anywhere. Hands are drawn simply and clearly, each hand with four fingers and a thumb, and no hand overlaps another person. Every face is clear and well drawn with distinct eyes, nose and mouth. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "e20c",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    11,
+    12,
+    13,
+    14
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: at night over the small hill village of Bethlehem with flat-roofed stone houses, one great bright star shines in the sky and sends a soft beam of light down onto one small humble flat-roofed house; in the field in front, two shepherds in brown cloaks with wooden staffs sit by their sheep and look up at the star with wonder; far away on a hill road a few wise men from the east in rich robes ride camels toward the village, one of them pointing at the star with his right hand; no baby and no people inside the house are shown. No statues, no idols, no carved figures, no winged discs, no crescent shapes, no moon ornaments, no religious symbols anywhere. Hands are drawn simply and clearly, each hand with four fingers and a thumb, and no hand overlaps another person. Every face is clear and well drawn with distinct eyes, nose and mouth. Every person has exactly two arms, two hands, two legs and two feet."
+  }
+ ]
+}

@@ -1,0 +1,28 @@
+{
+ "출력": "raw",
+ "크기": [
+  1024,
+  1024
+ ],
+ "단계": 4,
+ "항목": [
+  {
+   "id": "bg20_full",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "참조": [
+    "raw/bg20_s11_f25015.png"
+   ],
+   "프롬프트": "Repaint exactly the same picture with exactly the same roads, houses, temple, river, hills, camps and colors, changing only the city wall: the whole ring of the city wall is now completely rebuilt, a tall thick wall of fresh cut tan stone blocks with crenellations all the way around, with square towers, and every gateway is rebuilt as a tall stone gatehouse with new wooden doors standing open; the three gaps where the roads cross the wall are closed by new stone wall; no rubble left. Nothing covers the roads outside the wall. No characters, no people, no text. All houses are one-story or two-story stone and mud-brick houses with flat earthen rooftops and low parapets; no sloped roofs, no roof tiles, no red tiles. No statues, no idols, no carved figures, no winged discs, no crescent shapes, no moon ornaments, no religious symbols anywhere."
+  }
+ ]
+}

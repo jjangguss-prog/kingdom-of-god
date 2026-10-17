@@ -1,0 +1,401 @@
+{
+ "출력": "raw",
+ "크기": [
+  1024,
+  1024
+ ],
+ "단계": 4,
+ "항목": [
+  {
+   "id": "bg18",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "참조": [
+    "ref2/ref18.png"
+   ],
+   "프롬프트": "Repaint this top-down tower defense game map as a richly hand-painted Kingdom Rush style battlefield in the green Dothan valley of ancient Israel in bright daylight, seen from above at a slight angle. Keep exactly the same sandy road shapes and positions. In the very middle, the small round mound is a low round hill (a tell) with a walled little town on top: a ring of mud-brick town walls with three small dark gateways, one gateway at the end of each of the three wide roads (north gate at the top, west gate at the left, east gate at the right), and inside the walls a cluster of small flat-roofed mud-brick houses with one house in the very center that has an outside staircase. The three wide roads each end at their own town gate and do not join each other: one road comes down from the top edge and loops around to the north gate; one road comes from the right edge, crosses a shallow ford of the river and winds through the valley floor up to the east gate; one road comes from the left edge, curves around hills and reaches the west gate. The narrow pale path goes from the south side of the town down to the lower left corner, where the edge of a bigger walled city with a stone wall and a gate stands on a hill. The light green patch beside the narrow path is a low soft grassy meadow. The dark brown blobs are low rounded hills with olive trees and rocks. The blue strip on the right edge is the Jordan river with reeds along its banks, and the small green spot is a reedy bank by the water. Elsewhere: green and golden fields, olive trees, small bushes and stones. Nothing covers the roads. No characters, no people, no text. All houses are one-story mud-brick or stone houses with flat earthen rooftops and low parapets; no sloped roofs, no roof tiles, no red tiles. No statues, no idols, no carved figures, no calves, no crescent shapes, no moon ornaments, no religious symbols anywhere."
+  },
+  {
+   "id": "r_soldier",
+   "종류": "인물",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "an Aramean warrior from Damascus, a man with a black beard, wearing a dark navy-blue knee-length tunic with a red tasseled sash, a red cloth headband tied with cords around his black hair, leather sandals, holding a long spear in his right hand and a round leather shield on his left arm, angry frown, walking forward, exactly two arms and exactly two hands. No statues, no idols, no carved figures, no calves, no crescent shapes, no moon ornaments, no religious symbols anywhere."
+  },
+  {
+   "id": "r_raider",
+   "종류": "인물",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "an Aramean warrior from Damascus, a man with a black beard, wearing a dark navy-blue knee-length tunic with a red tasseled sash, a red cloth headband tied with cords around his black hair, leather sandals, a lightly dressed fast raider without armor, holding a short curved sword in his right hand, running forward eagerly with a greedy grin, exactly two arms and exactly two hands. No statues, no idols, no carved figures, no calves, no crescent shapes, no moon ornaments, no religious symbols anywhere."
+  },
+  {
+   "id": "r_shield",
+   "종류": "인물",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "an Aramean warrior from Damascus, a man with a black beard, wearing a dark navy-blue knee-length tunic with a red tasseled sash, a red cloth headband tied with cords around his black hair, leather sandals, a big heavy shield bearer with a bronze scale vest over the tunic, holding a tall round-topped wooden shield covered with leather and bronze studs in his left hand and a short spear in his right hand, proud chin up, exactly two arms and exactly two hands. No statues, no idols, no carved figures, no calves, no crescent shapes, no moon ornaments, no religious symbols anywhere."
+  },
+  {
+   "id": "r_centurion",
+   "종류": "인물",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "an Aramean warrior from Damascus, a man with a black beard, wearing a dark navy-blue knee-length tunic with a red tasseled sash, a red cloth headband tied with cords around his black hair, leather sandals, a stern captain with a grey-streaked beard, a pointed bronze helmet and a bronze scale armor shirt and a long red cloak, holding a sword in his right hand and pointing forward commandingly with his left hand, hard proud face, exactly two arms and exactly two hands. No statues, no idols, no carved figures, no calves, no crescent shapes, no moon ornaments, no religious symbols anywhere."
+  },
+  {
+   "id": "r_archer",
+   "종류": "인물",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "an Aramean warrior from Damascus, a man with a black beard, wearing a dark navy-blue knee-length tunic with a red tasseled sash, a red cloth headband tied with cords around his black hair, leather sandals, a lean young archer with a leather quiver of arrows on his back, drawing a curved wooden bow with an arrow aimed forward, narrowed eyes, exactly two arms and exactly two hands. No statues, no idols, no carved figures, no calves, no crescent shapes, no moon ornaments, no religious symbols anywhere."
+  },
+  {
+   "id": "r_drummer",
+   "종류": "인물",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "an Aramean warrior from Damascus, a man with a black beard, wearing a dark navy-blue knee-length tunic with a red tasseled sash, a red cloth headband tied with cords around his black hair, leather sandals, without weapons, beating a round wooden frame drum hanging at his waist with both hands, wide fearful eyes, exactly two arms and exactly two hands. No statues, no idols, no carved figures, no calves, no crescent shapes, no moon ornaments, no religious symbols anywhere."
+  },
+  {
+   "id": "r_chariot",
+   "종류": "인물",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "An Aramean war chariot of Damascus: a two-wheeled chariot of dark wood with navy-blue and red painted trim and six-spoked wheels, pulled by two brown horses with red plumes, galloping, side view facing right, one charioteer with a black beard, a red headband and a navy-blue tunic holding the reins and a spear, proud stern face. The whole chariot and both horses fully visible. No statues, no idols, no carved figures, no calves, no crescent shapes, no moon ornaments, no religious symbols anywhere."
+  },
+  {
+   "id": "r_sit",
+   "종류": "인물",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "An Aramean man from Damascus with a black beard, a dark navy-blue tunic with a red sash and a red cloth headband, sitting cross-legged on the ground with no weapons, his hands resting on his knees, calm peaceful face, side view facing right, exactly two arms and exactly two hands."
+  },
+  {
+   "id": "r_sit2",
+   "종류": "인물",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "A young Aramean man from Damascus with a short black beard, a dark navy-blue tunic with a red sash and a red cloth headband, sitting on the ground with his knees up and his arms resting around his knees, no weapons, gentle relieved face, side view facing right, exactly two arms and exactly two hands."
+  },
+  {
+   "id": "ram",
+   "종류": "물건",
+   "시드": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "프롬프트": "A wooden battering ram siege engine: a long low wooden frame on four solid wooden wheels, covered by a sloped roof of brown animal hides, with a heavy wooden beam ending in a dark iron ram head hanging on ropes under the roof and pulled back; under the roof only the legs and sandals of four men pushing are visible; a thin smoky lavender mist curls above the roof, side view facing right. The whole machine fully visible. No faces, no text."
+  },
+  {
+   "id": "ram_swing",
+   "종류": "물건",
+   "시드": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "프롬프트": "A wooden battering ram siege engine: a long low wooden frame on four solid wooden wheels, covered by a sloped roof of brown animal hides, with a heavy wooden beam ending in a dark iron ram head hanging on ropes under the roof and swung far forward, sticking out in front of the frame; under the roof only the legs and sandals of four men pushing are visible; a thin smoky lavender mist curls above the roof, side view facing right. The whole machine fully visible. No faces, no text."
+  },
+  {
+   "id": "elisha",
+   "종류": "인물",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "Elisha the prophet, an Israelite man of about forty with a short black beard, a plain white cloth covering his head, wearing a rough brown hairy cloak over a cream tunic with a leather belt, standing calmly with a wooden staff in his right hand and his left hand open at his side, kind brave face, exactly two arms and exactly two hands."
+  },
+  {
+   "id": "elisha_pray",
+   "종류": "인물",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "Elisha the prophet, an Israelite man of about forty with a short black beard, a plain white cloth covering his head, wearing a rough brown hairy cloak over a cream tunic with a leather belt, praying with both hands raised high toward the sky with open palms, face lifted up, eyes closed, exactly two arms and exactly two hands."
+  },
+  {
+   "id": "elisha_lead",
+   "종류": "인물",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "Elisha the prophet, an Israelite man of about forty with a short black beard, a plain white cloth covering his head, wearing a rough brown hairy cloak over a cream tunic with a leather belt, walking forward and beckoning with his right hand raised and waving people to follow, his left hand holding a wooden staff, kind smile, exactly two arms and exactly two hands."
+  },
+  {
+   "id": "servant",
+   "종류": "인물",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "Elisha's servant, a young Israelite man of about eighteen, clean-shaven, with short curly black hair, wearing a plain light-blue tunic with a rope belt, frightened, holding his head with both hands on the sides of his head, mouth open, wide scared eyes, exactly two arms and exactly two hands."
+  },
+  {
+   "id": "servant_see",
+   "종류": "인물",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "Elisha's servant, a young Israelite man of about eighteen, clean-shaven, with short curly black hair, wearing a plain light-blue tunic with a rope belt, amazed and full of wonder, pointing forward and up with his right arm outstretched, his left hand on his chest, wide shining eyes and an open smile, exactly two arms and exactly two hands."
+  },
+  {
+   "id": "king_israel",
+   "종류": "인물",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "the king of Israel, a man of about thirty-five with a short black beard, a simple gold crown, a dark red royal robe with gold trim and a sword in a sheath at his belt, standing tall with his right hand resting on the hilt of his sheathed sword, his left hand at his side, stern uncertain face, exactly two arms and exactly two hands. No statues, no idols, no carved figures, no calves, no crescent shapes, no moon ornaments, no religious symbols anywhere."
+  },
+  {
+   "id": "p_server",
+   "종류": "인물",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "An Israelite man with a short brown beard in a plain tan tunic and a white headcloth, walking forward and carrying a big woven basket full of round loaves of bread in both arms, friendly smile, exactly two arms and exactly two hands."
+  },
+  {
+   "id": "p_server2",
+   "종류": "인물",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "An Israelite woman in a dark green dress and a white headscarf, walking forward and carrying a big clay water jar on her left shoulder, holding it with her left hand, her right hand holding a small clay cup, friendly smile, exactly two arms and exactly two hands."
+  },
+  {
+   "id": "firehorse",
+   "종류": "정령",
+   "시드": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "프롬프트": "A galloping horse made entirely of bright living flames and golden light, with a flowing mane of fire and glowing hooves, no rider, no saddle, no person, side view facing right. Isolated on a plain pure white background."
+  },
+  {
+   "id": "firechariot",
+   "종류": "정령",
+   "시드": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "프롬프트": "A two-wheeled chariot made entirely of bright living fire and golden light with fiery spoked wheels, pulled by two galloping horses made of flames, completely empty with no rider, no driver, no person in it, side view facing right. Isolated on a plain pure white background."
+  },
+  {
+   "id": "e_naaman",
+   "종류": "인물",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "Naaman, a tall Aramean army commander with a black beard, wearing only a plain knee-length white linen tunic with a red sash and a red headband, his left forearm wrapped in white cloth bandages, standing in shallow river water up to his knees and looking around unsure, exactly two arms and exactly two hands. No statues, no idols, no carved figures, no calves, no crescent shapes, no moon ornaments, no religious symbols anywhere."
+  },
+  {
+   "id": "e_naaman_clean",
+   "종류": "인물",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "Naaman, a tall Aramean army commander with a black beard, wearing a plain knee-length white linen tunic with a red sash and a red headband, standing in shallow river water up to his knees and raising both bare clean arms high in joy, laughing with a happy face, a loose white cloth floating away on the water, exactly two arms and exactly two hands. No statues, no idols, no carved figures, no calves, no crescent shapes, no moon ornaments, no religious symbols anywhere."
+  },
+  {
+   "id": "s18a",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: at sunset in the open plain east of the Jordan, a great whirlwind of golden light lifts Elijah the prophet, an old Israelite man with a long white beard and long white hair, wearing a rough hairy brown cloak tied with a leather belt, up into the glowing sky; between the two men a chariot and horses made entirely of bright fire race across, with no rider and no driver; below on the ground Elisha the prophet, an Israelite man of about forty with a short black beard, a plain white cloth covering his head, wearing a rough brown hairy cloak over a cream tunic with a leather belt, stands and reaches up toward the sky with both arms stretched upward, amazed; Elijah's brown cloak flutters down through the air toward Elisha; dramatic orange and gold clouds. No statues, no idols, no carved figures, no calves, no crescent shapes, no moon ornaments, no religious symbols anywhere. Hands are drawn simply and clearly, each hand with four fingers and a thumb, and no hand overlaps another person. Every face is clear and well drawn with distinct eyes, nose and mouth. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "s18b",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: on the bank of the Jordan river among reeds, Elisha the prophet, an Israelite man of about forty with a short black beard, a plain white cloth covering his head, wearing a rough brown hairy cloak over a cream tunic with a leather belt, holds a rolled-up brown hairy cloak in both hands and strikes the water with it; the river water parts to the left and to the right, opening a dry path across the riverbed; far away on the other bank a small group of young men who are disciples of the prophets, in plain brown and grey wool tunics with short beards, watch amazed; bright afternoon light. No statues, no idols, no carved figures, no calves, no crescent shapes, no moon ornaments, no religious symbols anywhere. Hands are drawn simply and clearly, each hand with four fingers and a thumb, and no hand overlaps another person. Every face is clear and well drawn with distinct eyes, nose and mouth. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "s18c",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: inside a small upper room on a flat roof with a simple wooden bed, a small table, a stool and an oil lamp on a stand; a joyful Israelite mother in a dark green dress and a white headscarf hugs her little son of about six in both arms; the boy is awake with open eyes, smiling and looking at his mother; on the right Elisha the prophet, an Israelite man of about forty with a short black beard, a plain white cloth covering his head, wearing a rough brown hairy cloak over a cream tunic with a leather belt, stands beside them and smiles warmly with his hands folded in front of him; warm daylight from a small window. Only these three people. Nobody is wounded, no blood, nobody lying dead. Hands are drawn simply and clearly, each hand with four fingers and a thumb, and no hand overlaps another person. Every face is clear and well drawn with distinct eyes, nose and mouth. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "s18d",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: during a famine at Gilgal under a dry tree, Elisha the prophet, an Israelite man of about forty with a short black beard, a plain white cloth covering his head, wearing a rough brown hairy cloak over a cream tunic with a leather belt, stands and points with his right hand toward a group of young men who are disciples of the prophets, in plain brown and grey wool tunics with short beards, sitting on the ground in a row; beside Elisha Elisha's servant, a young Israelite man of about eighteen, clean-shaven, with short curly black hair, wearing a plain light-blue tunic with a rope belt, holds a big woven basket of twenty small round barley loaves in both arms and looks unsure; a farmer in a plain tunic who brought the bread stands behind them; dry brown hills, warm light. No statues, no idols, no carved figures, no calves, no crescent shapes, no moon ornaments, no religious symbols anywhere. Hands are drawn simply and clearly, each hand with four fingers and a thumb, and no hand overlaps another person. Every face is clear and well drawn with distinct eyes, nose and mouth. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "s18e",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: in the courtyard of a rich house in Damascus with blue tiles and a fountain, a little Israelite girl of about ten in a plain beige dress and a small headscarf folds her hands together and speaks earnestly to a kind noblewoman in a rich purple dress and gold earrings, who bends down and listens; in the doorway behind them stands Naaman, a tall Aramean army commander with a black beard, bronze scale armor and a red cloak, his left forearm wrapped in white cloth, looking thoughtful. Only these three people. No statues, no idols, no carved figures, no calves, no crescent shapes, no moon ornaments, no religious symbols anywhere. Hands are drawn simply and clearly, each hand with four fingers and a thumb, and no hand overlaps another person. Every face is clear and well drawn with distinct eyes, nose and mouth. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "s18f",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: on the bank of the Jordan river where young men who are disciples of the prophets, in plain brown and grey wool tunics with short beards, have been cutting trees; in the front one young man holds an empty wooden axe handle in his left hand and points at the water with his right hand, surprised; Elisha the prophet, an Israelite man of about forty with a short black beard, a plain white cloth covering his head, wearing a rough brown hairy cloak over a cream tunic with a leather belt, stands beside him and has just thrown a small stick into the water; an iron axe head floats up on the surface of the water next to the stick; logs and tree stumps on the bank, bright morning light. No statues, no idols, no carved figures, no calves, no crescent shapes, no moon ornaments, no religious symbols anywhere. Hands are drawn simply and clearly, each hand with four fingers and a thumb, and no hand overlaps another person. Every face is clear and well drawn with distinct eyes, nose and mouth. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "s18g",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: at night inside the tent of the king of Aram, lit by an oil lamp: the king of Aram, an angry man with a black curled beard, a tall red cap and a navy-blue royal robe, rises from his seat in front of a wooden table with a rough painted map; an Aramean officer in a navy-blue tunic and red headband points toward the tent door with his right hand; through the open tent door, under the moonlight, Aramean horses, chariots and soldiers set out on a road; only two people inside the tent. No statues, no idols, no carved figures, no calves, no crescent shapes, no moon ornaments, no religious symbols anywhere. Hands are drawn simply and clearly, each hand with four fingers and a thumb, and no hand overlaps another person. Every face is clear and well drawn with distinct eyes, nose and mouth. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "v18a",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: at dawn on top of the mud-brick wall of the little town of Dothan, Elisha's servant, a young Israelite man of about eighteen, clean-shaven, with short curly black hair, wearing a plain light-blue tunic with a rope belt, stares with wide astonished eyes and points with his right hand at the hills; beside him Elisha the prophet, an Israelite man of about forty with a short black beard, a plain white cloth covering his head, wearing a rough brown hairy cloak over a cream tunic with a leather belt, rests his left hand on the servant's shoulder and raises his right hand calmly; below in the valley the tents and chariots of the Aramean army surround the town; and all over the surrounding hills, many horses and chariots made entirely of bright living fire and golden light, with no riders, no drivers and no people in them, fill the mountains in a great ring, glowing in the pink morning sky. No statues, no idols, no carved figures, no calves, no crescent shapes, no moon ornaments, no religious symbols anywhere. Nobody is wounded, no blood, nobody lying dead. Hands are drawn simply and clearly, each hand with four fingers and a thumb, and no hand overlaps another person. Every face is clear and well drawn with distinct eyes, nose and mouth. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "v18b",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: in the stone square inside the city of Samaria, a group of Aramean soldiers in navy-blue tunics with red headbands, without weapons, look around in surprise as if just waking up; on the left the king of Israel, a man of about thirty-five with a short black beard, a simple gold crown, a dark red royal robe with gold trim and a sword in a sheath at his belt, grips the hilt of his sheathed sword with his right hand and looks at them; in the middle Elisha the prophet, an Israelite man of about forty with a short black beard, a plain white cloth covering his head, wearing a rough brown hairy cloak over a cream tunic with a leather belt, stands between the king and the soldiers and holds up his open right palm toward the king to stop him, with a kind firm face; city walls and flat-roofed houses behind. No statues, no idols, no carved figures, no calves, no crescent shapes, no moon ornaments, no religious symbols anywhere. Nobody is wounded, no blood, nobody lying dead. Hands are drawn simply and clearly, each hand with four fingers and a thumb, and no hand overlaps another person. Every face is clear and well drawn with distinct eyes, nose and mouth. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "v18c",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: a great feast outside the city gate of Samaria in the late afternoon: long low wooden tables on the grass covered with round loaves of bread and clay cups; Aramean soldiers in navy-blue tunics and red headbands, without any weapons, sit and eat bread and drink with calm happy faces; in the front an Israelite woman in a green dress pours water from a clay jar held in both hands into a soldier's cup, and an Israelite man hands round loaves from a basket; Elisha the prophet, an Israelite man of about forty with a short black beard, a plain white cloth covering his head, wearing a rough brown hairy cloak over a cream tunic with a leather belt, stands and smiles; far away a line of men walks home along a hill road under the golden sunset. No statues, no idols, no carved figures, no calves, no crescent shapes, no moon ornaments, no religious symbols anywhere. Nobody is wounded, no blood, nobody lying dead. Hands are drawn simply and clearly, each hand with four fingers and a thumb, and no hand overlaps another person. Every face is clear and well drawn with distinct eyes, nose and mouth. Every person has exactly two arms, two hands, two legs and two feet."
+  }
+ ]
+}

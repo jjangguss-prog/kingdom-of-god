@@ -3,139 +3,406 @@
  "공통": "cinematic orchestral film score, Middle Eastern color, driving world percussion groove (darbuka, frame drums, riq), energetic rhythmic pulse throughout, orchestra and choir, concert hall reverb, no drum kit, no synth, no pop vocals",
  "출력": "raw",
  "항목": [
-  {"id": "title", "이름": "오프닝 · 하나님의 나라", "결": "웅장",
+  {
+   "id": "title",
+   "이름": "오프닝 · 하나님의 나라",
+   "결": "웅장",
    "캡션": "Epic majestic main theme for a biblical adventure. A lone ney flute and a solo female vocalise over a low desert drone, then warm strings swell, French horns state a noble heroic melody, timpani and frame drums, the full choir enters singing a majestic Hallelujah, triumphant brass climax, ends warm and reverent. Duduk, harp, full orchestra, awe and wonder.",
    "가사": "[Intro - solo female voice]\nAh, ah, ah\n\n[Main Theme - horns]\n\n[Chorus - choir]\nHallelujah\nHallelujah\nAh, ah\n\n[Bridge - strings]\n\n[Chorus - choir]\nHallelujah\nHallelujah\nAmen\n\n[Outro - fade out]",
-   "bpm": 76, "key": "D minor", "길이": 150},
-
-  {"id": "map", "이름": "지도 · 약속의 길", "결": "활력 · 여정",
+   "bpm": 76,
+   "key": "D minor",
+   "길이": 150
+  },
+  {
+   "id": "map",
+   "이름": "지도 · 약속의 길",
+   "결": "활력 · 여정",
    "캡션": "Upbeat adventurous journey theme for a map of an ancient land. A lively oud and ney flute melody over a bouncing darbuka groove, plucked kanun and pizzicato strings, hand claps, warm horns answer, a bright wordless choir lifts the chorus, hopeful and forward-moving.",
    "가사": "[Intro - oud and darbuka]\n\n[Verse - ney flute]\n\n[Chorus - choir]\nAh, ah, ah\nHosanna\n\n[Bridge - horns]\n\n[Chorus - choir]\nAh, ah\nHosanna\n\n[Outro]",
-   "bpm": 112, "key": "A minor", "길이": 150, "시드": [1]},
-
-  {"id": "story", "이름": "이야기 · 그때에", "결": "활력 · 이야기",
+   "bpm": 112,
+   "key": "A minor",
+   "길이": 150,
+   "시드": [
+    1
+   ]
+  },
+  {
+   "id": "story",
+   "이름": "이야기 · 그때에",
+   "결": "활력 · 이야기",
    "캡션": "Warm storytelling theme with a steady groove, like a storyteller by a fire. Harp and oud arpeggios over a walking frame-drum and riq pattern, a solo duduk sings an ancient modal melody, light strings, a female voice hums, curious and heartfelt, moving forward.",
    "가사": "[Intro - harp and riq]\n\n[Verse - duduk]\n\n[Chorus - female voice]\nAh, ah\nMm, mm\n\n[Interlude - oud]\n\n[Outro]",
-   "bpm": 96, "key": "E minor", "길이": 120, "시드": [1]},
-
-  {"id": "victory", "이름": "승리 · 구원의 노래", "결": "웅장",
+   "bpm": 96,
+   "key": "E minor",
+   "길이": 120,
+   "시드": [
+    1
+   ]
+  },
+  {
+   "id": "victory",
+   "이름": "승리 · 구원의 노래",
+   "결": "웅장",
    "캡션": "Triumphant celebration after deliverance. Bright brass fanfare, timpani rolls, frame drums and tambourines in a joyful dance rhythm, the large choir sings a jubilant Hallelujah, then it settles into warm thankful strings and a soft choral Amen.",
    "가사": "[Intro - brass fanfare]\n\n[Chorus - choir]\nHallelujah\nHallelujah\nHallelujah\n\n[Instrumental - dance]\n\n[Outro - choir]\nAmen\nAmen",
-   "bpm": 104, "key": "D major", "길이": 90},
-
-  {"id": "defeat", "이름": "등불이 꺼져 가요", "결": "잔잔",
+   "bpm": 104,
+   "key": "D major",
+   "길이": 90
+  },
+  {
+   "id": "defeat",
+   "이름": "등불이 꺼져 가요",
+   "결": "잔잔",
    "캡션": "Short somber cue. A solo cello and a soft choir hum, sorrowful but gentle, slowly turning hopeful, ending on one long warm major chord.",
    "가사": "[Intro - cello]\n\n[Verse - soft choir]\nMm, mm\nAh\n\n[Outro - fade out]",
-   "bpm": 60, "key": "C minor", "길이": 40},
-
-  {"id": "s1", "이름": "1 방주", "결": "어둡게 시작해 소망으로",
+   "bpm": 60,
+   "key": "C minor",
+   "길이": 40
+  },
+  {
+   "id": "s1",
+   "이름": "1 방주",
+   "결": "어둡게 시작해 소망으로",
    "캡션": "Ominous battle music under heavy rain. Low strings ostinato, a deep male choir chanting, distant rolling timpani like thunder, steady frame-drum pulse, tension rises until heroic French horns and a hopeful choir break through like light in the storm.",
    "가사": "[Intro - low strings]\n\n[Verse - male choir]\nOh, oh, oh\nOh, oh\n\n[Instrumental]\n\n[Chorus - full choir]\nAh, ah, ah\nAh, ah\n\n[Instrumental]\n\n[Outro]",
-   "bpm": 100, "key": "D minor", "길이": 150},
-
-  {"id": "s2", "이름": "2 아브람의 길", "결": "모험",
+   "bpm": 100,
+   "key": "D minor",
+   "길이": 150
+  },
+  {
+   "id": "s2",
+   "이름": "2 아브람의 길",
+   "결": "모험",
    "캡션": "Adventurous journey battle theme with Middle Eastern flavor. Oud and duduk melody, driving frame drums and darbuka, sweeping strings, noble French horns, a hopeful choir, wide open hills, faith and promise, steady energetic pulse.",
    "가사": "[Intro - duduk]\n\n[Main Theme - strings]\n\n[Chorus - choir]\nAh, ah, ah\nAh, ah\n\n[Instrumental - drums]\n\n[Chorus - choir]\nAh, ah, ah\nAmen\n\n[Outro]",
-   "bpm": 108, "key": "E minor", "길이": 150},
-
-  {"id": "s3", "이름": "3 롯을 구하라", "결": "급박한 밤",
+   "bpm": 108,
+   "key": "E minor",
+   "길이": 150
+  },
+  {
+   "id": "s3",
+   "이름": "3 롯을 구하라",
+   "결": "급박한 밤",
    "캡션": "Urgent night battle and swift rescue raid under the moon. Fast staccato strings ostinato, pounding war drums, low brass stabs, tense male choir chants, a brave horn call breaking through, relentless driving momentum.",
    "가사": "[Intro - war drums]\n\n[Verse - male choir]\nHa, ha, ha\nHa, ha\n\n[Instrumental - strings]\n\n[Chorus - full choir]\nAh, ah, ah\nAh\n\n[Instrumental]\n\n[Outro]",
-   "bpm": 128, "key": "C minor", "길이": 150},
-
-  {"id": "s4", "이름": "4 갈대 상자", "결": "활력 · 긴장과 다정함",
+   "bpm": 128,
+   "key": "C minor",
+   "길이": 150
+  },
+  {
+   "id": "s4",
+   "이름": "4 갈대 상자",
+   "결": "활력 · 긴장과 다정함",
    "캡션": "Tense Egyptian river chase, quick and rhythmic. Rapid darbuka and tabla groove, kanun and oud ostinato in Phrygian dominant, a ney flute darting like reeds in the wind, low strings pulse with danger, a tender female vocalise soars above, the choir answers with hope.",
    "가사": "[Intro - darbuka]\n\n[Verse - ney flute]\n\n[Chorus - female voice and choir]\nAh, ah, ah\nAh, ah\n\n[Instrumental - strings and drums]\n\n[Chorus - choir]\nAh, ah\nAmen\n\n[Outro]",
-   "bpm": 118, "key": "D minor", "길이": 150, "시드": [1]},
-
-  {"id": "s5", "이름": "5 미디안 우물", "결": "활력 · 목자들",
+   "bpm": 118,
+   "key": "D minor",
+   "길이": 150,
+   "시드": [
+    1
+   ]
+  },
+  {
+   "id": "s5",
+   "이름": "5 미디안 우물",
+   "결": "활력 · 목자들",
    "캡션": "Bright desert well battle, lively and brave. Galloping frame drums and darbuka, oud and duduk trading a catchy Middle Eastern melody, staccato strings, hand claps and tambourine, heroic horns, the choir sings Hallelujah, shepherds defending their flock, joyful energy.",
    "가사": "[Intro - frame drums]\n\n[Verse - oud and duduk]\n\n[Chorus - choir]\nHallelujah\nAh, ah\n\n[Instrumental - horns]\n\n[Chorus - choir]\nHallelujah\nAmen\n\n[Outro]",
-   "bpm": 116, "key": "G minor", "길이": 150, "시드": [1]},
-
-  {"id": "s6", "이름": "6 홍해", "결": "웅장",
+   "bpm": 116,
+   "key": "G minor",
+   "길이": 150,
+   "시드": [
+    1
+   ]
+  },
+  {
+   "id": "s6",
+   "이름": "6 홍해",
+   "결": "웅장",
    "캡션": "Epic battle at the sea at night. Massive choir and full orchestra, relentless low strings and brass ostinato like charging chariots, thunderous timpani and big drums, surging string swells like wind and waves, Middle Eastern melody on horns, awe and deliverance.",
    "가사": "[Intro - big drums]\n\n[Verse - choir]\nAh, ah, ah\nAh, ah\n\n[Instrumental - brass]\n\n[Chorus - full choir]\nHallelujah\nAh, ah, ah\n\n[Instrumental]\n\n[Outro]",
-   "bpm": 120, "key": "D minor", "길이": 150},
-
-  {"id": "boss1", "이름": "보스 · 바로", "결": "위협",
+   "bpm": 120,
+   "key": "D minor",
+   "길이": 150
+  },
+  {
+   "id": "boss1",
+   "이름": "보스 · 바로",
+   "결": "위협",
    "캡션": "Dark imperial villain theme of a proud Egyptian king. Menacing low brass and a male choir chanting in a Phrygian dominant mode, heavy war drums, sistrum, cold relentless march, hard and unyielding.",
    "가사": "[Intro - war drums]\n\n[Verse - male choir]\nOh, oh, oh\nOh, oh\n\n[Instrumental - low brass]\n\n[Chorus - full choir]\nAh, ah, ah\nAh\n\n[Outro]",
-   "bpm": 100, "key": "C minor", "길이": 120},
-
-  {"id": "s7", "이름": "7 르비딤", "결": "용감",
+   "bpm": 100,
+   "key": "C minor",
+   "길이": 120
+  },
+  {
+   "id": "s7",
+   "이름": "7 르비딤",
+   "결": "용감",
    "캡션": "Heroic desert battle against raiders at sunset. Galloping string ostinato, a bold horn theme, frame drums, the choir swells upward like hands lifted in prayer, perseverance and help from above, golden and brave.",
    "가사": "[Intro - strings]\n\n[Main Theme - horns]\n\n[Chorus - choir]\nAh, ah, ah\nAh, ah\n\n[Instrumental]\n\n[Chorus - choir]\nHosanna\nAh, ah\n\n[Outro]",
-   "bpm": 116, "key": "G minor", "길이": 150},
-
-  {"id": "s8", "이름": "8 에드레이", "결": "웅장·무거움",
+   "bpm": 116,
+   "key": "G minor",
+   "길이": 150
+  },
+  {
+   "id": "s8",
+   "이름": "8 에드레이",
+   "결": "웅장·무거움",
    "캡션": "Massive heavy battle against giants. Slow crushing low brass, contrabass and tuba, booming big drums, a deep male choir, tense string tremolo, then courageous horns and the full choir rise: do not be afraid.",
    "가사": "[Intro - big drums]\n\n[Verse - male choir]\nOh, oh, oh\nOh\n\n[Instrumental - low brass]\n\n[Chorus - full choir]\nAh, ah, ah\nAh, ah\n\n[Outro]",
-   "bpm": 92, "key": "F minor", "길이": 150},
-
-  {"id": "boss2", "이름": "보스 · 바산 왕 옥", "결": "위협",
+   "bpm": 92,
+   "key": "F minor",
+   "길이": 150
+  },
+  {
+   "id": "boss2",
+   "이름": "보스 · 바산 왕 옥",
+   "결": "위협",
    "캡션": "Colossal giant king theme. Enormous slow stomping percussion, low brass and a bass choir roaring, dissonant strings, earthquake rumble, oppressive pride, heavy and relentless.",
    "가사": "[Intro - stomping drums]\n\n[Verse - bass choir]\nOh, oh\nOh, oh\n\n[Instrumental - brass]\n\n[Chorus - full choir]\nAh, ah, ah\n\n[Outro]",
-   "bpm": 80, "key": "E minor", "길이": 120},
-
-  {"id": "s9", "이름": "9 여리고", "결": "활력 · 행진",
+   "bpm": 80,
+   "key": "E minor",
+   "길이": 120
+  },
+  {
+   "id": "s9",
+   "이름": "9 여리고",
+   "결": "활력 · 행진",
    "캡션": "Marching procession battle around a walled city, steady and powerful. Strong marching frame drums and big drums, ram's horn calls, low strings ostinato, bold brass, a male choir chanting on each step, a duduk melody, tension builds with every circuit, determined faith.",
    "가사": "[Intro - drums and ram's horn]\n\n[Verse - male choir]\nOh, oh\nAh, ah\n\n[Build - strings]\n\n[Chorus - full choir]\nHosanna\nAh, ah, ah\n\n[Outro]",
-   "bpm": 110, "key": "C minor", "길이": 150, "시드": [1]},
-
-  {"id": "s10", "이름": "10 기브온", "결": "밤에서 새벽으로, 웅장",
+   "bpm": 110,
+   "key": "C minor",
+   "길이": 150,
+   "시드": [
+    1
+   ]
+  },
+  {
+   "id": "s10",
+   "이름": "10 기브온",
+   "결": "밤에서 새벽으로, 웅장",
    "캡션": "Night march into a great battle at dawn. Begins dark and urgent with pulsing strings and drums, builds to a radiant sunrise with soaring choir and brass, majestic and celestial, the sun stands still, epic heavenly victory.",
    "가사": "[Intro - pulsing strings]\n\n[Verse - choir]\nAh, ah\nAh, ah\n\n[Build - drums]\n\n[Chorus - full choir]\nHallelujah\nHallelujah\n\n[Instrumental - brass]\n\n[Outro]",
-   "bpm": 112, "key": "D major", "길이": 150},
-
-  {"id": "s11", "이름": "11 기손 강", "결": "폭풍, 웅장",
+   "bpm": 112,
+   "key": "D major",
+   "길이": 150
+  },
+  {
+   "id": "s11",
+   "이름": "11 기손 강",
+   "결": "폭풍, 웅장",
    "캡션": "Storm battle on a wide plain against iron chariots. Relentless low brass and pounding drums like rolling chariot wheels, rain and thunder swells, a solo female voice rises like a prophetess calling to arise, then a soaring choir as if the stars fight from heaven, rushing river-like string runs, a triumphant flood of sound.",
    "가사": "[Intro - pounding drums]\n\n[Verse - solo female voice]\nAh, ah\nAh\n\n[Instrumental - low brass]\n\n[Chorus - full choir]\nHallelujah\nAh, ah, ah\n\n[Instrumental - strings]\n\n[Outro]",
-   "bpm": 120, "key": "E minor", "길이": 150},
-
-  {"id": "s12", "이름": "12 하롯 샘", "결": "활력 · 밤의 매복",
+   "bpm": 120,
+   "key": "E minor",
+   "길이": 150
+  },
+  {
+   "id": "s12",
+   "이름": "12 하롯 샘",
+   "결": "활력 · 밤의 매복",
    "캡션": "Night ambush battle in a valley of tents, tense and rhythmic from the first bar. Fast darbuka and frame drums like racing hearts, oud ostinato, ney flute, low brass stabs, ram's horn calls, percussion bursts like clay jars shattering, the choir blazes up like torches.",
    "가사": "[Intro - darbuka]\n\n[Verse - ney flute]\n\n[Chorus - full choir]\nHallelujah\nHosanna\n\n[Instrumental - ram's horn and drums]\n\n[Chorus - choir]\nAh, ah, ah\n\n[Outro]",
-   "bpm": 124, "key": "E minor", "길이": 150, "시드": [1]},
-
-  {"id": "boss3", "이름": "보스 · 오렙과 스엡", "결": "웅장",
+   "bpm": 124,
+   "key": "E minor",
+   "길이": 150,
+   "시드": [
+    1
+   ]
+  },
+  {
+   "id": "boss3",
+   "이름": "보스 · 오렙과 스엡",
+   "결": "웅장",
    "캡션": "Twin villain theme for two desert princes, two motifs woven together. High circling strings and woodwinds like a bird of prey wheeling in the sky, against a prowling low brass and pizzicato bass line like a stalking wolf, steady camel-gait hand drums and frame drums, a dark low choir, menacing but not horror, no howling, relentless and heavy.",
    "가사": "[Intro - camel-gait drums]\n\n[Verse - low choir]\nOh, oh\nAh, ah\n\n[Instrumental - high strings and low brass]\n\n[Chorus - full choir]\nAh, ah, ah\n\n[Outro]",
-   "bpm": 96, "key": "C minor", "길이": 120},
-
-  {"id": "s13", "이름": "13 미스바", "결": "활력 · 회개와 우레",
+   "bpm": 96,
+   "key": "C minor",
+   "길이": 120
+  },
+  {
+   "id": "s13",
+   "이름": "13 미스바",
+   "결": "활력 · 회개와 우레",
    "캡션": "Repentance and thunder battle on a hill. A driving darbuka and frame-drum groove from the first bar, oud and ney flute melody, surging string runs, a solo female voice cries out over the rhythm, timpani rolls build and crack like thunder, brass and choir burst out.",
    "가사": "[Intro - darbuka and oud]\n\n[Verse - female voice]\nAh, ah\nAh, ah, ah\n\n[Build - timpani]\n\n[Chorus - full choir]\nAh, ah, ah\nAmen\n\n[Instrumental - brass and strings]\n\n[Outro - choir]\nAmen",
-   "bpm": 118, "key": "D minor", "길이": 150, "시드": [1]},
-
-  {"id": "s14", "이름": "14 엘라 골짜기", "결": "활력 · 목동의 용기",
+   "bpm": 118,
+   "key": "D minor",
+   "길이": 150,
+   "시드": [
+    1
+   ]
+  },
+  {
+   "id": "s14",
+   "이름": "14 엘라 골짜기",
+   "결": "활력 · 목동의 용기",
    "캡션": "Shepherd's courage battle theme in a valley facing a giant. A bright shepherd flute and harp motif over a bouncing darbuka groove, oud and kanun, low brass and big drum hits like a giant's stomps answer, the rhythm never stops, horns grow bolder, the choir rises, fearless.",
    "가사": "[Intro - flute and darbuka]\n\n[Verse - oud]\n\n[Chorus - choir]\nHallelujah\nAh, ah\n\n[Instrumental - low brass and big drums]\n\n[Chorus - full choir]\nHallelujah\nHosanna\n\n[Outro]",
-   "bpm": 120, "key": "A minor", "길이": 150, "시드": [1]},
-
-  {"id": "boss4", "이름": "보스 · 골리앗", "결": "활력 · 거인",
+   "bpm": 120,
+   "key": "A minor",
+   "길이": 150,
+   "시드": [
+    1
+   ]
+  },
+  {
+   "id": "boss4",
+   "이름": "보스 · 골리앗",
+   "결": "활력 · 거인",
    "캡션": "Giant champion boss theme. Heavy stomping big drums in a relentless groove, a massive low brass riff, bronze cymbal clashes like armor, a deep male choir roaring, a fast darbuka layer keeps the energy high, a brave shepherd flute motif answers, menacing but exciting.",
    "가사": "[Intro - big drums]\n\n[Verse - male choir]\nOh, oh\nAh, ah\n\n[Instrumental - low brass and darbuka]\n\n[Chorus - full choir]\nAh, ah, ah\n\n[Outro]",
-   "bpm": 112, "key": "E minor", "길이": 120, "시드": [1]},
-
-  {"id": "s15", "이름": "15 엔게디", "결": "활력 · 광야의 추격전(도파민: 첫 박부터 빠른 그루브, 귀에 남는 우드 리프, 쌓였다 터지는 후렴)",
+   "bpm": 112,
+   "key": "E minor",
+   "길이": 120,
+   "시드": [
+    1
+   ]
+  },
+  {
+   "id": "s15",
+   "이름": "15 엔게디",
+   "결": "활력 · 광야의 추격전(도파민: 첫 박부터 빠른 그루브, 귀에 남는 우드 리프, 쌓였다 터지는 후렴)",
    "캡션": "Fast chase battle theme in a desert canyon beside the Dead Sea. A punchy darbuka and frame-drum groove from the very first beat, a catchy repeating oud riff as the hook, ney flute answers, staccato string ostinato driving forward, a short bright lyre motif, the energy builds with rising strings and riq rolls and then drops into a huge choir and brass chorus, heroic, thrilling and exciting.",
    "가사": "[Intro - darbuka groove]\n\n[Verse - oud riff]\n\n[Build - strings rising]\n\n[Chorus - full choir]\nHallelujah\nAh, ah, ah\n\n[Instrumental - ney and brass]\n\n[Build - drums]\n\n[Chorus - full choir]\nHallelujah\nHosanna\n\n[Outro]",
-   "bpm": 126, "key": "D minor", "길이": 150, "시드": [1, 2, 3, 4]},
-
-  {"id": "boss5", "이름": "보스 · 사울", "결": "활력 · 악령이 내리는 왕(도파민: 쉼 없는 큰 북, 창을 던지듯 찌르는 금관, 빌드업과 드롭)",
+   "bpm": 126,
+   "key": "D minor",
+   "길이": 150,
+   "시드": [
+    1,
+    2,
+    3,
+    4
+   ]
+  },
+  {
+   "id": "boss5",
+   "이름": "보스 · 사울",
+   "결": "활력 · 악령이 내리는 왕(도파민: 쉼 없는 큰 북, 창을 던지듯 찌르는 금관, 빌드업과 드롭)",
    "캡션": "Tormented king boss battle theme. Relentless heavy frame drums and huge war-drum hits in a fast driving groove, a rapid low-string ostinato, stabbing brass hits like thrown spears, a dark swelling male choir, the tension builds in waves and erupts into a massive full-orchestra drop, a fragile lyre motif briefly calms the storm before the drums crash back in, intense and thrilling, not horror.",
    "가사": "[Intro - heavy drums]\n\n[Verse - low strings]\nOh, oh\n\n[Build - brass stabs]\n\n[Drop - full choir and orchestra]\nAh, ah, ah\n\n[Bridge - lyre]\n\n[Build - drums]\n\n[Drop - full choir]\nAh, ah, ah\n\n[Outro]",
-   "bpm": 140, "key": "C minor", "길이": 120, "시드": [1, 2, 3, 4]},
-
-  {"id": "s16", "이름": "16 시글락", "결": "활력 · 시글락의 추격(도파민: 낙타 발굽 같은 셋잇단 그루브, 귀에 남는 우드 리프와 네이 후렴, 뿔나팔 신호, 쌓였다 터지는 합창)",
+   "bpm": 140,
+   "key": "C minor",
+   "길이": 120,
+   "시드": [
+    1,
+    2,
+    3,
+    4
+   ]
+  },
+  {
+   "id": "s16",
+   "이름": "16 시글락",
+   "결": "활력 · 시글락의 추격(도파민: 낙타 발굽 같은 셋잇단 그루브, 귀에 남는 우드 리프와 네이 후렴, 뿔나팔 신호, 쌓였다 터지는 합창)",
    "캡션": "Fast desert pursuit battle theme, chasing raiders across a dry ravine to win back what was taken. A galloping triplet darbuka and frame-drum groove like camel hooves from the very first beat, a catchy repeating oud riff as the hook, a soaring ney flute refrain, short ram's horn signals between phrases, staccato strings racing forward, the energy builds with rising strings and riq rolls and then bursts into a huge choir shout and brass chorus, heroic, joyful and thrilling.",
    "가사": "[Intro - galloping darbuka]\n\n[Verse - oud riff]\n\n[Build - ram's horn and rising strings]\n\n[Chorus - full choir]\nAh, ah, ah\nHallelujah\n\n[Instrumental - ney flute refrain]\n\n[Build - drums]\n\n[Chorus - full choir]\nHallelujah\nHosanna\n\n[Outro]",
-   "bpm": 132, "key": "E minor", "길이": 150, "시드": [1, 2, 3, 4]},
-
-  {"id": "s17", "이름": "17 브라가 골짜기", "결": "활력 · 군대 앞의 찬양대 행진(도파민: 첫 박부터 힘찬 행진 그루브, 귀에 남는 수금 리프, 양각 나팔 신호, 쌓였다 터지는 할렐루야 합창)",
+   "bpm": 132,
+   "key": "E minor",
+   "길이": 150,
+   "시드": [
+    1,
+    2,
+    3,
+    4
+   ]
+  },
+  {
+   "id": "s17",
+   "이름": "17 브라가 골짜기",
+   "결": "활력 · 군대 앞의 찬양대 행진(도파민: 첫 박부터 힘찬 행진 그루브, 귀에 남는 수금 리프, 양각 나팔 신호, 쌓였다 터지는 할렐루야 합창)",
    "캡션": "Triumphant marching battle hymn of singers leading an army at dawn in the wilderness. A strong driving frame-drum and darbuka marching groove from the very first beat, a bright catchy repeating lyre and harp riff as the hook, bronze cymbal crashes, ram's horn signals between phrases, staccato strings striding forward, the energy builds with rising strings and riq rolls and then bursts into a huge joyful choir and brass chorus, majestic, confident and thrilling.",
    "가사": "[Intro - marching frame drums]\n\n[Verse - lyre riff]\n\n[Build - ram's horn and rising strings]\n\n[Chorus - full choir]\nHallelujah\nAh, ah, ah\n\n[Instrumental - cymbals and lyre]\n\n[Build - drums]\n\n[Chorus - full choir]\nHallelujah\nAmen\n\n[Outro]",
-   "bpm": 122, "key": "D major", "길이": 150, "시드": [1, 2, 3, 4]}
+   "bpm": 122,
+   "key": "D major",
+   "길이": 150,
+   "시드": [
+    1,
+    2,
+    3,
+    4
+   ]
+  },
+  {
+   "id": "s18",
+   "이름": "18 도단",
+   "결": "활력 · 밤의 포위에서 새벽의 불병거로(도파민: 첫 박부터 낮게 깔린 다르부카 그루브, 낮은 현의 되풀이 리프, 양각 나팔 신호 뒤 쌓였다 터지는 합창)",
+   "캡션": "Tense night siege that turns into a blazing dawn of hope. A low driving darbuka and frame-drum groove from the very first beat, a dark repeating low-string ostinato riff as the hook, soft ominous horns like an army surrounding a town at night, then a ram's horn signal, rising strings and riq rolls build up and burst into a huge bright choir and brass chorus like horses and chariots of fire filling the mountains, thrilling and hopeful.",
+   "가사": "[Intro - low darbuka groove]\n\n[Verse - low string riff]\n\n[Build - ram's horn and rising strings]\n\n[Chorus - full choir]\nAh, ah, ah\nHallelujah\n\n[Instrumental - drums]\n\n[Build - riq rolls]\n\n[Chorus - full choir]\nHallelujah\nAmen\n\n[Outro]",
+   "bpm": 120,
+   "key": "E minor",
+   "길이": 150,
+   "시드": [
+    1,
+    2,
+    3,
+    4
+   ]
+  },
+  {
+   "id": "s19",
+   "이름": "19 예루살렘 포위",
+   "결": "활력 · 성벽을 지키는 행진(도파민: 무거운 큰 북 행진 위 촘촘한 다르부카, 위협하는 낮은 금관과 소망의 수금·양각 나팔, 후렴에서 터지는 합창)",
+   "캡션": "Epic siege of a holy city, defenders on the walls. A heavy marching war-drum and frame-drum groove from the very first beat with fast tight darbuka on top, menacing low brass riffs of a mighty invading empire answered by a bright hopeful lyre and harp hook and ram's horn calls from the walls, staccato strings drive forward, the energy builds with rising strings and bursts into a massive choir and full orchestra chorus, defiant, majestic and thrilling.",
+   "가사": "[Intro - heavy war drums]\n\n[Verse - low brass riff]\n\n[Pre-Chorus - lyre and ram's horn]\n\n[Chorus - full choir]\nAh, ah, ah\nHallelujah\n\n[Instrumental - darbuka]\n\n[Build - rising strings]\n\n[Chorus - full choir]\nHallelujah\nAmen\n\n[Outro]",
+   "bpm": 126,
+   "key": "D minor",
+   "길이": 150,
+   "시드": [
+    1,
+    2,
+    3,
+    4
+   ]
+  },
+  {
+   "id": "boss6",
+   "이름": "보스 · 산헤립의 공성탑",
+   "결": "활력 · 기계처럼 되풀이되는 공성탑(도파민: 쉼 없는 낮은 타악 기계 리듬, 삐걱이는 현, 위로 올라가는 합창, 약속이 이뤄질 때마다 밝아지는 드롭)",
+   "캡션": "Colossal siege engine boss battle theme. Relentless mechanical low percussion ostinato like giant grinding wooden wheels, fast creaking string ostinato, huge war-drum hits, a dark rising male choir, brass stabs, the tension builds in waves and erupts into massive full-orchestra drops that each time grow brighter and more hopeful with a soaring choir, intense and thrilling, not horror.",
+   "가사": "[Intro - mechanical drums]\n\n[Verse - creaking strings]\nOh, oh\n\n[Build - brass stabs]\n\n[Drop - full choir and orchestra]\nAh, ah, ah\n\n[Bridge - rising choir]\n\n[Build - drums]\n\n[Drop - bright full choir]\nHallelujah\n\n[Outro]",
+   "bpm": 140,
+   "key": "F minor",
+   "길이": 120,
+   "시드": [
+    1,
+    2,
+    3,
+    4
+   ]
+  },
+  {
+   "id": "s20",
+   "이름": "20 무너진 성벽",
+   "결": "활력 · 성벽을 쌓는 행진, 본편 마지막 곡(도파민: 프레임 드럼과 다르부카에 망치질 같은 타악, 양각 나팔 신호, 할렐루야 후렴이 가장 크게)",
+   "캡션": "Grand final battle anthem of rebuilding a broken city wall while guarding it. A powerful frame-drum and darbuka groove from the very first beat with hammer-like metallic percussion hits on every bar, a catchy heroic horn and lyre riff as the hook, ram's horn trumpet signals calling people together, strings rising in steps like stones being laid, the energy builds higher and higher and explodes into the biggest joyful choir and full orchestra Hallelujah chorus, triumphant, majestic, the grand finale.",
+   "가사": "[Intro - frame drums and hammer hits]\n\n[Verse - horn and lyre riff]\n\n[Build - ram's horn and rising strings]\n\n[Chorus - full choir]\nHallelujah\nHallelujah\n\n[Instrumental - drums]\n\n[Build - rising strings]\n\n[Chorus - full choir]\nHallelujah\nAmen\n\n[Outro]",
+   "bpm": 125,
+   "key": "D major",
+   "길이": 150,
+   "시드": [
+    1,
+    2,
+    3,
+    4
+   ]
+  },
+  {
+   "id": "ending",
+   "이름": "엔딩 · 베들레헴의 별",
+   "결": "웅장 · 말라기의 새벽 → 밤의 파수꾼 → 베들레헴의 별(처음 몇 초 안에 박, 호산나·아멘으로 크게)",
+   "캡션": "Grand emotional ending theme of a biblical adventure. A gentle frame-drum pulse and harp arpeggios begin within the first seconds like a quiet dawn, a solo duduk sings a longing melody like a watchman waiting through the night under the stars, strings slowly swell, then a bright star rises: horns state a noble hopeful melody, timpani and frame drums build, the full choir enters singing Hosanna and a majestic Amen, a triumphant glorious climax full of wonder and joy.",
+   "가사": "[Intro - harp and soft drums]\n\n[Verse - duduk]\n\n[Build - strings]\n\n[Chorus - full choir]\nHosanna\nHosanna\n\n[Bridge - horns]\n\n[Chorus - full choir]\nHosanna\nAmen\nAmen\n\n[Outro]",
+   "bpm": 96,
+   "key": "D major",
+   "길이": 150,
+   "시드": [
+    1,
+    2,
+    3,
+    4
+   ]
+  }
  ]
 }

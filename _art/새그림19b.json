@@ -1,0 +1,28 @@
+{
+ "출력": "raw",
+ "크기": [
+  1024,
+  1024
+ ],
+ "단계": 4,
+ "항목": [
+  {
+   "id": "bg19",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    11,
+    12,
+    13,
+    14
+   ],
+   "참조": [
+    "ref2/ref19b.png"
+   ],
+   "프롬프트": "Repaint this top-down tower defense game map as a richly hand-painted Kingdom Rush style battlefield of ancient Jerusalem in warm afternoon light, seen from above at a slight angle. Keep exactly the same sandy road shapes and positions. On the left a tall thick stone CITY WALL with battlements runs in a curve from the top edge down to the bottom edge; the four grey squares on it are square stone towers standing on the wall, and where the road crosses the wall there is a big stone city gate with an open arched gateway between two gate towers. Everything to the LEFT of the wall is INSIDE the city: a pale stone-paved city crowded with many small flat-roofed stone houses, the big pale square in the upper left is a great stone temple with a courtyard, the blue oval at the lower left is a stone pool; the road ends inside the city in a small square. Everything to the RIGHT of the wall is OUTSIDE the city: the blue oval at the top is a stone-lined upper pool with a narrow water channel, the white patch beside it is a washermen's field with white cloths drying on the grass, the green patch at the top middle is an olive tree hill, the triangles in the upper right are the tents of an Assyrian army camp with banners and a tall wooden scaffold, the lines on the lower right are terraced fields with olive trees, the small blue circle below the wall outside is a spring in a rock cleft. Elsewhere: rocky dry ground, olive trees, bushes. Nothing covers the roads. No characters, no people, no text. All houses are one-story or two-story stone and mud-brick houses with flat earthen rooftops and low parapets; no sloped roofs, no roof tiles, no red tiles. No statues, no idols, no carved figures, no winged discs, no crescent shapes, no moon ornaments, no religious symbols anywhere."
+  }
+ ]
+}

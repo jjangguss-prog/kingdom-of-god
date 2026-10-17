@@ -280,5 +280,300 @@
     "_len": 150.0
    }
   }
+ },
+ "s18": {
+  "1등": "s18_s3_c5c076.flac",
+  "점수": {
+   "s18_s1_c5c076.flac": 0.325,
+   "s18_s2_c5c076.flac": -0.207,
+   "s18_s3_c5c076.flac": 0.551,
+   "s18_s4_c5c076.flac": -0.669
+  },
+  "값": {
+   "s18_s1_c5c076.flac": {
+    "bpm": 117.454,
+    "pulse": 0.79,
+    "dense": 2.667,
+    "perc": 0.191,
+    "bright": 1908.911,
+    "build": 12.149,
+    "early": -24.683,
+    "repeat": 0.039,
+    "_early_s": 24.683,
+    "_len": 150.0
+   },
+   "s18_s2_c5c076.flac": {
+    "bpm": 117.454,
+    "pulse": 0.627,
+    "dense": 3.06,
+    "perc": 0.137,
+    "bright": 1975.654,
+    "build": 8.299,
+    "early": -25.356,
+    "repeat": 0.037,
+    "_early_s": 25.356,
+    "_len": 150.0
+   },
+   "s18_s3_c5c076.flac": {
+    "bpm": 117.454,
+    "pulse": 0.868,
+    "dense": 3.253,
+    "perc": 0.222,
+    "bright": 1867.046,
+    "build": 7.778,
+    "early": -31.463,
+    "repeat": 0.042,
+    "_early_s": 31.463,
+    "_len": 150.0
+   },
+   "s18_s4_c5c076.flac": {
+    "bpm": 80.75,
+    "pulse": 0.519,
+    "dense": 2.327,
+    "perc": 0.149,
+    "bright": 1703.368,
+    "build": 5.417,
+    "early": -0.0,
+    "repeat": 0.046,
+    "_early_s": 0.0,
+    "_len": 150.0
+   }
+  }
+ },
+ "s19": {
+  "1등": "s19_s3_db0eb8.flac",
+  "점수": {
+   "s19_s1_db0eb8.flac": 0.504,
+   "s19_s2_db0eb8.flac": -0.388,
+   "s19_s3_db0eb8.flac": 0.58,
+   "s19_s4_db0eb8.flac": -0.696
+  },
+  "값": {
+   "s19_s1_db0eb8.flac": {
+    "bpm": 123.047,
+    "pulse": 0.814,
+    "dense": 2.847,
+    "perc": 0.123,
+    "bright": 2163.242,
+    "build": 10.653,
+    "early": -8.824,
+    "repeat": 0.053,
+    "_early_s": 8.824,
+    "_len": 150.0
+   },
+   "s19_s2_db0eb8.flac": {
+    "bpm": 123.047,
+    "pulse": 0.783,
+    "dense": 2.04,
+    "perc": 0.167,
+    "bright": 1924.344,
+    "build": 7.523,
+    "early": -0.139,
+    "repeat": 0.042,
+    "_early_s": 0.139,
+    "_len": 150.0
+   },
+   "s19_s3_db0eb8.flac": {
+    "bpm": 123.047,
+    "pulse": 0.81,
+    "dense": 3.013,
+    "perc": 0.159,
+    "bright": 2170.33,
+    "build": 11.255,
+    "early": -8.313,
+    "repeat": 0.043,
+    "_early_s": 8.313,
+    "_len": 150.0
+   },
+   "s19_s4_db0eb8.flac": {
+    "bpm": 123.047,
+    "pulse": 0.762,
+    "dense": 2.3,
+    "perc": 0.122,
+    "bright": 1994.598,
+    "build": 9.298,
+    "early": -16.3,
+    "repeat": 0.047,
+    "_early_s": 16.3,
+    "_len": 150.0
+   }
+  }
+ },
+ "boss6": {
+  "1등": "boss6_s2_b75e12.flac",
+  "점수": {
+   "boss6_s1_b75e12.flac": -0.634,
+   "boss6_s2_b75e12.flac": 0.584,
+   "boss6_s3_b75e12.flac": 0.238,
+   "boss6_s4_b75e12.flac": -0.187
+  },
+  "값": {
+   "boss6_s1_b75e12.flac": {
+    "bpm": 143.555,
+    "pulse": 0.667,
+    "dense": 2.458,
+    "perc": 0.091,
+    "bright": 2274.495,
+    "build": 17.216,
+    "early": -0.627,
+    "repeat": 0.047,
+    "_early_s": 0.627,
+    "_len": 120.0
+   },
+   "boss6_s2_b75e12.flac": {
+    "bpm": 143.555,
+    "pulse": 0.787,
+    "dense": 3.267,
+    "perc": 0.142,
+    "bright": 2269.96,
+    "build": 18.0,
+    "early": -0.0,
+    "repeat": 0.05,
+    "_early_s": 0.0,
+    "_len": 120.0
+   },
+   "boss6_s3_b75e12.flac": {
+    "bpm": 143.555,
+    "pulse": 0.786,
+    "dense": 3.492,
+    "perc": 0.201,
+    "bright": 2275.676,
+    "build": 18.0,
+    "early": -1.022,
+    "repeat": 0.043,
+    "_early_s": 1.022,
+    "_len": 120.0
+   },
+   "boss6_s4_b75e12.flac": {
+    "bpm": 92.285,
+    "pulse": 0.692,
+    "dense": 3.225,
+    "perc": 0.218,
+    "bright": 2339.959,
+    "build": 15.19,
+    "early": -0.302,
+    "repeat": 0.046,
+    "_early_s": 0.302,
+    "_len": 120.0
+   }
+  }
+ },
+ "s20": {
+  "1등": "s20_s3_1279ac.flac",
+  "점수": {
+   "s20_s1_1279ac.flac": -0.173,
+   "s20_s2_1279ac.flac": 0.079,
+   "s20_s3_1279ac.flac": 0.136,
+   "s20_s4_1279ac.flac": -0.042
+  },
+  "값": {
+   "s20_s1_1279ac.flac": {
+    "bpm": 123.047,
+    "pulse": 0.721,
+    "dense": 3.987,
+    "perc": 0.214,
+    "bright": 2392.113,
+    "build": 11.777,
+    "early": -16.533,
+    "repeat": 0.042,
+    "_early_s": 16.533,
+    "_len": 150.0
+   },
+   "s20_s2_1279ac.flac": {
+    "bpm": 123.047,
+    "pulse": 0.649,
+    "dense": 3.413,
+    "perc": 0.2,
+    "bright": 2537.907,
+    "build": 18.0,
+    "early": -4.83,
+    "repeat": 0.048,
+    "_early_s": 4.83,
+    "_len": 150.0
+   },
+   "s20_s3_1279ac.flac": {
+    "bpm": 129.199,
+    "pulse": 0.742,
+    "dense": 2.78,
+    "perc": 0.135,
+    "bright": 2341.506,
+    "build": 18.0,
+    "early": -4.319,
+    "repeat": 0.049,
+    "_early_s": 4.319,
+    "_len": 150.0
+   },
+   "s20_s4_1279ac.flac": {
+    "bpm": 123.047,
+    "pulse": 0.767,
+    "dense": 3.613,
+    "perc": 0.166,
+    "bright": 2192.01,
+    "build": 15.351,
+    "early": -23.708,
+    "repeat": 0.05,
+    "_early_s": 23.708,
+    "_len": 150.0
+   }
+  }
+ },
+ "ending": {
+  "1등": "ending_s4_71c551.flac",
+  "점수": {
+   "ending_s1_71c551.flac": 0.277,
+   "ending_s2_71c551.flac": -0.328,
+   "ending_s3_71c551.flac": -0.869,
+   "ending_s4_71c551.flac": 0.921
+  },
+  "값": {
+   "ending_s1_71c551.flac": {
+    "bpm": 95.703,
+    "pulse": 0.535,
+    "dense": 2.04,
+    "perc": 0.108,
+    "bright": 1654.56,
+    "build": 18.0,
+    "early": -21.989,
+    "repeat": 0.056,
+    "_early_s": 21.989,
+    "_len": 150.0
+   },
+   "ending_s2_71c551.flac": {
+    "bpm": 95.703,
+    "pulse": 0.531,
+    "dense": 1.333,
+    "perc": 0.075,
+    "bright": 1528.82,
+    "build": 18.0,
+    "early": -29.745,
+    "repeat": 0.054,
+    "_early_s": 29.745,
+    "_len": 150.0
+   },
+   "ending_s3_71c551.flac": {
+    "bpm": 92.285,
+    "pulse": 0.579,
+    "dense": 0.953,
+    "perc": 0.051,
+    "bright": 1336.537,
+    "build": 14.728,
+    "early": -41.146,
+    "repeat": 0.06,
+    "_early_s": 41.146,
+    "_len": 150.0
+   },
+   "ending_s4_71c551.flac": {
+    "bpm": 95.703,
+    "pulse": 0.718,
+    "dense": 2.107,
+    "perc": 0.14,
+    "bright": 1461.001,
+    "build": 18.0,
+    "early": -5.248,
+    "repeat": 0.057,
+    "_early_s": 5.248,
+    "_len": 150.0
+   }
+  }
  }
 }

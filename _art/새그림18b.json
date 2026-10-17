@@ -1,0 +1,65 @@
+{
+ "출력": "raw",
+ "크기": [
+  1024,
+  1024
+ ],
+ "단계": 4,
+ "항목": [
+  {
+   "id": "s18f",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    11,
+    12,
+    13,
+    14
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: on the bank of the Jordan river beside logs and tree stumps, only two people in front: a young Israelite man of about twenty with a short black beard and a plain grey tunic with a brown belt, stands on the bank holding an empty wooden axe handle with no blade in his left hand and pointing down at the water with his right hand, surprised; beside him Elisha the prophet, an Israelite man of about forty with a short black beard, a plain white cloth covering his head, wearing a rough brown hairy cloak over a cream tunic with a leather belt, has just thrown a small stick into the water and watches calmly with both hands open at his sides; on the water surface next to the floating stick, a dark iron axe head without a handle floats up; far behind them two other disciples carry logs on their shoulders, small; bright morning light. No statues, no idols, no carved figures, no calves, no crescent shapes, no moon ornaments, no religious symbols anywhere. Hands are drawn simply and clearly, each hand with four fingers and a thumb, and no hand overlaps another person. Every face is clear and well drawn with distinct eyes, nose and mouth. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "v18a",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    11,
+    12,
+    13,
+    14
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: at dawn on top of the mud-brick wall of the little town of Dothan, only two people standing apart and not touching each other: on the left Elisha's servant, a young Israelite man of about eighteen, clean-shaven, with short curly black hair, wearing a plain light-blue tunic with a rope belt, a grown young man with a thin beginning beard, stares with wide astonished eyes and points with his right arm at the hills, his left hand on his chest; on the right Elisha the prophet, an Israelite man of about forty with a short black beard, a plain white cloth covering his head, wearing a rough brown hairy cloak over a cream tunic with a leather belt, raises both hands up in prayer with a calm face; below in the valley the tents and chariots of the Aramean army surround the town; all over the surrounding hills many horses and chariots made entirely of bright living fire and golden light, with no riders, no drivers and no people in them, glow in a great ring under the pink morning sky. No sloped roofs, no red tiles. No statues, no idols, no carved figures, no calves, no crescent shapes, no moon ornaments, no religious symbols anywhere. Nobody is wounded, no blood, nobody lying dead. Hands are drawn simply and clearly, each hand with four fingers and a thumb, and no hand overlaps another person. Every face is clear and well drawn with distinct eyes, nose and mouth. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "v18b",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    11,
+    12,
+    13,
+    14
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: in the stone square inside the city of Samaria: on the right a group of grown-up bearded Aramean soldiers, adult men with black beards in navy-blue tunics and red headbands, without weapons, look around in surprise; on the left the king of Israel, a man of about thirty-five with a short black beard, a simple gold crown, a dark red royal robe with gold trim and a sword in a sheath at his belt, the only person wearing a crown, grips the hilt of his sheathed sword at his belt with his right hand; in the middle Elisha the prophet, an Israelite man of about forty with a short black beard, a plain white cloth covering his head, wearing a rough brown hairy cloak over a cream tunic with a leather belt, stands between them and holds up his open right palm toward the king to stop him, his left hand at his side, kind firm face; flat-roofed stone houses behind. Only one crown in the picture. No writing anywhere. No statues, no idols, no carved figures, no calves, no crescent shapes, no moon ornaments, no religious symbols anywhere. Nobody is wounded, no blood, nobody lying dead. Hands are drawn simply and clearly, each hand with four fingers and a thumb, and no hand overlaps another person. Every face is clear and well drawn with distinct eyes, nose and mouth. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "r_walk",
+   "종류": "인물",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "An Aramean man from Damascus with a black beard, a dark navy-blue knee-length tunic with a red tasseled sash and a red cloth headband, walking forward calmly with no weapons and empty open hands relaxed at his sides, gentle relieved face, exactly two arms and exactly two hands."
+  }
+ ]
+}

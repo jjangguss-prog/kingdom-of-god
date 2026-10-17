@@ -1,0 +1,36 @@
+{
+ "출력": "raw",
+ "크기": [
+  1024,
+  1024
+ ],
+ "단계": 4,
+ "항목": [
+  {
+   "id": "s19f",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    11,
+    12,
+    13,
+    14
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: at early morning in the stone courtyard of the temple in Jerusalem, King Hezekiah of Judah, a humble earnest man of about thirty-eight with a neat dark-brown beard, a simple gold crown band and a deep blue royal robe with gold trim over a white tunic, the only person wearing a crown, stands facing the temple and pushes open the two tall wooden temple doors wide with both hands; bright golden light streams out from the opening doors; a few steps behind him two Levites with no crowns and no hats, bareheaded young men in plain white linen robes, follow: one holds a broom in both hands and the other carries a clay water jar on his shoulder; dusty steps. Only one crown in the picture. No statues, no idols, no carved figures, no winged discs, no crescent shapes, no moon ornaments, no religious symbols anywhere. Hands are drawn simply and clearly, each hand with four fingers and a thumb, and no hand overlaps another person. Every face is clear and well drawn with distinct eyes, nose and mouth. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "s_shield",
+   "종류": "인물",
+   "시드": [
+    11,
+    12,
+    13,
+    14
+   ],
+   "프롬프트": "an Assyrian soldier, a man with a long curled black beard, a pointed conical iron helmet, a knee-length tunic of bronze scale armor with a fringed tasseled belt, laced leather boots, a big heavy shield bearer holding ONE very tall curved shield of woven reeds, as tall as himself, in front of him with his left hand, and a short spear in his right hand; no other shield, proud chin up, exactly two arms and exactly two hands. No statues, no idols, no carved figures, no winged discs, no crescent shapes, no moon ornaments, no religious symbols anywhere."
+  }
+ ]
+}
