@@ -2,6 +2,7 @@
 # 사용: python 탑자리.py 지도.json 출력폴더
 # 지도.json: {"2": {"paths": [[[x,y],...],...], "avoid": [[x0,y0,x1,y1],...], "n": 14, "base": "#c9b07a", "road": ["#9b7442","#d9b878","#e8cc95"], "marks": [[x,y,r,"#hex"],...], "river": [[x,y],...], "riverW": 46}}
 # river(선택, 11 기손 강): 길 아래에 강을 그리고, 강에서 riverW/2+34 안에는 탑 자리를 두지 않는다
+# lanes(선택, 18 도단 v0.2 2026-10-17): 적이 다니지 않는 길(사마리아 길). 좁게 그리고 탑 자리는 피하지만 덮을 길로 세지 않는다
 # 결과: 스테이지마다 spots(JSON 출력) + 출력폴더\ref<N>.png(1280×720 참조 그림: 바탕색, 길, 표시) + preview<N>.png(탑 자리 표시)
 # 게임과 같은 Catmull-Rom으로 길을 그린다. 탑 자리는 길에서 타원(31×15)이 떨어지게, 길을 고르게 덮도록(한계 이득) 고른다.
 import sys, json, math
@@ -32,7 +33,7 @@ def resample(pts, gap):
 
 def pick(st):
     pl = [catmull(c) for c in st['paths']]
-    dense = [q for p in pl for q in p]
+    dense = [q for p in pl + [catmull(c) for c in st.get('lanes', [])] for q in p]
     samples = []
     for p in pl:
         for q in resample(p, 18):
@@ -76,6 +77,10 @@ def draw_ref(st, pl, path):
         rv = [tuple(map(round, q)) for q in catmull(st['river'])]; rw = st.get('riverW', 46)
         for w, col in ((rw + 8, '#7a8a6a'), (rw, '#3f86b0'), (rw - 18, '#5aa3c8')):
             d.line(rv, fill=col, width=w, joint='curve')
+    for c in st.get('lanes', []):
+        lp = [tuple(map(round, q)) for q in catmull(c)]
+        for w, col in zip((40, 36, 22), ['#3b2614'] + st.get('road', ['#9b7442', '#d9b878', '#e8cc95'])[1:]):
+            d.line(lp, fill=col, width=w, joint='curve')
     for w, col in zip((60, 56, 46, 24), ['#3b2614'] + st.get('road', ['#9b7442', '#d9b878', '#e8cc95'])):
         for p in pl:
             d.line([tuple(map(round, q)) for q in p], fill=col, width=w, joint='curve')
