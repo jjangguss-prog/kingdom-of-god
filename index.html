@@ -306,6 +306,23 @@ body.force #rotate{display:none!important}
 #coach .kind .c{font-family:var(--f-ui);color:#7b4a24}
 #coach .kind.got{background:rgba(127,178,78,.2);border-color:#7fb24e}
 #coach .kind.got .c{color:#4f7f2a}
+#coach .foe{display:flex;gap:.6em;align-items:center}
+#coach .fimg{width:5.6em;height:5.6em;flex:none;border-radius:.7em;background:radial-gradient(circle at 50% 60%,#f6ead0,#d9c393);border:.12em solid var(--wood-dk)}
+#coach .fh{min-width:0}
+#coach .fn b{font-size:1.3em;color:var(--ink)}
+#coach .fn span{font-family:var(--f-ui);font-size:.8em;background:#5b3f8a;color:#f1e6ff;border-radius:1em;padding:.05em .55em;margin-left:.2em}
+#coach .chips{display:flex;flex-wrap:wrap;gap:.15em .6em;font-size:.8em;margin-top:.25em}
+#coach .ch{display:inline-flex;align-items:center;gap:.25em;white-space:nowrap}
+#coach .ch svg{width:1.1em;height:1.1em;flex:none}
+#coach .ch em{font-style:normal;color:var(--ink-2)}
+#coach .ch b{font-family:var(--f-ui);font-weight:400;color:var(--ink)}
+#coach .fl{margin:.35em 0 0;font-size:.92em}
+#coach .fl i{font-style:normal;font-family:var(--f-ui);font-size:.85em;background:var(--wood);color:#fff3d6;border-radius:1em;padding:.05em .55em;margin-right:.4em}
+#coach .fl.era i{background:#5b3f8a}
+#coach .fl .v{display:block;margin-top:.15em;font-family:var(--f-verse);font-weight:700;font-size:.9em;color:var(--ink-2)}
+#toast .tfoe{display:flex;gap:.6em;align-items:center;text-align:left}
+#toast .tfoe canvas{width:3.6em;height:3.6em;flex:none}
+#toast .tfoe em{font-style:normal;font-family:var(--f-ui);color:#5b3f8a}
 #coachDim{inset:0}
 #coachHand{width:0;height:0}
 #coachHand .ring{position:absolute;left:-1.9em;top:-1.9em;width:3.8em;height:3.8em;border-radius:50%;border:.22em solid #ffe58a;box-shadow:0 0 .8em #ffd36b;animation:cring 1.1s ease-out infinite}
@@ -3271,7 +3288,7 @@ function spawn(type,pi,pre){
   if(pre)e.pre=pre;if(def.alt)e.alt=def.alt;   // 17: 세일 산 겉모습 · 미혹하는 영은 높이 떠 있다
   if(def.roar)e.roarCd=rand(3,def.roar.cd);
   G.enemies.push(e);
-  if(!G.seen.has(type)){G.seen.add(type);if(!def.boss&&!(type==='soldier'&&G.sid===1)&&!coFoeOwns(type))toast(`<b>${def.name} · ${def.spirit}</b><br>${def.desc}`,6);}
+  if(!G.seen.has(type)){G.seen.add(type);if(!def.boss&&!(type==='soldier'&&G.sid===1)&&!foeCardDue(type))toast(foeToastHtml(type,def),7);}
 }
 function bossSync(){G.bosses=G.bosses.filter(b=>alive(b)&&!b.gone);G.boss=G.bosses[0]||null;ui.boss(G.bosses.length>0);}   // 12의 오렙과 스엡처럼 보스가 둘일 때도 G.boss는 앞의 하나
 function demonPos(e){if(e.type==='chariot'||e.type==='pharaoh'){const k=e.def.boss?1.8:1;return{x:e.x-e.dir*10*k,y:e.y-64*k};}const s=e.look.s||1,a=enemyArt(e);return{x:e.x-e.dir*6,y:e.y-(a?a.hgt+16:50)*s};}
@@ -4058,12 +4075,6 @@ function coRecommend(){const cnt=l=>G.towers.filter(t=>t.line===l).length,sky=!!
   for(const l of want)if(G.gold>=coCost(l)){const s=coBestSpot(l);if(s)return{l,s};}return null;}
 const coRing=(l,s)=>s?{x:s.x,y:s.y-12,r:l==='shep'?0:coRange(l),marks:l==='art'||l==='levi'?coBlocks():[]}:null;
 const coachOn=()=>!!(G&&G.coach&&!G.coach.off&&G.coach.cur);
-function coFoe(type,line,txt){return{id:'foe_'+type,foe:type,life:12,next:1,art:'enemy:'+type,
-  when:()=>G.enemies.some(e=>e.type===type&&alive(e)&&e.x>40&&e.x<W-40&&e.y>70&&e.y<H-30),
-  start(s){s.e=G.enemies.find(e=>e.type===type&&alive(e)&&e.x>40&&e.x<W-40);},
-  at(){const e=this.e;return e&&alive(e)?{x:e.x,y:e.y-(e.def.fly?FLY_H:0)-30}:null;},
-  ring(){if(!line||G.gold<coCost(line))return null;return coRing(line,coBestSpot(line));},
-  say:()=>txt+(line&&G.gold>=coCost(line)?`<br>지금 세겔로 <b>${LINES[line].name}</b>${josa(LINES[line].name,'을','를')} 세울 수 있어요(점선 원 자리).`:'')};}
 // 판마다 새로 생긴 것(10-18 사용자: "2장은 타워들을 레벨 2까지 지을 수 있잖아. 스테이지마다 새로 적용되는 것들이 있다면 알려줘야해")
 function coNew(items){return{id:'new',next:1,when:()=>G.phase==='prep',ok:()=>G.phase!=='prep',at:()=>null,
   say:()=>`<b>${G.S.name}에서 새로 생긴 것</b><div class="news">${items.map(([a,t])=>`<div class="nw">${a?`<canvas width="96" height="96" data-a="${a}"></canvas>`:'<i class="dot"></i>'}<p>${t}</p></div>`).join('')}</div>`};}
@@ -4087,16 +4098,6 @@ const CO_NEW={
   18:[['enemy:ram','<b>공성 망치</b>: 성문 앞에 멈춰 다섯 번 쳐요. 갑옷이 아주 두꺼워요.'],[null,'길 셋이 서로 다른 <b>성문</b>으로 들어와요. 서쪽 길은 새벽에 열려요.'],[null,'새벽에 <b>그의 눈을 열어 보게 하옵소서</b>, 그 뒤 <b>눈을 어둡게 하옵소서</b>를 눌러요.']],
   19:[['tower:art:4:uzziah','<b>웃시야의 기계</b>(장인 4단계)가 열려요. 큰 돌이 공성 무기에 두 배 반으로 들어요.'],[null,'성벽 위 <b>성 위 자리</b>는 더 멀리 쏴요. 랍사게가 외치면 성 위의 탑부터 멈춰요.'],['enemy:siegetower','마지막에 <b>산헤립의 공성탑</b>이 와요.']],
   20:[['art:nehemiah','<b>느헤미야</b>가 함께해요. 무너진 틈으로 옮겨 <b>성벽 쌓기</b>를 눌러요.'],[null,'열네째 무리부터 <b>나팔</b> 단추로 병사와 영웅을 모아요. 편지가 오면 느헤미야를 눌러 답해요.']]};
-// 새 적이 나올 때 어떤 탑으로 맞설지(처음 한 번). 이 적들은 처음 나올 때의 짧은 알림 대신 이 안내가 뜬다
-const CO_FOE=[
-  [2,'raider','watch','<b>약탈병</b>이 와요. 아주 빨라서 끝까지 가면 세겔도 빼앗아요. 빠르게 쏘는 <b>파수꾼</b>과 길을 막는 <b>양치기</b>로 붙잡아요.'],
-  [3,'shield','levi','<b>방패병</b>이 와요. 교만의 갑옷이 두꺼워 화살과 돌이 잘 안 들어요. <b>레위인</b>의 거룩한 빛은 갑옷을 꿰뚫어요.'],
-  [4,'centurion','art','<b>백부장</b>이 와요. 마음이 완악해 레위인의 빛이 덜 들어요. 파수꾼의 화살과 <b>장인</b>의 돌로 쳐요.'],
-  [6,'chariot','levi','<b>전차</b>가 와요. 양치기가 막을 수 없고 갑옷이 두꺼워요. <b>레위인</b>의 빛으로 꿰뚫어요.'],
-  [8,'giant','levi','<b>거인</b>이 와요. 체력이 아주 많고 고함으로 곁의 양치기를 기절시켜요. <b>레위인</b>과 장인을 모아 함께 쳐요.'],
-  [9,'archer','watch','<b>궁수</b>가 와요. 멈춰 서서 양치기와 장정을 쏴요. 사거리가 긴 <b>파수꾼</b>으로 먼저 맞혀요.'],
-  [10,'drummer','watch','<b>북잡이</b>가 와요. 북소리가 닿은 탑은 느려져요. 사거리가 긴 <b>파수꾼</b>으로 북잡이부터 쓰러뜨려요.']];
-const coFoeOwns=type=>!!(G&&G.coach&&!G.coach.off&&G.coach.list.some(s=>s.foe===type&&!G.coach.done.has(s.id)));
 // 설명 칸 자리: 가리키는 곳·적·알림·단추를 가리지 않는 곳을 고른다(10-18 사용자: 세 겹 줄과 짐승들이 둘씩을 쓸 곳을 안내가 가림)
 function coPlace(sr,t,prev){const pane=$('coach'),pw=pane.offsetWidth,ph=pane.offsetHeight,SW=sr.width,SH=sr.height,m=SW*.015,k=SW/W,z=camOn()?cam.z:1,ox=camOn()?cam.x:0,oy=camOn()?cam.y:0;
   const rel=el=>{if(!el||el.hidden)return null;const r=el.getBoundingClientRect();return r.width?{x:r.left-sr.left,y:r.top-sr.top,w:r.width,h:r.height}:null;};
@@ -4115,12 +4116,45 @@ function coPlace(sr,t,prev){const pane=$('coach'),pw=pane.offsetWidth,ph=pane.of
     if(sc<bs){bs=sc;best={key,x,y};}}
   return best;}
 for(const sid in CO_NEW)(COACH[sid]||(COACH[sid]=[])).unshift(coNew(CO_NEW[sid]));
-for(const [sid,type,line,txt] of CO_FOE)(COACH[sid]||(COACH[sid]=[])).push(coFoe(type,line,txt));
+// 적 카드(10-18 사용자: "약탈병 등 병과도 말로만 팝업이 뜨게 하지 말고 그림과 함께 보여주고 특징이 뭔지, 약점이 뭔지도 설명해줘. 어느 시대에나 존재한다 이런 것도 써주고")
+// 이야기마다 처음 보는 적이 화면에 들어오면 놀이를 멈추고 그림 카드를 보여 준다. 이미 본 적은 판마다 처음 나올 때 그림이 든 짧은 알림으로
+const FOE_INFO={
+  soldier:{trait:'가장 흔한 군사예요. 느리고 약하지만 떼를 지어 와요.',weak:'갑옷도 완악한 마음도 없어서 어떤 탑으로도 잘 풀려나요. 양치기로 막고 여럿이 함께 쳐요.',era:'분노는 가인이 아벨에게 화를 낸 때부터(창 4:5) 어느 시대에나 있어요. 오늘도 화가 나서 소리치고 싶을 때 우리 마음을 붙잡으려 해요.'},
+  raider:{trait:'아주 빨라요. 진영까지 가면 세겔을 12 빼앗아요.',weak:'체력이 낮아요. 빠르게 쏘는 <b>파수꾼</b>과 길을 막는 <b>양치기</b>에 약해요.',era:'남의 것을 탐내는 마음은 어느 시대에나 있어요. 오늘도 더 가지고 싶은 마음이 장난감, 게임, 돈으로 우리를 끌어당겨요. 예수님은 "모든 탐심을 물리치라"(눅 12:15) 하셨어요.'},
+  shield:{trait:'교만의 갑옷이 아주 두꺼워요. 화살과 돌, 양치기의 막대가 잘 안 들어요.',weak:'완악한 마음은 없어서 <b>레위인</b>의 거룩한 빛이 그대로 꿰뚫어요.',era:'"내가 제일이야" 하는 교만은 바벨탑 때부터(창 11:4) 어느 시대에나 있어요. 교만은 넘어짐의 앞잡이예요.'},
+  centurion:{trait:'마음이 완악해 레위인의 빛을 튕겨 내요. 곁의 적을 재촉해 빠르게 하고, 진영에 닿으면 등불이 둘 약해져요.',weak:'갑옷은 얇아요. <b>파수꾼</b>의 화살과 <b>장인</b>의 돌, 양치기로 쳐요. 먼저 풀어 주면 곁의 적도 느려져요.',era:'말씀을 듣고도 마음을 굳히는 완악함은 바로 때부터 어느 시대에나 있어요. "오늘 너희가 그의 음성을 듣거든 너희 마음을 완고하게 하지 말라"(히 3:15).'},
+  chariot:{trait:'빠르고 단단해요. <b>양치기가 막을 수 없어요</b>. 진영에 닿으면 등불이 둘 약해져요.',weak:'완악한 마음은 없어서 <b>레위인</b>의 빛이 잘 들어요. 길이 길게 지나가는 곳에서 여러 탑이 오래 치게 하세요.',era:'힘센 것을 믿는 자만은 어느 시대에나 있어요. 옛날에는 병거와 말, 오늘은 돈이나 인기를 믿고 하나님을 잊게 해요(시 20:7).'},
+  archer:{trait:'멈춰 서서 양치기와 문지기, 장정을 쏴요. 한 번 서면 네 발까지 쏴요.',weak:'체력이 낮고 갑옷이 없어요. 사거리가 긴 <b>파수꾼</b>으로 멀리서 먼저 맞혀요.',era:'미워하는 마음은 어느 시대에나 있어요. 뒤에서 하는 나쁜 말도 미움의 화살이에요. 예수님은 "너희 원수를 사랑하며"(마 5:44) 하셨어요.'},
+  drummer:{trait:'북을 치면 곁의 탑이 두려워 느리게 쏴요.',weak:'체력이 낮아요. 사거리가 긴 <b>파수꾼</b>으로 먼저 쓰러뜨리거나, 부르짖음과 찬양대의 노래로 멈춰 세우면 북을 못 쳐요.',era:'두려움은 어느 시대에나 우리를 움츠러들게 해요. 시험 앞에서도, 어두운 밤에도요. 하나님은 "두려워하지 말라 내가 너와 함께 함이라"(사 41:10) 하세요.'},
+  whisper:{trait:'작고 빠른 어둠이 떼를 지어 <b>하늘길</b>로 날아와요. 양치기는 막지 못하고 장인의 돌은 닿지 않아요.',weak:'체력이 아주 낮아요. <b>파수꾼</b>·<b>레위인</b> 계열과 순금 등잔대, 모세·갈렙이 맞혀요.',era:'"하나님이 참으로 그렇게 말씀하셨어?" 하는 의심의 속삭임은 에덴 때부터(창 3:1) 어느 시대에나 있어요. 예수님은 말씀으로 이기셨어요(마 4:4).'},
+  rider:{trait:'진흙에 빠진 병거에서 내려 걸어와요. 이제 양치기가 막을 수 있어요.',weak:'체력이 낮아요. 양치기로 막고 함께 쳐요.',era:'병거를 믿던 자만은 어느 시대에나 있지만, 하나님 앞에서는 진흙에 빠져 멈춰요(삿 4:15).'},
+  camel:{trait:'빠르고 튼튼해요. 진영까지 가면 세겔을 30이나 빼앗고 등불이 둘 약해져요.',weak:'<b>양치기</b>가 막을 수 있어요. 막아 세우고 <b>장인</b>의 돌로 여럿을 함께 쳐요.',era:'메뚜기 떼처럼 몰려와 다 가져가는 탐심(삿 6:5)은 어느 시대에나 있어요. 가진 것을 나누는 마음이 탐심을 이겨요.'},
+  kite:{trait:'날아와 탑에 앉으면 그 탑이 멈춰요.',weak:'앉은 탑을 <b>네 번</b> 눌러 쫓아요. 곁의 파수꾼·레위인도 맞혀요.',era:'길가에 뿌려진 씨를 새가 빼앗아 가듯(마 13:19), 들은 말씀을 빼앗아 가는 어둠은 어느 시대에나 있어요. 아브람처럼 쫓아내요(창 15:11).'},
+  giant:{trait:'느리지만 체력이 아주 많아요. 진영에 닿으면 등불이 셋 약해져요. 고함을 지르면 곁의 양치기가 잠깐 기절해요.',weak:'갑옷과 완악함이 조금씩만 있어요. <b>레위인</b>과 <b>장인</b>을 모아 한꺼번에 쳐요. 갈렙의 표적이 잘 들어요.',era:'하나님과 하나님의 백성을 비웃는 조롱은 어느 시대에나 있어요. "그런 걸 믿어?" 하는 말 앞에서도 다윗처럼 여호와의 이름을 의지해요(삼상 17:45).'},
+  fear:{trait:'두려움이 하늘로 진영에 날아와요. 갑옷이 두꺼워 화살과 물맷돌이 잘 안 들어요.',weak:'<b>레위인</b>의 빛과 순금 등잔대가 잘 들어요.',era:'밤에 찾아오는 두려움은 어느 시대에나 있어요. "너는 밤에 찾아오는 공포를 두려워하지 아니하리로다"(시 91:5).'},
+  deceiver:{trait:'크고 느린 어둠이 떠서 와요. 땅의 적 셋을 줄로 묶어 지키고, 묶인 적은 피해를 덜 받아요.',weak:'하늘의 적이라 <b>파수꾼</b>·<b>레위인</b> 계열이 맞혀요. 요단 동편 용사는 두 배로 맞혀요. 흩으면 묶였던 셋이 서로 쳐요.',era:'그럴듯한 거짓으로 믿음에서 떠나게 하는 미혹은 어느 시대에나 있어요(딤전 4:1). 성경 말씀이 참과 거짓을 가려 줘요.'},
+  ram:{trait:'아주 단단하고 막을 수 없어요. 성문 앞에 멈춰 다섯 번 치고, 칠 때마다 등불이 약해져요.',weak:'완악한 마음이 없어 <b>레위인</b>의 빛이 잘 들어요. 찬양대의 노래로 멈추면 성문을 못 쳐요. 웃시야의 기계는 두 배 반으로 들어요.',era:'힘으로 부수고 빼앗는 포악은 노아 때부터(창 6:11) 어느 시대에나 있어요. 예수님은 "네 칼을 도로 칼집에 꽂으라"(마 26:52) 하셨어요.'},
+  bearer:{trait:'골리앗 앞에서 큰 방패를 들고 걸어요. 서 있는 동안 골리앗은 피해를 절반만 받아요.',weak:'갑옷이 두꺼워요. <b>레위인</b>의 빛으로 먼저 풀어 주세요.',era:'"내가 제일이야" 하는 교만은 어느 시대에나 있어요. 교만은 넘어짐의 앞잡이예요(잠 16:18).'}};
+const foeOnScreen=e=>alive(e)&&e.x>40&&e.x<W-40&&e.y>70&&e.y<H-30;
+const foeKnown=()=>{const C=G.coach;if(!C.fs)C.fs=new Set(store.get(slotKey('foeSeen'),[]));return C.fs;};
+const foeCardDue=type=>!!(G&&G.coach&&!G.coach.off&&FOE_INFO[type]&&!foeKnown().has(type));
+function foeChips(type,e){const D=ENEMIES[type];return ch('hp','체력',Math.round(e?e.maxHp:D.hp))+ch('spd','이동',speedW(D.speed))+ch('def','교만의 갑옷',armorW(D.armor))+ch('mres','완악한 마음',armorW(D.mres))+ch('life','등불',-D.lives)+(D.steal?ch('gold','빼앗음',D.steal):'')+(D.fly?ch('air','하늘','날아와요'):!D.block?ch('def','양치기','못 막아요'):'');}
+function foeCardHtml(type,e){const D=ENEMIES[type],I=FOE_INFO[type];return`<div class="foe"><canvas class="fimg" width="150" height="150" data-a="enemy:${type}"></canvas><div class="fh"><div class="fn"><b>${D.name}</b> <span>${D.spirit}</span></div><div class="chips">${foeChips(type,e)}</div></div></div>`+
+  `<p class="fl"><i>특징</i>${I.trait}</p><p class="fl"><i>약점</i>${I.weak}</p><p class="fl era"><i>어느 시대에나</i>${I.era}<span class="v">${D.verse}</span></p>`;}
+function foeToastHtml(type,def){const I=FOE_INFO[type];return`<div class="tfoe"><canvas width="96" height="96" data-a="enemy:${type}"></canvas><div><b>${def.name} · ${def.spirit}</b><br>${I?I.trait.replace(/<\/?b>/g,'')+' <em>약점</em> '+I.weak.replace(/<\/?b>/g,''):def.desc}</div></div>`;}
+const coFoeAny={id:'foecard',foeAny:1,rep:9999,gap:0,next:1,wide:1,life:40,
+  when:()=>!!G.enemies.find(e=>foeOnScreen(e)&&FOE_INFO[e.type]&&!foeKnown().has(e.type)),
+  start(s){s.e=G.enemies.find(e=>foeOnScreen(e)&&FOE_INFO[e.type]&&!foeKnown().has(e.type));s.type=s.e.type;G.hold=true;closeMenu();},   // 읽는 동안 놀이를 멈춘다
+  end(s){foeKnown().add(s.type);store.set(slotKey('foeSeen'),[...foeKnown()]);G.hold=false;},
+  at(){const e=this.e;return e&&alive(e)?{x:e.x,y:e.y-(e.def.fly?FLY_H:0)-30}:null;},
+  say(){return foeCardHtml(this.type,this.e);}};
+for(const sid in COACH){const L=COACH[sid],i=L.findIndex(s=>s.id==='new');L.splice(i+1,0,coFoeAny);}   // 판의 "새로 생긴 것" 바로 뒤(1 방주는 맨 앞)
 function coachFor(sid){const L=COACH[sid];if(!L)return null;const saved=store.get(slotKey('co2.'+sid),null);if(saved===true)return null;
   return{sid,list:L,cur:null,done:new Set(Array.isArray(saved)?saved:[]),cnt:{},last:{},f:{},built:0,n0:0,off:false,html:'',ht:0};}
 function coachSave(all){const C=G&&G.coach;if(!C)return;store.set(slotKey('co2.'+C.sid),all?true:[...C.done].filter(id=>!C.list.find(s=>s.id===id&&s.rep)));}
-function coachEnd(s){const C=G.coach;C.cur=null;C.html='';if(s.rep){C.cnt[s.id]=(C.cnt[s.id]||0)+1;C.last[s.id]=animT;if(C.cnt[s.id]>=s.rep)C.done.add(s.id);}else C.done.add(s.id);coachSave(false);}
+function coachEnd(s){const C=G.coach;C.cur=null;C.html='';if(s.end)try{s.end(s);}catch(e){}if(s.rep){C.cnt[s.id]=(C.cnt[s.id]||0)+1;C.last[s.id]=animT;if(C.cnt[s.id]>=s.rep)C.done.add(s.id);}else C.done.add(s.id);coachSave(false);}
 function coachTick(){const C=G.coach;
+  {const fa=C.list.find(s=>s.foeAny);if(fa&&C.cur!==fa){let go=false;try{go=fa.when();}catch(e){}if(go){C.cur=fa;fa.age=0;fa.pressed=false;C.html='';try{fa.start(fa);}catch(e){coachEnd(fa);}return;}}}   // 처음 보는 적 카드는 하던 안내를 잠깐 밀어낸다
   if(C.cur){const s=C.cur;try{if(s.pressed||(s.ok&&s.ok())||(s.life&&s.age>s.life))coachEnd(s);}catch(e){coachEnd(s);}return;}
   for(const s of C.list){if(C.done.has(s.id))continue;
     if(s.rep&&animT-(C.last[s.id]||-99)<s.gap)continue;
@@ -4136,9 +4170,9 @@ function coachArt(cv,k){const c=cv.getContext('2d'),w=cv.width,h=cv.height;c.set
   c.save();c.translate(w/2,h*.9);c.scale(w/130,w/130);drawTowerAt(c,line,Math.min(3,tier),0,0,null,br||undefined);c.restore();}
 function coachSync(){const C=G&&G.coach,pane=$('coach'),hand=$('coachHand'),dim=$('coachDim');
   const hide=()=>{pane.hidden=true;hand.hidden=true;dim.hidden=true;};
-  if(!C||C.off||G.over||G.scene||G.paused||screen!=='play'){if(C)C.lt=0;hide();return;}
+  if(!C||C.off||G.over||G.scene||G.paused||screen!=='play'){if(C)C.lt=0;if(G&&G.hold&&!G.paused)G.hold=false;hide();return;}
   {const dt=Math.min(.1,Math.max(0,animT-(C.lt||animT)));C.lt=animT;if(C.cur)C.cur.age+=dt;}   // 보이는 동안만 흐르는 시간(멈춤 중에는 안 흐름)
-  coachTick();const s=C.cur;if(!s){C.lt=0;hide();return;}
+  coachTick();const s=C.cur;if(!s){C.lt=0;if(G.hold)G.hold=false;hide();return;}
   let tg=null;try{tg=s.at?s.at():null;
   if(animT-C.ht>.2||!C.html){C.ht=animT;const say=typeof s.say==='function'?s.say():s.say,art=typeof s.art==='function'?s.art():s.art,html=(art?`<canvas class="cart" width="120" height="120" data-a="${art}"></canvas>`:'')+`<div class="tx">${say}</div>`;
     if(html!==C.html){C.html=html;$('coachBody').innerHTML=html;$('coachBody').querySelectorAll('canvas[data-a]').forEach(cv=>coachArt(cv,cv.dataset.a));}
@@ -4146,13 +4180,13 @@ function coachSync(){const C=G&&G.coach,pane=$('coach'),hand=$('coachHand'),dim=
   const sr=stageEl.getBoundingClientRect(),k=sr.width/W;let px=0,py=0,rad=0;
   if(tg&&tg.el){const r=$(tg.el).getBoundingClientRect();px=r.left+r.width/2-sr.left;py=r.top+r.height/2-sr.top;rad=Math.max(r.width,r.height)*.75;}
   else if(tg){const z=camOn()?cam.z:1;px=((tg.x-(camOn()?cam.x:0))*z)*k;py=((tg.y-(camOn()?cam.y:0))*z)*k;rad=58*z*k;}
-  pane.classList.toggle('wide',!tg);pane.classList.toggle('mini',!!G.aim);pane.hidden=false;
+  pane.classList.toggle('wide',!tg||!!s.wide);pane.classList.toggle('mini',!!G.aim);pane.hidden=false;
   if(!C.slot||C.slotStep!==s||animT-(C.pt||0)>.3){C.slot=coPlace(sr,tg&&{x:px,y:py},C.slotStep===s?C.slot:null);C.slotStep=s;C.pt=animT;}
   pane.style.left=C.slot.x.toFixed(0)+'px';pane.style.top=C.slot.y.toFixed(0)+'px';
   if(tg){hand.hidden=false;hand.style.left=px+'px';hand.style.top=py+'px';hand.classList.toggle('dn',py>sr.height*.62);hand.classList.toggle('lo',py<sr.height*.1);}else hand.hidden=true;
   if(s.dim&&tg){dim.hidden=false;dim.style.background=`radial-gradient(circle at ${px.toFixed(0)}px ${py.toFixed(0)}px,rgba(12,7,3,0) ${rad.toFixed(0)}px,rgba(12,7,3,.55) ${(rad+36).toFixed(0)}px)`;}else dim.hidden=true;}
 $('coachNext').onclick=()=>{Snd.play('click');if(G&&G.coach&&G.coach.cur)G.coach.cur.pressed=true;};
-$('coachSkip').onclick=()=>{Snd.play('click');if(G&&G.coach){G.coach.off=true;coachSave(true);}};
+$('coachSkip').onclick=()=>{Snd.play('click');if(G&&G.coach){G.coach.off=true;coachSave(true);G.hold=false;}};
 
 /* ---------- 한 프레임 ---------- */
 function update(dt){
@@ -4863,7 +4897,7 @@ function drawHeroPortrait(cvEl,kind){const c=cvEl.getContext('2d'),w=cvEl.width,
 
 /* ============================== 7. 화면 HTML ============================== */
 let toastT=0,bannerT=0;
-function toast(html,sec=5){const el=$('toast');el.innerHTML=html;el.hidden=false;el.classList.toggle('low',!!(G&&G.boss));el.classList.toggle('low2',!!(G&&G.bosses&&G.bosses.length>1));el.classList.remove('popc');void el.offsetWidth;el.classList.add('popc');clearTimeout(toastT);toastT=setTimeout(()=>{el.hidden=true;},sec*1000);}
+function toast(html,sec=5){const el=$('toast');el.innerHTML=html;el.querySelectorAll('canvas[data-a]').forEach(cv=>coachArt(cv,cv.dataset.a));el.hidden=false;el.classList.toggle('low',!!(G&&G.boss));el.classList.toggle('low2',!!(G&&G.bosses&&G.bosses.length>1));el.classList.remove('popc');void el.offsetWidth;el.classList.add('popc');clearTimeout(toastT);toastT=setTimeout(()=>{el.hidden=true;},sec*1000);}
 function banner(title,sub,sec=4){const el=$('banner');el.innerHTML=`<h2>${title}</h2>${sub?`<p>${sub}</p>`:''}`;el.hidden=false;el.classList.toggle('low2',!!(G&&G.bosses&&G.bosses.length>1));el.classList.remove('popb');void el.offsetWidth;el.classList.add('popb');clearTimeout(bannerT);bannerT=setTimeout(()=>{el.hidden=true;},sec*1000);}
 const ui={last:{},
   set(id,v){if(this.last[id]!==v){this.last[id]=v;$(id).textContent=v;}},
@@ -5187,7 +5221,7 @@ function resize(){
 let last=performance.now(),acc=0;
 function frame(now){
   const raw=Math.min(.05,(now-last)/1000);last=now;animT+=raw;
-  if(screen==='play'&&G&&!G.paused){acc+=raw*G.speed;let n=0;while(acc>=1/60&&n<8){update(1/60);acc-=1/60;n++;}if(n>=8)acc=0;}
+  if(screen==='play'&&G&&!G.paused&&!G.hold){acc+=raw*G.speed;let n=0;while(acc>=1/60&&n<8){update(1/60);acc-=1/60;n++;}if(n>=8)acc=0;}
   {const k=scale*dpr,z=camOn()?cam.z:1;ctx.setTransform(k*z,0,0,k*z,camOn()?-cam.x*k*z:0,camOn()?-cam.y*k*z:0);}
   if(screen==='play'&&G){renderPlay();ui.sync();}
   else if(screen==='story')renderStory();
