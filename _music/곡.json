@@ -389,6 +389,38 @@
    ]
   },
   {
+   "id": "s21",
+   "이름": "21 다니엘의 환상(끝없는 밤)",
+   "결": "활력 · 밤바다에서 끝없이 몰려오는 무리, 그래도 꺼지지 않는 작은 등불(도파민: 첫 박부터 몰아치는 큰 북과 다르부카, 파도처럼 밀려오는 현, 어두운 남성 합창에 맞서는 밝은 수금·두둑 후렴, 갈수록 커지는 고조)",
+   "캡션": "Relentless epic night battle theme by a stormy great sea, endless waves of enemies. Driving war drums and fast darbuka from the very first beat, surging string ostinatos rolling like huge ocean waves and wind, a dark powerful male choir chanting, menacing low brass, answered by a small bright hopeful hook on lyre and duduk like a little lamp that will not go out, the energy keeps building wave after wave into a massive choir and full orchestra chorus, intense, heroic, thrilling, never horror.",
+   "가사": "[Intro - war drums and darbuka]\n\n[Verse - surging strings]\nOh, oh\n\n[Pre-Chorus - lyre and duduk]\n\n[Chorus - full choir]\nAh, ah, ah\nHallelujah\n\n[Instrumental - drums]\n\n[Build - rising strings and wind]\n\n[Chorus - full choir]\nHallelujah\nAmen\n\n[Outro]",
+   "bpm": 132,
+   "key": "C minor",
+   "길이": 150,
+   "시드": [
+    1,
+    2,
+    3,
+    4
+   ]
+  },
+  {
+   "id": "boss7",
+   "이름": "보스 · 네 짐승",
+   "결": "활력 · 바다에서 올라오는 큰 짐승(도파민: 거대한 북 울림과 낮은 금관 리프, 휘몰아치는 현과 바람, 어두운 합창, 밝게 터지는 드롭)",
+   "캡션": "Colossal beast boss battle theme, great beasts rising from a stormy sea in a night vision. Huge thundering taiko-like war drum hits and a pounding frame-drum groove, a heavy menacing low brass riff, whirling fast strings like the four winds, a dark chanting choir, brass stabs, the tension builds and erupts into massive full-orchestra drops with a soaring defiant choir, intense and thrilling, majestic, not horror.",
+   "가사": "[Intro - giant drums]\n\n[Verse - low brass riff]\nOh, oh\n\n[Build - whirling strings]\n\n[Drop - full choir and orchestra]\nAh, ah, ah\n\n[Bridge - dark choir]\n\n[Build - drums]\n\n[Drop - full choir]\nHallelujah\n\n[Outro]",
+   "bpm": 138,
+   "key": "E minor",
+   "길이": 120,
+   "시드": [
+    1,
+    2,
+    3,
+    4
+   ]
+  },
+  {
    "id": "ending",
    "이름": "엔딩 · 베들레헴의 별",
    "결": "웅장 · 말라기의 새벽 → 밤의 파수꾼 → 베들레헴의 별(처음 몇 초 안에 박, 호산나·아멘으로 크게)",

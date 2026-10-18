@@ -1,0 +1,169 @@
+{
+ "출력": "raw",
+ "크기": [
+  1024,
+  1024
+ ],
+ "단계": 4,
+ "항목": [
+  {
+   "id": "bg21",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "참조": [
+    "ref2/ref21.png"
+   ],
+   "프롬프트": "Repaint this top-down tower defense game map as a richly hand-painted Kingdom Rush style battlefield at night beside the great sea, seen from above at a slight angle. Keep exactly the same sandy road shapes and positions. The dark blue area across the top is a huge stormy sea: dark heaving waves with white foam crests, churned by four great swirling winds that whirl over the water (spiral streaks of wind and spray), a few faint flashes of lightning in low dark clouds over the water. Below the pale sandy beach line: dark green grassy coastal hills at night lit by cool moonlight, with scattered rocks, low bushes and a few windswept trees. Three sandy roads come up out of the sea onto the beach and wind down to the bottom center, where a small camp of a few plain cloth tents sits on a low hill with one small warm lamp glowing among them. At the lower left a flat grey rock near the bottom edge. Nothing covers the roads. No characters, no people, no animals, no text. No statues, no idols, no carved figures, no winged discs, no crescent shapes, no moon ornaments, no religious symbols anywhere."
+  },
+  {
+   "id": "beast_lion",
+   "종류": "정령",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "A great golden lion with two large eagle wings spread wide, flying, mane blowing in the wind, fierce proud face, whole body visible. A faint dark purple shadowy aura clings around it. Not gory: no blood, no wounds, nobody hurt."
+  },
+  {
+   "id": "beast_bear",
+   "종류": "인물",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "A huge brown bear raised up on one side so that one shoulder is higher than the other, holding three long white ribs crosswise in its teeth like sticks, walking heavily, whole body visible. A faint dark purple shadowy aura clings around it. Not gory: no blood, no wounds, nobody hurt."
+  },
+  {
+   "id": "beast_leopard",
+   "종류": "정령",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "A spotted leopard flying fast with four bird wings on its back and four leopard heads on four necks, whole body visible. A faint dark purple shadowy aura clings around it. Not gory: no blood, no wounds, nobody hurt."
+  },
+  {
+   "id": "beast_fourth",
+   "종류": "인물",
+   "시드": [
+    4,
+    5,
+    6,
+    7
+   ],
+   "프롬프트": "A terrible fourth beast unlike any animal: a huge dark iron-grey beast with a wide mouth full of big shining iron teeth, bronze claws, and a crown of exactly ten sharp horns standing in one row across the top of its head like a comb, stamping forward on heavy feet, whole body visible. A faint dark purple shadowy aura clings around it. Not gory: no blood, no wounds, nobody hurt."
+  },
+  {
+   "id": "s21a",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: at night in a palace room in Babylon, the old prophet Daniel, a gentle white-bearded man of about seventy in a blue robe with a cream sash and a white turban, sits on the edge of his bed beside a small clay oil lamp and writes down his dream on a scroll with a reed pen held in his right hand, his left hand holding the scroll on his knee; through a window a dark stormy night sky. No statues, no idols, no carved figures, no winged discs, no crescent shapes, no moon ornaments, no religious symbols anywhere. Hands are drawn simply and clearly, each hand with four fingers and a thumb, and no hand overlaps another person. Every face is clear and well drawn with distinct eyes, nose and mouth. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "s21b",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: a vision in the night: the great sea under a dark stormy sky, the four winds of heaven stirring the water into huge waves with four great swirling spirals of wind, and out of the sea rise four great beasts one after another: a golden lion with eagle wings, a brown bear raised up on one side, a spotted leopard with four wings and four heads, and behind them in the dark a terrible iron-grey fourth beast with iron teeth and ten horns. No people. No statues, no idols, no carved figures, no winged discs, no crescent shapes, no moon ornaments, no religious symbols anywhere. Not gory: no blood, no wounds, nobody hurt."
+  },
+  {
+   "id": "s21c",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    4,
+    5,
+    6,
+    7
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: close view in a stormy night vision: the head of the terrible iron-grey fourth beast with big iron teeth and a row of ten sharp horns on its head; among the horns one small horn is growing up, and on the small horn itself there are two human-like eyes and a little open mouth as if shouting proud words; three of the big horns are broken off and falling away; dark purple storm clouds behind. The small horn is only a horn with eyes and a mouth on it, not a creature, not an animal, no extra creature, no speech bubble, no text. No people. No statues, no idols, no carved figures, no winged discs, no crescent shapes, no moon ornaments, no religious symbols anywhere. Not gory: no blood, no wounds, nobody hurt."
+  },
+  {
+   "id": "s21d",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: at night on a dark grassy hill by the shore of the stormy sea, a small group of faithful people, men, women and two children in simple robes, gather close around one small glowing clay oil lamp, holding hands and praying, looking out at the dark sea where huge shadowy shapes of beasts rise from the waves; the old white-bearded prophet Daniel in a blue robe and white turban stands among them and lifts his face to the sky; warm lamplight on their faces. No statues, no idols, no carved figures, no winged discs, no crescent shapes, no moon ornaments, no religious symbols anywhere. Hands are drawn simply and clearly, each hand with four fingers and a thumb, and no hand overlaps another person. Every face is clear and well drawn with distinct eyes, nose and mouth. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "v21a",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: a heavenly vision at night: thrones are set up, and in the middle a great throne made of blazing flames with burning wheels of fire, a river of fire flowing out from before it, and around it countless thousands upon thousands of tiny points of white light like a great host; at the center of the flames only a blinding pure white light like snow; far below at the bottom edge the dark beasts shrink back into the shadows. There is no human figure, no face and no body of God anywhere: only light, fire and clouds. No statues, no idols, no carved figures, no winged discs, no crescent shapes, no moon ornaments, no religious symbols anywhere. Not gory: no blood, no wounds, nobody hurt."
+  },
+  {
+   "id": "v21b",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    4,
+    5,
+    6,
+    7
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: in the night sky over the great sea, the clouds of heaven part and a brilliant golden-white light comes riding on the glowing clouds like a rising sun; the light is pure and empty with nobody inside it; rays of light stream down over the whole world, and the stormy sea below grows calm and shining. There is no human figure, no face and no body of God anywhere: only light, fire and clouds. No silhouette, no figure, no angel, no person inside the light. No statues, no idols, no carved figures, no winged discs, no crescent shapes, no moon ornaments, no religious symbols anywhere."
+  },
+  {
+   "id": "v21c",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    4,
+    5,
+    6
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: at dawn on the grassy hill by the now calm shining sea, the small group of faithful people, two men, two women and two children in simple robes, stand together in warm golden morning light, smiling and laughing with happy tears of joy, looking up at the bright sky; a smiling child holds a small clay oil lamp with a little flame in both hands; the beasts are gone; the whole sky glows gold. No statues, no idols, no carved figures, no winged discs, no crescent shapes, no moon ornaments, no religious symbols anywhere. Hands are drawn simply and clearly, each hand with four fingers and a thumb, and no hand overlaps another person. Every face is clear and well drawn with distinct eyes, nose and mouth. Every person has exactly two arms, two hands, two legs and two feet."
+  }
+ ]
+}
