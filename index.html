@@ -168,9 +168,25 @@ details li{margin:.35em 0;line-height:1.55}
 .node.locked{opacity:.6;filter:grayscale(.7) brightness(.8)}
 .node.dan{background:radial-gradient(circle at 40% 35%,#f4ecff,#9a7ae0 60%,#4a2f8a);color:#1d1030;box-shadow:0 0 1.2em rgba(190,160,255,.85)}
 .node.dan .st{color:#e6dcff}
-.node .cb{position:absolute;top:calc(100% + 1.25em);left:50%;transform:translateX(-50%);display:flex;gap:.15em}
-.node .cb i{font-style:normal;font-size:.55em;width:1.6em;height:1.6em;border-radius:50%;display:grid;place-items:center;background:rgba(20,14,30,.75);color:#8f88a8;border:.1em solid #4a4060}
-.node .cb i.on{background:#e8b53c;color:#3b2614;border-color:#fff3c9}
+#nodes .wings{position:absolute;width:6.6em;height:1.9em;transform:translate(-50%,-78%);pointer-events:none;filter:drop-shadow(0 .06em 0 rgba(0,0,0,.55)) drop-shadow(0 0 .35em rgba(255,210,110,.5))}
+.ci .wg,#nodes .wings .wg{position:absolute;top:0;width:2.25em;height:100%;display:block}
+.ci .wg svg,#nodes .wings .wg svg,.ci.lamp svg,.node .lamp svg{display:block;width:100%;height:100%;overflow:visible}
+#nodes .wings .wg.r{right:0}
+.ci .wg.l,#nodes .wings .wg.l{left:0;transform:scaleX(-1)}
+.node .lamp{position:absolute;left:50%;top:calc(100% - .5em);width:1.4em;height:1.78em;transform:translateX(-50%);pointer-events:none;filter:drop-shadow(0 .06em 0 rgba(0,0,0,.55)) drop-shadow(0 0 .3em rgba(255,180,70,.8))}
+.node.lit .st{margin-top:1.3em}
+.ci .fl,.node .lamp .fl{transform-box:fill-box;transform-origin:50% 100%;animation:lampFl 1.8s ease-in-out infinite}
+@keyframes lampFl{0%,100%{transform:scale(1,1)}35%{transform:scale(.9,1.12)}70%{transform:scale(1.06,.94)}}
+.ci{position:relative;display:inline-block;vertical-align:middle}
+.ci.wings{width:2.4em;height:1.15em}
+.ci.wings .wg{width:1.2em}
+.ci.wings .wg.r{right:0}
+.ci.lamp{width:1em;height:1.27em}
+.stars .ci.wings{width:5.4em;height:2.6em;align-self:center}
+.stars .ci.wings .wg{width:2.7em}
+.stars .ci.lamp{width:2.05em;height:2.6em;align-self:center}
+@media (prefers-reduced-motion:reduce){.ci .fl,.node .lamp .fl{animation:none}}
+@media (max-width:840px),(max-height:470px){#nodes .wings{width:5.6em;height:1.62em}#nodes .wings .wg{width:1.9em}.node .lamp{top:calc(100% - .45em);width:1.2em;height:1.53em}.node.lit .st{margin-top:1.1em}}   /* 글씨가 11px에 걸려 동그라미가 커 보이는 작은 화면: 날개끼리 덜 붙게 */
 #modeBox{position:absolute;inset:0;z-index:5;display:grid;place-items:center;background:rgba(6,6,18,.55)}
 #modeBox .card{width:min(70%,34em);display:grid;gap:.5em}
 #modeBox h3{margin:0;font-family:var(--f-ui);font-weight:400;font-size:1.4em}
@@ -396,6 +412,7 @@ body.force #rotate{display:none!important}
 </style>
 
 <div id="wrap"><div id="stage" data-screen="title">
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><linearGradient id="gWing" x1="0" y1="0" x2=".35" y2="1"><stop offset="0" stop-color="#fff8d6"/><stop offset=".45" stop-color="#f5c451"/><stop offset="1" stop-color="#b8741a"/></linearGradient><linearGradient id="gWax"><stop offset="0" stop-color="#d9b97a"/><stop offset=".35" stop-color="#fff8e6"/><stop offset=".7" stop-color="#f3dfb2"/><stop offset="1" stop-color="#c49a5a"/></linearGradient><radialGradient id="gGlow"><stop offset="0" stop-color="#fff0b0" stop-opacity=".95"/><stop offset=".5" stop-color="#ffc45a" stop-opacity=".45"/><stop offset="1" stop-color="#ff9a2e" stop-opacity="0"/></radialGradient></defs></svg>
   <canvas id="cv" aria-label="Kingdom of God 게임 화면"></canvas>
 
   <div id="hud" class="ui play">
@@ -440,7 +457,7 @@ body.force #rotate{display:none!important}
     <div class="card slots"><h2 id="slotH">계속하기</h2><p class="sub" id="slotSub"></p><div id="slotList"></div><div class="row"><button class="btn" id="slotNew" hidden>새 이야기 시작</button><button class="btn wood" id="slotBack">돌아가기</button></div></div>
   </section>
   <section id="sMap" class="scr" hidden>
-    <div class="mapHead"><h2>약속의 별</h2><p>별을 모을수록 밤하늘이 채워져요. 지켜 낸 판을 다시 누르면 도전 <b>큰 용사여</b>와 <b>말씀이 희귀한 때</b>로 별을 하나씩 더 받아요.</p></div>
+    <div class="mapHead"><h2>약속의 별</h2><p>별을 모을수록 밤하늘이 채워져요. 지켜 낸 판을 다시 누르면 도전 <b>큰 용사여</b>와 <b>말씀이 희귀한 때</b>로 별을 하나씩 더 받고, 판에 <b>금빛 날개</b>와 <b>등불</b>이 생겨요.</p></div>
     <div class="mapBtns"><button class="btn" id="bTrainM" style="position:relative">연단<span class="pt" id="trainPt" hidden></span></button><button class="btn" id="bUpgM" style="position:relative">별 강화<span class="pt" id="upgPt" hidden></span></button><button class="btn wood" id="bCodexM">두루마리</button><button class="btn wood" id="bTitle">처음으로</button></div>
     <div id="nodes"></div>
   </section>
@@ -1786,7 +1803,13 @@ const STAGES={
         {art:'v21c',dur:8,title:'때가 이르매 성도들이 나라를 얻었더라',verse:'옛적부터 항상 계신 이가 와서 지극히 높으신 이의 성도들을 위하여 원한을 풀어 주셨고 때가 이르매 성도들이 나라를 얻었더라 (단 7:22)',fx:'dawn',snd:'victory',z0:1.06,z1:1.0},
         {card:'Kingdom of God',dur:4.5}]}}
 };
-const MAPNODES=[[110,560,'방주'],[190,495,'아브람의 길'],[280,450,'롯을 구하라'],[370,505,'갈대 상자'],[455,565,'미디안 우물'],[550,520,'홍해'],[625,450,'르비딤'],[690,380,'에드레이'],[640,300,'여리고'],[555,245,'기브온'],[635,170,'기손 강'],[735,140,'하롯 샘'],[825,185,'미스바'],[895,255,'엘라 골짜기'],[980,300,'엔게디'],[1060,255,'시글락'],[1115,185,'브라가 골짜기'],[1170,130,'도단'],[1110,75,'예루살렘 포위'],[1000,70,'무너진 성벽']];
+// 지도 배치(10-19 사용자: 15~20이 촘촘해 이름이 가려지고 어느 글자가 어느 판인지 헷갈림). ㄹ자 줄이 오른쪽 위 베들레헴의 별로 조금씩 올라간다.
+// 줄 사이 150·줄 안 140(셋째 줄은 138): 날개·촛불·별 셋을 다 단 판끼리도, 머리말·아래 단추·별과도 겹치지 않는다(APK 640×360에서 글씨가 11px에 걸린 때까지 재어 봄)
+const MAPNODES=[[65,636,'방주'],[205,630,'아브람의 길'],[345,625,'롯을 구하라'],[485,619,'갈대 상자'],[625,614,'미디안 우물'],[690,461,'홍해'],[550,467,'르비딤'],[410,472,'에드레이'],[270,478,'여리고'],[130,483,'기브온'],[66,336,'기손 강'],[204,330,'하롯 샘'],[342,325,'미스바'],[480,319,'엘라 골짜기'],[618,314,'엔게디'],[756,308,'시글락'],[894,303,'브라가 골짜기'],[1032,297,'도단'],[1170,292,'예루살렘 포위'],[1150,145,'무너진 성벽']],
+  STAR_XY=[900,92];   // 베들레헴의 별: 마지막 판 곁, 위협 없는 빈 하늘
+// 특별 스테이지(끝없는 판) 자리: 킹덤러시처럼 관련 판 곁에(10-19 사용자). 19 예루살렘 포위 아래 빈 줄에 포로기 판들이 모인다.
+// 22 예루살렘 함락(왕하 25)은 같은 성 19 곁, 23 곡과 마곡(겔 38–39, 함락 소식 뒤에 받은 환상)은 그 옆, 21 다니엘의 환상(단 7)은 바벨론 쪽 끝. link: 점선으로 잇는 관련 판
+const SPECIAL_NODES={21:{xy:[830,455],link:23},22:{xy:[1110,444],link:19},23:{xy:[970,450],link:22}};
 const CODEX=[
   {cat:'약속',name:'약속의 등불',k:'목숨',verse:'내 종 다윗이 항상 내 앞에 등불을 가지고 있게 하리라 (왕상 11:36)',desc:'적이 지나가면 등불이 약해져요. 다 꺼져 가면 다시 할 수 있어요.',deep:'"상한 갈대를 꺾지 아니하며 꺼져가는 등불을 끄지 아니하고"(사 42:3). 등불을 꺼지지 않게 하시는 분은 하나님이에요.'},
   {cat:'약속',name:'약속의 별',k:'별 강화',verse:'하늘을 우러러 뭇별을 셀 수 있나 보라 (창 15:5)',desc:'스테이지를 지켜 내면 약속의 별을 받아요. 지도의 별 강화에서 별로 파수꾼, 양치기, 레위인, 장인 계열과 부르짖음, 세 겹 줄을 키워요. 4단계 탑까지 모두 적용되고, 언제든 무료로 다시 배치할 수 있어요.',deep:'별은 지켜 낸 기록일 뿐이에요. 구원 사건은 별을 몇 개 받았든 똑같이 펼쳐져요. 구원은 처음부터 하나님의 일이에요.'},
@@ -3458,9 +3481,11 @@ function drawDanGauge(c){const D=G.dan,d=G.S.dan;if(!D||!D.horn||D.end)return;
   c.restore();}
 function danCard(){const S=G.S,V=S.victory,D=G.dan||{},R=danRec();
   return`<h2>${V.title}</h2><p class="sub">${S.id} · ${S.name} (${S.ref})</p><div class="stats"><span>견딘 무리 <b>${D.reached||0}</b></span><span>가장 오래 <b>${R.best||0}</b>무리${D.newBest?' · 새 기록':''}</span><span>풀려난 사람 <b>${G.freed}</b>명</span></div><p class="verse" style="font-size:.85em">이 판은 반드시 져요. 성경에서도 그 뿔이 성도들을 이겼어요. 그러나 그때 옛적부터 항상 계신 이가 오셨어요(단 7:21–22).</p><p class="verse">${V.verse}</p><div class="jesus"><h3>예수님 찾기</h3><p>${V.jesus}</p></div><details><summary>더 깊이 보기</summary><ul>${V.deep.map(d=>`<li>${d}</li>`).join('')}</ul></details>${endHints()}<div class="row"><button class="btn" id="eAgain">다시 하기</button><button class="btn wood" id="eMap">지도로</button><button class="btn wood" id="eCodex">두루마리</button></div>`;}
-function danNode(box){const R=danRec(),b=document.createElement('button');b.className='node dan';b.style.left=(DAN_NODE[0]/W*100)+'%';b.style.top=(DAN_NODE[1]/H*100)+'%';b.innerHTML=`21<span class="nm">다니엘의 환상</span><span class="st">${R.best?'최고 '+R.best+'무리':'끝없는 밤'}</span>`;b.setAttribute('aria-label','21 다니엘의 환상 특별 스테이지');
-  b.onclick=()=>{Snd.init();Snd.play('click');curMode='normal';if(R.runs>0){curStage=21;Music.play('story');afterStory();}else startStory(21);};box.appendChild(b);}   // 한 번 본 뒤에는 이야기를 건너뛴다
-const DAN_NODE=[1150,455];   // 오른쪽 아래 빈자리(10-18 사용자: 다니엘의 때와 가까운 판들 곁 여백에. 베들레헴의 별 곁에 풀리지 않는 위협을 두지 않는다)
+// 특별 스테이지 단추(자리는 SPECIAL_NODES). 기록은 21만 'dan', 새 끝없는 판은 'sp<번호>'에 {best,runs}로 둔다
+const spRec=id=>id===21?danRec():store.get(slotKey('sp'+id),{best:0,runs:0});
+const spShown=id=>!!(SPECIAL_NODES[id]&&STAGES[id]&&allHeroesOpen());
+function specialNode(box,id){const S=STAGES[id],R=spRec(id),[x,y]=SPECIAL_NODES[id].xy,b=document.createElement('button');b.className='node dan';b.style.left=(x/W*100)+'%';b.style.top=(y/H*100)+'%';b.innerHTML=`${id}<span class="nm">${S.name}</span><span class="st">${R.best?'최고 '+R.best+'무리':'끝없는 밤'}</span>`;b.setAttribute('aria-label',`${id} ${S.name} 특별 스테이지`);
+  b.onclick=()=>{Snd.init();Snd.play('click');curMode='normal';if(R.runs>0){curStage=id;Music.play('story');afterStory();}else startStory(id);};box.appendChild(b);}   // 한 번 본 뒤에는 이야기를 건너뛴다
 const EGGS={bones:{sid:6,art:'e_bones',x:712,y:222,r:30},bed:{sid:8,art:'e_bed',x:652,y:150,r:36},cord:{sid:9,art:null,x:516,y:380,r:26},jar:{sid:10,art:'e_jar',x:928,y:508,r:28},donkey:{sid:11,art:'e_donkey',x:1128,y:548,r:30},loaf:{sid:12,art:'e_loaf',x:282,y:336,r:30,roll:[360,346]},sheaf:{sid:13,art:'e_sheaf',x:800,y:620,r:30},stones:{sid:14,art:'e_stones',x:432,y:128,r:30},net:{sid:15,art:'e_net',x:965,y:520,r:32},abigail:{sid:16,art:'e_abigail',x:1235,y:425,r:34},oil:{sid:17,art:'e_oil',x:505,y:196,r:30},naaman:{sid:18,art:'e_naaman',x:1196,y:300,r:34},spring:{sid:19,art:'e_spring',x:505,y:584,r:30},fox:{sid:20,art:'e_fox',x:800,y:220,r:30}};
 const EGG_GOT={};
 const eggHere=()=>Object.entries(EGGS).filter(([k,e])=>G&&e.sid===G.sid&&(e.art||e.x));
@@ -5242,7 +5267,8 @@ function renderTitle(){const c=ctx,t=animT,ti=storyImg('title');if(ti){const z=1
 function drawArkStatic(c){const g0=G;G=G||{t:animT,lives:20,S:{lamp:[0,0]}};drawArk(c,1,0,1);G=g0;}
 function renderMap(){const c=ctx,t=animT;sky(c,'#0a1029','#232a5c',H);starsDraw(c,260,5,H,t);
   c.save();c.strokeStyle='rgba(255,230,160,.35)';c.lineWidth=2;c.setLineDash([4,6]);c.beginPath();MAPNODES.forEach(([x,y],i)=>i?c.lineTo(x,y):c.moveTo(x,y));c.stroke();c.restore();
-  const bx=900,by=60;glow(c,bx,by,90,'255,240,200',.3+.1*Math.sin(t*2));c.save();c.translate(bx,by);c.fillStyle='#fff8dc';for(let i=0;i<4;i++){c.rotate(Math.PI/4);P(c,[[0,-24],[4,0],[0,24],[-4,0]]);c.fill();}C(c,0,0,5);c.fill();c.restore();
+  c.save();c.strokeStyle='rgba(200,175,255,.5)';c.lineWidth=2;c.setLineDash([3,5]);for(const id in SPECIAL_NODES){const n=SPECIAL_NODES[id],l=n.link,to=!spShown(+id)?null:l<=20?MAPNODES[l-1]:spShown(l)&&SPECIAL_NODES[l].xy;if(to){c.beginPath();c.moveTo(n.xy[0],n.xy[1]);c.lineTo(to[0],to[1]);c.stroke();}}c.restore();   // 특별 판은 관련 판과 보랏빛 점선으로
+  const [bx,by]=STAR_XY;glow(c,bx,by,90,'255,240,200',.3+.1*Math.sin(t*2));c.save();c.translate(bx,by);c.fillStyle='#fff8dc';for(let i=0;i<4;i++){c.rotate(Math.PI/4);P(c,[[0,-24],[4,0],[0,24],[-4,0]]);c.fill();}C(c,0,0,5);c.fill();c.restore();
   txt(c,'베들레헴의 별',bx,by+36,{size:13,col:'#ffe9b0'});
   if((BEST[20]||0)>0){const k=.6+.4*Math.sin(t*1.6);c.save();c.globalCompositeOperation='lighter';c.strokeStyle=`rgba(255,220,130,${.55*k})`;c.lineWidth=2.6;c.beginPath();MAPNODES.forEach(([x,y],i)=>i?c.lineTo(x,y):c.moveTo(x,y));c.lineTo(bx,by);c.stroke();for(const [x,y] of MAPNODES)glow(c,x,y,16,'255,226,150',.3*k);glow(c,bx,by,140,'255,240,200',.25*k);c.restore();   // 구약 끝에서 별자리가 베들레헴의 별을 가리킨다(창 15:5)
   }
@@ -5318,10 +5344,15 @@ function goMap(){G=null;setScreen('map');buildNodes();mapBadges();if((BEST[20]||
 // 지도 단추의 빨간 숫자: 쓰지 않은 연단 점수, 살 수 있는 별 업그레이드
 function mapBadges(){const n=heroesOpen().reduce((a,k)=>a+Math.max(0,ptsLeft(k)),0),tp=$('trainPt'),up=$('upgPt');tp.hidden=!n;tp.textContent=n;up.hidden=!upgAffordable();up.textContent=starsLeft();}
 const starSVG=on=>`<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 20.9l1.6-7L2 9.2l7.1-.6z" fill="${on?'#ffd36b':'none'}" stroke="${on?'#7b4a24':'#b39c78'}" stroke-width="1.4"/></svg>`;
-function buildNodes(){const box=$('nodes');box.innerHTML='';MAPNODES.forEach(([x,y,nm],i)=>{const id=i+1,ready=!!STAGES[id],ok=ready&&(id===1||(BEST[id-1]||0)>0),b=document.createElement('button');b.className='node';b.style.left=(x/W*100)+'%';b.style.top=(y/H*100)+'%';b.innerHTML=`${id}${ok?`<span class="nm">${nm}</span><span class="st">${'★'.repeat(BEST[id]||0)}${'☆'.repeat(3-(BEST[id]||0))}</span>`:''}`;b.setAttribute('aria-label',`${id} ${nm}`);if(!ok){b.disabled=true;b.title=ready?`${nm} · 앞 이야기를 지켜 내면 열려요`:`${nm} · 다음 판에서 만나요`;if(ready){b.classList.add('locked');b.innerHTML=`${id}<span class="nm">${nm}</span>`;}}else b.onclick=()=>{Snd.init();Snd.play('click');if((BEST[id]||0)>0)openModes(id);else{curMode='normal';startStory(id);}};if(ok&&(BEST[id]||0)>0){const c=chalOf(id),cb=document.createElement('span');cb.className='cb';cb.innerHTML=`<i class="${c.h?'on':''}" title="큰 용사여">용</i><i class="${c.i?'on':''}" title="말씀이 희귀한 때">말</i>`;b.appendChild(cb);}box.appendChild(b);});if(allHeroesOpen()&&STAGES[21])danNode(box);}
+// 도전 훈장(10-19 사용자: 용/말 동그라미 대신 킹덤러시의 날개·철권처럼 판 둘레에 그림). 큰 용사여는 금빛 날개(사 40:31 독수리가 날개 치며 올라감 같을 것이요), 말씀이 희귀한 때는 아직 꺼지지 않은 하나님의 등불(삼상 3:3)을 짤막한 촛불로 그림(10-19 사용자: 옆으로 누운 흙 등잔은 불붙은 병 같고, 일곱 가지 등잔대보다 촛불이 좋다)
+const WING_SVG=`<svg viewBox="0 0 40 34" aria-hidden="true"><g fill="url(#gWing)" stroke="#3a1d07" stroke-width="1.15"><ellipse cx="12.2" cy="27.3" rx="9.5" ry="3.3" transform="rotate(14 12.2 27.3)"/><ellipse cx="15.5" cy="25" rx="12.5" ry="3.5"/><ellipse cx="17.6" cy="21.4" rx="15" ry="3.7" transform="rotate(-14 17.6 21.4)"/><ellipse cx="18.1" cy="17.3" rx="17" ry="3.9" transform="rotate(-27 18.1 17.3)"/><ellipse cx="16.8" cy="13.4" rx="18" ry="3.9" transform="rotate(-40 16.8 13.4)"/></g><ellipse cx="11.3" cy="21.2" rx="10" ry="5.6" transform="rotate(-24 11.3 21.2)" fill="#ffe592" stroke="#3a1d07" stroke-width="1.15"/><path d="M6 22.5q2.6-2.4 5.2-1.6q2.4-3 5.4-2.6q1.6-2.6 4.2-2.8" fill="none" stroke="#c98a22" stroke-width=".9" stroke-linecap="round"/><path d="M8 15.5Q13 9.5 20 6.8" fill="none" stroke="#fffbe6" stroke-width="1.1" stroke-linecap="round" opacity=".85"/></svg>`;
+const LAMP_SVG=`<svg viewBox="0 0 22 28" aria-hidden="true"><circle cx="11" cy="7.5" r="9" fill="url(#gGlow)"/><path d="M2.6 23.2H19.4Q18.8 26.8 11 26.8Q3.2 26.8 2.6 23.2Z" fill="url(#gWing)" stroke="#3a1d07" stroke-width="1" stroke-linejoin="round"/><path d="M5.6 15Q5.6 13.4 7.2 13.4H14.8Q16.4 13.4 16.4 15V23.4H5.6Z" fill="url(#gWax)" stroke="#3a1d07" stroke-width="1" stroke-linejoin="round"/><path d="M6.4 14.3H15.6V15.2Q15 16.6 14.4 15.2Q13.6 14.8 12.6 15Q12 17.6 11.2 15.1Q9.4 14.8 8.4 15.2Q7.8 16.4 7.2 15.2Q6.6 15 6.4 15.2Z" fill="#fffcf2"/><path d="M11 13.6V12" stroke="#3a1d07" stroke-width=".9" stroke-linecap="round"/><g class="fl"><path d="M11 12.6C7.4 10.4 8.6 5.2 11 .8C13.4 5.2 14.6 10.4 11 12.6Z" fill="#ff9a2e" stroke="#7a3d16" stroke-width=".65" stroke-linejoin="round"/><path d="M11 11.9C9.6 10.6 10 7.8 11 5.8C12 7.8 12.4 10.6 11 11.9Z" fill="#fff3b0"/></g></svg>`;
+const chalIcon=m=>m==='heroic'?`<span class="ci wings"><i class="wg l">${WING_SVG}</i><i class="wg r">${WING_SVG}</i></span>`:`<span class="ci lamp">${LAMP_SVG}</span>`;
+function buildNodes(){const box=$('nodes');box.innerHTML='';MAPNODES.forEach(([x,y,nm],i)=>{const id=i+1,ready=!!STAGES[id],ok=ready&&(id===1||(BEST[id-1]||0)>0),b=document.createElement('button');b.className='node';b.style.left=(x/W*100)+'%';b.style.top=(y/H*100)+'%';b.innerHTML=`${id}${ok?`<span class="nm">${nm}</span><span class="st">${'★'.repeat(BEST[id]||0)}${'☆'.repeat(3-(BEST[id]||0))}</span>`:''}`;b.setAttribute('aria-label',`${id} ${nm}`);if(!ok){b.disabled=true;b.title=ready?`${nm} · 앞 이야기를 지켜 내면 열려요`:`${nm} · 다음 판에서 만나요`;if(ready){b.classList.add('locked');b.innerHTML=`${id}<span class="nm">${nm}</span>`;}}else b.onclick=()=>{Snd.init();Snd.play('click');if((BEST[id]||0)>0)openModes(id);else{curMode='normal';startStory(id);}};if(ok&&(BEST[id]||0)>0){const c=chalOf(id),got=[];if(c.h){const w=document.createElement('div');w.className='wings';w.style.left=b.style.left;w.style.top=b.style.top;w.innerHTML=`<i class="wg l">${WING_SVG}</i><i class="wg r">${WING_SVG}</i>`;box.prepend(w);got.push(MODES.heroic.name);}   // 날개는 모든 동그라미·이름 뒤에 오도록 맨 앞에 넣는다
+  if(c.i){b.classList.add('lit');b.insertAdjacentHTML('beforeend',`<span class="lamp">${LAMP_SVG}</span>`);got.push(MODES.iron.name);}if(got.length)b.setAttribute('aria-label',`${id} ${nm} · 도전 ${got.join('·')} 지켜 냄`);}box.appendChild(b);});for(const id in SPECIAL_NODES)if(spShown(+id))specialNode(box,+id);}
 function openModes(id){let el=$('modeBox');if(!el){el=document.createElement('div');el.id='modeBox';$('sMap').appendChild(el);}const S=STAGES[id],c=chalOf(id),st=BEST[id]||0;
   el.innerHTML=`<div class="card"><h3>${id} · ${S.name}</h3><button class="mb" data-m="normal"><b>본편 이야기</b><span class="s">${'★'.repeat(st)}${'☆'.repeat(3-st)}</span><em>이야기와 그림 만화를 다시 봐요.</em></button>`+
-    Object.entries(MODES).map(([m,M])=>{const IR=m==='iron'&&IRON[id];return`<button class="mb ${m}" data-m="${m}"><b>${M.name}</b><span class="s">${c[M.key]?'★ 지켜 냄':'☆ 별 하나'}</span><em>${M.rule}</em>${IR?`<em class="ir"><i>이 판</i><b>${IR.name}</b> · ${IR.desc}</em><small>${IR.verse}</small>`:`<small>${M.verse}</small>`}</button>`;}).join('')+`<button class="btn wood" id="mClose">닫기</button></div>`;
+    Object.entries(MODES).map(([m,M])=>{const IR=m==='iron'&&IRON[id];return`<button class="mb ${m}" data-m="${m}"><b>${chalIcon(m)} ${M.name}</b><span class="s">${c[M.key]?'★ 지켜 냄':'☆ 별 하나'}</span><em>${M.rule}</em>${IR?`<em class="ir"><i>이 판</i><b>${IR.name}</b> · ${IR.desc}</em><small>${IR.verse}</small>`:`<small>${M.verse}</small>`}</button>`;}).join('')+`<button class="btn wood" id="mClose">닫기</button></div>`;
   el.hidden=false;el.onclick=ev=>{const b=ev.target.closest('button[data-m]');if(ev.target.id==='mClose'||ev.target===el){el.hidden=true;Snd.play('click');return;}if(!b)return;Snd.play('click');el.hidden=true;curMode=b.dataset.m;if(curMode==='normal')startStory(id);else{curStage=id;Music.play('story');afterStory();}};}
 function startStory(id){curMode='normal';curStage=id;storyIdx=0;Music.play('story');for(const p of STAGES[id].story||[])storyImg(p.art);setScreen('story');showStory();}
 function showStory(){camReset();const S=STAGES[curStage],p=S.story[storyIdx];$('sText').textContent=p.text;$('sVerse').textContent=p.verse||'';$('sDots').innerHTML=S.story.map((_s,i)=>`<i class="${i===storyIdx?'on':''}"></i>`).join('');$('bNext').textContent=storyIdx<S.story.length-1?'다음':'시작';$('bPrev').disabled=storyIdx===0;}
@@ -5341,7 +5372,7 @@ function startPlay(heroKind,hero2){chosenHero=heroKind;chosenHero2=hero2||null;s
 function showEnd(win){
   stageEl.classList.remove('comic');setScreen('end');$('toast').hidden=true;$('banner').hidden=true;$('info').hidden=true;const card=$('endCard'),S=G.S;
   if(S.dan)card.innerHTML=danCard();   // 21: 반드시 지고, 소망으로 끝난다
-  else if(win&&G.mode!=='normal'){const M=MODES[G.mode];card.innerHTML=`<h2>${M.name}</h2><p class="sub">${S.id} · ${S.name} 도전을 지켜 냈어요</p><div class="stars" aria-label="약속의 별 하나 더">${starSVG(true)}</div>${G.iron?`<p class="irn"><i>이 판의 제약</i><b>${G.iron.name}</b> · ${G.iron.desc}</p><p class="verse">${G.iron.verse}</p><p>${G.iron.why}</p>`:`<p class="verse">${M.verse}</p><p>${M.why}</p>`}<div class="stats"><span>풀려난 사람 <b>${G.freed}</b>명</span><span>남은 등불 <b>${G.lives}</b>/${G.maxLives}</span></div><div class="row"><button class="btn" id="eMap">지도로</button><button class="btn wood" id="eAgain">다시 하기</button></div>`;}
+  else if(win&&G.mode!=='normal'){const M=MODES[G.mode];card.innerHTML=`<h2>${M.name}</h2><p class="sub">${S.id} · ${S.name} 도전을 지켜 냈어요 · 지도의 이 판에 ${G.mode==='heroic'?'금빛 날개가 달려요':'등불이 켜져요'}</p><div class="stars" aria-label="약속의 별 하나 더">${starSVG(true)}${chalIcon(G.mode)}</div>${G.iron?`<p class="irn"><i>이 판의 제약</i><b>${G.iron.name}</b> · ${G.iron.desc}</p><p class="verse">${G.iron.verse}</p><p>${G.iron.why}</p>`:`<p class="verse">${M.verse}</p><p>${M.why}</p>`}<div class="stats"><span>풀려난 사람 <b>${G.freed}</b>명</span><span>남은 등불 <b>${G.lives}</b>/${G.maxLives}</span></div><div class="row"><button class="btn" id="eMap">지도로</button><button class="btn wood" id="eAgain">다시 하기</button></div>`;}
   else if(win){const V=S.victory;card.innerHTML=`<h2>${V.title}</h2><p class="sub">${S.id} · ${S.name} (${S.ref})</p><div class="stars" aria-label="약속의 별 ${G.stars}개">${[0,1,2].map(i=>starSVG(i<G.stars)).join('')}</div><p class="verse" style="font-size:.85em">약속의 별은 지켜 낸 기록이에요. 구원은 처음부터 하나님의 일이었어요.</p><div class="stats"><span>풀려난 사람 <b>${G.freed}</b>명</span><span>남은 등불 <b>${G.lives}</b>/20</span></div><p class="verse">${V.verse}</p><div class="jesus"><h3>예수님 찾기</h3><p>${V.jesus}</p></div><details><summary>더 깊이 보기</summary><ul>${V.deep.map(d=>`<li>${d}</li>`).join('')}</ul></details>${V.unlock?`<p class="unlock">${V.unlock}</p>`:''}${endHints()}<div class="row">${STAGES[S.id+1]?`<button class="btn" id="eNext">다음 이야기 · ${STAGES[S.id+1].name} ▶</button>`:''}<button class="btn${STAGES[S.id+1]?' wood':''}" id="eMap">지도로</button><button class="btn wood" id="eAgain">다시 하기</button><button class="btn wood" id="eCodex">두루마리</button></div>`;}
   else card.innerHTML=`<h2>등불이 꺼져 가요</h2><p class="verse">상한 갈대를 꺾지 아니하며 꺼져가는 등불을 끄지 아니하고 (사 42:3)</p><p>등불은 약해졌지만, 하나님의 약속은 꺼지지 않아요. 다시 지켜 볼까요?</p>${G.iron?`<p class="irn"><i>이 판의 제약</i><b>${G.iron.name}</b> · ${G.iron.desc}</p>`:''}<p style="font-size:.9em;color:var(--ink-2)"><b style="font-family:var(--f-ui);font-weight:400;color:var(--wood)">도움말</b> ${pick(TIPS[S.id])}</p>${endHints()}<div class="row"><button class="btn" id="eAgain">다시 하기</button><button class="btn wood" id="eMap">지도로</button></div>`;
   $('eAgain').onclick=()=>{Snd.play('click');startPlay(chosenHero,chosenHero2);};$('eMap').onclick=()=>{Snd.play('click');goMap();};const ec=$('eCodex');if(ec)ec.onclick=()=>openCodex();const en=$('eNext');if(en)en.onclick=()=>{Snd.play('click');G=null;startStory(S.id+1);};
