@@ -1,0 +1,70 @@
+{
+ "출력": "raw",
+ "크기": [
+  1024,
+  1024
+ ],
+ "단계": 4,
+ "항목": [
+  {
+   "id": "spoil_spear",
+   "종류": "물건",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "One long ancient spear with a straight wooden shaft and a leaf-shaped bronze spearhead, shown horizontally from the side, lying flat on the ground, seen from slightly above, no people, no text, no symbols."
+  },
+  {
+   "id": "spoil_shield",
+   "종류": "물건",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "One round ancient warrior's shield made of brown leather stretched over wood with a bronze rim and a round bronze boss in the middle, lying flat on the ground, seen from slightly above, no people, no text, no symbols."
+  },
+  {
+   "id": "spoil_shield2",
+   "종류": "물건",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "One round ancient warrior's shield painted deep blue with a simple plain yellow rim and a round bronze boss in the middle, lying flat on the ground, seen from slightly above, no people, no text, no symbols."
+  },
+  {
+   "id": "spoil_cloth",
+   "종류": "물건",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "One neatly folded fine garment of rich red wool with gold embroidered edges, a small stack of fine clothing, lying flat on the ground, seen from slightly above, no people, no text, no symbols."
+  },
+  {
+   "id": "spoil_cloth2",
+   "종류": "물건",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "One neatly folded fine garment of deep blue linen with a striped white and yellow border, a small stack of fine clothing, lying flat on the ground, seen from slightly above, no people, no text, no symbols."
+  },
+  {
+   "id": "spoil_treasure",
+   "종류": "물건",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "A small pile of precious things: a gold jug, two silver cups, a few gold coins and a string of colored jewels, lying flat on the ground, seen from slightly above, no people, no text, no symbols."
+  }
+ ]
+}

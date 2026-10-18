@@ -106,6 +106,8 @@ button:focus-visible{outline:3px solid var(--gold-hi);outline-offset:2px}
 #boss2{margin-top:.25em}
 #banner.low2{top:31%}
 #banner{left:0;right:0;top:22%;text-align:center;color:#fff6dc;text-shadow:0 .12em 0 #2a1708,0 0 .8em rgba(0,0,0,.65)}
+#toast.dodge{top:auto!important;bottom:3%;left:40%}   /* 위에서 오는 적을 가리면 아래로(tipDodge) */
+#banner.dodge{top:auto!important;bottom:15%}
 #banner p{display:inline-block;background:rgba(18,10,4,.62);padding:.25em .9em;border-radius:.6em}
 #banner h2{margin:0;font-family:var(--f-ui);font-weight:400;font-size:2.4em;color:var(--gold-hi);-webkit-text-stroke:.03em #2a1708}
 #stage.comic #banner{top:auto;bottom:5%;left:7%;right:7%;background:linear-gradient(180deg,rgba(20,12,5,.86),rgba(12,7,3,.9));border:.14em solid rgba(255,214,120,.55);border-radius:1em;padding:.55em 1.2em .7em;box-shadow:0 .3em 1em rgba(0,0,0,.5)}
@@ -2777,7 +2779,10 @@ function drawDeceiver(c,e){const freed=e.state==='freed',alt=e.alt||80,bob=Math.
   if(!freed&&e.stun>0){for(let i=0;i<3;i++){const a2=G.t*5+i*2.1;c.fillStyle='#ffe58a';C(c,e.x+Math.cos(a2)*12,y-92+Math.sin(a2)*3,1.8);c.fill();}}
   if(!freed&&e.state!=='horde'&&e.hp<e.maxHp){const bw=30,bx=e.x-bw/2,by=y-104;c.fillStyle='rgba(20,10,30,.85)';RR(c,bx-1.5,by-1.5,bw+3,6,3);c.fill();c.fillStyle='#a777e8';RR(c,bx,by,Math.max(1,bw*e.hp/e.maxHp),3,1.5);c.fill();}
   c.restore();}
-function drawSpoil(c,s){if(s.gone>.6)return;const al=s.gone>0?1-s.gone/.6:1;c.save();c.globalAlpha*=al;c.translate(s.x,s.y-(s.gone>0?s.gone*30:0));c.scale(1.4,1.4);c.fillStyle='rgba(0,0,0,.18)';E(c,0,2,12,3.5);c.fill();
+function drawSpoil(c,s){if(s.gone>.6)return;const al=s.gone>0?1-s.gone/.6:1;c.save();c.globalAlpha*=al;c.translate(s.x,s.y-(s.gone>0?s.gone*30:0));
+  {const alt=Math.round(s.x+s.y)%2,key={spear:'spoil_spear',shield:alt?'spoil_shield2':'spoil_shield',cloth:alt?'spoil_cloth2':'spoil_cloth',jar:'spoil_treasure'}[s.k],a=key&&ART[key];   // 노략물 그림(10-19 사용자: 초안 수준): 재물과 의복과 보물(대하 20:25)
+   if(a){c.fillStyle='rgba(0,0,0,.18)';E(c,0,2,15,4.2);c.fill();if(s.k==='spear')c.rotate(s.a*.6);const k=a.hgt/a.h;c.drawImage(a.im,-a.w*k/2,3-a.h*k,a.w*k,a.h*k);c.restore();return;}}
+  c.scale(1.4,1.4);c.fillStyle='rgba(0,0,0,.18)';E(c,0,2,12,3.5);c.fill();
   if(s.k==='spear'){c.rotate(s.a);c.strokeStyle=OL;c.lineWidth=3.4;L(c,-16,0,16,0);c.strokeStyle='#a87a40';c.lineWidth=1.8;L(c,-16,0,16,0);P(c,[[16,-3],[24,0],[16,3]]);FS(c,'#c9c2b0',1.2);}
   else if(s.k==='shield'){E(c,0,-4,9,6);FS(c,s.c,1.8);E(c,0,-4,3,2);FS(c,'#d9c08a',1);}
   else if(s.k==='sack')drawSack(c,0,-2,.9,false);
@@ -4414,6 +4419,7 @@ const ART_DEF={
   k_camel:{h:66},k_archer:{h:48},k_centurion:{h:54},watch_benjamin:{h:128,top:.86},boy_sick:{h:30},boy_up:{h:58},a_ox:{h:40},p_family:{h:52},e_abigail:{h:46},j_soldier:{h:48},j_shield:{h:52},j_centurion:{h:54},j_archer:{h:48},j_drummer:{h:50},d_soldier:{h:48},d_shield:{h:52},d_archer:{h:48},deceiver:{h:96},jehoshaphat:{h:64},p_singer:{h:50},e_oil:{h:30},
   r_soldier:{h:48},r_raider:{h:46},r_shield:{h:52},r_centurion:{h:54},r_archer:{h:48},r_drummer:{h:50},r_chariot:{h:64},r_sit:{h:32},r_sit2:{h:32},r_walk:{h:46},ram:{h:58},ram_swing:{h:58},elisha:{h:64},elisha_pray:{h:68},elisha_lead:{h:64},servant:{h:52},servant_see:{h:54},king_israel:{h:62},p_server:{h:52},p_server2:{h:54},firehorse:{h:44},firechariot:{h:56},e_naaman:{h:52},e_naaman_clean:{h:56},
   s_soldier:{h:48},s_shield:{h:54},s_archer:{h:48},s_centurion:{h:54},s_drummer:{h:50},s_chariot:{h:66},siegetower:{h:170},siegetower_bare:{h:170},rabshakeh:{h:64},hezekiah:{h:64},hezekiah_pray:{h:50},isaiah:{h:62},p_guest:{h:52},p_guest2:{h:52},p_guest3:{h:52},e_spring:{h:30},art_uzziah:{h:112,top:.8},
+  spoil_spear:{h:16},spoil_shield:{h:20},spoil_shield2:{h:20},spoil_cloth:{h:17},spoil_cloth2:{h:17},spoil_treasure:{h:21},
   p_rest:{h:36},p_cheer:{h:54},e_spoils:{h:46},e_sack:{h:20},p_jar:{h:50},p_jar2:{h:48},p_pour:{h:48},p_pour2:{h:46},ruth:{h:52},ruth_glean:{h:40},
   nehemiah:{h:64},h_soldier:{h:48},h_shield:{h:52},h_centurion:{h:54},h_archer:{h:48},h_chariot:{h:64},p_messenger:{h:52},e_fox:{h:30},
   dan_lion:{h:96},dan_bear:{h:104},dan_leopard:{h:84},dan_fourth:{h:118},
@@ -4422,7 +4428,7 @@ const ART_DEF={
   shep1:{h:62,top:.5},shep2:{h:68,top:.5},shep3:{h:74,top:.5},art1:{h:76,top:.7},art2:{h:82,top:.72},art3:{h:88,top:.74},
 };
 const ART={};
-const AV='?v=34';   // 그림을 바꿀 때마다 올려서 예전 그림이 캐시에서 나오지 않게
+const AV='?v=35';   // 그림을 바꿀 때마다 올려서 예전 그림이 캐시에서 나오지 않게
 const BG_IMG={},REAR_IMG={},FALL_IMG={},FULL_IMG={};   // FULL_IMG: 성벽을 다 지은 배경(bg20_full.jpg, 느 6:15)   // REAR_IMG: 처음엔 막혀 있는 뒷길을 덮는 그림(bgN_rear.png) · FALL_IMG: 성벽이 무너진 배경(bg9_fall.jpg, 수 6:20)
 function loadArt(){for(const k of Object.keys(STAGES).map(Number)){const im=new Image();im.onload=()=>{BG_IMG[k]=im;if(G&&G.sid===k)buildBg();};im.src='art/bg'+k+'.jpg'+AV;if(STAGES[k].rear!=null){const r=new Image();r.onload=()=>{REAR_IMG[k]=r;if(G&&G.sid===k)buildBg();};r.src='art/bg'+k+'_rear.png'+AV;}
     if(STAGES[k].jericho){const f=new Image();f.onload=()=>{FALL_IMG[k]=f;};f.src='art/bg'+k+'_fall.jpg'+AV;}
@@ -5088,12 +5094,20 @@ function drawHeroPortrait(cvEl,kind){const c=cvEl.getContext('2d'),w=cvEl.width,
 
 /* ============================== 7. 화면 HTML ============================== */
 let toastT=0,bannerT=0;
-function toast(html,sec=5){const el=$('toast');el.innerHTML=html;el.querySelectorAll('canvas[data-a]').forEach(cv=>coachArt(cv,cv.dataset.a));el.hidden=false;el.classList.toggle('low',!!(G&&G.boss));el.classList.toggle('low2',!!(G&&G.bosses&&G.bosses.length>1));el.classList.remove('popc');void el.offsetWidth;el.classList.add('popc');clearTimeout(toastT);toastT=setTimeout(()=>{el.hidden=true;},sec*1000);}
-function banner(title,sub,sec=4){const el=$('banner');el.innerHTML=`<h2>${title}</h2>${sub?`<p>${sub}</p>`:''}`;el.hidden=false;el.classList.toggle('low2',!!(G&&G.bosses&&G.bosses.length>1));el.classList.remove('popb');void el.offsetWidth;el.classList.add('popb');clearTimeout(bannerT);bannerT=setTimeout(()=>{el.hidden=true;},sec*1000);}
+// 알림이 적을 가리지 않게(10-19 사용자: "18스테이지에서는 적들이 위에서도 오는데 계속 가리고 알림이 떠서 굉장히 거슬려"): 알림·큰 글이 보이는 동안 0.25초마다
+// 그 칸에 든 적을 세어, 아래 칸(.dodge)이 덜 가리면 옮기고 닫힐 때까지 그대로 둔다(왔다 갔다 하지 않게)
+let tipT=0;
+function tipDodge(now){if(!G||screen!=='play'||(!now&&animT-tipT<.25))return;tipT=animT;const sr=stageEl.getBoundingClientRect();if(!sr.width)return;
+  const k=sr.width/W,z=camOn()?cam.z:1,ox=camOn()?cam.x:0,oy=camOn()?cam.y:0,pts=[];
+  for(const e of G.enemies)if(alive(e))pts.push({x:(e.x-ox)*z*k,y:(e.y-(e.def.fly?(e.alt==null?FLY_H:e.alt):0)-20-oy)*z*k});
+  const cnt=el=>{const r=el.getBoundingClientRect(),x0=r.left-sr.left-14,y0=r.top-sr.top-34,x1=x0+r.width+28,y1=y0+r.height+44;let n=0;for(const p of pts)if(p.x>x0&&p.x<x1&&p.y>y0&&p.y<y1)n++;return n;};
+  for(const id of ['toast','banner']){const el=$(id);if(el.hidden||el.classList.contains('dodge'))continue;const a=cnt(el);if(!a)continue;el.classList.add('dodge');if(cnt(el)>=a)el.classList.remove('dodge');}}
+function toast(html,sec=5){const el=$('toast');el.classList.remove('dodge');el.innerHTML=html;el.querySelectorAll('canvas[data-a]').forEach(cv=>coachArt(cv,cv.dataset.a));el.hidden=false;el.classList.toggle('low',!!(G&&G.boss));el.classList.toggle('low2',!!(G&&G.bosses&&G.bosses.length>1));el.classList.remove('popc');void el.offsetWidth;el.classList.add('popc');clearTimeout(toastT);toastT=setTimeout(()=>{el.hidden=true;},sec*1000);tipDodge(true);}
+function banner(title,sub,sec=4){const el=$('banner');el.classList.remove('dodge');el.innerHTML=`<h2>${title}</h2>${sub?`<p>${sub}</p>`:''}`;el.hidden=false;el.classList.toggle('low2',!!(G&&G.bosses&&G.bosses.length>1));el.classList.remove('popb');void el.offsetWidth;el.classList.add('popb');clearTimeout(bannerT);bannerT=setTimeout(()=>{el.hidden=true;},sec*1000);tipDodge(true);}
 const ui={last:{},
   set(id,v){if(this.last[id]!==v){this.last[id]=v;$(id).textContent=v;}},
   reset(){this.last={};$('boss').hidden=true;$('info').hidden=true;$('toast').hidden=true;$('banner').hidden=true;drawHeroPortrait($('heroCv'),G.hero.kind);$('ultName').innerHTML=G.hero.D.ult.short||G.hero.D.ult.name;},
-  sync(){if(!G)return;this.set('vLives',String(G.lives));this.set('vGold',String(G.gold));this.set('vWave',G.S.endless?`${Math.max(0,G.waveIdx+1)}/∞`:`${Math.max(0,G.waveIdx+1)}/${G.S.waves.length}`);
+  sync(){if(!G)return;tipDodge();this.set('vLives',String(G.lives));this.set('vGold',String(G.gold));this.set('vWave',G.S.endless?`${Math.max(0,G.waveIdx+1)}/∞`:`${Math.max(0,G.waveIdx+1)}/${G.S.waves.length}`);
     const ab=(id,v,max,armed)=>{const el=$(id);el.querySelector('.cd').style.setProperty('--p',(max?clamp(v/max,0,1)*100:0).toFixed(1)+'%');el.classList.toggle('armed',!!armed);};
     ab('bCry',G.cd.cry,cryCd(),G.aim==='cry');ab('bHelp',G.cd.help,22,G.aim==='help');const h=G.hero;ab('bUlt',h.ult,h.D.ult.cd,G.aim==='stamp'||G.aim==='banner'||G.aim==='rain');
     $('heroHp').style.width=(h.state==='ok'?h.hp/h.max*100:0)+'%';$('bHero').classList.toggle('sel',G.heroSel);
@@ -5444,7 +5458,7 @@ function frame(now){
 window.kogPause=()=>{if(G&&screen==='play'&&!G.over&&!G.paused&&!G.scene)togglePause(true);bgPause(true);};
 window.kogResume=()=>bgPause(false);
 window.kogBack=()=>{if(!$('lb').hidden){$('lb').hidden=true;return'ok';}if(!$('sCodex').hidden){closeCodex();return'ok';}if(screen==='play'){if(G&&(G.scene||G.over))return'ok';if(G){togglePause();return'ok';}}if(['story','hero','train','upg','end'].includes(screen)){goMap();return'ok';}if(screen==='map'){goTitle();return'ok';}return'exit';};
-window.__kog={danWaves,ENEMIES,Music,Synth,BEST,HEROES,get G(){return G;},mode:m=>{curMode=m;},UPGS,coach:()=>{if(G)coachSync();return G&&G.coach;},win:()=>win(),HSAVE,heroRec,ptsLeft,spendPt,tap:(x,y)=>onTap(x,y),story:(id,i)=>{startStory(id);storyIdx=i||0;if(typeof showStory==="function")showStory();},drawStory:()=>{ctx.setTransform(scale*dpr,0,0,scale*dpr,0,0);renderStory();},get bgC(){return bgC;},STAGES,build:(i,l)=>build(G.spots[i],l),upgrade:i=>upgrade(G.spots[i].tower),branch:(i,id)=>takeBranch(G.spots[i].tower,id),skill:(i,k)=>buySkill(G.spots[i].tower,k),callWave:()=>callWave(),setSpeed:n=>{G.speed=n;},sim:s=>{for(let i=0;i<s*60&&G;i++){if(!G.paused)update(1/60);}},draw:()=>{ctx.setTransform(scale*dpr,0,0,scale*dpr,0,0);if(G)renderPlay();},hero:(x,y)=>moveHero(x,y),cast:(k,x,y)=>k==='cry'?castCry(x,y):k==='help'?castHelp(x,y):k==='stamp'?castStamp(x,y):ultPress(),start:(id,h)=>{curStage=id;startPlay(h||STAGES[id].heroes[0]);},spotCheck:()=>{const bad=[];for(const s of G.spots){for(const p of G.paths){const n=nearest(p,s.x,s.y);if(n.dd<52*52)bad.push([s.i,Math.round(Math.sqrt(n.dd))]);}}return bad;}};
+window.__kog={tipDodge:()=>tipDodge(true),danWaves,ENEMIES,Music,Synth,BEST,HEROES,get G(){return G;},mode:m=>{curMode=m;},UPGS,coach:()=>{if(G)coachSync();return G&&G.coach;},win:()=>win(),HSAVE,heroRec,ptsLeft,spendPt,tap:(x,y)=>onTap(x,y),story:(id,i)=>{startStory(id);storyIdx=i||0;if(typeof showStory==="function")showStory();},drawStory:()=>{ctx.setTransform(scale*dpr,0,0,scale*dpr,0,0);renderStory();},get bgC(){return bgC;},STAGES,build:(i,l)=>build(G.spots[i],l),upgrade:i=>upgrade(G.spots[i].tower),branch:(i,id)=>takeBranch(G.spots[i].tower,id),skill:(i,k)=>buySkill(G.spots[i].tower,k),callWave:()=>callWave(),setSpeed:n=>{G.speed=n;},sim:s=>{for(let i=0;i<s*60&&G;i++){if(!G.paused)update(1/60);}},draw:()=>{ctx.setTransform(scale*dpr,0,0,scale*dpr,0,0);if(G)renderPlay();},hero:(x,y)=>moveHero(x,y),cast:(k,x,y)=>k==='cry'?castCry(x,y):k==='help'?castHelp(x,y):k==='stamp'?castStamp(x,y):ultPress(),start:(id,h)=>{curStage=id;startPlay(h||STAGES[id].heroes[0]);},spotCheck:()=>{const bad=[];for(const s of G.spots){for(const p of G.paths){const n=nearest(p,s.x,s.y);if(n.dd<52*52)bad.push([s.i,Math.round(Math.sqrt(n.dd))]);}}return bad;}};
 loadArt();resize();addEventListener('resize',resize);
 setScreen('title');Music.play('title');Snd.init();   // 앱(WebView)에서는 바로, 브라우저에서는 첫 손길에 오프닝 곡
 requestAnimationFrame(frame);
