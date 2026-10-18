@@ -575,5 +575,123 @@
     "_len": 150.0
    }
   }
+ },
+ "s21": {
+  "1등": "s21_s2_6c3123.flac",
+  "점수": {
+   "s21_s1_6c3123.flac": -0.124,
+   "s21_s2_6c3123.flac": 0.286,
+   "s21_s3_6c3123.flac": -0.319,
+   "s21_s4_6c3123.flac": 0.157
+  },
+  "값": {
+   "s21_s1_6c3123.flac": {
+    "bpm": 135.999,
+    "pulse": 0.707,
+    "dense": 2.3,
+    "perc": 0.119,
+    "bright": 2080.99,
+    "build": 9.456,
+    "early": -29.861,
+    "repeat": 0.052,
+    "_early_s": 29.861,
+    "_len": 150.0
+   },
+   "s21_s2_6c3123.flac": {
+    "bpm": 135.999,
+    "pulse": 0.719,
+    "dense": 2.567,
+    "perc": 0.131,
+    "bright": 1973.717,
+    "build": 18.0,
+    "early": -31.417,
+    "repeat": 0.038,
+    "_early_s": 31.417,
+    "_len": 150.0
+   },
+   "s21_s3_6c3123.flac": {
+    "bpm": 135.999,
+    "pulse": 0.659,
+    "dense": 2.833,
+    "perc": 0.126,
+    "bright": 2208.921,
+    "build": 5.707,
+    "early": -30.0,
+    "repeat": 0.038,
+    "_early_s": 30.0,
+    "_len": 150.0
+   },
+   "s21_s4_6c3123.flac": {
+    "bpm": 135.999,
+    "pulse": 0.693,
+    "dense": 2.18,
+    "perc": 0.131,
+    "bright": 2148.196,
+    "build": 8.993,
+    "early": -22.57,
+    "repeat": 0.045,
+    "_early_s": 22.57,
+    "_len": 150.0
+   }
+  }
+ },
+ "boss7": {
+  "1등": "boss7_s4_85bf46.flac",
+  "점수": {
+   "boss7_s1_85bf46.flac": -0.08,
+   "boss7_s2_85bf46.flac": -0.384,
+   "boss7_s3_85bf46.flac": -0.312,
+   "boss7_s4_85bf46.flac": 0.776
+  },
+  "값": {
+   "boss7_s1_85bf46.flac": {
+    "bpm": 135.999,
+    "pulse": 0.705,
+    "dense": 3.167,
+    "perc": 0.116,
+    "bright": 2126.991,
+    "build": 13.466,
+    "early": -0.0,
+    "repeat": 0.043,
+    "_early_s": 0.0,
+    "_len": 120.0
+   },
+   "boss7_s2_85bf46.flac": {
+    "bpm": 135.999,
+    "pulse": 0.758,
+    "dense": 3.425,
+    "perc": 0.094,
+    "bright": 1943.912,
+    "build": 10.055,
+    "early": -21.293,
+    "repeat": 0.045,
+    "_early_s": 21.293,
+    "_len": 120.0
+   },
+   "boss7_s3_85bf46.flac": {
+    "bpm": 135.999,
+    "pulse": 0.749,
+    "dense": 2.058,
+    "perc": 0.109,
+    "bright": 2066.668,
+    "build": 18.0,
+    "early": -0.0,
+    "repeat": 0.038,
+    "_early_s": 0.0,
+    "_len": 120.0
+   },
+   "boss7_s4_85bf46.flac": {
+    "bpm": 135.999,
+    "pulse": 0.863,
+    "dense": 3.192,
+    "perc": 0.176,
+    "bright": 2284.259,
+    "build": 11.499,
+    "early": -0.0,
+    "repeat": 0.045,
+    "_early_s": 0.0,
+    "_len": 120.0
+   }
+  }
  }
 }
