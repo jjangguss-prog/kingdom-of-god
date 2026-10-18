@@ -1,0 +1,396 @@
+{
+ "출력": "raw",
+ "크기": [
+  1024,
+  1024
+ ],
+ "단계": 4,
+ "항목": [
+  {
+   "id": "n_soldier",
+   "종류": "인물",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "a Babylonian Chaldean soldier, a man with a short curled black beard, a rounded bronze helmet with a short neck guard, a knee-length dark blue tunic with a wide leather belt and a short fringed red kilt over it, sandals, holding a long spear in his right hand and a small round bronze shield on his left arm, determined frown, walking forward, exactly two arms and exactly two hands. No statues, no idols, no carved figures, no winged discs, no crescent shapes, no moon ornaments, no religious symbols anywhere."
+  },
+  {
+   "id": "n_shield",
+   "종류": "인물",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "a Babylonian Chaldean soldier, a man with a short curled black beard, a rounded bronze helmet with a short neck guard, a knee-length dark blue tunic with a wide leather belt and a short fringed red kilt over it, sandals, a big heavy shield bearer holding ONE tall rectangular shield of woven wicker covered with leather in front of him with his left hand and a short spear in his right hand, proud chin up, exactly two arms and exactly two hands. No statues, no idols, no carved figures, no winged discs, no crescent shapes, no moon ornaments, no religious symbols anywhere."
+  },
+  {
+   "id": "n_archer",
+   "종류": "인물",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "a Babylonian Chaldean soldier, a man with a short curled black beard, a rounded bronze helmet with a short neck guard, a knee-length dark blue tunic with a wide leather belt and a short fringed red kilt over it, sandals, a lean archer with a leather quiver of arrows on his back, drawing a big curved composite bow with an arrow aimed forward, narrowed eyes, exactly two arms and exactly two hands. No statues, no idols, no carved figures, no winged discs, no crescent shapes, no moon ornaments, no religious symbols anywhere."
+  },
+  {
+   "id": "n_centurion",
+   "종류": "인물",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "A Babylonian Chaldean commander, a stern man with a long curled black beard streaked with grey, a tall rounded bronze helmet with a red horsehair crest, a long fringed red-and-gold robe over bronze scale armor, holding a curved sword in his right hand and pointing forward commandingly with his left hand, hard proud face, exactly two arms and exactly two hands. No statues, no idols, no carved figures, no winged discs, no crescent shapes, no moon ornaments, no religious symbols anywhere."
+  },
+  {
+   "id": "n_raider",
+   "종류": "인물",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "A fast young Babylonian Chaldean scout, a lean man with a short black beard and a red cloth headband, a short sleeveless tan tunic with a belt, running forward quickly holding a short spear in his right hand, his left arm swinging, eager face, exactly two arms and exactly two hands. No statues, no idols, no carved figures, no winged discs, no crescent shapes, no moon ornaments, no religious symbols anywhere."
+  },
+  {
+   "id": "n_chariot",
+   "종류": "인물",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "A Babylonian war chariot: a light two-wheeled chariot of dark wood with bronze fittings and big eight-spoked wheels, pulled by two galloping horses with blue and gold tasseled harness, side view facing right, with two Chaldean men in rounded bronze helmets riding in it: a driver holding the reins and an archer with a bow. The whole chariot and both horses fully visible. No statues, no idols, no carved figures, no winged discs, no crescent shapes, no moon ornaments, no religious symbols anywhere."
+  },
+  {
+   "id": "p_flee",
+   "종류": "인물",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "A Judean mother in a brown dress and a cream headscarf walking forward, holding a small child on her left hip with her left arm and carrying a cloth bundle in her right hand, worried but brave face; the child has short dark hair and holds onto her dress, exactly two arms and exactly two hands. No statues, no idols, no carved figures, no winged discs, no crescent shapes, no moon ornaments, no religious symbols anywhere."
+  },
+  {
+   "id": "p_flee2",
+   "종류": "인물",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "An old Judean man with a long white beard, a grey wool robe and a brown headcloth, walking forward leaning on a wooden walking staff held in his right hand, a cloth bundle on his back with the strap held in his left hand at his chest, tired but steady face, exactly two arms and exactly two hands. No statues, no idols, no carved figures, no winged discs, no crescent shapes, no moon ornaments, no religious symbols anywhere."
+  },
+  {
+   "id": "p_flee3",
+   "종류": "인물",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "A Judean boy of about ten with short curly dark hair in a short tan tunic, walking forward carrying a small clay water jar in both arms against his chest, brave face, exactly two arms and exactly two hands. No statues, no idols, no carved figures, no winged discs, no crescent shapes, no moon ornaments, no religious symbols anywhere."
+  },
+  {
+   "id": "baruch",
+   "종류": "인물",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "Baruch the scribe, a young Judean man of about thirty with a short neat black beard, wearing a pale blue linen robe with a small wooden scribe's ink case tied at his belt, walking forward carrying a tall sealed clay jar with a clay lid in both arms against his chest, careful and hopeful face, exactly two arms and exactly two hands. No statues, no idols, no carved figures, no winged discs, no crescent shapes, no moon ornaments, no religious symbols anywhere."
+  },
+  {
+   "id": "jeremiah",
+   "종류": "인물",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "Jeremiah the prophet, a thin earnest Judean man of about fifty with a short greying dark beard, wearing a plain undyed cream wool robe and a brown cloak, standing and raising his right hand with an open palm as he speaks God's word, holding a small rolled scroll in his left hand, earnest kind face, exactly two arms and exactly two hands. No statues, no idols, no carved figures, no winged discs, no crescent shapes, no moon ornaments, no religious symbols anywhere."
+  },
+  {
+   "id": "e_deedjar",
+   "종류": "물건",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "A tall sealed clay storage jar with a round clay lid tied on with string, standing on a small patch of earth, with two small rolled scrolls tied with string and a round clay seal lying in front of it. No people."
+  },
+  {
+   "id": "g_soldier",
+   "종류": "인물",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "A warrior from the far north of the ancient world, a man with a bushy reddish-brown beard, a tall pointed felt cap trimmed with fur, a thick quilted brown coat, baggy trousers and soft boots, holding a spear in his right hand and a round wicker shield on his left arm, fierce face, walking forward, exactly two arms and exactly two hands. No statues, no idols, no carved figures, no winged discs, no crescent shapes, no moon ornaments, no religious symbols anywhere."
+  },
+  {
+   "id": "g_horse",
+   "종류": "인물",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "A horseman from the far north of the ancient world riding a sturdy brown horse with a thick mane, the rider has a bushy reddish-brown beard, a tall pointed felt cap trimmed with fur, a quilted brown coat, a bow case at his side and holds a long spear in his right hand and the reins in his left hand, galloping, side view facing right. The whole horse and rider fully visible, exactly two arms and exactly two hands. No statues, no idols, no carved figures, no winged discs, no crescent shapes, no moon ornaments, no religious symbols anywhere."
+  },
+  {
+   "id": "q_shield",
+   "종류": "인물",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "An ancient Persian soldier, a man with a neat curled black beard, a bronze helmet, a long-sleeved patterned purple-and-yellow tunic over trousers, holding a big rectangular wicker shield in front of him with his left hand and a short spear in his right hand, proud face, walking forward, exactly two arms and exactly two hands. No statues, no idols, no carved figures, no winged discs, no crescent shapes, no moon ornaments, no religious symbols anywhere."
+  },
+  {
+   "id": "u_archer",
+   "종류": "인물",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "A tall ancient Cushite archer from the upper Nile, a dignified dark-skinned man with short black hair and a white ostrich feather in a red headband, a white linen kilt with a red sash and a leather quiver on his back, drawing a very long bow with an arrow aimed forward, focused face, exactly two arms and exactly two hands. No statues, no idols, no carved figures, no winged discs, no crescent shapes, no moon ornaments, no religious symbols anywhere."
+  },
+  {
+   "id": "t_centurion",
+   "종류": "인물",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "An ancient Libyan commander from the land of Put, a stern man with a short pointed beard, a long braided side-lock and two white feathers in his hair, a long patterned red-and-green cloak over a tunic, holding a curved sword in his right hand and pointing forward commandingly with his left hand, exactly two arms and exactly two hands. No statues, no idols, no carved figures, no winged discs, no crescent shapes, no moon ornaments, no religious symbols anywhere."
+  },
+  {
+   "id": "w_raider",
+   "종류": "인물",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "A fast young raider from the far north of the ancient world, a lean man with long braided blond hair and a short beard, a short sleeveless green tunic, leather leggings and a small round shield on his back, running forward quickly holding a short spear in his right hand, eager face, exactly two arms and exactly two hands. No statues, no idols, no carved figures, no winged discs, no crescent shapes, no moon ornaments, no religious symbols anywhere."
+  },
+  {
+   "id": "y_chariot",
+   "종류": "인물",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "A light war chariot from the far north of the ancient world: a small two-wheeled chariot of pale wood with big spoked wheels, pulled by two galloping grey horses with red tasseled harness, side view facing right, with two men riding in it wearing pointed felt caps and quilted coats: a driver holding the reins and an archer with a bow. The whole chariot and both horses fully visible. No statues, no idols, no carved figures, no winged discs, no crescent shapes, no moon ornaments, no religious symbols anywhere."
+  },
+  {
+   "id": "s22a",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: seen from the top of the stone wall of Jerusalem at dusk, two Judean watchmen with bronze helmets and round shields rest their hands on the battlements and look out in worry; outside the walls all around the city spreads a vast Babylonian army camp with hundreds of tents, banners and small campfires, and long sloping earthen siege ramps are being piled up against the walls by tiny workers with baskets; the hills beyond; orange evening sky. All houses are one-story or two-story stone and mud-brick houses with flat earthen rooftops and low parapets; no sloped roofs, no roof tiles. No statues, no idols, no carved figures, no winged discs, no crescent shapes, no moon ornaments, no religious symbols anywhere. Nobody is wounded, no blood, nobody lying on the ground, no chains, no ropes. Hands are drawn simply and clearly, each hand with four fingers and a thumb, and no hand overlaps another person. Every face is clear and well drawn with distinct eyes, nose and mouth. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "s22b",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: in a small stone-paved courtyard surrounded by high stone walls (the court of the guard in Jerusalem), Jeremiah the prophet, a thin earnest Judean man of about fifty with a short greying dark beard, wearing a plain undyed cream wool robe and a brown cloak, sits on a stone bench with his hands folded on his knees and lifts his face up as a soft beam of white-gold light from heaven shines down, with no figure and no face in the light on him; a Judean guard with a bronze helmet and a spear stands quietly by the arched doorway; beside Jeremiah a small clay water jar and one round loaf of bread. No statues, no idols, no carved figures, no winged discs, no crescent shapes, no moon ornaments, no religious symbols anywhere. Hands are drawn simply and clearly, each hand with four fingers and a thumb, and no hand overlaps another person. Every face is clear and well drawn with distinct eyes, nose and mouth. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "s22c",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: in the stone courtyard of the guard in Jerusalem, Jeremiah the prophet, a thin earnest Judean man of about fifty with a short greying dark beard, wearing a plain undyed cream wool robe and a brown cloak, holds a small bronze hand balance scale in his right hand and weighs out a few pieces of silver for his cousin Hanamel, a Judean man in a striped brown robe who holds out both open hands; beside them Baruch the scribe, a young Judean man of about thirty with a short neat black beard, wearing a pale blue linen robe with a small wooden scribe's ink case tied at his belt, sits on a low stool and writes on a scroll with a reed pen; behind them three older Judean men stand as witnesses and watch; on a low wooden table two rolled scrolls and a lump of clay for a seal; bright day. No statues, no idols, no carved figures, no winged discs, no crescent shapes, no moon ornaments, no religious symbols anywhere. Hands are drawn simply and clearly, each hand with four fingers and a thumb, and no hand overlaps another person. Every face is clear and well drawn with distinct eyes, nose and mouth. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "s22d",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: at night under the moon, a narrow stone gate between two high city walls beside a garden of olive and fig trees, Judean families quietly walk out through the gate onto a path down the hill carrying cloth bundles: a mother holding a little child on her hip, an old man with a wooden staff, a boy holding his father's hand; at the front Baruch the scribe, a young Judean man of about thirty with a short neat black beard, wearing a pale blue linen robe with a small wooden scribe's ink case tied at his belt, carries a tall sealed clay jar in both arms; far away on the dark hills the small campfires of an enemy camp. No statues, no idols, no carved figures, no winged discs, no crescent shapes, no moon ornaments, no religious symbols anywhere. Nobody is wounded, no blood, nobody lying on the ground, no chains, no ropes. Hands are drawn simply and clearly, each hand with four fingers and a thumb, and no hand overlaps another person. Every face is clear and well drawn with distinct eyes, nose and mouth. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "v22a",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: in the courtyard of the guard by warm lamplight, Baruch the scribe, a young Judean man of about thirty with a short neat black beard, wearing a pale blue linen robe with a small wooden scribe's ink case tied at his belt, carefully lowers two rolled scrolls tied with string and sealed with clay into a tall clay jar with both hands, while Jeremiah the prophet, a thin earnest Judean man of about fifty with a short greying dark beard, wearing a plain undyed cream wool robe and a brown cloak, kneels beside the jar and holds its clay lid ready in both hands with a hopeful face; only these two people. No statues, no idols, no carved figures, no winged discs, no crescent shapes, no moon ornaments, no religious symbols anywhere. Hands are drawn simply and clearly, each hand with four fingers and a thumb, and no hand overlaps another person. Every face is clear and well drawn with distinct eyes, nose and mouth. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "v22b",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: at sunrise on a green hill outside Jerusalem, whose distant stone walls are broken down in places (no fire, no smoke), Jeremiah the prophet, a thin earnest Judean man of about fifty with a short greying dark beard, wearing a plain undyed cream wool robe and a brown cloak, sits on a rock and lifts his face toward the golden rising sun with quiet tears of hope; below the hill a few poor Judean farmers in simple clothes tend green vineyards and small fields; birds fly in the bright morning sky. No statues, no idols, no carved figures, no winged discs, no crescent shapes, no moon ornaments, no religious symbols anywhere. Nobody is wounded, no blood, nobody lying on the ground, no chains, no ropes. Hands are drawn simply and clearly, each hand with four fingers and a thumb, and no hand overlaps another person. Every face is clear and well drawn with distinct eyes, nose and mouth. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "v22c",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: many years later on a bright sunny morning, on a green terraced hill full of grapevines, a happy Judean family: the father holds up an old sealed clay jar with both hands that he has just dug up from the field, the mother beside him smiles and holds a basket of grapes, a little girl and a little boy laugh and point at the jar; far away on the horizon the city of Jerusalem is being rebuilt with wooden scaffolds and cranes. All houses are one-story or two-story stone and mud-brick houses with flat earthen rooftops and low parapets; no sloped roofs, no roof tiles. No statues, no idols, no carved figures, no winged discs, no crescent shapes, no moon ornaments, no religious symbols anywhere. Hands are drawn simply and clearly, each hand with four fingers and a thumb, and no hand overlaps another person. Every face is clear and well drawn with distinct eyes, nose and mouth. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "s23a",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: beside the wide river Chebar in Babylon among willow trees, Ezekiel the prophet, a strong Judean man of about thirty-five with a full black beard, wearing a white linen priest's tunic under a dark blue cloak, stands at the water's edge holding a small scroll in his left hand and stretching his right hand toward the north, where far away over the horizon a huge dark storm cloud is gathering; a few Judean exiles in simple robes sit on the riverbank and listen; calm afternoon. No statues, no idols, no carved figures, no winged discs, no crescent shapes, no moon ornaments, no religious symbols anywhere. Hands are drawn simply and clearly, each hand with four fingers and a thumb, and no hand overlaps another person. Every face is clear and well drawn with distinct eyes, nose and mouth. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "s23b",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: the green mountains of Israel in peaceful warm sunlight: small villages of flat-roofed stone houses with no city walls, no gates and no bars around them; children play with a ball between the houses, a shepherd boy leads sheep, two women carry water jars on their shoulders, men work in vineyards and olive groves on the terraced hills; everything open, safe and happy. All houses are one-story or two-story stone and mud-brick houses with flat earthen rooftops and low parapets; no sloped roofs, no roof tiles. No statues, no idols, no carved figures, no winged discs, no crescent shapes, no moon ornaments, no religious symbols anywhere. Hands are drawn simply and clearly, each hand with four fingers and a thumb, and no hand overlaps another person. Every face is clear and well drawn with distinct eyes, nose and mouth. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "s23c",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: seen from a hilltop, a vast army of many nations pours over the far northern hills like a dark storm cloud covering the land: countless tiny horsemen with banners, foot soldiers with shields and helmets of many different colors, and war chariots, all rolling forward under a dark boiling cloudy sky with flashes of lightning; menacing but not gory; no single person large; no people hurt. No statues, no idols, no carved figures, no winged discs, no crescent shapes, no moon ornaments, no religious symbols anywhere. Nobody is wounded, no blood, nobody lying on the ground, no chains, no ropes."
+  },
+  {
+   "id": "s23d",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: on a green hill beside an unwalled village of flat-roofed houses, a Judean family (a father, a mother holding a baby, an old grandmother and two children) stand close together and look up at the sky, where dark storm clouds are breaking open and a soft beam of white-gold light from heaven shines down, with no figure and no face in the light on them; hopeful faces. All houses are one-story or two-story stone and mud-brick houses with flat earthen rooftops and low parapets; no sloped roofs, no roof tiles. No statues, no idols, no carved figures, no winged discs, no crescent shapes, no moon ornaments, no religious symbols anywhere. There is no human figure, no face and no body of God anywhere: only light, fire and clouds. Hands are drawn simply and clearly, each hand with four fingers and a thumb, and no hand overlaps another person. Every face is clear and well drawn with distinct eyes, nose and mouth. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "v23a",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: over empty rocky mountains under a stormy sky, huge round white hailstones and glowing balls of fire fall from heaven and the ground cracks open in an earthquake; far away the countless invading army runs away scattering in panic, dropping their bows, arrows, shields, spears and banners all over the ground; nobody is hurt, no blood, nobody lying on the ground, the people are only small and far away. There is no human figure, no face and no body of God anywhere: only light, fire and clouds. No statues, no idols, no carved figures, no winged discs, no crescent shapes, no moon ornaments, no religious symbols anywhere."
+  },
+  {
+   "id": "v23b",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: in a peaceful village square on the green mountains of Israel at evening, happy villagers throw piles of dropped wooden shields, bows, arrows, spears and a broken chariot wheel onto a big warm bonfire; a mother bakes round flat bread on a hot stone by the fire, two children warm their hands and smile, an old man with a white beard adds a broken spear to the flames; no weapons are being used by anyone. All houses are one-story or two-story stone and mud-brick houses with flat earthen rooftops and low parapets; no sloped roofs, no roof tiles. No statues, no idols, no carved figures, no winged discs, no crescent shapes, no moon ornaments, no religious symbols anywhere. Hands are drawn simply and clearly, each hand with four fingers and a thumb, and no hand overlaps another person. Every face is clear and well drawn with distinct eyes, nose and mouth. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "v23c",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: at sunrise on the green mountains of Israel, crowds of joyful people from all the unwalled villages, men, women, children and old people, stand together on the hills with their arms raised, and brilliant warm golden light pours down from an opening in the clouds over all of them like gentle rain. There is no human figure, no face and no body of God anywhere: only light, fire and clouds. No statues, no idols, no carved figures, no winged discs, no crescent shapes, no moon ornaments, no religious symbols anywhere. Hands are drawn simply and clearly, each hand with four fingers and a thumb, and no hand overlaps another person. Every face is clear and well drawn with distinct eyes, nose and mouth. Every person has exactly two arms, two hands, two legs and two feet."
+  }
+ ]
+}

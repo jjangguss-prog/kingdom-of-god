@@ -1,0 +1,46 @@
+{
+ "출력": "raw",
+ "크기": [
+  1024,
+  1024
+ ],
+ "단계": 4,
+ "항목": [
+  {
+   "id": "bg22",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "참조": [
+    "ref2/ref22.png"
+   ],
+   "프롬프트": "Repaint this top-down tower defense game map as a richly hand-painted Kingdom Rush style battlefield around the besieged walled city of ancient Jerusalem in warm late-afternoon light, seen from above at a slight angle. Keep exactly the same sandy road shapes and positions. The big pale area at the top center enclosed by the thick grey line is INSIDE the city: a tall thick stone CITY WALL with battlements and square towers runs all around it, and inside the wall a crowded city of many small flat-roofed stone houses; the big pale rectangle on the upper right inside the city is the stone temple courtyard on its hill, the smaller rectangle is the king's palace. The small dark square at the lower right corner of the wall is a narrow side gate between two walls, and the small green patch beside it is the king's garden with olive and fig trees. The three roads that come from the left, bottom and upper right edges end at the foot of the city wall, where each ends at a sloping ramp of piled brown earth leaning against the wall (siege ramps). The fourth road leads from the side gate down to the right edge through green fields and vineyards. Outside the walls: dry rocky hills; the darker brown patches on the left and at the bottom left are a Babylonian army camp with rows of plain tents, banners and small campfires; the green patches on the right are terraced fields, vineyards and olive groves. Nothing covers the roads. No characters, no people, no text. All houses are one-story or two-story stone and mud-brick houses with flat earthen rooftops and low parapets; no sloped roofs, no roof tiles. No statues, no idols, no carved figures, no winged discs, no crescent shapes, no moon ornaments, no religious symbols anywhere."
+  },
+  {
+   "id": "bg23",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "참조": [
+    "ref2/ref23.png"
+   ],
+   "프롬프트": "Repaint this top-down tower defense game map as a richly hand-painted Kingdom Rush style battlefield on the green mountains of Israel in bright daylight, seen from above at a slight angle. Keep exactly the same sandy road shapes and positions. The dark band across the very top is a huge dark storm cloud rolling over the far northern hills and covering the horizon, with faint flashes of lightning. Four sandy roads come down out of the dark northern clouds and wind across green terraced mountain slopes with olive groves, vineyards, rocks and small bushes, and meet at the bottom center at a small peaceful village of flat-roofed stone houses with no city wall, no gate and no bars, with a stone well and a sheep pen. The lighter green patches are grassy meadows. Nothing covers the roads. No characters, no people, no text. All houses are one-story or two-story stone and mud-brick houses with flat earthen rooftops and low parapets; no sloped roofs, no roof tiles. No statues, no idols, no carved figures, no winged discs, no crescent shapes, no moon ornaments, no religious symbols anywhere."
+  }
+ ]
+}

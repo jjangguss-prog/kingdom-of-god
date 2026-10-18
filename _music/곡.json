@@ -435,6 +435,38 @@
     3,
     4
    ]
+  },
+  {
+   "id": "s22",
+   "이름": "22 예루살렘 함락(무너지는 성)",
+   "결": "활력 · 에워싸인 성에서 남은 자를 빼내는 급한 밤길, 그래도 꺼지지 않는 소망(도파민: 첫 박부터 몰아치는 큰 북과 빠른 다르부카, 숨 가쁜 현 오스티나토, 애절하지만 밝게 되풀이되는 두둑·수금 후렴, 갈수록 커지는 합창)",
+   "캡션": "Urgent epic escape theme from an ancient walled city under siege at dusk. Driving war drums and fast darbuka from the very first beat, breathless racing string ostinatos like people running through a narrow gate, heavy low brass of a mighty besieging army closing in, answered by a catchy aching but hopeful duduk and lyre hook that keeps returning, the energy builds wave after wave into a massive choir and full orchestra chorus full of courage and hope, intense, heroic, thrilling, never horror.",
+   "가사": "[Intro - war drums and darbuka]\n\n[Verse - racing strings]\nOh, oh\n\n[Pre-Chorus - duduk and lyre]\n\n[Chorus - full choir]\nAh, ah, ah\nHallelujah\n\n[Instrumental - drums]\n\n[Build - rising strings]\n\n[Chorus - full choir]\nHallelujah\nAmen\n\n[Outro]",
+   "bpm": 134,
+   "key": "D minor",
+   "길이": 150,
+   "시드": [
+    1,
+    2,
+    3,
+    4
+   ]
+  },
+  {
+   "id": "s23",
+   "이름": "23 곡과 마곡(구름 같은 큰 무리)",
+   "결": "활력 · 북쪽 끝에서 나라마다 더해지며 몰려오는 큰 무리와 그 위에 울리는 하늘의 우레(도파민: 말발굽 같은 질주 리듬과 거대한 북, 여러 나라의 타악이 겹겹이 쌓임, 무거운 금관 리프, 우레처럼 터지는 합창과 금관 드롭)",
+   "캡션": "Colossal epic battle theme of countless armies of many nations rolling in from the far north like a storm cloud covering the land. A galloping horse-hoof rhythm and huge thundering war drums from the very first beat, layers of world percussion joining one after another, a heavy menacing low brass riff, whirling fast strings, then sudden thunderclap hits and a soaring triumphant brass fanfare and massive choir drop as heaven answers, the energy keeps building and erupting, majestic, thrilling, heroic, never horror.",
+   "가사": "[Intro - galloping drums]\n\n[Verse - low brass riff]\nOh, oh\n\n[Build - layered percussion]\n\n[Drop - thunder, full choir and brass]\nAh, ah, ah\nHallelujah\n\n[Instrumental - drums]\n\n[Build - whirling strings]\n\n[Drop - full choir]\nHallelujah\nAmen\n\n[Outro]",
+   "bpm": 140,
+   "key": "E minor",
+   "길이": 150,
+   "시드": [
+    1,
+    2,
+    3,
+    4
+   ]
   }
  ]
 }

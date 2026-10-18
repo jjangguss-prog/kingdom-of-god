@@ -1,0 +1,52 @@
+{
+ "출력": "raw",
+ "크기": [
+  1024,
+  1024
+ ],
+ "단계": 4,
+ "항목": [
+  {
+   "id": "v22c",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    11,
+    12,
+    13
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: many years later on a bright sunny morning, on a green terraced hillside vineyard full of grapevines, a happy Judean family: the father, a bearded man in a long brown wool robe, kneels by a small hole in the earth and lifts up an old sealed clay jar with both hands, the mother in a long blue dress and a white headscarf smiles and holds a basket of grapes, a little girl and a little boy laugh and point at the jar; far away on the horizon the stone walls of Jerusalem are being rebuilt with simple wooden scaffolding and workers carrying stones; no cranes, no machines. All houses are one-story or two-story stone and mud-brick houses with flat earthen rooftops and low parapets; no sloped roofs, no roof tiles. Everyone wears ancient Israelite clothing: long simple wool tunics and robes with cloth sashes, women in long dresses with headscarves, children in short simple tunics, leather sandals; no modern clothes, no t-shirts, no shorts, no trousers, no hats, no metal buckets, no glass windows, no roof tiles; only clay jars and woven baskets. No statues, no idols, no carved figures, no winged discs, no crescent shapes, no moon ornaments, no religious symbols anywhere. Hands are drawn simply and clearly, each hand with four fingers and a thumb, and no hand overlaps another person. Every face is clear and well drawn with distinct eyes, nose and mouth. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "s23b",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    11,
+    12,
+    13
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: the green mountains of Israel in peaceful warm sunlight: a small village of flat-roofed stone and mud-brick houses with no city wall, no gate and no bars; two children play with a leather ball, a shepherd boy with a wooden staff leads a few sheep, two women carry clay water jars on their shoulders, two men prune grapevines on the terraced hills; everything open, safe and happy. All houses are one-story or two-story stone and mud-brick houses with flat earthen rooftops and low parapets; no sloped roofs, no roof tiles. Everyone wears ancient Israelite clothing: long simple wool tunics and robes with cloth sashes, women in long dresses with headscarves, children in short simple tunics, leather sandals; no modern clothes, no t-shirts, no shorts, no trousers, no hats, no metal buckets, no glass windows, no roof tiles; only clay jars and woven baskets. No statues, no idols, no carved figures, no winged discs, no crescent shapes, no moon ornaments, no religious symbols anywhere. Hands are drawn simply and clearly, each hand with four fingers and a thumb, and no hand overlaps another person. Every face is clear and well drawn with distinct eyes, nose and mouth. Every person has exactly two arms, two hands, two legs and two feet."
+  },
+  {
+   "id": "v23b",
+   "종류": "장면",
+   "크기": [
+    1536,
+    864
+   ],
+   "시드": [
+    11,
+    12,
+    13
+   ],
+   "프롬프트": "Wide illustrated story panel for a children's Bible game, one single full-bleed scene with no border and no frame: in a peaceful village square on the green mountains of Israel at evening, happy villagers pile dropped wooden shields, bows, arrows and spears and a broken wooden chariot wheel onto a big warm bonfire as firewood: a father throws an armful of broken arrows onto the fire, a mother bakes plain round flat bread on a hot flat stone beside the fire, two small children sit and warm their open hands at the fire and smile, an old man with a white beard drops a broken bow onto the flames; the children hold no weapons and nobody holds a weapon ready to use; no poles, no wires. All houses are one-story or two-story stone and mud-brick houses with flat earthen rooftops and low parapets; no sloped roofs, no roof tiles. Everyone wears ancient Israelite clothing: long simple wool tunics and robes with cloth sashes, women in long dresses with headscarves, children in short simple tunics, leather sandals; no modern clothes, no t-shirts, no shorts, no trousers, no hats, no metal buckets, no glass windows, no roof tiles; only clay jars and woven baskets. No statues, no idols, no carved figures, no winged discs, no crescent shapes, no moon ornaments, no religious symbols anywhere. Hands are drawn simply and clearly, each hand with four fingers and a thumb, and no hand overlaps another person. Every face is clear and well drawn with distinct eyes, nose and mouth. Every person has exactly two arms, two hands, two legs and two feet."
+  }
+ ]
+}

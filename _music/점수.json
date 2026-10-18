@@ -693,5 +693,123 @@
     "_len": 120.0
    }
   }
+ },
+ "s22": {
+  "1등": "s22_s1_2b2c79.flac",
+  "점수": {
+   "s22_s1_2b2c79.flac": 0.379,
+   "s22_s2_2b2c79.flac": 0.026,
+   "s22_s3_2b2c79.flac": -0.215,
+   "s22_s4_2b2c79.flac": -0.19
+  },
+  "값": {
+   "s22_s1_2b2c79.flac": {
+    "bpm": 135.999,
+    "pulse": 0.738,
+    "dense": 2.78,
+    "perc": 0.176,
+    "bright": 2271.498,
+    "build": 12.72,
+    "early": -0.0,
+    "repeat": 0.039,
+    "_early_s": 0.0,
+    "_len": 150.0
+   },
+   "s22_s2_2b2c79.flac": {
+    "bpm": 89.103,
+    "pulse": 0.78,
+    "dense": 2.847,
+    "perc": 0.106,
+    "bright": 1998.856,
+    "build": 10.199,
+    "early": -4.621,
+    "repeat": 0.051,
+    "_early_s": 4.621,
+    "_len": 150.0
+   },
+   "s22_s3_2b2c79.flac": {
+    "bpm": 135.999,
+    "pulse": 0.717,
+    "dense": 2.7,
+    "perc": 0.127,
+    "bright": 2180.484,
+    "build": 18.0,
+    "early": -22.384,
+    "repeat": 0.037,
+    "_early_s": 22.384,
+    "_len": 150.0
+   },
+   "s22_s4_2b2c79.flac": {
+    "bpm": 135.999,
+    "pulse": 0.651,
+    "dense": 2.66,
+    "perc": 0.172,
+    "bright": 2024.345,
+    "build": 17.003,
+    "early": -7.732,
+    "repeat": 0.043,
+    "_early_s": 7.732,
+    "_len": 150.0
+   }
+  }
+ },
+ "s23": {
+  "1등": "s23_s3_d7fca5.flac",
+  "점수": {
+   "s23_s1_d7fca5.flac": -0.116,
+   "s23_s2_d7fca5.flac": -0.743,
+   "s23_s3_d7fca5.flac": 0.816,
+   "s23_s4_d7fca5.flac": 0.044
+  },
+  "값": {
+   "s23_s1_d7fca5.flac": {
+    "bpm": 143.555,
+    "pulse": 0.777,
+    "dense": 2.62,
+    "perc": 0.12,
+    "bright": 2122.823,
+    "build": 12.0,
+    "early": -21.2,
+    "repeat": 0.045,
+    "_early_s": 21.2,
+    "_len": 150.0
+   },
+   "s23_s2_d7fca5.flac": {
+    "bpm": 143.555,
+    "pulse": 0.772,
+    "dense": 2.893,
+    "perc": 0.095,
+    "bright": 1923.825,
+    "build": 14.082,
+    "early": -37.849,
+    "repeat": 0.036,
+    "_early_s": 37.849,
+    "_len": 150.0
+   },
+   "s23_s3_d7fca5.flac": {
+    "bpm": 92.285,
+    "pulse": 0.817,
+    "dense": 3.867,
+    "perc": 0.153,
+    "bright": 2126.418,
+    "build": 17.618,
+    "early": -13.769,
+    "repeat": 0.038,
+    "_early_s": 13.769,
+    "_len": 150.0
+   },
+   "s23_s4_d7fca5.flac": {
+    "bpm": 143.555,
+    "pulse": 0.799,
+    "dense": 3.007,
+    "perc": 0.112,
+    "bright": 1777.123,
+    "build": 18.0,
+    "early": -21.571,
+    "repeat": 0.037,
+    "_early_s": 21.571,
+    "_len": 150.0
+   }
+  }
  }
 }
