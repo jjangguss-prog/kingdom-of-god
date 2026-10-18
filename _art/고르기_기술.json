@@ -1,0 +1,29 @@
+{
+ "설명": "기술 카드 예시 화면: _art/기술찍기.js가 찍은 _art/sk_raw/<기술>_<n>.jpg 가운데 고른 장 → art/sk/<기술>.jpg (2026-10-18)",
+ "고른 장": {
+  "priest_bless": 1,
+  "priest_gate": 1,
+  "priest_rod": 1,
+  "choir_song": 1,
+  "choir_timbrel": 1,
+  "choir_turn": 1,
+  "menorah_seven": 1,
+  "menorah_spirit": 1,
+  "menorah_shine": 1,
+  "jordan_draw": 1,
+  "jordan_deer": 2,
+  "jordan_lead": 2,
+  "nazirite_spirit": 1,
+  "nazirite_lion": 1,
+  "nazirite_last": 1,
+  "mighty_abishai": 1,
+  "mighty_benaiah": 1,
+  "mighty_three": 1,
+  "benjamin_twin": 1,
+  "benjamin_sling": 1,
+  "benjamin_left": 1,
+  "uzziah_big": 1,
+  "uzziah_bolt": 2,
+  "uzziah_corner": 3
+ }
+}

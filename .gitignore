@@ -26,3 +26,5 @@ _music/raw/
 _music/듣기.html
 _music/생성.log
 _music/.cache/
+# 기술 카드 스크린샷 후보(_art/스크린샷서버.py가 남김, 고른 것만 art/sk/로)
+_art/sk_raw/

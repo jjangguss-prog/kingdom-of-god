@@ -86,6 +86,16 @@ button:focus-visible{outline:3px solid var(--gold-hi);outline-offset:2px}
 #info .st{font-variant-numeric:tabular-nums;color:var(--ink-2);font-size:.88em}
 #info .lock{color:var(--berry);font-family:var(--f-ui)}
 #info .hint{font-size:.8em;color:var(--ink-2)}
+#info .skc{display:flex;gap:.6em;align-items:flex-start}
+#info .skc img{width:44%;aspect-ratio:16/9;object-fit:cover;border-radius:.45em;border:.12em solid var(--wood-dk);flex:none;background:#3a2a18}
+#info .skc .why{font-size:.9em;margin:.2em 0 0}
+#info .skc .why i{font-style:normal;font-family:var(--f-ui);font-size:.85em;background:var(--wood);color:#fff3d6;border-radius:1em;padding:.02em .5em;margin-right:.35em}
+#info .lv{list-style:none;margin:.35em 0 .1em;padding:0;display:grid;gap:.1em;font-size:.92em}
+#info .lv li{padding:.1em .45em;border-radius:.4em;color:var(--ink-2)}
+#info .lv li.got{color:var(--ink)}
+#info .lv li.got b{color:#4f7f2e}
+#info .lv li.next{background:rgba(232,181,60,.28);color:var(--ink);box-shadow:inset 0 0 0 .1em rgba(160,110,30,.45)}
+#info .lv b{font-family:var(--f-ui);font-weight:400;margin-right:.35em}
 #toast{left:50%;top:9.5%;transform:translateX(-50%);max-width:58%;padding:.55em 1em;background:var(--parch);border:.15em solid var(--wood-dk);border-radius:.8em;font-size:.95em;line-height:1.45;text-align:center;box-shadow:0 .2em 0 rgba(0,0,0,.35)}
 #toast b{color:var(--berry);font-weight:400;font-family:var(--f-ui)}
 #toast.low{top:17%}
@@ -4407,7 +4417,7 @@ const ART_DEF={
   shep1:{h:62,top:.5},shep2:{h:68,top:.5},shep3:{h:74,top:.5},art1:{h:76,top:.7},art2:{h:82,top:.72},art3:{h:88,top:.74},
 };
 const ART={};
-const AV='?v=30';   // 그림을 바꿀 때마다 올려서 예전 그림이 캐시에서 나오지 않게
+const AV='?v=31';   // 그림을 바꿀 때마다 올려서 예전 그림이 캐시에서 나오지 않게
 const BG_IMG={},REAR_IMG={},FALL_IMG={},FULL_IMG={};   // FULL_IMG: 성벽을 다 지은 배경(bg20_full.jpg, 느 6:15)   // REAR_IMG: 처음엔 막혀 있는 뒷길을 덮는 그림(bgN_rear.png) · FALL_IMG: 성벽이 무너진 배경(bg9_fall.jpg, 수 6:20)
 function loadArt(){for(const k of Object.keys(STAGES).map(Number)){const im=new Image();im.onload=()=>{BG_IMG[k]=im;if(G&&G.sid===k)buildBg();};im.src='art/bg'+k+'.jpg'+AV;if(STAGES[k].rear!=null){const r=new Image();r.onload=()=>{REAR_IMG[k]=r;if(G&&G.sid===k)buildBg();};r.src='art/bg'+k+'_rear.png'+AV;}
     if(STAGES[k].jericho){const f=new Image();f.onload=()=>{FALL_IMG[k]=f;};f.src='art/bg'+k+'_fall.jpg'+AV;}
@@ -5165,6 +5175,20 @@ function togglePause(force){if(!G||screen!=='play'||G.over)return;G.paused=force
 
 /* ---------- 설명 칸 ---------- */
 function statLine(line,T0){const T=withUp(line,T0),r=Math.round;if(line==='watch')return`사거리 ${r(T.range)} · 화살 ${r(T.dmg)} · ${(1/T.rate).toFixed(1)}발/초`;if(line==='shep')return`양치기 3명 · 체력 ${r(T.hp)} · 공격 ${T.dmg}${T.sling?` · 물맷돌 ${r(T.sling)}`:''}`;if(line==='levi')return`사거리 ${r(T.range)} · 빛 ${r(T.dmg)} · 갑옷 무시`;return`사거리 ${r(T.range)} · 돌 ${r(T.dmg)} · 범위 ${r(T.aoe)}`;}
+// 기술 카드(10-18 사용자: "각 타워가 업그레이드돼서 기술을 쓸 때, 그 기술을 쓰는 예시 스크린샷 화면과 함께 그거 익히면 어떻게 되는지도 알려주면 좋을듯해"):
+// 정보 칸에 예시 화면(art/sk/<가지>_<기술>.jpg, _art/기술찍기.js로 게임에서 찍음)과 단계별 효과, 이럴 때 좋아요
+const SKILL_WHY={
+  priest:{bless:'양치기와 영웅이 오래 버텨야 하는 길목에. 쓰러지기 전에 계속 채워 줘요.',gate:'양치기 없는 길목을 하나 더 막고 싶을 때. 제사장 곁 길에 문지기가 서요.',rod:'거인과 정예에게 양치기가 자꾸 쓰러질 때. 쓰러져도 그 자리에서 다시 일어나요.'},
+  choir:{song:'적이 몰려 지나가는 굽잇길에. 멈춘 동안 곁의 탑이 한꺼번에 쳐요.',timbrel:'탑이 여럿 모인 곳 한가운데에. 곁의 모든 탑이 빨라져요.',turn:'노래와 함께. 적이 촘촘히 붙어 오는 곳에서 서로 치게 해요.'},
+  menorah:{seven:'적이 줄지어 오는 긴 길에. 한 번에 일곱까지 맞혀요.',spirit:'등잔대 바로 곁을 적이 지나갈 때. 하늘의 적도 둘레에서 함께 맞아요.',shine:'적이 멀리 돌아오는 곳에. 더 멀리서 첫 적을 세게 맞혀요.'},
+  jordan:{draw:'방패병·백부장처럼 튼튼한 적이 많을 때. 한 발에 바로 풀려나기도 해요.',deer:'약한 적이 떼로 올 때. 풀어 줄 때마다 쉬지 않고 다음 화살을 쏴요.',lead:'하늘의 적이 많은 판(11 기손 강부터)에서. 멀리서 하늘의 적을 먼저 떨어뜨려요.'},
+  nazirite:{spirit:'고함과 발구름이 잦은 판에서. 기절이 풀리고 그동안 빨리 쳐요.',lion:'거인·낙타 기병·보스가 오는 길목에. 큰 적일수록 더 세게 붙잡아요.',last:'오래 버텨야 하는 마지막 길목에. 쓰러져도 한 번 더 일어나요.'},
+  mighty:{abishai:'적이 줄지어 막혀 서는 곳에. 막아선 적 뒤의 적까지 꿰뚫어요.',benaiah:'택한 사람(금빛 띠)과 튼튼한 적이 올 때. 가장 센 적을 치고 기절시켜요.',three:'적이 길게 몰려올 때. 셋이 길을 따라 돌진해 줄을 흩어 놓아요.'},
+  benjamin:{twin:'약한 적이 떼로 올 때. 한 번에 둘을 쏴요.',sling:'약탈병·낙타 기병처럼 빠른 적과 달아나는 약탈자에게. 맞으면 잠깐 멈춰요.',left:'튼튼한 적이 섞여 올 때. 가끔 세 배로 꽂혀요.'},
+  uzziah:{big:'거인·공성 무기·보스가 오는 판에서. 가장 튼튼한 적을 골라 크게 쳐요.',bolt:'적이 한 줄로 지나가는 곧은 길에. 큰 화살이 여럿을 꿰뚫어요.',corner:'공성 망치·공성탑이 오는 판(18 도단부터)에서. 더 멀리, 공성 무기에 더 세게 쳐요.'}};
+function skillCard(br,sk,lv){const why=(SKILL_WHY[br]||{})[sk.id];
+  return`<div class="skc"><img src="art/sk/${br}_${sk.id}.jpg${AV}" alt="${sk.name} 예시 화면" onerror="this.remove()"><div><h3>${sk.name}<span class="tag">${lv}/3</span></h3>${why?`<p class="why"><i>이럴 때 좋아요</i>${why}</p>`:''}</div></div>`+
+    `<ol class="lv">${sk.desc.map((d,i)=>`<li class="${i<lv?'got':i===lv?'next':''}"><b>${i<lv?'✓ ':''}${i+1}단계</b>${d}</li>`).join('')}</ol>`;}
 function itemInfo(it){
   const t=G.menu.spot.tower,touch=lastPtr==='touch';const hint=touch?'<p class="hint">한 번 더 누르면 실행돼요.</p>':'';
   if(it.k==='build'){const L2=LINES[it.line],T=L2.tiers[0];return`<h3>${L2.name}<span class="tag">${L2.role}</span></h3><p>${L2.desc}</p><p class="st">${statLine(it.line,T)} · 값 ${price(it.line,T.cost)}</p><p class="v">${L2.verse}</p>${hint}`;}
@@ -5177,7 +5201,7 @@ function itemInfo(it){
     if(it.id==='jordan')return`<h3>요단 동편 용사<span class="tag">4단계</span></h3><p>가장 먼 거리에서 강한 화살 한 발을 쏴요. 화살 ${JORDAN.dmg}, 사거리 ${JORDAN.range}, ${JORDAN.rate}초마다. 하늘의 적도 맞혀요.</p><p class="v">${JORDAN.verse}</p><p class="st">값 ${JORDAN.cost}</p>${hint}`;
     if(it.id==='choir')return`<h3>찬양대<span class="tag">4단계</span></h3><p>노래로 적을 멈춰 세우는 탑이에요. 거룩한 빛 ${CHOIR.dmg}, 사거리 ${CHOIR.range}. 싸움은 하나님이 하세요(대하 20:15).</p><p class="v">${CHOIR.verse}</p><p class="st">값 ${CHOIR.cost}</p>${hint}`;
     return`<h3>제사장<span class="tag">4단계</span></h3><p>아군 병사를 살려 두는 유일한 탑이에요. 거룩한 빛 ${PRIEST.dmg}, 사거리 ${PRIEST.range}. 범위 안 병사를 조금씩 회복시켜요.</p><p class="v">${PRIEST.verse}</p><p class="st">값 ${PRIEST.cost}</p>${hint}`;}
-  if(it.k==='skill'){const sk=BRANCH[t.branch].skills[it.i],lv=t.sk[sk.id];return`<h3>${sk.name}<span class="tag">${lv}/3</span></h3><p>${sk.desc[Math.min(lv,2)]}</p><p class="v">${sk.ref}</p>${lv<3?`<p class="st">다음 단계 값 ${sk.costs[lv]}</p>`:''}${hint}`;}
+  if(it.k==='skill'){const sk=BRANCH[t.branch].skills[it.i],lv=t.sk[sk.id];return`${skillCard(t.branch,sk,lv)}<p class="v">${sk.ref}</p><p class="st">${lv<3?`${lv+1}단계 익히기 · 값 ${sk.costs[lv]}`:'세 단계를 다 익혔어요'}</p>${lv<3?hint:''}`;}
   if(it.k==='sell')return`<h3>거두기</h3><p>탑을 거두고 들인 값의 60%인 <b>${Math.floor(t.spent*.6)}</b> 세겔을 돌려받아요.</p>${hint}`;
   if(it.k==='rally')return`<h3>모일 곳 정하기</h3><p>누른 뒤 길 위를 누르면 ${t.line==='shep'?'양치기들이':'문지기가'} 그곳으로 가서 막아서요.</p>`;
   return'';
