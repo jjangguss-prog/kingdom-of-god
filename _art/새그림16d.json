@@ -1,0 +1,50 @@
+{
+ "출력": "raw",
+ "크기": [
+  1024,
+  1024
+ ],
+ "단계": 4,
+ "항목": [
+  {
+   "id": "p_rest",
+   "종류": "인물",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "An exhausted man, one of David's Israelite warriors, a young man with a short dark beard, a rounded bronze helmet, a tan wool tunic with a leather armor vest and leather sandals, sitting on the ground with his knees up resting after a long march, his spear lying on the ground beside him, one hand on his knee and the other hand wiping his brow, tired but kind face, three-quarter view facing left, whole body visible. Exactly two arms and exactly two hands, each hand with four fingers and a thumb."
+  },
+  {
+   "id": "p_cheer",
+   "종류": "인물",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "A joyful man, one of David's Israelite warriors, a young man with a short dark beard, a rounded bronze helmet, a tan wool tunic with a leather armor vest and leather sandals, standing and raising both arms high in welcome with open hands, his spear left aside, big happy smile, three-quarter view facing left, whole body visible. Exactly two arms and exactly two hands, each hand with four fingers and a thumb."
+  },
+  {
+   "id": "e_spoils",
+   "종류": "물건",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "A big heap of recovered household goods and spoils piled on the sand: cloth sacks of grain tied with cord, round clay jars and water pots, a small open wooden chest with gold and silver cups and coins, rolled colorful woven rugs, folded cloaks, a bundle of white sheep wool and a leather bag. No people, no animals, no statues, no idols, no religious symbols."
+  },
+  {
+   "id": "e_sack",
+   "종류": "물건",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "One small plump cloth sack of plundered goods made of rough tan burlap, tied at the top with a brown cord, bulging with round shapes, a gold coin and the rim of a silver cup peeking out of the opening. No people, no text."
+  }
+ ]
+}
