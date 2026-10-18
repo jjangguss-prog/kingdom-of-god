@@ -4422,7 +4422,7 @@ const ART_DEF={
   shep1:{h:62,top:.5},shep2:{h:68,top:.5},shep3:{h:74,top:.5},art1:{h:76,top:.7},art2:{h:82,top:.72},art3:{h:88,top:.74},
 };
 const ART={};
-const AV='?v=33';   // 그림을 바꿀 때마다 올려서 예전 그림이 캐시에서 나오지 않게
+const AV='?v=34';   // 그림을 바꿀 때마다 올려서 예전 그림이 캐시에서 나오지 않게
 const BG_IMG={},REAR_IMG={},FALL_IMG={},FULL_IMG={};   // FULL_IMG: 성벽을 다 지은 배경(bg20_full.jpg, 느 6:15)   // REAR_IMG: 처음엔 막혀 있는 뒷길을 덮는 그림(bgN_rear.png) · FALL_IMG: 성벽이 무너진 배경(bg9_fall.jpg, 수 6:20)
 function loadArt(){for(const k of Object.keys(STAGES).map(Number)){const im=new Image();im.onload=()=>{BG_IMG[k]=im;if(G&&G.sid===k)buildBg();};im.src='art/bg'+k+'.jpg'+AV;if(STAGES[k].rear!=null){const r=new Image();r.onload=()=>{REAR_IMG[k]=r;if(G&&G.sid===k)buildBg();};r.src='art/bg'+k+'_rear.png'+AV;}
     if(STAGES[k].jericho){const f=new Image();f.onload=()=>{FALL_IMG[k]=f;};f.src='art/bg'+k+'_fall.jpg'+AV;}

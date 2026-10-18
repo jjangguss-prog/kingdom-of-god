@@ -1,0 +1,68 @@
+{
+ "항목": [
+  {
+   "key": "s17f",
+   "id": "s17f_hornA",
+   "상자": [
+    300,
+    260,
+    660,
+    520
+   ],
+   "가림": [
+    [
+     410,
+     365,
+     30,
+     48
+    ],
+    [
+     532,
+     372,
+     30,
+     42
+    ]
+   ],
+   "지움": true,
+   "번짐": 26,
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "Edit the picture (10-19 user: the man looks like horns grow out of his ears). The bearded man in the blue robe and tan turban is the prophet Zedekiah: in each raised fist he holds up a short curved horn made of dark grey iron that points straight up out of the top of his fist, clearly an object gripped in his hand, with a clear gap of background between each horn and his head. His head has no horns, his ears are normal and covered by his turban."
+  },
+  {
+   "key": "s17f",
+   "id": "s17f_hornB",
+   "상자": [
+    300,
+    260,
+    660,
+    520
+   ],
+   "가림": [
+    [
+     410,
+     365,
+     30,
+     48
+    ],
+    [
+     532,
+     372,
+     30,
+     42
+    ]
+   ],
+   "지움": true,
+   "번짐": 26,
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "Edit the picture (10-19 user: the man looks like horns grow out of his ears). Remove the two dark horns completely. The bearded man in the blue robe and tan turban raises both fists beside his head as he shouts. Where the horns were, show the side of his tan turban, normal ears, and the stone wall and the people behind him. No horns anywhere."
+  }
+ ]
+}

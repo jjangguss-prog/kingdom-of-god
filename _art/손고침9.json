@@ -1,0 +1,31 @@
+{
+ "항목": [
+  {
+   "key": "s17b",
+   "id": "s17b_hair2",
+   "상자": [
+    860,
+    140,
+    1240,
+    480
+   ],
+   "가림": [
+    [
+     1030,
+     240,
+     95,
+     58
+    ]
+   ],
+   "시드": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "프롬프트": "Edit the picture (10-19 user: in this scene King David suddenly looks old with a receding hairline). Give the kneeling king David in the red robe on the right the same look he has elsewhere in the game: a man of about thirty-five with a full head of thick wavy reddish-brown hair that covers the top of his head and comes down over his forehead to just above his eyebrows and falls to his shoulders, no bald spot, no receding hairline, no high forehead, and a short full reddish-brown beard. His thick wavy hair is clearly visible on the top of his head and over his forehead, low hairline. Keep his two hands covering his eyes exactly as they are, sorrowful and repentant.",
+   "지움": true,
+   "번짐": 30
+  }
+ ]
+}
