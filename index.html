@@ -282,8 +282,13 @@ details li{margin:.35em 0;line-height:1.55}
 @media (orientation:portrait) and (max-width:820px){#rotate{display:grid}}
 body.force #rotate{display:none!important}
 @media (prefers-reduced-motion:reduce){.popc,.popb,.pill.flash{animation:none}}
-#coach{top:12.5%;width:min(36%,24em);background:var(--parch);border:.16em solid var(--wood-dk);border-radius:.85em;padding:.6em .85em .5em;box-shadow:0 .25em 0 rgba(0,0,0,.35),0 0 0 .22em rgba(255,214,107,.45);font-size:.92em;line-height:1.45;color:var(--ink)}
-#coach.L{left:1.5%}#coach.R{right:1.5%}#coach.C{left:50%;transform:translateX(-50%);width:min(56%,34em)}
+#coach{width:min(36%,24em);transition:left .25s,top .25s;background:var(--parch);border:.16em solid var(--wood-dk);border-radius:.85em;padding:.6em .85em .5em;box-shadow:0 .25em 0 rgba(0,0,0,.35),0 0 0 .22em rgba(255,214,107,.45);font-size:.92em;line-height:1.45;color:var(--ink)}
+#coach.wide{width:min(56%,34em)}#coach.mini{width:min(30%,19em);font-size:.84em}
+#coach .news{display:grid;gap:.3em;margin-top:.35em}
+#coach .nw{display:flex;gap:.55em;align-items:center;background:rgba(123,74,36,.08);border-radius:.55em;padding:.2em .4em}
+#coach .nw canvas{width:3.2em;height:3.2em;flex:none}
+#coach .nw .dot{width:.6em;height:.6em;border-radius:50%;background:#e8b53c;flex:none;margin:0 1.3em}
+#coach .nw p{margin:0;font-size:.92em}
 #coachBody{display:flex;gap:.55em;align-items:flex-start}
 #coachBody .tx{flex:1;min-width:0}
 #coachBody .cart{width:3.6em;height:3.6em;flex:none;border-radius:.6em;border:.12em solid var(--wood-dk);background:#e9d9b2}
@@ -3266,7 +3271,7 @@ function spawn(type,pi,pre){
   if(pre)e.pre=pre;if(def.alt)e.alt=def.alt;   // 17: 세일 산 겉모습 · 미혹하는 영은 높이 떠 있다
   if(def.roar)e.roarCd=rand(3,def.roar.cd);
   G.enemies.push(e);
-  if(!G.seen.has(type)){G.seen.add(type);if(!def.boss&&!(type==='soldier'&&G.sid===1))toast(`<b>${def.name} · ${def.spirit}</b><br>${def.desc}`,6);}
+  if(!G.seen.has(type)){G.seen.add(type);if(!def.boss&&!(type==='soldier'&&G.sid===1)&&!coFoeOwns(type))toast(`<b>${def.name} · ${def.spirit}</b><br>${def.desc}`,6);}
 }
 function bossSync(){G.bosses=G.bosses.filter(b=>alive(b)&&!b.gone);G.boss=G.bosses[0]||null;ui.boss(G.bosses.length>0);}   // 12의 오렙과 스엡처럼 보스가 둘일 때도 G.boss는 앞의 하나
 function demonPos(e){if(e.type==='chariot'||e.type==='pharaoh'){const k=e.def.boss?1.8:1;return{x:e.x-e.dir*10*k,y:e.y-64*k};}const s=e.look.s||1,a=enemyArt(e);return{x:e.x-e.dir*6,y:e.y-(a?a.hgt+16:50)*s};}
@@ -3772,9 +3777,9 @@ function healAround(x,y,r,amt){const r2=r*r,list=G.units.filter(u=>u.role==='uni
 function ultPress(){
   const h=G.hero;if(!h||h.state!=='ok'||h.ult>0||G.scene||G.over){Snd.play('deny');return;}
   closeMenu();
-  if(h.kind==='noah'){G.aim=G.aim==='stamp'?null:'stamp';if(G.aim)toast('짐승들이 달려올 <b>길 위</b>를 누르세요.',3);}
-  else if(h.kind==='joshua'){G.aim=G.aim==='banner'?null:'banner';if(G.aim)toast('깃발을 세울 <b>길 위</b>를 누르세요.',3);}
-  else if(h.kind==='caleb'){G.aim=G.aim==='rain'?null:'rain';if(G.aim)toast('화살비가 쏟아질 곳을 누르세요.',3);}
+  if(h.kind==='noah'){G.aim=G.aim==='stamp'?null:'stamp';if(G.aim&&!coachOn())toast('짐승들이 달려올 <b>길 위</b>를 누르세요.',3);}
+  else if(h.kind==='joshua'){G.aim=G.aim==='banner'?null:'banner';if(G.aim&&!coachOn())toast('깃발을 세울 <b>길 위</b>를 누르세요.',3);}
+  else if(h.kind==='caleb'){G.aim=G.aim==='rain'?null:'rain';if(G.aim&&!coachOn())toast('화살비가 쏟아질 곳을 누르세요.',3);}
   else if(h.kind==='david')davidUlt(h);
   else{const lv=h.sk.ult||1;G.handsLv=lv;G.hands=G.handsMax=HANDS_T[lv];h.ult=h.D.ult.cd;Snd.play('ult');banner('모세가 손을 들었어요','모세가 손을 들면 이스라엘이 이기고 (출 17:11)',3);later(HANDS_TIRED,()=>{if(G&&G.hands>0)floatText(G.hero.x,G.hero.y-80,'아론과 훌이 팔을 붙들었어요','#ffe9a8',15);});}
 }
@@ -3904,7 +3909,7 @@ function seaScene(s,dt){
 // 판마다 처음 한 번(지킨 판은 다시 안 나옴). 끝낸 단계는 슬롯에 기억해서 다시 해도 이어서 나온다.
 const CO_LINES=['watch','shep','levi','art'];
 const CO_ROLE={watch:'활 · 멀리, 빠르게',shep:'병사 · 길을 막아요',levi:'빛 · 갑옷을 꿰뚫어요',art:'돌 · 여럿을 한꺼번에'};
-const CO_TXT={watch:'활을 든 <b>파수꾼</b>은 멀리 있는 적을 빠르게 쏴요. 하늘의 적도 맞혀요.',shep:'<b>양치기</b> 셋은 길로 나가 적을 <b>막아서요</b>. 막힌 적을 다른 탑들이 쳐요.',levi:'<b>레위인</b>은 거룩한 빛을 쏴요. 갑옷 입은 적에게 강하고, 빛을 맞은 적은 느려져요.',art:'<b>장인</b>은 돌을 던져 모여 오는 적을 <b>한꺼번에</b> 쳐요.'};
+const CO_TXT={shep:'<b>양치기</b> 셋은 길로 나가 적을 <b>막아 세워요</b>. 멈춘 적을 다른 탑들이 쳐요. 다른 탑들이 함께 닿는 길목에 세우면 좋아요.',art:'<b>장인</b>은 돌을 던져 <b>여럿을 한꺼번에</b> 쳐요. 느리지만 한 번이 세요. <b>양치기가 막아 세운 곳</b>(금빛 고리)이 점선 원 안에 들어오게 세우세요. 하늘의 적은 못 맞혀요.',levi:'<b>레위인</b>은 거룩한 빛으로 <b>갑옷을 꿰뚫어요</b>. 빛을 맞은 적은 잠깐 느려져요. 방패병·전차처럼 갑옷이 두꺼운 적에게 꼭 필요해요. 사거리는 조금 짧아요.',watch:'<b>파수꾼</b>은 사거리가 가장 길고 빠르게 쏴요. 빠른 적과 하늘의 적을 맡아요. 갑옷이 두꺼운 적에게는 약해요.'};
 const coCost=l=>price(l,LINES[l].tiers[0].cost);
 const coSpot=prefer=>{for(const i of prefer||[]){const s=G.spots[i];if(s&&!s.tower)return s;}return G.spots.find(s=>!s.tower)||null;};
 const coOpen=()=>G.menu&&!G.menu.spot.tower;
@@ -3914,19 +3919,20 @@ function coCluster(){const L=coBusy();if(!L.length)return null;let best=L[0],bn=
 function coAhead(){const L=coBusy();if(!L.length)return null;const e=L.reduce((a,b)=>remaining(a)<remaining(b)?a:b),p=routeOf(e),q=at(p,Math.min(p.len-20,e.d+80));return{x:q.x,y:q.y};}
 const coFlag=()=>{const f=G.S.flags[nextPaths()[0]||0];return f&&{x:f[0],y:f[1]};};
 function coKinds(mini){return`<div class="kinds${mini?' mini':''}">${CO_LINES.map(l=>{const got=G.towers.some(t=>t.line===l);return`<div class="kind${got?' got':''}"><canvas width="${mini?72:120}" height="${mini?72:120}" data-a="tower:${l}"></canvas><b>${LINES[l].name}</b>${mini?'':`<em>${CO_ROLE[l]}</em>`}<span class="c">${got?'✓ 세움':coCost(l)+' 세겔'}</span></div>`;}).join('')}</div>`;}
-function coBuild(line,prefer){
+function coBuild(line){
   return{id:'b_'+line,art:'tower:'+line,pre:1,
     when:()=>G.gold>=coCost(line)&&G.spots.some(s=>!s.tower),
     ok:()=>G.towers.some(t=>t.line===line),
-    spot:()=>coOpen()?null:coSpot(prefer),
-    at(){const it=coOpen()&&coItem(i=>i.k==='build'&&i.line===line);if(it)return{x:it.x,y:it.y};const s=coSpot(prefer);return s&&{x:s.x,y:s.y-4};},
-    say:()=>CO_TXT[line]+'<br>'+(coOpen()?`둥근 메뉴에서 <b>${LINES[line].name}</b>(${coCost(line)})을 누르세요.${lastPtr==='touch'?' 한 번 누르면 설명이 나오고, <b>한 번 더</b> 누르면 세워져요.':''}`:'반짝이는 <b>빈 터</b>를 눌러 보세요.')+coKinds(true)};}
+    spot:()=>coOpen()?null:coBestSpot(line),
+    ring:()=>coRing(line,coOpen()?G.menu.spot:coBestSpot(line)),
+    at(){const it=coOpen()&&coItem(i=>i.k==='build'&&i.line===line);if(it)return{x:it.x,y:it.y};const s=coBestSpot(line);return s&&{x:s.x,y:s.y-4};},
+    say:()=>CO_TXT[line]+(line!=='shep'?' 점선 원은 그 탑이 닿는 곳이에요.':'')+'<br>'+(coOpen()?`둥근 메뉴에서 <b>${LINES[line].name}</b>(${coCost(line)})을 누르세요.${lastPtr==='touch'?' 한 번 누르면 설명이 나오고, <b>한 번 더</b> 누르면 세워져요.':''}`:'반짝이는 <b>빈 터</b>를 눌러 보세요.')+coKinds(true)};}
 const COACH={
   1:[
     {id:'gate',dim:1,next:1,ok:()=>G.phase!=='prep',when:()=>G.phase==='prep',at(){const g=gates()[0];return g&&{x:g.x,y:g.y};},say:()=>`적은 길을 따라 이 <b>빛나는 문</b>으로 와요. 문을 지나면 왼쪽 위의 <b>약속의 등불</b>(${G.lives})이 하나씩 약해져요. 다 꺼지기 전에 막아 주세요.`},
     {id:'gold',dim:1,next:1,ok:()=>G.phase!=='prep',when:()=>G.phase==='prep',at:()=>({el:'pGold'}),say:()=>`이 숫자는 지금 가진 <b>세겔</b>이에요. 지금 <b>${G.gold}</b>세겔이 있어요.<br>세겔로 빈 터에 탑을 세워요. 아껴 둘 필요 없어요. <b>다 써도 돼요.</b> 사람을 풀어 줄 때마다 세겔이 다시 들어와요.`},
-    {id:'kinds',next:1,ok:()=>G.phase!=='prep',when:()=>G.phase==='prep',at:()=>null,say:()=>`탑은 <b>네 가지</b>예요. 하는 일이 서로 달라서 섞어 세우면 더 잘 막아요. 하나씩 다 세워 봐요. `+(()=>{const sum=CO_LINES.reduce((n,l)=>n+coCost(l),0);return G.gold>=sum?`네 탑 값을 더하면 <b>${sum}</b>세겔이라, 지금 가진 세겔로 <b>넷 다</b> 세울 수 있어요.`:`네 탑 값을 더하면 <b>${sum}</b>세겔이에요.`;})()+coKinds(false)},
-    coBuild('watch',[14,0,5,10]),coBuild('shep',[10,4,0,14]),coBuild('levi',[5,1,14,9]),coBuild('art',[1,5,9,11]),
+    {id:'kinds',next:1,ok:()=>G.phase!=='prep',when:()=>G.phase==='prep',at:()=>null,say:()=>`탑은 <b>네 가지</b>예요. 기본은 <b>양치기가 길을 막고, 장인·레위인·파수꾼이 멈춘 적을 치는 것</b>이에요. 하는 일이 서로 달라서 섞어 세우면 더 잘 막아요. 하나씩 다 세워 봐요. `+(()=>{const sum=CO_LINES.reduce((n,l)=>n+coCost(l),0);return G.gold>=sum?`네 탑 값을 더하면 <b>${sum}</b>세겔이라, 지금 가진 세겔로 <b>넷 다</b> 세울 수 있어요.`:`네 탑 값을 더하면 <b>${sum}</b>세겔이에요.`;})()+coKinds(false)},
+    coBuild('shep'),coBuild('art'),coBuild('levi'),coBuild('watch'),
     {id:'spent',next:1,ok:()=>G.phase!=='prep',when:()=>G.phase==='prep'&&G.towers.length>0,at:()=>({el:'pGold'}),
       say(){const left=CO_LINES.filter(l=>!G.towers.some(t=>t.line===l)),g=G.gold;
         if(g<=0)return'세겔을 <b>모두</b> 썼어요. 잘했어요! 사람을 풀어 줄 때마다 세겔이 다시 들어오니, 모이면 또 세우면 돼요.';
@@ -3936,6 +3942,8 @@ const COACH={
     {id:'hero',wait:1,life:35,art:'hero:noah',when:()=>G.waveIdx>=0&&G.waveT>2.5&&G.hero.state==='ok',ok:()=>!!G.coach.f.hero,
       at(){const h=G.hero;if(!G.heroSel)return{x:h.x,y:h.y-26};const n=nearestAll(470,360);return{x:n.x,y:n.y};},
       say:()=>G.heroSel?'노아가 갈 <b>길 위</b>를 누르세요. 노아는 길을 막아서 싸우고, 가만히 서 있으면 나무 방벽을 세워요.':'이 사람이 영웅 <b>노아</b>예요. 노아를 눌러 보세요. (오른쪽 아래 노아 그림을 눌러도 돼요)'},
+    {id:'plan',next:1,when:()=>G.phase==='between',ok:()=>G.waveIdx>=2,at:()=>null,
+      say:()=>'<b>싸움의 기본</b><br>① <b>양치기</b>가 길을 막아 적을 멈춰 세워요.<br>② 멈춘 곳 둘레에 <b>장인</b>을 두면 돌 하나로 여럿을 쳐요.<br>③ <b>레위인</b>의 빛은 갑옷을 꿰뚫고 적을 느리게 해요.<br>④ <b>파수꾼</b>은 멀리서 빠른 적과 하늘의 적을 맡아요.<br>길이 굽어 두 번 지나가는 곳 곁의 탑은 같은 적을 더 오래 쳐요.'+coKinds(true)},
     {id:'freed',life:6,when:()=>G.freed>=1,at:()=>({el:'pGold'}),say:'쓰러뜨린 사람은 <b>풀려나고</b> 어둠은 달아나요. 풀어 줄 때마다 <b>세겔</b>이 들어오고, 방주가 한 칸씩 올라가요.'},
     {id:'cry',life:25,when:()=>G.waveIdx>=1&&G.cd.cry<=0&&coBusy().length>=3,ok:()=>G.cd.cry>0,at:()=>G.aim==='cry'?coCluster():{el:'bCry'},
       say:()=>G.aim==='cry'?'적이 <b>모인 곳</b>을 누르세요.':'<b>부르짖음</b>을 눌러 보세요. 누른 곳에 하늘에서 빛이 내려와 적을 멈춰 세워요. 쓰고 나면 다시 차오를 때까지 기다려요.'},
@@ -3945,10 +3953,15 @@ const COACH={
       say:()=>G.aim==='stamp'?'짐승들이 달려올 <b>길 위</b>를 누르세요.':'노아의 궁극기 <b>짐승들이 둘씩</b>이 준비됐어요. 별 버튼을 눌러 보세요.'},
     {id:'early',life:9,when:()=>G.phase==='between'&&G.waveIdx>=1&&G.nextT>8,ok:()=>G.phase!=='between',at:coFlag,say:'다음 무리를 <b>일찍 부르면</b> 남은 시간만큼 세겔을 더 받아요. 기다려도 저절로 와요.'},
     {id:'speed',life:7,when:()=>G.waveIdx>=2&&G.phase==='wave'&&G.speed===1,ok:()=>G.speed>1,at:()=>({el:'bSpeed'}),say:'<b>1×</b>를 누르면 두 배로 빨라져요. 다시 누르면 돌아와요.'},
-    {id:'more',rep:3,gap:22,life:15,when:()=>G.waveIdx>=0&&G.gold>=70&&G.spots.some(s=>!s.tower)&&animT-G.coach.built>10,
-      ok:()=>G.towers.length>G.coach.n0||G.gold<70,spot:()=>coOpen()?null:coSpot([0,14,10,5,1,9,2,4]),
-      at(){if(coOpen()){const it=coItem(i=>i.k==='build'&&G.gold>=coCost(i.line));if(it)return{x:it.x,y:it.y};}const s=coSpot([0,14,10,5,1,9,2,4]);return s&&{x:s.x,y:s.y-4};},
-      say:()=>`세겔이 <b>${G.gold}</b> 모였어요. 남겨 두지 말고 빈 터에 탑을 하나 더 세우세요.`}],
+    {id:'more',rep:4,gap:20,life:18,when:()=>G.waveIdx>=0&&G.spots.some(s=>!s.tower)&&animT-G.coach.built>8&&!!coRecommend(),
+      start(s){s.rec=coRecommend();s.rt=animT;},
+      cur(){if(animT-this.rt>1&&!(G.menu&&this.rec&&G.menu.spot===this.rec.s)){const r=coRecommend();if(r)this.rec=r;this.rt=animT;}return this.rec;},
+      ok(){return G.towers.length>G.coach.n0||!this.rec||G.gold<coCost(this.rec.l);},
+      spot(){const r=this.cur();return coOpen()?null:r&&r.s;},
+      ring(){const r=this.cur();return r&&coRing(r.l,coOpen()?G.menu.spot:r.s);},
+      art(){const r=this.cur();return r?'tower:'+r.l:null;},
+      at(){const r=this.cur();if(!r)return null;if(coOpen()){const it=coItem(i=>i.k==='build'&&i.line===r.l);if(it)return{x:it.x,y:it.y};}return{x:r.s.x,y:r.s.y-4};},
+      say(){const r=this.cur();if(!r)return'';return`세겔이 <b>${G.gold}</b> 모였어요. ${CO_WHY[r.l]}<br>`+(coOpen()?`메뉴에서 <b>${LINES[r.l].name}</b>(${coCost(r.l)})을 누르세요.`:`반짝이는 빈 터에 <b>${LINES[r.l].name}</b>${josa(LINES[r.l].name,'을','를')} 세워 보세요.`)+(r.l!=='shep'?' 점선 원은 그 탑이 닿는 곳이에요.':'');}}],
 };
 // 2–20: 처음 나오는 것을 직접 해 보게(10-18 사용자). 버튼·대상이 나타날 때 손가락이 가리키고, 한 번 해 보면 넘어간다
 const coTop={x:640,y:34};   // 위쪽 가운데 단추(그림 단추)
@@ -4024,9 +4037,88 @@ Object.assign(COACH,{
     {id:'nletter',when:()=>G.neh&&G.neh.letter&&!G.neh.letter.taps,ok:()=>!G.neh.letter||G.neh.letter.taps>0,at(){const u=nehMan();return u&&{x:u.x,y:u.y-30};},say:'<b>편지</b>가 왔어요. 느헤미야를 눌러 답해요. 답하기 전에는 느헤미야가 일하지 못해요. (느 6:3)'},
     {id:'doors',when:()=>G.neh&&G.neh.end&&G.neh.end.doors&&G.neh.end.doors.some(d=>!d.on),ok:()=>G.neh.end.doors.some(d=>d.on),at(){const d=G.neh.end.doors.find(d=>!d.on);return d&&{x:d.x,y:d.y};},say:'성문마다 눌러 <b>문짝</b>을 달아 보세요. (느 7:1)'},
     {id:'dedicate',when:()=>G.neh&&G.neh.end&&G.neh.end.doors&&G.neh.end.doors.every(d=>d.on)&&G.neh.end.st!=='dedicate',ok:()=>G.neh.end.st==='dedicate',at:()=>coTop,say:'위쪽 가운데 <b>봉헌하라</b>를 눌러 보세요. (느 12:27)'}]});
-function coachFor(sid){const L=COACH[sid];if(!L)return null;const saved=store.get(slotKey('coach'+sid),null);if(saved===true)return null;
+// 전략 길잡이(10-18 사용자: "새로운 타워는 파수꾼만 짓도록 추천… 장인과 레위인 타워를 쓰는 법과 취지는 딱히 안내되고 있지 않아")
+// 양치기가 막고, 장인은 막힌 곳에 돌을, 레위인은 갑옷 입은 적을, 파수꾼은 멀리와 하늘을. 빈 터마다 닿는 길을 세어 알맞은 자리를 고른다
+function coSmp(){const C=G.coach;if(C.smp)return C.smp;const out=[];G.routes.forEach((p,pi)=>{for(let d=0;d<p.len;d+=16){const q=at(p,d);out.push({x:q.x,y:q.y,fly:pi>=G.paths.length,k:d/p.len});}});return C.smp=out;}
+const coRange=l=>withUp(l,LINES[l].tiers[0]).range||150;
+const coBlocks=()=>G.towers.filter(t=>t.line==='shep'&&t.rally).map(t=>t.rally);
+function coScore(s,l){const cx=s.x,cy=s.y-12;
+  if(l==='shep'){const n=nearestAll(s.x,s.y);if(!n||n.dd>95*95)return -1;const kk=n.d/G.paths[n.pi].len;let v=3+4*(1-Math.min(1,Math.abs(kk-.72)/.5));   // 길 가까이, 문에서 조금 떨어진 길목(막힌 동안 다른 탑이 칠 시간이 있게)
+    for(const t of G.towers)if(t.line!=='shep'&&d2(n.x,n.y,t.x,t.y-12)<(t.range||150)**2)v+=5;   // 막아 세울 곳에 다른 탑이 닿으면
+    if(coBlocks().some(b=>d2(b.x,b.y,n.x,n.y)<120*120))v-=6;return v;}
+  const r=coRange(l);let v=0;for(const q of coSmp()){if(q.fly&&!LINES[l].air)continue;if(d2(q.x,q.y,cx,cy)<r*r)v+=.5+q.k;}   // 닿는 길이 길수록(굽어 두 번 지나는 곳)
+  for(const b of coBlocks())if(d2(b.x,b.y,cx,cy)<(r*.85)**2)v+=l==='art'?16:l==='levi'?6:2;   // 장인은 양치기가 막아 세운 곳 곁에
+  return v;}
+function coBestSpot(l){let best=null,bv=-1;for(const s of G.spots){if(s.tower)continue;const v=coScore(s,l);if(v>bv){bv=v;best=s;}}return best;}
+const CO_WHY={shep:'길을 막아 줄 <b>양치기</b>가 있어야 다른 탑들이 멈춘 적을 오래 칠 수 있어요.',art:'<b>장인</b>을 양치기가 막아 세운 곳(금빛 고리) 곁에 두면 돌 하나로 여럿을 쳐요.',levi:'<b>레위인</b>의 빛은 갑옷 입은 적을 꿰뚫고, 맞은 적을 느리게 해요.',watch:'<b>파수꾼</b>은 가장 멀리서 빠르게 쏴요. 빠른 적과 하늘의 적을 맡아요.'};
+function coRecommend(){const cnt=l=>G.towers.filter(t=>t.line===l).length,sky=!!(G.S.sky&&G.S.sky.length),want=[];
+  for(const l of ['shep','art','levi','watch'])if(!cnt(l))want.push(l);   // 먼저 네 가지를 하나씩
+  if(cnt('shep')*3<cnt('art')+cnt('levi')+cnt('watch'))want.push('shep');   // 막는 양치기 하나에 치는 탑 셋쯤
+  want.push(...['art','levi','watch'].sort((a,b)=>(cnt(a)-(sky&&a!=='art'?.5:0))-(cnt(b)-(sky&&b!=='art'?.5:0))));   // 그다음은 적은 쪽부터(하늘의 적이 오면 파수꾼·레위인)
+  for(const l of want)if(G.gold>=coCost(l)){const s=coBestSpot(l);if(s)return{l,s};}return null;}
+const coRing=(l,s)=>s?{x:s.x,y:s.y-12,r:l==='shep'?0:coRange(l),marks:l==='art'||l==='levi'?coBlocks():[]}:null;
+const coachOn=()=>!!(G&&G.coach&&!G.coach.off&&G.coach.cur);
+function coFoe(type,line,txt){return{id:'foe_'+type,foe:type,life:12,next:1,art:'enemy:'+type,
+  when:()=>G.enemies.some(e=>e.type===type&&alive(e)&&e.x>40&&e.x<W-40&&e.y>70&&e.y<H-30),
+  start(s){s.e=G.enemies.find(e=>e.type===type&&alive(e)&&e.x>40&&e.x<W-40);},
+  at(){const e=this.e;return e&&alive(e)?{x:e.x,y:e.y-(e.def.fly?FLY_H:0)-30}:null;},
+  ring(){if(!line||G.gold<coCost(line))return null;return coRing(line,coBestSpot(line));},
+  say:()=>txt+(line&&G.gold>=coCost(line)?`<br>지금 세겔로 <b>${LINES[line].name}</b>${josa(LINES[line].name,'을','를')} 세울 수 있어요(점선 원 자리).`:'')};}
+// 판마다 새로 생긴 것(10-18 사용자: "2장은 타워들을 레벨 2까지 지을 수 있잖아. 스테이지마다 새로 적용되는 것들이 있다면 알려줘야해")
+function coNew(items){return{id:'new',next:1,when:()=>G.phase==='prep',ok:()=>G.phase!=='prep',at:()=>null,
+  say:()=>`<b>${G.S.name}에서 새로 생긴 것</b><div class="news">${items.map(([a,t])=>`<div class="nw">${a?`<canvas width="96" height="96" data-a="${a}"></canvas>`:'<i class="dot"></i>'}<p>${t}</p></div>`).join('')}</div>`};}
+const CO_NEW={
+  2:[['tower:watch:2','탑을 <b>2단계</b>까지 올릴 수 있어요. 세운 탑을 누르고 위의 <b>금빛 화살표</b>를 누르면 더 세고 더 멀리 쏴요.'],['enemy:raider','<b>약탈병</b>: 아주 빨라요. 끝까지 가면 세겔도 빼앗아요. 파수꾼과 양치기로 붙잡아요.']],
+  3:[['tower:levi:3','탑을 <b>3단계</b>까지 올릴 수 있어요.'],['enemy:shield','<b>방패병</b>: 갑옷이 두꺼워 화살과 돌이 잘 안 들어요. <b>레위인</b>의 빛이 꿰뚫어요.'],[null,'지켜 내면 그림 속 <b>솔개</b>를 눌러 쫓아요.']],
+  4:[['tower:levi:4:priest','<b>4단계</b>가 열려요. 3단계 레위인을 <b>제사장</b>으로 세우면 병사를 고치고 기술을 배워요.'],['enemy:centurion','<b>백부장</b>: 곁의 적을 빠르게 하고, 마음이 완악해 레위인의 빛이 덜 들어요. 화살과 돌로 쳐요.']],
+  5:[['hero:moses','<b>모세</b>가 함께해요. 싸우기 전에 영웅을 고를 수 있어요. 모세가 손을 들면 화면의 적이 모두 약해져요.']],
+  6:[['enemy:chariot','<b>전차</b>: 빠르고 단단해요. 양치기가 막을 수 없어요. 레위인의 빛으로 꿰뚫어요.'],['enemy:pharaoh','마지막에 <b>바로</b>가 와요. 탑을 줄로 묶으면 그 탑을 여러 번 눌러 풀어요.'],[null,'다섯째 무리에 <b>구름기둥</b>이 뒤로 옮겨 서서 적을 늦춰요.']],
+  7:[['hero:joshua','이 판은 <b>여호수아</b>가 나가요.'],['tower:levi:4:choir','<b>찬양대</b>(레위인 4단계)가 열려요. 노래로 적을 멈춰 세워요.'],[null,'산 위의 <b>모세</b>가 손을 들면 탑이 세져요. 팔이 내려오면 모세를 눌러 아론과 훌이 붙들게 해요.'],[null,'아말렉이 진영 <b>뒤쪽 짧은 길</b>을 뚫고 와요. 등불 가까이에도 탑을 두세요.']],
+  8:[['enemy:giant','<b>거인</b>: 체력이 아주 많고, 고함으로 곁의 양치기를 기절시켜요. 레위인과 장인을 모아 쳐요.'],['hero:caleb','<b>갈렙</b>을 고를 수 있어요. 멀리서 쏘는 영웅이에요.'],['tower:art:4:menorah','<b>순금 등잔대</b>(장인 4단계)가 열려요. 빛이 적에서 적으로 튀고 하늘의 적도 맞혀요.'],[null,'마지막에 바산 왕 <b>옥</b>이 바위를 던져 탑을 막아요. 막힌 탑을 여러 번 눌러요.']],
+  9:[['enemy:archer','<b>궁수</b>: 멈춰 서서 양치기와 장정을 쏴요. 파수꾼으로 멀리서 먼저 맞혀요.'],['tower:watch:4:jordan','<b>요단 동편 용사</b>(파수꾼 4단계)가 열려요. 가장 멀리서 강한 화살 한 발.'],[null,'홀수 무리마다 이스라엘 <b>행렬</b>이 성을 돌아요. 마지막 날 일곱 바퀴를 돌면 <b>함성!</b>을 눌러요.']],
+  10:[['enemy:drummer','<b>북잡이</b>: 북소리가 닿은 탑이 느려져요. 사거리가 긴 탑으로 먼저 쓰러뜨려요.'],[null,'밤에서 새벽으로 바뀌어요. 열두째 무리에 해가 머물고 비탈에 <b>우박</b>이 떨어져요.']],
+  11:[['enemy:whisper','<b>하늘의 적</b>이 날개 깃발 길로 날아와요. 파수꾼·레위인 계열만 맞혀요. 장인과 양치기는 닿지 않아요.'],['enemy:chariot','가나안 <b>철병거</b>는 비가 온 뒤 진흙에 빠지면 병사가 내려요.']],
+  12:[['enemy:camel','<b>낙타 기병</b>: 빠르고 튼튼해요. 끝까지 가면 세겔을 30이나 빼앗아요. 양치기로 막아요.'],['enemy:kite','<b>솔개</b>가 탑에 앉으면 탑이 멈춰요. 탑을 네 번 눌러 쫓아요.'],[null,'탑 자리는 열하나뿐이지만 세겔이 넉넉해요. 밤에는 세 언덕의 <b>항아리</b>를 눌러요. 마지막에 <b>오렙과 스엡</b>이 함께 와요.']],
+  13:[['tower:shep:4:nazirite','<b>나실인</b>(양치기 4단계)이 열려요. 갑옷을 무시하고 붙잡아요.'],[null,'백성이 물을 길어 붓고 번제를 드리면 <b>부르짖음</b>을 곧바로 다시 쓸 수 있고, 뒤에 <b>큰 우레</b>가 제단에 다가온 적을 쳐요.'],[null,'지켜 내면 빛나는 <b>돌</b>을 눌러 에벤에셀을 세워요.']],
+  14:[['hero:david','이 판은 <b>다윗</b>이 나가요. 골리앗의 고함에 기절하지 않아요.'],['enemy:goliath','<b>골리앗</b>: 고함으로 양치기를 기절시켜요. 방패 든 자가 앞을 막아요.'],[null,'시냇가 바위 위의 <b>요나단</b>이 활로 도와요.']],
+  15:[[null,'금빛 띠를 두른 <b>택한 사람</b>은 더 세요.'],['tower:shep:4:mighty','<b>다윗의 용사들</b>(양치기 4단계)이 열려요. 가장 튼튼한 정예 셋이에요.'],[null,'바위 위의 <b>사울</b>이 던진 창이 탑에 박히면 탑을 네 번 눌러 뽑아요.']],
+  16:[[null,'약탈자가 세겔과 등불 빛을 빼앗아 <b>도망길</b>(주황 점선)로 달아나요. 놓치기 전에 맞히면 되찾아요.'],['tower:watch:4:benjamin','<b>베냐민 궁수</b>(파수꾼 4단계)가 열려요. 가장 빠르게 쏘는 궁수 둘이에요.'],[null,'들의 <b>애굽 소년</b>을 먹이면 <b>쫓아가라</b> 단추가 생겨요.']],
+  17:[['enemy:deceiver','<b>미혹하는 영</b>: 땅의 적 셋을 줄로 묶어 지켜요. 흩으면 묶였던 셋이 서로 쳐요.'],['tower:levi:4:choir','<b>앞장선 찬양대</b>가 처음부터 서 있어요. 눌러서 기술을 배워요.'],[null,'<b>견고히 서리라</b> 단추로 북소리와 미혹을 함께 이겨요.']],
+  18:[['enemy:ram','<b>공성 망치</b>: 성문 앞에 멈춰 다섯 번 쳐요. 갑옷이 아주 두꺼워요.'],[null,'길 셋이 서로 다른 <b>성문</b>으로 들어와요. 서쪽 길은 새벽에 열려요.'],[null,'새벽에 <b>그의 눈을 열어 보게 하옵소서</b>, 그 뒤 <b>눈을 어둡게 하옵소서</b>를 눌러요.']],
+  19:[['tower:art:4:uzziah','<b>웃시야의 기계</b>(장인 4단계)가 열려요. 큰 돌이 공성 무기에 두 배 반으로 들어요.'],[null,'성벽 위 <b>성 위 자리</b>는 더 멀리 쏴요. 랍사게가 외치면 성 위의 탑부터 멈춰요.'],['enemy:siegetower','마지막에 <b>산헤립의 공성탑</b>이 와요.']],
+  20:[['art:nehemiah','<b>느헤미야</b>가 함께해요. 무너진 틈으로 옮겨 <b>성벽 쌓기</b>를 눌러요.'],[null,'열네째 무리부터 <b>나팔</b> 단추로 병사와 영웅을 모아요. 편지가 오면 느헤미야를 눌러 답해요.']]};
+// 새 적이 나올 때 어떤 탑으로 맞설지(처음 한 번). 이 적들은 처음 나올 때의 짧은 알림 대신 이 안내가 뜬다
+const CO_FOE=[
+  [2,'raider','watch','<b>약탈병</b>이 와요. 아주 빨라서 끝까지 가면 세겔도 빼앗아요. 빠르게 쏘는 <b>파수꾼</b>과 길을 막는 <b>양치기</b>로 붙잡아요.'],
+  [3,'shield','levi','<b>방패병</b>이 와요. 교만의 갑옷이 두꺼워 화살과 돌이 잘 안 들어요. <b>레위인</b>의 거룩한 빛은 갑옷을 꿰뚫어요.'],
+  [4,'centurion','art','<b>백부장</b>이 와요. 마음이 완악해 레위인의 빛이 덜 들어요. 파수꾼의 화살과 <b>장인</b>의 돌로 쳐요.'],
+  [6,'chariot','levi','<b>전차</b>가 와요. 양치기가 막을 수 없고 갑옷이 두꺼워요. <b>레위인</b>의 빛으로 꿰뚫어요.'],
+  [8,'giant','levi','<b>거인</b>이 와요. 체력이 아주 많고 고함으로 곁의 양치기를 기절시켜요. <b>레위인</b>과 장인을 모아 함께 쳐요.'],
+  [9,'archer','watch','<b>궁수</b>가 와요. 멈춰 서서 양치기와 장정을 쏴요. 사거리가 긴 <b>파수꾼</b>으로 먼저 맞혀요.'],
+  [10,'drummer','watch','<b>북잡이</b>가 와요. 북소리가 닿은 탑은 느려져요. 사거리가 긴 <b>파수꾼</b>으로 북잡이부터 쓰러뜨려요.']];
+const coFoeOwns=type=>!!(G&&G.coach&&!G.coach.off&&G.coach.list.some(s=>s.foe===type&&!G.coach.done.has(s.id)));
+// 설명 칸 자리: 가리키는 곳·적·알림·단추를 가리지 않는 곳을 고른다(10-18 사용자: 세 겹 줄과 짐승들이 둘씩을 쓸 곳을 안내가 가림)
+function coPlace(sr,t,prev){const pane=$('coach'),pw=pane.offsetWidth,ph=pane.offsetHeight,SW=sr.width,SH=sr.height,m=SW*.015,k=SW/W,z=camOn()?cam.z:1,ox=camOn()?cam.x:0,oy=camOn()?cam.y:0;
+  const rel=el=>{if(!el||el.hidden)return null;const r=el.getBoundingClientRect();return r.width?{x:r.left-sr.left,y:r.top-sr.top,w:r.width,h:r.height}:null;};
+  const tr=rel($('toast')),av=[tr,rel($('boss')),rel($('sel')),rel($('dock')),rel($('hud')),rel($('tr')),rel($('info')),rel($('bShout'))];
+  if(!$('banner').hidden)for(const ch of $('banner').children)av.push(rel(ch));
+  const ov=(a,b)=>Math.max(0,Math.min(a.x+a.w,b.x+b.w)-Math.max(a.x,b.x))*Math.max(0,Math.min(a.y+a.h,b.y+b.h)-Math.max(a.y,b.y));
+  const top=Math.max(SH*.12,tr?tr.y+tr.h+6:0),A=pw*ph;
+  const slots={TL:[m,top],TR:[SW-pw-m,top],ML:[m,(SH-ph)*.5],MR:[SW-pw-m,(SH-ph)*.5],BL:[m,SH-ph-SH*.03],TC:[(SW-pw)/2,top],MC:[(SW-pw)/2,(SH-ph)*.42]};
+  const pts=[];for(const e of G.enemies)if(alive(e))pts.push({x:(e.x-ox)*z*k,y:(e.y-(e.def.fly?FLY_H:0)-oy)*z*k});
+  let best=null,bs=1e18;
+  for(const key in slots){const x=clamp(slots[key][0],m*.5,SW-pw-m*.5),y=clamp(slots[key][1],SH*.02,SH-ph-SH*.02),R={x,y,w:pw,h:ph};let sc=0;
+    for(const a of av)if(a)sc+=ov(R,a)*2;
+    if(t)sc+=ov(R,{x:t.x-60,y:t.y-75,w:120,h:160})*8;else if(key!=='TC'&&key!=='MC')sc+=A*.3;
+    for(const p of pts)if(p.x>x-12&&p.x<x+pw+12&&p.y>y-24&&p.y<y+ph+12)sc+=A*(G.aim?.08:.025);
+    if(prev&&prev.key===key)sc-=A*.1;   // 자꾸 옮겨 다니지 않게
+    if(sc<bs){bs=sc;best={key,x,y};}}
+  return best;}
+for(const sid in CO_NEW)(COACH[sid]||(COACH[sid]=[])).unshift(coNew(CO_NEW[sid]));
+for(const [sid,type,line,txt] of CO_FOE)(COACH[sid]||(COACH[sid]=[])).push(coFoe(type,line,txt));
+function coachFor(sid){const L=COACH[sid];if(!L)return null;const saved=store.get(slotKey('co2.'+sid),null);if(saved===true)return null;
   return{sid,list:L,cur:null,done:new Set(Array.isArray(saved)?saved:[]),cnt:{},last:{},f:{},built:0,n0:0,off:false,html:'',ht:0};}
-function coachSave(all){const C=G&&G.coach;if(!C)return;store.set(slotKey('coach'+C.sid),all?true:[...C.done].filter(id=>!C.list.find(s=>s.id===id&&s.rep)));}
+function coachSave(all){const C=G&&G.coach;if(!C)return;store.set(slotKey('co2.'+C.sid),all?true:[...C.done].filter(id=>!C.list.find(s=>s.id===id&&s.rep)));}
 function coachEnd(s){const C=G.coach;C.cur=null;C.html='';if(s.rep){C.cnt[s.id]=(C.cnt[s.id]||0)+1;C.last[s.id]=animT;if(C.cnt[s.id]>=s.rep)C.done.add(s.id);}else C.done.add(s.id);coachSave(false);}
 function coachTick(){const C=G.coach;
   if(C.cur){const s=C.cur;try{if(s.pressed||(s.ok&&s.ok())||(s.life&&s.age>s.life))coachEnd(s);}catch(e){coachEnd(s);}return;}
@@ -4036,9 +4128,12 @@ function coachTick(){const C=G.coach;
     if(go){C.cur=s;s.age=0;s.pressed=false;C.n0=G.towers.length;C.html='';try{if(s.start)s.start(s);}catch(e){coachEnd(s);}return;}
     if(s.wait)return;}}
 function coachArt(cv,k){const c=cv.getContext('2d'),w=cv.width,h=cv.height;c.setTransform(1,0,0,1,0,0);c.clearRect(0,0,w,h);
+  const put=a=>{if(!a){cv.remove();return;}const s=Math.min(w*.94/a.w,h*.94/a.h);c.imageSmoothingQuality='high';c.drawImage(a.im,(w-a.w*s)/2,h*.97-a.h*s,a.w*s,a.h*s);};
   if(k.startsWith('hero:')){drawHeroPortrait(cv,k.slice(5));return;}
-  const [line,tr]=k.slice(6).split(':'),tier=+tr||1,a=towerArt(line,tier);if(a){const s=Math.min(w*.94/a.w,h*.94/a.h);c.imageSmoothingQuality='high';c.drawImage(a.im,(w-a.w*s)/2,h*.97-a.h*s,a.w*s,a.h*s);return;}
-  c.save();c.translate(w/2,h*.9);c.scale(w/130,w/130);drawTowerAt(c,line,tier,0,0,null);c.restore();}
+  if(k.startsWith('art:')){put(ART[k.slice(4)]);return;}
+  if(k.startsWith('enemy:')){const ty=k.slice(6),D=ENEMIES[ty];let a=null;try{a=D&&(ty==='chariot'||ty==='pharaoh'?chariotArt({type:ty}):enemyArt({type:ty,def:D}));}catch(e){}put(a);return;}
+  const [line,tr,br]=k.slice(6).split(':'),tier=+tr||1,a=br?towerArt(line,3,br):towerArt(line,tier);if(a){put(a);return;}
+  c.save();c.translate(w/2,h*.9);c.scale(w/130,w/130);drawTowerAt(c,line,Math.min(3,tier),0,0,null,br||undefined);c.restore();}
 function coachSync(){const C=G&&G.coach,pane=$('coach'),hand=$('coachHand'),dim=$('coachDim');
   const hide=()=>{pane.hidden=true;hand.hidden=true;dim.hidden=true;};
   if(!C||C.off||G.over||G.scene||G.paused||screen!=='play'){if(C)C.lt=0;hide();return;}
@@ -4051,8 +4146,9 @@ function coachSync(){const C=G&&G.coach,pane=$('coach'),hand=$('coachHand'),dim=
   const sr=stageEl.getBoundingClientRect(),k=sr.width/W;let px=0,py=0,rad=0;
   if(tg&&tg.el){const r=$(tg.el).getBoundingClientRect();px=r.left+r.width/2-sr.left;py=r.top+r.height/2-sr.top;rad=Math.max(r.width,r.height)*.75;}
   else if(tg){const z=camOn()?cam.z:1;px=((tg.x-(camOn()?cam.x:0))*z)*k;py=((tg.y-(camOn()?cam.y:0))*z)*k;rad=58*z*k;}
-  const low=py>sr.height*.62,left=tg&&(low?px<=sr.width*.5:px>sr.width*.5);   // 아래쪽(단추들)을 가리키면 같은 쪽 위에, 아니면 반대쪽에
-  pane.classList.toggle('L',!!tg&&left);pane.classList.toggle('R',!!tg&&!left);pane.classList.toggle('C',!tg);pane.hidden=false;
+  pane.classList.toggle('wide',!tg);pane.classList.toggle('mini',!!G.aim);pane.hidden=false;
+  if(!C.slot||C.slotStep!==s||animT-(C.pt||0)>.3){C.slot=coPlace(sr,tg&&{x:px,y:py},C.slotStep===s?C.slot:null);C.slotStep=s;C.pt=animT;}
+  pane.style.left=C.slot.x.toFixed(0)+'px';pane.style.top=C.slot.y.toFixed(0)+'px';
   if(tg){hand.hidden=false;hand.style.left=px+'px';hand.style.top=py+'px';hand.classList.toggle('dn',py>sr.height*.62);hand.classList.toggle('lo',py<sr.height*.1);}else hand.hidden=true;
   if(s.dim&&tg){dim.hidden=false;dim.style.background=`radial-gradient(circle at ${px.toFixed(0)}px ${py.toFixed(0)}px,rgba(12,7,3,0) ${rad.toFixed(0)}px,rgba(12,7,3,.55) ${(rad+36).toFixed(0)}px)`;}else dim.hidden=true;}
 $('coachNext').onclick=()=>{Snd.play('click');if(G&&G.coach&&G.coach.cur)G.coach.cur.pressed=true;};
@@ -4108,7 +4204,7 @@ const ART_DEF={
   shep1:{h:62,top:.5},shep2:{h:68,top:.5},shep3:{h:74,top:.5},art1:{h:76,top:.7},art2:{h:82,top:.72},art3:{h:88,top:.74},
 };
 const ART={};
-const AV='?v=28';   // 그림을 바꿀 때마다 올려서 예전 그림이 캐시에서 나오지 않게
+const AV='?v=29';   // 그림을 바꿀 때마다 올려서 예전 그림이 캐시에서 나오지 않게
 const BG_IMG={},REAR_IMG={},FALL_IMG={},FULL_IMG={};   // FULL_IMG: 성벽을 다 지은 배경(bg20_full.jpg, 느 6:15)   // REAR_IMG: 처음엔 막혀 있는 뒷길을 덮는 그림(bgN_rear.png) · FALL_IMG: 성벽이 무너진 배경(bg9_fall.jpg, 수 6:20)
 function loadArt(){for(const k of Object.keys(STAGES).map(Number)){const im=new Image();im.onload=()=>{BG_IMG[k]=im;if(G&&G.sid===k)buildBg();};im.src='art/bg'+k+'.jpg'+AV;if(STAGES[k].rear!=null){const r=new Image();r.onload=()=>{REAR_IMG[k]=r;if(G&&G.sid===k)buildBg();};r.src='art/bg'+k+'_rear.png'+AV;}
     if(STAGES[k].jericho){const f=new Image();f.onload=()=>{FALL_IMG[k]=f;};f.src='art/bg'+k+'_fall.jpg'+AV;}
@@ -4655,7 +4751,8 @@ function renderPlay(){
   if(G.rearAnim)drawRearReveal(c);
   if(G.fallK>0&&FALL_IMG[G.sid]){c.save();c.globalAlpha=G.fallK;c.imageSmoothingQuality='high';c.drawImage(FALL_IMG[G.sid],0,0,W,H);c.restore();}   // 성벽이 무너져 내린지라(수 6:20)
   if(G.sid===6){drawSea(c);drawFires(c);}
-  {const C=G.coach,cs=C&&!C.off&&C.cur&&C.cur.spot?C.cur.spot():null;for(const s of G.spots)if(!s.tower)drawSpot(c,s,(G.menu&&G.menu.spot===s)||cs===s);}   // 길잡이가 가리키는 빈 터도 반짝인다
+  {const C=G.coach,cs=C&&!C.off&&C.cur&&C.cur.spot?C.cur.spot():null;for(const s of G.spots)if(!s.tower)drawSpot(c,s,(G.menu&&G.menu.spot===s)||cs===s);
+    let rg=null;try{rg=C&&!C.off&&C.cur&&C.cur.ring?C.cur.ring():null;}catch(e){}if(rg){if(rg.r)drawRangeFor(c,rg.x,rg.y,rg.r);for(const b of rg.marks||[]){c.save();c.strokeStyle=`rgba(255,220,120,${.55+.35*Math.sin(animT*5)})`;c.lineWidth=3;E(c,b.x,b.y+2,24,10);c.stroke();c.restore();}}}   // 길잡이가 가리키는 빈 터도 반짝이고, 그 탑이 닿는 곳을 미리 보여 준다
   drawGround(c);drawGate(c);if(G.S.kishon)drawKishonGround(c);if(G.S.eng)drawRave(c);if(G.S.zik)drawZikGround(c);if(G.S.brk)drawBrkGround(c);if(G.S.dot)drawDotGround(c);if(G.S.jer)drawJerGround(c);if(G.S.neh)drawNehGround(c);if(G.S.harod)drawArmyTents(c);if(G.S.sky)drawSkyRoute(c);drawUnitSel(c);if(G.rallyFor)drawShepRange(c,G.rallyFor);drawDrag(c);
   if(G.cloud)drawCloud(c);
   const list=[];
@@ -5040,7 +5137,7 @@ cv.addEventListener('pointermove',ev=>{const sp=toLogical(ev);if(ptrs.has(ev.poi
   if(drag&&ev.pointerId===drag.id&&G){drag.x=p.x;drag.y=p.y;if(!drag.moved&&d2(p.x,p.y,drag.x0,drag.y0)>16*16){drag.moved=true;closeMenu();G.aim=null;if(drag.k==='hero'){G.heroSel=true;G.unitSel=null;}else{G.unitSel=drag.sel;G.heroSel=false;}}}if(ev.pointerType==='mouse'&&screen==='play'){onHover(p.x,p.y);const over=G&&(G.spots.some(s=>!s.tower&&d2(p.x,p.y,s.x,s.y)<34*34)||!!hitTower(p.x,p.y)||!!unitAt(p.x,p.y)||(G.menu&&G.menu.items.some(i=>d2(p.x,p.y,i.x,i.y)<=900)));cv.style.cursor=G&&G.aim?'crosshair':over?'pointer':'default';}});
 cv.addEventListener('pointerleave',()=>{hoverPt=null;});
 cv.addEventListener('contextmenu',ev=>ev.preventDefault());
-const armAbility=k=>{if(!G||screen!=='play'||G.over||G.scene)return;Snd.init();if((k==='cry'&&G.cd.cry>0)||(k==='help'&&G.cd.help>0)){Snd.play('deny');return;}closeMenu();G.heroSel=false;G.unitSel=null;G.aim=G.aim===k?null:k;if(G.aim)toast(k==='cry'?'부르짖을 곳을 누르세요.':'장정 둘이 설 <b>길 위</b>를 누르세요.',2.5);Snd.play('click');};
+const armAbility=k=>{if(!G||screen!=='play'||G.over||G.scene)return;Snd.init();if((k==='cry'&&G.cd.cry>0)||(k==='help'&&G.cd.help>0)){Snd.play('deny');return;}closeMenu();G.heroSel=false;G.unitSel=null;G.aim=G.aim===k?null:k;if(G.aim&&!coachOn())toast(k==='cry'?'부르짖을 곳을 누르세요.':'장정 둘이 설 <b>길 위</b>를 누르세요.',2.5);Snd.play('click');};
 $('bCry').onclick=()=>armAbility('cry');$('bHelp').onclick=()=>armAbility('help');
 $('bUlt').onclick=()=>{Snd.init();if(G)ultPress();};
 $('bHero').onclick=()=>{if(!G||G.over)return;Snd.init();const h=G.hero;if(h.state!=='ok'){Snd.play('deny');return;}G.unitSel=null;G.heroSel=!G.heroSel;closeMenu();G.aim=null;Snd.play('click');};

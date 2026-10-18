@@ -1,0 +1,6 @@
+{"항목": [
+ {"key": "s1a", "상자": [940, 0, 1340, 400], "가림": [[1128, 104, 62, 62]], "시드": [1, 2, 3, 4, 5],
+  "프롬프트": "Edit the picture. Add one more small purple demon floating in the evening sky above the hooded man: the same kind as the other demons, a round purple cat-like body with two curved horns, big yellow eyes, a little smile and a curly tail. Its paw holds the top end of the glowing purple string that hangs down to the hooded man's shoulder."},
+ {"key": "s2a", "상자": [1300, 380, 1536, 640], "가림": [[1424, 498, 22, 16], [1441, 512, 12, 10]], "지움": true, "시드": [1, 2, 3, 4],
+  "프롬프트": "Edit the picture. The young man carries the brick basket on his shoulder and holds its rim with his one raised hand; his elbow points down. Under the basket there is no other hand and no other arm, only the woven bottom of the basket resting on his shoulder and his gray tunic sleeve."}
+]}
