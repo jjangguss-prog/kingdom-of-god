@@ -807,8 +807,8 @@ const HEROES={
 HEROES.joshua={name:'여호수아',line:'양치기',hp:300,armor:.25,dmg:20,rate:1,range:0,speed:64,melee:true,fixedLv:4,fixedSk:{s1:2,s2:2,passive:2,ult:2},only:7,joinXp:1500,
   look:{skin:'#d39a68',cloth:'#b08a5a',cloth2:'#7a5232',head:'cloth',hc:'#efe3c4',beard:'#3a2614',item:'spear'},
   trait:{name:'사람들을 택하여',ref:'출 17:9',desc:'곁에 있는 양치기와 문지기, 장정의 공격이 세져요.'},
-  s1:{name:'칼날로',ref:'출 17:13',cd:10,desc:'앞의 적 여럿을 한 번에 치고 잠깐 멈춰 세워요. 칼날은 갑옷을 절반 꿰뚫어요.'},
-  s2:{name:'강하고 담대하라',ref:'수 1:9',cd:16,desc:'6초 동안 곁의 탑과 병사가 더 빨리 공격해요.'},
+  s1:{name:'칼날로',ref:'출 17:13',cd:10,desc:'앞의 적 여럿을 한 번에 치고 잠깐 멈춰 세워요. 칼날은 갑옷을 절반 꿰뚫어요. 3단계는 더 넓게, 더 자주 쳐요.'},
+  s2:{name:'강하고 담대하라',ref:'수 1:9',cd:16,desc:'6초 동안 곁의 탑과 병사가 더 빨리 공격해요(3단계는 8초).'},
   ult:{name:'여호와 닛시',short:'여호와<br>닛시',ref:'출 17:15',cd:45,desc:'누른 길 위에 깃발을 세워요. 둘레의 적은 멈춰 서고, 아군은 회복돼요.'},
   title:'모세의 수종자, 강하고 담대하라는 말씀을 받은 사람 (수 1:1, 9)',
   say:'“오직 나와 내 집은 여호와를 섬기겠노라”',sayRef:'수 24:15',
@@ -4021,8 +4021,8 @@ function heroSkills(h){
   if(h.kind==='david'){davidSkills(h);return;}
   if(h.kind==='nehemiah'){nehemiahSkills(h);return;}
   if(h.kind==='joshua'){const L=h.sk;
-    if(L.s1>0&&h.s1<=0){const near=G.enemies.filter(e=>alive(e)&&!e.def.fly&&d2(e.x,e.y,h.x+h.dir*16,h.y)<70*70);if(near.length){for(const e of near){hurt(e,[0,30,45,75][L.s1],'physH','hero');if(alive(e)&&!e.def.boss)e.stun=Math.max(e.stun,[0,.8,1,1.4][L.s1]);}fxRing(h.x+h.dir*16,h.y,70,'255,240,200');Snd.play('hit');h.cast=.3;h.s1=HEROES.joshua.s1.cd;}}   // 칼날로 쳐서 무찌르니라(출 17:13): 갑옷을 절반 꿰뚫는다. 3단계는 데려온 여호수아만 쓴다(10-19 균형)
-    if(L.s2>0&&h.s2<=0&&G.enemies.some(e=>alive(e)&&d2(e.x,e.y,h.x,h.y)<220*220)){G.brave={x:h.x,y:h.y,t:6,mul:[0,1.18,1.25,1.4][L.s2]};h.s2=HEROES.joshua.s2.cd;floatText(h.x,h.y-70,'강하고 담대하라','#ffe9a8',15);Snd.play('event');}
+    if(L.s1>0&&h.s1<=0){const R=[0,70,70,80][L.s1],near=G.enemies.filter(e=>alive(e)&&!e.def.fly&&d2(e.x,e.y,h.x+h.dir*16,h.y)<R*R);if(near.length){for(const e of near){hurt(e,[0,30,45,90][L.s1],'physH','hero');if(alive(e)&&!e.def.boss)e.stun=Math.max(e.stun,[0,.8,1,1.5][L.s1]);}fxRing(h.x+h.dir*16,h.y,R,'255,240,200');Snd.play('hit');h.cast=.3;h.s1=[0,10,10,9][L.s1];}}   // 칼날로 쳐서 무찌르니라(출 17:13): 갑옷을 절반 꿰뚫는다. 3단계는 데려온 여호수아만 쓴다(10-19 균형: 피해 90, 멈춤 1.5초, 둘레 80, 9초마다)
+    if(L.s2>0&&h.s2<=0&&G.enemies.some(e=>alive(e)&&d2(e.x,e.y,h.x,h.y)<220*220)){G.brave={x:h.x,y:h.y,t:[0,6,6,8][L.s2],mul:[0,1.18,1.25,1.6][L.s2]};h.s2=HEROES.joshua.s2.cd;floatText(h.x,h.y-70,'강하고 담대하라','#ffe9a8',15);Snd.play('event');}
     return;}
   if(h.kind==='caleb'){const L=h.sk;
     if(L.s1>0&&h.s1<=0){let best=null,bh=0;for(const e of G.enemies){if(!alive(e)||d2(e.x,e.y,h.x,h.y)>320*320)continue;if(e.maxHp>bh){bh=e.maxHp;best=e;}}   // 능히 이기리라(민 13:30): 가장 강한 적에게 표적
