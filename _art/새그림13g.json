@@ -1,0 +1,70 @@
+{
+ "출력": "raw",
+ "크기": [
+  1024,
+  1024
+ ],
+ "단계": 4,
+ "항목": [
+  {
+   "id": "p_jar",
+   "종류": "인물",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "An Israelite villager man of about thirty with a short brown beard, a cream headcloth and a plain brown wool tunic with a rope belt and leather sandals, standing and holding a round brown clay water jar with both hands in front of his chest, calm earnest face, three-quarter view facing right, whole body visible. Exactly two arms and exactly two hands, each hand with four fingers and a thumb."
+  },
+  {
+   "id": "p_jar2",
+   "종류": "인물",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "An Israelite village woman of about thirty in a long olive-green dress, a cream headscarf and leather sandals, standing and holding a round brown clay water jar with both hands in front of her waist, gentle face, three-quarter view facing right, whole body visible. Exactly two arms and exactly two hands, each hand with four fingers and a thumb."
+  },
+  {
+   "id": "p_pour",
+   "종류": "인물",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "An Israelite villager man of about thirty with a short brown beard, a cream headcloth and a plain brown wool tunic with a rope belt and leather sandals, leaning slightly forward and tipping a round brown clay water jar with both hands so a stream of clear water pours out onto the ground in front of him, humble prayerful face, three-quarter view facing right, whole body visible. Exactly two arms and exactly two hands, each hand with four fingers and a thumb."
+  },
+  {
+   "id": "p_pour2",
+   "종류": "인물",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "An Israelite village woman of about thirty in a long olive-green dress, a cream headscarf and leather sandals, leaning slightly forward and tipping a round brown clay water jar with both hands so a stream of clear water pours out onto the ground in front of her, humble prayerful face, three-quarter view facing right, whole body visible. Exactly two arms and exactly two hands, each hand with four fingers and a thumb."
+  },
+  {
+   "id": "ruth",
+   "종류": "인물",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "Ruth, a young Moabite woman of about twenty-five with long dark hair under a simple light-brown headscarf, wearing a plain long blue dress with a cream sash and leather sandals, gentle hopeful face, walking and carrying a small bundle of golden barley stalks in her arms against her chest, three-quarter view facing right, whole body visible. Exactly two arms and exactly two hands, each hand with four fingers and a thumb."
+  },
+  {
+   "id": "ruth_glean",
+   "종류": "인물",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "Ruth, a young Moabite woman of about twenty-five with long dark hair under a simple light-brown headscarf, wearing a plain long blue dress with a cream sash and leather sandals, gentle hopeful face, kneeling on one knee on the ground and picking up a fallen golden barley stalk with her right hand while holding a small bundle of barley in her left arm, three-quarter view facing right, whole body visible. Exactly two arms and exactly two hands, each hand with four fingers and a thumb."
+  }
+ ]
+}

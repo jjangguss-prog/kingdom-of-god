@@ -1,5 +1,5 @@
 {
- "bg13": "bg13_s1_f937f9.png",
+ "bg13": "bg13_fix_s11.png",
  "s13a": "s13a_s6_072793.png",
  "s13b": "s13b_s1_21eefc.png",
  "s13c": "s13c_s4_5e4318.png",
@@ -21,5 +21,11 @@
  "nazirite": "nazirite_s1_1a4322.png",
  "samuel": "samuel_s2_91a4d0.png",
  "ebenezer": "ebenezer_s1_0dd5aa.png",
- "e_sheaf": "e_sheaf_s1_9a7a02.png"
+ "e_sheaf": "e_sheaf_s1_9a7a02.png",
+ "p_jar": "p_jar_s1_ae3028.png",
+ "p_jar2": "p_jar2_s3_4951a2.png",
+ "p_pour": "p_pour_s3_a2535f.png",
+ "p_pour2": "p_pour2_s3_af37e8.png",
+ "ruth": "ruth_s2_265371.png",
+ "ruth_glean": "ruth_glean_s2_40fe61.png"
 }
