@@ -3922,7 +3922,7 @@ function updHero(dt){
       if(h.kind==='caleb'){h.atkCd=h.D.rate/(1+[0,.2,.35,.5][h.sk.passive||0]*(1-h.hp/h.max));G.projs.push({k:'harrow',x:h.x+h.dir*10,y:h.y-40,tx:e.x,ty:e.y,tg:e,sp:760,dmg:h.dmg});Snd.play('arrow');}   // 여전히 강건하니(수 14:11)
       else{h.atkCd=h.D.rate;G.projs.push({k:'hbolt',x:h.x+h.dir*10,y:h.y-44,tx:e.x,ty:e.y,tg:e,sp:560,dmg:h.dmg});Snd.play('holy');}}else h.atkCd=.2;}}
   if(h.kind==='david')davidSling(h,dt);   // 막대기로 막으면서도 물매를 돌린다
-  const busy=tg||(!h.D.melee&&findTarget(h.x,h.y,h.D.range,true))||(h.kind==='david'&&findTarget(h.x,h.y-10,h.D.sling.range,true));   // 싸움이 없으면 1초 뒤 지킬 자리(처음 자리나 옮겨 준 곳)로 걸어서 돌아간다
+  const busy=tg||(!h.D.melee&&findTarget(h.x,h.y,h.D.range,true));   // 싸움이 없으면 1초 뒤 지킬 자리(처음 자리나 옮겨 준 곳)로 걸어서 돌아간다. 다윗은 막을 적이 없으면 물매를 돌리며 돌아간다(물매 사거리 안의 적 때문에 제자리를 잃지 않게)
   h.calm=busy?0:h.calm+dt;h.going=false;
   if(h.calm>1&&!(h.kind==='moses'&&G.hands>0)){const dx=h.px-h.x,dy=h.py-h.y,Ld=Math.hypot(dx,dy);if(Ld>4){const st=Math.min(Ld,h.D.speed*dt);h.x+=dx/Ld*st;h.y+=dy/Ld*st;if(Math.abs(dx)>1.5)h.dir=dx>=0?1:-1;h.going=true;h.idle=0;}}
   if(h.kind==='noah'&&!h.bar&&h.barCd<=0&&h.idle>3){const n=nearestAll(h.x,h.y);if(n&&n.dd<100*100){const q=at(G.paths[n.pi],Math.max(0,n.d-34));const b=mkUnit({role:'bar',x:q.x,y:q.y,hp:150,max:150,armor:.3});G.units.push(b);h.bar=b;for(let i=0;i<8;i++)part('dust',q.x+rand(-12,12),q.y,rand(-20,20),rand(-30,-5),.6,'rgba(160,110,60,',4);Snd.play('build');}else h.barCd=1;}
