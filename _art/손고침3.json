@@ -1,0 +1,125 @@
+{
+ "항목": [
+  {
+   "key": "v4c",
+   "상자": [
+    560,
+    330,
+    1080,
+    864
+   ],
+   "가림": [
+    [
+     786,
+     668,
+     66,
+     38
+    ]
+   ],
+   "지움": [
+    214,
+    166,
+    104
+   ],
+   "시드": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "프롬프트": "Edit the picture. The mother holds her swaddled baby with only two arms: her right hand under the baby's head and her left hand cupping the back of the baby's head. Under the baby is the long loose beige sleeve of her right arm hanging down in soft folds; there is no forearm and no bare skin under the baby."
+  },
+  {
+   "key": "v8c",
+   "id": "v8c2",
+   "원본": "고침/v8c_s2.png",
+   "상자": [
+    420,
+    360,
+    700,
+    560
+   ],
+   "가림": [
+    [
+     518,
+     463,
+     24,
+     22
+    ]
+   ],
+   "지움": true,
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "Edit the picture. The brown cow at the top middle has exactly one head: the horned head with a white blaze at its front end, looking at the viewer. Below that head there is only grass, no second grazing head."
+  },
+  {
+   "key": "s15a",
+   "상자": [
+    0,
+    0,
+    380,
+    210
+   ],
+   "가림": [
+    [
+     57,
+     76,
+     17,
+     23
+    ]
+   ],
+   "지움": [
+    205,
+    157,
+    122
+   ],
+   "시드": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "프롬프트": "Edit the picture. The cheering bearded man in green on the rooftop raises both arms. To the left of his body, below his raised right arm, there is only the plain sandy mud-brick wall of the house, no extra arm and no shadow blob."
+  },
+  {
+   "key": "s9g",
+   "상자": [
+    840,
+    170,
+    1060,
+    430
+   ],
+   "가림": [
+    [
+     944,
+     236,
+     17,
+     14
+    ],
+    [
+     955,
+     250,
+     10,
+     10
+    ]
+   ],
+   "지움": [
+    236,
+    216,
+    188
+   ],
+   "시드": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "프롬프트": "Edit the picture. The guard on the wall holds his spear upright with his left hand and rests his right hand on his hip, looking far away. In front of his face and helmet there is only the clear evening sky, no hand and no arm at his forehead."
+  }
+ ]
+}

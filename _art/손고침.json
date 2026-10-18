@@ -1,0 +1,8 @@
+{"항목": [
+ {"key": "v1d", "상자": [1180, 300, 1520, 700], "가림": [[1374, 540, 26, 36]], "시드": [1, 2, 3],
+  "프롬프트": "Edit the picture. The young woman in the orange-red dress on the right stands with her two hands clasped together at her waist. Remove the extra third hand that hangs at her left side below her sleeve; paint the plain orange-red dress fabric there instead."},
+ {"key": "v4c", "상자": [560, 330, 1080, 864], "가림": [[790, 662, 92, 44]], "시드": [1, 2, 3],
+  "프롬프트": "Edit the picture. The mother holds her swaddled baby with only two arms: one hand under the baby's head and one hand cupping the back of the baby's head. Remove the extra third forearm lying flat under the baby; paint the mother's beige dress and the white swaddling cloth there instead."},
+ {"key": "s8a", "상자": [180, 380, 560, 800], "가림": [[292, 612, 32, 58]], "시드": [1, 2, 3],
+  "프롬프트": "Edit the picture. The mother in the blue dress holds the swaddled baby in her arms against her chest. Remove the extra blue sleeve and hand that reach down to the boy's staff; the boy in green holds his wooden staff alone with his own hand, and the mother's blue dress is behind it."}
+]}

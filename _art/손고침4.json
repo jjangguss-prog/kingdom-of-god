@@ -1,0 +1,159 @@
+{
+ "항목": [
+  {
+   "key": "s19g",
+   "상자": [
+    380,
+    300,
+    680,
+    700
+   ],
+   "가림": [
+    [
+     516,
+     520,
+     30,
+     108
+    ]
+   ],
+   "지움": [
+    200,
+    158,
+    126
+   ],
+   "시드": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "프롬프트": "Edit the picture. The young soldier holds only one round wooden shield, the one on his left side in front of him. On his right side, behind his arm, there is only the stone wall with large sandy blocks; no second shield. His right hand rests on the strap across his chest."
+  },
+  {
+   "key": "s10d",
+   "상자": [
+    230,
+    300,
+    560,
+    540
+   ],
+   "가림": [
+    [
+     383,
+     443,
+     32,
+     11
+    ]
+   ],
+   "지움": true,
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "Edit the picture. The Gibeonite man holds the moldy bread with his near hand at the front and his other hand behind the bread at the top. Under the bread there are no more fingers, only the folds of his gray-green sleeve and the brown robe of the man beside him."
+  },
+  {
+   "key": "v4c",
+   "id": "v4cg",
+   "상자": [
+    560,
+    330,
+    1080,
+    864
+   ],
+   "가림": [
+    [
+     786,
+     668,
+     66,
+     38
+    ]
+   ],
+   "지움": [
+    126,
+    97,
+    80
+   ],
+   "시드": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "프롬프트": "Edit the picture. The mother cradles her swaddled baby. Under the baby lies her own grayish-brown left sleeve, a wide plain fabric sleeve with soft folds that continues up behind the baby to her left hand cupping the baby head. There is no bare forearm and no skin under the baby, only that grayish-brown sleeve fabric."
+  },
+  {
+   "key": "v8c",
+   "id": "v8c3",
+   "원본": "raw/v8c_gpt1_fix.png",
+   "상자": [
+    200,
+    380,
+    500,
+    560
+   ],
+   "가림": [
+    [
+     284,
+     486,
+     21,
+     23
+    ]
+   ],
+   "지움": [
+    198,
+    218,
+    59
+   ],
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "Edit the picture. The brown cow grazes with its one head at the right end of its body. At the left end is only its rump and its tail hanging down; below the tail there is only green grass, no second head."
+  },
+  {
+   "key": "s9g",
+   "id": "s9g2",
+   "상자": [
+    840,
+    170,
+    1060,
+    430
+   ],
+   "가림": [
+    [
+     938,
+     236,
+     19,
+     14
+    ],
+    [
+     951,
+     252,
+     11,
+     14
+    ],
+    [
+     956,
+     266,
+     8,
+     8
+    ]
+   ],
+   "지움": [
+    236,
+    216,
+    188
+   ],
+   "시드": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "프롬프트": "Edit the picture. The guard on the wall stands with his right hand on his hip and his left hand holding the spear upright at his side. His left arm hangs down from the shoulder to the spear. Next to his face and above his shoulder there is only clear evening sky."
+  }
+ ]
+}

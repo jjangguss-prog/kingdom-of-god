@@ -12,7 +12,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 RAW, CUT, ART = (os.path.join(HERE, d) for d in ('raw', 'cut', os.path.join('..', 'art')))
 MAX = 512
 # 게임 화면에 그려지는 크기의 3배쯤(고해상도 폰). 영웅은 초상화에도 쓰여 크게, 탑·전차는 크게, 나머지 병사·적은 256
-CROP = {'v3a': .035, 'v4c': .03, 's7b': (.09, .18, .91, 1), 's3c': (0, .25, .75, 1)}   # 비율. 넷이면 (왼, 위, 오른, 아래): s7b는 이야기 글 상자 위로 물줄기가 보이게, s3c는 오른쪽 끝의 아이 머리를 든 사람·머리가 둘인 사람을 잘라 냄(10-12 사용자)
+CROP = {}   # 비율. 넷이면 (왼, 위, 오른, 아래). 예전 FLUX 그림의 액자 테두리·잘못 그린 곳을 잘라 내던 설정인데, 다시 그린 그림(gpt-image)은 모두 16:9라 잘라 낼 것이 없다(10-18 사용자)
 LIMIT = {'noah': 512, 'moses': 512, 'joshua': 512, 'caleb': 512, 'chariot': 384, 'pharaoh': 512, 'og': 512, 'giant': 384, 'levi_priest': 384, 'levi_choir': 384, 'art_menorah': 384, 'watch_jordan': 384, 'c_chariot': 384, 'c_chariot_empty': 384, 'deborah': 384, 'barak': 384, 'm_camel': 384, 'oreb': 384, 'zeeb': 384, 'gideon': 384, 'b_giant': 384, 'shep_nazirite': 384, 'samuel': 384, 'david': 512, 'goliath': 512, 'b_bearer': 384, 'jonathan': 384, 'saul': 384, 'saul_throw': 384, 'saul_fit': 384, 'saul_kneel': 384, 'shep_mighty': 384, 'watch_benjamin': 384, 'k_camel': 384, 'deceiver': 384, 'jehoshaphat': 384, 'r_chariot': 384, 'ram': 384, 'ram_swing': 384, 'elisha': 384, 'elisha_pray': 384, 'elisha_lead': 384, 'king_israel': 384, 'firechariot': 384, 'art_uzziah': 384, 's_chariot': 384, 'siegetower': 512, 'siegetower_bare': 512, 'rabshakeh': 384, 'hezekiah': 384, 'hezekiah_pray': 384, 'isaiah': 384, 'nehemiah': 512, 'h_chariot': 384}   # 탑(이름 끝이 숫자)은 384
 
 def cutter():

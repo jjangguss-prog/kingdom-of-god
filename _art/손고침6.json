@@ -1,0 +1,37 @@
+{
+ "항목": [
+  {
+   "key": "v4c",
+   "id": "v4ch2",
+   "상자": [
+    760,
+    300,
+    1180,
+    720
+   ],
+   "가림": [
+    [
+     976,
+     445,
+     30,
+     66
+    ],
+    [
+     972,
+     535,
+     24,
+     40
+    ]
+   ],
+   "지움": true,
+   "번짐": 70,
+   "시드": [
+    6,
+    7,
+    8,
+    9
+   ],
+   "프롬프트": "Edit the picture. The mother holds her swaddled baby with two arms: her right hand supports the baby's head from below, and her left forearm in the grayish sleeve lies under the baby. Nothing touches the back of the baby's head: show the back of the baby's round head with short dark brown hair, and behind it the mother's plain grayish shawl falling down."
+  }
+ ]
+}

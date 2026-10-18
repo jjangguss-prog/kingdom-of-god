@@ -1,0 +1,20 @@
+{"항목": [
+ {"key": "v4c", "상자": [560, 330, 1080, 864], "가림": [[786, 668, 70, 40]], "지움": true, "시드": [1, 2, 3, 4],
+  "프롬프트": "Edit the picture. The mother holds her swaddled baby with only two arms: one hand under the baby's head and one hand cupping the back of the baby's head. Below the baby there is only the folds of the mother's beige sleeve and dress, no forearm and no skin."},
+ {"key": "s11d", "상자": [1250, 420, 1536, 780], "가림": [[1405, 625, 30, 32]], "지움": true, "시드": [1, 2, 3],
+  "프롬프트": "Edit the picture. The young woman in the red head-scarf on the right presses her two hands together in prayer under her chin. Below that, on her chest, there are no more hands, only her long brown hair and her maroon dress."},
+ {"key": "v8c", "상자": [150, 380, 780, 650], "가림": [[280, 455, 32, 42], [393, 545, 30, 36], [613, 525, 32, 40], [183, 510, 18, 18]], "지움": true, "시드": [1, 2, 3],
+  "프롬프트": "Edit the picture. Every cow and ox has exactly one head. The brown cow at the top, the brown cow in the middle and the grey ox on the right each graze with their one head on the right end of the body; the left end of each of these animals is the animal's rump with a hanging tail, not a second head. The brown cow on the far left has no extra ears on its shoulder."},
+ {"key": "v14c", "상자": [400, 20, 780, 360], "가림": [[547, 297, 20, 24], [541, 98, 20, 22]], "지움": true, "시드": [1, 2, 3],
+  "프롬프트": "Edit the picture. The fleeing soldier in bronze armor raises both open hands; below his raised left hand there is only his bent forearm, no extra fist. The bearded cheering man in the brown headscarf raises one fist in the air and has no other hand next to it; the spear behind him is held by someone further back."},
+ {"key": "s15a", "상자": [0, 0, 300, 160], "가림": [[58, 76, 18, 24]], "지움": true, "시드": [1, 2, 3],
+  "프롬프트": "Edit the picture. The cheering bearded man in green on the rooftop raises both arms in the air. Below his raised right arm there is only the mud-brick wall, no extra arm."},
+ {"key": "s5d", "상자": [1080, 340, 1330, 560], "가림": [[1178, 425, 15, 15]], "지움": true, "시드": [1, 2, 3],
+  "프롬프트": "Edit the picture. The little girl in the green dress holds her clay jar with her two hands at the middle and bottom of the jar. The rim of the jar is free, with no hand on it."},
+ {"key": "s9g", "상자": [840, 180, 1040, 420], "가림": [[942, 238, 18, 15], [952, 252, 11, 11]], "지움": true, "시드": [1, 2, 3],
+  "프롬프트": "Edit the picture. The guard on the wall holds his spear upright with one hand and rests his other hand on his hip, looking far away from under his bronze helmet. There is no hand at his forehead."},
+ {"key": "s20a", "상자": [40, 0, 400, 330], "가림": [[168, 178, 24, 26]], "시드": [1, 2, 3],
+  "프롬프트": "Edit the picture. The boy hangs his lyre on the willow branch with both hands. His lower hand holding the bottom of the lyre has the same light skin color as his other hand, clearly a hand and not brown wood."},
+ {"key": "s19g", "상자": [380, 300, 640, 660], "가림": [[508, 505, 40, 95]], "지움": true, "시드": [1, 2, 3],
+  "프롬프트": "Edit the picture. The young soldier carries only one round shield in front of him. Remove the second shield behind his back; the stone wall and his arm show there instead."}
+]}
