@@ -3088,11 +3088,12 @@ function updDotEnd(dt){const D=G.dot,F=D.end,d=G.S.dot;F.t+=dt;const lane=F.lane
       else{const qd=F.lead.d-26*(m.k+1);if(qd<=0){const q=at(lane,0);tx=q.x;ty=q.y;}else{const q=at(lane,qd),side=((m.k%3)-1)*8;tx=q.x-q.dy*side;ty=q.y+q.dx*side;}}
       const dx=tx-m.x,dy=ty-m.y,L2=Math.hypot(dx,dy),st=(F.stop?90:130)*dt;if(L2>st){m.x+=dx/L2*st;m.y+=dy/L2*st;m.dir=dx>=0?1:-1;m.walk=true;m.sit=false;}else{m.walk=false;m.sit=!!F.stop;}}}
   if(F.st==='home')for(const m of F.men){m.t+=dt;if(m.hd<0){const q=at(F.home,0),dx=q.x-m.x,dy=q.y-m.y,L2=Math.hypot(dx,dy),st=90*dt;if(L2>st){m.x+=dx/L2*st;m.y+=dy/L2*st;m.dir=dx>=0?1:-1;m.walk=true;m.sit=false;}continue;}const q=at(F.home,Math.min(m.hd,F.home.len));m.x=q.x;m.y=q.y;m.dir=q.dx>=0?1:-1;m.walk=true;m.sit=false;m.a=clamp(1-(m.hd-F.home.len*.55)/(F.home.len*.4),0,1);}}
-function dotTap(x,y){const D=G.dot;if(!D)return false;const d=G.S.dot,F=D.end;
+function dotTap(x,y,pk){const D=G.dot;if(!D)return false;const d=G.S.dot,F=D.end;
   if(F){if(F.st==='call'&&d2(x,y,d.gateS[0],d.gateS[1]-30)<52*52){dotLead();return true;}
     if(F.st==='tables'){const t=F.tables.find(t=>!t.srv&&d2(x,y,t.x,t.y-8)<42*42);if(t){dotServe(t);return true;}}
     return false;}
   const r=dotBtn();if((D.ask||D.open)&&x>r.x&&x<r.x+r.w&&y>r.y&&y<r.y+r.h){closeMenu();if(D.ask)dotOpen();else dotBlind();return true;}
+  if(pk)return false;   // 아래는 설명만 띄우므로 탑·빈 자리를 가리지 않는다
   if(G.phase==='prep'||G.phase==='between')for(const pi of nextPaths()){if(pi>=G.paths.length)continue;const f=G.S.flags[pi];if(d2(x,y,f[0]+30,f[1]-30)<18*18){closeMenu();toast('엘리사가 경계한 곳이에요.<br>"왕은 삼가 아무 곳으로 지나가지 마소서 아람 사람이 그 곳으로 나오나이다" (왕하 6:9)',5);Snd.play('tink');return true;}}
   {const [fx,fy]=d.field;if(D.sat>0&&((x-fx)/112)**2+((y-fy)/58)**2<1){closeMenu();toast('<b>앉아 기다리는 아람 사람 '+D.sat+'</b><br>싸움이 끝나면 이 사람들을 먹여 돌려보내요. "칼과 활로 사로잡은 자인들 어찌 치리이까" (왕하 6:22)',5);Snd.play('click');return true;}}
   for(const [cx,cy] of d.chariots)if(d2(x,y,cx,cy-22)<26*26){closeMenu();toast(D.open?'<b>불말과 불병거</b><br>"불말과 불병거가 산에 가득하여 엘리사를 둘렀더라" (왕하 6:17) 처음부터 거기 있었어요. 사환의 눈이 열렸을 뿐이에요.':'산 위에 무언가 반짝여요.',4.5);Snd.play('tink');return true;}
@@ -3248,9 +3249,10 @@ function updJer(dt){const j=G.S.jer;if(!j)return;const J=G.jer,i=G.waveIdx,L2=G.
     else if(Lt.st==='pray'){if(Lt.t>12&&!Lt.said){Lt.said=true;J.isaT=3;Snd.play('event');banner('내가 들었노라','네가 앗수르 왕 산헤립 때문에 내게 기도하는 것을 내가 들었노라 (왕하 19:20)',5);J.proShow=true;}
       if(Lt.t>17.5){Lt.st='done';J.heze.pray=false;J.heze.x=j.heze[0];J.heze.y=j.heze[1];G.phase='between';G.nextT=2.5;toast('<b>약속 네 칸</b>이 보스 막대 위에 떠요. 공성탑의 체력이 줄 때마다 하나씩 이뤄져요. "그가 이 성에 이르지 못하며" (왕하 19:32)',6);}}}
   if(J.end)updJerEnd(dt);}
-function jerTap(x,y){const J=G.jer;if(!J)return false;const j=G.S.jer,F=J.end;
+function jerTap(x,y,pk){const J=G.jer;if(!J)return false;const j=G.S.jer,F=J.end;
   if(F){if(F.st==='call'&&d2(x,y,G.S.gate[0],G.S.gate[1]-20)<60*60){jerOpen();return true;}const r=jerBtn();if(F.st==='call'&&x>r.x&&x<r.x+r.w&&y>r.y&&y<r.y+r.h){jerOpen();return true;}return false;}
   const Lt=J.letter;if(Lt&&Lt.st==='ask'){const r=jerBtn();if((x>r.x&&x<r.x+r.w&&y>r.y&&y<r.y+r.h)||d2(x,y,j.temple2[0]+30,j.temple2[1]-10)<54*54){jerSpread();return true;}}
+  if(pk)return false;   // 아래 셋은 설명만 띄우므로 탑·빈 자리를 가리지 않는다
   const R=J.rab;if(R&&R.st!=='gone'&&d2(x,y,R.x,R.y-30)<34*34){closeMenu();toast('<b>랍사게</b> · 앗수르 왕의 신하<br>윗못 곁에 서서 유다 말로 크게 외쳐 성 위의 탑을 놀라게 해요. 맞힐 수 없어요. "네가 의뢰하는 이 의뢰가 무엇이냐" (왕하 18:19)',6);Snd.play('click');return true;}
   if(d2(x,y,j.isaiah[0],j.isaiah[1]-30)<30*30){closeMenu();toast('<b>이사야</b> · 아모스의 아들 선지자<br>"내가 여기 있나이다 나를 보내소서" (사 6:8)',4.5);Snd.play('click');return true;}
   if(d2(x,y,J.heze.x,J.heze.y-30)<30*30){closeMenu();toast('<b>히스기야</b> · 유다 왕<br>"그와 함께 하는 자는 육신의 팔이요 우리와 함께 하시는 이는 우리의 하나님 여호와시라" (대하 32:8)',5);Snd.play('click');return true;}
@@ -5386,7 +5388,7 @@ function drawMenu(c){
     c.save();c.beginPath();c.arc(it.x,it.y,21,0,TAU);c.clip();
     if(it.k==='build'){c.translate(it.x,it.y+12);c.scale(.5,.5);drawTowerAt(c,it.line,1,0,0,null);}
     else if(it.k==='up'){c.translate(it.x,it.y+12);c.scale(.48,.48);drawTowerAt(c,t.line,Math.min(3,t.tier+1),0,0,null);}
-    else if(it.k==='branch'){c.translate(it.x,it.y+12);c.scale(.46,.46);drawTowerAt(c,t.line,3,0,0,null,it.id);if(it.lock){c.setTransform(1,0,0,1,0,0);}}
+    else if(it.k==='branch'){const a=towerArt(t.line,3,it.id),s=a?Math.min(.46,40/a.hgt):.46;c.translate(it.x,s<.46?it.y+20-12*s:it.y+12);c.scale(s,s);drawTowerAt(c,t.line,3,0,0,null,it.id);if(it.lock){c.setTransform(1,0,0,1,0,0);}}   // 키 큰 4단계 그림은 동그라미 안에 다 들어오게 줄인다(10-20 사용자: 웃시야의 기계 투석기가 잘려 밑돌만 보이던 것)
     else if(it.k==='skill'){skillIcon(c,it.x,it.y,it.i+(t.branch==='uzziah'?21:t.branch==='choir'?3:t.branch==='menorah'?6:t.branch==='jordan'?9:t.branch==='nazirite'?12:t.branch==='mighty'?15:t.branch==='benjamin'?18:0));}
     else if(it.k==='sell'){C(c,it.x,it.y,9);FS(c,'#d9dfe6',1.6);C(c,it.x,it.y,5);c.strokeStyle='#8b95a3';c.lineWidth=1.4;c.stroke();}
     else if(it.k==='rally'){c.strokeStyle=OL;c.lineWidth=2.6;L(c,it.x-4,it.y+10,it.x-4,it.y-10);P(c,[[it.x-4,it.y-10],[it.x+10,it.y-5],[it.x-4,it.y]]);FS(c,'#c4513a',1.4);}
@@ -5858,17 +5860,19 @@ function doItem(it){
 }
 function hitTower(x,y){for(const t of G.towers)if(Math.abs(x-t.x)<28&&y<t.y+14&&y>t.y-74)return t;return null;}
 // 누른 곳에서 가장 가까운 것을 고른다: 빈 자리는 동그라미 가운데, 탑은 몸통 가운데까지의 거리. 아래 탑의 키 큰 몸통이 바로 위 자리를 가리지 않게
-function pickSpot(x,y){const R=scale<.75?44:34;let best=null,bs=1e9;for(const s of G.spots){let sc;const t=s.tower;
-  if(t){if(!(Math.abs(x-t.x)<28&&y<t.y+14&&y>t.y-74))continue;sc=Math.hypot(x-t.x,(y-(t.y-26))*.8)+8;}else{const dd=d2(x,y,s.x,s.y);if(dd>=R*R)continue;sc=Math.sqrt(dd);}
-  if(sc<bs){bs=sc;best=s;}}return best;}
+function spotSc(s,x,y){const t=s.tower;if(t)return Math.abs(x-t.x)<28&&y<t.y+14&&y>t.y-74?Math.hypot(x-t.x,(y-(t.y-26))*.8)+8:1e9;const R=scale<.75?44:34,dd=d2(x,y,s.x,s.y);return dd<R*R?Math.sqrt(dd):1e9;}
+function pickSpot(x,y){let best=null,bs=1e9;for(const s of G.spots){const sc=spotSc(s,x,y);if(sc<bs){bs=sc;best=s;}}return best;}
 function onTap(x,y){
   if(!G||G.paused)return;
   if(G.scene){if(G.scene.kind==='comic'){comicTap(x,y);return;}if(G.scene.t>3){G.scene.t=Math.max(G.scene.t,G.scene.kind==='ark'?16.9:17.4);}return;}
   if(G.over)return;
+  const HR=scale<.75?40:30;
+  if(G.menu&&!G.aim){const it=G.menu.items.find(i=>d2(x,y,i.x,i.y)<=HR*HR);if(it){if(lastPtr==='touch'&&G.menu.sel!==it){G.menu.sel=it;ui.info(itemInfo(it),G.menu.spot.y>420);Snd.play('click');return;}doItem(it);return;}}   // 펼친 메뉴 단추가 맨 먼저: 단추 자리에 선 인물(19 히스기야)이 올리기를 가로채지 않게(10-19 사용자)
+  const pk=pickSpot(x,y),pkD=pk?spotSc(pk,x,y):1e9;   // 손가락 밑의 탑·빈 자리. 설명만 띄우는 인물은 이것을 가리지 않고, 병사·영웅·깃발과는 누른 곳에 더 가까운 쪽이 이긴다
   if(G.zik&&zikTap(x,y))return;
   if(G.brk&&brkTap(x,y))return;
-  if(G.dot&&dotTap(x,y))return;
-  if(G.jer&&jerTap(x,y))return;
+  if(G.dot&&dotTap(x,y,pk))return;
+  if(G.jer&&jerTap(x,y,pk))return;
   if(G.fl&&fallTap(x,y))return;   // 곁문으로(렘 38:2)
   if(G.neh&&nehTap(x,y))return;   // 성벽 쌓기 · 나팔 소리 · 편지 · 문짝 · 봉헌하라   // 여호와 앞에 펴 놓고 · 성문을 열라 · 랍사게 · 이사야 · 히스기야   // 그의 눈을 열어 · 눈을 어둡게 · 금빛 손 · 들 · 엘리사 · 상   // 견고히 서리라 · 찬송하라 · 거두기   // 쫓아가라 단추 · 애굽 소년 · 되찾은 행렬
   if(G.aim){const a=G.aim;let ok=true;if(a==='cry')castCry(x,y);else if(a==='help')ok=castHelp(x,y);else if(a==='stamp')ok=castStamp(x,y);else if(a==='banner')ok=castBanner(x,y);else if(a==='rain')ok=castRain(x,y);if(ok!==false)G.aim=null;return;}
@@ -5876,17 +5880,15 @@ function onTap(x,y){
   if(onHill(x,y)){closeMenu();hillTap();return;}
   {const j=G.S.harod&&jarAt(x,y);if(j){closeMenu();breakJar(j);return;}}   // 세 대가 항아리를 부수고(삿 7:20)
   if(onStone(x,y)){mizpahStone();return;}   // 에벤에셀(삼상 7:12): 돌을 세워 기억하는 것은 사람의 몫
-  if(onStation(x,y)){closeMenu();toast('<b>골리앗</b> · 가드 사람 · 큰 조롱<br>아직 싸우러 나오지 않았어요. 지금은 무엇으로도 맞힐 수 없어요. "너희는 한 사람을 택하여 내게로 내려보내라" (삼상 17:8)',5);Snd.play('tink');return;}
-  if(onRidge(x,y)){closeMenu();toast('<b>사울</b> · 이스라엘 왕 · 악령<br>아직 들염소 바위 위에 있어서 맞힐 수 없어요. 둘레 320 안의 가장 비싼 탑에 창을 던져요. "사울이 매일 찾되 하나님이 그를 그의 손에 넘기지 아니하시니라" (삼상 23:14)',6);Snd.play('click');return;}
-  if(onJonathan(x,y)){closeMenu();toast('<b>요나단</b> · 사울의 아들 · 바위 위의 궁수<br>"여호와의 구원은 사람이 많고 적음에 달리지 아니하였느니라" (삼상 14:6)',5);Snd.play('click');return;}
+  if(!pk&&onStation(x,y)){closeMenu();toast('<b>골리앗</b> · 가드 사람 · 큰 조롱<br>아직 싸우러 나오지 않았어요. 지금은 무엇으로도 맞힐 수 없어요. "너희는 한 사람을 택하여 내게로 내려보내라" (삼상 17:8)',5);Snd.play('tink');return;}
+  if(!pk&&onRidge(x,y)){closeMenu();toast('<b>사울</b> · 이스라엘 왕 · 악령<br>아직 들염소 바위 위에 있어서 맞힐 수 없어요. 둘레 320 안의 가장 비싼 탑에 창을 던져요. "사울이 매일 찾되 하나님이 그를 그의 손에 넘기지 아니하시니라" (삼상 23:14)',6);Snd.play('click');return;}
+  if(!pk&&onJonathan(x,y)){closeMenu();toast('<b>요나단</b> · 사울의 아들 · 바위 위의 궁수<br>"여호와의 구원은 사람이 많고 적음에 달리지 아니하였느니라" (삼상 14:6)',5);Snd.play('click');return;}
   {const eg=eggAt(x,y);if(eg){findEgg(eg);return;}}
   const tb=G.towers.find(t=>t.stopped&&Math.abs(x-t.x)<34&&y<t.y+16&&y>t.y-80);if(tb){tb.stopped.taps--;Snd.play('tap');part('spark',x,y,rand(-30,30),rand(-40,0),.4,'#e9dcff',2);if(tb.stopped.taps<=0)unbind(tb);return;}
-  const HR=scale<.75?40:30;
-  if(G.menu){const it=G.menu.items.find(i=>d2(x,y,i.x,i.y)<=HR*HR);if(it){if(lastPtr==='touch'&&G.menu.sel!==it){G.menu.sel=it;ui.info(itemInfo(it),G.menu.spot.y>420);Snd.play('click');return;}doItem(it);return;}}
-  const hu=unitAt(x,y);if(hu){const sel=hu.tw?{tw:hu.tw}:{rally:hu.rally},same=G.unitSel&&(sel.tw?G.unitSel.tw===sel.tw:G.unitSel.rally===sel.rally);closeMenu();G.heroSel=false;G.aim=null;G.unitSel=same?null:sel;if(G.unitSel)G.unitSel.u=hu;ui.info(null);Snd.play('click');return;}
-  {const h=heroAt(x,y);if(h){G.unitSel=null;G.heroSel=G.heroSel===h?false:h;closeMenu();Snd.play('click');return;}}
-  if(G.phase==='prep'||G.phase==='between'){for(const pi of nextPaths()){const f=G.S.flags[pi];if(d2(x,y,f[0],f[1])<34*34){closeMenu();callWave();return;}}}
-  const pk=pickSpot(x,y),spot=pk&&!pk.tower?pk:null,tw=pk&&pk.tower?pk.tower:null;
+  const hu=unitAt(x,y);if(hu&&Math.sqrt(d2(x,y,hu.x,hu.y-15))<pkD){const sel=hu.tw?{tw:hu.tw}:{rally:hu.rally},same=G.unitSel&&(sel.tw?G.unitSel.tw===sel.tw:G.unitSel.rally===sel.rally);closeMenu();G.heroSel=false;G.aim=null;G.unitSel=same?null:sel;if(G.unitSel)G.unitSel.u=hu;ui.info(null);Snd.play('click');return;}
+  {const h=heroAt(x,y);if(h&&Math.sqrt(d2(x,y,h.x,h.y-22))<pkD){G.unitSel=null;G.heroSel=G.heroSel===h?false:h;closeMenu();Snd.play('click');return;}}
+  if(G.phase==='prep'||G.phase==='between'){for(const pi of nextPaths()){const f=G.S.flags[pi],dd=d2(x,y,f[0],f[1]);if(dd<34*34&&Math.sqrt(dd)<pkD){closeMenu();callWave();return;}}}
+  const spot=pk&&!pk.tower?pk:null,tw=pk&&pk.tower?pk.tower:null;
   if(G.heroSel&&!spot&&!tw){moveHero(x,y,G.heroSel,true);G.heroSel=false;return;}
   if(G.unitSel&&!spot&&!tw){moveUnits(x,y);return;}
   if(tw){if(G.menu&&G.menu.spot===tw.spot){closeMenu();return;}G.heroSel=false;openMenu(tw.spot);return;}
