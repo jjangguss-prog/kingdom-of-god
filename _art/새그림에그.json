@@ -1,0 +1,160 @@
+{
+ "출력": "raw",
+ "크기": [
+  1024,
+  1024
+ ],
+ "단계": 4,
+ "항목": [
+  {
+   "id": "e_tortoise",
+   "종류": "인물",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "Two small friendly tortoises, a pair walking slowly side by side, one a little behind the other, rounded brown domed shells with a simple hexagon pattern, olive-green heads and legs, sleepy happy eyes. Natural healthy anatomy, each tortoise has exactly four short legs and one head, side view walking to the right, both animals fully visible."
+  },
+  {
+   "id": "e_camel",
+   "종류": "인물",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "A friendly adult dromedary camel with one hump, sandy tan fur, no rider and no saddle, a plain rope halter, standing and bending its long neck down low to drink. Natural healthy anatomy with exactly four legs, side view facing right, the whole animal visible."
+  },
+  {
+   "id": "e_rebekah",
+   "종류": "인물",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "Rebekah, a kind young woman of about sixteen from Haran in Mesopotamia, long dark braided hair under a light sand-colored headscarf, wearing a simple long rose-red dress with a woven brown belt and leather sandals, tilting a big round clay water jar down from her shoulder with both hands and pouring a stream of clear water downward in front of her, kind cheerful smile. Exactly two arms and exactly two hands, each hand with four fingers and a thumb. The face is clear and well drawn with distinct eyes, nose and mouth."
+  },
+  {
+   "id": "e_rebekah_glad",
+   "종류": "인물",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "Rebekah, a kind young woman of about sixteen from Haran in Mesopotamia, long dark braided hair under a light sand-colored headscarf, wearing a simple long rose-red dress with a woven brown belt and leather sandals, now wearing a small gold nose ring and a pair of shiny gold bracelets on her wrists, holding an empty clay water jar against her hip with one hand and lifting the other hand to look at her gold bracelet, surprised happy smile. Exactly two arms and exactly two hands, each hand with four fingers and a thumb. The face is clear and well drawn with distinct eyes, nose and mouth."
+  },
+  {
+   "id": "e_brick",
+   "종류": "인물",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "a Hebrew brick-maker in ancient Egypt, a thin man of about thirty with a short black beard and a plain white cloth headband, wearing a rough knee-length off-white linen tunic with a rope belt, bare feet, kneeling on wet brown mud and pressing mud into a small open wooden rectangular brick mold with both hands, a short row of drying mud bricks beside him, tired sad face with his head bowed. Exactly two arms and exactly two hands, each hand with four fingers and a thumb. The face is clear and well drawn with distinct eyes, nose and mouth. No whips, no wounds, nobody else."
+  },
+  {
+   "id": "e_brick_up",
+   "종류": "인물",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "a Hebrew brick-maker in ancient Egypt, a thin man of about thirty with a short black beard and a plain white cloth headband, wearing a rough knee-length off-white linen tunic with a rope belt, bare feet, kneeling upright beside a short row of mud bricks and a small wooden brick mold, lifting his face up toward the sky with a hopeful peaceful expression, both open hands raised a little at chest height. Exactly two arms and exactly two hands, each hand with four fingers and a thumb. The face is clear and well drawn with distinct eyes, nose and mouth. No whips, no wounds, nobody else."
+  },
+  {
+   "id": "e_staff",
+   "종류": "물건",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "A long plain wooden shepherd's staff with a curved crook at the top, lying diagonally across a small flat sandy desert rock, with a little tuft of dry grass beside it. No people."
+  },
+  {
+   "id": "e_serpent",
+   "종류": "물건",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "A cartoon snake for a children's game, friendly and surprised with big round eyes, olive-brown back with a sandy-yellow belly, coiled in an S-shape and raising its head, mouth closed, no fangs, exactly one head, no legs."
+  },
+  {
+   "id": "e_gatherer",
+   "종류": "인물",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "an Israelite girl of about eight in the wilderness, wearing a plain light-blue tunic with a rope belt and a cream headscarf over dark hair, kneeling on sandy ground and happily picking up small round white grains from the ground into a woven reed basket with both hands, the basket has some small white grains in it. Exactly two arms and exactly two hands, each hand with four fingers and a thumb. The face is clear and well drawn with distinct eyes, nose and mouth."
+  },
+  {
+   "id": "e_gatherer_rest",
+   "종류": "인물",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "an Israelite girl of about eight in the wilderness, wearing a plain light-blue tunic with a rope belt and a cream headscarf over dark hair, sitting peacefully on a small woven mat with her legs folded, beside a woven reed basket full of small round white grains, her hands folded in her lap, eyes gently closed with a content smile, resting. Exactly two arms and exactly two hands, each hand with four fingers and a thumb. The face is clear and well drawn with distinct eyes, nose and mouth."
+  },
+  {
+   "id": "e_daniel",
+   "종류": "인물",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "Daniel the prophet as an old man of about eighty with a neat white beard, wearing a long deep-blue Babylonian court robe with gold trim and a soft cream turban, standing unhurt and joyful, raising both hands toward heaven in thanks. Exactly two arms and exactly two hands, each hand with four fingers and a thumb. The face is clear and well drawn with distinct eyes, nose and mouth. No statues, no idols, no carved figures, no calves, no crescent shapes, no moon ornaments, no religious symbols anywhere."
+  },
+  {
+   "id": "e_den",
+   "종류": "물건",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "The dark open mouth of a small cave at the foot of a big grey rock mound, the opening is round and very dark inside, a few tufts of grass around it, seen from the front at a slight angle. No people, no animals."
+  },
+  {
+   "id": "e_denstone",
+   "종류": "물건",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "A big round flat grey millstone-like stone standing upright on its edge, with a thick cord across it fastened by a lump of red clay seal pressed with a plain round mark. No people."
+  },
+  {
+   "id": "e_potter",
+   "종류": "인물",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "A Judean potter, a cheerful middle-aged man with a short grey-black beard and a brown cloth headband, wearing a plain earth-brown knee-length tunic and a clay-stained apron, sitting on a low wooden stool and leaning forward with both clay-covered hands held out together in front of him at waist height as if shaping clay, side view facing right. Nothing in his hands, no wheel, no pots. Exactly two arms and exactly two hands, each hand with four fingers and a thumb. The face is clear and well drawn with distinct eyes, nose and mouth."
+  },
+  {
+   "id": "e_plow",
+   "종류": "물건",
+   "시드": [
+    1,
+    2,
+    3
+   ],
+   "프롬프트": "An iron plowshare blade fixed to a simple wooden plow handle and a curved iron sickle with a wooden handle, lying together on a small patch of green grass with a few fresh green sprouts. No people."
+  }
+ ]
+}
