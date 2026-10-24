@@ -943,7 +943,7 @@ const UZZIAH={name:'웃시야의 기계',cost:280,range:205,rate:2.9,dmg:66,aoe:
     {id:'corner',name:'성 모퉁이 망대',ref:'대하 26:9',costs:[110,110,110],desc:['사거리 8% · 공성 무기 피해 2.5배 → 2.8배','사거리 16% · 3.1배','사거리 24% · 3.4배']}]};
 const BRANCH={uzziah:UZZIAH,priest:PRIEST,choir:CHOIR,menorah:MENORAH,jordan:JORDAN,nazirite:NAZIRITE,mighty:MIGHTY,benjamin:BENJAMIN};
 const STAGES={
-  1:{id:1,name:'방주',chap:'1장 · 약속',ref:'창 6–7',night:false,gold:360,cap:1,heroes:['noah'],hpMul:1.5,dmgMul:1,gapT:20,skin:'flood',
+  1:{id:1,name:'방주',chap:'1장 · 약속',ref:'창 6–7',night:false,gold:360,cap:1,heroes:['noah'],hpMul:2,dmgMul:1,gapT:20,skin:'flood',   // hpMul 1.5 → 2, 마지막 두 무리를 키움(10-25 사용자: 양치기 줄이 서기 전에 앞에서 다 쓸리고, 뒤에 세운 탑은 할 일이 없다)
     paths:[[[-50,130],[90,140],[200,200],[230,300],[160,390],[180,480],[300,520],[420,470],[470,360],[560,270],[680,250],[760,320],[740,430],[800,520],[920,520],[980,440],[1050,382]],
            [[330,790],[320,690],[300,600],[300,520],[420,470],[470,360],[560,270],[680,250],[760,320],[740,430],[800,520],[920,520],[980,440],[1050,382]]],
     flags:[[40,132],[318,676]],
@@ -954,8 +954,8 @@ const STAGES={
       [['soldier',8,1.5,0,0]],
       [['soldier',6,1.4,0,1],['soldier',6,1.4,3,0]],
       [['soldier',8,1.2,0,0],['soldier',6,1.3,3,1]],
-      [['soldier',10,1.1,0,-1],['soldier',8,1.2,5,0]],
-      [['soldier',12,1,0,0],['soldier',12,1,1,1]]],
+      [['soldier',12,1,0,-1],['soldier',10,1,4,0]],
+      [['soldier',16,.8,0,0],['soldier',16,.8,1,1]]],
     story:[
       {art:'s0a',text:'태초에 하나님이 천지를 창조하셨어요. 하나님이 지으신 모든 것이 보시기에 심히 좋았어요.',verse:'하나님이 지으신 그 모든 것을 보시니 보시기에 심히 좋았더라 (창 1:31)'},
       {art:'s0b',text:'그러나 사람은 하나님을 떠났고 세상에 어둠이 들어왔어요. 그래도 하나님은 가죽옷을 지어 입히시고, 뱀의 머리를 상하게 할 "여자의 후손"을 약속하셨어요.',verse:'여자의 후손은 네 머리를 상하게 할 것이요 너는 그의 발꿈치를 상하게 할 것이니라 (창 3:15)'},
@@ -4681,8 +4681,8 @@ const COACH={
         return`아직 <b>${g}</b>세겔이 남았어요. 남겨 두면 아무 일도 하지 않아요. 빈 터에 탑을 더 세워도 돼요.`;}},
     {id:'call',wait:1,pre:1,when:()=>G.phase==='prep',ok:()=>G.waveIdx>=0,at:coFlag,say:'준비됐으면 이 <b>무리 부르기</b> 깃발을 누르세요. 적은 깃발이 있는 길로 와요. 누르기 전까지는 적이 오지 않아요.'},
     {id:'hero',wait:1,life:35,art:'hero:noah',when:()=>G.waveIdx>=0&&G.waveT>2.5&&G.hero.state==='ok',ok:()=>!!G.coach.f.hero,
-      at(){const h=G.hero;if(!G.heroSel)return{x:h.x,y:h.y-26};const n=nearestAll(470,360);return{x:n.x,y:n.y};},
-      say:()=>G.heroSel?'노아가 갈 <b>길 위</b>를 누르세요. 노아는 길을 막아서 싸우고, 가만히 서 있으면 나무 방벽을 세워요.':'이 사람이 영웅 <b>노아</b>예요. 노아를 눌러 보세요. (오른쪽 아래 노아 그림을 눌러도 돼요)'},
+      at(){const h=G.hero;if(!G.heroSel)return{x:h.x,y:h.y-26};return coHeroAt();},
+      say:()=>G.heroSel?(coMain()?'<b>양치기 곁</b>의 길 위를 누르세요. 노아도 양치기와 함께 길을 막아서 싸우고, 가만히 서 있으면 나무 방벽을 세워요. 막힌 적을 탑들이 함께 쳐요.':'노아가 갈 <b>길 위</b>를 누르세요. 노아는 길을 막아서 싸우고, 가만히 서 있으면 나무 방벽을 세워요.'):'이 사람이 영웅 <b>노아</b>예요. 노아를 눌러 보세요. (오른쪽 아래 노아 그림을 눌러도 돼요)'},
     {id:'plan',next:1,when:()=>G.phase==='between',ok:()=>G.waveIdx>=2,at:()=>null,
       say:()=>'<b>싸움의 기본</b><br>① <b>양치기</b>가 길을 막아 적을 멈춰 세워요.<br>② 멈춘 곳 둘레에 <b>장인</b>을 두면 돌 하나로 여럿을 쳐요.<br>③ <b>레위인</b>의 빛은 갑옷을 꿰뚫고 적을 느리게 해요.<br>④ <b>파수꾼</b>은 멀리서 빠른 적과 하늘의 적을 맡아요.<br>길이 굽어 두 번 지나가는 곳 곁의 탑은 같은 적을 더 오래 쳐요.'+coKinds(true)},
     {id:'freed',life:6,when:()=>G.freed>=1,at:()=>({el:'pGold'}),say:'쓰러뜨린 사람은 <b>풀려나고</b> 어둠은 달아나요. 풀어 줄 때마다 <b>세겔</b>이 들어오고, 방주가 한 칸씩 올라가요.'},
@@ -4783,24 +4783,33 @@ Object.assign(COACH,{
     {id:'dedicate',when:()=>G.neh&&G.neh.end&&G.neh.end.doors&&G.neh.end.doors.every(d=>d.on)&&G.neh.end.st!=='dedicate',ok:()=>G.neh.end.st==='dedicate',at:()=>coTop,say:'위쪽 가운데 <b>봉헌하라</b>를 눌러 보세요. (느 12:27)'}]});
 // 전략 길잡이(10-18 사용자: "새로운 타워는 파수꾼만 짓도록 추천… 장인과 레위인 타워를 쓰는 법과 취지는 딱히 안내되고 있지 않아")
 // 양치기가 막고, 장인은 막힌 곳에 돌을, 레위인은 갑옷 입은 적을, 파수꾼은 멀리와 하늘을. 빈 터마다 닿는 길을 세어 알맞은 자리를 고른다
-function coSmp(){const C=G.coach;if(C.smp)return C.smp;const out=[];G.routes.forEach((p,pi)=>{for(let d=0;d<p.len;d+=16){const q=at(p,d);out.push({x:q.x,y:q.y,fly:pi>=G.paths.length,k:d/p.len});}});return C.smp=out;}
+function coSmp(){const C=G.coach;if(C.smp)return C.smp;const out=[];G.routes.forEach((p,pi)=>{for(let d=0;d<p.len;d+=16){const q=at(p,d);out.push({x:q.x,y:q.y,fly:pi>=G.paths.length,k:d/p.len,pi,d});}});return C.smp=out;}
 const coRange=l=>withUp(l,LINES[l].tiers[0]).range||150;
 const coBlocks=()=>G.towers.filter(t=>t.line==='shep'&&t.rally).map(t=>t.rally);
-function coScore(s,l){const cx=s.x,cy=s.y-12;
-  if(l==='shep'){const n=nearestAll(s.x,s.y);if(!n||n.dd>95*95)return -1;const kk=n.d/G.paths[n.pi].len;let v=3+4*(1-Math.min(1,Math.abs(kk-.72)/.5));   // 길 가까이, 문에서 조금 떨어진 길목(막힌 동안 다른 탑이 칠 시간이 있게)
+// 첫 양치기가 막아 세운 곳(싸움 줄). tail: 길 끝(문)까지 남은 거리. 두 길은 끝을 같이하므로 tail로 앞뒤를 견준다
+function coMain(){const t=G.towers.find(t=>t.line==='shep'&&t.rally);if(!t)return null;const n=nearestAll(t.rally.x,t.rally.y);return n&&{x:n.x,y:n.y,pi:n.pi,d:n.d,tail:G.paths[n.pi].len-n.d};}
+function coScore(s,l,M){const cx=s.x,cy=s.y-12;if(M===undefined)M=coMain();
+  if(l==='shep'){const n=nearestAll(s.x,s.y);if(!n||n.dd>95*95)return -1;const kk=n.d/G.paths[n.pi].len;let v=3+4*(1-Math.min(1,Math.abs(kk-.56)/.5));   // 길 가까이, 두 길이 합쳐진 뒤 길의 가운데쯤(줄 뒤에 탑 자리가 넉넉해서 넘어온 적도 뒤의 탑이 맡는다. 10-25: .72면 1 방주는 고리 길 끝이라 줄 앞을 덮는 탑만 남았다)
     for(const t of G.towers)if(t.line!=='shep'&&d2(n.x,n.y,t.x,t.y-12)<(t.range||150)**2)v+=5;   // 막아 세울 곳에 다른 탑이 닿으면
+    if(M){if(G.paths[n.pi].len-n.d>=M.tail-60)return -1;v+=5;}   // 둘째 양치기부터는 줄 뒤에만(줄을 넘어온 적을 막는 둘째 줄). 줄 앞에 세우면 싸움이 줄에서 멀어진다
     if(coBlocks().some(b=>d2(b.x,b.y,n.x,n.y)<120*120))v-=6;return v;}
-  const r=coRange(l);let v=0;for(const q of coSmp()){if(q.fly&&!LINES[l].air)continue;if(d2(q.x,q.y,cx,cy)<r*r)v+=.5+q.k;}   // 닿는 길이 길수록(굽어 두 번 지나는 곳)
-  for(const b of coBlocks())if(d2(b.x,b.y,cx,cy)<(r*.85)**2)v+=l==='art'?16:l==='levi'?6:2;   // 장인은 양치기가 막아 세운 곳 곁에
+  const r=coRange(l);let v=0;for(const q of coSmp()){if(q.fly&&!LINES[l].air)continue;if(d2(q.x,q.y,cx,cy)<r*r){const tl=G.paths[q.pi].len-q.d;v+=!M||q.fly?.5+q.k:tl>M.tail+40?-.6:tl>M.tail-220?1.6:.5+q.k;}}   // 닿는 길이 길수록(굽어 두 번 지나는 곳). 싸움 줄 바로 뒤(줄에서 220 안)를 가장 높이, 줄 앞쪽 길은 덜어 낸다
+  for(const b of coBlocks())if(d2(b.x,b.y,cx,cy)<(r*.85)**2)v+=l==='art'?16:l==='levi'?10:8;   // 양치기가 막아 세운 곳에 닿는 자리
   return v;}
-function coBestSpot(l){let best=null,bv=-1;for(const s of G.spots){if(s.tower)continue;const v=coScore(s,l);if(v>bv){bv=v;best=s;}}return best;}
+// 1 방주 길잡이(10-25 사용자: "적들이 양치기 중심으로 전투선이 형성되기 전에 앞에서 다 쓸어서 없어지는 경향이 있고, 세겔이 남을 때 뒤에 세운 파수꾼/양치기 타워 등은 할 일이 없어"):
+// 치는 탑은 양치기 줄 곁과 뒤에 권한다. 줄 앞쪽 길을 넓게 덮으면 적이 막히기 전에 다 쓰러져 줄이 생기지 않고, 뒤의 탑은 할 일이 없다
+function coBestSpot(l){const M=coMain();let best=null,bv=-Infinity;for(const s of G.spots){if(s.tower)continue;const v=coScore(s,l,M);if(v>bv&&(l!=='shep'||v>=0)){bv=v;best=s;}}return best;}
+// 노아는 양치기 줄 바로 앞 길에 세워 함께 막게 한다(줄보다 멀리 앞에 세우면 싸움이 노아 자리에서 끝나 양치기 줄이 생기지 않는다)
+function coHeroAt(){const M=coMain();if(!M){const n=nearestAll(470,360);return{x:n.x,y:n.y};}const q=at(G.paths[M.pi],Math.max(0,M.d-34));return{x:q.x,y:q.y};}
 const CO_WHY={shep:'길을 막아 줄 <b>양치기</b>가 있어야 다른 탑들이 멈춘 적을 오래 칠 수 있어요.',art:'<b>장인</b>을 양치기가 막아 세운 곳(금빛 고리) 곁에 두면 돌 하나로 여럿을 쳐요.',levi:'<b>레위인</b>의 빛은 갑옷 입은 적을 꿰뚫고, 맞은 적을 느리게 해요.',watch:'<b>파수꾼</b>은 가장 멀리서 빠르게 쏴요. 빠른 적과 하늘의 적을 맡아요.'};
 function coRecommend(){const cnt=l=>G.towers.filter(t=>t.line===l).length,sky=!!(G.S.sky&&G.S.sky.length),want=[];
   for(const l of ['shep','art','levi','watch'])if(!cnt(l))want.push(l);   // 먼저 네 가지를 하나씩
   if(cnt('shep')*3<cnt('art')+cnt('levi')+cnt('watch'))want.push('shep');   // 막는 양치기 하나에 치는 탑 셋쯤
   want.push(...['art','levi','watch'].sort((a,b)=>(cnt(a)-(sky&&a!=='art'?.5:0))-(cnt(b)-(sky&&b!=='art'?.5:0))));   // 그다음은 적은 쪽부터(하늘의 적이 오면 파수꾼·레위인)
-  for(const l of want)if(G.gold>=coCost(l)){const s=coBestSpot(l);if(s)return{l,s};}return null;}
-const coRing=(l,s)=>s?{x:s.x,y:s.y-12,r:l==='shep'?0:coRange(l),marks:l==='art'||l==='levi'?coBlocks():[]}:null;
+  for(const l of want)if(G.gold>=coCost(l)){const s=coBestSpot(l);if(s&&(l==='shep'||coScore(s,l)>0))return{l,s};}   // 줄 앞만 쓸어 버릴 자리(점수가 0 이하)는 권하지 않는다
+  const M=coMain();if(M)for(const l of want.filter(l=>l!=='shep'))if(G.gold>=coCost(l)){const s=G.spots.filter(s=>!s.tower&&!s.block&&d2(s.x,s.y-12,M.x,M.y)<280*280).sort((a,b)=>d2(a.x,a.y,M.x,M.y)-d2(b.x,b.y,M.x,M.y))[0];if(s)return{l,s};}   // 줄 곁·뒤가 다 차면 줄 바로 앞의 가까운 빈 터부터(입구에서 다 쓸지 않게)
+  return null;}
+const coRing=(l,s)=>s?{x:s.x,y:s.y-12,r:l==='shep'?0:coRange(l),marks:l==='shep'?[]:coBlocks()}:null;
 const coachOn=()=>!!(G&&G.coach&&!G.coach.off&&G.coach.cur);
 // 판마다 새로 생긴 것(10-18 사용자: "2장은 타워들을 레벨 2까지 지을 수 있잖아. 스테이지마다 새로 적용되는 것들이 있다면 알려줘야해")
 function coNew(items){return{id:'new',next:1,when:()=>G.phase==='prep',ok:()=>G.phase!=='prep',at:()=>null,
