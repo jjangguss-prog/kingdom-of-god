@@ -15,8 +15,8 @@ android {
         applicationId 'io.github.jjangguss.kingdomofgod'
         minSdk 24
         targetSdk 36
-        versionCode 39
-        versionName '1.30'
+        versionCode 40
+        versionName '1.31'
     }
 
     signingConfigs {
