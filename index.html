@@ -4425,7 +4425,9 @@ function delSlot(id){for(const k of ['best','heroes','upg','eggs','chal','hbuy']
     if(b||h||u){SLOTS.n=1;SLOTS.list.push({id:1,t:Date.now()});SLOTS.cur=1;store.set('kog.s1.best',b||{});store.set('kog.s1.heroes',h||{});store.set('kog.s1.upg',u||{});saveSlots();}}
   if(SLOTS.cur!=null&&SLOTS.list.some(x=>x.id===SLOTS.cur))loadSlot(SLOTS.cur);else SLOTS.cur=null;})();
 function levelOf(xp){let l=1;while(l<10&&xp>=HERO_XP[l])l++;return l;}
-function ptsLeft(k){const r=heroRec(k),sk=r.sk;return(levelOf(r.xp)-1)-(sk.s1+sk.s2+sk.passive+sk.ult-1);}
+const PT_BONUS=[5,10];   // 11-01 사용자: 다 키웠을 때 빈 칸이 남지 않게, 레벨 5·10에서는 2점(10까지 11점 = 궁극기 첫 칸을 뺀 기술 칸 수)
+function ptsAt(lv){return lv-1+PT_BONUS.filter(b=>lv>=b).length;}
+function ptsLeft(k){const r=heroRec(k),sk=r.sk;return ptsAt(levelOf(r.xp))-(sk.s1+sk.s2+sk.passive+sk.ult-1);}
 function spendPt(k,id){const r=heroRec(k);if(ptsLeft(k)<=0||r.sk[id]>=SKMAX[id])return false;r.sk[id]++;saveHeroes();Snd.play('up');return true;}
 function unspendPt(k,id){const r=heroRec(k);if(r.sk[id]<=(id==='ult'?1:0))return false;r.sk[id]--;saveHeroes();Snd.play('click');return true;}
 function resetPts(k){const r=heroRec(k);r.sk.s1=0;r.sk.s2=0;r.sk.passive=0;r.sk.ult=1;saveHeroes();Snd.play('sell');}
@@ -4441,10 +4443,10 @@ const heroOf=k=>heroList().find(h=>h.kind===k)||null;
 function duoHome(S){const [x,y]=S.heroHome,n=nearestAll(x,y);if(!n)return[x+70,y];const p=G.paths[n.pi],q=at(p,n.d>150?n.d-120:Math.min(p.len-40,n.d+120));return[Math.round(q.x),Math.round(q.y)];}   // 둘째는 첫째 자리에서 길을 따라 적이 오는 쪽으로 120
 function gainXP(n){if(G&&!G.noHero)for(const h of heroList())heroXP(h,n);}   // 둘이면 둘 다 받는다(누가 쳤는지 따로 세지 않음)
 function heroXP(h,n){if(heroFixed(h.kind))return;const r=heroRec(h.kind);r.xp+=n*XP_RATE*(h.lv<G.sid?1.5:1);const lv=levelOf(r.xp);
-  if(lv>h.lv){const ratio=h.hp/h.max;h.lv=lv;heroScale(h);h.hp=Math.round(h.max*Math.max(ratio,.6));saveHeroes();
+  if(lv>h.lv){const ratio=h.hp/h.max,gain=ptsAt(lv)-ptsAt(h.lv);h.lv=lv;heroScale(h);h.hp=Math.round(h.max*Math.max(ratio,.6));saveHeroes();
     if(!G.over){banner(`${h.D.name}${josa(h.D.name,'이','가')} 연단되었어요 · Lv ${lv}`,'환난은 인내를, 인내는 연단을, 연단은 소망을 이루는 줄 앎이로다 (롬 5:3–4)',3.5);Snd.play('up');
       for(let i=0;i<18;i++)part('spark',h.x+rand(-18,18),h.y-rand(0,50),rand(-40,40),rand(-110,-40),1,'#ffe08a',2.8);
-      later(2,()=>{if(G&&!G.over&&ptsLeft(h.kind)>0)toast(`<b>연단 점수</b>를 받았어요. 싸움을 마치고 지도의 <b>연단</b>에서 ${h.D.name}의 기술을 키우세요.`,6);});}}}
+      later(2,()=>{if(G&&!G.over&&ptsLeft(h.kind)>0)toast(`<b>연단 점수 ${gain}점</b>을 받았어요. 싸움을 마치고 지도의 <b>연단</b>에서 ${h.D.name}의 기술을 키우세요.`,6);});}}}
 function makeHero(kind,home){const D=HEROES[kind],rec=heroFixed(kind)?null:heroRec(kind),lv=rec?levelOf(rec.xp):D.fixedLv,hp0=Math.round(D.hp*(1+.08*(lv-1)));return{role:'hero',kind,D,lv,sk:rec?rec.sk:D.fixedSk,dmg:D.dmg*(1+.07*(lv-1)),x:home[0],y:home[1],hx:home[0],hy:home[1],px:home[0],py:home[1],calm:0,going:false,hp:hp0,max:hp0,armor:D.armor,state:'ok',moving:false,tx:0,ty:0,target:null,atkCd:0,s1:3,s2:6,ult:D.ult.cd*.35,idle:0,respawn:0,dir:-1,t:0,bar:null,barCd:0,hitT:0,cast:0};}
 function unitAt(x,y){if(!G)return null;const R=scale<.75?26:20;let best=null,bd=R*R;for(const u of G.units){if(u.role!=='unit'||u.state!=='ok'||!(u.tw||u.rally))continue;const dd=d2(x,y,u.x,u.y-15);if(dd<bd){bd=dd;best=u;}}return best;}
 function selUnits(){const s=G.unitSel;if(!s)return[];return G.units.filter(u=>u.role==='unit'&&u.state!=='gone'&&(s.tw?u.tw===s.tw:u.rally===s.rally));}
